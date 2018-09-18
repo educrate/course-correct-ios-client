@@ -16,11 +16,11 @@ public class CalendarViewDayCell: UITableViewCell {
     
     /// holds the information surrounding
     /// the day of the month and the day of the week
-    private let dayLabel: UILabel!
+    private weak var dayLabel: UILabel!
     
     /// contains all the events for a single day
     /// one cell per event
-    private let dayScheduleTableView: UITableView!
+    private weak var dayScheduleTableView: UITableView!
     
     // MARK: Protocols
     
@@ -29,7 +29,9 @@ public class CalendarViewDayCell: UITableViewCell {
     
     // MARK: Initializers
     
-    init(delegate: CalendarViewDayDelegate? = nil,
+    init(style: UITableViewCell.CellStyle,
+         reuseIdentifier: String?,
+         delegate: CalendarViewDayDelegate? = nil,
          dataSource: CalendarViewDayDataSource? = nil) {
         
         self.delegate = delegate
@@ -37,6 +39,8 @@ public class CalendarViewDayCell: UITableViewCell {
         
         let dayScheduleTableView = UITableView()
         self.dayScheduleTableView = dayScheduleTableView
+        
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.dayScheduleTableView.delegate = self
         self.dayScheduleTableView.dataSource = self

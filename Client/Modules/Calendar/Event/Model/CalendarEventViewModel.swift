@@ -6,11 +6,13 @@
 //  Copyright © 2018 educrate. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol CalendarEventViewModel {
-    func title() -> String?
-    func detail() -> String?
+    init(_ event: CalendarEvent)
+    
+    var title: String? { get }
+    var detail: String? { get }
     
     var leftLogo: UIImage? { get set }
     var rightLogo: UIImage? { get set }
@@ -20,14 +22,4 @@ protocol CalendarEventViewModel {
     var tuteeName: String { get set }
     var formattedDuration: String { get set }
     var locationName: String { get set }
-}
-
-extension CalendarEventViewModel {
-    func title() -> String {
-        return "\(courseName) with \(tutorName)"
-    }
-    
-    func detail() -> String {
-        return "\(formattedDuration) at \(locationName)"
-    }
 }

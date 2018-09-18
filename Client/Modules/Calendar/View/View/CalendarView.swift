@@ -14,7 +14,7 @@ public class CalendarView: UIView {
     /// encompasing table view which holds
     /// the date object as well as the
     /// table view for a single day
-    private let calendarTableView: UITableView!
+    private weak var calendarTableView: UITableView!
     
     // MARK: Protocols
     
@@ -23,7 +23,8 @@ public class CalendarView: UIView {
     
     // MARK: Initializers
     
-    init(delegate: CalendarViewDelegate? = nil,
+    init(_ frame: CGRect,
+         delegate: CalendarViewDelegate? = nil,
          dataSource: CalendarViewDataSource? = nil) {
         
         self.delegate = delegate
@@ -31,6 +32,8 @@ public class CalendarView: UIView {
         
         let calendarTableView = UITableView()
         self.calendarTableView = calendarTableView
+        
+        super.init(frame: frame)
         
         self.calendarTableView.delegate = self
         self.calendarTableView.dataSource = self

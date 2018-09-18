@@ -8,14 +8,17 @@
 import UIKit
 
 public class CalendarViewEventCell: UITableViewCell {
-    private var title: UILabel
-    private var detail: UILabel
-    private var leftIcon: UIImage
-    private var rightIcon: UIImage
+    private var title: UILabel?
+    private var detail: UILabel?
+    private var leftIcon: UIImage?
+    private var rightIcon: UIImage?
 }
 
-public extension CalendarViewEventCell {
-    public func initalize(_ event: CalendarEvent) {
-        
+extension CalendarViewEventCell {
+    func initalize(_ eventViewModel: CalendarEventViewModel) {
+        title?.text = eventViewModel.title
+        detail?.text = eventViewModel.detail
+        leftIcon = eventViewModel.leftLogo
+        rightIcon = eventViewModel.rightLogo
     }
 }
