@@ -8,13 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */; };
-		BFD0291021509AD4002FB9F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0290F21509AD4002FB9F5 /* ViewController.swift */; };
 		BFD0291321509AD4002FB9F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0291121509AD4002FB9F5 /* Main.storyboard */; };
 		BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD0291421509AD4002FB9F5 /* Client.xcdatamodeld */; };
 		BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD0291721509AD5002FB9F5 /* Assets.xcassets */; };
 		BFD0291B21509AD5002FB9F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0291921509AD5002FB9F5 /* LaunchScreen.storyboard */; };
 		BFD0292621509AD5002FB9F5 /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0292521509AD5002FB9F5 /* ClientTests.swift */; };
 		BFD0293121509AD5002FB9F5 /* ClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0293021509AD5002FB9F5 /* ClientUITests.swift */; };
+		BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0294621509BB2002FB9F5 /* CalendarEvent.swift */; };
+		BFD0295A21509BB2002FB9F5 /* CalendarViewEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0294821509BB2002FB9F5 /* CalendarViewEventCell.swift */; };
+		BFD0295B21509BB2002FB9F5 /* CalendarViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0294B21509BB2002FB9F5 /* CalendarViewDataSource.swift */; };
+		BFD0295C21509BB2002FB9F5 /* CalendarViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0294C21509BB2002FB9F5 /* CalendarViewDelegate.swift */; };
+		BFD0295D21509BB2002FB9F5 /* CalendarViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0294F21509BB2002FB9F5 /* CalendarViewSectionHeader.swift */; };
+		BFD0295E21509BB2002FB9F5 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295021509BB2002FB9F5 /* CalendarView.swift */; };
+		BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295321509BB2002FB9F5 /* CalendarDay.swift */; };
+		BFD0296021509BB2002FB9F5 /* CalendarViewDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295521509BB2002FB9F5 /* CalendarViewDayCell.swift */; };
+		BFD0296121509BB2002FB9F5 /* CalendarViewDayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295721509BB2002FB9F5 /* CalendarViewDayDelegate.swift */; };
+		BFD0296221509BB2002FB9F5 /* CalendarViewDayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295821509BB2002FB9F5 /* CalendarViewDayDataSource.swift */; };
+		BFD0296E21509C1E002FB9F5 /* CreditCardViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296421509C1D002FB9F5 /* CreditCardViewModelDataSource.swift */; };
+		BFD0296F21509C1E002FB9F5 /* CreditCardMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296521509C1D002FB9F5 /* CreditCardMetadata.swift */; };
+		BFD0297021509C1E002FB9F5 /* CreditCardViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296621509C1D002FB9F5 /* CreditCardViewModelDelegate.swift */; };
+		BFD0297221509C1E002FB9F5 /* CreditCardViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296821509C1D002FB9F5 /* CreditCardViewStyle.swift */; };
+		BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296921509C1E002FB9F5 /* CreditCardWarning.swift */; };
+		BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296A21509C1E002FB9F5 /* CreditCard.swift */; };
+		BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296B21509C1E002FB9F5 /* CreditCardViewModel.swift */; };
+		BFD0297621509C1E002FB9F5 /* CreditCardViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296C21509C1E002FB9F5 /* CreditCardViewConstants.swift */; };
+		BFD0297721509C1E002FB9F5 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296D21509C1E002FB9F5 /* CreditCardView.swift */; };
+		BFD0298121509C6A002FB9F5 /* PrefixContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297A21509C69002FB9F5 /* PrefixContainable.swift */; };
+		BFD0298221509C6A002FB9F5 /* ImageExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297B21509C69002FB9F5 /* ImageExtractor.swift */; };
+		BFD0298321509C6A002FB9F5 /* Mathematics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297C21509C69002FB9F5 /* Mathematics.swift */; };
+		BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297D21509C69002FB9F5 /* CreditCardTypeValidationRequirement.swift */; };
+		BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297E21509C6A002FB9F5 /* CreditCardType.swift */; };
+		BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297F21509C6A002FB9F5 /* CreditCardTypeValidator.swift */; };
+		BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298021509C6A002FB9F5 /* CreditCardTypeValidationState.swift */; };
+		BFD0299021509C9A002FB9F5 /* FlatActionSheetDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298921509C99002FB9F5 /* FlatActionSheetDelegate.swift */; };
+		BFD0299121509C9A002FB9F5 /* FlatActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298A21509C99002FB9F5 /* FlatActionSheet.swift */; };
+		BFD0299221509C9A002FB9F5 /* FlatActionSheetActionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298B21509C99002FB9F5 /* FlatActionSheetActionStyle.swift */; };
+		BFD0299321509C9A002FB9F5 /* FlatActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298C21509C99002FB9F5 /* FlatActionSheetCell.swift */; };
+		BFD0299421509C9A002FB9F5 /* FlatActionSheetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298D21509C9A002FB9F5 /* FlatActionSheetConfig.swift */; };
+		BFD0299521509C9A002FB9F5 /* FlatActionSheetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298E21509C9A002FB9F5 /* FlatActionSheetAction.swift */; };
+		BFD0299621509C9A002FB9F5 /* FlatActionSheetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298F21509C9A002FB9F5 /* FlatActionSheetDataSource.swift */; };
+		BFD0299B21509CD5002FB9F5 /* FlatField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299821509CD4002FB9F5 /* FlatField.swift */; };
+		BFD0299C21509CD5002FB9F5 /* FlatFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299921509CD4002FB9F5 /* FlatFieldDelegate.swift */; };
+		BFD0299D21509CD5002FB9F5 /* FlatFieldConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299A21509CD5002FB9F5 /* FlatFieldConfig.swift */; };
+		BFD029A521509CFD002FB9F5 /* FlatInlinePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299F21509CFD002FB9F5 /* FlatInlinePickerDataSource.swift */; };
+		BFD029A621509CFD002FB9F5 /* FlatInlinePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A021509CFD002FB9F5 /* FlatInlinePickerCell.swift */; };
+		BFD029A721509CFD002FB9F5 /* FlatInlinePickerCellConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A121509CFD002FB9F5 /* FlatInlinePickerCellConfig.swift */; };
+		BFD029A821509CFD002FB9F5 /* FlatInlinePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A221509CFD002FB9F5 /* FlatInlinePickerDelegate.swift */; };
+		BFD029A921509CFD002FB9F5 /* FlatInlinePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A321509CFD002FB9F5 /* FlatInlinePicker.swift */; };
+		BFD029AA21509CFD002FB9F5 /* FlatInlinePickerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A421509CFD002FB9F5 /* FlatInlinePickerConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +78,6 @@
 /* Begin PBXFileReference section */
 		BFD0290A21509AD4002FB9F5 /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFD0290F21509AD4002FB9F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BFD0291221509AD4002FB9F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFD0291521509AD4002FB9F5 /* Client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Client.xcdatamodel; sourceTree = "<group>"; };
 		BFD0291721509AD5002FB9F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +89,48 @@
 		BFD0292C21509AD5002FB9F5 /* ClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0293021509AD5002FB9F5 /* ClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientUITests.swift; sourceTree = "<group>"; };
 		BFD0293221509AD5002FB9F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD0294621509BB2002FB9F5 /* CalendarEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
+		BFD0294821509BB2002FB9F5 /* CalendarViewEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewEventCell.swift; sourceTree = "<group>"; };
+		BFD0294B21509BB2002FB9F5 /* CalendarViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDataSource.swift; sourceTree = "<group>"; };
+		BFD0294C21509BB2002FB9F5 /* CalendarViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDelegate.swift; sourceTree = "<group>"; };
+		BFD0294F21509BB2002FB9F5 /* CalendarViewSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewSectionHeader.swift; sourceTree = "<group>"; };
+		BFD0295021509BB2002FB9F5 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		BFD0295321509BB2002FB9F5 /* CalendarDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDay.swift; sourceTree = "<group>"; };
+		BFD0295521509BB2002FB9F5 /* CalendarViewDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDayCell.swift; sourceTree = "<group>"; };
+		BFD0295721509BB2002FB9F5 /* CalendarViewDayDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDayDelegate.swift; sourceTree = "<group>"; };
+		BFD0295821509BB2002FB9F5 /* CalendarViewDayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDayDataSource.swift; sourceTree = "<group>"; };
+		BFD0296421509C1D002FB9F5 /* CreditCardViewModelDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewModelDataSource.swift; sourceTree = "<group>"; };
+		BFD0296521509C1D002FB9F5 /* CreditCardMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardMetadata.swift; sourceTree = "<group>"; };
+		BFD0296621509C1D002FB9F5 /* CreditCardViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewModelDelegate.swift; sourceTree = "<group>"; };
+		BFD0296821509C1D002FB9F5 /* CreditCardViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewStyle.swift; sourceTree = "<group>"; };
+		BFD0296921509C1E002FB9F5 /* CreditCardWarning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardWarning.swift; sourceTree = "<group>"; };
+		BFD0296A21509C1E002FB9F5 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		BFD0296B21509C1E002FB9F5 /* CreditCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewModel.swift; sourceTree = "<group>"; };
+		BFD0296C21509C1E002FB9F5 /* CreditCardViewConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewConstants.swift; sourceTree = "<group>"; };
+		BFD0296D21509C1E002FB9F5 /* CreditCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
+		BFD0297A21509C69002FB9F5 /* PrefixContainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixContainable.swift; sourceTree = "<group>"; };
+		BFD0297B21509C69002FB9F5 /* ImageExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtractor.swift; sourceTree = "<group>"; };
+		BFD0297C21509C69002FB9F5 /* Mathematics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mathematics.swift; sourceTree = "<group>"; };
+		BFD0297D21509C69002FB9F5 /* CreditCardTypeValidationRequirement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardTypeValidationRequirement.swift; sourceTree = "<group>"; };
+		BFD0297E21509C6A002FB9F5 /* CreditCardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardType.swift; sourceTree = "<group>"; };
+		BFD0297F21509C6A002FB9F5 /* CreditCardTypeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardTypeValidator.swift; sourceTree = "<group>"; };
+		BFD0298021509C6A002FB9F5 /* CreditCardTypeValidationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardTypeValidationState.swift; sourceTree = "<group>"; };
+		BFD0298921509C99002FB9F5 /* FlatActionSheetDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatActionSheetDelegate.swift; sourceTree = "<group>"; };
+		BFD0298A21509C99002FB9F5 /* FlatActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatActionSheet.swift; sourceTree = "<group>"; };
+		BFD0298B21509C99002FB9F5 /* FlatActionSheetActionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatActionSheetActionStyle.swift; sourceTree = "<group>"; };
+		BFD0298C21509C99002FB9F5 /* FlatActionSheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatActionSheetCell.swift; sourceTree = "<group>"; };
+		BFD0298D21509C9A002FB9F5 /* FlatActionSheetConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatActionSheetConfig.swift; sourceTree = "<group>"; };
+		BFD0298E21509C9A002FB9F5 /* FlatActionSheetAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatActionSheetAction.swift; sourceTree = "<group>"; };
+		BFD0298F21509C9A002FB9F5 /* FlatActionSheetDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatActionSheetDataSource.swift; sourceTree = "<group>"; };
+		BFD0299821509CD4002FB9F5 /* FlatField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatField.swift; sourceTree = "<group>"; };
+		BFD0299921509CD4002FB9F5 /* FlatFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatFieldDelegate.swift; sourceTree = "<group>"; };
+		BFD0299A21509CD5002FB9F5 /* FlatFieldConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatFieldConfig.swift; sourceTree = "<group>"; };
+		BFD0299F21509CFD002FB9F5 /* FlatInlinePickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatInlinePickerDataSource.swift; sourceTree = "<group>"; };
+		BFD029A021509CFD002FB9F5 /* FlatInlinePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatInlinePickerCell.swift; sourceTree = "<group>"; };
+		BFD029A121509CFD002FB9F5 /* FlatInlinePickerCellConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatInlinePickerCellConfig.swift; sourceTree = "<group>"; };
+		BFD029A221509CFD002FB9F5 /* FlatInlinePickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatInlinePickerDelegate.swift; sourceTree = "<group>"; };
+		BFD029A321509CFD002FB9F5 /* FlatInlinePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatInlinePicker.swift; sourceTree = "<group>"; };
+		BFD029A421509CFD002FB9F5 /* FlatInlinePickerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatInlinePickerConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +181,8 @@
 		BFD0290C21509AD4002FB9F5 /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */,
-				BFD0290F21509AD4002FB9F5 /* ViewController.swift */,
-				BFD0291121509AD4002FB9F5 /* Main.storyboard */,
-				BFD0291721509AD5002FB9F5 /* Assets.xcassets */,
-				BFD0291921509AD5002FB9F5 /* LaunchScreen.storyboard */,
-				BFD0291C21509AD5002FB9F5 /* Info.plist */,
-				BFD0291421509AD4002FB9F5 /* Client.xcdatamodeld */,
+				BFD0294121509B39002FB9F5 /* Utilities */,
+				BFD0293E21509AE3002FB9F5 /* Modules */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -126,6 +203,228 @@
 				BFD0293221509AD5002FB9F5 /* Info.plist */,
 			);
 			path = ClientUITests;
+			sourceTree = "<group>";
+		};
+		BFD0293E21509AE3002FB9F5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0298821509C83002FB9F5 /* Action Sheet */,
+				BFD0293F21509AF0002FB9F5 /* App */,
+				BFD0294221509B8E002FB9F5 /* Calendar */,
+				BFD0296321509C02002FB9F5 /* Credit Card */,
+				BFD0299E21509CEE002FB9F5 /* Inline Picker */,
+				BFD0299721509CC0002FB9F5 /* Text Field */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BFD0293F21509AF0002FB9F5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */,
+				BFD0291121509AD4002FB9F5 /* Main.storyboard */,
+				BFD0291921509AD5002FB9F5 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BFD0294121509B39002FB9F5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0291721509AD5002FB9F5 /* Assets.xcassets */,
+				BFD0291C21509AD5002FB9F5 /* Info.plist */,
+				BFD0291421509AD4002FB9F5 /* Client.xcdatamodeld */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BFD0294221509B8E002FB9F5 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0294921509BB2002FB9F5 /* View */,
+				BFD0295121509BB2002FB9F5 /* Day */,
+				BFD0294321509BB2002FB9F5 /* Event */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		BFD0294321509BB2002FB9F5 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0294421509BB2002FB9F5 /* Protocol */,
+				BFD0294521509BB2002FB9F5 /* Model */,
+				BFD0294721509BB2002FB9F5 /* View */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		BFD0294421509BB2002FB9F5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BFD0294521509BB2002FB9F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0294621509BB2002FB9F5 /* CalendarEvent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFD0294721509BB2002FB9F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0294821509BB2002FB9F5 /* CalendarViewEventCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFD0294921509BB2002FB9F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0294A21509BB2002FB9F5 /* Protocol */,
+				BFD0294D21509BB2002FB9F5 /* Model */,
+				BFD0294E21509BB2002FB9F5 /* View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFD0294A21509BB2002FB9F5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0294B21509BB2002FB9F5 /* CalendarViewDataSource.swift */,
+				BFD0294C21509BB2002FB9F5 /* CalendarViewDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BFD0294D21509BB2002FB9F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFD0294E21509BB2002FB9F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0294F21509BB2002FB9F5 /* CalendarViewSectionHeader.swift */,
+				BFD0295021509BB2002FB9F5 /* CalendarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFD0295121509BB2002FB9F5 /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0295221509BB2002FB9F5 /* Model */,
+				BFD0295421509BB2002FB9F5 /* View */,
+				BFD0295621509BB2002FB9F5 /* Protocols */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		BFD0295221509BB2002FB9F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0295321509BB2002FB9F5 /* CalendarDay.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFD0295421509BB2002FB9F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0295521509BB2002FB9F5 /* CalendarViewDayCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFD0295621509BB2002FB9F5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0295721509BB2002FB9F5 /* CalendarViewDayDelegate.swift */,
+				BFD0295821509BB2002FB9F5 /* CalendarViewDayDataSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BFD0296321509C02002FB9F5 /* Credit Card */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0297921509C53002FB9F5 /* Validator */,
+				BFD0297821509C49002FB9F5 /* View */,
+			);
+			path = "Credit Card";
+			sourceTree = "<group>";
+		};
+		BFD0297821509C49002FB9F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0296A21509C1E002FB9F5 /* CreditCard.swift */,
+				BFD0296521509C1D002FB9F5 /* CreditCardMetadata.swift */,
+				BFD0296D21509C1E002FB9F5 /* CreditCardView.swift */,
+				BFD0296C21509C1E002FB9F5 /* CreditCardViewConstants.swift */,
+				BFD0296B21509C1E002FB9F5 /* CreditCardViewModel.swift */,
+				BFD0296421509C1D002FB9F5 /* CreditCardViewModelDataSource.swift */,
+				BFD0296621509C1D002FB9F5 /* CreditCardViewModelDelegate.swift */,
+				BFD0296821509C1D002FB9F5 /* CreditCardViewStyle.swift */,
+				BFD0296921509C1E002FB9F5 /* CreditCardWarning.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFD0297921509C53002FB9F5 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0297E21509C6A002FB9F5 /* CreditCardType.swift */,
+				BFD0297D21509C69002FB9F5 /* CreditCardTypeValidationRequirement.swift */,
+				BFD0298021509C6A002FB9F5 /* CreditCardTypeValidationState.swift */,
+				BFD0297F21509C6A002FB9F5 /* CreditCardTypeValidator.swift */,
+				BFD0297B21509C69002FB9F5 /* ImageExtractor.swift */,
+				BFD0297C21509C69002FB9F5 /* Mathematics.swift */,
+				BFD0297A21509C69002FB9F5 /* PrefixContainable.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		BFD0298821509C83002FB9F5 /* Action Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0298A21509C99002FB9F5 /* FlatActionSheet.swift */,
+				BFD0298E21509C9A002FB9F5 /* FlatActionSheetAction.swift */,
+				BFD0298B21509C99002FB9F5 /* FlatActionSheetActionStyle.swift */,
+				BFD0298C21509C99002FB9F5 /* FlatActionSheetCell.swift */,
+				BFD0298D21509C9A002FB9F5 /* FlatActionSheetConfig.swift */,
+				BFD0298F21509C9A002FB9F5 /* FlatActionSheetDataSource.swift */,
+				BFD0298921509C99002FB9F5 /* FlatActionSheetDelegate.swift */,
+			);
+			path = "Action Sheet";
+			sourceTree = "<group>";
+		};
+		BFD0299721509CC0002FB9F5 /* Text Field */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0299821509CD4002FB9F5 /* FlatField.swift */,
+				BFD0299A21509CD5002FB9F5 /* FlatFieldConfig.swift */,
+				BFD0299921509CD4002FB9F5 /* FlatFieldDelegate.swift */,
+			);
+			path = "Text Field";
+			sourceTree = "<group>";
+		};
+		BFD0299E21509CEE002FB9F5 /* Inline Picker */ = {
+			isa = PBXGroup;
+			children = (
+				BFD029A321509CFD002FB9F5 /* FlatInlinePicker.swift */,
+				BFD029A021509CFD002FB9F5 /* FlatInlinePickerCell.swift */,
+				BFD029A121509CFD002FB9F5 /* FlatInlinePickerCellConfig.swift */,
+				BFD029A421509CFD002FB9F5 /* FlatInlinePickerConfig.swift */,
+				BFD0299F21509CFD002FB9F5 /* FlatInlinePickerDataSource.swift */,
+				BFD029A221509CFD002FB9F5 /* FlatInlinePickerDelegate.swift */,
+			);
+			path = "Inline Picker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +558,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFD0291021509AD4002FB9F5 /* ViewController.swift in Sources */,
+				BFD029A721509CFD002FB9F5 /* FlatInlinePickerCellConfig.swift in Sources */,
+				BFD029A621509CFD002FB9F5 /* FlatInlinePickerCell.swift in Sources */,
+				BFD0296221509BB2002FB9F5 /* CalendarViewDayDataSource.swift in Sources */,
 				BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */,
+				BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */,
+				BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */,
+				BFD0299421509C9A002FB9F5 /* FlatActionSheetConfig.swift in Sources */,
+				BFD0297221509C1E002FB9F5 /* CreditCardViewStyle.swift in Sources */,
+				BFD0299C21509CD5002FB9F5 /* FlatFieldDelegate.swift in Sources */,
+				BFD0297021509C1E002FB9F5 /* CreditCardViewModelDelegate.swift in Sources */,
+				BFD0295A21509BB2002FB9F5 /* CalendarViewEventCell.swift in Sources */,
+				BFD0299121509C9A002FB9F5 /* FlatActionSheet.swift in Sources */,
+				BFD0295E21509BB2002FB9F5 /* CalendarView.swift in Sources */,
+				BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */,
+				BFD029A521509CFD002FB9F5 /* FlatInlinePickerDataSource.swift in Sources */,
+				BFD0295D21509BB2002FB9F5 /* CalendarViewSectionHeader.swift in Sources */,
+				BFD0298321509C6A002FB9F5 /* Mathematics.swift in Sources */,
+				BFD029A921509CFD002FB9F5 /* FlatInlinePicker.swift in Sources */,
+				BFD0297721509C1E002FB9F5 /* CreditCardView.swift in Sources */,
+				BFD0299B21509CD5002FB9F5 /* FlatField.swift in Sources */,
+				BFD029A821509CFD002FB9F5 /* FlatInlinePickerDelegate.swift in Sources */,
+				BFD0296E21509C1E002FB9F5 /* CreditCardViewModelDataSource.swift in Sources */,
+				BFD0297621509C1E002FB9F5 /* CreditCardViewConstants.swift in Sources */,
+				BFD0296F21509C1E002FB9F5 /* CreditCardMetadata.swift in Sources */,
+				BFD0299221509C9A002FB9F5 /* FlatActionSheetActionStyle.swift in Sources */,
+				BFD0299021509C9A002FB9F5 /* FlatActionSheetDelegate.swift in Sources */,
+				BFD029AA21509CFD002FB9F5 /* FlatInlinePickerConfig.swift in Sources */,
+				BFD0299521509C9A002FB9F5 /* FlatActionSheetAction.swift in Sources */,
+				BFD0295C21509BB2002FB9F5 /* CalendarViewDelegate.swift in Sources */,
+				BFD0299321509C9A002FB9F5 /* FlatActionSheetCell.swift in Sources */,
+				BFD0298221509C6A002FB9F5 /* ImageExtractor.swift in Sources */,
+				BFD0295B21509BB2002FB9F5 /* CalendarViewDataSource.swift in Sources */,
+				BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */,
+				BFD0296121509BB2002FB9F5 /* CalendarViewDayDelegate.swift in Sources */,
 				BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */,
+				BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */,
+				BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */,
+				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
+				BFD0299D21509CD5002FB9F5 /* FlatFieldConfig.swift in Sources */,
+				BFD0298121509C6A002FB9F5 /* PrefixContainable.swift in Sources */,
+				BFD0296021509BB2002FB9F5 /* CalendarViewDayCell.swift in Sources */,
+				BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */,
+				BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */,
+				BFD0299621509C9A002FB9F5 /* FlatActionSheetDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +783,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.educrate.course-correct.Client";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.educrate.course-correct.client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -461,7 +801,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.educrate.course-correct.Client";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.educrate.course-correct.client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
