@@ -37,6 +37,8 @@ public class CalendarView: UIView {
         
         self.calendarTableView.delegate = self
         self.calendarTableView.dataSource = self
+        
+        self.calendarTableView.register(CalendarViewDayCell.self, forCellReuseIdentifier: "calendardaycell")
     }
     
     required init?(coder aDecoder: NSCoder) {

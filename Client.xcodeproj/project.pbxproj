@@ -320,8 +320,8 @@
 		BFD0294A21509BB2002FB9F5 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				BFD0294B21509BB2002FB9F5 /* CalendarViewDataSource.swift */,
 				BFD0294C21509BB2002FB9F5 /* CalendarViewDelegate.swift */,
+				BFD0294B21509BB2002FB9F5 /* CalendarViewDataSource.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
