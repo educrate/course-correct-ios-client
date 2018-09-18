@@ -105,7 +105,8 @@ private extension CalendarViewDayCell {
         dayLabel.translatesAutoresizingMaskIntoConstraints = false
         
         dayLabel.topAnchor.constraint(equalTo: topAnchor)
-        dayLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 8)
+        dayLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16)
+        dayLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.1)
     }
 }
 
