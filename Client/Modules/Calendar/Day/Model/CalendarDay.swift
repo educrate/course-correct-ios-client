@@ -7,11 +7,11 @@
 
 import Foundation
 
-public struct CalendarDay {
+protocol CalendarDay {
     
     /// date for extracting day of the week and day of the month
-    public let date: Date
+    var date: Date { get set }
     
     /// events occurring during this day
-    public let events: [CalendarEvent]
+    var events: [CalendarEvent] { get set }
 }

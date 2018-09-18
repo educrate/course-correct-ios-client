@@ -48,6 +48,8 @@ public class CalendarViewDayCell: UITableViewCell {
     }
 }
 
+// MARK: - Table View Protocol Conformance
+
 extension CalendarViewDayCell: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let dataSource = dataSource else {
