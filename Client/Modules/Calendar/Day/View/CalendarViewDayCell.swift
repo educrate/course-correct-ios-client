@@ -52,6 +52,63 @@ public class CalendarViewDayCell: UITableViewCell {
     }
 }
 
+private extension CalendarViewDayCell {
+    func setUp() {
+        setUpTableView()
+    }
+    
+    // MARK: Table View Setup
+    
+    func setUpTableView() {
+        initializeTableView()
+        styleTableView()
+        constrainTableView()
+    }
+    
+    func initializeTableView() {
+        self.dayScheduleTableView.delegate = self
+        self.dayScheduleTableView.dataSource = self
+        
+        self.dayScheduleTableView.register(CalendarViewEventCell.self, forCellReuseIdentifier: "calendareventcell")
+    }
+    
+    func styleTableView() {
+        
+    }
+    
+    func constrainTableView() {
+        dayScheduleTableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        dayScheduleTableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        dayScheduleTableView.leftAnchor.constraint(equalTo: dayLabel.rightAnchor, constant: 8).isActive = true
+        dayScheduleTableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        dayScheduleTableView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+    }
+    
+    // MARK: Day Label Setup
+    
+    func setUpDayLabel() {
+        initializeDayLabel()
+        styleDayLabel()
+        constrainDayLabel()
+    }
+    
+    func initializeDayLabel() {
+        
+    }
+    
+    func styleDayLabel() {
+        
+    }
+    
+    func constrainDayLabel() {
+        dayLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        dayLabel.topAnchor.constraint(equalTo: topAnchor)
+        dayLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 8)
+    }
+}
+
 // MARK: - Table View Protocol Conformance
 
 extension CalendarViewDayCell: UITableViewDelegate, UITableViewDataSource {
