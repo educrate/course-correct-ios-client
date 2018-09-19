@@ -16,7 +16,8 @@ class CalendarViewEventCell: UITableViewCell {
     
     
     // MARK: Views
-    
+    private weak var stackView: UIStackView!
+    private weak var textStackView: UIStackView!
     private weak var titleLabel: UILabel!
     private weak var detailLabel: UILabel!
     private weak var leftIconImageView: UIImageView!
@@ -73,6 +74,51 @@ extension CalendarViewEventCell {
 
 private extension CalendarViewEventCell {
     func initializeViews() {
+        addViews()
+        setUpViews()
+        addConstraints()
+    }
+    
+    
+    // MARK: Initializer Methods
+    
+    func addViews() {
+        addSubview(titleLabel)
+        addSubview(detailLabel)
+        addSubview(leftIconImageView)
+        addSubview(rightIconImageView)
+    }
+    
+    func setUpViews() {
         
+    }
+    
+    func addConstraints() {
+        constrainLeftIconImageView()
+        constrainTitleLabel()
+        constrainDetailLabel()
+        constrainRightIconImageView()
+    }
+    
+    
+    // MARK: View Constraining
+    
+    func constrainLeftIconImageView() {
+        leftIconImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
+        leftIconImageView.widthAnchor.constraint(equalTo: leftIconImageView.heightAnchor).isActive = true
+        leftIconImageView.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func constrainTitleLabel() {
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func constrainDetailLabel() {
+        
+        detailLabel.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func constrainRightIconImageView() {
+        rightIconImageView.translatesAutoresizingMaskIntoConstraints = false
     }
 }
