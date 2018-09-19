@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class CalendarView: UIView {
+class CalendarView: UIView {
     
     // MARK: Views
     
@@ -20,15 +20,18 @@ public class CalendarView: UIView {
     
     var delegate: CalendarViewDelegate?
     var dataSource: CalendarViewDataSource?
+    var interactor: CalendarViewInteractor?
     
     // MARK: Initializers
     
     init(_ frame: CGRect,
          delegate: CalendarViewDelegate? = nil,
-         dataSource: CalendarViewDataSource? = nil) {
+         dataSource: CalendarViewDataSource? = nil,
+         interactor: CalendarViewInteractor? = nil) {
         
         self.delegate = delegate
         self.dataSource = dataSource
+        self.interactor = interactor
         
         let calendarTableView = UITableView()
         self.calendarTableView = calendarTableView
@@ -41,6 +44,12 @@ public class CalendarView: UIView {
     required init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
+    }
+}
+
+extension CalendarView {
+    func didMoveTo(_ date: Date) {
+        
     }
 }
 
@@ -84,7 +93,7 @@ extension CalendarView: UITableViewDelegate, UITableViewDataSource {
             return 0
         }
         
-        return dataSource.calendarView(self, numberOfRowsInSection: section)
+        return 0
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,6 +101,6 @@ extension CalendarView: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        return dataSource.calendarView(self, cellForRowAt: indexPath)
+        return UITableViewCell()
     }
 }
