@@ -54,6 +54,8 @@ public class CalendarViewDayCell: UITableViewCell {
         
         dayScheduleTableView.delegate = self
         dayScheduleTableView.dataSource = self
+        
+        initializeViews()
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -67,6 +69,8 @@ public class CalendarViewDayCell: UITableViewCell {
         
         dayScheduleTableView.delegate = self
         dayScheduleTableView.dataSource = self
+        
+        initializeViews()
     }
 }
 

@@ -10,6 +10,11 @@ import UIKit
 class CalendarViewEventCell: UITableViewCell {
     
     
+    // MARK: Properties
+    
+    private var event: CalendarEvent?
+    
+    
     // MARK: Views
     
     private weak var titleLabel: UILabel!
@@ -54,3 +59,20 @@ class CalendarViewEventCell: UITableViewCell {
     }
 }
 
+
+// MARK: - Public Setup Methods
+
+extension CalendarViewEventCell {
+    func setUp(_ calendarEvent: CalendarEvent) {
+        event = calendarEvent
+    }
+}
+
+
+// MARK: - Private View Setup Methods
+
+private extension CalendarViewEventCell {
+    func initializeViews() {
+        
+    }
+}
