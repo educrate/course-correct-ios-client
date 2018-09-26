@@ -9,6 +9,12 @@ import UIKit
 
 class CalendarView: UIView {
     
+    
+    // MARK: Properties
+    
+    private var date: Date
+    
+    
     // MARK: Views
     
     /// encompasing table view which holds
@@ -26,8 +32,11 @@ class CalendarView: UIView {
     // MARK: Initializers
     
     init(_ frame: CGRect,
+         date: Date = Date(),
          delegate: CalendarViewDelegate? = nil,
          dataSource: CalendarViewDataSource? = nil) {
+        
+        self.date = date
         
         self.delegate = delegate
         self.dataSource = dataSource
@@ -41,13 +50,19 @@ class CalendarView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) {
+        self.date = Date()
+        
+        let calendarTableView = UITableView()
+        self.calendarTableView = calendarTableView
         
         super.init(coder: aDecoder)
+        
+        setUp()
     }
 }
 
 extension CalendarView {
-    func didMoveTo(_ date: Date) {
+    func moveTo(_ date: Date) {
         
     }
 }
@@ -62,7 +77,6 @@ private extension CalendarView {
     
     func setUpTableView() {
         initializeTableView()
-        styleTableView()
         constrainTableView()
     }
     
@@ -72,10 +86,6 @@ private extension CalendarView {
         
         self.calendarTableView.register(CalendarViewDayCell.self,
                                         forCellReuseIdentifier: CalendarViewDayCell.identifier)
-    }
-    
-    func styleTableView() {
-        
     }
     
     func constrainTableView() {
