@@ -158,3 +158,7 @@ extension CalendarViewDayCell: UITableViewDelegate, UITableViewDataSource {
         return dataSource.calendarViewDayCell(self, cellForRowAt: indexPath)
     }
 }
+
+extension CalendarViewDayCell {
+    static let identifier = "calendardaycell"
+}

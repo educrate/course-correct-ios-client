@@ -16,6 +16,7 @@ class CalendarViewEventCell: UITableViewCell {
     
     
     // MARK: Views
+    
     private weak var stackView: UIStackView!
     private weak var textStackView: UIStackView!
     private weak var titleLabel: UILabel!
