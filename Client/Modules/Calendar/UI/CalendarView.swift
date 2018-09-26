@@ -63,7 +63,7 @@ class CalendarView: UIView {
 
 extension CalendarView {
     func moveTo(_ date: Date) {
-        
+        self.date = date
     }
 }
 
@@ -106,7 +106,7 @@ extension CalendarView: UITableViewDelegate, UITableViewDataSource {
             return 0
         }
         
-        let events = dataSource.day(for: Date()).events
+        let events = dataSource.day(for: date).events
         
         return events.count
     }
@@ -123,7 +123,7 @@ extension CalendarView: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let events = dataSource.day(for: Date()).events
+        let events = dataSource.day(for: date).events
         let rowIndex = indexPath.row
         
         guard events.indices.contains(rowIndex) else {
