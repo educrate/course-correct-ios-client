@@ -10,7 +10,7 @@ import UIKit
 /// this cell holds all the data for a single calendar day
 /// contains a date label on the left
 /// contains a table view in the middle
-public class CalendarViewDayCell: UITableViewCell {
+class CalendarViewDayCell: UITableViewCell {
     
     
     // MARK: Properties
@@ -41,6 +41,7 @@ public class CalendarViewDayCell: UITableViewCell {
          reuseIdentifier: String?,
          delegate calendarViewDayDelegate: CalendarViewDayDelegate? = nil,
          dataSource calendarViewDayDataSource: CalendarViewDayDataSource? = nil) {
+        
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         let tv = UITableView()

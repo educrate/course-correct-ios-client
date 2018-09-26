@@ -13,10 +13,6 @@ protocol CalendarViewDayLabelViewModel {
     var detail: String? { get }
 }
 
-protocol CalendarViewDayLabelInteractor {
-    func dayLabel(from date: Date) -> CalendarViewDayLabelViewModel
-}
-
 class CalendarViewDayLabel: UIView {
     
     

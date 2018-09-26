@@ -29,6 +29,7 @@ class CalendarViewEventCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle,
                   reuseIdentifier: String?) {
+        
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         let tl = UILabel()
@@ -76,7 +77,6 @@ extension CalendarViewEventCell {
 private extension CalendarViewEventCell {
     func initializeViews() {
         addViews()
-        setUpViews()
         addConstraints()
     }
     
@@ -88,10 +88,6 @@ private extension CalendarViewEventCell {
         addSubview(detailLabel)
         addSubview(leftIconImageView)
         addSubview(rightIconImageView)
-    }
-    
-    func setUpViews() {
-        
     }
     
     func addConstraints() {
@@ -107,6 +103,7 @@ private extension CalendarViewEventCell {
     func constrainLeftIconImageView() {
         leftIconImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
         leftIconImageView.widthAnchor.constraint(equalTo: leftIconImageView.heightAnchor).isActive = true
+        
         leftIconImageView.translatesAutoresizingMaskIntoConstraints = false
     }
     

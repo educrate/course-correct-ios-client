@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol CalendarViewDelegate: class {
+protocol CalendarViewDelegate {
     
 }

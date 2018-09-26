@@ -7,6 +7,6 @@
 
 import UIKit
 
-public class CalendarViewSectionHeader: UITableViewHeaderFooterView {
+class CalendarViewSectionHeader: UITableViewHeaderFooterView {
     
 }

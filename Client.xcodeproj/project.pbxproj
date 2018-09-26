@@ -32,8 +32,6 @@
 		BFD0295E21509BB2002FB9F5 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295021509BB2002FB9F5 /* CalendarView.swift */; };
 		BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295321509BB2002FB9F5 /* CalendarDay.swift */; };
 		BFD0296021509BB2002FB9F5 /* CalendarViewDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295521509BB2002FB9F5 /* CalendarViewDayCell.swift */; };
-		BFD0296121509BB2002FB9F5 /* CalendarViewDayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295721509BB2002FB9F5 /* CalendarViewDayDelegate.swift */; };
-		BFD0296221509BB2002FB9F5 /* CalendarViewDayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295821509BB2002FB9F5 /* CalendarViewDayDataSource.swift */; };
 		BFD0296E21509C1E002FB9F5 /* CreditCardViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296421509C1D002FB9F5 /* CreditCardViewModelDataSource.swift */; };
 		BFD0296F21509C1E002FB9F5 /* CreditCardMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296521509C1D002FB9F5 /* CreditCardMetadata.swift */; };
 		BFD0297021509C1E002FB9F5 /* CreditCardViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296621509C1D002FB9F5 /* CreditCardViewModelDelegate.swift */; };
@@ -117,8 +115,6 @@
 		BFD0295021509BB2002FB9F5 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		BFD0295321509BB2002FB9F5 /* CalendarDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDay.swift; sourceTree = "<group>"; };
 		BFD0295521509BB2002FB9F5 /* CalendarViewDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDayCell.swift; sourceTree = "<group>"; };
-		BFD0295721509BB2002FB9F5 /* CalendarViewDayDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDayDelegate.swift; sourceTree = "<group>"; };
-		BFD0295821509BB2002FB9F5 /* CalendarViewDayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDayDataSource.swift; sourceTree = "<group>"; };
 		BFD0296421509C1D002FB9F5 /* CreditCardViewModelDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewModelDataSource.swift; sourceTree = "<group>"; };
 		BFD0296521509C1D002FB9F5 /* CreditCardMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardMetadata.swift; sourceTree = "<group>"; };
 		BFD0296621509C1D002FB9F5 /* CreditCardViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -199,8 +195,6 @@
 			children = (
 				BFD0294C21509BB2002FB9F5 /* CalendarViewDelegate.swift */,
 				BFD0294B21509BB2002FB9F5 /* CalendarViewDataSource.swift */,
-				BFD0295721509BB2002FB9F5 /* CalendarViewDayDelegate.swift */,
-				BFD0295821509BB2002FB9F5 /* CalendarViewDayDataSource.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -527,7 +521,6 @@
 				BF1DA2BD2150B0C200434843 /* CalendarCourse.swift in Sources */,
 				BFD029A721509CFD002FB9F5 /* FlatInlinePickerCellConfig.swift in Sources */,
 				BFD029A621509CFD002FB9F5 /* FlatInlinePickerCell.swift in Sources */,
-				BFD0296221509BB2002FB9F5 /* CalendarViewDayDataSource.swift in Sources */,
 				BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */,
 				BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */,
 				BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */,
@@ -564,7 +557,6 @@
 				BFD0298221509C6A002FB9F5 /* ImageExtractor.swift in Sources */,
 				BFD0295B21509BB2002FB9F5 /* CalendarViewDataSource.swift in Sources */,
 				BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */,
-				BFD0296121509BB2002FB9F5 /* CalendarViewDayDelegate.swift in Sources */,
 				BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */,
 				BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */,
 				BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */,
