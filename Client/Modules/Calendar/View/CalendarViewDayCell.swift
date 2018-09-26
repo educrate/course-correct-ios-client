@@ -28,19 +28,11 @@ class CalendarViewDayCell: UITableViewCell {
     /// one cell per event
     private weak var dayScheduleTableView: UITableView!
     
-    
-    // MARK: Protocols
-    
-    var delegate: CalendarViewDayDelegate?
-    var dataSource: CalendarViewDayDataSource?
-    
-    
+
     // MARK: Initializers
     
-    init(style: UITableViewCell.CellStyle,
-         reuseIdentifier: String?,
-         delegate calendarViewDayDelegate: CalendarViewDayDelegate? = nil,
-         dataSource calendarViewDayDataSource: CalendarViewDayDataSource? = nil) {
+    override init(style: UITableViewCell.CellStyle,
+                  reuseIdentifier: String?) {
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -49,9 +41,6 @@ class CalendarViewDayCell: UITableViewCell {
         
         let dl = CalendarViewDayLabel()
         dayLabel = dl
-        
-        delegate = calendarViewDayDelegate
-        dataSource = calendarViewDayDataSource
         
         dayScheduleTableView.delegate = self
         dayScheduleTableView.dataSource = self
@@ -152,11 +141,27 @@ extension CalendarViewDayCell: UITableViewDelegate, UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let dataSource = dataSource else {
+        guard let day = day else {
             return UITableViewCell()
         }
         
-        return dataSource.calendarViewDayCell(self, cellForRowAt: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CalendarViewEventCell.identifier,
+                                                       for: indexPath) as? CalendarViewEventCell else {
+            return UITableViewCell()
+        }
+        
+        let events = day.events
+        let rowIndex = indexPath.row
+        
+        guard events.indices.contains(rowIndex) else {
+            return UITableViewCell()
+        }
+        
+        let event = events[rowIndex]
+        
+        cell.setUp(event)
+        
+        return cell
     }
 }
 

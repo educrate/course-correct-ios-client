@@ -77,6 +77,7 @@ extension CalendarViewEventCell {
 private extension CalendarViewEventCell {
     func initializeViews() {
         addViews()
+        setUpStackViews()
         addConstraints()
     }
     
@@ -88,6 +89,31 @@ private extension CalendarViewEventCell {
         addSubview(detailLabel)
         addSubview(leftIconImageView)
         addSubview(rightIconImageView)
+    }
+    
+    func setUpStackViews() {
+        setUpStackView()
+        setUpTextStackView()
+    }
+    
+    func setUpStackView() {
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.distribution = .fillProportionally
+        stackView.spacing = 8
+        
+        stackView.addArrangedSubview(leftIconImageView)
+        stackView.addArrangedSubview(textStackView)
+        stackView.addArrangedSubview(rightIconImageView)
+    }
+    
+    func setUpTextStackView() {
+        textStackView.axis = .vertical
+        textStackView.alignment = .leading
+        textStackView.spacing = 8
+        
+        textStackView.addArrangedSubview(titleLabel)
+        textStackView.addArrangedSubview(detailLabel)
     }
     
     func addConstraints() {
@@ -119,4 +145,8 @@ private extension CalendarViewEventCell {
     func constrainRightIconImageView() {
         rightIconImageView.translatesAutoresizingMaskIntoConstraints = false
     }
+}
+
+extension CalendarViewEventCell {
+    static let identifier = "calendareventcell"
 }
