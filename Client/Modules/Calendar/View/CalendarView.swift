@@ -61,11 +61,17 @@ class CalendarView: UIView {
     }
 }
 
+
+// MARK: - Public Update Methods
+
 extension CalendarView {
     func moveTo(_ date: Date) {
         self.date = date
     }
 }
+
+
+// MARK: - Set Up Methods
 
 private extension CalendarView {
     func setUp() {
@@ -98,7 +104,10 @@ private extension CalendarView {
     }
 }
 
-extension CalendarView: UITableViewDelegate, UITableViewDataSource {
+
+// MARK: - Table View Data Source Conformation
+
+extension CalendarView: UITableViewDataSource {
     public func tableView(_ tableView: UITableView,
                           numberOfRowsInSection section: Int) -> Int {
         
@@ -136,4 +145,11 @@ extension CalendarView: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+}
+
+
+// MARK: - Table View Delegate Conformation
+
+extension CalendarView: UITableViewDelegate {
+    
 }
