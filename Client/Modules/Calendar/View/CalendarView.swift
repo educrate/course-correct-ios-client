@@ -128,20 +128,13 @@ extension CalendarView: UITableViewDataSource {
         }
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CalendarViewDayCell.identifier,
-                                                       for: indexPath) as? CalendarViewEventCell else {
+                                                       for: indexPath) as? CalendarViewDayCell else {
             return UITableViewCell()
         }
         
-        let events = dataSource.day(for: date).events
-        let rowIndex = indexPath.row
+        let day = dataSource.day(for: date)
         
-        guard events.indices.contains(rowIndex) else {
-            return UITableViewCell()
-        }
-        
-        let event = events[rowIndex]
-        
-        cell.setUp(event)
+        cell.setUp(day)
         
         return cell
     }
