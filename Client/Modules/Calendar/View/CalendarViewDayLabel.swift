@@ -100,7 +100,8 @@ private extension CalendarViewDayLabel {
     func setUpStackView() {
         stackView.axis = .vertical
         stackView.alignment = .leading
-        stackView.spacing = 8
+        stackView.distribution = .equalCentering
+        stackView.spacing = 0
         
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(detailLabel)

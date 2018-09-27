@@ -10,11 +10,6 @@ import UIKit
 class CalendarView: UIView {
     
     
-    // MARK: Properties
-    
-    private var date: Date
-    
-    
     // MARK: Views
     
     /// encompasing table view which holds
@@ -25,6 +20,7 @@ class CalendarView: UIView {
     
     // MARK: Protocols
     
+    var cache: CalendarViewCache?
     var delegate: CalendarViewDelegate?
     var dataSource: CalendarViewDataSource?
     
@@ -32,11 +28,8 @@ class CalendarView: UIView {
     // MARK: Initializers
     
     init(_ frame: CGRect,
-         date: Date = Date(),
          delegate: CalendarViewDelegate? = nil,
          dataSource: CalendarViewDataSource? = nil) {
-        
-        self.date = date
         
         self.delegate = delegate
         self.dataSource = dataSource
@@ -50,8 +43,6 @@ class CalendarView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.date = Date()
-        
         let calendarTableView = UITableView()
         self.calendarTableView = calendarTableView
         
@@ -66,7 +57,6 @@ class CalendarView: UIView {
 
 extension CalendarView {
     func moveTo(_ newDate: Date) {
-        date = newDate
         calendarTableView.reloadData()
     }
 }
@@ -113,21 +103,17 @@ extension CalendarView: UITableViewDataSource {
     public func tableView(_ tableView: UITableView,
                           numberOfRowsInSection section: Int) -> Int {
         
-        guard let dataSource = dataSource else {
+        guard let cache = cache else {
             return 0
         }
         
-        guard let day = dataSource.day(for: date) else {
-            return 0
-        }
-        
-        return day.events.count
+        return cache.days.count
     }
     
     public func tableView(_ tableView: UITableView,
                           cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let dataSource = dataSource else {
+        guard let cache = cache else {
             return UITableViewCell()
         }
         
@@ -136,9 +122,14 @@ extension CalendarView: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        guard let day = dataSource.day(for: date) else {
+        let days = cache.days
+        let rowIndex = indexPath.row
+        
+        guard days.indices.contains(rowIndex) else {
             return UITableViewCell()
         }
+        
+        let day = days[rowIndex]
         
         cell.setUp(day)
         
@@ -150,5 +141,15 @@ extension CalendarView: UITableViewDataSource {
 // MARK: - Table View Delegate Conformation
 
 extension CalendarView: UITableViewDelegate {
-    
+   
+}
+
+
+// MARK: - Table View Prefetch Conformation
+
+extension CalendarView: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView,
+                   prefetchRowsAt indexPaths: [IndexPath]) {
+        
+    }
 }

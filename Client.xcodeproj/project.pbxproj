@@ -15,6 +15,7 @@
 		BF1DA2C52150B13500434843 /* CalendarEventState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DA2C42150B13500434843 /* CalendarEventState.swift */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* Calendar++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* Calendar++.swift */; };
+		BF551663215C824C00D0CBB1 /* CalendarViewCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551662215C824C00D0CBB1 /* CalendarViewCache.swift */; };
 		BFCECCA121520678001BB2BA /* CalendarViewDayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCECCA021520678001BB2BA /* CalendarViewDayLabel.swift */; };
 		BFCECCA321520F8A001BB2BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCECCA221520F8A001BB2BA /* ViewController.swift */; };
 		BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */; };
@@ -92,6 +93,7 @@
 		BF1DA2C42150B13500434843 /* CalendarEventState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventState.swift; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* Calendar++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar++.swift"; sourceTree = "<group>"; };
+		BF551662215C824C00D0CBB1 /* CalendarViewCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewCache.swift; sourceTree = "<group>"; };
 		BFCECCA021520678001BB2BA /* CalendarViewDayLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewDayLabel.swift; sourceTree = "<group>"; };
 		BFCECCA221520F8A001BB2BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BFD0290A21509AD4002FB9F5 /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +197,7 @@
 			children = (
 				BFD0294C21509BB2002FB9F5 /* CalendarViewDelegate.swift */,
 				BFD0294B21509BB2002FB9F5 /* CalendarViewDataSource.swift */,
+				BF551662215C824C00D0CBB1 /* CalendarViewCache.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */,
 				BFD029A821509CFD002FB9F5 /* FlatInlinePickerDelegate.swift in Sources */,
 				BFD0296E21509C1E002FB9F5 /* CreditCardViewModelDataSource.swift in Sources */,
+				BF551663215C824C00D0CBB1 /* CalendarViewCache.swift in Sources */,
 				BFD0297621509C1E002FB9F5 /* CreditCardViewConstants.swift in Sources */,
 				BFD0296F21509C1E002FB9F5 /* CreditCardMetadata.swift in Sources */,
 				BF1DA2C32150B0FF00434843 /* CalendarLocation.swift in Sources */,
