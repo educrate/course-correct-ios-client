@@ -15,16 +15,24 @@ struct CalendarDate {
     let month: Int
     let year: Int
     
-    init?(_ date: Date) {
-        guard let components = Calendar.current.dateFormatterComponents(from: date) else {
+    let shortDayDescription: String
+    let shortMonthDescription: String
+    let shortYearDescription: String
+    
+    init?(_ aDate: Date) {
+        guard let components = Calendar.current.dateNumberComponents(from: aDate) else {
             return nil
         }
         
-        self.date = date
+        date = aDate
         
-        self.day = components.day
-        self.month = components.month
-        self.year = components.year
+        day = components.day
+        month = components.month
+        year = components.year
+        
+        shortDayDescription = Calendar.current.shortDescription(of: date, for: .day)
+        shortMonthDescription = Calendar.current.shortDescription(of: date, for: .month)
+        shortYearDescription = Calendar.current.shortDescription(of: date, for: .year)
     }
 }
 

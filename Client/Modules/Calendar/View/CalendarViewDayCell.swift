@@ -70,6 +70,9 @@ class CalendarViewDayCell: UITableViewCell {
 extension CalendarViewDayCell {
     func setUp(_ calendarDay: CalendarDay) {
         day = calendarDay
+        
+        dayLabel.setUp(calendarDay.date)
+        dayScheduleTableView.reloadData()
     }
 }
 
@@ -106,7 +109,7 @@ private extension CalendarViewDayCell {
     func setUpTableView() {
         dayScheduleTableView.delegate = self
         dayScheduleTableView.dataSource = self
-        dayScheduleTableView.register(CalendarViewEventCell.self, forCellReuseIdentifier: "calendareventcell")
+        dayScheduleTableView.register(CalendarViewEventCell.self, forCellReuseIdentifier: CalendarViewEventCell.identifier)
     }
     
     

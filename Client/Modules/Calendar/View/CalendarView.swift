@@ -65,8 +65,9 @@ class CalendarView: UIView {
 // MARK: - Public Update Methods
 
 extension CalendarView {
-    func moveTo(_ date: Date) {
-        self.date = date
+    func moveTo(_ newDate: Date) {
+        date = newDate
+        calendarTableView.reloadData()
     }
 }
 
@@ -75,15 +76,16 @@ extension CalendarView {
 
 private extension CalendarView {
     func setUp() {
-        setUpTableView()
+        addViews()
+        initializeTableView()
+        constrainTableView()
     }
     
     
     // MARK: Table View Set Up
     
-    func setUpTableView() {
-        initializeTableView()
-        constrainTableView()
+    func addViews() {
+        addSubview(calendarTableView)
     }
     
     func initializeTableView() {
@@ -115,9 +117,11 @@ extension CalendarView: UITableViewDataSource {
             return 0
         }
         
-        let events = dataSource.day(for: date).events
+        guard let day = dataSource.day(for: date) else {
+            return 0
+        }
         
-        return events.count
+        return day.events.count
     }
     
     public func tableView(_ tableView: UITableView,
@@ -132,7 +136,9 @@ extension CalendarView: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let day = dataSource.day(for: date)
+        guard let day = dataSource.day(for: date) else {
+            return UITableViewCell()
+        }
         
         cell.setUp(day)
         

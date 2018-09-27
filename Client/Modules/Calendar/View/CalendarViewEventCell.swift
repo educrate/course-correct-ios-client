@@ -143,6 +143,9 @@ private extension CalendarViewEventCell {
     }
     
     func constrainRightIconImageView() {
+        rightIconImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
+        rightIconImageView.widthAnchor.constraint(equalTo: rightIconImageView.heightAnchor).isActive = true
+        
         rightIconImageView.translatesAutoresizingMaskIntoConstraints = false
     }
 }

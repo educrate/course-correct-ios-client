@@ -9,10 +9,35 @@
 import Foundation
 
 extension Calendar {
-    static let formatter: DateFormatter = {
+    
+    /// formatter for short month and day of the week
+    /// ex - Wed
+    static let shorDayFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateFormat = "yyyy MM dd"
+        dateFormatter.dateFormat = "E"
+        dateFormatter.isLenient = true
+        
+        return dateFormatter
+    }()
+    
+    /// formatter for short month and day of the week
+    /// ex - Wed
+    static let shortMonthFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "MMM"
+        dateFormatter.isLenient = true
+        
+        return dateFormatter
+    }()
+    
+    /// formatter for short month and day of the week
+    /// ex - Wed
+    static let shortYearFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "yy"
         dateFormatter.isLenient = true
         
         return dateFormatter
@@ -20,12 +45,7 @@ extension Calendar {
 }
 
 extension Calendar {
-    func dateFormatterComponents(from date: Date) -> (year: Int, month: Int, day: Int)? {
-        
-        Calendar.formatter.timeZone = timeZone
-        Calendar.formatter.locale = locale
-        Calendar.formatter.calendar = self
-        
+    func dateNumberComponents(from date: Date) -> (year: Int, month: Int, day: Int)? {
         let comp = dateComponents([.year, .month, .day], from: date)
         
         guard
@@ -38,24 +58,25 @@ extension Calendar {
         
         return (year, month, day)
     }
-    
-    func startOfMonth(for date: Date) -> Date? {
-        guard let comp = dateFormatterComponents(from: date) else {
-            return nil
-        }
+}
+
+extension Calendar {
+    func shortDescription(of date: Date,
+                          for component: CalendarComponent) -> String {
         
-        return Calendar.formatter.date(from: "\(comp.year) \(comp.month) 01")
-    }
-    
-    func endOfMonth(for date: Date) -> Date? {
-        guard
-            let comp = dateFormatterComponents(from: date),
-            let day = self.range(of: .day, in: .month, for: date)?.count,
-            let retVal = Calendar.formatter.date(from: "\(comp.year) \(comp.month) \(day)")
-        else {
-            return nil
+        switch component {
+        case .day:
+            return Calendar.shorDayFormatter.string(from: date)
+        case .month:
+            return Calendar.shortMonthFormatter.string(from: date)
+        case .year:
+            return Calendar.shortYearFormatter.string(from: date)
         }
-        
-        return retVal
     }
+}
+
+enum CalendarComponent {
+    case day
+    case month
+    case year
 }

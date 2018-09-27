@@ -10,8 +10,8 @@ import Foundation
 protocol CalendarDay {
     
     /// date for extracting day of the week and day of the month
-    var date: Date { get set }
+    var date: CalendarDate { get }
     
     /// events occurring during this day
-    var events: [CalendarEvent] { get set }
+    var events: [CalendarEvent] { get }
 }

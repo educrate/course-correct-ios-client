@@ -8,11 +8,6 @@
 
 import UIKit
 
-protocol CalendarViewDayLabelViewModel {
-    var title: String? { get }
-    var detail: String? { get }
-}
-
 class CalendarViewDayLabel: UIView {
     
     
@@ -82,9 +77,9 @@ extension CalendarViewDayLabel {
     /// setup method for setting properties on the view
     ///
     /// - Parameter viewModel: model holding view formatted data
-    func setUp(_ viewModel: CalendarViewDayLabelViewModel) {
-        titleLabel.text = viewModel.title
-        detailLabel.text = viewModel.detail
+    func setUp(_ date: CalendarDate) {
+        titleLabel.text = String(date.day)
+        detailLabel.text = date.shortDayDescription
     }
 }
 

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CalendarViewDataSource {
-    func day(for date: Date) -> CalendarDay
+    func day(for date: Date) -> CalendarDay?
 }
