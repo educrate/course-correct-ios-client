@@ -23,6 +23,9 @@ struct CalDay: CalendarDay {
     }
 }
 
+struct CalEvent: CalendarEvent {
+}
+
 class ViewController: UIViewController {
     @IBOutlet weak var calendarView: CalendarView!
 }
@@ -37,7 +40,8 @@ extension ViewController {
 
 extension ViewController: CalendarViewDataSource {
     func day(for date: Date) -> CalendarDay? {
-        return CalDay(date, events: [])
+        let event = CalEvent()
+        return CalDay(date, events: [event, event, event, event])
     }
 }
 

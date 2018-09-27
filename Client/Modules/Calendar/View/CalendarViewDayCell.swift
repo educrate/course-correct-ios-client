@@ -116,9 +116,9 @@ private extension CalendarViewDayCell {
     // MARK: View Contraining
     
     func constrainDayLabel() {
-        dayLabel.topAnchor.constraint(equalTo: topAnchor)
-        dayLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16)
-        dayLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.1)
+        dayLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        dayLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
+        dayLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.1).isActive = true
         dayLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
