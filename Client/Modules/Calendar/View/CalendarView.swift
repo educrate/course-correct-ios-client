@@ -20,19 +20,17 @@ class CalendarView: UIView {
     
     // MARK: Protocols
     
-    var cache: CalendarViewCache?
-    var delegate: CalendarViewDelegate?
-    var dataSource: CalendarViewDataSource?
+    var controller: CalendarViewController?
     
     
     // MARK: Initializers
     
     init(_ frame: CGRect,
+         calendarIdentifier: Calendar.Identifier,
          delegate: CalendarViewDelegate? = nil,
          dataSource: CalendarViewDataSource? = nil) {
         
-        self.delegate = delegate
-        self.dataSource = dataSource
+        
         
         let calendarTableView = UITableView()
         self.calendarTableView = calendarTableView
@@ -87,12 +85,11 @@ private extension CalendarView {
     }
     
     func constrainTableView() {
-        calendarTableView.translatesAutoresizingMaskIntoConstraints = false
-        
         calendarTableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         calendarTableView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         calendarTableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         calendarTableView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        calendarTableView.translatesAutoresizingMaskIntoConstraints = false
     }
 }
 
@@ -103,35 +100,16 @@ extension CalendarView: UITableViewDataSource {
     public func tableView(_ tableView: UITableView,
                           numberOfRowsInSection section: Int) -> Int {
         
-        guard let cache = cache else {
-            return 0
-        }
-        
-        return cache.days.count
+        return 0
     }
     
     public func tableView(_ tableView: UITableView,
                           cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cache = cache else {
-            return UITableViewCell()
-        }
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CalendarViewDayCell.identifier,
                                                        for: indexPath) as? CalendarViewDayCell else {
             return UITableViewCell()
         }
-        
-        let days = cache.days
-        let rowIndex = indexPath.row
-        
-        guard days.indices.contains(rowIndex) else {
-            return UITableViewCell()
-        }
-        
-        let day = days[rowIndex]
-        
-        cell.setUp(day)
         
         return cell
     }

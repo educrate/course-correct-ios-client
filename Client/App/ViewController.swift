@@ -33,18 +33,24 @@ class ViewController: UIViewController {
 extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        calendarView.delegate = self
-        calendarView.dataSource = self
+//        calendarView.delegate = self
+//        calendarView.dataSource = self
     }
 }
 
-extension ViewController: CalendarViewDataSource {
-    func day(for date: Date) -> CalendarDay? {
-        let event = CalEvent()
-        return CalDay(date, events: [event, event, event, event])
-    }
-}
-
-extension ViewController: CalendarViewDelegate {
-    
-}
+//extension ViewController: CalendarViewDataSource {
+//    let calendar: Calendar = {
+//        var calendar = Calendar(identifier: .gregorian)
+//        calendar.locale = Locale.current
+//        return calendar
+//    }()
+//    
+//    func day(for date: Date) -> CalendarDay? {
+//        let event = CalEvent()
+//        return CalDay(date, events: [event, event, event, event])
+//    }
+//}
+//
+//extension ViewController: CalendarViewDelegate {
+//    
+//}

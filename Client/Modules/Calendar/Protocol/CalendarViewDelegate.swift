@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CalendarViewDelegate {
-    
+    var referenceDate: CalendarDay { get set }
 }
