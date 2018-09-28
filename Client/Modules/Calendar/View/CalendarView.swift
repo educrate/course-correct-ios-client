@@ -20,7 +20,10 @@ class CalendarView: UIView {
     
     // MARK: Protocols
     
-    var controller: CalendarViewController?
+    var delegate: CalendarViewDelegate?
+    var dataSource: CalendarViewDataSource?
+    
+    private var cache: CalendarViewCache?
     
     
     // MARK: Initializers

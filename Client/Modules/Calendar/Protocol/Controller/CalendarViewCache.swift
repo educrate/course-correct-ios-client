@@ -9,5 +9,9 @@
 import Foundation
 
 protocol CalendarViewCache {
+    var minimumDay: CalendarDay { get set }
+    var currentDay: CalendarDay { get set }
+    var maximumDay: CalendarDay { get set }
+    
     var days: Dictionary<CalendarDate, CalendarDay> { get set }
 }

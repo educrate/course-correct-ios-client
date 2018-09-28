@@ -10,5 +10,9 @@ import Foundation
 protocol CalendarViewDataSource {
     var calendar: Calendar { get }
     
+    var minimumDay: CalendarDay { get set }
+    var currentDay: CalendarDay { get set }
+    var maximumDay: CalendarDay { get set }
+    
     func day(for date: Date) -> CalendarDay?
 }

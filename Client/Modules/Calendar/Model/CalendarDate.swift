@@ -8,49 +8,42 @@
 
 import Foundation
 
-struct CalendarDate {
-    private let date: Date
-    
+struct CalendarDate: DateDescriptor {
+    let date: Date
     let day: Int
     let month: Int
     let year: Int
+    let weekdayShort: String
+    let weekdayFull: String
+    let monthShort: String
+    let monthFull: String
     
-    let shortDayDescription: String
-    let shortMonthDescription: String
-    let shortYearDescription: String
-    
-    init?(_ aDate: Date) {
-        guard let components = Calendar.current.dateNumberComponents(from: aDate) else {
-            return nil
+    init?(_ aDate: Date,
+          calendar: Calendar) {
+        let numericalComponents = CalendarHelper.numericalComponents(for: aDate,
+                                                                     from: calendar)
+        
+        let shortComponents = CalendarHelper.shortDescriptions(for: aDate,
+                                                               from: calendar)
+        
+        let fullComponents = CalendarHelper.descriptions(for: aDate,
+                                                         from: calendar)
+        
+        guard
+            let numerical = numericalComponents,
+            let short = shortComponents,
+            let full = fullComponents
+            else {
+                return nil
         }
         
         date = aDate
-        
-        day = components.day
-        month = components.month
-        year = components.year
-        
-        shortDayDescription = Calendar.current.shortDescription(of: date, for: .day)
-        shortMonthDescription = Calendar.current.shortDescription(of: date, for: .month)
-        shortYearDescription = Calendar.current.shortDescription(of: date, for: .year)
-    }
-}
-
-extension CalendarDate: Equatable {
-    static func == (lhs: CalendarDate,
-                    rhs: CalendarDate) -> Bool {
-        
-        return
-            lhs.day == rhs.day &&
-            lhs.month == rhs.month &&
-            lhs.year == rhs.year
-    }
-}
-
-extension CalendarDate: Hashable {
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(day)
-        hasher.combine(month)
-        hasher.combine(year)
+        day = numerical.day
+        month = numerical.month
+        year = numerical.year
+        weekdayShort = short.weekday
+        weekdayFull = full.weekday
+        monthShort = full.month
+        monthFull = full.month
     }
 }
