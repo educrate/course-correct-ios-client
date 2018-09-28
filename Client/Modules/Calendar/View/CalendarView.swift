@@ -33,8 +33,6 @@ class CalendarView: UIView {
          delegate: CalendarViewDelegate? = nil,
          dataSource: CalendarViewDataSource? = nil) {
         
-        
-        
         let calendarTableView = UITableView()
         self.calendarTableView = calendarTableView
         
@@ -123,14 +121,4 @@ extension CalendarView: UITableViewDataSource {
 
 extension CalendarView: UITableViewDelegate {
    
-}
-
-
-// MARK: - Table View Prefetch Conformation
-
-extension CalendarView: UITableViewDataSourcePrefetching {
-    func tableView(_ tableView: UITableView,
-                   prefetchRowsAt indexPaths: [IndexPath]) {
-        
-    }
 }
