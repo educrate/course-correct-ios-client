@@ -8,13 +8,20 @@
 
 import Foundation
 
-struct CalendarDate: DateDescriptor {
+struct CalendarDate {
     let date: Date
-    let day: Int
-    let month: Int
-    let year: Int
+    
+    let dayNumber: Int
+    let monthNumber: Int
+    let yearNumber: Int
+    
+    let dayNumberString: String
+    let monthNumberString: String
+    let yearNumberString: String
+    
     let weekdayShort: String
     let weekdayFull: String
+    
     let monthShort: String
     let monthFull: String
     
@@ -33,17 +40,44 @@ struct CalendarDate: DateDescriptor {
             let numerical = numericalComponents,
             let short = shortComponents,
             let full = fullComponents
-            else {
-                return nil
+        else {
+            return nil
         }
         
         date = aDate
-        day = numerical.day
-        month = numerical.month
-        year = numerical.year
+        
+        dayNumber = numerical.day
+        monthNumber = numerical.month
+        yearNumber = numerical.year
+        
+        dayNumberString = String(numerical.day)
+        monthNumberString = String(numerical.month)
+        yearNumberString = String(numerical.year)
+        
         weekdayShort = short.weekday
         weekdayFull = full.weekday
+        
         monthShort = full.month
         monthFull = full.month
     }
 }
+
+extension CalendarDate: Equatable {
+    static func == (lhs: CalendarDate,
+                    rhs: CalendarDate) -> Bool {
+        
+        return
+            lhs.dayNumber == rhs.dayNumber &&
+            lhs.monthNumber == rhs.monthNumber &&
+            lhs.yearNumber == rhs.yearNumber
+    }
+}
+
+extension CalendarDate: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(dayNumber)
+        hasher.combine(monthNumber)
+        hasher.combine(yearNumber)
+    }
+}
+

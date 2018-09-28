@@ -65,7 +65,6 @@
 		BFD029A821509CFD002FB9F5 /* FlatInlinePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A221509CFD002FB9F5 /* FlatInlinePickerDelegate.swift */; };
 		BFD029A921509CFD002FB9F5 /* FlatInlinePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A321509CFD002FB9F5 /* FlatInlinePicker.swift */; };
 		BFD029AA21509CFD002FB9F5 /* FlatInlinePickerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A421509CFD002FB9F5 /* FlatInlinePickerConfig.swift */; };
-		BFF14D7E215DD28300733323 /* DateDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D7D215DD28300733323 /* DateDescriptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,7 +149,6 @@
 		BFD029A221509CFD002FB9F5 /* FlatInlinePickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatInlinePickerDelegate.swift; sourceTree = "<group>"; };
 		BFD029A321509CFD002FB9F5 /* FlatInlinePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatInlinePicker.swift; sourceTree = "<group>"; };
 		BFD029A421509CFD002FB9F5 /* FlatInlinePickerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatInlinePickerConfig.swift; sourceTree = "<group>"; };
-		BFF14D7D215DD28300733323 /* DateDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDescriptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,7 +402,6 @@
 		BFF14D80215DDCD700733323 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BFF14D7D215DD28300733323 /* DateDescriptor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -591,7 +588,6 @@
 				BFD0296021509BB2002FB9F5 /* CalendarViewDayCell.swift in Sources */,
 				BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */,
 				BF1DA2BA2150AD4300434843 /* CalendarEventViewModel.swift in Sources */,
-				BFF14D7E215DD28300733323 /* DateDescriptor.swift in Sources */,
 				BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */,
 				BFD0299621509C9A002FB9F5 /* FlatActionSheetDataSource.swift in Sources */,
 			);

@@ -8,6 +8,4 @@
 
 import Foundation
 
-enum CalendarEventState {
-    
-}
+enum CalendarEventState {}
