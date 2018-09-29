@@ -65,6 +65,10 @@
 		BFD029A821509CFD002FB9F5 /* FlatInlinePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A221509CFD002FB9F5 /* FlatInlinePickerDelegate.swift */; };
 		BFD029A921509CFD002FB9F5 /* FlatInlinePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A321509CFD002FB9F5 /* FlatInlinePicker.swift */; };
 		BFD029AA21509CFD002FB9F5 /* FlatInlinePickerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A421509CFD002FB9F5 /* FlatInlinePickerConfig.swift */; };
+		BFF14D842160020200733323 /* CalendarIndexMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D832160020200733323 /* CalendarIndexMapper.swift */; };
+		BFF14D88216002CB00733323 /* CalendarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D87216002CB00733323 /* CalendarConfiguration.swift */; };
+		BFF14D8C2160033B00733323 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D8B2160033B00733323 /* CalendarController.swift */; };
+		BFF14D902160072600733323 /* CalendarSetupDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D8F2160072600733323 /* CalendarSetupDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +153,10 @@
 		BFD029A221509CFD002FB9F5 /* FlatInlinePickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatInlinePickerDelegate.swift; sourceTree = "<group>"; };
 		BFD029A321509CFD002FB9F5 /* FlatInlinePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatInlinePicker.swift; sourceTree = "<group>"; };
 		BFD029A421509CFD002FB9F5 /* FlatInlinePickerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatInlinePickerConfig.swift; sourceTree = "<group>"; };
+		BFF14D832160020200733323 /* CalendarIndexMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarIndexMapper.swift; sourceTree = "<group>"; };
+		BFF14D87216002CB00733323 /* CalendarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarConfiguration.swift; sourceTree = "<group>"; };
+		BFF14D8B2160033B00733323 /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		BFF14D8F2160072600733323 /* CalendarSetupDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSetupDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +203,10 @@
 		BF55165C215B3A3C00D0CBB1 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				BFF14D8B2160033B00733323 /* CalendarController.swift */,
+				BFF14D8F2160072600733323 /* CalendarSetupDataSource.swift */,
+				BFF14D832160020200733323 /* CalendarIndexMapper.swift */,
+				BFF14D87216002CB00733323 /* CalendarConfiguration.swift */,
 				BFF14D80215DDCD700733323 /* Model */,
 				BFF14D7F215DDCCD00733323 /* Controller */,
 			);
@@ -537,8 +549,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF14D88216002CB00733323 /* CalendarConfiguration.swift in Sources */,
+				BFF14D8C2160033B00733323 /* CalendarController.swift in Sources */,
 				BF1DA2BD2150B0C200434843 /* CalendarCourse.swift in Sources */,
 				BFD029A721509CFD002FB9F5 /* FlatInlinePickerCellConfig.swift in Sources */,
+				BFF14D902160072600733323 /* CalendarSetupDataSource.swift in Sources */,
 				BFD029A621509CFD002FB9F5 /* FlatInlinePickerCell.swift in Sources */,
 				BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */,
 				BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */,
@@ -582,6 +597,7 @@
 				BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */,
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
 				BFD0299D21509CD5002FB9F5 /* FlatFieldConfig.swift in Sources */,
+				BFF14D842160020200733323 /* CalendarIndexMapper.swift in Sources */,
 				BF1DA2C52150B13500434843 /* CalendarEventState.swift in Sources */,
 				BFD0298121509C6A002FB9F5 /* PrefixContainable.swift in Sources */,
 				BF1DA2BF2150B0E400434843 /* CalendarTutor.swift in Sources */,

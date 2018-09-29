@@ -32,40 +32,21 @@ typealias MonthHelper =
     (month: Int,
     year: Int)
 
-class CalendarIndexMapper {
-    let minimumCalendarYear: Int
+
+class CalendarHelper {
+    private let calendar: Calendar
     
-    init(minimumCalendarYear minimumValue: Int) {
-        minimumCalendarYear = minimumValue
+    init(_ aCalendar: Calendar) {
+        calendar = aCalendar
     }
 }
-
-extension CalendarIndexMapper {
-    func day(from indexPath: IndexPath) -> DayHelper {
-        let monthRawIndex = indexPath.section
-        let dayRawIndex = indexPath.row
-        let monthRawCount = monthRawIndex + 1
-        let monthIndexInCalendarYear = (monthRawCount % 12)
-        let overrunYearCount = (monthRawCount / 12)
-        let dayInCalendarMonth = dayRawIndex + 1
-        let monthInCalendarYear = monthIndexInCalendarYear + 1
-        let calendarYear = minimumCalendarYear + overrunYearCount
-        
-        return DayHelper(day: dayInCalendarMonth,
-                         month: monthInCalendarYear,
-                         year: calendarYear)
-    }
-}
-
-class CalendarHelper {}
 
 
 // MARK: - Component Extractor Methods
 
 extension CalendarHelper {
-    static func numericalComponents(for date: Date,
-                                    with offset: DateOffsetHelper? = nil,
-                                    from calendar: Calendar) -> NumericalDateHelper? {
+    func numericalComponents(for date: Date,
+                                    with offset: DateOffsetHelper? = nil) -> NumericalDateHelper? {
         
         var date = date
         
@@ -99,13 +80,11 @@ extension CalendarHelper {
              monthIndex: monthIndex)
     }
     
-    static func shortDescriptions(for date: Date,
-                                  with offset: DateOffsetHelper? = nil,
-                                  from calendar: Calendar) -> DescriptionDateHelper? {
+    func shortDescriptions(for date: Date,
+                                  with offset: DateOffsetHelper? = nil) -> DescriptionDateHelper? {
         
         guard let numericalDateComponents = numericalComponents(for: date,
-                                                                with: offset,
-                                                                from: calendar)
+                                                                with: offset)
         else {
             return nil
         }
@@ -125,13 +104,11 @@ extension CalendarHelper {
              shortMonthSymbol)
     }
     
-    static func descriptions(for date: Date,
-                             with offset: DateOffsetHelper? = nil,
-                             from calendar: Calendar) -> DescriptionDateHelper? {
+    func descriptions(for date: Date,
+                             with offset: DateOffsetHelper? = nil) -> DescriptionDateHelper? {
         
         guard let numericalDateComponents = numericalComponents(for: date,
-                                                                with: offset,
-                                                                from: calendar)
+                                                                with: offset)
         else {
             return nil
         }
@@ -154,8 +131,22 @@ extension CalendarHelper {
 
 // MARK: Month Range Helpers
 extension CalendarHelper {
-    func daysInMonth(for date: Date,
-                     from calendar: Calendar) -> Int? {
+    func days(in month: Int, year: Int) -> Int? {
+        var components = DateComponents(calendar: calendar,
+                                        year: year,
+                                        month: month)
+        
+        components.setValue(month + 1, for: .month)
+        components.setValue(0, for: .day)
+        
+        guard let date = calendar.date(from: components) else {
+            return nil
+        }
+        
+        return calendar.component(.day, from: date)
+    }
+    
+    func daysInMonth(for date: Date) -> Int? {
         
         guard let range = calendar.range(of: .day,
                                          in: .month,
@@ -167,8 +158,7 @@ extension CalendarHelper {
         return range.count
     }
     
-    func timeIntervalInMonth(for date: Date,
-                             from calendar: Calendar) -> TimeInterval? {
+    func timeIntervalInMonth(for date: Date) -> TimeInterval? {
         return nil
     }
 }

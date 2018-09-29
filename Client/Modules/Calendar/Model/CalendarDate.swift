@@ -27,19 +27,17 @@ struct CalendarDate {
     
     init?(_ aDate: Date,
           offset: DateOffsetHelper? = nil,
-          calendar: Calendar) {
+          calendar: Calendar,
+          calendarHelper: CalendarHelper) {
         
-        let numericalComponents = CalendarHelper.numericalComponents(for: aDate,
-                                                                     with: offset,
-                                                                     from: calendar)
+        let numericalComponents = calendarHelper.numericalComponents(for: aDate,
+                                                                     with: offset)
         
-        let shortComponents = CalendarHelper.shortDescriptions(for: aDate,
-                                                               with: offset,
-                                                               from: calendar)
+        let shortComponents = calendarHelper.shortDescriptions(for: aDate,
+                                                               with: offset)
         
-        let fullComponents = CalendarHelper.descriptions(for: aDate,
-                                                         with: offset,
-                                                         from: calendar)
+        let fullComponents = calendarHelper.descriptions(for: aDate,
+                                                         with: offset)
         
         guard
             let numerical = numericalComponents,

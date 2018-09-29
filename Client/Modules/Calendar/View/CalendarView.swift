@@ -23,21 +23,24 @@ class CalendarView: UIView {
     var delegate: CalendarViewDelegate?
     var dataSource: CalendarViewDataSource?
     
+    var controller: CalendarController
+    
     private var cache: CalendarViewCache?
     
     
     // MARK: Initializers
     
     init(_ frame: CGRect,
-         date: Date = Date(),
-         forwardOffset: DateOffsetHelper = DateOffsetHelper(component: .month, value: 6),
-         backwardOffset: DateOffsetHelper = DateOffsetHelper(component: .month, value: 6),
+         calendarConfiguration: CalendarConfiguration,
          calendarIdentifier: Calendar.Identifier,
          delegate: CalendarViewDelegate? = nil,
          dataSource: CalendarViewDataSource? = nil) {
         
-        let calendarTableView = UITableView()
-        self.calendarTableView = calendarTableView
+        let newCalendarTableView = UITableView()
+        calendarTableView = newCalendarTableView
+        
+        let calendarController = CalendarController(configuration: calendarConfiguration)
+        controller = calendarController
         
         super.init(frame: frame)
         
@@ -45,8 +48,11 @@ class CalendarView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        let calendarTableView = UITableView()
-        self.calendarTableView = calendarTableView
+        let newCalendarTableView = UITableView()
+        calendarTableView = newCalendarTableView
+        
+        let calendarController = CalendarController(configuration: .default)
+        controller = calendarController
         
         super.init(coder: aDecoder)
         
@@ -101,10 +107,19 @@ private extension CalendarView {
 // MARK: - Table View Data Source Conformation
 
 extension CalendarView: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return controller.dataSource.monthCount()
+    }
+    
     public func tableView(_ tableView: UITableView,
                           numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        guard let dayCount = controller.dataSource.days(in: section) else {
+            assert(false, "apple api for date extraction has failed")
+            return 0
+        }
+        
+        return dayCount
     }
     
     public func tableView(_ tableView: UITableView,
