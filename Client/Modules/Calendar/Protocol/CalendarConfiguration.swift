@@ -29,21 +29,14 @@ extension CalendarConfiguration {
             return calendar
         }()
         
-        let fiveYearsBeforeNow = calendar.date(byAdding: .year,
-                                               value: -5,
-                                               to: now)
+        let currentYear = calendar.component(.year,
+                                             from: now)
         
-        let yearFiveYearsAgo = calendar.component(.year, from: fiveYearsBeforeNow!)
-        
-        let fiveYearsFromNow = calendar.date(byAdding: .year,
-                                             value: 5,
-                                             to: now)
-        
-        let yearInFiveYears = calendar.component(.year, from: fiveYearsFromNow!)
+        let yearSpread = 3
         
         return CalendarConfiguration(calendar: .current,
                                      startDate: now,
-                                     minimumCalendarYear: yearFiveYearsAgo,
-                                     maximumCalendarYear: yearInFiveYears)
+                                     minimumCalendarYear: currentYear - yearSpread,
+                                     maximumCalendarYear: currentYear + yearSpread)
     }()
 }

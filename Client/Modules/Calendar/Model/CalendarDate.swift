@@ -59,7 +59,7 @@ struct CalendarDate {
         weekdayShort = short.weekday
         weekdayFull = full.weekday
         
-        monthShort = full.month
+        monthShort = short.month
         monthFull = full.month
     }
     

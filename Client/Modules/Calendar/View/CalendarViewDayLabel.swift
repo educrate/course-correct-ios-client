@@ -74,12 +74,12 @@ class CalendarViewDayLabel: UIView {
 
 extension CalendarViewDayLabel {
     
-    /// setup method for setting properties on the view
+    /// Setup method for setting properties on the view.
     ///
     /// - Parameter viewModel: model holding view formatted data
     func setUp(_ date: CalendarDate) {
-        titleLabel.text = date.dayNumberString
-        detailLabel.text = date.weekdayShort
+        titleLabel.text = "\(date.weekdayShort) \(date.dayNumberString)"
+        detailLabel.text = "\(date.monthShort) \(date.yearNumberString)"
     }
 }
 
