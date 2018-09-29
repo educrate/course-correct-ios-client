@@ -43,6 +43,16 @@ extension CalendarSetupDataSource {
                            year: calendarYear)
     }
     
+    func calendarDate(for dayHelper: DayHelper) -> CalendarDate? {
+        guard let calendarDate = CalendarDate(dayHelper,
+                                              calendarHelper: helper)
+        else {
+            return nil
+        }
+        
+        return calendarDate
+    }
+    
     /// Extracts a fully formed day helper from an index path.
     /// Essentially a cell for row at index path mapper
     ///

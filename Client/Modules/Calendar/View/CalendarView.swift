@@ -130,6 +130,16 @@ extension CalendarView: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        let dayHelper = controller.dataSource.day(from: indexPath)
+        
+        guard let dateHelper = controller.dataSource.calendarDate(for: dayHelper) else {
+            return UITableViewCell()
+        }
+        
+        let day = CalendarDay(date: dateHelper, events: [])
+        
+        cell.setUp(day)
+        
         return cell
     }
 }

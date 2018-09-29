@@ -46,7 +46,7 @@ class CalendarHelper {
 
 extension CalendarHelper {
     func numericalComponents(for date: Date,
-                                    with offset: DateOffsetHelper? = nil) -> NumericalDateHelper? {
+                             with offset: DateOffsetHelper? = nil) -> NumericalDateHelper? {
         
         var date = date
         
@@ -81,7 +81,7 @@ extension CalendarHelper {
     }
     
     func shortDescriptions(for date: Date,
-                                  with offset: DateOffsetHelper? = nil) -> DescriptionDateHelper? {
+                           with offset: DateOffsetHelper? = nil) -> DescriptionDateHelper? {
         
         guard let numericalDateComponents = numericalComponents(for: date,
                                                                 with: offset)
@@ -105,7 +105,7 @@ extension CalendarHelper {
     }
     
     func descriptions(for date: Date,
-                             with offset: DateOffsetHelper? = nil) -> DescriptionDateHelper? {
+                      with offset: DateOffsetHelper? = nil) -> DescriptionDateHelper? {
         
         guard let numericalDateComponents = numericalComponents(for: date,
                                                                 with: offset)
@@ -131,7 +131,22 @@ extension CalendarHelper {
 
 // MARK: Month Range Helpers
 extension CalendarHelper {
-    func days(in month: Int, year: Int) -> Int? {
+    func date(for dayHelper: DayHelper) -> Date? {
+        let components = DateComponents(calendar: calendar,
+                                        year: dayHelper.year,
+                                        month: dayHelper.month,
+                                        day: dayHelper.day)
+        
+        guard let date = calendar.date(from: components) else {
+            return nil
+        }
+        
+        return date
+    }
+    
+    func days(in month: Int,
+              year: Int) -> Int? {
+        
         var components = DateComponents(calendar: calendar,
                                         year: year,
                                         month: month)

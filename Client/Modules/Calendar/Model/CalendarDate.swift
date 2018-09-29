@@ -27,7 +27,6 @@ struct CalendarDate {
     
     init?(_ aDate: Date,
           offset: DateOffsetHelper? = nil,
-          calendar: Calendar,
           calendarHelper: CalendarHelper) {
         
         let numericalComponents = calendarHelper.numericalComponents(for: aDate,
@@ -62,6 +61,19 @@ struct CalendarDate {
         
         monthShort = full.month
         monthFull = full.month
+    }
+    
+    init?(_ dayHelper: DayHelper,
+          offset: DateOffsetHelper? = nil,
+          calendarHelper: CalendarHelper) {
+        
+        guard let date = calendarHelper.date(for: dayHelper) else {
+            return nil
+        }
+        
+        self.init(date,
+                  offset: offset,
+                  calendarHelper: calendarHelper)
     }
 }
 
