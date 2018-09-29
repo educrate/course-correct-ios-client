@@ -8,22 +8,70 @@
 
 import Foundation
 
-class CalendarHelper {
-    typealias NumericalDateHelper =
-        (day: Int,
-        month: Int,
-        year: Int,
-        weekdayIndex: Int,
-        monthIndex: Int)
+typealias NumericalDateHelper =
+    (day: Int,
+    month: Int,
+    year: Int,
+    weekdayIndex: Int,
+    monthIndex: Int)
+
+typealias DescriptionDateHelper =
+    (weekday: String,
+    month: String)
+
+typealias DateOffsetHelper =
+    (component: Calendar.Component,
+    value: Int)
+
+typealias DayHelper =
+    (day: Int,
+    month: Int,
+    year: Int)
+
+typealias MonthHelper =
+    (month: Int,
+    year: Int)
+
+class CalendarIndexMapper {
+    let minimumCalendarYear: Int
     
-    typealias DescriptionDateHelper =
-        (weekday: String,
-        month: String)
+    init(minimumCalendarYear minimumValue: Int) {
+        minimumCalendarYear = minimumValue
+    }
 }
+
+extension CalendarIndexMapper {
+    func day(from indexPath: IndexPath) -> DayHelper {
+        let monthRawIndex = indexPath.section
+        let dayRawIndex = indexPath.row
+        let monthRawCount = monthRawIndex + 1
+        let monthIndexInCalendarYear = (monthRawCount % 12)
+        let overrunYearCount = (monthRawCount / 12)
+        let dayInCalendarMonth = dayRawIndex + 1
+        let monthInCalendarYear = monthIndexInCalendarYear + 1
+        let calendarYear = minimumCalendarYear + overrunYearCount
+        
+        return DayHelper(day: dayInCalendarMonth,
+                         month: monthInCalendarYear,
+                         year: calendarYear)
+    }
+}
+
+class CalendarHelper {}
+
+
+// MARK: - Component Extractor Methods
 
 extension CalendarHelper {
     static func numericalComponents(for date: Date,
+                                    with offset: DateOffsetHelper? = nil,
                                     from calendar: Calendar) -> NumericalDateHelper? {
+        
+        var date = date
+        
+        if let offset = offset, let offsetDate = calendar.date(byAdding: offset.component, value: offset.value, to: date) {
+            date = offsetDate
+        }
         
         let comp = calendar.dateComponents([.month,
                                             .day,
@@ -52,9 +100,11 @@ extension CalendarHelper {
     }
     
     static func shortDescriptions(for date: Date,
+                                  with offset: DateOffsetHelper? = nil,
                                   from calendar: Calendar) -> DescriptionDateHelper? {
         
         guard let numericalDateComponents = numericalComponents(for: date,
+                                                                with: offset,
                                                                 from: calendar)
         else {
             return nil
@@ -76,9 +126,11 @@ extension CalendarHelper {
     }
     
     static func descriptions(for date: Date,
+                             with offset: DateOffsetHelper? = nil,
                              from calendar: Calendar) -> DescriptionDateHelper? {
         
         guard let numericalDateComponents = numericalComponents(for: date,
+                                                                with: offset,
                                                                 from: calendar)
         else {
             return nil
@@ -97,5 +149,26 @@ extension CalendarHelper {
         return
             (weekdaySymbol,
              monthSymbol)
+    }
+}
+
+// MARK: Month Range Helpers
+extension CalendarHelper {
+    func daysInMonth(for date: Date,
+                     from calendar: Calendar) -> Int? {
+        
+        guard let range = calendar.range(of: .day,
+                                         in: .month,
+                                         for: date)
+        else {
+            return nil
+        }
+    
+        return range.count
+    }
+    
+    func timeIntervalInMonth(for date: Date,
+                             from calendar: Calendar) -> TimeInterval? {
+        return nil
     }
 }

@@ -26,14 +26,19 @@ struct CalendarDate {
     let monthFull: String
     
     init?(_ aDate: Date,
+          offset: DateOffsetHelper? = nil,
           calendar: Calendar) {
+        
         let numericalComponents = CalendarHelper.numericalComponents(for: aDate,
+                                                                     with: offset,
                                                                      from: calendar)
         
         let shortComponents = CalendarHelper.shortDescriptions(for: aDate,
+                                                               with: offset,
                                                                from: calendar)
         
         let fullComponents = CalendarHelper.descriptions(for: aDate,
+                                                         with: offset,
                                                          from: calendar)
         
         guard
@@ -74,10 +79,11 @@ extension CalendarDate: Equatable {
 }
 
 extension CalendarDate: Hashable {
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(dayNumber)
-        hasher.combine(monthNumber)
-        hasher.combine(yearNumber)
-    }
+    
+//    // formatted using the month day year values
+//    // ex: 9/21/2018 -> 9212018
+//    var hashValue: Int {
+//        return month
+//    }
 }
 

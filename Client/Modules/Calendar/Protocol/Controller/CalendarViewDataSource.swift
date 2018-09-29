@@ -14,5 +14,5 @@ protocol CalendarViewDataSource {
     var currentDay: CalendarDay { get set }
     var maximumDay: CalendarDay { get set }
     
-    func day(for date: Date) -> CalendarDay?
+    func day(for date: CalendarDate) -> CalendarDay?
 }

@@ -29,6 +29,9 @@ class CalendarView: UIView {
     // MARK: Initializers
     
     init(_ frame: CGRect,
+         date: Date = Date(),
+         forwardOffset: DateOffsetHelper = DateOffsetHelper(component: .month, value: 6),
+         backwardOffset: DateOffsetHelper = DateOffsetHelper(component: .month, value: 6),
          calendarIdentifier: Calendar.Identifier,
          delegate: CalendarViewDelegate? = nil,
          dataSource: CalendarViewDataSource? = nil) {
