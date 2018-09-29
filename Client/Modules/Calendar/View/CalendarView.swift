@@ -20,10 +20,11 @@ class CalendarView: UIView {
     
     // MARK: Protocols
     
+    var controller: CalendarController
+    
     var delegate: CalendarViewDelegate?
     var dataSource: CalendarViewDataSource?
     
-    var controller: CalendarController
     
     private var cache: CalendarViewCache?
     
@@ -45,6 +46,7 @@ class CalendarView: UIView {
         super.init(frame: frame)
         
         setUp()
+        moveTo(calendarConfiguration.startDate, animated: false)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -57,6 +59,7 @@ class CalendarView: UIView {
         super.init(coder: aDecoder)
         
         setUp()
+        moveTo(CalendarConfiguration.default.startDate, animated: false)
     }
 }
 
@@ -64,8 +67,16 @@ class CalendarView: UIView {
 // MARK: - Public Update Methods
 
 extension CalendarView {
-    func moveTo(_ newDate: Date) {
-        calendarTableView.reloadData()
+    func moveTo(_ newDate: Date,
+                animated: Bool = true) {
+        
+        guard let indexPath = controller.dataSource.indexPath(for: newDate) else {
+            return
+        }
+        
+        calendarTableView.scrollToRow(at: indexPath,
+                                      at: .top,
+                                      animated: animated)
     }
 }
 
