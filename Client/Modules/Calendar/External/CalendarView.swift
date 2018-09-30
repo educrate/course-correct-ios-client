@@ -26,9 +26,6 @@ class CalendarView: UIView {
     var dataSource: CalendarViewDataSource?
     
     
-    private var cache: CalendarViewCache?
-    
-    
     // MARK: Initializers
     
     init(_ frame: CGRect,

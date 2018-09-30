@@ -25,19 +25,7 @@ class CalendarHelper {
 // MARK: - Component Extractor Methods
 
 extension CalendarHelper {
-    func numericalComponents(for date: Date,
-                             with offset: DateOffsetHelper? = nil) -> DateHelper? {
-        
-        var date = date
-        
-        if
-            let offset = offset,
-            let offsetDate = calendar.date(byAdding: offset.component,
-                                           value: offset.value,
-                                           to: date) {
-            date = offsetDate
-        }
-        
+    func numericalComponents(for date: Date) -> DateHelper? {
         let comp = calendar.dateComponents([.month,
                                             .day,
                                             .weekday,
@@ -63,12 +51,9 @@ extension CalendarHelper {
                           monthIndex: monthIndex)
     }
     
-    func shortDescriptions(for date: Date,
-                           with offset: DateOffsetHelper? = nil) -> DateDescriptionHelper? {
+    func shortDescriptions(for date: Date) -> DateDescriptionHelper? {
         
-        guard let numericalDateComponents = numericalComponents(for: date,
-                                                                with: offset)
-        else {
+        guard let numericalDateComponents = numericalComponents(for: date) else {
             return nil
         }
         
@@ -86,12 +71,9 @@ extension CalendarHelper {
                                      month: shortMonthSymbol)
     }
     
-    func descriptions(for date: Date,
-                      with offset: DateOffsetHelper? = nil) -> DateDescriptionHelper? {
+    func descriptions(for date: Date) -> DateDescriptionHelper? {
         
-        guard let numericalDateComponents = numericalComponents(for: date,
-                                                                with: offset)
-        else {
+        guard let numericalDateComponents = numericalComponents(for: date) else {
             return nil
         }
         

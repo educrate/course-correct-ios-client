@@ -26,17 +26,13 @@ struct CalendarDate {
     let monthFull: String
     
     init?(_ aDate: Date,
-          offset: DateOffsetHelper? = nil,
           calendarHelper: CalendarHelper) {
         
-        let numericalComponents = calendarHelper.numericalComponents(for: aDate,
-                                                                     with: offset)
+        let numericalComponents = calendarHelper.numericalComponents(for: aDate)
         
-        let shortComponents = calendarHelper.shortDescriptions(for: aDate,
-                                                               with: offset)
+        let shortComponents = calendarHelper.shortDescriptions(for: aDate)
         
-        let fullComponents = calendarHelper.descriptions(for: aDate,
-                                                         with: offset)
+        let fullComponents = calendarHelper.descriptions(for: aDate)
         
         guard
             let numerical = numericalComponents,
@@ -72,7 +68,6 @@ struct CalendarDate {
         }
         
         self.init(date,
-                  offset: offset,
                   calendarHelper: calendarHelper)
     }
 }
