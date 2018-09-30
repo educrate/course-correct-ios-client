@@ -77,9 +77,11 @@ extension CalendarViewDayLabel {
     /// Setup method for setting properties on the view.
     ///
     /// - Parameter viewModel: model holding view formatted data
-    func setUp(_ date: CalendarDate) {
-        titleLabel.text = "\(date.weekdayShort) \(date.dayNumberString)"
-        detailLabel.text = "\(date.monthShort) \(date.yearNumberString)"
+    func setUp(title: String,
+               detail: String) {
+        
+        titleLabel.text = title
+        detailLabel.text = detail
     }
 }
 

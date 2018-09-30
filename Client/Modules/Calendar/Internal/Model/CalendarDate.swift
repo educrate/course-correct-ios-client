@@ -25,9 +25,7 @@ struct CalendarDate {
           calendarHelper: CalendarHelper) {
         
         let numericalComponents = calendarHelper.numericalComponents(for: aDate)
-        
         let shortComponents = calendarHelper.shortDescriptions(for: aDate)
-        
         let fullComponents = calendarHelper.descriptions(for: aDate)
         
         guard

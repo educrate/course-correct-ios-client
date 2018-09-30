@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DayHelper {
+struct DayHelper: Hashable {
     let day: Int
     let month: Int
     let year: Int

@@ -7,4 +7,7 @@
 
 import UIKit
 
-struct CalendarEvent {}
+struct CalendarEvent {
+    let title: String
+    let description: String
+}

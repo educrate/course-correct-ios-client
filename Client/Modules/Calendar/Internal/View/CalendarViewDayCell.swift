@@ -71,7 +71,9 @@ extension CalendarViewDayCell {
     func setUp(_ calendarDay: CalendarDay) {
         day = calendarDay
         
-        dayLabel.setUp(calendarDay.date)
+        dayLabel.setUp(title: calendarDay.date.dayNumberString,
+                       detail: calendarDay.date.monthShort)
+        
         dayScheduleTableView.reloadData()
     }
 }

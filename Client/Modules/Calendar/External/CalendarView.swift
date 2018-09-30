@@ -144,7 +144,23 @@ extension CalendarView: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let day = CalendarDay(date: dateHelper, events: [])
+        guard let dataSource = dataSource else {
+            let day = CalendarDay(date: dateHelper,
+                                  events: [])
+            
+            cell.setUp(day)
+            
+            return cell
+        }
+        
+        guard let day = dataSource.day(for: dateHelper) else {
+            let day = CalendarDay(date: dateHelper,
+                                  events: [])
+            
+            cell.setUp(day)
+            
+            return cell
+        }
         
         cell.setUp(day)
         
