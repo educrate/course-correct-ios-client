@@ -20,11 +20,11 @@ class UICalendarViewController: UIViewController {
     /// encompasing table view which holds
     /// the date object as well as the
     /// table view for a single day
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet
+    weak var collectionView: UICollectionView!
     
     
     // MARK: Protocols
-    
     var delegate: UICalendarViewDelegate?
     var dataSource: UICalendarViewDataSource?
     
@@ -58,9 +58,9 @@ extension UICalendarViewController {
             return
         }
         
-        collectionView.scrollToItem(at: indexPath,
-                                            at: .top,
-                                            animated: animated)
+//        collectionView.scrollToItem(at: indexPath,
+//                                            at: .top,
+//                                            animated: animated)
     }
 }
 

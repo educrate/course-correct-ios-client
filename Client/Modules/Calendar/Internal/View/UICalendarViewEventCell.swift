@@ -36,5 +36,5 @@ extension UICalendarViewEventCell {
 }
 
 extension UICalendarViewEventCell {
-    static let identifier = "calendareventcell"
+    static let identifier = "uicalendarvieweventcell"
 }

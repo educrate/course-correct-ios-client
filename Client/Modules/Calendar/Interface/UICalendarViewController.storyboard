@@ -136,15 +136,14 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="collectionView" destination="cdF-bb-YJ6" id="sSx-Mo-5m9"/>
-                                            <outlet property="dayTextStackView" destination="les-K5-QKz" id="lLJ-hW-ncl"/>
                                             <outlet property="detailLabel" destination="Noc-8Y-6NC" id="O7c-mp-kaq"/>
                                             <outlet property="titleLabel" destination="zVo-f1-trd" id="tlP-D2-cT2"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="KH7-ex-XLQ" id="33b-E4-HFo"/>
-                                    <outlet property="delegate" destination="KH7-ex-XLQ" id="WoK-mz-bKm"/>
+                                    <outlet property="dataSource" destination="KH7-ex-XLQ" id="Ape-3d-kic"/>
+                                    <outlet property="delegate" destination="KH7-ex-XLQ" id="kM0-cK-akH"/>
                                 </connections>
                             </collectionView>
                         </subviews>
