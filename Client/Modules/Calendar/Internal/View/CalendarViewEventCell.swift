@@ -30,7 +30,14 @@ class CalendarViewEventCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle,
                   reuseIdentifier: String?) {
         
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        super.init(style: style,
+                   reuseIdentifier: reuseIdentifier)
+        
+        let sv = UIStackView()
+        stackView = sv
+        
+        let tsv = UIStackView()
+        textStackView = tsv
         
         let tl = UILabel()
         titleLabel = tl
@@ -43,11 +50,19 @@ class CalendarViewEventCell: UITableViewCell {
         
         let rv = UIImageView()
         rightIconImageView = rv
+        
+        initializeViews()
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        let sv = UIStackView()
+        stackView = sv
+        
+        let tsv = UIStackView()
+        textStackView = tsv
+        
         let tl = UILabel()
         titleLabel = tl
         
@@ -59,6 +74,8 @@ class CalendarViewEventCell: UITableViewCell {
         
         let rv = UIImageView()
         rightIconImageView = rv
+        
+        initializeViews()
     }
 }
 
@@ -68,6 +85,9 @@ class CalendarViewEventCell: UITableViewCell {
 extension CalendarViewEventCell {
     func setUp(_ calendarEvent: CalendarEvent) {
         event = calendarEvent
+        
+        titleLabel.text = calendarEvent.title
+        detailLabel.text = calendarEvent.description
     }
 }
 
@@ -85,10 +105,7 @@ private extension CalendarViewEventCell {
     // MARK: Initializer Methods
     
     func addViews() {
-        addSubview(titleLabel)
-        addSubview(detailLabel)
-        addSubview(leftIconImageView)
-        addSubview(rightIconImageView)
+        addSubview(stackView)
     }
     
     func setUpStackViews() {
