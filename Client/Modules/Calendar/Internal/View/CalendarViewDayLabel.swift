@@ -110,10 +110,10 @@ private extension CalendarViewDayLabel {
     }
     
     func addConstraints() {
-        stackView.leftAnchor.constraint(equalTo: leftAnchor)
-        stackView.rightAnchor.constraint(equalTo: rightAnchor)
-        stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        stackView.topAnchor.constraint(equalTo: topAnchor)
+        stackView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        stackView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         stackView.translatesAutoresizingMaskIntoConstraints = false
     }
 }

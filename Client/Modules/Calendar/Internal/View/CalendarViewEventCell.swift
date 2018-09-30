@@ -76,6 +76,9 @@ class CalendarViewEventCell: UITableViewCell {
         rightIconImageView = rv
         
         initializeViews()
+        
+        layer.borderColor = UIColor.red.cgColor
+        layer.borderWidth = 1.0
     }
 }
 
@@ -109,8 +112,8 @@ private extension CalendarViewEventCell {
     }
     
     func setUpStackViews() {
-        setUpStackView()
         setUpTextStackView()
+        setUpStackView()
     }
     
     func setUpStackView() {
@@ -126,7 +129,7 @@ private extension CalendarViewEventCell {
     
     func setUpTextStackView() {
         textStackView.axis = .vertical
-        textStackView.alignment = .leading
+        textStackView.alignment = .center
         textStackView.spacing = 8
         
         textStackView.addArrangedSubview(titleLabel)
@@ -134,35 +137,32 @@ private extension CalendarViewEventCell {
     }
     
     func addConstraints() {
-        constrainLeftIconImageView()
-        constrainTitleLabel()
-        constrainDetailLabel()
-        constrainRightIconImageView()
+        constrainStackView()
     }
     
     
     // MARK: View Constraining
     
+    func constrainStackView() {
+        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        stackView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        stackView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        constrainLeftIconImageView()
+        constrainRightIconImageView()
+    }
+    
     func constrainLeftIconImageView() {
         leftIconImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
         leftIconImageView.widthAnchor.constraint(equalTo: leftIconImageView.heightAnchor).isActive = true
-        
         leftIconImageView.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    func constrainTitleLabel() {
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    func constrainDetailLabel() {
-        
-        detailLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func constrainRightIconImageView() {
         rightIconImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
         rightIconImageView.widthAnchor.constraint(equalTo: rightIconImageView.heightAnchor).isActive = true
-        
         rightIconImageView.translatesAutoresizingMaskIntoConstraints = false
     }
 }

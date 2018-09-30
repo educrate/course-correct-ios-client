@@ -74,6 +74,9 @@ extension CalendarViewDayCell {
         dayLabel.setUp(title: calendarDay.date.dayNumberString,
                        detail: calendarDay.date.monthShort)
         
+        dayScheduleTableView.layer.borderWidth = 1.0
+        dayScheduleTableView.layer.borderColor = UIColor.green.cgColor
+        
         dayScheduleTableView.reloadData()
     }
 }
@@ -111,7 +114,13 @@ private extension CalendarViewDayCell {
     func setUpTableView() {
         dayScheduleTableView.delegate = self
         dayScheduleTableView.dataSource = self
-        dayScheduleTableView.register(CalendarViewEventCell.self, forCellReuseIdentifier: CalendarViewEventCell.identifier)
+        dayScheduleTableView.isScrollEnabled = false
+        dayScheduleTableView.tableFooterView = UIView(frame: .zero)
+        dayScheduleTableView.separatorStyle = .none
+        dayScheduleTableView.rowHeight = UITableView.automaticDimension
+        dayScheduleTableView.estimatedRowHeight = 50
+        dayScheduleTableView.register(CalendarViewEventCell.self,
+                                      forCellReuseIdentifier: CalendarViewEventCell.identifier)
     }
     
     
@@ -137,7 +146,9 @@ private extension CalendarViewDayCell {
 // MARK: - Table View Protocol Conformance
 
 extension CalendarViewDayCell: UITableViewDelegate, UITableViewDataSource {
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView,
+                          numberOfRowsInSection section: Int) -> Int {
+        
         guard let day = day else {
             return 0
         }
@@ -145,13 +156,16 @@ extension CalendarViewDayCell: UITableViewDelegate, UITableViewDataSource {
         return day.events.count
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView,
+                          cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let day = day else {
             return UITableViewCell()
         }
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CalendarViewEventCell.identifier,
-                                                       for: indexPath) as? CalendarViewEventCell else {
+                                                       for: indexPath) as? CalendarViewEventCell
+        else {
             return UITableViewCell()
         }
         

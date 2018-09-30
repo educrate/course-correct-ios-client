@@ -56,7 +56,9 @@ class CalendarView: UIView {
         super.init(coder: aDecoder)
         
         setUp()
-        moveTo(CalendarConfiguration.default.startDate, animated: false)
+        
+        moveTo(CalendarConfiguration.default.startDate,
+               animated: false)
     }
 }
 
@@ -95,11 +97,13 @@ private extension CalendarView {
     }
     
     func initializeTableView() {
-        self.calendarTableView.delegate = self
-        self.calendarTableView.dataSource = self
-        
-        self.calendarTableView.register(CalendarViewDayCell.self,
-                                        forCellReuseIdentifier: CalendarViewDayCell.identifier)
+        calendarTableView.delegate = self
+        calendarTableView.dataSource = self
+        calendarTableView.separatorStyle = .none
+        calendarTableView.rowHeight = UITableView.automaticDimension
+        calendarTableView.estimatedRowHeight = 100
+        calendarTableView.register(CalendarViewDayCell.self,
+                                   forCellReuseIdentifier: CalendarViewDayCell.identifier)
     }
     
     func constrainTableView() {
@@ -165,6 +169,10 @@ extension CalendarView: UITableViewDataSource {
         cell.setUp(day)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
 }
 
