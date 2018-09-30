@@ -27,21 +27,12 @@ class UICalendarViewController: UIViewController {
     // MARK: Protocols
     var delegate: UICalendarViewDelegate?
     var dataSource: UICalendarViewDataSource?
-    
-    
-    // MARK: Initializers
-    required init?(coder aDecoder: NSCoder) {
-        let cvl = UICollectionViewFlowLayout()
-        let cv = UICollectionView(frame: .zero,
-                                  collectionViewLayout: cvl)
-        
-        super.init(coder: aDecoder)
-        
-        collectionView = cv
-        
-        let calendarController = CalendarBrain(configuration: .default)
-        brain = calendarController
-        
+}
+
+
+extension UICalendarViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         moveTo(CalendarConfiguration.default.startDate,
                animated: false)
     }
@@ -58,9 +49,11 @@ extension UICalendarViewController {
             return
         }
         
-//        collectionView.scrollToItem(at: indexPath,
-//                                            at: .top,
-//                                            animated: animated)
+        collectionView.layoutIfNeeded()
+        
+        collectionView.scrollToItem(at: indexPath,
+                                    at: .top,
+                                    animated: animated)
     }
 }
 

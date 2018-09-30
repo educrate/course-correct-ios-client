@@ -9,12 +9,15 @@
 import UIKit
 
 class CalendarViewController: UIViewController {
-    @IBOutlet weak var calendarViewController: UICalendarViewController!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        calendarViewController.delegate = self
-        calendarViewController.dataSource = self
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "embedcalendarviewcontroller" {
+            guard let destinationViewController = segue.destination as? UICalendarViewController else {
+                return
+            }
+            
+            destinationViewController.delegate = self
+            destinationViewController.dataSource = self
+        }
     }
 }
 
