@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol CalendarViewDelegate {
+protocol UICalendarViewDelegate {
     
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var calendarView: CalendarView!
+    @IBOutlet weak var calendarView: UICalendarViewController!
 }
 
 extension ViewController {
@@ -19,7 +19,7 @@ extension ViewController {
     }
 }
 
-extension ViewController: CalendarViewDataSource {
+extension ViewController: UICalendarViewDataSource {
     func day(for date: CalendarDate) -> CalendarDay? {
         if date.dayNumber == 29, date.monthNumber == 9, date.yearNumber == 2018 {
             let calendarEvent = CalendarEvent(title: "Learining Python With Dustin Tran", description: "11:30 AM-2:45 PM at Langston Library")

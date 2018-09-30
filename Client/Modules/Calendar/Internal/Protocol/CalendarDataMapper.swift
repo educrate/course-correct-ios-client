@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CalendarSetupDataSource {
+class CalendarDataMapper {
     private var minYear: Int
     private var maxYear: Int
     private var helper: CalendarHelper
@@ -23,7 +23,7 @@ class CalendarSetupDataSource {
     }
 }
 
-extension CalendarSetupDataSource {
+extension CalendarDataMapper {
     
     /// Essentially a number of sections mapper
     ///
@@ -103,7 +103,7 @@ extension CalendarSetupDataSource {
     }
 }
 
-private extension CalendarSetupDataSource {
+private extension CalendarDataMapper {
     func month(from monthCount: Int) -> Int {
         let monthIndexInCalendarYear = (monthCount % 12)
         

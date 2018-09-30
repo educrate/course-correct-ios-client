@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol CalendarViewDataSource {
+protocol UICalendarViewDataSource {
     func day(for date: CalendarDate) -> CalendarDay?
 }

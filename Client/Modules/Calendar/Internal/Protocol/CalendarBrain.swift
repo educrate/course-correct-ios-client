@@ -8,16 +8,19 @@
 
 import Foundation
 
-class CalendarController {
+class CalendarBrain {
     
-    var dataSource: CalendarSetupDataSource
+    var dataSource: CalendarDataMapper
     
     init(configuration: CalendarConfiguration) {
         let calendarHelper = CalendarHelper(configuration.calendar)
-        let controllerDataSource = CalendarSetupDataSource(minimumCalendarYear: configuration.minimumCalendarYear,
+        let controllerDataSource = CalendarDataMapper(minimumCalendarYear: configuration.minimumCalendarYear,
                                                           maximumCalendarYear: configuration.maximumCalendarYear,
                                                           calendarHelper: calendarHelper)
         dataSource = controllerDataSource
     }
-    
+}
+
+extension CalendarBrain {
+    static let `default` = CalendarBrain(configuration: .default)
 }
