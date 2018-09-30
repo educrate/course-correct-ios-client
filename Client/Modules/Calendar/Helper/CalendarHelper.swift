@@ -30,7 +30,11 @@ extension CalendarHelper {
         
         var date = date
         
-        if let offset = offset, let offsetDate = calendar.date(byAdding: offset.component, value: offset.value, to: date) {
+        if
+            let offset = offset,
+            let offsetDate = calendar.date(byAdding: offset.component,
+                                           value: offset.value,
+                                           to: date) {
             date = offsetDate
         }
         
@@ -128,29 +132,16 @@ extension CalendarHelper {
                                         year: year,
                                         month: month)
         
-        components.setValue(month + 1, for: .month)
-        components.setValue(0, for: .day)
+        components.setValue(month + 1,
+                            for: .month)
+        components.setValue(0,
+                            for: .day)
         
         guard let date = calendar.date(from: components) else {
             return nil
         }
         
-        return calendar.component(.day, from: date)
-    }
-    
-    func daysInMonth(for date: Date) -> Int? {
-        
-        guard let range = calendar.range(of: .day,
-                                         in: .month,
-                                         for: date)
-        else {
-            return nil
-        }
-    
-        return range.count
-    }
-    
-    func timeIntervalInMonth(for date: Date) -> TimeInterval? {
-        return nil
+        return calendar.component(.day,
+                                  from: date)
     }
 }

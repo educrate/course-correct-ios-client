@@ -29,15 +29,16 @@ extension CalendarSetupDataSource {
     ///
     /// - Returns: Returns number of months from setup calendar.
     func monthCount() -> Int {
-        let yearCount = maxYear - minYear
+        let yearCount = maxYear - minYear + 1
         let monthCount = yearCount * 12
         
         return monthCount
     }
     
     func days(in monthIndex: Int) -> Int? {
-        let calendarMonth = month(from: monthIndex)
-        let calendarYear = year(from: monthIndex)
+        let monthCount = monthIndex + 1
+        let calendarMonth = month(from: monthCount)
+        let calendarYear = year(from: monthCount)
         
         return helper.days(in: calendarMonth,
                            year: calendarYear)
@@ -97,7 +98,8 @@ extension CalendarSetupDataSource {
         let monthIndex = totalMonths - 1
         let dayIndex = calendarDay - 1
         
-        return IndexPath(row: dayIndex, section: monthIndex)
+        return IndexPath(row: dayIndex,
+                         section: monthIndex)
     }
 }
 
