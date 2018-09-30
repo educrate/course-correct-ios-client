@@ -8,11 +8,6 @@
 
 import Foundation
 
-typealias DateOffsetHelper =
-    (component: Calendar.Component,
-    value: Int)
-
-
 class CalendarHelper {
     private let calendar: Calendar
     
