@@ -10,18 +10,14 @@ import Foundation
 
 struct CalendarDate {
     let date: Date
-    
     let dayNumber: Int
     let monthNumber: Int
     let yearNumber: Int
-    
     let dayNumberString: String
     let monthNumberString: String
     let yearNumberString: String
-    
     let weekdayShort: String
     let weekdayFull: String
-    
     let monthShort: String
     let monthFull: String
     
@@ -60,7 +56,6 @@ struct CalendarDate {
     }
     
     init?(_ dayHelper: DayHelper,
-          offset: DateOffsetHelper? = nil,
           calendarHelper: CalendarHelper) {
         
         guard let date = calendarHelper.date(for: dayHelper) else {
