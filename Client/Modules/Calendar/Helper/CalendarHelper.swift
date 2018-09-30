@@ -8,29 +8,9 @@
 
 import Foundation
 
-typealias NumericalDateHelper =
-    (day: Int,
-    month: Int,
-    year: Int,
-    weekdayIndex: Int,
-    monthIndex: Int)
-
-typealias DescriptionDateHelper =
-    (weekday: String,
-    month: String)
-
 typealias DateOffsetHelper =
     (component: Calendar.Component,
     value: Int)
-
-typealias DayHelper =
-    (day: Int,
-    month: Int,
-    year: Int)
-
-typealias MonthHelper =
-    (month: Int,
-    year: Int)
 
 
 class CalendarHelper {
@@ -46,7 +26,7 @@ class CalendarHelper {
 
 extension CalendarHelper {
     func numericalComponents(for date: Date,
-                             with offset: DateOffsetHelper? = nil) -> NumericalDateHelper? {
+                             with offset: DateOffsetHelper? = nil) -> DateHelper? {
         
         var date = date
         
@@ -72,16 +52,15 @@ extension CalendarHelper {
         let monthIndex: Int = month - 1
         let weekdayIndex: Int = weekday - 1
         
-        return
-            (day: day,
-             month: month,
-             year: year,
-             weekdayIndex: weekdayIndex,
-             monthIndex: monthIndex)
+        return DateHelper(day: day,
+                          month: month,
+                          year: year,
+                          weekdayIndex: weekdayIndex,
+                          monthIndex: monthIndex)
     }
     
     func shortDescriptions(for date: Date,
-                           with offset: DateOffsetHelper? = nil) -> DescriptionDateHelper? {
+                           with offset: DateOffsetHelper? = nil) -> DateDescriptionHelper? {
         
         guard let numericalDateComponents = numericalComponents(for: date,
                                                                 with: offset)
@@ -99,13 +78,12 @@ extension CalendarHelper {
         let shortWeekdaySymbol = calendar.shortWeekdaySymbols[numericalDateComponents.weekdayIndex]
         let shortMonthSymbol = calendar.shortMonthSymbols[numericalDateComponents.monthIndex]
         
-        return
-            (shortWeekdaySymbol,
-             shortMonthSymbol)
+        return DateDescriptionHelper(weekday: shortWeekdaySymbol,
+                                     month: shortMonthSymbol)
     }
     
     func descriptions(for date: Date,
-                      with offset: DateOffsetHelper? = nil) -> DescriptionDateHelper? {
+                      with offset: DateOffsetHelper? = nil) -> DateDescriptionHelper? {
         
         guard let numericalDateComponents = numericalComponents(for: date,
                                                                 with: offset)
@@ -123,9 +101,8 @@ extension CalendarHelper {
         let weekdaySymbol = calendar.weekdaySymbols[numericalDateComponents.weekdayIndex]
         let monthSymbol = calendar.monthSymbols[numericalDateComponents.monthIndex]
         
-        return
-            (weekdaySymbol,
-             monthSymbol)
+        return DateDescriptionHelper(weekday: weekdaySymbol,
+                                     month: monthSymbol)
     }
 }
 

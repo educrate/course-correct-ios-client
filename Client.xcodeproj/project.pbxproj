@@ -69,6 +69,10 @@
 		BFF14D88216002CB00733323 /* CalendarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D87216002CB00733323 /* CalendarConfiguration.swift */; };
 		BFF14D8C2160033B00733323 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D8B2160033B00733323 /* CalendarController.swift */; };
 		BFF14D902160072600733323 /* CalendarSetupDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D8F2160072600733323 /* CalendarSetupDataSource.swift */; };
+		BFF14D922160492F00733323 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D912160492F00733323 /* DateHelper.swift */; };
+		BFF14D942160494100733323 /* DateDescriptionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D932160494100733323 /* DateDescriptionHelper.swift */; };
+		BFF14D962160495000733323 /* DayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D952160495000733323 /* DayHelper.swift */; };
+		BFF14D982160496400733323 /* MonthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D972160496400733323 /* MonthHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +161,10 @@
 		BFF14D87216002CB00733323 /* CalendarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarConfiguration.swift; sourceTree = "<group>"; };
 		BFF14D8B2160033B00733323 /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		BFF14D8F2160072600733323 /* CalendarSetupDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSetupDataSource.swift; sourceTree = "<group>"; };
+		BFF14D912160492F00733323 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		BFF14D932160494100733323 /* DateDescriptionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDescriptionHelper.swift; sourceTree = "<group>"; };
+		BFF14D952160495000733323 /* DayHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHelper.swift; sourceTree = "<group>"; };
+		BFF14D972160496400733323 /* MonthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +225,10 @@
 			isa = PBXGroup;
 			children = (
 				BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */,
+				BFF14D912160492F00733323 /* DateHelper.swift */,
+				BFF14D932160494100733323 /* DateDescriptionHelper.swift */,
+				BFF14D952160495000733323 /* DayHelper.swift */,
+				BFF14D972160496400733323 /* MonthHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -552,6 +564,7 @@
 				BFF14D88216002CB00733323 /* CalendarConfiguration.swift in Sources */,
 				BFF14D8C2160033B00733323 /* CalendarController.swift in Sources */,
 				BF1DA2BD2150B0C200434843 /* CalendarCourse.swift in Sources */,
+				BFF14D922160492F00733323 /* DateHelper.swift in Sources */,
 				BFD029A721509CFD002FB9F5 /* FlatInlinePickerCellConfig.swift in Sources */,
 				BFF14D902160072600733323 /* CalendarSetupDataSource.swift in Sources */,
 				BFD029A621509CFD002FB9F5 /* FlatInlinePickerCell.swift in Sources */,
@@ -588,11 +601,13 @@
 				BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */,
 				BFD0299521509C9A002FB9F5 /* FlatActionSheetAction.swift in Sources */,
 				BFD0295C21509BB2002FB9F5 /* CalendarViewDelegate.swift in Sources */,
+				BFF14D982160496400733323 /* MonthHelper.swift in Sources */,
 				BFD0299321509C9A002FB9F5 /* FlatActionSheetCell.swift in Sources */,
 				BFD0298221509C6A002FB9F5 /* ImageExtractor.swift in Sources */,
 				BFD0295B21509BB2002FB9F5 /* CalendarViewDataSource.swift in Sources */,
 				BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */,
 				BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */,
+				BFF14D942160494100733323 /* DateDescriptionHelper.swift in Sources */,
 				BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */,
 				BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */,
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
@@ -603,6 +618,7 @@
 				BF1DA2BF2150B0E400434843 /* CalendarTutor.swift in Sources */,
 				BFD0296021509BB2002FB9F5 /* CalendarViewDayCell.swift in Sources */,
 				BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */,
+				BFF14D962160495000733323 /* DayHelper.swift in Sources */,
 				BF1DA2BA2150AD4300434843 /* CalendarEventViewModel.swift in Sources */,
 				BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */,
 				BFD0299621509C9A002FB9F5 /* FlatActionSheetDataSource.swift in Sources */,
