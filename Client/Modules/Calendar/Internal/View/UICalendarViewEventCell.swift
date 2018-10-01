@@ -30,6 +30,11 @@ extension UICalendarViewEventCell {
     func setUp(_ calendarEvent: CalendarEvent) {
         event = calendarEvent
         
+        layer.cornerRadius = 3
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.darkGray.cgColor
+        
+        
         titleLabel.text = calendarEvent.title
         detailLabel.text = calendarEvent.description
     }
