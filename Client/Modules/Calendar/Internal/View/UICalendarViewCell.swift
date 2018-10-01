@@ -22,24 +22,17 @@ class UICalendarViewCell: UICollectionViewCell {
     
     /// holds the information surrounding
     /// the day of the month and the day of the week
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet
+    weak var titleLabel: UILabel!
+    
+    @IBOutlet
+    weak var detailLabel: UILabel!
     
     
     /// contains all the events for a single day
     /// one cell per event
-    @IBOutlet weak var collectionView: UICollectionView!
-}
-
-extension UICalendarViewCell {
-    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        layoutIfNeeded()
-        
-        let layoutAttributes = super.preferredLayoutAttributesFitting(layoutAttributes)
-        layoutAttributes.bounds.size.height = systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
-        
-        return layoutAttributes
-    }
+    @IBOutlet
+    weak var collectionView: UICollectionView!
 }
 
 
@@ -117,14 +110,14 @@ extension UICalendarViewCell: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 8
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 8
+        return 0
     }
 }
 

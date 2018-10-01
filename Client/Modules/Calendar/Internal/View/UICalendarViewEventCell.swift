@@ -17,10 +17,17 @@ class UICalendarViewEventCell: UICollectionViewCell {
     
     // MARK: Views
     
-    @IBOutlet weak var leftImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
-    @IBOutlet weak var rightImageView: UIImageView!
+    @IBOutlet
+    weak var leftImageView: UIImageView!
+    
+    @IBOutlet
+    weak var titleLabel: UILabel!
+    
+    @IBOutlet
+    weak var detailLabel: UILabel!
+    
+    @IBOutlet
+    weak var rightImageView: UIImageView!
 }
 
 

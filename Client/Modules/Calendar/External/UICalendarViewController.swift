@@ -33,6 +33,7 @@ class UICalendarViewController: UIViewController {
 extension UICalendarViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         moveTo(CalendarConfiguration.default.startDate,
                animated: false)
     }
@@ -77,38 +78,27 @@ extension UICalendarViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICalendarViewCell.identifier,
+        let dayHelper = brain.dataSource.day(from: indexPath)
+        
+        guard
+            let dateHelper = brain.dataSource.calendarDate(for: dayHelper),
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICalendarViewCell.identifier,
                                                             for: indexPath) as? UICalendarViewCell
         else {
             return UICollectionViewCell()
         }
         
-        let dayHelper = brain.dataSource.day(from: indexPath)
-        
-        guard let dateHelper = brain.dataSource.calendarDate(for: dayHelper) else {
-            return UICollectionViewCell()
-        }
-        
-        guard let dataSource = dataSource else {
+        guard
+            let dataSource = dataSource,
+            let day = dataSource.day(for: dateHelper)
+        else {
             let day = CalendarDay(date: dateHelper,
                                   events: [])
-            
             cell.setUp(day)
-            
-            return cell
-        }
-        
-        guard let day = dataSource.day(for: dateHelper) else {
-            let day = CalendarDay(date: dateHelper,
-                                  events: [])
-            
-            cell.setUp(day)
-            
             return cell
         }
         
         cell.setUp(day)
-        
         return cell
     }
 }
@@ -136,13 +126,13 @@ extension UICalendarViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 8
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 8
+        return 0
     }
 }
