@@ -13,6 +13,7 @@ struct CalendarConfiguration {
     let startDate: Date
     let minimumCalendarYear: Int
     let maximumCalendarYear: Int
+    let heightInPixelsOfOneMinute: Int
 }
 
 extension CalendarConfiguration {
@@ -37,6 +38,7 @@ extension CalendarConfiguration {
         return CalendarConfiguration(calendar: .current,
                                      startDate: now,
                                      minimumCalendarYear: currentYear - yearSpread,
-                                     maximumCalendarYear: currentYear + yearSpread)
+                                     maximumCalendarYear: currentYear + yearSpread,
+                                     heightInPixelsOfOneMinute: 1)
     }()
 }

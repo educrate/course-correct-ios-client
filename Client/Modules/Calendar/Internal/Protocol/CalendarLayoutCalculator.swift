@@ -18,7 +18,7 @@ class CalendarLayoutCalculator {
 
 extension CalendarLayoutCalculator {
     func height(for timeInterval: TimeInterval) -> CGFloat {
-        return CGFloat(heightOfOneMinute * Int(timeInterval))
+        return CGFloat(heightOfOneMinute * Int(timeInterval / 60))
     }
     
     func height(for numberOfMinutes: Int) -> CGFloat {

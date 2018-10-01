@@ -120,7 +120,7 @@
                                                     </cells>
                                                     <connections>
                                                         <outlet property="dataSource" destination="Hbw-sN-n5t" id="QR1-Pf-fT2"/>
-                                                        <outlet property="delegate" destination="IB4-VW-cXN" id="Dyk-Wc-nZU"/>
+                                                        <outlet property="delegate" destination="Hbw-sN-n5t" id="1Ac-gd-GM5"/>
                                                     </connections>
                                                 </collectionView>
                                             </subviews>

@@ -94,12 +94,44 @@ extension UICalendarViewController: UICollectionViewDataSource {
         else {
             let day = CalendarDay(date: dateHelper,
                                   events: [])
-            cell.setUp(day)
+            cell.setUp(day,
+                       calendarLayoutCalculator: brain.layoutCalculator)
+            
             return cell
         }
         
-        cell.setUp(day)
+        cell.setUp(day,
+                   calendarLayoutCalculator: brain.layoutCalculator)
+        
         return cell
+    }
+}
+
+extension UICalendarViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let dayHelper = brain.dataSource.day(from: indexPath)
+        
+        guard
+            let dateHelper = brain.dataSource.calendarDate(for: dayHelper),
+            let dataSource = dataSource,
+            let day = dataSource.day(for: dateHelper)
+        else {
+            return CGSize(width: collectionView.bounds.width,
+                          height: 75)
+        }
+        
+        let eventCount = day.events.count
+        let numberOfCellSpaces = eventCount - 1
+        let heightOfCellSpaces = CGFloat(numberOfCellSpaces * 8)
+        let minutes = day.events.reduce(0, { $0 + $1.duration } )
+        let heightOfEvents = CGFloat(brain.layoutCalculator.height(for: minutes))
+        let totalHeight = heightOfCellSpaces + heightOfEvents
+    
+        return CGSize(width: collectionView.bounds.width,
+                      height: totalHeight)
     }
 }
 

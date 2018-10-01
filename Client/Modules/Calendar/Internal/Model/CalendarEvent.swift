@@ -10,4 +10,5 @@ import UIKit
 struct CalendarEvent {
     let title: String
     let description: String
+    let duration: TimeInterval
 }

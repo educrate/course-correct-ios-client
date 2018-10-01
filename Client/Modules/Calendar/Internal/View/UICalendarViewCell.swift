@@ -16,6 +16,7 @@ class UICalendarViewCell: UICollectionViewCell {
     // MARK: Properties
     
     private var day: CalendarDay?
+    private var layoutCalculator: CalendarLayoutCalculator?
     
     
     // MARK: Views
@@ -39,8 +40,11 @@ class UICalendarViewCell: UICollectionViewCell {
 // MARK: - Public Setup Methods
 
 extension UICalendarViewCell {
-    func setUp(_ calendarDay: CalendarDay) {
+    func setUp(_ calendarDay: CalendarDay,
+               calendarLayoutCalculator: CalendarLayoutCalculator) {
+        
         day = calendarDay
+        layoutCalculator = calendarLayoutCalculator
         
         titleLabel.text = calendarDay.date.dayNumberString
         detailLabel.text = calendarDay.date.weekdayShort
@@ -84,6 +88,33 @@ extension UICalendarViewCell: UICollectionViewDataSource {
         cell.setUp(event)
         
         return cell
+    }
+}
+
+extension UICalendarViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        guard
+            let day = day,
+            let layoutCalculator = layoutCalculator
+        else {
+            return .zero
+        }
+        
+        let events = day.events
+        let rowIndex = indexPath.row
+        
+        guard events.indices.contains(rowIndex) else {
+            return .zero
+        }
+        
+        let event = events[rowIndex]
+        let cellHeight = layoutCalculator.height(for: event.duration)
+        
+        return CGSize(width: collectionView.bounds.width,
+                      height: cellHeight)
     }
 }
 

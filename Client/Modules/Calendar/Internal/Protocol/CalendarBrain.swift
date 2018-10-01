@@ -11,6 +11,7 @@ import Foundation
 class CalendarBrain {
     
     var dataSource: CalendarDataMapper
+    var layoutCalculator: CalendarLayoutCalculator
     
     init(configuration: CalendarConfiguration) {
         let calendarHelper = CalendarHelper(configuration.calendar)
@@ -18,6 +19,9 @@ class CalendarBrain {
                                                           maximumCalendarYear: configuration.maximumCalendarYear,
                                                           calendarHelper: calendarHelper)
         dataSource = controllerDataSource
+        
+        let calendarLayoutCalculator = CalendarLayoutCalculator(configuration.heightInPixelsOfOneMinute)
+        layoutCalculator = calendarLayoutCalculator
     }
 }
 
