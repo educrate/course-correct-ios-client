@@ -106,6 +106,4 @@ extension UICalendarViewController: UICollectionViewDataSource {
 
 // MARK: - Table View Delegate Conformation
 
-extension UICalendarViewController: UICollectionViewDelegate {
-   
-}
+extension UICalendarViewController: UICollectionViewDelegate {}

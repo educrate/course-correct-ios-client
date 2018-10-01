@@ -90,9 +90,7 @@ extension UICalendarViewCell: UICollectionViewDataSource {
 
 // MARK: - Table View Delegate Conformation
 
-extension UICalendarViewCell: UICollectionViewDelegate {
-    
-}
+extension UICalendarViewCell: UICollectionViewDelegate {}
 
 extension UICalendarViewCell {
     static let identifier = "uicalendarviewcell"

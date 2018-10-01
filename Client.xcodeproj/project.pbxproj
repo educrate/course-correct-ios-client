@@ -70,6 +70,7 @@
 		BFF14D962160495000733323 /* DayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D952160495000733323 /* DayHelper.swift */; };
 		BFF14D982160496400733323 /* MonthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D972160496400733323 /* MonthHelper.swift */; };
 		BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF14DA32161433B00733323 /* UICalendarViewController.storyboard */; };
+		BFF9DF172161A75300B80E9D /* CalendarLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF9DF162161A75300B80E9D /* CalendarLayoutCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,7 @@
 		BFF14D952160495000733323 /* DayHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHelper.swift; sourceTree = "<group>"; };
 		BFF14D972160496400733323 /* MonthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthHelper.swift; sourceTree = "<group>"; };
 		BFF14DA32161433B00733323 /* UICalendarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UICalendarViewController.storyboard; sourceTree = "<group>"; };
+		BFF9DF162161A75300B80E9D /* CalendarLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLayoutCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				BFF14D8B2160033B00733323 /* CalendarBrain.swift */,
 				BFF14D8F2160072600733323 /* CalendarDataMapper.swift */,
 				BFF14D87216002CB00733323 /* CalendarConfiguration.swift */,
+				BFF9DF162161A75300B80E9D /* CalendarLayoutCalculator.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				BF1DA2C52150B13500434843 /* CalendarEventState.swift in Sources */,
 				BFD0298121509C6A002FB9F5 /* PrefixContainable.swift in Sources */,
 				BF1DA2BF2150B0E400434843 /* CalendarTutor.swift in Sources */,
+				BFF9DF172161A75300B80E9D /* CalendarLayoutCalculator.swift in Sources */,
 				BFD0296021509BB2002FB9F5 /* UICalendarViewCell.swift in Sources */,
 				BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */,
 				BFF14D962160495000733323 /* DayHelper.swift in Sources */,
