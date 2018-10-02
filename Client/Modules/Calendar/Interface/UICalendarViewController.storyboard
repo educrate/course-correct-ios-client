@@ -35,7 +35,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="les-K5-QKz" userLabel="Day Text Stack View">
-                                                    <rect key="frame" x="8" y="0.0" width="40.666666666666664" height="61.666666666666664"/>
+                                                    <rect key="frame" x="15.999999999999996" y="0.0" width="40.666666666666657" height="61.666666666666664"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVo-f1-trd" userLabel="Title Label">
                                                             <rect key="frame" x="0.0" y="0.0" width="37.333333333333336" height="36"/>
@@ -52,31 +52,31 @@
                                                     </subviews>
                                                 </stackView>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdF-bb-YJ6" userLabel="Calendar Day Collection View">
-                                                    <rect key="frame" x="48.666666666666657" y="0.0" width="351.33333333333337" height="157"/>
+                                                    <rect key="frame" x="64.666666666666657" y="0.0" width="335.33333333333337" height="157"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="0.0" id="pe7-R5-TSn">
-                                                        <size key="itemSize" width="351" height="68"/>
+                                                        <size key="itemSize" width="336.33333333333337" height="44"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="uicalendarvieweventcell" id="vce-lp-ngH" userLabel="Calendar Event Cell" customClass="UICalendarViewEventCell" customModule="Client" customModuleProvider="target">
-                                                            <rect key="frame" x="0.33333333333333331" y="0.0" width="351" height="68"/>
+                                                            <rect key="frame" x="-0.66666666666666663" y="0.0" width="336.33333333333337" height="44"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="351" height="68"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="336.33333333333337" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oEi-zR-TLY">
-                                                                        <rect key="frame" x="8" y="24" width="20" height="20"/>
+                                                                        <rect key="frame" x="8" y="12" width="20" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="oEi-zR-TLY" secondAttribute="height" multiplier="1:1" id="AvY-67-2wL"/>
                                                                             <constraint firstAttribute="height" constant="20" id="yt4-4u-ZPd"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pAZ-Ld-Sav" userLabel="Event Text Stack View">
-                                                                        <rect key="frame" x="44" y="16.333333333333332" width="271" height="35.333333333333343"/>
+                                                                        <rect key="frame" x="44" y="4.3333333333333321" width="256.33333333333331" height="35.333333333333343"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physics 7C with Christian Ampe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8T-wO-TB0" userLabel="Title Label">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="209.33333333333334" height="17"/>
@@ -85,7 +85,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 AM-1 PM at Langston Library" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKu-9E-Brd" userLabel="Detail Label">
-                                                                                <rect key="frame" x="0.0" y="21.000000000000004" width="175.66666666666666" height="14.333333333333332"/>
+                                                                                <rect key="frame" x="0.0" y="21" width="175.66666666666666" height="14.333333333333336"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rJl-2I-lfP">
-                                                                        <rect key="frame" x="323" y="24" width="20" height="20"/>
+                                                                        <rect key="frame" x="308.33333333333331" y="12" width="20" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="FcT-mC-AqD"/>
                                                                             <constraint firstAttribute="width" secondItem="rJl-2I-lfP" secondAttribute="height" multiplier="1:1" id="cAU-tT-QBG"/>
@@ -129,8 +129,8 @@
                                             <constraint firstItem="les-K5-QKz" firstAttribute="width" secondItem="Hbw-sN-n5t" secondAttribute="width" multiplier="0.1" id="9Wd-dg-WOg"/>
                                             <constraint firstItem="cdF-bb-YJ6" firstAttribute="top" secondItem="Hbw-sN-n5t" secondAttribute="top" id="AXk-1x-ohc"/>
                                             <constraint firstAttribute="bottom" secondItem="cdF-bb-YJ6" secondAttribute="bottom" id="cQp-27-i3U"/>
-                                            <constraint firstItem="cdF-bb-YJ6" firstAttribute="leading" secondItem="les-K5-QKz" secondAttribute="trailing" id="fLN-QM-bi6"/>
-                                            <constraint firstItem="les-K5-QKz" firstAttribute="leading" secondItem="Hbw-sN-n5t" secondAttribute="leading" constant="8" id="gtU-pS-da6"/>
+                                            <constraint firstItem="cdF-bb-YJ6" firstAttribute="leading" secondItem="les-K5-QKz" secondAttribute="trailing" constant="8" id="fLN-QM-bi6"/>
+                                            <constraint firstItem="les-K5-QKz" firstAttribute="leading" secondItem="Hbw-sN-n5t" secondAttribute="leading" constant="16" id="gtU-pS-da6"/>
                                             <constraint firstAttribute="trailing" secondItem="cdF-bb-YJ6" secondAttribute="trailing" constant="8" id="sLI-Od-GvG"/>
                                             <constraint firstItem="les-K5-QKz" firstAttribute="top" secondItem="Hbw-sN-n5t" secondAttribute="top" id="vHb-Ww-NdG"/>
                                         </constraints>

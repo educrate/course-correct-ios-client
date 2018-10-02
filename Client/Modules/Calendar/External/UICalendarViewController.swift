@@ -120,18 +120,22 @@ extension UICalendarViewController: UICollectionViewDelegateFlowLayout {
             let day = dataSource.day(for: dateHelper)
         else {
             return CGSize(width: collectionView.bounds.width,
-                          height: 75)
+                          height: 80)
         }
         
         let eventCount = day.events.count
         let numberOfCellSpaces = eventCount - 1
         let heightOfCellSpaces = CGFloat(numberOfCellSpaces * 8)
-        let minutes = day.events.reduce(0, { $0 + $1.duration } )
-        let heightOfEvents = CGFloat(brain.layoutCalculator.height(for: minutes))
-        let totalHeight = heightOfCellSpaces + heightOfEvents
-    
+        let heightOfEvents = day.events.reduce(0, {
+            $0 + CGFloat(brain.layoutCalculator.height(for: $1.duration,
+                                                       minimumHeight: UICalendarViewEventCell.minimumHeight))
+            
+        })
+        
+        let cellHeight = heightOfCellSpaces + heightOfEvents
+        
         return CGSize(width: collectionView.bounds.width,
-                      height: totalHeight)
+                      height: cellHeight)
     }
 }
 

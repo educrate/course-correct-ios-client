@@ -111,7 +111,8 @@ extension UICalendarViewCell: UICollectionViewDelegateFlowLayout {
         }
         
         let event = events[rowIndex]
-        let cellHeight = layoutCalculator.height(for: event.duration)
+        let cellHeight = layoutCalculator.height(for: event.duration,
+                                                 minimumHeight: UICalendarViewEventCell.minimumHeight)
         
         return CGSize(width: collectionView.bounds.width,
                       height: cellHeight)
@@ -125,4 +126,5 @@ extension UICalendarViewCell: UICollectionViewDelegate {}
 
 extension UICalendarViewCell {
     static let identifier = "uicalendarviewcell"
+    static let minimumHeight: CGFloat = 80
 }

@@ -20,7 +20,7 @@ class CalendarBrain {
                                                           calendarHelper: calendarHelper)
         dataSource = controllerDataSource
         
-        let calendarLayoutCalculator = CalendarLayoutCalculator(configuration.heightInPixelsOfOneMinute)
+        let calendarLayoutCalculator = CalendarLayoutCalculator(configuration.heightInPixelsOfOneHour)
         layoutCalculator = calendarLayoutCalculator
     }
 }
