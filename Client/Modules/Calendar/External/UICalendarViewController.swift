@@ -94,14 +94,12 @@ extension UICalendarViewController: UICollectionViewDataSource {
         else {
             let day = CalendarDay(date: dateHelper,
                                   events: [])
-            cell.setUp(day,
-                       calendarLayoutCalculator: brain.layoutCalculator)
+            cell.setUp(day)
             
             return cell
         }
         
-        cell.setUp(day,
-                   calendarLayoutCalculator: brain.layoutCalculator)
+        cell.setUp(day)
         
         return cell
     }
@@ -112,6 +110,8 @@ extension UICalendarViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
+        let fullCollectionWidth = collectionView.bounds.width
+        
         let dayHelper = brain.dataSource.day(from: indexPath)
         
         guard
@@ -119,23 +119,23 @@ extension UICalendarViewController: UICollectionViewDelegateFlowLayout {
             let dataSource = dataSource,
             let day = dataSource.day(for: dateHelper)
         else {
-            return CGSize(width: collectionView.bounds.width,
-                          height: 80)
+            return CGSize(width: fullCollectionWidth,
+                          height: UICalendarViewCell.minimumHeight)
         }
         
-        let eventCount = day.events.count
-        let numberOfCellSpaces = eventCount - 1
-        let heightOfCellSpaces = CGFloat(numberOfCellSpaces * 8)
-        let heightOfEvents = day.events.reduce(0, {
-            $0 + CGFloat(brain.layoutCalculator.height(for: $1.duration,
-                                                       minimumHeight: UICalendarViewEventCell.minimumHeight))
-            
-        })
+        let heightOfEventCells: CGFloat = CGFloat(day.events.count) * UICalendarViewEventCell.defaultHeight
+        let heightOfCellSpacing: CGFloat = CGFloat(day.events.count - 1) * UICalendarViewEventCell.lineSpacing
+        let totalHeight: CGFloat = heightOfEventCells + heightOfCellSpacing
         
-        let cellHeight = heightOfCellSpaces + heightOfEvents
+        return CGSize(width: fullCollectionWidth,
+                      height: totalHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         
-        return CGSize(width: collectionView.bounds.width,
-                      height: cellHeight)
+        return 0
     }
 }
 

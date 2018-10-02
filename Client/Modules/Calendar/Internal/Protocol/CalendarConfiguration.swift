@@ -39,6 +39,6 @@ extension CalendarConfiguration {
                                      startDate: now,
                                      minimumCalendarYear: currentYear - yearSpread,
                                      maximumCalendarYear: currentYear + yearSpread,
-                                     heightInPixelsOfOneHour: 50)
+                                     heightInPixelsOfOneHour: 30)
     }()
 }

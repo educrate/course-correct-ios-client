@@ -16,7 +16,6 @@ class UICalendarViewCell: UICollectionViewCell {
     // MARK: Properties
     
     private var day: CalendarDay?
-    private var layoutCalculator: CalendarLayoutCalculator?
     
     
     // MARK: Views
@@ -40,11 +39,9 @@ class UICalendarViewCell: UICollectionViewCell {
 // MARK: - Public Setup Methods
 
 extension UICalendarViewCell {
-    func setUp(_ calendarDay: CalendarDay,
-               calendarLayoutCalculator: CalendarLayoutCalculator) {
+    func setUp(_ calendarDay: CalendarDay) {
         
         day = calendarDay
-        layoutCalculator = calendarLayoutCalculator
         
         titleLabel.text = calendarDay.date.dayNumberString
         detailLabel.text = calendarDay.date.weekdayShort
@@ -96,26 +93,24 @@ extension UICalendarViewCell: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        guard
-            let day = day,
-            let layoutCalculator = layoutCalculator
-        else {
-            return .zero
-        }
+        let fullCollectionWidth = collectionView.bounds.width
         
-        let events = day.events
-        let rowIndex = indexPath.row
+        return CGSize(width: fullCollectionWidth,
+                      height: UICalendarViewEventCell.defaultHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         
-        guard events.indices.contains(rowIndex) else {
-            return .zero
-        }
+        return UICalendarViewEventCell.interitemSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        let event = events[rowIndex]
-        let cellHeight = layoutCalculator.height(for: event.duration,
-                                                 minimumHeight: UICalendarViewEventCell.minimumHeight)
-        
-        return CGSize(width: collectionView.bounds.width,
-                      height: cellHeight)
+        return UICalendarViewEventCell.lineSpacing
     }
 }
 
@@ -126,5 +121,5 @@ extension UICalendarViewCell: UICollectionViewDelegate {}
 
 extension UICalendarViewCell {
     static let identifier = "uicalendarviewcell"
-    static let minimumHeight: CGFloat = 80
+    static let minimumHeight: CGFloat = 60
 }
