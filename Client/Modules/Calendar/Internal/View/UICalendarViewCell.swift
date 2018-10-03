@@ -121,7 +121,7 @@ extension UICalendarViewCell: UICollectionViewDelegate {}
 
 extension UICalendarViewCell {
     static let identifier = "uicalendarviewcell"
-    static let minimumHeight: CGFloat = 60
-    static let interitemSpacing: CGFloat = 6
-    static let lineSpacing: CGFloat = 6
+    static let minimumHeight: CGFloat = 80
+    static let interitemSpacing: CGFloat = 8
+    static let lineSpacing: CGFloat = 8
 }

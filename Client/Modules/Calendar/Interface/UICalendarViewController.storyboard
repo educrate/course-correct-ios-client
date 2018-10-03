@@ -21,65 +21,45 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="DAr-Yx-tgb">
-                                    <size key="itemSize" width="400" height="64"/>
+                                    <size key="itemSize" width="400" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="uicalendarviewcell" id="Hbw-sN-n5t" userLabel="Calendar Cell" customClass="UICalendarViewCell" customModule="Client" customModuleProvider="target">
-                                        <rect key="frame" x="7" y="0.0" width="400" height="64"/>
+                                        <rect key="frame" x="7" y="0.0" width="400" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="64"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="les-K5-QKz" userLabel="Day Text Stack View">
-                                                    <rect key="frame" x="16" y="0.0" width="40" height="45"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zVo-f1-trd" userLabel="Title Label">
-                                                            <rect key="frame" x="0.0" y="0.0" width="30.666666666666668" height="28.333333333333332"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Noc-8Y-6NC" userLabel="Detail Label">
-                                                            <rect key="frame" x="0.0" y="28.333333333333329" width="16.666666666666668" height="16.666666666666671"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="les-K5-QKz" secondAttribute="height" multiplier="8:9" id="cYp-O6-NTS"/>
-                                                    </constraints>
-                                                </stackView>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdF-bb-YJ6" userLabel="Calendar Day Collection View">
-                                                    <rect key="frame" x="64" y="0.0" width="328" height="64"/>
+                                                    <rect key="frame" x="68" y="0.0" width="315" height="100"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="0.0" id="pe7-R5-TSn">
-                                                        <size key="itemSize" width="320" height="50"/>
+                                                        <size key="itemSize" width="300" height="80"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="uicalendarvieweventcell" id="vce-lp-ngH" userLabel="Calendar Event Cell" customClass="UICalendarViewEventCell" customModule="Client" customModuleProvider="target">
-                                                            <rect key="frame" x="4" y="0.0" width="320" height="50"/>
+                                                            <rect key="frame" x="7.666666666666667" y="0.0" width="300" height="80"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oEi-zR-TLY">
-                                                                        <rect key="frame" x="8" y="15" width="20" height="20"/>
+                                                                        <rect key="frame" x="8" y="30" width="20" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="oEi-zR-TLY" secondAttribute="height" multiplier="1:1" id="AvY-67-2wL"/>
                                                                             <constraint firstAttribute="height" constant="20" id="yt4-4u-ZPd"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pAZ-Ld-Sav" userLabel="Event Text Stack View">
-                                                                        <rect key="frame" x="36" y="9.3333333333333339" width="248" height="31.333333333333329"/>
+                                                                        <rect key="frame" x="36" y="24.333333333333336" width="228" height="31.333333333333336"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physics 7C with Christian Ampe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8T-wO-TB0" userLabel="Title Label">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="209.33333333333334" height="17"/>
@@ -88,7 +68,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 AM-1 PM at Langston Library" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DKu-9E-Brd" userLabel="Detail Label">
-                                                                                <rect key="frame" x="0.0" y="17" width="175.66666666666666" height="14.333333333333336"/>
+                                                                                <rect key="frame" x="0.0" y="17.000000000000004" width="175.66666666666666" height="14.333333333333332"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -96,7 +76,7 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rJl-2I-lfP">
-                                                                        <rect key="frame" x="292" y="15" width="20" height="20"/>
+                                                                        <rect key="frame" x="272" y="30" width="20" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="FcT-mC-AqD"/>
                                                                             <constraint firstAttribute="width" secondItem="rJl-2I-lfP" secondAttribute="height" multiplier="1:1" id="cAU-tT-QBG"/>
@@ -126,16 +106,33 @@
                                                         <outlet property="delegate" destination="Hbw-sN-n5t" id="1Ac-gd-GM5"/>
                                                     </connections>
                                                 </collectionView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cRH-Ck-XNZ">
+                                                    <rect key="frame" x="16" y="0.0" width="40" height="53"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zVo-f1-trd" userLabel="Title Label">
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="33.666666666666664"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Noc-8Y-6NC" userLabel="Detail Label">
+                                                            <rect key="frame" x="0.0" y="33.666666666666664" width="40" height="19.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="les-K5-QKz" firstAttribute="width" secondItem="Hbw-sN-n5t" secondAttribute="width" multiplier="0.1" id="9Wd-dg-WOg"/>
+                                            <constraint firstItem="cdF-bb-YJ6" firstAttribute="leading" secondItem="cRH-Ck-XNZ" secondAttribute="trailing" constant="12" id="37c-ml-FbK"/>
+                                            <constraint firstItem="cRH-Ck-XNZ" firstAttribute="top" secondItem="Hbw-sN-n5t" secondAttribute="top" id="9DW-nL-xfS"/>
                                             <constraint firstItem="cdF-bb-YJ6" firstAttribute="top" secondItem="Hbw-sN-n5t" secondAttribute="top" id="AXk-1x-ohc"/>
+                                            <constraint firstItem="cRH-Ck-XNZ" firstAttribute="leading" secondItem="Hbw-sN-n5t" secondAttribute="leading" constant="16" id="AxS-fD-rpA"/>
+                                            <constraint firstItem="cRH-Ck-XNZ" firstAttribute="width" secondItem="Hbw-sN-n5t" secondAttribute="width" multiplier="0.1" id="Pr3-HH-xyw"/>
                                             <constraint firstAttribute="bottom" secondItem="cdF-bb-YJ6" secondAttribute="bottom" id="cQp-27-i3U"/>
-                                            <constraint firstItem="cdF-bb-YJ6" firstAttribute="leading" secondItem="les-K5-QKz" secondAttribute="trailing" constant="8" id="fLN-QM-bi6"/>
-                                            <constraint firstItem="les-K5-QKz" firstAttribute="leading" secondItem="Hbw-sN-n5t" secondAttribute="leading" constant="16" id="gtU-pS-da6"/>
-                                            <constraint firstAttribute="trailing" secondItem="cdF-bb-YJ6" secondAttribute="trailing" constant="8" id="sLI-Od-GvG"/>
-                                            <constraint firstItem="les-K5-QKz" firstAttribute="top" secondItem="Hbw-sN-n5t" secondAttribute="top" id="vHb-Ww-NdG"/>
+                                            <constraint firstAttribute="trailing" secondItem="cdF-bb-YJ6" secondAttribute="trailing" constant="17" id="sLI-Od-GvG"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="collectionView" destination="cdF-bb-YJ6" id="sSx-Mo-5m9"/>
