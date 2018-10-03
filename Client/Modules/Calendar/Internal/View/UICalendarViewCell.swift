@@ -28,7 +28,6 @@ class UICalendarViewCell: UICollectionViewCell {
     @IBOutlet
     weak var detailLabel: UILabel!
     
-    
     /// contains all the events for a single day
     /// one cell per event
     @IBOutlet

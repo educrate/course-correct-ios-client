@@ -35,20 +35,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdF-bb-YJ6" userLabel="Calendar Day Collection View">
-                                                    <rect key="frame" x="68" y="0.0" width="315" height="100"/>
+                                                    <rect key="frame" x="88" y="0.0" width="288" height="100"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="0.0" id="pe7-R5-TSn">
-                                                        <size key="itemSize" width="300" height="80"/>
+                                                        <size key="itemSize" width="288" height="80"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="uicalendarvieweventcell" id="vce-lp-ngH" userLabel="Calendar Event Cell" customClass="UICalendarViewEventCell" customModule="Client" customModuleProvider="target">
-                                                            <rect key="frame" x="7.666666666666667" y="0.0" width="300" height="80"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="80"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="80"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oEi-zR-TLY">
@@ -59,16 +59,22 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pAZ-Ld-Sav" userLabel="Event Text Stack View">
-                                                                        <rect key="frame" x="36" y="24.333333333333336" width="228" height="31.333333333333336"/>
+                                                                        <rect key="frame" x="36" y="17.333333333333332" width="216" height="45.666666666666671"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physics 7C with Christian Ampe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8T-wO-TB0" userLabel="Title Label">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="209.33333333333334" height="17"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physics 7C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8T-wO-TB0" userLabel="Title Label">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="17"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 AM-1 PM at Langston Library" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DKu-9E-Brd" userLabel="Detail Label">
-                                                                                <rect key="frame" x="0.0" y="17.000000000000004" width="175.66666666666666" height="14.333333333333332"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:30 AM-1 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OU4-ek-JDN" userLabel="DetailLabel">
+                                                                                <rect key="frame" x="0.0" y="17.000000000000004" width="84.666666666666671" height="14.333333333333332"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Langston Library" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DKu-9E-Brd" userLabel="Info Label">
+                                                                                <rect key="frame" x="0.0" y="31.333333333333332" width="94" height="14.333333333333332"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -76,7 +82,7 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rJl-2I-lfP">
-                                                                        <rect key="frame" x="272" y="30" width="20" height="20"/>
+                                                                        <rect key="frame" x="260" y="30" width="20" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="FcT-mC-AqD"/>
                                                                             <constraint firstAttribute="width" secondItem="rJl-2I-lfP" secondAttribute="height" multiplier="1:1" id="cAU-tT-QBG"/>
@@ -94,10 +100,11 @@
                                                                 <constraint firstItem="rJl-2I-lfP" firstAttribute="leading" secondItem="pAZ-Ld-Sav" secondAttribute="trailing" constant="8" id="xPc-ji-5sc"/>
                                                             </constraints>
                                                             <connections>
-                                                                <outlet property="detailLabel" destination="DKu-9E-Brd" id="U4d-Md-tLS"/>
+                                                                <outlet property="detailLabel" destination="OU4-ek-JDN" id="eiT-Gi-EkD"/>
+                                                                <outlet property="infoLabel" destination="DKu-9E-Brd" id="dxM-7P-T2K"/>
                                                                 <outlet property="leftImageView" destination="oEi-zR-TLY" id="1vE-UX-wZe"/>
                                                                 <outlet property="rightImageView" destination="rJl-2I-lfP" id="HPy-me-8Ly"/>
-                                                                <outlet property="titleLabel" destination="q8T-wO-TB0" id="jas-t5-dfu"/>
+                                                                <outlet property="titleLabel" destination="q8T-wO-TB0" id="8KM-iE-KqA"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -107,7 +114,7 @@
                                                     </connections>
                                                 </collectionView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cRH-Ck-XNZ">
-                                                    <rect key="frame" x="16" y="0.0" width="40" height="53"/>
+                                                    <rect key="frame" x="24" y="0.0" width="40" height="53"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zVo-f1-trd" userLabel="Title Label">
                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="33.666666666666664"/>
@@ -126,17 +133,17 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="cdF-bb-YJ6" firstAttribute="leading" secondItem="cRH-Ck-XNZ" secondAttribute="trailing" constant="12" id="37c-ml-FbK"/>
+                                            <constraint firstItem="cdF-bb-YJ6" firstAttribute="leading" secondItem="cRH-Ck-XNZ" secondAttribute="trailing" constant="24" id="37c-ml-FbK"/>
                                             <constraint firstItem="cRH-Ck-XNZ" firstAttribute="top" secondItem="Hbw-sN-n5t" secondAttribute="top" id="9DW-nL-xfS"/>
                                             <constraint firstItem="cdF-bb-YJ6" firstAttribute="top" secondItem="Hbw-sN-n5t" secondAttribute="top" id="AXk-1x-ohc"/>
-                                            <constraint firstItem="cRH-Ck-XNZ" firstAttribute="leading" secondItem="Hbw-sN-n5t" secondAttribute="leading" constant="16" id="AxS-fD-rpA"/>
+                                            <constraint firstItem="cRH-Ck-XNZ" firstAttribute="leading" secondItem="Hbw-sN-n5t" secondAttribute="leading" constant="24" id="AxS-fD-rpA"/>
                                             <constraint firstItem="cRH-Ck-XNZ" firstAttribute="width" secondItem="Hbw-sN-n5t" secondAttribute="width" multiplier="0.1" id="Pr3-HH-xyw"/>
                                             <constraint firstAttribute="bottom" secondItem="cdF-bb-YJ6" secondAttribute="bottom" id="cQp-27-i3U"/>
-                                            <constraint firstAttribute="trailing" secondItem="cdF-bb-YJ6" secondAttribute="trailing" constant="17" id="sLI-Od-GvG"/>
+                                            <constraint firstAttribute="trailing" secondItem="cdF-bb-YJ6" secondAttribute="trailing" constant="24" id="sLI-Od-GvG"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="collectionView" destination="cdF-bb-YJ6" id="sSx-Mo-5m9"/>
-                                            <outlet property="detailLabel" destination="Noc-8Y-6NC" id="O7c-mp-kaq"/>
+                                            <outlet property="detailLabel" destination="Noc-8Y-6NC" id="JwR-Cl-wXl"/>
                                             <outlet property="titleLabel" destination="zVo-f1-trd" id="tlP-D2-cT2"/>
                                         </connections>
                                     </collectionViewCell>

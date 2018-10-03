@@ -24,13 +24,13 @@ class CalendarViewController: UIViewController {
 extension CalendarViewController: UICalendarViewDataSource {
     func day(for date: CalendarDate) -> CalendarDay? {
         if date.dayNumber == 29, date.monthNumber == 9, date.yearNumber == 2018 {
-            let calendarEventFirst = CalendarEvent(title: "Python with Dustin",
-                                                   description: "11:30 AM-12:15 PM at Langston Library",
-                                                   duration: 2400)
+            let calendarEventFirst = CalendarEvent(title: "Python 101A",
+                                                   time: "12-1:30 PM",
+                                                   location: "Langston Library")
             
-            let calendarEventSecond = CalendarEvent(title: "Calculus 2B with Christian",
-                                                    description: "1-3 PM at Christian's",
-                                                    duration: 7200)
+            let calendarEventSecond = CalendarEvent(title: "Calculus 2B",
+                                                    time: "11:15 AM-1 PM",
+                                                    location: "Brandywine")
             
             return CalendarDay(date: date, events: [calendarEventFirst, calendarEventSecond, calendarEventFirst])
         } else {

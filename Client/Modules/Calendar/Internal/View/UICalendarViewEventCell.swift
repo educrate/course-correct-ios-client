@@ -27,6 +27,9 @@ class UICalendarViewEventCell: UICollectionViewCell {
     weak var detailLabel: UILabel!
     
     @IBOutlet
+    weak var infoLabel: UILabel!
+    
+    @IBOutlet
     weak var rightImageView: UIImageView!
 }
 
@@ -41,9 +44,9 @@ extension UICalendarViewEventCell {
         layer.borderWidth = 1
         layer.borderColor = UIColor.darkGray.cgColor
         
-        
         titleLabel.text = calendarEvent.title
-        detailLabel.text = calendarEvent.description
+        detailLabel.text = calendarEvent.time
+        infoLabel.text = calendarEvent.location
     }
 }
 
