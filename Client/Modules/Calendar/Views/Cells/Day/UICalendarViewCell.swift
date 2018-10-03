@@ -114,15 +114,7 @@ extension UICalendarViewCell: UICollectionViewDelegateFlowLayout {
 }
 
 
-// MARK: - Table View Delegate Conformation
-
-extension UICalendarViewCell: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView,
-                        didSelectItemAt indexPath: IndexPath) {
-        
-        
-    }
-}
+// MARK: - Static Properties
 
 extension UICalendarViewCell {
     static let identifier = "uicalendarviewcell"

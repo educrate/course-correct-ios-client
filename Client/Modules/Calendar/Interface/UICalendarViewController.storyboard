@@ -22,13 +22,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="DAr-Yx-tgb">
                                     <size key="itemSize" width="400" height="100"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="400" height="60"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="uicalendarviewcell" id="Hbw-sN-n5t" userLabel="Calendar Cell" customClass="UICalendarViewCell" customModule="Client" customModuleProvider="target">
-                                        <rect key="frame" x="7" y="0.0" width="400" height="100"/>
+                                        <rect key="frame" x="7" y="60" width="400" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
@@ -148,6 +148,25 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="uicalendarviewmonthheader" id="3TR-D7-d1d" userLabel="Month Header" customClass="UICalendarViewMonthHeader" customModule="Client" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="August" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvU-8C-sj5">
+                                            <rect key="frame" x="24" y="18.333333333333332" width="89" height="33.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WvU-8C-sj5" secondAttribute="bottom" id="G0W-cp-WLb"/>
+                                        <constraint firstItem="WvU-8C-sj5" firstAttribute="leading" secondItem="3TR-D7-d1d" secondAttribute="leadingMargin" constant="16" id="cQr-RF-6gN"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="monthLabel" destination="WvU-8C-sj5" id="xGH-Hc-Qxy"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="KH7-ex-XLQ" id="Ape-3d-kic"/>
                                     <outlet property="delegate" destination="KH7-ex-XLQ" id="kM0-cK-akH"/>

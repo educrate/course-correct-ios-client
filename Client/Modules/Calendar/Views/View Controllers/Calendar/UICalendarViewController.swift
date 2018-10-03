@@ -66,7 +66,9 @@ extension UICalendarViewController: UICollectionViewDataSource {
         return brain.dataSource.monthCount()
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        
         guard let dayCount = brain.dataSource.days(in: section) else {
             assert(false, "apple api for date extraction has failed")
             return 0
@@ -102,6 +104,31 @@ extension UICalendarViewController: UICollectionViewDataSource {
         cell.setUp(day)
         
         return cell
+    }
+}
+
+extension UICalendarViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let dayHelper = brain.dataSource.day(from: indexPath)
+        
+        guard
+            let dateHelper = brain.dataSource.calendarDate(for: dayHelper),
+            let monthHeader = collectionView
+            
+                .dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
+                                                  withReuseIdentifier: UICalendarViewMonthHeader.identifier,
+                                                  for: indexPath) as? UICalendarViewMonthHeader
+        else {
+            return UICollectionReusableView()
+        }
+        
+        let longMonthDescription = dateHelper.monthFull
+        monthHeader.setup(longMonthDescription)
+        
+        return monthHeader
     }
 }
 

@@ -33,7 +33,7 @@ extension CalendarConfiguration {
         let currentYear = calendar.component(.year,
                                              from: now)
         
-        let yearSpread = 3
+        let yearSpread = 1
         
         return CalendarConfiguration(calendar: .current,
                                      startDate: now,
