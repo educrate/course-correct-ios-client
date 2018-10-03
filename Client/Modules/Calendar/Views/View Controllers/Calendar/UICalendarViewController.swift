@@ -145,14 +145,3 @@ extension UICalendarViewController: UICollectionViewDelegateFlowLayout {
         return UICalendarViewCell.lineSpacing
     }
 }
-
-
-// MARK: - Table View Delegate Conformation
-
-extension UICalendarViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView,
-                        didSelectItemAt indexPath: IndexPath) {
-        
-        
-    }
-}
