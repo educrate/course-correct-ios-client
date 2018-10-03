@@ -230,6 +230,7 @@
 		BFCECC9F2152066B001BB2BA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BFD0295021509BB2002FB9F5 /* UICalendarViewController.swift */,
 				BFD0295521509BB2002FB9F5 /* UICalendarViewCell.swift */,
 				BFD0294821509BB2002FB9F5 /* UICalendarViewEventCell.swift */,
 			);
@@ -417,7 +418,6 @@
 		BFF14D9C2160538F00733323 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				BFD0295021509BB2002FB9F5 /* UICalendarViewController.swift */,
 				BFD0294C21509BB2002FB9F5 /* UICalendarViewDelegate.swift */,
 				BFD0294B21509BB2002FB9F5 /* UICalendarViewDataSource.swift */,
 			);

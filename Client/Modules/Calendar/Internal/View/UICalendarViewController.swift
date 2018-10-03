@@ -149,4 +149,10 @@ extension UICalendarViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - Table View Delegate Conformation
 
-extension UICalendarViewController: UICollectionViewDelegate {}
+extension UICalendarViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        
+        
+    }
+}
