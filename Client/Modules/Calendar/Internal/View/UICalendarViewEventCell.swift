@@ -49,7 +49,7 @@ extension UICalendarViewEventCell {
 
 extension UICalendarViewEventCell {
     static let identifier = "uicalendarvieweventcell"
-    static let defaultHeight: CGFloat = 50
-    static let interitemSpacing: CGFloat = 8
-    static let lineSpacing: CGFloat = 8
+    static let defaultHeight: CGFloat = UIScreen.main.bounds.height / 16
+    static let interitemSpacing: CGFloat = UIScreen.main.bounds.height / 100
+    static let lineSpacing: CGFloat = UIScreen.main.bounds.height / 100
 }
