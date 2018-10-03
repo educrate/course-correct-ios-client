@@ -8,4 +8,6 @@
 
 import Foundation
 
-protocol UICalendarViewEventCellDelegate {}
+protocol UICalendarViewEventCellDelegate {
+    func didSelect(_ event: CalendarEvent)
+}
