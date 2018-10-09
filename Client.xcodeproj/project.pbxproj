@@ -560,7 +560,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = educrate;
+				ORGANIZATIONNAME = Educrate;
 				TargetAttributes = {
 					BFD0290921509AD4002FB9F5 = {
 						CreatedOnToolsVersion = 10.0;

@@ -3,7 +3,7 @@
 //  Client
 //
 //  Created by Ampe on 9/30/18.
-//  Copyright © 2018 educrate. All rights reserved.
+//  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import UIKit

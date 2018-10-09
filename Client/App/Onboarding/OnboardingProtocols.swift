@@ -3,7 +3,7 @@
 //  Client
 //
 //  Created Ampe on 10/9/18.
-//  Copyright © 2018 educrate. All rights reserved.
+//  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import Foundation
