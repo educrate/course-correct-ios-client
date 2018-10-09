@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF4E7188216D4A5900100FE1 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E7183216D4A5900100FE1 /* OnboardingPresenter.swift */; };
+		BF4E7189216D4A5900100FE1 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E7184216D4A5900100FE1 /* OnboardingRouter.swift */; };
+		BF4E718A216D4A5900100FE1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E7185216D4A5900100FE1 /* OnboardingViewController.swift */; };
+		BF4E718B216D4A5900100FE1 /* OnboardingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E7186216D4A5900100FE1 /* OnboardingProtocols.swift */; };
+		BF4E718C216D4A5900100FE1 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E7187216D4A5900100FE1 /* OnboardingInteractor.swift */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */; };
 		BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD221649618007EDE49 /* UICalendarViewCellDelegate.swift */; };
 		BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeader.swift */; };
-		BFCECCA321520F8A001BB2BA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCECCA221520F8A001BB2BA /* CalendarViewController.swift */; };
 		BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */; };
 		BFD0291321509AD4002FB9F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0291121509AD4002FB9F5 /* Main.storyboard */; };
 		BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD0291421509AD4002FB9F5 /* Client.xcdatamodeld */; };
@@ -87,12 +91,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF4E7183216D4A5900100FE1 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		BF4E7184216D4A5900100FE1 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		BF4E7185216D4A5900100FE1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		BF4E7186216D4A5900100FE1 /* OnboardingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProtocols.swift; sourceTree = "<group>"; };
+		BF4E7187216D4A5900100FE1 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataSource.swift; sourceTree = "<group>"; };
 		BFBE6FD221649618007EDE49 /* UICalendarViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewCellDelegate.swift; sourceTree = "<group>"; };
 		BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewMonthHeader.swift; sourceTree = "<group>"; };
-		BFCECCA221520F8A001BB2BA /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		BFD0290A21509AD4002FB9F5 /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD0291221509AD4002FB9F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -180,6 +188,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF4E718D216D4C1A00100FE1 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */,
+				BFD0291121509AD4002FB9F5 /* Main.storyboard */,
+				BFD0291921509AD5002FB9F5 /* LaunchScreen.storyboard */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
 		BF55165B215B39CD00D0CBB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +229,18 @@
 				BFF14D972160496400733323 /* MonthHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BF579339216D4485008DBB46 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BF4E7185216D4A5900100FE1 /* OnboardingViewController.swift */,
+				BF4E7183216D4A5900100FE1 /* OnboardingPresenter.swift */,
+				BF4E7184216D4A5900100FE1 /* OnboardingRouter.swift */,
+				BF4E7187216D4A5900100FE1 /* OnboardingInteractor.swift */,
+				BF4E7186216D4A5900100FE1 /* OnboardingProtocols.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		BFBE6FC9216493C3007EDE49 /* Cells */ = {
@@ -306,9 +336,9 @@
 		BFD0290C21509AD4002FB9F5 /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				BFD0294121509B39002FB9F5 /* Utilities */,
 				BFD0293F21509AF0002FB9F5 /* App */,
 				BFD0293E21509AE3002FB9F5 /* Modules */,
+				BFD0294121509B39002FB9F5 /* Utilities */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -346,10 +376,8 @@
 		BFD0293F21509AF0002FB9F5 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */,
-				BFCECCA221520F8A001BB2BA /* CalendarViewController.swift */,
-				BFD0291121509AD4002FB9F5 /* Main.storyboard */,
-				BFD0291921509AD5002FB9F5 /* LaunchScreen.storyboard */,
+				BF4E718D216D4C1A00100FE1 /* Entry */,
+				BF579339216D4485008DBB46 /* Onboarding */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -604,17 +632,18 @@
 				BFF14D8C2160033B00733323 /* CalendarBrain.swift in Sources */,
 				BFF14D922160492F00733323 /* DateHelper.swift in Sources */,
 				BFD029A721509CFD002FB9F5 /* FlatInlinePickerCellConfig.swift in Sources */,
+				BF4E718A216D4A5900100FE1 /* OnboardingViewController.swift in Sources */,
 				BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */,
 				BFD029A621509CFD002FB9F5 /* FlatInlinePickerCell.swift in Sources */,
 				BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */,
 				BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */,
 				BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */,
 				BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */,
-				BFCECCA321520F8A001BB2BA /* CalendarViewController.swift in Sources */,
 				BFD0299421509C9A002FB9F5 /* FlatActionSheetConfig.swift in Sources */,
 				BFD0297221509C1E002FB9F5 /* CreditCardViewStyle.swift in Sources */,
 				BFD0299C21509CD5002FB9F5 /* FlatFieldDelegate.swift in Sources */,
 				BFD0297021509C1E002FB9F5 /* CreditCardViewModelDelegate.swift in Sources */,
+				BF4E718C216D4A5900100FE1 /* OnboardingInteractor.swift in Sources */,
 				BFD0295A21509BB2002FB9F5 /* UICalendarViewEventCell.swift in Sources */,
 				BFD0299121509C9A002FB9F5 /* FlatActionSheet.swift in Sources */,
 				BFD0295E21509BB2002FB9F5 /* UICalendarViewController.swift in Sources */,
@@ -637,6 +666,7 @@
 				BFD0295C21509BB2002FB9F5 /* UICalendarViewDelegate.swift in Sources */,
 				BFF14D982160496400733323 /* MonthHelper.swift in Sources */,
 				BFD0299321509C9A002FB9F5 /* FlatActionSheetCell.swift in Sources */,
+				BF4E7188216D4A5900100FE1 /* OnboardingPresenter.swift in Sources */,
 				BFD0298221509C6A002FB9F5 /* ImageExtractor.swift in Sources */,
 				BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */,
 				BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */,
@@ -644,6 +674,8 @@
 				BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */,
 				BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */,
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
+				BF4E718B216D4A5900100FE1 /* OnboardingProtocols.swift in Sources */,
+				BF4E7189216D4A5900100FE1 /* OnboardingRouter.swift in Sources */,
 				BFD0299D21509CD5002FB9F5 /* FlatFieldConfig.swift in Sources */,
 				BFD0298121509C6A002FB9F5 /* PrefixContainable.swift in Sources */,
 				BFF9DF172161A75300B80E9D /* CalendarLayoutCalculator.swift in Sources */,

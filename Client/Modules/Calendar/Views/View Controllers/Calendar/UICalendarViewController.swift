@@ -117,7 +117,6 @@ extension UICalendarViewController: UICollectionViewDelegate {
         guard
             let dateHelper = brain.dataSource.calendarDate(for: dayHelper),
             let monthHeader = collectionView
-            
                 .dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                                                   withReuseIdentifier: UICalendarViewMonthHeader.identifier,
                                                   for: indexPath) as? UICalendarViewMonthHeader
