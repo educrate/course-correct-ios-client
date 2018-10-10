@@ -11,9 +11,7 @@ import UIKit
 
 // MARK: - Wireframe
 
-protocol CollegeSelectorWireframeProtocol: class {
-    static func createCollegeSelectorModule() -> UIViewController
-}
+protocol CollegeSelectorWireframeProtocol: class, ModuleWireframeable {}
 
 
 // MARK: - Presenter
