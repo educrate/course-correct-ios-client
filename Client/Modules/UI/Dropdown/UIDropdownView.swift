@@ -9,93 +9,88 @@ import UIKit
 
 // MARK: - Class Declaration
 @IBDesignable
- class UIDropdownView: UIView {
+class UIDropdownView: UIView {
     
     // MARK: Views
-     weak var field: UIField!
-     weak var tableView: UITableView!
+    private weak var field: UIField!
+    private weak var tableView: UITableView!
     
     // MARK: Storage
-     var delegate: UIDropdownDelegate?
-     var dataSource: UIDropdownDataSource?
+    var delegate: UIDropdownDelegate?
+    var dataSource: UIDropdownDataSource?
     
     // MARK: Properties
-     weak var flatFieldHeightConstraint: NSLayoutConstraint!
+    private weak var flatFieldHeightConstraint: NSLayoutConstraint!
     
     // MARK: UI Field IBInspectables
     @IBInspectable
-     var text: String = UIFieldConfiguration.default.text {
+    private var text: String = UIFieldConfiguration.default.text {
         didSet {
-            field.textField.text = text
+            field.text = text
         }
     }
     
     @IBInspectable
-     var placeholderText: String = UIFieldConfiguration.default.placeholderText {
+    private var placeholderText: String = UIFieldConfiguration.default.placeholderText {
         didSet {
-            field.textField.placeholder = placeholderText
+            field.placeholderText = placeholderText
         }
     }
     
     @IBInspectable
-     var cursorColor: UIColor = UIFieldConfiguration.default.cursorColor {
+    private var cursorColor: UIColor = UIFieldConfiguration.default.cursorColor {
         didSet {
-            field.textField.tintColor = cursorColor
+            field.tintColor = cursorColor
         }
     }
     
     @IBInspectable
-     var textColor: UIColor = UIFieldConfiguration.default.textColor {
+    private var textColor: UIColor = UIFieldConfiguration.default.textColor {
         didSet {
-            field.textField.textColor = textColor
-        }
-    }
-    @IBInspectable
-     var placeholderColor: UIColor = UIFieldConfiguration.default.placeholderColor {
-        didSet {
-            field.textField.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes:[NSAttributedString.Key.foregroundColor: placeholderColor])
+            field.textColor = textColor
         }
     }
     
     @IBInspectable
-     var underlineColor: UIColor = UIFieldConfiguration.default.underlineColor {
+    private var placeholderColor: UIColor = UIFieldConfiguration.default.placeholderColor {
         didSet {
-            field.underline.backgroundColor = underlineColor
+            field.placeholderColor = placeholderColor
         }
     }
     
     @IBInspectable
-     var underlineThickness: CGFloat = UIFieldConfiguration.default.underlineThickness {
+    private var underlineColor: UIColor = UIFieldConfiguration.default.underlineColor {
+        didSet {
+            field.underlineColor = underlineColor
+        }
+    }
+    
+    @IBInspectable
+    private var underlineThickness: CGFloat = UIFieldConfiguration.default.underlineThickness {
         didSet {
             field.underlineHeightConstraint.constant = underlineThickness
         }
     }
     
     @IBInspectable
-     var textAlignment: Int = UIFieldConfiguration.default.textAlignment.rawValue {
+    private var textAlignment: Int = UIFieldConfiguration.default.textAlignment.rawValue {
         didSet {
-            guard let alignment = NSTextAlignment(rawValue: textAlignment) else {
-                
-                assert(false, "use a valid alignment mapping integer (0-4)")
-                return
-            }
-            
-            field.textField.textAlignment = alignment
+            field.textAlignment = textAlignment
         }
     }
     
     @IBInspectable
-     var thicknessChange: CGFloat = UIFieldConfiguration.default.thicknessChange
+    private var thicknessChange: CGFloat = UIFieldConfiguration.default.thicknessChange
     
     @IBInspectable
-     var flatFieldHeight: CGFloat = UIDropdownConfig.default.flatFieldHeight {
+    private var flatFieldHeight: CGFloat = UIDropdownConfig.default.flatFieldHeight {
         didSet {
             flatFieldHeightConstraint.constant = flatFieldHeight
         }
     }
     
     @IBInspectable
-     var dropdownCellHeight: CGFloat = UIDropdownConfig.default.dropdownCellHeight {
+    private var dropdownCellHeight: CGFloat = UIDropdownConfig.default.dropdownCellHeight {
         didSet {
             tableView.rowHeight = dropdownCellHeight
         }
@@ -103,14 +98,14 @@ import UIKit
     
     // MARK: UI Dropdown IBInspectables
     @IBInspectable
-     var maxNumberOfResultsPerSectionToDisplay: Int = UIDropdownConfig.default.numberOfResults {
+    private var maxNumberOfResultsPerSectionToDisplay: Int = UIDropdownConfig.default.numberOfResults {
         didSet {
             tableView.reloadData()
         }
     }
     
     @IBInspectable
-     var maxNumberOfSectionsToDisplay: Int = UIDropdownConfig.default.numberOfSections {
+    private var maxNumberOfSectionsToDisplay: Int = UIDropdownConfig.default.numberOfSections {
         didSet {
             tableView.reloadData()
         }
@@ -249,14 +244,12 @@ private extension UIDropdownView {
 
 // MARK: - Helper Methods
 private extension UIDropdownView {
-    func collapseTableView() {
-        
+    func hideTableView() {
         field.endEditing(true)
         tableView.isHidden = true
     }
     
     func showTableView() {
-        
         tableView.isHidden = false
     }
 }
@@ -264,18 +257,18 @@ private extension UIDropdownView {
 // MARK: - UI Field Delegate Conformance
 extension UIDropdownView: UIFieldDelegate {
     public func editingBegan(_ sender: UIField) {
-        
-        showTableView()
-        
         delegate?.didBeginEditing(sender)
     }
     
     public func editingEnded(_ sender: UIField) {
-        
+        hideTableView()
         delegate?.didEndEditing(sender)
     }
     
     public func textChanged(_ sender: UIField) {
+        if sender.text.isEmpty {
+            hideTableView()
+        }
         
         delegate?.textDidChange(sender)
     }
@@ -283,30 +276,14 @@ extension UIDropdownView: UIFieldDelegate {
 
 // MARK: - Table View Data Source Conformance
 extension UIDropdownView: UITableViewDataSource {
-    public func numberOfSections(in tableView: UITableView) -> Int {
-        
-        guard let dataSource = dataSource else {
-            
-            return 0
-        }
-        
-        return min(dataSource.numberOfSections(), maxNumberOfSectionsToDisplay)
-    }
-    
     public func tableView(_ tableView: UITableView,
                           numberOfRowsInSection section: Int) -> Int {
         
         guard let dataSource = dataSource else {
-            
             return 0
         }
         
-        guard let rowCount = dataSource.numberOfRows(for: section) else {
-            
-            return 0
-        }
-        
-        return min(rowCount, maxNumberOfResultsPerSectionToDisplay)
+        return min(dataSource.numberOfRows(), maxNumberOfResultsPerSectionToDisplay)
     }
     
     public func tableView(_ tableView: UITableView,
@@ -314,25 +291,17 @@ extension UIDropdownView: UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: UIDropdownCell.reuseIdentifier,
                                                        for: indexPath) as? UIDropdownCell else {
-                                                        
             assert(false, "table view cell registration inconsistency")
             return UITableViewCell()
         }
         
         guard let dataSource = dataSource else {
-            
             assert(false, "a data source must be provided")
             return UITableViewCell()
         }
         
-        guard let text = dataSource.text(for: indexPath) else {
-            
-            assert(false, "internal inconsistency - file a bug")
-            return UITableViewCell()
-        }
-        
+        let text = dataSource.text(for: indexPath.row)
         cell.update(text)
-        
         return cell
     }
 }
@@ -342,11 +311,13 @@ extension UIDropdownView: UITableViewDelegate {
     public func tableView(_ tableView: UITableView,
                           didSelectRowAt indexPath: IndexPath) {
         
-        collapseTableView()
+        guard let dataSource = dataSource else {
+            return
+        }
         
-        field.textFieldDidEndEditing(field.textField)
-        
-        delegate?.didSelectRow(indexPath, self)
+        hideTableView()
+        field.textFieldDidEndEditing()
+        field.text = dataSource.text(for: indexPath.row)
     }
     
     public func tableView(_ tableView: UITableView,

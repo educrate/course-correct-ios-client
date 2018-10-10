@@ -12,8 +12,8 @@ import UIKit
 class UIField: UIView {
     
     // MARK: Views
-    weak var textField: UITextField!
-    weak var underline: UIView!
+    private weak var textField: UITextField!
+    private weak var underline: UIView!
     
     // MARK: Properties
     weak var underlineHeightConstraint: NSLayoutConstraint!
@@ -34,6 +34,13 @@ class UIField: UIView {
     }
     
     @IBInspectable
+    var placeholderColor: UIColor = UIFieldConfiguration.default.placeholderColor {
+        didSet {
+            textField.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes:[NSAttributedString.Key.foregroundColor: placeholderColor])
+        }
+    }
+    
+    @IBInspectable
     var cursorColor: UIColor = UIFieldConfiguration.default.cursorColor {
         didSet {
             textField.tintColor = cursorColor
@@ -44,12 +51,6 @@ class UIField: UIView {
     var textColor: UIColor = UIFieldConfiguration.default.textColor {
         didSet {
             textField.textColor = textColor
-        }
-    }
-    @IBInspectable
-    var placeholderColor: UIColor = UIFieldConfiguration.default.placeholderColor {
-        didSet {
-            textField.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes:[NSAttributedString.Key.foregroundColor: placeholderColor])
         }
     }
     
@@ -185,18 +186,14 @@ class UIField: UIView {
 
 // MARK: - Text Field Delegate Conformance
 extension UIField: UITextFieldDelegate {
-    public func textFieldDidBeginEditing(_ sender: UITextField) {
-        
+    public func textFieldDidBeginEditing() {
         delegate?.editingBegan(self)
-        
         textField.tintColor = cursorColor
         underlineHeightConstraint.constant = underlineThickness + thicknessChange
     }
     
-    public func textFieldDidEndEditing(_ sender: UITextField) {
-        
+    public func textFieldDidEndEditing() {
         delegate?.editingEnded(self)
-        
         underlineHeightConstraint.constant = underlineThickness
     }
     

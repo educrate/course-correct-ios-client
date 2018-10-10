@@ -9,45 +9,25 @@ import Foundation
 
 protocol UIDropdownDataSource {
     // MARK: Storage
-    var data: [[String]] { get set }
+    var data: [String] { get set }
     
     // MARK: Get Methods
-    func numberOfRows(for section: Int) -> Int?
-    func numberOfSections() -> Int
-    func text(for index: IndexPath) -> String?
+    func numberOfRows() -> Int
+    func text(for row: Int) -> String
     
     // MARK: Set Methods
 }
 
 extension UIDropdownDataSource {
-    func numberOfRows(for section: Int) -> Int? {
-        guard numberOfSections() >= section + 1 else {
-            return nil
-        }
-        
-        return data[section].count
-    }
-    
-    func numberOfSections() -> Int {
+    func numberOfRows() -> Int {
         return data.count
     }
     
-    func text(for index: IndexPath) -> String? {
-        guard numberOfSections() >= index.section + 1 else {
-            
-            return nil
+    func text(for row: Int) -> String {
+        guard numberOfRows() >= row + 1 else {
+            return ""
         }
         
-        guard let rowCount = numberOfRows(for: index.section) else {
-            
-            return nil
-        }
-        
-        guard rowCount >= index.row + 1 else {
-            
-            return nil
-        }
-        
-        return data[index.section][index.row]
+        return data[row]
     }
 }

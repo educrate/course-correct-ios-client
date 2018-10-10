@@ -11,7 +11,7 @@ import UIKit
 class SelectCollegeViewController: UIViewController {
     
     // MARK: Properties
-    var data: [[String]] = [[]]
+    var data: [String] = []
     
     
     // MARK: Viper
@@ -33,7 +33,7 @@ extension SelectCollegeViewController {
 // MARK: - Viper Methods
 extension SelectCollegeViewController: SelectCollegeViewProtocol {
     func show(names: [String]) {
-        data[0] = names
+        data = names
         collegeSelector.reloadView()
     }
     

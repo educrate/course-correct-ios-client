@@ -11,12 +11,10 @@ protocol UIDropdownDelegate {
     func didBeginEditing(_ sender: UIField)
     func textDidChange(_ sender: UIField)
     func didEndEditing(_ sender: UIField)
-    func didSelectRow(_ at: IndexPath, _ sender: UIDropdownView)
 }
 
 extension UIDropdownDelegate {
     func didBeginEditing(_ sender: UIField) {}
     func textDidChange(_ sender: UIField) {}
     func didEndEditing(_ sender: UIField) {}
-    func didSelectRow(_ at: IndexPath, _ sender: UIDropdownView) {}
 }
