@@ -236,7 +236,6 @@ private extension UIDropdownView {
 // MARK: - Helper Methods
 private extension UIDropdownView {
     func hideTableView() {
-        field.endEditing(true)
         tableView.isHidden = true
     }
     
@@ -252,7 +251,6 @@ extension UIDropdownView: UIFieldDelegate {
     }
     
     func editingEnded(_ sender: UIField) {
-        hideTableView()
         delegate?.didEndEditing(sender)
     }
     
