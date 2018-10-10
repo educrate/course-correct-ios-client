@@ -13,7 +13,8 @@ class CollegeSelectorRouter: CollegeSelectorWireframeProtocol {
     weak var viewController: UIViewController?
 
     static func createModule() -> UIViewController {
-        let view = CollegeSelectorViewController(nibName: nil, bundle: nil)
+        let storyboard = UIStoryboard(storyboard: .collegeSelector)
+        let view: CollegeSelectorViewController = storyboard.instantiateViewController()
         let interactor = CollegeSelectorInteractor()
         let router = CollegeSelectorRouter()
         let presenter = CollegeSelectorPresenter(interface: view, interactor: interactor, router: router)

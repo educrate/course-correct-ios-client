@@ -9,5 +9,14 @@
 import UIKit
 
 class CollegeSelectorViewController: UIViewController, CollegeSelectorViewProtocol {
-	var presenter: CollegeSelectorPresenterProtocol?
+	
+    // MARK: Viper
+    
+    var presenter: CollegeSelectorPresenterProtocol?
+    
+    
+    // MARK: Views
+    
+    @IBOutlet
+    weak var collegeSelector: UIDropdownView!
 }

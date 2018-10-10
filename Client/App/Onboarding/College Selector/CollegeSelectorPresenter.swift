@@ -14,7 +14,10 @@ class CollegeSelectorPresenter: CollegeSelectorPresenterProtocol, CollegeSelecto
     var interactor: CollegeSelectorInteractorInputProtocol?
     private let router: CollegeSelectorWireframeProtocol
 
-    init(interface: CollegeSelectorViewProtocol, interactor: CollegeSelectorInteractorInputProtocol?, router: CollegeSelectorWireframeProtocol) {
+    init(interface: CollegeSelectorViewProtocol,
+         interactor: CollegeSelectorInteractorInputProtocol?,
+         router: CollegeSelectorWireframeProtocol) {
+        
         self.view = interface
         self.interactor = interactor
         self.router = router
