@@ -1,17 +1,17 @@
 //
 //  CreditCardWarning.swift
-//  FlatCreditCard
+//  UICreditCard
 //
 //  Created by Ampe on 9/1/18.
 //
 
 import UIKit
 
-public struct CreditCardWarning {
-    public var text: String
-    public var color: UIColor
+struct CreditCardWarning {
+    var text: String
+    var color: UIColor
     
-    public init(text: String,
+    init(text: String,
                 color: UIColor) {
         
         self.text = text
@@ -19,7 +19,7 @@ public struct CreditCardWarning {
     }
 }
 
-public extension CreditCardWarning {
+extension CreditCardWarning {
     static let `default` = CreditCardWarning(text: "please enter your credit card information", color: .darkGray)
     static let defaultUnsupported = CreditCardWarning(text: "this card type is unsupported", color: .red)
     static let defaultInvalid = CreditCardWarning(text: "invalid card number entered", color: .red)

@@ -1,13 +1,13 @@
 //
 //  CreditCardTypeValidationState.swift
-//  FlatPaymentMethod
+//  UIPaymentMethod
 //
 //  Created by Ampe on 8/7/18.
 //
 
 import Foundation
 
-public enum CreditCardTypeValidationState: Equatable {
+enum CreditCardTypeValidationState: Equatable {
     case identified(CreditCardType)
     case indeterminate(cards: [CreditCardType])
     case unsupported(cards: [CreditCardType])
@@ -109,7 +109,7 @@ extension CreditCardTypeValidationState {
         // with an associated value of an array of potentially valid card types
         if supportedValidCardTypes.count == 1 {
             guard let card = supportedValidCardTypes.first else {
-                assert(false, "internal inconsistency - file a bug")
+                assert(false, "inconsistency - file a bug")
                 self = .invalid
                 return
             }
@@ -121,7 +121,7 @@ extension CreditCardTypeValidationState {
     }
 }
 
-public extension CreditCardTypeValidationState {
+extension CreditCardTypeValidationState {
     var cards: [CreditCardType]? {
         switch self {
         case .identified(let identifiedCard):
@@ -134,18 +134,18 @@ public extension CreditCardTypeValidationState {
     }
 }
 
-public extension CreditCardTypeValidationState {
+extension CreditCardTypeValidationState {
     func segmentGrouping(for length: Int) -> [Int]? {
         switch self {
         case .identified(let card):
             return card.segmentGrouping(for: length)
         case .indeterminate:
-            return Mathematics.defaultGrouping(for: length)
+            return CreditCardMathematics.defaultGrouping(for: length)
         case .unsupported(let cards):
             if cards.count == 1, let card = cards.first {
                 return card.segmentGrouping(for: length)
             } else {
-                return Mathematics.defaultGrouping(for: length)
+                return CreditCardMathematics.defaultGrouping(for: length)
             }
         case .invalid:
             return nil

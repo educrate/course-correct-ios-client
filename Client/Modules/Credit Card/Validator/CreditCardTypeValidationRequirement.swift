@@ -1,6 +1,6 @@
 //
 //  CreditCardTypeValidationRequirement.swift
-//  FlatPaymentMethod
+//  UIPaymentMethod
 //
 //  Created by Ampe on 8/7/18.
 //
@@ -8,7 +8,7 @@
 import Foundation
 
 struct CreditCardTypeValidationRequirement {
-    let prefixes: [PrefixContainable]
+    let prefixes: [CreditCardPrefixContainable]
     let lengths: [Int]
 }
 
@@ -38,7 +38,7 @@ private extension CreditCardTypeValidationRequirement {
     
     func isWithinValidLength(_ accountNumber: String) -> Bool {
         guard let largest = lengths.sorted().last else {
-            assert(false, "internal inconsistency - file a bug")
+            assert(false, "inconsistency - file a bug")
             return false
         }
         

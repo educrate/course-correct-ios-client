@@ -1,18 +1,18 @@
 //
 //  CreditCard.swift
-//  FlatCreditCard
+//  UICreditCard
 //
 //  Created by Ampe on 8/16/18.
 //
 
 import Foundation
 
-public class CreditCard {
-    public var metadata: CreditCardMetadata
-    public var warning: CreditCardWarning
-    public var style: CreditCardViewStyle
+class CreditCard {
+    var metadata: CreditCardMetadata
+    var warning: CreditCardWarning
+    var style: CreditCardViewStyle
     
-    public init(metadata: CreditCardMetadata,
+    init(metadata: CreditCardMetadata,
                 warning: CreditCardWarning,
                 style: CreditCardViewStyle) {
         
@@ -22,14 +22,14 @@ public class CreditCard {
     }
 }
 
-public extension CreditCard {
-    public static let `default` = CreditCard(metadata: .default,
+extension CreditCard {
+    static let `default` = CreditCard(metadata: .default,
                                              warning: .default,
                                              style: .default)
 }
 
-public extension CreditCard {
-    public static let empty = CreditCard(metadata: .empty,
+extension CreditCard {
+    static let empty = CreditCard(metadata: .empty,
                                          warning: .default,
                                          style: .default)
 }

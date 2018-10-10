@@ -1,26 +1,26 @@
 //
-//  FlatInlinePickerCell.swift
-//  FlatInlinePicker
+//  UIInlinePickerCell.swift
+//  UIInlinePicker
 //
 //  Created by Ampe on 8/5/18.
 //
 
 import UIKit
 
-open class FlatInlinePickerCell: UICollectionViewCell {
+class UIInlinePickerCell: UICollectionViewCell {
     
     // MARK: Storage
-    open weak var label: UILabel!
+    weak var label: UILabel!
     
     // MARK: Properties
-    open var config: FlatInlinePickerCellConfig = .default
+    var config: UIInlinePickerCellConfig = .default
     
-    open func update(_ string: String) {
+    func update(_ string: String) {
         
         label.text = string
     }
     
-    open func initConfig(selectedTextColor: UIColor,
+    func initConfig(selectedTextColor: UIColor,
                          selectedBackgroundColor: UIColor,
                          selectedBorderColor: CGColor,
                          selectedBorderWidth: CGFloat,
@@ -31,7 +31,7 @@ open class FlatInlinePickerCell: UICollectionViewCell {
                          cornerRadius: CGFloat,
                          spacing: UIEdgeInsets) {
         
-        config = FlatInlinePickerCellConfig(selectedTextColor: selectedTextColor,
+        config = UIInlinePickerCellConfig(selectedTextColor: selectedTextColor,
                                             selectedBackgroundColor: selectedBackgroundColor,
                                             selectedBorderColor: selectedBorderColor,
                                             selectedBorderWidth: selectedBorderWidth,
@@ -44,7 +44,7 @@ open class FlatInlinePickerCell: UICollectionViewCell {
     }
     
     // MARK: Initalizers
-    public override init(frame: CGRect) {
+    override init(frame: CGRect) {
        
         let label = UILabel()
         self.label = label
@@ -57,7 +57,7 @@ open class FlatInlinePickerCell: UICollectionViewCell {
         addConstraints()
     }
     
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         
         let label = UILabel()
         self.label = label
@@ -70,18 +70,18 @@ open class FlatInlinePickerCell: UICollectionViewCell {
         addConstraints()
     }
     
-    open override var isSelected: Bool {
+    override var isSelected: Bool {
         didSet {
             toggleSelection(isSelected)
         }
     }
 }
 
-public extension FlatInlinePickerCell {
-    static let reuseIdentifier = "FlatInlinePickerCell"
+extension UIInlinePickerCell {
+    static let reuseIdentifier = "UIInlinePickerCell"
 }
 
-private extension FlatInlinePickerCell {
+private extension UIInlinePickerCell {
     func initViews() {
         
         contentView.layer.cornerRadius = config.cornerRadius
@@ -104,7 +104,7 @@ private extension FlatInlinePickerCell {
     }
 }
 
-private extension FlatInlinePickerCell {
+private extension UIInlinePickerCell {
     func toggleSelection(_ isSelected: Bool) {
         isSelected ? setSelected() : setUnselected()
     }

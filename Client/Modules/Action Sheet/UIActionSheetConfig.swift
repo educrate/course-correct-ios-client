@@ -1,26 +1,26 @@
 //
-//  FlatActionSheetConfig.swift
-//  FlatActionSheet
+//  UIActionSheetConfig.swift
+//  UIActionSheet
 //
 //  Created by Ampe on 8/2/18.
 //
 
 import UIKit
 
-public struct FlatActionSheetConfig {
-    public let cellHeight: CGFloat
-    public let backgroundColor: UIColor
-    public let backgroundAlphaValue: CGFloat
-    public let animationDuration: TimeInterval
-    public let shouldShowDropShadow: Bool
-    public let dropShadowConfig: FlatActionSheetDropShadowConfig
+struct UIActionSheetConfig {
+    let cellHeight: CGFloat
+    let backgroundColor: UIColor
+    let backgroundAlphaValue: CGFloat
+    let animationDuration: TimeInterval
+    let shouldShowDropShadow: Bool
+    let dropShadowConfig: UIActionSheetDropShadowConfig
     
-    public init(cellHeight: CGFloat,
+    init(cellHeight: CGFloat,
                 backgroundColor: UIColor,
                 backgroundAlphaValue: CGFloat,
                 animationDuration: TimeInterval,
                 shouldShowDropShadow: Bool,
-                dropShadowConfig: FlatActionSheetDropShadowConfig) {
+                dropShadowConfig: UIActionSheetDropShadowConfig) {
         
         self.cellHeight = cellHeight
         self.backgroundColor = backgroundColor
@@ -31,8 +31,8 @@ public struct FlatActionSheetConfig {
     }
 }
 
-extension FlatActionSheetConfig {
-    public static let `default` = FlatActionSheetConfig(cellHeight: 50.0,
+extension UIActionSheetConfig {
+    static let `default` = UIActionSheetConfig(cellHeight: 50.0,
                                                         backgroundColor: .black,
                                                         backgroundAlphaValue: 0.5,
                                                         animationDuration: 0.3,
@@ -40,13 +40,13 @@ extension FlatActionSheetConfig {
                                                         dropShadowConfig: .default)
 }
 
-public struct FlatActionSheetDropShadowConfig {
-    public let color: UIColor
-    public let offset: CGSize
-    public let radius: CGFloat
-    public let opacity: Float
+struct UIActionSheetDropShadowConfig {
+    let color: UIColor
+    let offset: CGSize
+    let radius: CGFloat
+    let opacity: Float
     
-    public init(color: UIColor,
+    init(color: UIColor,
                 offset: CGSize,
                 radius: CGFloat,
                 opacity: Float) {
@@ -58,8 +58,8 @@ public struct FlatActionSheetDropShadowConfig {
     }
 }
 
-extension FlatActionSheetDropShadowConfig {
-    public static let `default` = FlatActionSheetDropShadowConfig(color: .black,
+extension UIActionSheetDropShadowConfig {
+    static let `default` = UIActionSheetDropShadowConfig(color: .black,
                                                                   offset: CGSize(width: 0,
                                                                                  height: -5),
                                                                   radius: 3,

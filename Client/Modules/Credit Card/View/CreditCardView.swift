@@ -1,6 +1,6 @@
 //
 //  CreditCardView.swift
-//  FlatPaymentMethod
+//  UIPaymentMethod
 //
 //  Created by Ampe on 8/6/18.
 //
@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-open class CreditCardView: UIView {
+class CreditCardView: UIView {
     
     // MARK: Views
     private weak var cardView: UIView!
@@ -24,7 +24,7 @@ open class CreditCardView: UIView {
     
     // MARK: IBInspectables
     @IBInspectable
-    public var number: String = CreditCard.default.metadata.number {
+    var number: String = CreditCard.default.metadata.number {
         didSet {
             guard let viewModel = viewModel else {
                 numberLabel.text = number
@@ -36,7 +36,7 @@ open class CreditCardView: UIView {
     }
     
     @IBInspectable
-    public var cvv: String = CreditCard.default.metadata.cvv {
+    var cvv: String = CreditCard.default.metadata.cvv {
         didSet {
             guard let viewModel = viewModel else {
                 cvvLabel.text = cvv
@@ -48,7 +48,7 @@ open class CreditCardView: UIView {
     }
     
     @IBInspectable
-    public var expiration: String = CreditCard.default.metadata.expiration {
+    var expiration: String = CreditCard.default.metadata.expiration {
         didSet {
             guard let viewModel = viewModel else {
                 expirationLabel.text = expiration
@@ -60,7 +60,7 @@ open class CreditCardView: UIView {
     }
     
     @IBInspectable
-    public var name: String = CreditCard.default.metadata.name {
+    var name: String = CreditCard.default.metadata.name {
         didSet {
             guard let viewModel = viewModel else {
                 nameLabel.text = name
@@ -72,7 +72,7 @@ open class CreditCardView: UIView {
     }
     
     @IBInspectable
-    public var logo: UIImage? = CreditCard.default.metadata.logo {
+    var logo: UIImage? = CreditCard.default.metadata.logo {
         didSet {
             guard let viewModel = viewModel else {
                 cardLogo.image = logo
@@ -84,7 +84,7 @@ open class CreditCardView: UIView {
     }
     
     @IBInspectable
-    public var warning: String = CreditCard.default.warning.text {
+    var warning: String = CreditCard.default.warning.text {
         didSet {
             guard let viewModel = viewModel else {
                 warningLabel.text = warning
@@ -97,7 +97,7 @@ open class CreditCardView: UIView {
     
     // TODO: Implement Warning Color Update Properties Properly
     @IBInspectable
-    public var warningColor: UIColor = CreditCard.default.warning.color {
+    var warningColor: UIColor = CreditCard.default.warning.color {
         didSet {
             guard let viewModel = viewModel else {
                 warningLabel.text = warning
@@ -109,18 +109,18 @@ open class CreditCardView: UIView {
     }
     
     // MARK: Convinence Initalizer
-    public convenience init() {
+    convenience init() {
         self.init(frame: CGRect.zero)
     }
     
     // MARK: Designable Initalizer
-    public override convenience init(frame: CGRect) {
+    override convenience init(frame: CGRect) {
         self.init(frame,
                   style: .default)
     }
     
     // MARK: Programmatic Initalizer
-    public init(_ frame: CGRect,
+    init(_ frame: CGRect,
                 style: CreditCardViewStyle) {
         
         // Create Views
@@ -157,7 +157,7 @@ open class CreditCardView: UIView {
     }
     
     // MARK: Storyboard Initalizer
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         
         // Create Views
         let cardView = UIView()
@@ -194,7 +194,7 @@ open class CreditCardView: UIView {
 }
 
 // MARK: - Public Setup Methods
-public extension CreditCardView {
+extension CreditCardView {
     func setViewModel(_ viewModel: CreditCardViewModel) {
         self.viewModel = viewModel
     }
@@ -205,7 +205,7 @@ public extension CreditCardView {
 }
 
 // MARK: - Public Reload Methods
-public extension CreditCardView {
+extension CreditCardView {
     func reload() {
         guard let viewModel = viewModel else {
             return
@@ -380,31 +380,31 @@ private extension CreditCardView {
 
 // MARK: - Credit Card View Model Delegate Conformance
 extension CreditCardView: CreditCardViewModelDelegate {
-    public func numberUpdated(to number: String) {
+    func numberUpdated(to number: String) {
         numberLabel.text = number
     }
     
-    public func cvvUpdated(to cvv: String) {
+    func cvvUpdated(to cvv: String) {
         cvvLabel.text = cvv
     }
     
-    public func expirationUpdated(to expiration: String) {
+    func expirationUpdated(to expiration: String) {
         expirationLabel.text = expiration
     }
     
-    public func nameUpdated(to name: String) {
+    func nameUpdated(to name: String) {
         nameLabel.text = name
     }
     
-    public func logoUpdated(to logo: UIImage?) {
+    func logoUpdated(to logo: UIImage?) {
         cardLogo.image = logo
     }
     
-    public func warningUpdated(to warning: String) {
+    func warningUpdated(to warning: String) {
         warningLabel.text = warning
     }
     
-    public func styleUpdated(to style: CreditCardViewStyle) {
+    func styleUpdated(to style: CreditCardViewStyle) {
         setStyle(style)
     }
 }

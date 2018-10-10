@@ -1,6 +1,6 @@
 //
 //  CalendarEvent.swift
-//  FlatCalendar
+//  UICalendar
 //
 //  Created by Ampe on 9/11/18.
 //

@@ -1,29 +1,29 @@
 //
 //  CreditCardViewStyle.swift
-//  FlatPaymentMethod
+//  UIPaymentMethod
 //
 //  Created by Ampe on 8/10/18.
 //
 
 import UIKit
 
-public enum CreditCardViewStyle {
+enum CreditCardViewStyle {
     case fill(backgroundColor: UIColor)
     case clear(borderWidth: CGFloat, borderColor: UIColor)
 }
 
-public extension CreditCardViewStyle {
-    public static let defaultBorderWidth: CGFloat = 1
-    public static let defaultBorderColor: UIColor = .darkGray
+extension CreditCardViewStyle {
+    static let defaultBorderWidth: CGFloat = 1
+    static let defaultBorderColor: UIColor = .darkGray
 }
 
-public extension CreditCardViewStyle {
-    public static let `default`: CreditCardViewStyle = .clear(borderWidth: defaultBorderWidth,
+extension CreditCardViewStyle {
+    static let `default`: CreditCardViewStyle = .clear(borderWidth: defaultBorderWidth,
                                                               borderColor: defaultBorderColor)
 }
 
-public extension CreditCardViewStyle {
-    public var backgroundColor: UIColor {
+extension CreditCardViewStyle {
+    var backgroundColor: UIColor {
         switch self {
         case .clear:
             return .clear
@@ -32,7 +32,7 @@ public extension CreditCardViewStyle {
         }
     }
     
-    public var borderWidth: CGFloat {
+    var borderWidth: CGFloat {
         switch self {
         case .clear(let borderWidth, _):
             return borderWidth
@@ -41,7 +41,7 @@ public extension CreditCardViewStyle {
         }
     }
     
-    public var borderColor: UIColor {
+    var borderColor: UIColor {
         switch self {
         case .clear(_, let borderColor):
             return borderColor
@@ -50,7 +50,7 @@ public extension CreditCardViewStyle {
         }
     }
     
-    public var textColor: UIColor {
+    var textColor: UIColor {
         switch self {
         case .clear(_, let borderColor):
             return borderColor

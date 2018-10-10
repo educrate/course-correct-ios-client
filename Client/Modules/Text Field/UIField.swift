@@ -1,6 +1,6 @@
 //
-//  FlatField.swift
-//  FlatField
+//  UIField.swift
+//  UIField
 //
 //  Created by Ampe on 7/28/18.
 //
@@ -9,66 +9,66 @@ import UIKit
 
 // MARK: - Class Declaration
 @IBDesignable
-open class FlatField: UIView {
+class UIField: UIView {
     
     // MARK: Views
-    open weak var textField: UITextField!
-    open weak var underline: UIView!
+    weak var textField: UITextField!
+    weak var underline: UIView!
     
     // MARK: Properties
-    open weak var underlineHeightConstraint: NSLayoutConstraint!
+    weak var underlineHeightConstraint: NSLayoutConstraint!
     
     // MARK: IBInspectables
     @IBInspectable
-    open var text: String = FlatFieldConfig.default.text {
+    var text: String = UIFieldConfiguration.default.text {
         didSet {
             textField.text = text
         }
     }
     
     @IBInspectable
-    open var placeholderText: String = FlatFieldConfig.default.placeholderText {
+    var placeholderText: String = UIFieldConfiguration.default.placeholderText {
         didSet {
             textField.placeholder = placeholderText
         }
     }
     
     @IBInspectable
-    open var cursorColor: UIColor = FlatFieldConfig.default.cursorColor {
+    var cursorColor: UIColor = UIFieldConfiguration.default.cursorColor {
         didSet {
             textField.tintColor = cursorColor
         }
     }
     
     @IBInspectable
-    open var textColor: UIColor = FlatFieldConfig.default.textColor {
+    var textColor: UIColor = UIFieldConfiguration.default.textColor {
         didSet {
             textField.textColor = textColor
         }
     }
     @IBInspectable
-    open var placeholderColor: UIColor = FlatFieldConfig.default.placeholderColor {
+    var placeholderColor: UIColor = UIFieldConfiguration.default.placeholderColor {
         didSet {
             textField.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes:[NSAttributedString.Key.foregroundColor: placeholderColor])
         }
     }
     
     @IBInspectable
-    open var underlineColor: UIColor = FlatFieldConfig.default.underlineColor {
+    var underlineColor: UIColor = UIFieldConfiguration.default.underlineColor {
         didSet {
             underline.backgroundColor = underlineColor
         }
     }
     
     @IBInspectable
-    open var underlineThickness: CGFloat = FlatFieldConfig.default.underlineThickness {
+    var underlineThickness: CGFloat = UIFieldConfiguration.default.underlineThickness {
         didSet {
             underlineHeightConstraint.constant = underlineThickness
         }
     }
     
     @IBInspectable
-    open var textAlignment: Int = FlatFieldConfig.default.textAlignment.rawValue {
+    var textAlignment: Int = UIFieldConfiguration.default.textAlignment.rawValue {
         didSet {
             guard let alignment = NSTextAlignment(rawValue: textAlignment) else {
                 
@@ -81,24 +81,24 @@ open class FlatField: UIView {
     }
     
     @IBInspectable
-    open var thicknessChange: CGFloat = FlatFieldConfig.default.thicknessChange
+    var thicknessChange: CGFloat = UIFieldConfiguration.default.thicknessChange
     
     // MARK: Required Initalizers
-    public convenience init() {
+    convenience init() {
         self.init(frame: CGRect.zero)
     }
     
-    public override convenience init(frame: CGRect) {
+    override convenience init(frame: CGRect) {
         
         self.init(frame,
-                  config: FlatFieldConfig.default,
+                  config: UIFieldConfiguration.default,
                   delegate: nil)
     }
     
     // MARK: Programmatic Initalizer
-    public init(_ frame: CGRect,
-                config: FlatFieldConfig,
-                delegate: FlatFieldDelegate?) {
+    init(_ frame: CGRect,
+                config: UIFieldConfiguration,
+                delegate: UIFieldDelegate?) {
         
         self.delegate = delegate
         
@@ -134,7 +134,7 @@ open class FlatField: UIView {
     }
     
     // MARK: Setup Methods
-    private func initConfig(_ config: FlatFieldConfig = FlatFieldConfig.default) {
+    private func initConfig(_ config: UIFieldConfiguration = UIFieldConfiguration.default) {
         
         text = config.text
         placeholderText = config.placeholderText
@@ -180,11 +180,11 @@ open class FlatField: UIView {
     }
     
     // MARK: Storage
-    open var delegate: FlatFieldDelegate?
+    var delegate: UIFieldDelegate?
 }
 
 // MARK: - Text Field Delegate Conformance
-extension FlatField: UITextFieldDelegate {
+extension UIField: UITextFieldDelegate {
     public func textFieldDidBeginEditing(_ sender: UITextField) {
         
         delegate?.editingBegan(self)
@@ -201,7 +201,7 @@ extension FlatField: UITextFieldDelegate {
     }
     
     @objc
-    public func textFieldDidChange(_ textField: UITextField) {
+    func textFieldDidChange(_ textField: UITextField) {
         delegate?.textChanged(self)
     }
 }

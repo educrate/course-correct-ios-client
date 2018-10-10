@@ -1,13 +1,13 @@
 //
 //  CreditCardViewModelDataSource.swift
-//  FlatCreditCard
+//  UICreditCard
 //
 //  Created by Ampe on 8/14/18.
 //
 
 import UIKit
 
-public protocol CreditCardViewModelDataSource {
+protocol CreditCardViewModelDataSource {
     func number(for card: CreditCard) -> String
     func cvv(for card: CreditCard) -> String
     func expiration(for card: CreditCard) -> String

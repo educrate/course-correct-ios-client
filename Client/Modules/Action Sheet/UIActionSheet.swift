@@ -1,6 +1,6 @@
 //
-//  FlatActionSheet.swift
-//  FlatActionSheet
+//  UIActionSheet.swift
+//  UIActionSheet
 //
 //  Created by Ampe on 7/31/18.
 //
@@ -8,21 +8,21 @@
 import UIKit
 
 @IBDesignable
-open class FlatActionSheet: UIView {
+class UIActionSheet: UIView {
     
     // MARK: Views
-    open weak var tableView: UITableView!
+    weak var tableView: UITableView!
     
     // MARK: Properties
-    open weak var tableViewHeightConstraint: NSLayoutConstraint!
-    open weak var tableViewTopConstraint: NSLayoutConstraint!
+    weak var tableViewHeightConstraint: NSLayoutConstraint!
+    weak var tableViewTopConstraint: NSLayoutConstraint!
     
     // MARK: Properties
-    open var actions: [FlatActionSheetAction] = []
+    var actions: [UIActionSheetAction] = []
     
     // MARK: IBInspectables
     @IBInspectable
-    open var cellHeight: CGFloat = FlatActionSheetConfig.default.cellHeight {
+    var cellHeight: CGFloat = UIActionSheetConfig.default.cellHeight {
         didSet {
             animateTableView(tableViewHeightConstraint,
                              value: tableViewHeight(),
@@ -32,14 +32,14 @@ open class FlatActionSheet: UIView {
     }
     
     @IBInspectable
-    open var backgroundViewColor: UIColor = FlatActionSheetConfig.default.backgroundColor {
+    var backgroundViewColor: UIColor = UIActionSheetConfig.default.backgroundColor {
         didSet {
             layer.backgroundColor = backgroundViewColor.cgColor
         }
     }
     
     @IBInspectable
-    open var backgroundAlphaValue: CGFloat = FlatActionSheetConfig.default.backgroundAlphaValue {
+    var backgroundAlphaValue: CGFloat = UIActionSheetConfig.default.backgroundAlphaValue {
         didSet {
             guard backgroundAlphaValue >= 0 && backgroundAlphaValue <= 1 else {
                 
@@ -52,10 +52,10 @@ open class FlatActionSheet: UIView {
     }
     
     @IBInspectable
-    open var animationDuration: Double = FlatActionSheetConfig.default.animationDuration
+    var animationDuration: Double = UIActionSheetConfig.default.animationDuration
     
     @IBInspectable
-    open var shouldShowDropShadow: Bool = FlatActionSheetConfig.default.shouldShowDropShadow {
+    var shouldShowDropShadow: Bool = UIActionSheetConfig.default.shouldShowDropShadow {
         didSet {
             guard shouldShowDropShadow else {
                 return
@@ -71,61 +71,61 @@ open class FlatActionSheet: UIView {
     }
     
     @IBInspectable
-    open var dropShadowColor: UIColor = FlatActionSheetConfig.default.dropShadowConfig.color {
+    var dropShadowColor: UIColor = UIActionSheetConfig.default.dropShadowConfig.color {
         didSet {
             tableView.layer.shadowColor = dropShadowColor.cgColor
         }
     }
     
     @IBInspectable
-    open var dropShadowOffset: CGSize = FlatActionSheetConfig.default.dropShadowConfig.offset {
+    var dropShadowOffset: CGSize = UIActionSheetConfig.default.dropShadowConfig.offset {
         didSet {
             tableView.layer.shadowOffset = dropShadowOffset
         }
     }
     
     @IBInspectable
-    open var dropShadowRadius: CGFloat = FlatActionSheetConfig.default.dropShadowConfig.radius {
+    var dropShadowRadius: CGFloat = UIActionSheetConfig.default.dropShadowConfig.radius {
         didSet {
             tableView.layer.shadowRadius = dropShadowRadius
         }
     }
     
     @IBInspectable
-    open var dropShadowOpacity: Float = FlatActionSheetConfig.default.dropShadowConfig.opacity {
+    var dropShadowOpacity: Float = UIActionSheetConfig.default.dropShadowConfig.opacity {
         didSet {
             tableView.layer.shadowOpacity = dropShadowOpacity
         }
     }
     
     // MARK: Designable Initalizers
-    public convenience init(config: FlatActionSheetConfig = .default) {
+    convenience init(config: UIActionSheetConfig = .default) {
         
         self.init(UIScreen.main.bounds,
                   config: config)
     }
     
-    public override convenience init(frame: CGRect) {
+    override convenience init(frame: CGRect) {
         
         self.init(frame)
     }
     
     // MARK: Programmatic Initalizer
-    public init(_ frame: CGRect,
-                config: FlatActionSheetConfig = .default) {
+    init(_ frame: CGRect,
+                config: UIActionSheetConfig = .default) {
         
         super.init(frame: frame)
     }
     
     // MARK: Storyboard Initalizer
-    public required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
     }
 }
 
 // MARK: - Setup Methods
-private extension FlatActionSheet {
+private extension UIActionSheet {
     func addViews() {
         
         addSubview(tableView)
@@ -156,8 +156,8 @@ private extension FlatActionSheet {
     
     func setupTableView() {
         
-        tableView.register(FlatActionSheetCell.self,
-                           forCellReuseIdentifier: FlatActionSheetCell.reuseIdentifier)
+        tableView.register(UIActionSheetCell.self,
+                           forCellReuseIdentifier: UIActionSheetCell.reuseIdentifier)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -167,7 +167,7 @@ private extension FlatActionSheet {
         tableView.separatorStyle = .none
     }
     
-    func initConfig(_ config: FlatActionSheetConfig = .default) {
+    func initConfig(_ config: UIActionSheetConfig = .default) {
         
         cellHeight = config.cellHeight
         backgroundAlphaValue = config.backgroundAlphaValue
@@ -182,7 +182,7 @@ private extension FlatActionSheet {
 }
 
 // MARK: - Public Methods
-public extension FlatActionSheet {
+extension UIActionSheet {
     func show() {
         
         let tableView = UITableView()
@@ -236,7 +236,7 @@ public extension FlatActionSheet {
 }
 
 // MARK: - Animation Methods
-private extension FlatActionSheet {
+private extension UIActionSheet {
     enum AnimationType {
         case add
         case to
@@ -268,28 +268,28 @@ private extension FlatActionSheet {
     }
 }
 
-// MARK: - Flat Action Sheet Data Source Conformance
-extension FlatActionSheet: FlatActionSheetDataSource {
-    public func addAction(_ action: FlatActionSheetAction) {
+// MARK: - UI Action Sheet Data Source Conformance
+extension UIActionSheet: UIActionSheetDataSource {
+    func addAction(_ action: UIActionSheetAction) {
         
         actions.append(action)
     } 
 }
 
 // MARK: - Table View Delegate Conformance
-extension FlatActionSheet: UITableViewDelegate {
+extension UIActionSheet: UITableViewDelegate {
     public func tableView(_ tableView: UITableView,
                           didSelectRowAt indexPath: IndexPath) {
         
         guard let action = action(for: indexPath) else {
             
-            assert(false, "internal inconsistency - file a bug")
+            assert(false, "inconsistency - file a bug")
             return
         }
         
         guard let handler = action.handler else {
             
-            assert(false, "internal inconsistency - file a bug")
+            assert(false, "inconsistency - file a bug")
             return
         }
         
@@ -310,7 +310,7 @@ extension FlatActionSheet: UITableViewDelegate {
 }
 
 // MARK: - Table View Data Source Conformance
-extension FlatActionSheet: UITableViewDataSource {
+extension UIActionSheet: UITableViewDataSource {
     public func tableView(_ tableView: UITableView,
                           numberOfRowsInSection section: Int) -> Int {
         
@@ -320,8 +320,8 @@ extension FlatActionSheet: UITableViewDataSource {
     public func tableView(_ tableView: UITableView,
                           cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FlatActionSheetCell.reuseIdentifier,
-                                                       for: indexPath) as? FlatActionSheetCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UIActionSheetCell.reuseIdentifier,
+                                                       for: indexPath) as? UIActionSheetCell else {
                                                         
             assert(false, "table view cell registration inconsistency")
             return UITableViewCell()
@@ -329,7 +329,7 @@ extension FlatActionSheet: UITableViewDataSource {
         
         guard let title = action(for: indexPath)?.title else {
             
-            assert(false, "internal inconsistency - file a bug")
+            assert(false, "inconsistency - file a bug")
             return UITableViewCell()
         }
         

@@ -1,20 +1,20 @@
 //
 //  CreditCardMetadata.swift
-//  FlatCreditCard
+//  UICreditCard
 //
 //  Created by Ampe on 9/1/18.
 //
 
 import UIKit
 
-public class CreditCardMetadata {
-    public var number: String
-    public var cvv: String
-    public var expiration: String
-    public var name: String
-    public var logo: UIImage?
+class CreditCardMetadata {
+    var number: String
+    var cvv: String
+    var expiration: String
+    var name: String
+    var logo: UIImage?
     
-    public init(number: String,
+    init(number: String,
                 cvv: String,
                 expiration: String,
                 name: String,
@@ -28,16 +28,16 @@ public class CreditCardMetadata {
     }
 }
 
-public extension CreditCardMetadata {
-    public static let `default` = CreditCardMetadata(number: CreditCardViewConstants.defaultNumber,
+extension CreditCardMetadata {
+    static let `default` = CreditCardMetadata(number: CreditCardViewConstants.defaultNumber,
                                                      cvv: CreditCardViewConstants.defaultCVV,
                                                      expiration: CreditCardViewConstants.defaultExpiration,
                                                      name: CreditCardViewConstants.defaultName,
                                                      logo: CreditCardViewConstants.defaultLogo)
 }
 
-public extension CreditCardMetadata {
-    public static let empty = CreditCardMetadata(number: "",
+extension CreditCardMetadata {
+    static let empty = CreditCardMetadata(number: "",
                                                  cvv: "",
                                                  expiration: "",
                                                  name: "",

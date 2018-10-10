@@ -1,18 +1,18 @@
 //
 //  Mathematics.swift
-//  FlatPaymentMethod
+//  UIPaymentMethod
 //
 //  Created by Ampe on 8/8/18.
 //
 
 import Foundation
 
-struct Mathematics {
+struct CreditCardMathematics {
     static let defaultSegmentSize: Int = 4
 }
 
 // MARK: - Default Grouping Logic
-extension Mathematics {
+extension CreditCardMathematics {
     static func defaultGrouping(for length: Int) -> [Int] {
         var defaultGrouping: [Int]
         
@@ -25,7 +25,7 @@ extension Mathematics {
         
         if remainder > 0 {
             guard remainder < defaultSegmentSize else {
-                assert(false, "internal inconsistency - file a bug")
+                assert(false, "inconsistency - file a bug")
                 return defaultGrouping
             }
             
@@ -37,7 +37,7 @@ extension Mathematics {
 }
 
 // MARK: - Luhn Check
-extension Mathematics {
+extension CreditCardMathematics {
     // per https://gist.github.com/cwagdev/635ce973e8e86da0403a
     static func luhnCheck(_ cardNumber: String) -> Bool {
         var sum: Int = 0

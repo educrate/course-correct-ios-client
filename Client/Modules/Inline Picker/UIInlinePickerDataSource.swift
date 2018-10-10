@@ -1,13 +1,13 @@
 //
-//  FlatInlinePickerDataSource.swift
-//  FlatInlinePicker
+//  UIInlinePickerDataSource.swift
+//  UIInlinePicker
 //
 //  Created by Ampe on 8/4/18.
 //
 
 import Foundation
 
-public protocol FlatInlinePickerDataSource {
+protocol UIInlinePickerDataSource {
     
     // MARK: Storage
     var pickers: [[String]] { get set }
@@ -18,7 +18,7 @@ public protocol FlatInlinePickerDataSource {
     func text(for path: IndexPath) -> String?
 }
 
-public extension FlatInlinePickerDataSource {
+extension UIInlinePickerDataSource {
     func numberOfItems(for section: Int) -> Int? {
         guard numberOfSections() >= section + 1 else {
             return nil

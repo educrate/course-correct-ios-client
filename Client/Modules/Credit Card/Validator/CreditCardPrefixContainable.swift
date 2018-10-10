@@ -1,6 +1,6 @@
 //
 //  PrefixContainable.swift
-//  FlatPaymentMethod
+//  UIPaymentMethod
 //
 //  Created by Ampe on 8/7/18.
 //
@@ -8,12 +8,12 @@
 import Foundation
 
 // MARK: - Structure To Handle Prefixes
-protocol PrefixContainable {
+protocol CreditCardPrefixContainable {
     func hasCommonPrefix(with text: String) -> Bool
     var count: Int { get }
 }
 
-extension ClosedRange: PrefixContainable {
+extension ClosedRange: CreditCardPrefixContainable {
     func hasCommonPrefix(with text: String) -> Bool {
         guard
             let lower = lowerBound as? String,
@@ -44,7 +44,7 @@ extension ClosedRange: PrefixContainable {
     }
 }
 
-extension String: PrefixContainable {
+extension String: CreditCardPrefixContainable {
     func hasCommonPrefix(with text: String) -> Bool {
         return hasPrefix(text) || text.hasPrefix(self)
     }

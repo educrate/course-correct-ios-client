@@ -1,6 +1,6 @@
 //
-//  FlatInlinePicker.swift
-//  FlatInlinePicker
+//  UIInlinePicker.swift
+//  UIInlinePicker
 //
 //  Created by Ampe on 8/4/18.
 //
@@ -8,65 +8,65 @@
 import UIKit
 
 @IBDesignable
-open class FlatInlinePicker: UIView {
+class UIInlinePickerView: UIView {
     
     // MARK: Views
-    open weak var collectionView: UICollectionView!
+    weak var collectionView: UICollectionView!
     
     // MARK: Storage
-    open var delegate: FlatInlinePickerDelegate?
-    open var dataSource: FlatInlinePickerDataSource?
+    var delegate: UIInlinePickerDelegate?
+    var dataSource: UIInlinePickerDataSource?
     
     // MARK: IBInspectables
     @IBInspectable
-    open var padding: UIEdgeInsets = FlatInlinePickerConfig.default.padding
+    var padding: UIEdgeInsets = UIInlinePickerConfig.default.padding
     
     @IBInspectable
-    open var selectedTextColor: UIColor = FlatInlinePickerConfig.default.cellConfig.selectedTextColor
+    var selectedTextColor: UIColor = UIInlinePickerConfig.default.cellConfig.selectedTextColor
     
     @IBInspectable
-    open var selectedBackgroundColor: UIColor = FlatInlinePickerConfig.default.cellConfig.selectedBackgroundColor
+    var selectedBackgroundColor: UIColor = UIInlinePickerConfig.default.cellConfig.selectedBackgroundColor
     
     @IBInspectable
-    open var selectedBorderColor: CGColor = FlatInlinePickerConfig.default.cellConfig.selectedBorderColor
+    var selectedBorderColor: CGColor = UIInlinePickerConfig.default.cellConfig.selectedBorderColor
     
     @IBInspectable
-    open var selectedBorderWidth: CGFloat = FlatInlinePickerConfig.default.cellConfig.selectedBorderWidth
+    var selectedBorderWidth: CGFloat = UIInlinePickerConfig.default.cellConfig.selectedBorderWidth
     
     @IBInspectable
-    open var unselectedTextColor: UIColor = FlatInlinePickerConfig.default.cellConfig.unselectedTextColor
+    var unselectedTextColor: UIColor = UIInlinePickerConfig.default.cellConfig.unselectedTextColor
     
     @IBInspectable
-    open var unselectedBackgroundColor: UIColor = FlatInlinePickerConfig.default.cellConfig.unselectedBackgroundColor
+    var unselectedBackgroundColor: UIColor = UIInlinePickerConfig.default.cellConfig.unselectedBackgroundColor
     
     @IBInspectable
-    open var unselectedBorderColor: CGColor = FlatInlinePickerConfig.default.cellConfig.unselectedBorderColor
+    var unselectedBorderColor: CGColor = UIInlinePickerConfig.default.cellConfig.unselectedBorderColor
     
     @IBInspectable
-    open var unselectedBorderWidth: CGFloat = FlatInlinePickerConfig.default.cellConfig.unselectedBorderWidth
+    var unselectedBorderWidth: CGFloat = UIInlinePickerConfig.default.cellConfig.unselectedBorderWidth
     
     @IBInspectable
-    open var cornerRadius: CGFloat = FlatInlinePickerConfig.default.cellConfig.cornerRadius
+    var cornerRadius: CGFloat = UIInlinePickerConfig.default.cellConfig.cornerRadius
     
     @IBInspectable
-    open var spacing: UIEdgeInsets = FlatInlinePickerConfig.default.cellConfig.spacing
+    var spacing: UIEdgeInsets = UIInlinePickerConfig.default.cellConfig.spacing
     
     // MARK: Designable Initalizers
-    public convenience init() {
+    convenience init() {
         
         self.init(frame: CGRect.zero)
     }
     
-    public override convenience init(frame: CGRect) {
+    override convenience init(frame: CGRect) {
         
         self.init(frame: frame)
     }
     
     // MARK: Programmatic Initalizer
-    public init(_ frame: CGRect,
-                config: FlatInlinePickerConfig,
-                delegate: FlatInlinePickerDelegate?,
-                dataSource: FlatInlinePickerDataSource?) {
+    init(_ frame: CGRect,
+                config: UIInlinePickerConfig,
+                delegate: UIInlinePickerDelegate?,
+                dataSource: UIInlinePickerDataSource?) {
         
         let layout = UICollectionViewFlowLayout()
         layout.estimatedItemSize = CGSize(width: 40, height: 20)
@@ -85,7 +85,7 @@ open class FlatInlinePicker: UIView {
     }
     
     // MARK: Storyboard Initalizer
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         
         let layout = UICollectionViewFlowLayout()
         layout.estimatedItemSize = CGSize(width: 40, height: 20)
@@ -101,14 +101,14 @@ open class FlatInlinePicker: UIView {
     }
 }
 
-extension FlatInlinePicker {
+extension UIInlinePickerView {
     func setupCollectionView() {
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.register(FlatInlinePickerCell.self,
-                                forCellWithReuseIdentifier: FlatInlinePickerCell.reuseIdentifier)
+        collectionView.register(UIInlinePickerCell.self,
+                                forCellWithReuseIdentifier: UIInlinePickerCell.reuseIdentifier)
         
         collectionView.backgroundColor = .white
         
@@ -131,7 +131,7 @@ extension FlatInlinePicker {
         collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: padding.top).isActive = true
     }
     
-    func initConfig(_ config: FlatInlinePickerConfig) {
+    func initConfig(_ config: UIInlinePickerConfig) {
         
         padding = config.padding
         selectedTextColor = config.cellConfig.selectedTextColor
@@ -147,7 +147,7 @@ extension FlatInlinePicker {
     }
 }
 
-extension FlatInlinePicker: UICollectionViewDelegate {
+extension UIInlinePickerView: UICollectionViewDelegate {
     public func collectionView(_ collectionView: UICollectionView,
                                didSelectItemAt indexPath: IndexPath) {
         
@@ -161,7 +161,7 @@ extension FlatInlinePicker: UICollectionViewDelegate {
     }
 }
 
-extension FlatInlinePicker: UICollectionViewDataSource {
+extension UIInlinePickerView: UICollectionViewDataSource {
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
         
         guard let dataSource = dataSource else {
@@ -188,11 +188,11 @@ extension FlatInlinePicker: UICollectionViewDataSource {
         return itemCount
     }
     
-    public func collectionView(_ collectionView: UICollectionView,
+    func collectionView(_ collectionView: UICollectionView,
                                cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlatInlinePickerCell.reuseIdentifier,
-                                                            for: indexPath) as? FlatInlinePickerCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UIInlinePickerCell.reuseIdentifier,
+                                                            for: indexPath) as? UIInlinePickerCell else {
                                                                 
                                                                 assert(false, "collection view cell registration inconsistency")
                                                                 return UICollectionViewCell()
@@ -206,7 +206,7 @@ extension FlatInlinePicker: UICollectionViewDataSource {
         
         guard let text = dataSource.text(for: indexPath) else {
             
-            assert(false, "internal inconsistency - file a bug")
+            assert(false, "inconsistency - file a bug")
             return UICollectionViewCell()
         }
         

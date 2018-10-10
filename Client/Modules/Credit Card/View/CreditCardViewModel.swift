@@ -1,13 +1,13 @@
 //
 //  CreditCardViewModel.swift
-//  FlatCreditCard
+//  UICreditCard
 //
 //  Created by Ampe on 8/13/18.
 //
 
 import UIKit
 
-public protocol CreditCardViewModel: class, CreditCardViewModelDataSource {
+protocol CreditCardViewModel: class, CreditCardViewModelDataSource {
     
     // MARK: Delegate Property
     var delegate: CreditCardViewModelDelegate { get set }
@@ -29,7 +29,7 @@ public protocol CreditCardViewModel: class, CreditCardViewModelDataSource {
 }
 
 // MARK: - Default Update Method Implementation
-public extension CreditCardViewModel {
+extension CreditCardViewModel {
     func updateNumber(to value: String) {
         creditCard.metadata.number = value
         
@@ -74,7 +74,7 @@ public extension CreditCardViewModel {
 }
 
 // MARK: - Default CreditCardViewModelDataSource Conformance
-public extension CreditCardViewModel {
+extension CreditCardViewModel {
     func number(for card: CreditCard) -> String {
         return card.metadata.number
     }
@@ -105,7 +105,7 @@ public extension CreditCardViewModel {
 }
 
 // MARK: - Default Reload Methods
-public extension CreditCardViewModel {
+extension CreditCardViewModel {
     func reload() {
         delegate.numberUpdated(to: number(for: creditCard))
         delegate.cvvUpdated(to: cvv(for: creditCard))

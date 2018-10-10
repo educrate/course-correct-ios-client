@@ -1,25 +1,25 @@
 //
-//  FlatFieldConfig.swift
-//  FlatField
+//  UIFieldConfig.swift
+//  UIField
 //
 //  Created by Ampe on 7/29/18.
 //
 
 import UIKit
 
-// MARK: - Config For Flat Field
-public struct FlatFieldConfig {
-    public let text: String
-    public let placeholderText: String
-    public let cursorColor: UIColor
-    public let textColor: UIColor
-    public let placeholderColor: UIColor
-    public let underlineColor: UIColor
-    public let underlineThickness: CGFloat
-    public let thicknessChange: CGFloat
-    public let textAlignment: NSTextAlignment
+// MARK: - Config For UI Field
+struct UIFieldConfiguration {
+    let text: String
+    let placeholderText: String
+    let cursorColor: UIColor
+    let textColor: UIColor
+    let placeholderColor: UIColor
+    let underlineColor: UIColor
+    let underlineThickness: CGFloat
+    let thicknessChange: CGFloat
+    let textAlignment: NSTextAlignment
     
-    public init(text: String,
+    init(text: String,
                 placeholderText: String,
                 cursorColor: UIColor,
                 textColor: UIColor,
@@ -40,7 +40,7 @@ public struct FlatFieldConfig {
         self.textAlignment = textAlignment
     }
     
-    public init(placeholderText: String) {
+    init(placeholderText: String) {
         self.init(text: "",
                   placeholderText: placeholderText,
                   cursorColor: .gray,
@@ -52,5 +52,5 @@ public struct FlatFieldConfig {
                   textAlignment: .left)
     }
     
-    public static let `default` = FlatFieldConfig(placeholderText: "Placeholder")
+    static let `default` = UIFieldConfiguration(placeholderText: "Placeholder")
 }

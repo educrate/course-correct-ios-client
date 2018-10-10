@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct ImageExtractor: _ExpressibleByImageLiteral {
+struct CreditCardImageExtractor: _ExpressibleByImageLiteral {
     let image: UIImage?
     
     init(imageLiteralResourceName name: String) {
@@ -17,7 +17,7 @@ struct ImageExtractor: _ExpressibleByImageLiteral {
 }
 
 extension UIImage {
-    static func `for`(_ literal: ImageExtractor) -> UIImage? {
+    static func `for`(_ literal: CreditCardImageExtractor) -> UIImage? {
         return literal.image
     }
 }

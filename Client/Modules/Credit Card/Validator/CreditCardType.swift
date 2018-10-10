@@ -1,6 +1,6 @@
 //
 //  CreditCardType.swift
-//  FlatPaymentMethod
+//  UIPaymentMethod
 //
 //  Created by Ampe on 8/7/18.
 //
@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: - Credit Card Types
-public enum CreditCardType: Equatable, Hashable {
+enum CreditCardType: Equatable, Hashable {
     case visa(type: VisaType)
     case amex
     case unionPay
@@ -23,8 +23,8 @@ public enum CreditCardType: Equatable, Hashable {
 }
 
 // MARK: - All Cards
-public extension CreditCardType {
-    public static let all: [CreditCardType] = [.visa(type: .visa),
+extension CreditCardType {
+    static let all: [CreditCardType] = [.visa(type: .visa),
                                                .visa(type: .electron),
                                                .amex,
                                                .unionPay,
@@ -41,22 +41,22 @@ public extension CreditCardType {
 }
 
 // MARK: - Diners Card Types
-public enum DinersClubType: Equatable {
+enum DinersClubType: Equatable {
     case carteBlanche
     case international
     case usbc
 }
 
 // MARK: - Visa Card Types
-public enum VisaType: Equatable {
+enum VisaType: Equatable {
     case visa
     case electron
 }
 
 // MARK: - Public Methods For Card Validation
-public extension CreditCardType {
+extension CreditCardType {
     func isValid(_ accountNumber: String) -> Bool {
-        return requirement.isValid(accountNumber) && Mathematics.luhnCheck(accountNumber)
+        return requirement.isValid(accountNumber) && CreditCardMathematics.luhnCheck(accountNumber)
     }
     
     func isPrefixValid(_ accountNumber: String) -> Bool {
@@ -65,18 +65,18 @@ public extension CreditCardType {
 }
 
 // MARK: - Public Property Methods
-public extension CreditCardType {
+extension CreditCardType {
     func segmentGrouping(for length: Int) -> [Int] {
         if let assignedGrouping = segmentGrouping[length] {
             return assignedGrouping
         } else {
-            return Mathematics.defaultGrouping(for: length)
+            return CreditCardMathematics.defaultGrouping(for: length)
         }
     }
 }
 
 // MARK: - Public Getters
-public extension CreditCardType {
+extension CreditCardType {
     var name: String {
         switch self {
         case .amex:
@@ -145,7 +145,7 @@ public extension CreditCardType {
 }
 
 // MARK: - Main Validation Method On Array Of Credit Card Type
-public extension Array where Element == CreditCardType {    
+extension Array where Element == CreditCardType {    
     func validate(prefix: String) -> [Element] {
         
         // have an array of credit cards and length of prefix to compare against
@@ -240,7 +240,7 @@ private extension CreditCardType {
     // Aug 7, 2018 implementation date
     // Aug 7, 2018 implementation updated date
     var requirement: CreditCardTypeValidationRequirement {
-        let prefixes: [PrefixContainable]
+        let prefixes: [CreditCardPrefixContainable]
         let lengths: [Int]
         
         switch self {

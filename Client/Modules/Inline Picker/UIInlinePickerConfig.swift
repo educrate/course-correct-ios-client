@@ -1,26 +1,26 @@
 //
-//  FlatInlinePickerConfig.swift
-//  FlatInlinePicker
+//  UIInlinePickerConfig.swift
+//  UIInlinePicker
 //
 //  Created by Ampe on 8/4/18.
 //
 
 import UIKit
 
-public struct FlatInlinePickerConfig {
-    public let padding: UIEdgeInsets
-    public let cellConfig: FlatInlinePickerCellConfig
+struct UIInlinePickerConfig {
+    let padding: UIEdgeInsets
+    let cellConfig: UIInlinePickerCellConfig
     
-    public init(padding: UIEdgeInsets,
-                cellConfig: FlatInlinePickerCellConfig) {
+    init(padding: UIEdgeInsets,
+                cellConfig: UIInlinePickerCellConfig) {
         
         self.padding = padding
         self.cellConfig = cellConfig
     }
 }
 
-public extension FlatInlinePickerConfig {
-    public static let `default` = FlatInlinePickerConfig(padding: UIEdgeInsets(top: 20,
+extension UIInlinePickerConfig {
+    static let `default` = UIInlinePickerConfig(padding: UIEdgeInsets(top: 20,
                                                                                left: 20,
                                                                                bottom: -20,
                                                                                right: -20),

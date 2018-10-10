@@ -1,16 +1,16 @@
 //
-//  FlatActionSheetCell.swift
-//  FlatActionSheet
+//  UIActionSheetCell.swift
+//  UIActionSheet
 //
 //  Created by Ampe on 8/1/18.
 //
 
 import UIKit
 
-open class FlatActionSheetCell: UITableViewCell {
-    open weak var label: UILabel!
+class UIActionSheetCell: UITableViewCell {
+    weak var label: UILabel!
     
-    open func update(_ string: String) {
+    func update(_ string: String) {
         label.text = string
     }
     
@@ -26,7 +26,7 @@ open class FlatActionSheetCell: UITableViewCell {
         addConstraints()
     }
     
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         let label = UILabel()
         self.label = label
         
@@ -38,11 +38,11 @@ open class FlatActionSheetCell: UITableViewCell {
     }
 }
 
-public extension FlatActionSheetCell {
-    static let reuseIdentifier = "FlatActionSheetCell"
+extension UIActionSheetCell {
+    static let reuseIdentifier = "UIActionSheetCell"
 }
 
-private extension FlatActionSheetCell {
+private extension UIActionSheetCell {
     func initViews() {
         selectionStyle = .none
         label.textAlignment = .center

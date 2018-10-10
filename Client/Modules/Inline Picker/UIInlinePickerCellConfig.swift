@@ -1,25 +1,25 @@
 //
-//  FlatPickerCellConfig.swift
-//  FlatInlinePicker
+//  UIPickerCellConfig.swift
+//  UIInlinePicker
 //
 //  Created by Ampe on 8/5/18.
 //
 
 import UIKit
 
-public struct FlatInlinePickerCellConfig {
-    public let selectedTextColor: UIColor
-    public let selectedBackgroundColor: UIColor
-    public let selectedBorderColor: CGColor
-    public let selectedBorderWidth: CGFloat
-    public let unselectedTextColor: UIColor
-    public let unselectedBackgroundColor: UIColor
-    public let unselectedBorderColor: CGColor
-    public let unselectedBorderWidth: CGFloat
-    public let cornerRadius: CGFloat
-    public let spacing: UIEdgeInsets
+struct UIInlinePickerCellConfig {
+    let selectedTextColor: UIColor
+    let selectedBackgroundColor: UIColor
+    let selectedBorderColor: CGColor
+    let selectedBorderWidth: CGFloat
+    let unselectedTextColor: UIColor
+    let unselectedBackgroundColor: UIColor
+    let unselectedBorderColor: CGColor
+    let unselectedBorderWidth: CGFloat
+    let cornerRadius: CGFloat
+    let spacing: UIEdgeInsets
     
-    public init(selectedTextColor: UIColor,
+    init(selectedTextColor: UIColor,
                 selectedBackgroundColor: UIColor,
                 selectedBorderColor: CGColor,
                 selectedBorderWidth: CGFloat,
@@ -43,8 +43,8 @@ public struct FlatInlinePickerCellConfig {
     }
 }
 
-public extension FlatInlinePickerCellConfig {
-    public static let `default` = FlatInlinePickerCellConfig(selectedTextColor: .white,
+extension UIInlinePickerCellConfig {
+    static let `default` = UIInlinePickerCellConfig(selectedTextColor: .white,
                                                              selectedBackgroundColor: .blue,
                                                              selectedBorderColor: UIColor.clear.cgColor,
                                                              selectedBorderWidth: 0,
