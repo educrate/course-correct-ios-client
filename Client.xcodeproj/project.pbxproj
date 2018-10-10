@@ -80,6 +80,17 @@
 		BFD82A98216D989E00A14868 /* NetworkingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A86216D989E00A14868 /* NetworkingResult.swift */; };
 		BFD82A9D216DA13800A14868 /* UIActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A9C216DA13800A14868 /* UIActionSheet.swift */; };
 		BFD82A9F216DA25600A14868 /* UIInlinePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A9E216DA25600A14868 /* UIInlinePickerView.swift */; };
+		BFD82AA6216DA47000A14868 /* CollegeSelectorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AA1216DA47000A14868 /* CollegeSelectorPresenter.swift */; };
+		BFD82AA7216DA47000A14868 /* CollegeSelectorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AA2216DA47000A14868 /* CollegeSelectorRouter.swift */; };
+		BFD82AA8216DA47000A14868 /* CollegeSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AA3216DA47000A14868 /* CollegeSelectorViewController.swift */; };
+		BFD82AA9216DA47000A14868 /* CollegeSelectorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AA4216DA47000A14868 /* CollegeSelectorProtocols.swift */; };
+		BFD82AAA216DA47000A14868 /* CollegeSelectorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AA5216DA47000A14868 /* CollegeSelectorInteractor.swift */; };
+		BFD82AAC216DA49B00A14868 /* CollegeSelector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD82AAB216DA49B00A14868 /* CollegeSelector.storyboard */; };
+		BFD82AB4216DA53200A14868 /* UIDropdownDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AAE216DA53200A14868 /* UIDropdownDelegate.swift */; };
+		BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */; };
+		BFD82AB7216DA53200A14868 /* UIDropdownConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AB1216DA53200A14868 /* UIDropdownConfig.swift */; };
+		BFD82AB8216DA53200A14868 /* UIDropdownDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AB2216DA53200A14868 /* UIDropdownDataSource.swift */; };
+		BFD82AB9216DA53200A14868 /* UIDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AB3216DA53200A14868 /* UIDropdownView.swift */; };
 		BFF14D88216002CB00733323 /* CalendarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D87216002CB00733323 /* CalendarConfiguration.swift */; };
 		BFF14D8C2160033B00733323 /* CalendarBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D8B2160033B00733323 /* CalendarBrain.swift */; };
 		BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D8F2160072600733323 /* CalendarDataMapper.swift */; };
@@ -188,6 +199,17 @@
 		BFD82A86216D989E00A14868 /* NetworkingResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingResult.swift; sourceTree = "<group>"; };
 		BFD82A9C216DA13800A14868 /* UIActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheet.swift; sourceTree = "<group>"; };
 		BFD82A9E216DA25600A14868 /* UIInlinePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInlinePickerView.swift; sourceTree = "<group>"; };
+		BFD82AA1216DA47000A14868 /* CollegeSelectorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSelectorPresenter.swift; sourceTree = "<group>"; };
+		BFD82AA2216DA47000A14868 /* CollegeSelectorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSelectorRouter.swift; sourceTree = "<group>"; };
+		BFD82AA3216DA47000A14868 /* CollegeSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSelectorViewController.swift; sourceTree = "<group>"; };
+		BFD82AA4216DA47000A14868 /* CollegeSelectorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSelectorProtocols.swift; sourceTree = "<group>"; };
+		BFD82AA5216DA47000A14868 /* CollegeSelectorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSelectorInteractor.swift; sourceTree = "<group>"; };
+		BFD82AAB216DA49B00A14868 /* CollegeSelector.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollegeSelector.storyboard; sourceTree = "<group>"; };
+		BFD82AAE216DA53200A14868 /* UIDropdownDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownDelegate.swift; sourceTree = "<group>"; };
+		BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownCell.swift; sourceTree = "<group>"; };
+		BFD82AB1216DA53200A14868 /* UIDropdownConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownConfig.swift; sourceTree = "<group>"; };
+		BFD82AB2216DA53200A14868 /* UIDropdownDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownDataSource.swift; sourceTree = "<group>"; };
+		BFD82AB3216DA53200A14868 /* UIDropdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownView.swift; sourceTree = "<group>"; };
 		BFF14D87216002CB00733323 /* CalendarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarConfiguration.swift; sourceTree = "<group>"; };
 		BFF14D8B2160033B00733323 /* CalendarBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarBrain.swift; sourceTree = "<group>"; };
 		BFF14D8F2160072600733323 /* CalendarDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataMapper.swift; sourceTree = "<group>"; };
@@ -270,6 +292,7 @@
 		BF579339216D4485008DBB46 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				BFD82AA0216DA43D00A14868 /* College Selector */,
 				BF4E7185216D4A5900100FE1 /* OnboardingViewController.swift */,
 				BF4E7183216D4A5900100FE1 /* OnboardingPresenter.swift */,
 				BF4E7184216D4A5900100FE1 /* OnboardingRouter.swift */,
@@ -400,11 +423,12 @@
 		BFD0293E21509AE3002FB9F5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				BFD82A74216D987E00A14868 /* Networking */,
 				BFD0298821509C83002FB9F5 /* Action Sheet */,
 				BFD0294221509B8E002FB9F5 /* Calendar */,
 				BFD0296321509C02002FB9F5 /* Credit Card */,
+				BFD82AAD216DA51000A14868 /* Dropdown */,
 				BFD0299E21509CEE002FB9F5 /* Inline Picker */,
+				BFD82A74216D987E00A14868 /* Networking */,
 				BFD0299721509CC0002FB9F5 /* Text Field */,
 			);
 			path = Modules;
@@ -543,6 +567,31 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		BFD82AA0216DA43D00A14868 /* College Selector */ = {
+			isa = PBXGroup;
+			children = (
+				BFD82AA3216DA47000A14868 /* CollegeSelectorViewController.swift */,
+				BFD82AA5216DA47000A14868 /* CollegeSelectorInteractor.swift */,
+				BFD82AA1216DA47000A14868 /* CollegeSelectorPresenter.swift */,
+				BFD82AA2216DA47000A14868 /* CollegeSelectorRouter.swift */,
+				BFD82AA4216DA47000A14868 /* CollegeSelectorProtocols.swift */,
+				BFD82AAB216DA49B00A14868 /* CollegeSelector.storyboard */,
+			);
+			path = "College Selector";
+			sourceTree = "<group>";
+		};
+		BFD82AAD216DA51000A14868 /* Dropdown */ = {
+			isa = PBXGroup;
+			children = (
+				BFD82AB3216DA53200A14868 /* UIDropdownView.swift */,
+				BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */,
+				BFD82AB1216DA53200A14868 /* UIDropdownConfig.swift */,
+				BFD82AB2216DA53200A14868 /* UIDropdownDataSource.swift */,
+				BFD82AAE216DA53200A14868 /* UIDropdownDelegate.swift */,
+			);
+			path = Dropdown;
+			sourceTree = "<group>";
+		};
 		BFF14D9C2160538F00733323 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -664,6 +713,7 @@
 			files = (
 				BFD0291B21509AD5002FB9F5 /* LaunchScreen.storyboard in Resources */,
 				BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */,
+				BFD82AAC216DA49B00A14868 /* CollegeSelector.storyboard in Resources */,
 				BFD0291321509AD4002FB9F5 /* Main.storyboard in Resources */,
 				BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */,
 			);
@@ -698,15 +748,19 @@
 				BF4E718A216D4A5900100FE1 /* OnboardingViewController.swift in Sources */,
 				BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */,
 				BFD029A621509CFD002FB9F5 /* UIInlinePickerCell.swift in Sources */,
+				BFD82AAA216DA47000A14868 /* CollegeSelectorInteractor.swift in Sources */,
 				BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */,
 				BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */,
+				BFD82AA9216DA47000A14868 /* CollegeSelectorProtocols.swift in Sources */,
 				BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */,
 				BFD82A8E216D989E00A14868 /* NetworkingClientRequest.swift in Sources */,
+				BFD82AB8216DA53200A14868 /* UIDropdownDataSource.swift in Sources */,
 				BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */,
 				BFD0299421509C9A002FB9F5 /* UIActionSheetConfig.swift in Sources */,
 				BFD82A8B216D989E00A14868 /* NetworkingService.swift in Sources */,
 				BFD82A92216D989E00A14868 /* NetworkingClientResponse.swift in Sources */,
 				BFD82A98216D989E00A14868 /* NetworkingResult.swift in Sources */,
+				BFD82AA8216DA47000A14868 /* CollegeSelectorViewController.swift in Sources */,
 				BFD0297221509C1E002FB9F5 /* CreditCardViewStyle.swift in Sources */,
 				BFD0299C21509CD5002FB9F5 /* UIFieldDelegate.swift in Sources */,
 				BFD0297021509C1E002FB9F5 /* CreditCardViewModelDelegate.swift in Sources */,
@@ -715,6 +769,7 @@
 				BFD82A97216D989E00A14868 /* NetworkingClientRequestBody.swift in Sources */,
 				BFD82A8C216D989E00A14868 /* Networking.swift in Sources */,
 				BFD82A95216D989E00A14868 /* NetworkingExtractable.swift in Sources */,
+				BFD82AB7216DA53200A14868 /* UIDropdownConfig.swift in Sources */,
 				BFD82A9F216DA25600A14868 /* UIInlinePickerView.swift in Sources */,
 				BFD0295E21509BB2002FB9F5 /* UICalendarViewController.swift in Sources */,
 				BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */,
@@ -727,6 +782,7 @@
 				BFD82A89216D989E00A14868 /* NetworkingClientHTTPMethods.swift in Sources */,
 				BFD029A821509CFD002FB9F5 /* UIInlinePickerDelegate.swift in Sources */,
 				BFD0296E21509C1E002FB9F5 /* CreditCardViewModelDataSource.swift in Sources */,
+				BFD82AA7216DA47000A14868 /* CollegeSelectorRouter.swift in Sources */,
 				BFD0297621509C1E002FB9F5 /* CreditCardViewConstants.swift in Sources */,
 				BFD82A8D216D989E00A14868 /* NetworkingClientRequestEncodingType.swift in Sources */,
 				BFD0296F21509C1E002FB9F5 /* CreditCardMetadata.swift in Sources */,
@@ -750,12 +806,15 @@
 				BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */,
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
 				BFD82A87216D989E00A14868 /* NetworkingClientError.swift in Sources */,
+				BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */,
 				BF4E718B216D4A5900100FE1 /* OnboardingProtocols.swift in Sources */,
 				BFD82A94216D989E00A14868 /* NetworkingFailure.swift in Sources */,
 				BF4E7189216D4A5900100FE1 /* OnboardingRouter.swift in Sources */,
 				BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */,
+				BFD82AA6216DA47000A14868 /* CollegeSelectorPresenter.swift in Sources */,
 				BFD82A96216D989E00A14868 /* NetworkingServiceError.swift in Sources */,
 				BFD82A8A216D989E00A14868 /* NetworkingError.swift in Sources */,
+				BFD82AB9216DA53200A14868 /* UIDropdownView.swift in Sources */,
 				BFD0298121509C6A002FB9F5 /* CreditCardPrefixContainable.swift in Sources */,
 				BFF9DF172161A75300B80E9D /* CalendarLayoutCalculator.swift in Sources */,
 				BFD0296021509BB2002FB9F5 /* UICalendarViewCell.swift in Sources */,
@@ -765,6 +824,7 @@
 				BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */,
 				BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */,
 				BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeader.swift in Sources */,
+				BFD82AB4216DA53200A14868 /* UIDropdownDelegate.swift in Sources */,
 				BFD0299621509C9A002FB9F5 /* UIActionSheetDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

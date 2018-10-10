@@ -1,5 +1,5 @@
 //
-//  UIFieldConfig.swift
+//  UIFieldConfiguration.swift
 //  UIField
 //
 //  Created by Ampe on 7/29/18.
