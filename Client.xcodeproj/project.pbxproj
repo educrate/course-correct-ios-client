@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF4E7188216D4A5900100FE1 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E7183216D4A5900100FE1 /* OnboardingPresenter.swift */; };
-		BF4E7189216D4A5900100FE1 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E7184216D4A5900100FE1 /* OnboardingRouter.swift */; };
-		BF4E718A216D4A5900100FE1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E7185216D4A5900100FE1 /* OnboardingViewController.swift */; };
-		BF4E718B216D4A5900100FE1 /* OnboardingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E7186216D4A5900100FE1 /* OnboardingProtocols.swift */; };
-		BF4E718C216D4A5900100FE1 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4E7187216D4A5900100FE1 /* OnboardingInteractor.swift */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */; };
@@ -123,11 +118,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BF4E7183216D4A5900100FE1 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
-		BF4E7184216D4A5900100FE1 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
-		BF4E7185216D4A5900100FE1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		BF4E7186216D4A5900100FE1 /* OnboardingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProtocols.swift; sourceTree = "<group>"; };
-		BF4E7187216D4A5900100FE1 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataSource.swift; sourceTree = "<group>"; };
@@ -299,11 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				BFD82AA0216DA43D00A14868 /* College Selector */,
-				BF4E7185216D4A5900100FE1 /* OnboardingViewController.swift */,
-				BF4E7183216D4A5900100FE1 /* OnboardingPresenter.swift */,
-				BF4E7184216D4A5900100FE1 /* OnboardingRouter.swift */,
-				BF4E7187216D4A5900100FE1 /* OnboardingInteractor.swift */,
-				BF4E7186216D4A5900100FE1 /* OnboardingProtocols.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -770,7 +755,6 @@
 				BFF14D922160492F00733323 /* DateHelper.swift in Sources */,
 				BFD82A91216D989E00A14868 /* NetworkingClientResult.swift in Sources */,
 				BFD029A721509CFD002FB9F5 /* UIInlinePickerCellConfig.swift in Sources */,
-				BF4E718A216D4A5900100FE1 /* OnboardingViewController.swift in Sources */,
 				BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */,
 				BFD029A621509CFD002FB9F5 /* UIInlinePickerCell.swift in Sources */,
 				BFD82AAA216DA47000A14868 /* CollegeSelectorInteractor.swift in Sources */,
@@ -790,7 +774,6 @@
 				BFD0297221509C1E002FB9F5 /* CreditCardViewStyle.swift in Sources */,
 				BFD0299C21509CD5002FB9F5 /* UIFieldDelegate.swift in Sources */,
 				BFD0297021509C1E002FB9F5 /* CreditCardViewModelDelegate.swift in Sources */,
-				BF4E718C216D4A5900100FE1 /* OnboardingInteractor.swift in Sources */,
 				BFD0295A21509BB2002FB9F5 /* UICalendarViewEventCell.swift in Sources */,
 				BFD82A97216D989E00A14868 /* NetworkingClientRequestBody.swift in Sources */,
 				BFD82A8C216D989E00A14868 /* Networking.swift in Sources */,
@@ -822,7 +805,6 @@
 				BFF14D982160496400733323 /* MonthHelper.swift in Sources */,
 				BFD0299321509C9A002FB9F5 /* UIActionSheetCell.swift in Sources */,
 				BFD82A93216D989E00A14868 /* NetworkingCache.swift in Sources */,
-				BF4E7188216D4A5900100FE1 /* OnboardingPresenter.swift in Sources */,
 				BFD0298221509C6A002FB9F5 /* CreditCardImageExtractor.swift in Sources */,
 				BFD82A88216D989E00A14868 /* NetworkingConfiguration.swift in Sources */,
 				BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */,
@@ -833,9 +815,7 @@
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
 				BFD82A87216D989E00A14868 /* NetworkingClientError.swift in Sources */,
 				BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */,
-				BF4E718B216D4A5900100FE1 /* OnboardingProtocols.swift in Sources */,
 				BFD82A94216D989E00A14868 /* NetworkingFailure.swift in Sources */,
-				BF4E7189216D4A5900100FE1 /* OnboardingRouter.swift in Sources */,
 				BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */,
 				BFD82AA6216DA47000A14868 /* CollegeSelectorPresenter.swift in Sources */,
 				BFD82A96216D989E00A14868 /* NetworkingServiceError.swift in Sources */,

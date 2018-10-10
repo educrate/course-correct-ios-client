@@ -6,12 +6,14 @@
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 // MARK: - Wireframe
 
-protocol CollegeSelectorWireframeProtocol: class {}
+protocol CollegeSelectorWireframeProtocol: class {
+    static func createCollegeSelectorModule() -> UIViewController
+}
 
 
 // MARK: - Presenter
