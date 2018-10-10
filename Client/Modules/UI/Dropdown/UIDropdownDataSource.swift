@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol UIDropdownDataSource {
+protocol UIDropdownDataSource {
     // MARK: Storage
     var data: [[String]] { get set }
     
@@ -19,7 +19,7 @@ public protocol UIDropdownDataSource {
     // MARK: Set Methods
 }
 
-public extension UIDropdownDataSource {
+extension UIDropdownDataSource {
     func numberOfRows(for section: Int) -> Int? {
         guard numberOfSections() >= section + 1 else {
             return nil

@@ -14,7 +14,9 @@ class SelectCollegePresenter: SelectCollegePresenterProtocol {
     var interactor: SelectCollegeInteractorProtocol?
     private let router: SelectCollegeWireframeProtocol
 
-    init(interface: SelectCollegeViewProtocol, interactor: SelectCollegeInteractorProtocol?, router: SelectCollegeWireframeProtocol) {
+    init(interface: SelectCollegeViewProtocol,
+         interactor: SelectCollegeInteractorProtocol?,
+         router: SelectCollegeWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
@@ -22,7 +24,17 @@ class SelectCollegePresenter: SelectCollegePresenterProtocol {
 }
 
 extension SelectCollegePresenter {
-    func fetchedColleges(for input: String, with result: Result<[String], SelectCollegeError>) {
-        <#code#>
+    func updateView(for input: String) {
+        interactor?.fetchColleges(for: input)
+    }
+    
+    func collegesFetched(for input: String,
+                         with result: Result<[String], SelectCollegeError>) {
+        switch result {
+        case .failure(let error):
+            view?.show(error: error)
+        case .success(let colleges):
+            view?.show(names: colleges)
+        }
     }
 }

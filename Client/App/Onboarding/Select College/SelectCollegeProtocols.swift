@@ -19,11 +19,19 @@ protocol SelectCollegeWireframeProtocol: class, ModuleWireframeable {}
 protocol SelectCollegePresenterProtocol: class {
     
     
-    // MARK: - From View Methods
-    func fetchColleges(for input: String) -> Result<[String], SelectCollegeError>
+    // MARK: - From View
     
-    // MARK: - To View Methods
-    func fetchedColleges(for input: String, with result: Result<[String], SelectCollegeError>)
+    // MARK: Update Methods
+    func updateView(for input: String)
+    
+    // MARK: Routing Methods
+    
+    
+    
+    // MARK: - To View
+    
+    // MARK: Update Methods
+    func collegesFetched(for input: String, with result: Result<[String], SelectCollegeError>)
 }
 
 
@@ -31,17 +39,22 @@ protocol SelectCollegePresenterProtocol: class {
 
 protocol SelectCollegeInteractorProtocol: class {
     
-    // MARK: - Properties
+    // MARK: Properties
     var presenter: SelectCollegePresenterProtocol?  { get set }
     
-    
-    // MARK: - Methods
-    func fetchColleges(for input: String) -> Result<[String], SelectCollegeError>
+    // MARK: Methods
+    func fetchColleges(for input: String)
 }
 
 
 // MARK: - View 
 
 protocol SelectCollegeViewProtocol: class {
-  var presenter: SelectCollegePresenterProtocol?  { get set }
+    
+    // MARK: Properties
+    var presenter: SelectCollegePresenterProtocol?  { get set }
+    
+    // MARK: Methods
+    func show(names: [String])
+    func show(error: SelectCollegeError)
 }

@@ -13,7 +13,7 @@ class SelectCollegeRouter: SelectCollegeWireframeProtocol {
     weak var viewController: UIViewController?
     
     static func createModule() -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .collegeSelector)
+        let storyboard = UIStoryboard(storyboard: .selectCollege)
         let view: SelectCollegeViewController = storyboard.instantiateViewController()
         let interactor = SelectCollegeInteractor()
         let router = SelectCollegeRouter()

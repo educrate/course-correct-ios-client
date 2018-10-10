@@ -14,7 +14,7 @@ extension UIStoryboard {
     enum Storyboard: String {
         case launchScreen
         case main
-        case collegeSelector
+        case selectCollege
     }
 }
 
@@ -22,7 +22,7 @@ extension UIStoryboard {
 // MARK: - Storyboard Helpers
 extension UIStoryboard.Storyboard {
     var filename: String {
-        return rawValue.capitalized
+        return rawValue.firstCapitalized
     }
 }
 

@@ -180,6 +180,13 @@ import UIKit
     }
 }
 
+// MARK: - Public API
+extension UIDropdownView {
+    func reloadView() {
+        tableView.reloadData()
+    }
+}
+
 // MARK: - Setup Methods
 private extension UIDropdownView {
     func setupUIField() {
