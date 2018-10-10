@@ -199,6 +199,7 @@ extension UIField: UITextFieldDelegate {
     
     @objc
     func textFieldDidChange(_ textField: UITextField) {
+        text = textField.text ?? ""
         delegate?.textChanged(self)
     }
 }

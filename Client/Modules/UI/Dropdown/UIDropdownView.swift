@@ -20,77 +20,77 @@ class UIDropdownView: UIView {
     var dataSource: UIDropdownDataSource?
     
     // MARK: Properties
-    private weak var flatFieldHeightConstraint: NSLayoutConstraint!
+    weak var flatFieldHeightConstraint: NSLayoutConstraint!
     
     // MARK: UI Field IBInspectables
     @IBInspectable
-    private var text: String = UIFieldConfiguration.default.text {
+    var text: String = UIFieldConfiguration.default.text {
         didSet {
             field.text = text
         }
     }
     
     @IBInspectable
-    private var placeholderText: String = UIFieldConfiguration.default.placeholderText {
+    var placeholderText: String = UIFieldConfiguration.default.placeholderText {
         didSet {
             field.placeholderText = placeholderText
         }
     }
     
     @IBInspectable
-    private var cursorColor: UIColor = UIFieldConfiguration.default.cursorColor {
+    var cursorColor: UIColor = UIFieldConfiguration.default.cursorColor {
         didSet {
             field.tintColor = cursorColor
         }
     }
     
     @IBInspectable
-    private var textColor: UIColor = UIFieldConfiguration.default.textColor {
+    var textColor: UIColor = UIFieldConfiguration.default.textColor {
         didSet {
             field.textColor = textColor
         }
     }
     
     @IBInspectable
-    private var placeholderColor: UIColor = UIFieldConfiguration.default.placeholderColor {
+    var placeholderColor: UIColor = UIFieldConfiguration.default.placeholderColor {
         didSet {
             field.placeholderColor = placeholderColor
         }
     }
     
     @IBInspectable
-    private var underlineColor: UIColor = UIFieldConfiguration.default.underlineColor {
+    var underlineColor: UIColor = UIFieldConfiguration.default.underlineColor {
         didSet {
             field.underlineColor = underlineColor
         }
     }
     
     @IBInspectable
-    private var underlineThickness: CGFloat = UIFieldConfiguration.default.underlineThickness {
+    var underlineThickness: CGFloat = UIFieldConfiguration.default.underlineThickness {
         didSet {
             field.underlineHeightConstraint.constant = underlineThickness
         }
     }
     
     @IBInspectable
-    private var textAlignment: Int = UIFieldConfiguration.default.textAlignment.rawValue {
+    var textAlignment: Int = UIFieldConfiguration.default.textAlignment.rawValue {
         didSet {
             field.textAlignment = textAlignment
         }
     }
     
     @IBInspectable
-    private var thicknessChange: CGFloat = UIFieldConfiguration.default.thicknessChange
+    var thicknessChange: CGFloat = UIFieldConfiguration.default.thicknessChange
     
     @IBInspectable
-    private var flatFieldHeight: CGFloat = UIDropdownConfig.default.flatFieldHeight {
+    var flatFieldHeight: CGFloat = UIDropdownConfig.default.flatFieldHeight {
         didSet {
             flatFieldHeightConstraint.constant = flatFieldHeight
         }
     }
     
     @IBInspectable
-    private var dropdownCellHeight: CGFloat = UIDropdownConfig.default.dropdownCellHeight {
+    var dropdownCellHeight: CGFloat = UIDropdownConfig.default.dropdownCellHeight {
         didSet {
             tableView.rowHeight = dropdownCellHeight
         }
@@ -98,14 +98,14 @@ class UIDropdownView: UIView {
     
     // MARK: UI Dropdown IBInspectables
     @IBInspectable
-    private var maxNumberOfResultsPerSectionToDisplay: Int = UIDropdownConfig.default.numberOfResults {
+    var maxNumberOfResultsPerSectionToDisplay: Int = UIDropdownConfig.default.numberOfResults {
         didSet {
             tableView.reloadData()
         }
     }
     
     @IBInspectable
-    private var maxNumberOfSectionsToDisplay: Int = UIDropdownConfig.default.numberOfSections {
+    var maxNumberOfSectionsToDisplay: Int = UIDropdownConfig.default.numberOfSections {
         didSet {
             tableView.reloadData()
         }
@@ -113,12 +113,10 @@ class UIDropdownView: UIView {
     
     // MARK: Designable Initalizers
     public convenience init() {
-        
         self.init(frame: CGRect.zero)
     }
     
     public override convenience init(frame: CGRect) {
-        
         self.init(frame,
                   config: .default,
                   flatFieldConfig: .default,
@@ -156,7 +154,6 @@ class UIDropdownView: UIView {
     
     // MARK: Storyboard Initalizer
     public required init?(coder aDecoder: NSCoder) {
-        
         let flatField = UIField()
         self.field = flatField
         
@@ -185,12 +182,10 @@ extension UIDropdownView {
 // MARK: - Setup Methods
 private extension UIDropdownView {
     func setupUIField() {
-        
         field.delegate = self
     }
     
     func setupTableView() {
-        
         tableView.register(UIDropdownCell.self,
                            forCellReuseIdentifier: UIDropdownCell.reuseIdentifier)
         
@@ -202,15 +197,12 @@ private extension UIDropdownView {
     }
     
     func addViews() {
-        
         addSubview(field)
         addSubview(tableView)
     }
     
     func addContraints() {
-        
         field.translatesAutoresizingMaskIntoConstraints = false
-        
         field.topAnchor.constraint(equalTo: topAnchor).isActive = true
         field.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         field.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
@@ -221,7 +213,6 @@ private extension UIDropdownView {
         flatFieldHeightConstraint = flatFieldHeightAnchor
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
         tableView.topAnchor.constraint(equalTo: field.bottomAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
@@ -256,16 +247,16 @@ private extension UIDropdownView {
 
 // MARK: - UI Field Delegate Conformance
 extension UIDropdownView: UIFieldDelegate {
-    public func editingBegan(_ sender: UIField) {
+    func editingBegan(_ sender: UIField) {
         delegate?.didBeginEditing(sender)
     }
     
-    public func editingEnded(_ sender: UIField) {
+    func editingEnded(_ sender: UIField) {
         hideTableView()
         delegate?.didEndEditing(sender)
     }
     
-    public func textChanged(_ sender: UIField) {
+    func textChanged(_ sender: UIField) {
         if sender.text.isEmpty {
             hideTableView()
         }
