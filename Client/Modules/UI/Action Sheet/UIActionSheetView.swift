@@ -8,17 +8,17 @@
 import UIKit
 
 @IBDesignable
-class UIActionSheet: UIView {
+class UIActionSheetView: UIView {
     
     // MARK: Views
-    weak var tableView: UITableView!
+    private weak var tableView: UITableView!
     
     // MARK: Properties
-    weak var tableViewHeightConstraint: NSLayoutConstraint!
-    weak var tableViewTopConstraint: NSLayoutConstraint!
+    private weak var tableViewHeightConstraint: NSLayoutConstraint!
+   private  weak var tableViewTopConstraint: NSLayoutConstraint!
     
     // MARK: Properties
-    var actions: [UIActionSheetAction] = []
+    private var actions: [UIActionSheetAction] = []
     
     // MARK: IBInspectables
     @IBInspectable
@@ -42,7 +42,6 @@ class UIActionSheet: UIView {
     var backgroundAlphaValue: CGFloat = UIActionSheetConfig.default.backgroundAlphaValue {
         didSet {
             guard backgroundAlphaValue >= 0 && backgroundAlphaValue <= 1 else {
-                
                 assert(false, "select a value between 0 and 1")
                 return
             }
@@ -65,7 +64,6 @@ class UIActionSheet: UIView {
             tableView.layer.shadowOffset = dropShadowOffset
             tableView.layer.shadowRadius = dropShadowRadius
             tableView.layer.shadowOpacity = dropShadowOpacity
-            
             tableView.layer.masksToBounds = false
         }
     }
@@ -100,13 +98,11 @@ class UIActionSheet: UIView {
     
     // MARK: Designable Initalizers
     convenience init(config: UIActionSheetConfig = .default) {
-        
         self.init(UIScreen.main.bounds,
                   config: config)
     }
     
     override convenience init(frame: CGRect) {
-        
         self.init(frame)
     }
     
@@ -119,28 +115,24 @@ class UIActionSheet: UIView {
     
     // MARK: Storyboard Initalizer
     required public init?(coder aDecoder: NSCoder) {
-        
         super.init(coder: aDecoder)
     }
 }
 
 // MARK: - Setup Methods
-private extension UIActionSheet {
+private extension UIActionSheetView {
     func addViews() {
-        
         addSubview(tableView)
     }
     
     func addConstraints() {
-        
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
         tableView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         
         let tableViewHeightAnchor = tableView.heightAnchor.constraint(equalToConstant: tableViewHeight())
         tableViewHeightAnchor.isActive = true
-        
+
         tableViewHeightConstraint = tableViewHeightAnchor
         
         let tableViewTopAnchor = tableView.topAnchor.constraint(equalTo: bottomAnchor)
@@ -150,7 +142,6 @@ private extension UIActionSheet {
     }
     
     func setupView() {
-        
         layer.backgroundColor = backgroundViewColor.withAlphaComponent(backgroundAlphaValue).cgColor
     }
     
@@ -161,14 +152,11 @@ private extension UIActionSheet {
         
         tableView.dataSource = self
         tableView.delegate = self
-        
         tableView.isScrollEnabled = false
-        
         tableView.separatorStyle = .none
     }
     
     func initConfig(_ config: UIActionSheetConfig = .default) {
-        
         cellHeight = config.cellHeight
         backgroundAlphaValue = config.backgroundAlphaValue
         shouldShowDropShadow = config.shouldShowDropShadow
@@ -182,9 +170,8 @@ private extension UIActionSheet {
 }
 
 // MARK: - Public Methods
-extension UIActionSheet {
+extension UIActionSheetView {
     func show() {
-        
         let tableView = UITableView()
         self.tableView = tableView
         
@@ -195,7 +182,6 @@ extension UIActionSheet {
         setupTableView()
         
         guard let keyWindow = UIApplication.shared.keyWindow else {
-            
             assert(false, "no key window for application")
             return
         }
@@ -203,40 +189,29 @@ extension UIActionSheet {
         keyWindow.addSubview(self)
         
         CATransaction.begin()
-        
         CATransaction.setAnimationDuration(animationDuration)
         CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear))
-        
         layoutIfNeeded()
-        
         layer.backgroundColor = backgroundViewColor.withAlphaComponent(0).cgColor
-        
         animateTableView(tableViewTopConstraint, value: -tableViewHeight(), for: animationDuration, with: .to)
         animateBackgroundAlpha(for: animationDuration, value: backgroundAlphaValue)
-        
         CATransaction.commit()
     }
     
     func hide() {
-        
         CATransaction.begin()
-        
         CATransaction.setAnimationDuration(animationDuration/2)
         CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear))
-        
         CATransaction.setCompletionBlock { self.removeFromSuperview() }
-        
         layer.backgroundColor = backgroundViewColor.withAlphaComponent(backgroundAlphaValue).cgColor
-        
         animateTableView(tableViewTopConstraint, value: 0, for: animationDuration/2, with: .to)
         animateBackgroundAlpha(for: animationDuration/2, value: 0)
-        
         CATransaction.commit()
     }
 }
 
 // MARK: - Animation Methods
-private extension UIActionSheet {
+private extension UIActionSheetView {
     enum AnimationType {
         case add
         case to
@@ -269,33 +244,47 @@ private extension UIActionSheet {
 }
 
 // MARK: - UI Action Sheet Data Source Conformance
-extension UIActionSheet: UIActionSheetDataSource {
+extension UIActionSheetView: UIActionSheetDataSource {
     func addAction(_ action: UIActionSheetAction) {
-        
         actions.append(action)
-    } 
+    }
+    
+    func action(for index: IndexPath) -> UIActionSheetAction? {
+        guard actions.count >= index.row + 1 else {
+            return nil
+        }
+        
+        return actions[index.row]
+    }
+    
+    func tableViewHeight() -> CGFloat {
+        var bottomSafeSpaceHeight: CGFloat = 0
+        
+        if #available(iOS 11.0, *) {
+            bottomSafeSpaceHeight = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+        }
+        
+        return CGFloat(actions.count) * cellHeight + bottomSafeSpaceHeight
+    }
 }
 
 // MARK: - Table View Delegate Conformance
-extension UIActionSheet: UITableViewDelegate {
+extension UIActionSheetView: UITableViewDelegate {
     public func tableView(_ tableView: UITableView,
                           didSelectRowAt indexPath: IndexPath) {
         
         guard let action = action(for: indexPath) else {
-            
             assert(false, "inconsistency - file a bug")
             return
         }
         
         guard let handler = action.handler else {
-            
             assert(false, "inconsistency - file a bug")
             return
         }
         
         switch action.style {
         case .dismiss:
-            
             hide()
         }
         
@@ -310,7 +299,7 @@ extension UIActionSheet: UITableViewDelegate {
 }
 
 // MARK: - Table View Data Source Conformance
-extension UIActionSheet: UITableViewDataSource {
+extension UIActionSheetView: UITableViewDataSource {
     public func tableView(_ tableView: UITableView,
                           numberOfRowsInSection section: Int) -> Int {
         
@@ -328,13 +317,11 @@ extension UIActionSheet: UITableViewDataSource {
         }
         
         guard let title = action(for: indexPath)?.title else {
-            
             assert(false, "inconsistency - file a bug")
             return UITableViewCell()
         }
         
         cell.update(title)
-        
         return cell
     }
 }
