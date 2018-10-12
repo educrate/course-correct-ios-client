@@ -17,9 +17,11 @@ extension UIStoryboard {
         case launchScreen = "LaunchScreen"
         case main = "Main"
         case selectCollege = "SelectCollege"
+        case enterStudentIdentifier = "EnterStudentIdentifier"
         
         // MARK: Modules
         case uiDropdown = "UIDropdown"
+        case uiField = "UIField"
     }
 }
 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ilv-Lx-Pm8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Field View Controller-->
+        <scene sceneID="wOJ-7x-7fU">
+            <objects>
+                <viewController storyboardIdentifier="UIFieldViewController" id="ilv-Lx-Pm8" customClass="UIFieldViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ecx-KR-Eqr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="University Identifier" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="i9s-Oz-Ziz" userLabel="Text Field">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="39"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.24571917800000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.24571917800000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingDidBegin:forEvent:" destination="ilv-Lx-Pm8" eventType="editingDidBegin" id="dgF-Xw-gxL"/>
+                                    <action selector="editingDidEnd:forEvent:" destination="ilv-Lx-Pm8" eventType="editingDidEnd" id="Fjz-zd-bYc"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jc2-Yp-uaa" userLabel="Underline">
+                                <rect key="frame" x="0.0" y="39" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.24571917800000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="4M1-YL-1wk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VfG-Ia-8gF" firstAttribute="trailing" secondItem="jc2-Yp-uaa" secondAttribute="trailing" id="1x9-L8-MGV"/>
+                            <constraint firstItem="jc2-Yp-uaa" firstAttribute="top" secondItem="i9s-Oz-Ziz" secondAttribute="bottom" id="2Ge-HY-TBS"/>
+                            <constraint firstItem="i9s-Oz-Ziz" firstAttribute="leading" secondItem="VfG-Ia-8gF" secondAttribute="leading" id="ATl-YD-pJm"/>
+                            <constraint firstItem="i9s-Oz-Ziz" firstAttribute="top" secondItem="Ecx-KR-Eqr" secondAttribute="top" id="GR1-ei-ey3"/>
+                            <constraint firstItem="VfG-Ia-8gF" firstAttribute="trailing" secondItem="i9s-Oz-Ziz" secondAttribute="trailing" id="Y9z-T9-Xzv"/>
+                            <constraint firstItem="VfG-Ia-8gF" firstAttribute="leading" secondItem="jc2-Yp-uaa" secondAttribute="leading" id="cdE-9o-b90"/>
+                            <constraint firstItem="jc2-Yp-uaa" firstAttribute="bottom" secondItem="Ecx-KR-Eqr" secondAttribute="bottom" id="ne9-CN-Ghh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VfG-Ia-8gF"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="40"/>
+                    <connections>
+                        <outlet property="field" destination="i9s-Oz-Ziz" id="Gi9-3i-cSQ"/>
+                        <outlet property="underline" destination="jc2-Yp-uaa" id="8jh-aH-BAF"/>
+                        <outlet property="underlineHeightConstraint" destination="4M1-YL-1wk" id="OwU-Fe-CDH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hna-Pc-ULg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.80000000000001" y="-290.10494752623691"/>
+        </scene>
+    </scenes>
+</document>
