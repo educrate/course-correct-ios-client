@@ -14,6 +14,6 @@ class SelectCollegeInteractor: SelectCollegeInteractorProtocol {
 
 extension SelectCollegeInteractor {
     func fetchColleges(for input: String) {
-        presenter?.collegesFetched(for: input, with: Result(value: ["UCI, UCLA, USC, UCSD"]))
+        presenter?.collegesFetched(for: input, with: Result(value: ["UCI", "UCLA", "USC", "UCSD"]))
     }
 }

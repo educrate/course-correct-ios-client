@@ -10,32 +10,26 @@ import UIKit
 
 class SelectCollegeViewController: UIViewController {
     
-    // MARK: Properties
-    var data: [String] = []
-    
-    
     // MARK: Viper
     var presenter: SelectCollegePresenterProtocol?
     
     
     // MARK: Views
-    @IBOutlet
-    private weak var collegeSelector: UIDropdownView!
+    @IBOutlet private weak var collegeSelector: UIDropdownViewController!
 }
 
 extension SelectCollegeViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dropdownViewController: UIDropdownViewController = segue.viewController()
+        collegeSelector = dropdownViewController
         collegeSelector.delegate = self
-        collegeSelector.dataSource = self
     }
 }
 
 // MARK: - Viper Methods
 extension SelectCollegeViewController: SelectCollegeViewProtocol {
     func show(names: [String]) {
-        data = names
-        collegeSelector.reloadView()
+        collegeSelector.setDropdown(names)
     }
     
     func show(error: SelectCollegeError) {
@@ -44,8 +38,16 @@ extension SelectCollegeViewController: SelectCollegeViewProtocol {
 }
 
 // MARK: - Dropdown Data Source & Delegate Conformance
-extension SelectCollegeViewController: UIDropdownDataSource, UIDropdownDelegate {
-    func textDidChange(_ sender: UIField) {
+extension SelectCollegeViewController: UIDropdownDelegate {
+    var cellHeight: CGFloat {
+        return 50
+    }
+    
+    func inputChanged(_ sender: UITextField) {
         presenter?.updateView(for: sender.text)
+    }
+    
+    func dropdown(_ dropdown: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }

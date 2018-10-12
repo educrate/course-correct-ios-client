@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OE6-N7-yUB">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dropdown View Controller-->
+        <scene sceneID="piu-Os-o8E">
+            <objects>
+                <viewController storyboardIdentifier="UIDropDownViewController" id="OE6-N7-yUB" customClass="UIDropdownViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y4C-OY-OuB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Calif" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="DwV-71-G29" userLabel="Input Field">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.24571917800000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.75278253419999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputChanged:" destination="OE6-N7-yUB" eventType="valueChanged" id="UwP-t1-89u"/>
+                                    <action selector="inputChanged:forEvent:" destination="OE6-N7-yUB" eventType="editingChanged" id="hm8-8J-p1M"/>
+                                    <action selector="textChanged:" destination="OE6-N7-yUB" eventType="valueChanged" id="poX-q3-VgW"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GIj-ii-x88" userLabel="Dropdown Table">
+                                <rect key="frame" x="0.0" y="36" width="414" height="860"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UIDropdownCell" id="7pd-42-74J" userLabel="Dropdown Cell" customClass="UIDropdownCell" customModule="Client" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7pd-42-74J" id="qcq-zH-vYV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University of California, Irvine" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzQ-Lo-Jre">
+                                                    <rect key="frame" x="0.0" y="12.333333333333334" width="414" height="19.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.24571917800000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QzQ-Lo-Jre" firstAttribute="leading" secondItem="qcq-zH-vYV" secondAttribute="leading" id="2Ee-XY-syT"/>
+                                                <constraint firstAttribute="trailing" secondItem="QzQ-Lo-Jre" secondAttribute="trailing" id="BuY-aQ-IPB"/>
+                                                <constraint firstItem="QzQ-Lo-Jre" firstAttribute="centerY" secondItem="qcq-zH-vYV" secondAttribute="centerY" id="Rhu-Bx-d8j"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="QzQ-Lo-Jre" id="aTg-os-FIu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OE6-N7-yUB" id="Hmk-l9-yuV"/>
+                                    <outlet property="delegate" destination="OE6-N7-yUB" id="bga-Pi-Egq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DwV-71-G29" firstAttribute="top" secondItem="Y4C-OY-OuB" secondAttribute="top" id="4tM-cv-Neo"/>
+                            <constraint firstItem="GIj-ii-x88" firstAttribute="trailing" secondItem="TkR-0f-LDT" secondAttribute="trailing" id="7He-u9-lnB"/>
+                            <constraint firstItem="GIj-ii-x88" firstAttribute="leading" secondItem="TkR-0f-LDT" secondAttribute="leading" id="9Lh-CP-kL5"/>
+                            <constraint firstAttribute="trailing" secondItem="DwV-71-G29" secondAttribute="trailing" id="EFU-UE-qXm"/>
+                            <constraint firstItem="DwV-71-G29" firstAttribute="leading" secondItem="Y4C-OY-OuB" secondAttribute="leading" id="QGf-gY-dJi"/>
+                            <constraint firstAttribute="bottom" secondItem="GIj-ii-x88" secondAttribute="bottom" id="ge1-7n-PHF"/>
+                            <constraint firstItem="GIj-ii-x88" firstAttribute="top" secondItem="DwV-71-G29" secondAttribute="bottom" id="iv1-0B-zaL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TkR-0f-LDT"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="dropdown" destination="GIj-ii-x88" id="KyF-CR-1VD"/>
+                        <outlet property="inputField" destination="DwV-71-G29" id="C7i-UP-jxj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWq-I8-g61" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-288.40579710144931" y="168.75"/>
+        </scene>
+    </scenes>
+</document>

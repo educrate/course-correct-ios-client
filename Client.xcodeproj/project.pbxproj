@@ -76,11 +76,8 @@
 		BFD82A9D216DA13800A14868 /* UIActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A9C216DA13800A14868 /* UIActionSheetView.swift */; };
 		BFD82A9F216DA25600A14868 /* UIInlinePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A9E216DA25600A14868 /* UIInlinePickerView.swift */; };
 		BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD82AAB216DA49B00A14868 /* SelectCollege.storyboard */; };
-		BFD82AB4216DA53200A14868 /* UIDropdownDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AAE216DA53200A14868 /* UIDropdownDelegate.swift */; };
 		BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */; };
-		BFD82AB7216DA53200A14868 /* UIDropdownConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AB1216DA53200A14868 /* UIDropdownConfig.swift */; };
-		BFD82AB8216DA53200A14868 /* UIDropdownDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AB2216DA53200A14868 /* UIDropdownDataSource.swift */; };
-		BFD82AB9216DA53200A14868 /* UIDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AB3216DA53200A14868 /* UIDropdownView.swift */; };
+		BFD82AB9216DA53200A14868 /* UIDropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AB3216DA53200A14868 /* UIDropdownViewController.swift */; };
 		BFD82ABC216DAD4F00A14868 /* UIStoryboard+Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82ABB216DAD4F00A14868 /* UIStoryboard+Storyboards.swift */; };
 		BFD82ABE216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82ABD216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift */; };
 		BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */; };
@@ -95,7 +92,7 @@
 		BFD82AD9216E7D3500A14868 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD5216E7D3500A14868 /* Result.swift */; };
 		BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD6216E7D3500A14868 /* ResultProtocol.swift */; };
 		BFD82ADC216E816C00A14868 /* SelectCollegeErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82ADB216E816C00A14868 /* SelectCollegeErrors.swift */; };
-		BFD82ADE216E988200A14868 /* StringProtocol+Capitalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82ADD216E988200A14868 /* StringProtocol+Capitalization.swift */; };
+		BFD82AE2216F028600A14868 /* UIDropdown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD82AE1216F028600A14868 /* UIDropdown.storyboard */; };
 		BFF14D88216002CB00733323 /* CalendarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D87216002CB00733323 /* CalendarConfiguration.swift */; };
 		BFF14D8C2160033B00733323 /* CalendarBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D8B2160033B00733323 /* CalendarBrain.swift */; };
 		BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D8F2160072600733323 /* CalendarDataMapper.swift */; };
@@ -200,11 +197,8 @@
 		BFD82A9C216DA13800A14868 /* UIActionSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheetView.swift; sourceTree = "<group>"; };
 		BFD82A9E216DA25600A14868 /* UIInlinePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInlinePickerView.swift; sourceTree = "<group>"; };
 		BFD82AAB216DA49B00A14868 /* SelectCollege.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCollege.storyboard; sourceTree = "<group>"; };
-		BFD82AAE216DA53200A14868 /* UIDropdownDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownDelegate.swift; sourceTree = "<group>"; };
 		BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownCell.swift; sourceTree = "<group>"; };
-		BFD82AB1216DA53200A14868 /* UIDropdownConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownConfig.swift; sourceTree = "<group>"; };
-		BFD82AB2216DA53200A14868 /* UIDropdownDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownDataSource.swift; sourceTree = "<group>"; };
-		BFD82AB3216DA53200A14868 /* UIDropdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownView.swift; sourceTree = "<group>"; };
+		BFD82AB3216DA53200A14868 /* UIDropdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownViewController.swift; sourceTree = "<group>"; };
 		BFD82ABB216DAD4F00A14868 /* UIStoryboard+Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Storyboards.swift"; sourceTree = "<group>"; };
 		BFD82ABD216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifier.swift"; sourceTree = "<group>"; };
 		BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
@@ -219,7 +213,7 @@
 		BFD82AD5216E7D3500A14868 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		BFD82AD6216E7D3500A14868 /* ResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
 		BFD82ADB216E816C00A14868 /* SelectCollegeErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeErrors.swift; sourceTree = "<group>"; };
-		BFD82ADD216E988200A14868 /* StringProtocol+Capitalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+Capitalization.swift"; sourceTree = "<group>"; };
+		BFD82AE1216F028600A14868 /* UIDropdown.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIDropdown.storyboard; sourceTree = "<group>"; };
 		BFF14D87216002CB00733323 /* CalendarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarConfiguration.swift; sourceTree = "<group>"; };
 		BFF14D8B2160033B00733323 /* CalendarBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarBrain.swift; sourceTree = "<group>"; };
 		BFF14D8F2160072600733323 /* CalendarDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataMapper.swift; sourceTree = "<group>"; };
@@ -585,11 +579,9 @@
 		BFD82AAD216DA51000A14868 /* Dropdown */ = {
 			isa = PBXGroup;
 			children = (
-				BFD82AB3216DA53200A14868 /* UIDropdownView.swift */,
+				BFD82AE1216F028600A14868 /* UIDropdown.storyboard */,
+				BFD82AB3216DA53200A14868 /* UIDropdownViewController.swift */,
 				BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */,
-				BFD82AB1216DA53200A14868 /* UIDropdownConfig.swift */,
-				BFD82AB2216DA53200A14868 /* UIDropdownDataSource.swift */,
-				BFD82AAE216DA53200A14868 /* UIDropdownDelegate.swift */,
 			);
 			path = Dropdown;
 			sourceTree = "<group>";
@@ -599,7 +591,6 @@
 			children = (
 				BFD82ABB216DAD4F00A14868 /* UIStoryboard+Storyboards.swift */,
 				BFD82ABD216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift */,
-				BFD82ADD216E988200A14868 /* StringProtocol+Capitalization.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -785,6 +776,7 @@
 				BFD0291B21509AD5002FB9F5 /* LaunchScreen.storyboard in Resources */,
 				BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */,
 				BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */,
+				BFD82AE2216F028600A14868 /* UIDropdown.storyboard in Resources */,
 				BFD0291321509AD4002FB9F5 /* Main.storyboard in Resources */,
 				BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */,
 			);
@@ -824,14 +816,12 @@
 				BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */,
 				BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */,
 				BFD82A8E216D989E00A14868 /* NetworkingClientRequest.swift in Sources */,
-				BFD82AB8216DA53200A14868 /* UIDropdownDataSource.swift in Sources */,
 				BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */,
 				BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */,
 				BFD0299421509C9A002FB9F5 /* UIActionSheetConfig.swift in Sources */,
 				BFD82A8B216D989E00A14868 /* NetworkingService.swift in Sources */,
 				BFD82A92216D989E00A14868 /* NetworkingClientResponse.swift in Sources */,
 				BFD82A98216D989E00A14868 /* NetworkingResult.swift in Sources */,
-				BFD82ADE216E988200A14868 /* StringProtocol+Capitalization.swift in Sources */,
 				BFD0297221509C1E002FB9F5 /* CreditCardViewStyle.swift in Sources */,
 				BFD0299C21509CD5002FB9F5 /* UIFieldDelegate.swift in Sources */,
 				BFD0297021509C1E002FB9F5 /* CreditCardViewModelDelegate.swift in Sources */,
@@ -839,7 +829,6 @@
 				BFD82A97216D989E00A14868 /* NetworkingClientRequestBody.swift in Sources */,
 				BFD82A8C216D989E00A14868 /* Networking.swift in Sources */,
 				BFD82A95216D989E00A14868 /* NetworkingExtractable.swift in Sources */,
-				BFD82AB7216DA53200A14868 /* UIDropdownConfig.swift in Sources */,
 				BFD82A9F216DA25600A14868 /* UIInlinePickerView.swift in Sources */,
 				BFD0295E21509BB2002FB9F5 /* UICalendarViewController.swift in Sources */,
 				BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */,
@@ -888,7 +877,7 @@
 				BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */,
 				BFD82AD7216E7D3500A14868 /* AnyError.swift in Sources */,
 				BFD82ABE216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift in Sources */,
-				BFD82AB9216DA53200A14868 /* UIDropdownView.swift in Sources */,
+				BFD82AB9216DA53200A14868 /* UIDropdownViewController.swift in Sources */,
 				BFD0298121509C6A002FB9F5 /* CreditCardPrefixContainable.swift in Sources */,
 				BFF9DF172161A75300B80E9D /* CalendarLayoutCalculator.swift in Sources */,
 				BFD0296021509BB2002FB9F5 /* UICalendarViewCell.swift in Sources */,
@@ -899,7 +888,6 @@
 				BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */,
 				BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */,
 				BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeader.swift in Sources */,
-				BFD82AB4216DA53200A14868 /* UIDropdownDelegate.swift in Sources */,
 				BFD0299621509C9A002FB9F5 /* UIActionSheetDataSource.swift in Sources */,
 				BFD82ABC216DAD4F00A14868 /* UIStoryboard+Storyboards.swift in Sources */,
 			);

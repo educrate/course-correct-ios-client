@@ -10,3 +10,9 @@ import UIKit
 
 // MARK: - Conforms UIViewController to StoryboardIdentifiable
 extension UIViewController: StoryboardIdentifiable {}
+
+// MARK: - Conforms UITableViewCell to StoryboardIdentifiable
+extension UITableViewCell: StoryboardIdentifiable {}
+
+// MARK: - Conforms UIStoryboardSegue to StoryboardIdentifiable
+extension UIStoryboardSegue: StoryboardIdentifiable {}

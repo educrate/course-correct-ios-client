@@ -1,50 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mqo-6a-dGG">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="3nw-8M-Vtd">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEC-aV-MY3">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <connections>
-                                    <segue destination="B6j-Aj-JEb" kind="embed" identifier="embedcalendarviewcontroller" id="rwN-FU-nXC"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nEC-aV-MY3" secondAttribute="bottom" id="Pue-VT-rZx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nEC-aV-MY3" secondAttribute="trailing" id="h1g-kn-mnL"/>
-                            <constraint firstItem="nEC-aV-MY3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h5g-kN-Aqw"/>
-                            <constraint firstItem="nEC-aV-MY3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xDR-tx-edw"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="mqo-6a-dGG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PyN-Qv-gmT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8U0-xi-nXN" kind="relationship" relationship="rootViewController" id="gJC-z9-HJT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MhC-mM-h1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="31"/>
+            <point key="canvasLocation" x="-696" y="13"/>
         </scene>
-        <!--UICalendarViewController-->
-        <scene sceneID="c7P-Bw-PQR">
+        <!--SelectCollege-->
+        <scene sceneID="P9i-Bb-DNO">
             <objects>
-                <viewControllerPlaceholder storyboardName="UICalendarViewController" id="B6j-Aj-JEb" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R61-Df-BB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="SelectCollege" id="8U0-xi-nXN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zx4-T9-i05"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LdO-DM-DzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="413"/>
+            <point key="canvasLocation" x="-143" y="13"/>
         </scene>
     </scenes>
 </document>

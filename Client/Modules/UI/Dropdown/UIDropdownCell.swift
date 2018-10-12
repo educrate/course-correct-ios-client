@@ -7,56 +7,28 @@
 
 import UIKit
 
- class UIDropdownCell: UITableViewCell {
-     weak var label: UILabel!
+class UIDropdownCell: UITableViewCell {
     
-     func update(_ string: String) {
-        label.text = string
-    }
+    // MARK: Views
     
-    // MARK: Initalizers
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        let label = UILabel()
-        self.label = label
-        
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        initViews()
-        addViews()
-        addConstraints()
-    }
-    
-    public required init?(coder aDecoder: NSCoder) {
-        let label = UILabel()
-        self.label = label
-        
-        super.init(coder: aDecoder)
-        
-        initViews()
-        addViews()
-        addConstraints()
-    }
+    /// Label used for displaying the main content of the cell
+    @IBOutlet private weak var titleLabel: UILabel!
 }
 
+// MARK: - Public Methods
 extension UIDropdownCell {
-    static let reuseIdentifier = "UIDropdownCell"
-}
-
-private extension UIDropdownCell {
-    func initViews() {
-        selectionStyle = .none
+    
+    /// Method used to set title of cell with a plain string.
+    ///
+    /// - Parameter text: Text to be set as the cell's title
+    func setTitle(with text: String) {
+        titleLabel.text = text
     }
     
-    func addViews() {
-        addSubview(label)
-    }
-    
-    func addConstraints() {
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        label.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        label.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        label.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        label.topAnchor.constraint(equalTo: topAnchor).isActive = true
+    /// Method used to set title of cell with an attributed string.
+    ///
+    /// - Parameter attributedString: Text to be set as the cell's title
+    func setTitle(with attributedString: NSAttributedString) {
+        titleLabel.attributedText = attributedString
     }
 }

@@ -15,7 +15,7 @@ class UIActionSheetView: UIView {
     
     // MARK: Properties
     private weak var tableViewHeightConstraint: NSLayoutConstraint!
-   private  weak var tableViewTopConstraint: NSLayoutConstraint!
+    private  weak var tableViewTopConstraint: NSLayoutConstraint!
     
     // MARK: Properties
     private var actions: [UIActionSheetAction] = []
@@ -108,7 +108,7 @@ class UIActionSheetView: UIView {
     
     // MARK: Programmatic Initalizer
     init(_ frame: CGRect,
-                config: UIActionSheetConfig = .default) {
+         config: UIActionSheetConfig = .default) {
         
         super.init(frame: frame)
     }
@@ -132,7 +132,7 @@ private extension UIActionSheetView {
         
         let tableViewHeightAnchor = tableView.heightAnchor.constraint(equalToConstant: tableViewHeight())
         tableViewHeightAnchor.isActive = true
-
+        
         tableViewHeightConstraint = tableViewHeightAnchor
         
         let tableViewTopAnchor = tableView.topAnchor.constraint(equalTo: bottomAnchor)
@@ -312,8 +312,8 @@ extension UIActionSheetView: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: UIActionSheetCell.reuseIdentifier,
                                                        for: indexPath) as? UIActionSheetCell else {
                                                         
-            assert(false, "table view cell registration inconsistency")
-            return UITableViewCell()
+                                                        assert(false, "table view cell registration inconsistency")
+                                                        return UITableViewCell()
         }
         
         guard let title = action(for: indexPath)?.title else {

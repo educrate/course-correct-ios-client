@@ -24,7 +24,11 @@ class SelectCollegePresenter: SelectCollegePresenterProtocol {
 }
 
 extension SelectCollegePresenter {
-    func updateView(for input: String) {
+    func updateView(for input: String?) {
+        guard let input = input else {
+            return
+        }
+        
         interactor?.fetchColleges(for: input)
     }
     

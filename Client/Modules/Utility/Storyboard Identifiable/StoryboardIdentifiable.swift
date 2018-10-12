@@ -21,3 +21,17 @@ extension StoryboardIdentifiable where Self: UIViewController {
         return String(describing: self)
     }
 }
+
+// MARK: - Extract Identifier From Reusable Cell
+extension StoryboardIdentifiable where Self: UITableViewCell {
+    static var storyboardIdentifier: String {
+        return String(describing: self)
+    }
+}
+
+// MARK: - Extract Identifier From Reusable Cell
+extension StoryboardIdentifiable where Self: UIStoryboardSegue {
+    static var storyboardIdentifier: String {
+        return String(describing: self)
+    }
+}

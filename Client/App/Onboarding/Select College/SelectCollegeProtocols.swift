@@ -22,7 +22,7 @@ protocol SelectCollegePresenterProtocol: class {
     // MARK: - From View
     
     // MARK: Update Methods
-    func updateView(for input: String)
+    func updateView(for input: String?)
     
     // MARK: Routing Methods
     
