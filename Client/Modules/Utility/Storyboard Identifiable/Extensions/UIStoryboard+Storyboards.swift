@@ -18,6 +18,7 @@ extension UIStoryboard {
         case main = "Main"
         case selectCollege = "SelectCollege"
         case enterStudentIdentifier = "EnterStudentIdentifier"
+        case enterAccessCode = "EnterAccessCode"
         
         // MARK: Modules
         case uiDropdown = "UIDropdown"

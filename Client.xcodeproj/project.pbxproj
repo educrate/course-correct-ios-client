@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
+		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
+		BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */; };
+		BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D2217074C600771E5D /* EnterAccessCodeViewController.swift */; };
+		BF70B5D8217074C600771E5D /* EnterAccessCodeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D3217074C600771E5D /* EnterAccessCodeProtocols.swift */; };
+		BF70B5D9217074C600771E5D /* EnterAccessCodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D4217074C600771E5D /* EnterAccessCodeInteractor.swift */; };
+		BF70B5DB217074D900771E5D /* EnterAccessCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF70B5DA217074D900771E5D /* EnterAccessCode.storyboard */; };
 		BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */; };
 		BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD221649618007EDE49 /* UICalendarViewCellDelegate.swift */; };
 		BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeader.swift */; };
@@ -130,6 +136,12 @@
 /* Begin PBXFileReference section */
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
+		BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeRouter.swift; sourceTree = "<group>"; };
+		BF70B5D2217074C600771E5D /* EnterAccessCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeViewController.swift; sourceTree = "<group>"; };
+		BF70B5D3217074C600771E5D /* EnterAccessCodeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeProtocols.swift; sourceTree = "<group>"; };
+		BF70B5D4217074C600771E5D /* EnterAccessCodeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeInteractor.swift; sourceTree = "<group>"; };
+		BF70B5DA217074D900771E5D /* EnterAccessCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnterAccessCode.storyboard; sourceTree = "<group>"; };
 		BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataSource.swift; sourceTree = "<group>"; };
 		BFBE6FD221649618007EDE49 /* UICalendarViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewCellDelegate.swift; sourceTree = "<group>"; };
 		BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewMonthHeader.swift; sourceTree = "<group>"; };
@@ -310,8 +322,22 @@
 			children = (
 				BFD82AA0216DA43D00A14868 /* Select College */,
 				BFD82AE7217066CB00A14868 /* Enter Student Identifier */,
+				BF70B5CF217074AC00771E5D /* Enter Access Code */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BF70B5CF217074AC00771E5D /* Enter Access Code */ = {
+			isa = PBXGroup;
+			children = (
+				BF70B5DA217074D900771E5D /* EnterAccessCode.storyboard */,
+				BF70B5D2217074C600771E5D /* EnterAccessCodeViewController.swift */,
+				BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */,
+				BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */,
+				BF70B5D4217074C600771E5D /* EnterAccessCodeInteractor.swift */,
+				BF70B5D3217074C600771E5D /* EnterAccessCodeProtocols.swift */,
+			);
+			path = "Enter Access Code";
 			sourceTree = "<group>";
 		};
 		BFBE6FC9216493C3007EDE49 /* Cells */ = {
@@ -801,6 +827,7 @@
 			files = (
 				BFD82AF32170671B00A14868 /* EnterStudentIdentifier.storyboard in Resources */,
 				BFD0291B21509AD5002FB9F5 /* LaunchScreen.storyboard in Resources */,
+				BF70B5DB217074D900771E5D /* EnterAccessCode.storyboard in Resources */,
 				BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */,
 				BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */,
 				BFD82AE2216F028600A14868 /* UIDropdown.storyboard in Resources */,
@@ -835,14 +862,17 @@
 				BFF14D8C2160033B00733323 /* CalendarBrain.swift in Sources */,
 				BFD82ACE216E77B600A14868 /* SelectCollegeProtocols.swift in Sources */,
 				BFF14D922160492F00733323 /* DateHelper.swift in Sources */,
+				BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */,
 				BFD82A91216D989E00A14868 /* NetworkingClientResult.swift in Sources */,
 				BFD029A721509CFD002FB9F5 /* UIInlinePickerCellConfig.swift in Sources */,
 				BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */,
 				BFD029A621509CFD002FB9F5 /* UIInlinePickerCell.swift in Sources */,
+				BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */,
 				BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */,
 				BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */,
 				BFD82AF02170670400A14868 /* EnterStudentIdentifierProtocols.swift in Sources */,
 				BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */,
+				BF70B5D8217074C600771E5D /* EnterAccessCodeProtocols.swift in Sources */,
 				BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */,
 				BFD82A8E216D989E00A14868 /* NetworkingClientRequest.swift in Sources */,
 				BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */,
@@ -867,6 +897,7 @@
 				BFD0298321509C6A002FB9F5 /* CreditCardMathematics.swift in Sources */,
 				BFD0297721509C1E002FB9F5 /* CreditCardView.swift in Sources */,
 				BFD0299B21509CD5002FB9F5 /* UIField.swift in Sources */,
+				BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */,
 				BFD82AC5216DB88500A14868 /* ModuleWireframeable.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */,
 				BFD82A89216D989E00A14868 /* NetworkingClientHTTPMethods.swift in Sources */,
@@ -891,6 +922,7 @@
 				BFD82AEF2170670400A14868 /* EnterStudentIdentifierViewController.swift in Sources */,
 				BFD82A93216D989E00A14868 /* NetworkingCache.swift in Sources */,
 				BFD0298221509C6A002FB9F5 /* CreditCardImageExtractor.swift in Sources */,
+				BF70B5D9217074C600771E5D /* EnterAccessCodeInteractor.swift in Sources */,
 				BFD82A88216D989E00A14868 /* NetworkingConfiguration.swift in Sources */,
 				BFD82AEE2170670400A14868 /* EnterStudentIdentifierRouter.swift in Sources */,
 				BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */,
