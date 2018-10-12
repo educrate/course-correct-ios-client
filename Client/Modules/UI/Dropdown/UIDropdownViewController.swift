@@ -16,9 +16,14 @@ protocol UIDropdownDelegate: class {
 // MARK: - Class Declaration
 class UIDropdownViewController: UIViewController {
     
-    // MARK: Views
+    // MARK: IBOutlets
     @IBOutlet private weak var inputField: UITextField!
     @IBOutlet private weak var dropdown: UITableView!
+    
+    // MARK: IBActions
+    @IBAction func inputChanged(_ sender: UITextField, forEvent event: UIEvent) {
+        delegate?.inputChanged(sender)
+    }
     
     // MARK: Delegation
     weak var delegate: UIDropdownDelegate?
@@ -28,36 +33,10 @@ class UIDropdownViewController: UIViewController {
 }
 
 extension UIDropdownViewController {
-    @IBAction func inputChanged(_ sender: UITextField, forEvent event: UIEvent) {
-        delegate?.inputChanged(sender)
-    }
-}
-
-private extension UIDropdownViewController {
-    var cellHeight: CGFloat {
-        guard let delegate = delegate else {
-            return 50
-        }
-        
-        return delegate.cellHeight
-    }
-}
-
-extension UIDropdownViewController {
     func setDropdown(_ newData: [String]) {
         data = newData
         dropdown.reloadData()
-        show()
-    }
-}
-
-private extension UIDropdownViewController {
-    func show() {
         dropdown.isHidden = false
-    }
-    
-    func hide() {
-        dropdown.isHidden = true
     }
 }
 
@@ -95,6 +74,16 @@ extension UIDropdownViewController: UITableViewDelegate {
         let title = data[indexPath.row]
         
         inputField.text = title
-        hide()
+        dropdown.isHidden = true
+    }
+}
+
+private extension UIDropdownViewController {
+    var cellHeight: CGFloat {
+        guard let delegate = delegate else {
+            return 50
+        }
+        
+        return delegate.cellHeight
     }
 }
