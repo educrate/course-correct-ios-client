@@ -80,10 +80,6 @@ extension UIDropdownViewController: UITableViewDelegate {
 
 private extension UIDropdownViewController {
     var cellHeight: CGFloat {
-        guard let delegate = delegate else {
-            return 50
-        }
-        
-        return delegate.cellHeight
+        return delegate?.cellHeight ?? 50
     }
 }
