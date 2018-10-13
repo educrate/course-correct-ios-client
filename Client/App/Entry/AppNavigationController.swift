@@ -11,8 +11,9 @@ import UIKit
 class AppNavigationController: UINavigationController {}
 
 extension AppNavigationController {
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationBar.makeTransparent()
         setRootView()
     }
 }

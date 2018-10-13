@@ -34,6 +34,8 @@
 		BFCDA60421727AF500DB31FC /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA60321727AF500DB31FC /* AppViewController.swift */; };
 		BFCDA60621727B3D00DB31FC /* AppLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDA60521727B3D00DB31FC /* AppLaunch.storyboard */; };
 		BFCDA60821727B4600DB31FC /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDA60721727B4600DB31FC /* App.storyboard */; };
+		BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA60A2172903F00DB31FC /* UIImage+Additions.swift */; };
+		BFCDA60D2172905800DB31FC /* UINavigationBar+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA60C2172905800DB31FC /* UINavigationBar+Additions.swift */; };
 		BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */; };
 		BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD0291421509AD4002FB9F5 /* Client.xcdatamodeld */; };
 		BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD0291721509AD5002FB9F5 /* Assets.xcassets */; };
@@ -175,6 +177,8 @@
 		BFCDA60321727AF500DB31FC /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		BFCDA60521727B3D00DB31FC /* AppLaunch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppLaunch.storyboard; sourceTree = "<group>"; };
 		BFCDA60721727B4600DB31FC /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
+		BFCDA60A2172903F00DB31FC /* UIImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
+		BFCDA60C2172905800DB31FC /* UINavigationBar+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Additions.swift"; sourceTree = "<group>"; };
 		BFD0290A21509AD4002FB9F5 /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD0291521509AD4002FB9F5 /* Client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Client.xcdatamodel; sourceTree = "<group>"; };
@@ -459,6 +463,15 @@
 			path = "Create Password";
 			sourceTree = "<group>";
 		};
+		BFCDA6092172902F00DB31FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFCDA60A2172903F00DB31FC /* UIImage+Additions.swift */,
+				BFCDA60C2172905800DB31FC /* UINavigationBar+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BFCECC9F2152066B001BB2BA /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -704,6 +717,7 @@
 		BFD82AC2216DB85C00A14868 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BFCDA6092172902F00DB31FC /* Extensions */,
 				BFD82AC3216DB86200A14868 /* Viper */,
 			);
 			path = Common;
@@ -977,6 +991,7 @@
 				BFD029AA21509CFD002FB9F5 /* UIInlinePickerConfig.swift in Sources */,
 				BFD82ACB216E77B600A14868 /* SelectCollegePresenter.swift in Sources */,
 				BFCDA5FC21725FF700DB31FC /* CreatePasswordProtocols.swift in Sources */,
+				BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */,
 				BFD82A9D216DA13800A14868 /* UIActionSheetView.swift in Sources */,
 				BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */,
 				BFD0299521509C9A002FB9F5 /* UIActionSheetAction.swift in Sources */,
@@ -1020,6 +1035,7 @@
 				BFCDA5FB21725FF700DB31FC /* CreatePasswordViewController.swift in Sources */,
 				BFD82AD8216E7D3500A14868 /* NoError.swift in Sources */,
 				BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */,
+				BFCDA60D2172905800DB31FC /* UINavigationBar+Additions.swift in Sources */,
 				BFF14D962160495000733323 /* DayHelper.swift in Sources */,
 				BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */,
 				BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */,
