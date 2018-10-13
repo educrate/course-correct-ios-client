@@ -11,7 +11,9 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol EnterStudentIdentifierWireframeProtocol: class, ModuleWireframeable {}
+protocol EnterStudentIdentifierWireframeProtocol: class, ModuleWireframeable {
+    func presentEnterAccessCode()
+}
 
 
 // MARK: - Presenter

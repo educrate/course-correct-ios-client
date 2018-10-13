@@ -18,11 +18,25 @@
 		BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */; };
 		BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD221649618007EDE49 /* UICalendarViewCellDelegate.swift */; };
 		BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeader.swift */; };
+		BFCDA5EC21725E7200DB31FC /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5E721725E7200DB31FC /* WelcomePresenter.swift */; };
+		BFCDA5ED21725E7200DB31FC /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5E821725E7200DB31FC /* WelcomeRouter.swift */; };
+		BFCDA5EE21725E7200DB31FC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5E921725E7200DB31FC /* WelcomeViewController.swift */; };
+		BFCDA5EF21725E7200DB31FC /* WelcomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5EA21725E7200DB31FC /* WelcomeProtocols.swift */; };
+		BFCDA5F021725E7200DB31FC /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5EB21725E7200DB31FC /* WelcomeInteractor.swift */; };
+		BFCDA5F221725E8500DB31FC /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDA5F121725E8500DB31FC /* Welcome.storyboard */; };
+		BFCDA5F921725FF700DB31FC /* CreatePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5F421725FF700DB31FC /* CreatePasswordPresenter.swift */; };
+		BFCDA5FA21725FF700DB31FC /* CreatePasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5F521725FF700DB31FC /* CreatePasswordRouter.swift */; };
+		BFCDA5FB21725FF700DB31FC /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5F621725FF700DB31FC /* CreatePasswordViewController.swift */; };
+		BFCDA5FC21725FF700DB31FC /* CreatePasswordProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5F721725FF700DB31FC /* CreatePasswordProtocols.swift */; };
+		BFCDA5FD21725FF700DB31FC /* CreatePasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5F821725FF700DB31FC /* CreatePasswordInteractor.swift */; };
+		BFCDA5FF2172601200DB31FC /* CreatePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDA5FE2172601200DB31FC /* CreatePassword.storyboard */; };
+		BFCDA60221727A2300DB31FC /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA60121727A2300DB31FC /* AppNavigationController.swift */; };
+		BFCDA60421727AF500DB31FC /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA60321727AF500DB31FC /* AppViewController.swift */; };
+		BFCDA60621727B3D00DB31FC /* AppLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDA60521727B3D00DB31FC /* AppLaunch.storyboard */; };
+		BFCDA60821727B4600DB31FC /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDA60721727B4600DB31FC /* App.storyboard */; };
 		BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */; };
-		BFD0291321509AD4002FB9F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0291121509AD4002FB9F5 /* Main.storyboard */; };
 		BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD0291421509AD4002FB9F5 /* Client.xcdatamodeld */; };
 		BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD0291721509AD5002FB9F5 /* Assets.xcassets */; };
-		BFD0291B21509AD5002FB9F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD0291921509AD5002FB9F5 /* LaunchScreen.storyboard */; };
 		BFD0292621509AD5002FB9F5 /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0292521509AD5002FB9F5 /* ClientTests.swift */; };
 		BFD0293121509AD5002FB9F5 /* ClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0293021509AD5002FB9F5 /* ClientUITests.swift */; };
 		BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0294621509BB2002FB9F5 /* CalendarEvent.swift */; };
@@ -145,12 +159,26 @@
 		BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataSource.swift; sourceTree = "<group>"; };
 		BFBE6FD221649618007EDE49 /* UICalendarViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewCellDelegate.swift; sourceTree = "<group>"; };
 		BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewMonthHeader.swift; sourceTree = "<group>"; };
+		BFCDA5E721725E7200DB31FC /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		BFCDA5E821725E7200DB31FC /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		BFCDA5E921725E7200DB31FC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		BFCDA5EA21725E7200DB31FC /* WelcomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeProtocols.swift; sourceTree = "<group>"; };
+		BFCDA5EB21725E7200DB31FC /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
+		BFCDA5F121725E8500DB31FC /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		BFCDA5F421725FF700DB31FC /* CreatePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordPresenter.swift; sourceTree = "<group>"; };
+		BFCDA5F521725FF700DB31FC /* CreatePasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordRouter.swift; sourceTree = "<group>"; };
+		BFCDA5F621725FF700DB31FC /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
+		BFCDA5F721725FF700DB31FC /* CreatePasswordProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordProtocols.swift; sourceTree = "<group>"; };
+		BFCDA5F821725FF700DB31FC /* CreatePasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordInteractor.swift; sourceTree = "<group>"; };
+		BFCDA5FE2172601200DB31FC /* CreatePassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatePassword.storyboard; sourceTree = "<group>"; };
+		BFCDA60121727A2300DB31FC /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		BFCDA60321727AF500DB31FC /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		BFCDA60521727B3D00DB31FC /* AppLaunch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppLaunch.storyboard; sourceTree = "<group>"; };
+		BFCDA60721727B4600DB31FC /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		BFD0290A21509AD4002FB9F5 /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFD0291221509AD4002FB9F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFD0291521509AD4002FB9F5 /* Client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Client.xcdatamodel; sourceTree = "<group>"; };
 		BFD0291721509AD5002FB9F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BFD0291A21509AD5002FB9F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD0291C21509AD5002FB9F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFD0292121509AD5002FB9F5 /* ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0292521509AD5002FB9F5 /* ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTests.swift; sourceTree = "<group>"; };
@@ -277,9 +305,11 @@
 		BF4E718D216D4C1A00100FE1 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
+				BFCDA60521727B3D00DB31FC /* AppLaunch.storyboard */,
 				BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */,
-				BFD0291121509AD4002FB9F5 /* Main.storyboard */,
-				BFD0291921509AD5002FB9F5 /* LaunchScreen.storyboard */,
+				BFCDA60121727A2300DB31FC /* AppNavigationController.swift */,
+				BFCDA60321727AF500DB31FC /* AppViewController.swift */,
+				BFCDA60721727B4600DB31FC /* App.storyboard */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -320,9 +350,11 @@
 		BF579339216D4485008DBB46 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				BF70B5DC21715BA800771E5D /* Welcome */,
 				BFD82AA0216DA43D00A14868 /* Select College */,
 				BFD82AE7217066CB00A14868 /* Enter Student Identifier */,
 				BF70B5CF217074AC00771E5D /* Enter Access Code */,
+				BFCDA5F321725FDB00DB31FC /* Create Password */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -338,6 +370,19 @@
 				BF70B5D3217074C600771E5D /* EnterAccessCodeProtocols.swift */,
 			);
 			path = "Enter Access Code";
+			sourceTree = "<group>";
+		};
+		BF70B5DC21715BA800771E5D /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				BFCDA5F121725E8500DB31FC /* Welcome.storyboard */,
+				BFCDA5E921725E7200DB31FC /* WelcomeViewController.swift */,
+				BFCDA5E721725E7200DB31FC /* WelcomePresenter.swift */,
+				BFCDA5E821725E7200DB31FC /* WelcomeRouter.swift */,
+				BFCDA5EB21725E7200DB31FC /* WelcomeInteractor.swift */,
+				BFCDA5EA21725E7200DB31FC /* WelcomeProtocols.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		BFBE6FC9216493C3007EDE49 /* Cells */ = {
@@ -399,6 +444,19 @@
 				BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeader.swift */,
 			);
 			path = Month;
+			sourceTree = "<group>";
+		};
+		BFCDA5F321725FDB00DB31FC /* Create Password */ = {
+			isa = PBXGroup;
+			children = (
+				BFCDA5FE2172601200DB31FC /* CreatePassword.storyboard */,
+				BFCDA5F621725FF700DB31FC /* CreatePasswordViewController.swift */,
+				BFCDA5F421725FF700DB31FC /* CreatePasswordPresenter.swift */,
+				BFCDA5F521725FF700DB31FC /* CreatePasswordRouter.swift */,
+				BFCDA5F821725FF700DB31FC /* CreatePasswordInteractor.swift */,
+				BFCDA5F721725FF700DB31FC /* CreatePasswordProtocols.swift */,
+			);
+			path = "Create Password";
 			sourceTree = "<group>";
 		};
 		BFCECC9F2152066B001BB2BA /* Views */ = {
@@ -826,13 +884,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD82AF32170671B00A14868 /* EnterStudentIdentifier.storyboard in Resources */,
-				BFD0291B21509AD5002FB9F5 /* LaunchScreen.storyboard in Resources */,
+				BFCDA5FF2172601200DB31FC /* CreatePassword.storyboard in Resources */,
 				BF70B5DB217074D900771E5D /* EnterAccessCode.storyboard in Resources */,
+				BFCDA60821727B4600DB31FC /* App.storyboard in Resources */,
+				BFCDA60621727B3D00DB31FC /* AppLaunch.storyboard in Resources */,
 				BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */,
 				BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */,
+				BFCDA5F221725E8500DB31FC /* Welcome.storyboard in Resources */,
 				BFD82AE2216F028600A14868 /* UIDropdown.storyboard in Resources */,
 				BFD82AE6217061DA00A14868 /* UIField.storyboard in Resources */,
-				BFD0291321509AD4002FB9F5 /* Main.storyboard in Resources */,
 				BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -867,6 +927,7 @@
 				BFD029A721509CFD002FB9F5 /* UIInlinePickerCellConfig.swift in Sources */,
 				BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */,
 				BFD029A621509CFD002FB9F5 /* UIInlinePickerCell.swift in Sources */,
+				BFCDA5F921725FF700DB31FC /* CreatePasswordPresenter.swift in Sources */,
 				BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */,
 				BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */,
 				BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */,
@@ -874,6 +935,7 @@
 				BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */,
 				BF70B5D8217074C600771E5D /* EnterAccessCodeProtocols.swift in Sources */,
 				BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */,
+				BFCDA5F021725E7200DB31FC /* WelcomeInteractor.swift in Sources */,
 				BFD82A8E216D989E00A14868 /* NetworkingClientRequest.swift in Sources */,
 				BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */,
 				BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */,
@@ -883,6 +945,7 @@
 				BFD82A98216D989E00A14868 /* NetworkingResult.swift in Sources */,
 				BFD0297221509C1E002FB9F5 /* CreditCardViewStyle.swift in Sources */,
 				BFD0297021509C1E002FB9F5 /* CreditCardViewModelDelegate.swift in Sources */,
+				BFCDA5FD21725FF700DB31FC /* CreatePasswordInteractor.swift in Sources */,
 				BFD0295A21509BB2002FB9F5 /* UICalendarViewEventCell.swift in Sources */,
 				BFD82A97216D989E00A14868 /* NetworkingClientRequestBody.swift in Sources */,
 				BFD82AED2170670400A14868 /* EnterStudentIdentifierPresenter.swift in Sources */,
@@ -901,6 +964,7 @@
 				BFD82AC5216DB88500A14868 /* ModuleWireframeable.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */,
 				BFD82A89216D989E00A14868 /* NetworkingClientHTTPMethods.swift in Sources */,
+				BFCDA60221727A2300DB31FC /* AppNavigationController.swift in Sources */,
 				BFD82AF12170670400A14868 /* EnterStudentIdentifierInteractor.swift in Sources */,
 				BFD029A821509CFD002FB9F5 /* UIInlinePickerDelegate.swift in Sources */,
 				BFD0296E21509C1E002FB9F5 /* CreditCardViewModelDataSource.swift in Sources */,
@@ -912,6 +976,7 @@
 				BFD0299021509C9A002FB9F5 /* UIActionSheetDelegate.swift in Sources */,
 				BFD029AA21509CFD002FB9F5 /* UIInlinePickerConfig.swift in Sources */,
 				BFD82ACB216E77B600A14868 /* SelectCollegePresenter.swift in Sources */,
+				BFCDA5FC21725FF700DB31FC /* CreatePasswordProtocols.swift in Sources */,
 				BFD82A9D216DA13800A14868 /* UIActionSheetView.swift in Sources */,
 				BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */,
 				BFD0299521509C9A002FB9F5 /* UIActionSheetAction.swift in Sources */,
@@ -931,6 +996,7 @@
 				BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */,
 				BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */,
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
+				BFCDA60421727AF500DB31FC /* AppViewController.swift in Sources */,
 				BFD82A87216D989E00A14868 /* NetworkingClientError.swift in Sources */,
 				BFD82ACF216E77B600A14868 /* SelectCollegeInteractor.swift in Sources */,
 				BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */,
@@ -938,14 +1004,20 @@
 				BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */,
 				BFD82A96216D989E00A14868 /* NetworkingServiceError.swift in Sources */,
 				BFD82A8A216D989E00A14868 /* NetworkingError.swift in Sources */,
+				BFCDA5EC21725E7200DB31FC /* WelcomePresenter.swift in Sources */,
+				BFCDA5ED21725E7200DB31FC /* WelcomeRouter.swift in Sources */,
+				BFCDA5EF21725E7200DB31FC /* WelcomeProtocols.swift in Sources */,
 				BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */,
 				BFD82AD7216E7D3500A14868 /* AnyError.swift in Sources */,
 				BFD82ABE216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				BFD82AB9216DA53200A14868 /* UIDropdownViewController.swift in Sources */,
 				BFD0298121509C6A002FB9F5 /* CreditCardPrefixContainable.swift in Sources */,
+				BFCDA5FA21725FF700DB31FC /* CreatePasswordRouter.swift in Sources */,
 				BFF9DF172161A75300B80E9D /* CalendarLayoutCalculator.swift in Sources */,
 				BFD0296021509BB2002FB9F5 /* UICalendarViewCell.swift in Sources */,
 				BFD82A8F216D989E00A14868 /* NetworkingClientValidation.swift in Sources */,
+				BFCDA5EE21725E7200DB31FC /* WelcomeViewController.swift in Sources */,
+				BFCDA5FB21725FF700DB31FC /* CreatePasswordViewController.swift in Sources */,
 				BFD82AD8216E7D3500A14868 /* NoError.swift in Sources */,
 				BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */,
 				BFF14D962160495000733323 /* DayHelper.swift in Sources */,
@@ -987,25 +1059,6 @@
 			targetProxy = BFD0292D21509AD5002FB9F5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BFD0291121509AD4002FB9F5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFD0291221509AD4002FB9F5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BFD0291921509AD5002FB9F5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFD0291A21509AD5002FB9F5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BFD0293321509AD5002FB9F5 /* Debug */ = {

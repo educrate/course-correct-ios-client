@@ -9,9 +9,10 @@
 import UIKit
 
 class EnterAccessCodeRouter: EnterAccessCodeWireframeProtocol {
-    
     weak var viewController: UIViewController?
-    
+}
+
+extension EnterAccessCodeRouter {
     static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .enterAccessCode)
         let view: EnterAccessCodeViewController = storyboard.instantiateViewController()
@@ -24,5 +25,13 @@ class EnterAccessCodeRouter: EnterAccessCodeWireframeProtocol {
         router.viewController = view
         
         return view
+    }
+}
+
+extension EnterAccessCodeRouter {
+    func presentCreatePassword() {
+        if let view = viewController, let navigationController = view.navigationController {
+            navigationController.pushViewController(CreatePasswordRouter.createModule(), animated: true)
+        }
     }
 }

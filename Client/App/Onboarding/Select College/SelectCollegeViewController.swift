@@ -13,7 +13,6 @@ class SelectCollegeViewController: UIViewController {
     // MARK: Viper
     var presenter: SelectCollegePresenterProtocol?
     
-    
     // MARK: Views
     @IBOutlet private weak var collegeSelector: UIDropdownViewController!
 }

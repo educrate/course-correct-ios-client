@@ -9,9 +9,10 @@
 import UIKit
 
 class SelectCollegeRouter: SelectCollegeWireframeProtocol {
-    
     weak var viewController: UIViewController?
-    
+}
+
+extension SelectCollegeRouter {
     static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .selectCollege)
         let view: SelectCollegeViewController = storyboard.instantiateViewController()
@@ -24,5 +25,13 @@ class SelectCollegeRouter: SelectCollegeWireframeProtocol {
         router.viewController = view
         
         return view
+    }
+}
+
+extension SelectCollegeRouter {
+    func presentEnterStudentIdentifier() {
+        if let view = viewController, let navigationController = view.navigationController {
+            navigationController.pushViewController(EnterStudentIdentifierRouter.createModule(), animated: true)
+        }
     }
 }
