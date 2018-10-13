@@ -18,6 +18,16 @@ class SelectCollegeViewController: UIViewController {
 }
 
 extension SelectCollegeViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        collegeSelector.setPlaceholder("Name of University")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        collegeSelector.beginEditing()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dropdownViewController: UIDropdownViewController = segue.viewController()
         collegeSelector = dropdownViewController
@@ -47,6 +57,7 @@ extension SelectCollegeViewController: UIDropdownDelegate {
     }
     
     func dropdown(_ dropdown: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        collegeSelector.endEditing()
+        presenter?.showEnterStudentIdentifier()
     }
 }

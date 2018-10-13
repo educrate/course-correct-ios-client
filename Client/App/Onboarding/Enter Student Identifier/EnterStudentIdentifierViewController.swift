@@ -18,8 +18,31 @@ class EnterStudentIdentifierViewController: UIViewController, EnterStudentIdenti
 }
 
 extension EnterStudentIdentifierViewController {
+    @IBAction func nextPressed(_ sender: UIButton, forEvent event: UIEvent) {
+        field.endEditing()
+        presenter?.studentIdentifierEntered(with: field.text)
+    }
+}
+
+extension EnterStudentIdentifierViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        field.setPlaceholder("Student Identifier")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        field.beginEditing()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let fieldViewController: UIFieldViewController = segue.viewController()
         field = fieldViewController
+    }
+}
+
+extension EnterStudentIdentifierViewController {
+    func show(error: EnterStudentIdentifierError) {
+        
     }
 }

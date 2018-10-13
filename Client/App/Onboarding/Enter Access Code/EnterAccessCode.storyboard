@@ -28,6 +28,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ytc-o4-gCg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ATQ-dm-9B1">
+                        <barButtonItem key="backBarButtonItem" title=" " id="j41-wi-Afc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="field" destination="LbI-QW-XFU" id="d63-GE-HDl"/>
                     </connections>

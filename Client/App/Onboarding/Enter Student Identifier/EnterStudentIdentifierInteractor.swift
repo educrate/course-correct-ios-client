@@ -11,3 +11,9 @@ import UIKit
 class EnterStudentIdentifierInteractor: EnterStudentIdentifierInteractorProtocol {
     weak var presenter: EnterStudentIdentifierPresenterProtocol?
 }
+
+extension EnterStudentIdentifierInteractor {
+    func validateStudentIdentifier() {
+        presenter?.studentIdentifierValidated(for: "", with: Result(value: ()))
+    }
+}

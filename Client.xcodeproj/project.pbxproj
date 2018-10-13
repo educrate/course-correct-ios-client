@@ -36,6 +36,7 @@
 		BFCDA60821727B4600DB31FC /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDA60721727B4600DB31FC /* App.storyboard */; };
 		BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA60A2172903F00DB31FC /* UIImage+Additions.swift */; };
 		BFCDA60D2172905800DB31FC /* UINavigationBar+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA60C2172905800DB31FC /* UINavigationBar+Additions.swift */; };
+		BFCDA6112172B48C00DB31FC /* EnterStudentIdentifierError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */; };
 		BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */; };
 		BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD0291421509AD4002FB9F5 /* Client.xcdatamodeld */; };
 		BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD0291721509AD5002FB9F5 /* Assets.xcassets */; };
@@ -112,7 +113,7 @@
 		BFD82AD8216E7D3500A14868 /* NoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD4216E7D3500A14868 /* NoError.swift */; };
 		BFD82AD9216E7D3500A14868 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD5216E7D3500A14868 /* Result.swift */; };
 		BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD6216E7D3500A14868 /* ResultProtocol.swift */; };
-		BFD82ADC216E816C00A14868 /* SelectCollegeErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82ADB216E816C00A14868 /* SelectCollegeErrors.swift */; };
+		BFD82ADC216E816C00A14868 /* SelectCollegeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82ADB216E816C00A14868 /* SelectCollegeError.swift */; };
 		BFD82AE2216F028600A14868 /* UIDropdown.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD82AE1216F028600A14868 /* UIDropdown.storyboard */; };
 		BFD82AE6217061DA00A14868 /* UIField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD82AE5217061DA00A14868 /* UIField.storyboard */; };
 		BFD82AED2170670400A14868 /* EnterStudentIdentifierPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AE82170670400A14868 /* EnterStudentIdentifierPresenter.swift */; };
@@ -179,6 +180,7 @@
 		BFCDA60721727B4600DB31FC /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		BFCDA60A2172903F00DB31FC /* UIImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
 		BFCDA60C2172905800DB31FC /* UINavigationBar+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Additions.swift"; sourceTree = "<group>"; };
+		BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterStudentIdentifierError.swift; sourceTree = "<group>"; };
 		BFD0290A21509AD4002FB9F5 /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD0291521509AD4002FB9F5 /* Client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Client.xcdatamodel; sourceTree = "<group>"; };
@@ -261,7 +263,7 @@
 		BFD82AD4216E7D3500A14868 /* NoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoError.swift; sourceTree = "<group>"; };
 		BFD82AD5216E7D3500A14868 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		BFD82AD6216E7D3500A14868 /* ResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
-		BFD82ADB216E816C00A14868 /* SelectCollegeErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeErrors.swift; sourceTree = "<group>"; };
+		BFD82ADB216E816C00A14868 /* SelectCollegeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeError.swift; sourceTree = "<group>"; };
 		BFD82AE1216F028600A14868 /* UIDropdown.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIDropdown.storyboard; sourceTree = "<group>"; };
 		BFD82AE5217061DA00A14868 /* UIField.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIField.storyboard; sourceTree = "<group>"; };
 		BFD82AE82170670400A14868 /* EnterStudentIdentifierPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterStudentIdentifierPresenter.swift; sourceTree = "<group>"; };
@@ -470,6 +472,22 @@
 				BFCDA60C2172905800DB31FC /* UINavigationBar+Additions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BFCDA60E2172B45900DB31FC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BFD82ADB216E816C00A14868 /* SelectCollegeError.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BFCDA60F2172B47500DB31FC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		BFCECC9F2152066B001BB2BA /* Views */ = {
@@ -681,7 +699,7 @@
 				BFD82AC7216E77B600A14868 /* SelectCollegeRouter.swift */,
 				BFD82ACA216E77B600A14868 /* SelectCollegeInteractor.swift */,
 				BFD82AC9216E77B600A14868 /* SelectCollegeProtocols.swift */,
-				BFD82ADB216E816C00A14868 /* SelectCollegeErrors.swift */,
+				BFCDA60E2172B45900DB31FC /* Entities */,
 			);
 			path = "Select College";
 			sourceTree = "<group>";
@@ -774,6 +792,7 @@
 				BFD82AE92170670400A14868 /* EnterStudentIdentifierRouter.swift */,
 				BFD82AEC2170670400A14868 /* EnterStudentIdentifierInteractor.swift */,
 				BFD82AEB2170670400A14868 /* EnterStudentIdentifierProtocols.swift */,
+				BFCDA60F2172B47500DB31FC /* Entities */,
 			);
 			path = "Enter Student Identifier";
 			sourceTree = "<group>";
@@ -982,7 +1001,7 @@
 				BFD82AF12170670400A14868 /* EnterStudentIdentifierInteractor.swift in Sources */,
 				BFD029A821509CFD002FB9F5 /* UIInlinePickerDelegate.swift in Sources */,
 				BFD0296E21509C1E002FB9F5 /* CreditCardViewModelDataSource.swift in Sources */,
-				BFD82ADC216E816C00A14868 /* SelectCollegeErrors.swift in Sources */,
+				BFD82ADC216E816C00A14868 /* SelectCollegeError.swift in Sources */,
 				BFD0297621509C1E002FB9F5 /* CreditCardViewConstants.swift in Sources */,
 				BFD82A8D216D989E00A14868 /* NetworkingClientRequestEncodingType.swift in Sources */,
 				BFD0296F21509C1E002FB9F5 /* CreditCardMetadata.swift in Sources */,
@@ -1021,6 +1040,7 @@
 				BFD82A8A216D989E00A14868 /* NetworkingError.swift in Sources */,
 				BFCDA5EC21725E7200DB31FC /* WelcomePresenter.swift in Sources */,
 				BFCDA5ED21725E7200DB31FC /* WelcomeRouter.swift in Sources */,
+				BFCDA6112172B48C00DB31FC /* EnterStudentIdentifierError.swift in Sources */,
 				BFCDA5EF21725E7200DB31FC /* WelcomeProtocols.swift in Sources */,
 				BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */,
 				BFD82AD7216E7D3500A14868 /* AnyError.swift in Sources */,

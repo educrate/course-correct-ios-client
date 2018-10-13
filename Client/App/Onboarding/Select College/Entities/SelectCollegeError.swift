@@ -1,5 +1,5 @@
 //
-//  SelectCollegeErrors.swift
+//  SelectCollegeError.swift
 //  Client
 //
 //  Created by Ampe on 10/10/18.

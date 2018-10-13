@@ -18,13 +18,19 @@ protocol EnterStudentIdentifierWireframeProtocol: class, ModuleWireframeable {
 
 // MARK: - Presenter
 
-protocol EnterStudentIdentifierPresenterProtocol: class {}
+protocol EnterStudentIdentifierPresenterProtocol: class {
+    func studentIdentifierEntered(with value: String)
+    
+    func studentIdentifierValidated(for identifier: String, with result: Result<Void, EnterStudentIdentifierError>)
+}
 
 
 // MARK: - Interactor
 
 protocol EnterStudentIdentifierInteractorProtocol: class {
   var presenter: EnterStudentIdentifierPresenterProtocol?  { get set }
+    
+    func validateStudentIdentifier()
 }
 
 
@@ -32,4 +38,6 @@ protocol EnterStudentIdentifierInteractorProtocol: class {
 
 protocol EnterStudentIdentifierViewProtocol: class {
   var presenter: EnterStudentIdentifierPresenterProtocol?  { get set }
+    
+    func show(error: EnterStudentIdentifierError)
 }

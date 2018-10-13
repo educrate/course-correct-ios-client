@@ -31,6 +31,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iby-ph-3VZ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="V1j-B3-mqq">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Evc-9m-KGf"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csc-jI-vZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

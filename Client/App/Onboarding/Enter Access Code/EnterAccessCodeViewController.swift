@@ -18,6 +18,16 @@ class EnterAccessCodeViewController: UIViewController, EnterAccessCodeViewProtoc
 }
 
 extension EnterAccessCodeViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        field.setPlaceholder("Access Code")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        field.beginEditing()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let fieldViewController: UIFieldViewController = segue.viewController()
         field = fieldViewController

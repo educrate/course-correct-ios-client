@@ -24,16 +24,29 @@
                                     <segue destination="odD-IK-rpx" kind="embed" identifier="field" id="leL-7U-Oco"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c92-m6-weK">
+                                <rect key="frame" x="191" y="141" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextPressed:forEvent:" destination="zz2-8n-heV" eventType="touchUpInside" id="Erg-5a-BlT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="B3Q-uU-Y7e"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="SUE-fa-Z0w">
+                        <barButtonItem key="backBarButtonItem" title=" " id="vtx-Zh-71h"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="field" destination="hbX-E7-1Dl" id="gM9-yN-6i3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lfv-7Z-wqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="43" y="19"/>
         </scene>
         <!--UIField-->
         <scene sceneID="Gdd-6e-9xx">
@@ -41,7 +54,8 @@
                 <viewControllerPlaceholder storyboardName="UIField" id="odD-IK-rpx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRC-Vt-EGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605" y="92"/>
+            <point key="canvasLocation" x="572" y="19"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.75278253419999996" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -40,6 +40,22 @@ extension UIDropdownViewController {
     }
 }
 
+extension UIDropdownViewController {
+    func beginEditing() {
+        inputField.becomeFirstResponder()
+    }
+    
+    func endEditing() {
+        inputField.resignFirstResponder()
+    }
+}
+
+extension UIDropdownViewController {
+    func setPlaceholder(_ text: String) {
+        inputField.placeholder = text
+    }
+}
+
 extension UIDropdownViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Int(view.bounds.height / cellHeight)

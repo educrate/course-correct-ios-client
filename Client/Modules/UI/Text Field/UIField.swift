@@ -17,8 +17,24 @@ class UIFieldViewController: UIViewController {
 }
 
 extension UIFieldViewController {
-    var text: String? {
-        return field.text
+    var text: String {
+        return field.text ?? ""
+    }
+}
+
+extension UIFieldViewController {
+    func beginEditing() {
+        field.becomeFirstResponder()
+    }
+    
+    func endEditing() {
+        field.resignFirstResponder()
+    }
+}
+
+extension UIFieldViewController {
+    func setPlaceholder(_ text: String) {
+        field.placeholder = text
     }
 }
 
