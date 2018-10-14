@@ -14,7 +14,8 @@ class ProfileOverviewRouter: ProfileOverviewWireframeProtocol {
 
 extension ProfileOverviewRouter {
     static func createModule() -> UIViewController {
-        let view = ProfileOverviewViewController(nibName: nil, bundle: nil)
+        let storyboard = UIStoryboard(storyboard: .profileOverview)
+        let view: ProfileOverviewViewController = storyboard.instantiateViewController()
         let interactor = ProfileOverviewInteractor()
         let router = ProfileOverviewRouter()
         let presenter = ProfileOverviewPresenter(interface: view, interactor: interactor, router: router)

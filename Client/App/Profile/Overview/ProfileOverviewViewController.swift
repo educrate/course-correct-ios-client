@@ -39,6 +39,7 @@ private extension ProfileOverviewViewController {
 extension ProfileOverviewViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileImageView.round()
     }
     
     override func viewWillAppear(_ animated: Bool) {

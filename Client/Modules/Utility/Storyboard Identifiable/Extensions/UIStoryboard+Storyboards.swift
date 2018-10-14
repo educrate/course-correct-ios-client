@@ -22,6 +22,8 @@ extension UIStoryboard {
         case enterAccessCode = "EnterAccessCode"
         case createPassword = "CreatePassword"
         
+        case profileOverview = "ProfileOverview"
+        
         // MARK: Modules
         case uiDropdown = "UIDropdown"
         case uiField = "UIField"
