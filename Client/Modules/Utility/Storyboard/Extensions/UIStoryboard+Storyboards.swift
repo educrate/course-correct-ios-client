@@ -14,16 +14,21 @@ extension UIStoryboard {
     enum Storyboard: String {
         
         // MARK: Main App
-        case launchScreen = "LaunchScreen"
-        case main = "Main"
+        case appLaunch = "AppLaunch"
+        case app = "App"
         case welcome = "Welcome"
+        
+        // MARK: Onboarding
         case selectCollege = "SelectCollege"
         case enterStudentIdentifier = "EnterStudentIdentifier"
         case enterAccessCode = "EnterAccessCode"
         case createPassword = "CreatePassword"
         
+        // MARK: Profile
         case profileOverview = "ProfileOverview"
         case profileAccount = "ProfileAccount"
+        case profilePayment = "ProfilePayment"
+        case profileSupport = "ProfileSupport"
         
         // MARK: Modules
         case uiDropdown = "UIDropdown"

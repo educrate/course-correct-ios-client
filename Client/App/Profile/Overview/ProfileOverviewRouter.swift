@@ -30,7 +30,9 @@ extension ProfileOverviewRouter {
 
 extension ProfileOverviewRouter {
     func presentAccount() {
-
+        if let view = viewController, let navigationController = view.navigationController {
+            navigationController.pushViewController(ProfileAccountRouter.createModule(), animated: true)
+        }
     }
     
     func presentPayment() {

@@ -130,6 +130,7 @@
                         <viewLayoutGuide key="safeArea" id="7Z0-1S-hLc"/>
                     </view>
                     <navigationItem key="navigationItem" id="D7m-UO-jWt">
+                        <barButtonItem key="backBarButtonItem" title=" " id="5E4-yt-OD8"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="XPk-rr-j4h"/>
                     </navigationItem>
                     <connections>

@@ -14,7 +14,9 @@ class ProfileAccountPresenter: ProfileAccountPresenterProtocol {
     var interactor: ProfileAccountInteractorProtocol?
     private let router: ProfileAccountWireframeProtocol
 
-    init(interface: ProfileAccountViewProtocol, interactor: ProfileAccountInteractorProtocol?, router: ProfileAccountWireframeProtocol) {
+    init(interface: ProfileAccountViewProtocol,
+         interactor: ProfileAccountInteractorProtocol?,
+         router: ProfileAccountWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
