@@ -16,13 +16,19 @@ protocol CreatePasswordWireframeProtocol: class, ModuleWireframeable {}
 
 // MARK: - Presenter
 
-protocol CreatePasswordPresenterProtocol: class {}
+protocol CreatePasswordPresenterProtocol: class {
+    func passwordsEntered(with password: String, reenteredPassword: String)
+    
+    func passwordsValidated(for password: String, reenteredPassword: String, with result: Result<Void, CreatePasswordError>)
+}
 
 
 // MARK: - Interactor
 
 protocol CreatePasswordInteractorProtocol: class {
   var presenter: CreatePasswordPresenterProtocol?  { get set }
+    
+    func validate(_ password: String, reenteredPassword: String)
 }
 
 
@@ -30,4 +36,6 @@ protocol CreatePasswordInteractorProtocol: class {
 
 protocol CreatePasswordViewProtocol: class {
   var presenter: CreatePasswordPresenterProtocol?  { get set }
+    
+    func show(error: CreatePasswordError)
 }

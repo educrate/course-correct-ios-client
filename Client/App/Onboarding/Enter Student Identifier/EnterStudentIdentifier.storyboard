@@ -21,7 +21,7 @@
                                 <rect key="frame" x="87" y="283" width="240" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="odD-IK-rpx" kind="embed" identifier="field" id="leL-7U-Oco"/>
+                                    <segue destination="odD-IK-rpx" kind="embed" identifier="" id="leL-7U-Oco"/>
                                 </connections>
                             </containerView>
                         </subviews>

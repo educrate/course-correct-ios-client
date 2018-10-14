@@ -11,3 +11,9 @@ import UIKit
 class CreatePasswordInteractor: CreatePasswordInteractorProtocol {
     weak var presenter: CreatePasswordPresenterProtocol?
 }
+
+extension CreatePasswordInteractor {
+    func validate(_ password: String, reenteredPassword: String) {
+        
+    }
+}

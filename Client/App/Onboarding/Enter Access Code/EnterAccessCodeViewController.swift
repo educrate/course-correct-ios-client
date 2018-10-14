@@ -14,11 +14,12 @@ class EnterAccessCodeViewController: UIViewController, EnterAccessCodeViewProtoc
     var presenter: EnterAccessCodePresenterProtocol?
     
     // MARK: IBOutlets
-    @IBOutlet weak var field: UIFieldViewController!
+    @IBOutlet private weak var field: UIFieldViewController!
 }
 
 extension EnterAccessCodeViewController {
     @IBAction func nextPressed(_ sender: UIBarButtonItem) {
+        field.endEditing()
         presenter?.accessCodeEntered(with: field.text)
     }
 }
