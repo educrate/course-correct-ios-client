@@ -14,6 +14,8 @@ class CreatePasswordInteractor: CreatePasswordInteractorProtocol {
 
 extension CreatePasswordInteractor {
     func validate(_ password: String, reenteredPassword: String) {
-        
+        if password != reenteredPassword {
+            presenter?.passwordsValidated(for: password, reenteredPassword: reenteredPassword, with: Result(error: .passwordsDoNotMatch))
+        }
     }
 }

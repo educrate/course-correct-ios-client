@@ -50,6 +50,9 @@ extension CreatePasswordViewController {
 
 extension CreatePasswordViewController {
     func show(error: CreatePasswordError) {
-        
+        switch error {
+        case .passwordsDoNotMatch:
+            print("passwords do not match")
+        }
     }
 }
