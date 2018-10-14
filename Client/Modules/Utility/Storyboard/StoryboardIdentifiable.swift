@@ -14,7 +14,6 @@ protocol StoryboardIdentifiable {
     static var storyboardIdentifier: String { get }
 }
 
-
 // MARK: - Extract Identifier From View Controller
 extension StoryboardIdentifiable where Self: UIViewController {
     static var storyboardIdentifier: String {
@@ -24,6 +23,13 @@ extension StoryboardIdentifiable where Self: UIViewController {
 
 // MARK: - Extract Identifier From Reusable Cell
 extension StoryboardIdentifiable where Self: UITableViewCell {
+    static var storyboardIdentifier: String {
+        return String(describing: self)
+    }
+}
+
+// MARK: - Extract Identifier From Reusable Cell
+extension StoryboardIdentifiable where Self: UICollectionViewCell {
     static var storyboardIdentifier: String {
         return String(describing: self)
     }

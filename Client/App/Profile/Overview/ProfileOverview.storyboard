@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Pk7-jb-Jbc" userLabel="Profile Information">
-                                <rect key="frame" x="127" y="99.333333333333329" width="160" height="249.66666666666669"/>
+                                <rect key="frame" x="127" y="91.999999999999986" width="160" height="249.66666666666663"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="I4Z-Gh-be1">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
@@ -43,7 +43,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxf-bK-z3r">
-                                                <rect key="frame" x="62" y="47.333333333333371" width="36.333333333333343" height="19.333333333333329"/>
+                                                <rect key="frame" x="62" y="47.333333333333314" width="36.333333333333343" height="19.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mnv-ns-xcc" userLabel="Button Stack">
-                                <rect key="frame" x="127" y="541.66666666666663" width="160" height="171"/>
+                                <rect key="frame" x="127" y="611" width="160" height="171"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2S3-sf-vIK">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="30"/>
@@ -122,15 +122,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mnv-ns-xcc" firstAttribute="centerX" secondItem="HVs-jo-qlb" secondAttribute="centerX" id="R1E-88-NEn"/>
-                            <constraint firstItem="Pk7-jb-Jbc" firstAttribute="centerY" secondItem="HVs-jo-qlb" secondAttribute="centerY" multiplier="0.5" id="acU-Cr-x3l"/>
-                            <constraint firstItem="mnv-ns-xcc" firstAttribute="centerY" secondItem="HVs-jo-qlb" secondAttribute="centerY" multiplier="1.4" id="adF-2B-pdE"/>
                             <constraint firstItem="mnv-ns-xcc" firstAttribute="width" secondItem="ZBf-GX-ZjM" secondAttribute="width" id="nD6-Vd-yIm"/>
+                            <constraint firstItem="Pk7-jb-Jbc" firstAttribute="top" secondItem="7Z0-1S-hLc" secondAttribute="top" constant="48" id="pQC-v5-zQk"/>
                             <constraint firstItem="Pk7-jb-Jbc" firstAttribute="centerX" secondItem="HVs-jo-qlb" secondAttribute="centerX" id="vVF-8X-owN"/>
+                            <constraint firstItem="7Z0-1S-hLc" firstAttribute="bottom" secondItem="mnv-ns-xcc" secondAttribute="bottom" constant="80" id="zds-0G-umN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Z0-1S-hLc"/>
                     </view>
                     <navigationItem key="navigationItem" id="D7m-UO-jWt">
-                        <barButtonItem key="leftBarButtonItem" image="close" id="Mbp-u3-6QG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="XPk-rr-j4h"/>
                     </navigationItem>
                     <connections>
                         <outlet property="gradeLabel" destination="gxf-bK-z3r" id="JlQ-rh-R7H"/>
@@ -145,7 +145,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="close" width="57.599998474121094" height="57.599998474121094"/>
         <image name="profile_placeholder" width="960" height="960"/>
     </resources>
 </document>

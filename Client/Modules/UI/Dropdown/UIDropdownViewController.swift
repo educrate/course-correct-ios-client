@@ -58,7 +58,7 @@ extension UIDropdownViewController {
 
 extension UIDropdownViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Int(view.bounds.height / cellHeight)
+        return min(data.count, Int(view.bounds.height / cellHeight))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -9,98 +9,32 @@ import UIKit
 
 class UIInlinePickerCell: UICollectionViewCell {
     
-    // MARK: Storage
-    weak var label: UILabel!
-    
-    // MARK: Properties
-    var config: UIInlinePickerCellConfig = .default
-    
-    func update(_ string: String) {
-        
-        label.text = string
-    }
-    
-    func initConfig(selectedTextColor: UIColor,
-                         selectedBackgroundColor: UIColor,
-                         selectedBorderColor: CGColor,
-                         selectedBorderWidth: CGFloat,
-                         unselectedTextColor: UIColor,
-                         unselectedBackgroundColor: UIColor,
-                         unselectedBorderColor: CGColor,
-                         unselectedBorderWidth: CGFloat,
-                         cornerRadius: CGFloat,
-                         spacing: UIEdgeInsets) {
-        
-        config = UIInlinePickerCellConfig(selectedTextColor: selectedTextColor,
-                                            selectedBackgroundColor: selectedBackgroundColor,
-                                            selectedBorderColor: selectedBorderColor,
-                                            selectedBorderWidth: selectedBorderWidth,
-                                            unselectedTextColor: unselectedTextColor,
-                                            unselectedBackgroundColor: unselectedBackgroundColor,
-                                            unselectedBorderColor: unselectedBorderColor,
-                                            unselectedBorderWidth: unselectedBorderWidth,
-                                            cornerRadius: cornerRadius,
-                                            spacing: spacing)
-    }
-    
-    // MARK: Initalizers
-    override init(frame: CGRect) {
-       
-        let label = UILabel()
-        self.label = label
-        
-        super.init(frame: frame)
-        
-        initViews()
-        
-        addViews()
-        addConstraints()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        
-        let label = UILabel()
-        self.label = label
-        
-        super.init(coder: aDecoder)
-        
-        initViews()
-        
-        addViews()
-        addConstraints()
-    }
-    
-    override var isSelected: Bool {
-        didSet {
-            toggleSelection(isSelected)
-        }
+    // MARK: Views
+    @IBOutlet private weak var label: UILabel!
+}
+
+extension UIInlinePickerCell {
+    func setTitle(_ text: String) {
+        label.text = text
     }
 }
 
 extension UIInlinePickerCell {
-    static let reuseIdentifier = "UIInlinePickerCell"
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        constrainLabel()
+        layer.cornerRadius = 3
+        layer.borderWidth = 1
+        layer.masksToBounds = true
+        toggleSelection(isSelected)
+    }
 }
 
-private extension UIInlinePickerCell {
-    func initViews() {
-        
-        contentView.layer.cornerRadius = config.cornerRadius
-        contentView.layer.masksToBounds = true
-    }
-    
-    func addViews() {
-        
-        contentView.addSubview(label)
-    }
-    
-    func addConstraints() {
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: config.spacing.top).isActive = true
-        label.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: config.spacing.left).isActive = true
-        label.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: config.spacing.right).isActive = true
-        label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: config.spacing.bottom).isActive = true
+extension UIInlinePickerCell {
+    override var isSelected: Bool {
+        didSet {
+            toggleSelection(isSelected)
+        }
     }
 }
 
@@ -110,20 +44,24 @@ private extension UIInlinePickerCell {
     }
     
     func setSelected() {
-        label.textColor = config.selectedTextColor
-        
-        contentView.layer.borderColor = config.selectedBorderColor
-        contentView.layer.borderWidth = config.selectedBorderWidth
-        
-        contentView.backgroundColor = config.selectedBackgroundColor
+        label.textColor = .white
+        layer.borderColor = UIColor.clear.cgColor
+        backgroundColor = .orange
     }
     
     func setUnselected() {
-        label.textColor = config.unselectedTextColor
-        
-        contentView.layer.borderColor = config.unselectedBorderColor
-        contentView.layer.borderWidth = config.unselectedBorderWidth
-        
-        contentView.backgroundColor = config.unselectedBackgroundColor
+        label.textColor = .black
+        layer.borderColor = UIColor.black.cgColor
+        backgroundColor = .clear
+    }
+}
+
+private extension UIInlinePickerCell {
+    func constrainLabel() {
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
+        label.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20).isActive = true
+        label.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -20).isActive = true
+        label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
     }
 }

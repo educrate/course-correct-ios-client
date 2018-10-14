@@ -23,7 +23,7 @@ private extension AppNavigationController {
 //        let welcomeViewController = WelcomeRouter.createModule()
 //        viewControllers = [welcomeViewController]
         
-        let profileOverviewViewController = ProfileOverviewRouter.createModule()
+        let profileOverviewViewController = ProfileAccountRouter.createModule()
         viewControllers = [profileOverviewViewController]
     }
 }

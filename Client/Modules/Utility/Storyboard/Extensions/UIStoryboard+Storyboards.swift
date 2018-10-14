@@ -23,10 +23,12 @@ extension UIStoryboard {
         case createPassword = "CreatePassword"
         
         case profileOverview = "ProfileOverview"
+        case profileAccount = "ProfileAccount"
         
         // MARK: Modules
         case uiDropdown = "UIDropdown"
         case uiField = "UIField"
+        case uiInlinePicker = "UIInlinePicker"
     }
 }
 
@@ -61,6 +63,17 @@ extension UIStoryboard {
 extension UITableView {
     func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withIdentifier: T.storyboardIdentifier, for: indexPath as IndexPath) as? T else {
+            fatalError("Cannot dequeue: \(T.self) with identifier: \(T.storyboardIdentifier)")
+        }
+        
+        return cell
+    }
+}
+
+// MARK: - Collection View Cell Instantiation from Generics
+extension UICollectionView {
+    func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
+        guard let cell = dequeueReusableCell(withReuseIdentifier: T.storyboardIdentifier, for: indexPath as IndexPath) as? T else {
             fatalError("Cannot dequeue: \(T.self) with identifier: \(T.storyboardIdentifier)")
         }
         

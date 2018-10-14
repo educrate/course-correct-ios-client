@@ -14,5 +14,8 @@ extension UIViewController: StoryboardIdentifiable {}
 // MARK: - Conforms UITableViewCell to StoryboardIdentifiable
 extension UITableViewCell: StoryboardIdentifiable {}
 
+// MARK: - Conforms UICollectionViewCell to StoryboardIdentifiable
+extension UICollectionViewCell: StoryboardIdentifiable {}
+
 // MARK: - Conforms UIStoryboardSegue to StoryboardIdentifiable
 extension UIStoryboardSegue: StoryboardIdentifiable {}
