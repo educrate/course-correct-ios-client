@@ -17,9 +17,8 @@ class UIInlinePickerViewController: UIViewController {
 }
 
 extension UIInlinePickerViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setUpCollectionView()
+    var recommendedHeight: CGFloat {
+        return inlinePicker.contentSize.height
     }
 }
 
@@ -27,6 +26,13 @@ extension UIInlinePickerViewController {
     func setOptions(_ newOptions: [String]) {
         options = newOptions
         inlinePicker.reloadData()
+    }
+}
+
+extension UIInlinePickerViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpCollectionView()
     }
 }
 
@@ -51,13 +57,20 @@ extension UIInlinePickerViewController: UICollectionViewDataSource {
 
 private extension UIInlinePickerViewController {
     func setUpCollectionView() {
-        inlinePicker.allowsMultipleSelection = true
-        
+        setUpCollectionViewFlowLayout()
+        setUpColletionViewOptions()
+    }
+    
+    func setUpCollectionViewFlowLayout() {
         guard let flowLayout = inlinePicker.collectionViewLayout as? UICollectionViewFlowLayout else {
             assertionFailure("\(inlinePicker.description) must have a layout of type UICollectionViewFlowLayout")
             return
         }
         
-        flowLayout.estimatedItemSize = CGSize(width: 40, height: 20)
+        flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+    }
+    
+    func setUpColletionViewOptions() {
+        inlinePicker.allowsMultipleSelection = true
     }
 }
