@@ -30,6 +30,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="ATQ-dm-9B1">
                         <barButtonItem key="backBarButtonItem" title=" " id="j41-wi-Afc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="zaa-cF-8eZ">
+                            <connections>
+                                <action selector="nextPressed:" destination="GUR-5h-XIw" id="fP0-Wg-3or"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="field" destination="LbI-QW-XFU" id="d63-GE-HDl"/>

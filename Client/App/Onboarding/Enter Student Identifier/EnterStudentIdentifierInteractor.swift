@@ -13,7 +13,7 @@ class EnterStudentIdentifierInteractor: EnterStudentIdentifierInteractorProtocol
 }
 
 extension EnterStudentIdentifierInteractor {
-    func validateStudentIdentifier() {
-        presenter?.studentIdentifierValidated(for: "", with: Result(value: ()))
+    func validate(studentIdentifier: String) {
+        presenter?.studentIdentifierValidated(for: studentIdentifier, with: Result(value: ()))
     }
 }

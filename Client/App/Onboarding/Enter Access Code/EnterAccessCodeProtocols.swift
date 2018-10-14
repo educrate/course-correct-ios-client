@@ -18,13 +18,19 @@ protocol EnterAccessCodeWireframeProtocol: class, ModuleWireframeable {
 
 // MARK: - Presenter
 
-protocol EnterAccessCodePresenterProtocol: class {}
+protocol EnterAccessCodePresenterProtocol: class {
+    func accessCodeEntered(with value: String)
+    
+    func accessCodeValidated(for code: String, with result: Result<Void, EnterAccessCodeError>)
+}
 
 
 // MARK: - Interactor
 
 protocol EnterAccessCodeInteractorProtocol: class {
   var presenter: EnterAccessCodePresenterProtocol?  { get set }
+    
+    func validate(_ accessCode: String)
 }
 
 
@@ -32,4 +38,6 @@ protocol EnterAccessCodeInteractorProtocol: class {
 
 protocol EnterAccessCodeViewProtocol: class {
   var presenter: EnterAccessCodePresenterProtocol?  { get set }
+    
+    func show(error: EnterAccessCodeError)
 }

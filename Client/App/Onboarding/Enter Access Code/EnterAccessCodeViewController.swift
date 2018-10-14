@@ -18,6 +18,12 @@ class EnterAccessCodeViewController: UIViewController, EnterAccessCodeViewProtoc
 }
 
 extension EnterAccessCodeViewController {
+    @IBAction func nextPressed(_ sender: UIBarButtonItem) {
+        presenter?.accessCodeEntered(with: field.text)
+    }
+}
+
+extension EnterAccessCodeViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         field.setPlaceholder("Access Code")
@@ -31,5 +37,11 @@ extension EnterAccessCodeViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let fieldViewController: UIFieldViewController = segue.viewController()
         field = fieldViewController
+    }
+}
+
+extension EnterAccessCodeViewController {
+    func show(error: EnterAccessCodeError) {
+        
     }
 }

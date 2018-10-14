@@ -30,7 +30,7 @@ protocol EnterStudentIdentifierPresenterProtocol: class {
 protocol EnterStudentIdentifierInteractorProtocol: class {
   var presenter: EnterStudentIdentifierPresenterProtocol?  { get set }
     
-    func validateStudentIdentifier()
+    func validate(studentIdentifier: String)
 }
 
 

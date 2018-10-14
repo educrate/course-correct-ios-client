@@ -25,7 +25,7 @@ class EnterStudentIdentifierPresenter: EnterStudentIdentifierPresenterProtocol {
 
 extension EnterStudentIdentifierPresenter {
     func studentIdentifierEntered(with value: String) {
-        interactor?.validateStudentIdentifier()
+        interactor?.validate(studentIdentifier: value)
     }
     
     func studentIdentifierValidated(for identifier: String, with result: Result<Void, EnterStudentIdentifierError>) {

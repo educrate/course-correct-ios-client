@@ -37,6 +37,7 @@
 		BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA60A2172903F00DB31FC /* UIImage+Additions.swift */; };
 		BFCDA60D2172905800DB31FC /* UINavigationBar+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA60C2172905800DB31FC /* UINavigationBar+Additions.swift */; };
 		BFCDA6112172B48C00DB31FC /* EnterStudentIdentifierError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */; };
+		BFCDA6142172C1C500DB31FC /* EnterAccessCodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA6132172C1C500DB31FC /* EnterAccessCodeError.swift */; };
 		BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */; };
 		BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD0291421509AD4002FB9F5 /* Client.xcdatamodeld */; };
 		BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD0291721509AD5002FB9F5 /* Assets.xcassets */; };
@@ -181,6 +182,7 @@
 		BFCDA60A2172903F00DB31FC /* UIImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
 		BFCDA60C2172905800DB31FC /* UINavigationBar+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Additions.swift"; sourceTree = "<group>"; };
 		BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterStudentIdentifierError.swift; sourceTree = "<group>"; };
+		BFCDA6132172C1C500DB31FC /* EnterAccessCodeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeError.swift; sourceTree = "<group>"; };
 		BFD0290A21509AD4002FB9F5 /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD0291521509AD4002FB9F5 /* Client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Client.xcdatamodel; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 				BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */,
 				BF70B5D4217074C600771E5D /* EnterAccessCodeInteractor.swift */,
 				BF70B5D3217074C600771E5D /* EnterAccessCodeProtocols.swift */,
+				BFCDA6122172C1B100DB31FC /* Entities */,
 			);
 			path = "Enter Access Code";
 			sourceTree = "<group>";
@@ -486,6 +489,14 @@
 			isa = PBXGroup;
 			children = (
 				BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BFCDA6122172C1B100DB31FC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BFCDA6132172C1C500DB31FC /* EnterAccessCodeError.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1025,6 +1036,7 @@
 				BFD82A88216D989E00A14868 /* NetworkingConfiguration.swift in Sources */,
 				BFD82AEE2170670400A14868 /* EnterStudentIdentifierRouter.swift in Sources */,
 				BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */,
+				BFCDA6142172C1C500DB31FC /* EnterAccessCodeError.swift in Sources */,
 				BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */,
 				BFF14D942160494100733323 /* DateDescriptionHelper.swift in Sources */,
 				BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */,
