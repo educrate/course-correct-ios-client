@@ -39,6 +39,8 @@
 		BFCDA6112172B48C00DB31FC /* EnterStudentIdentifierError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */; };
 		BFCDA6142172C1C500DB31FC /* EnterAccessCodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA6132172C1C500DB31FC /* EnterAccessCodeError.swift */; };
 		BFCDA6172172C3FC00DB31FC /* CreatePasswordError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA6162172C3FC00DB31FC /* CreatePasswordError.swift */; };
+		BFCDA6192172D53700DB31FC /* SegueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA6182172D53700DB31FC /* SegueIdentifiable.swift */; };
+		BFCDA61B2172D5AB00DB31FC /* UIViewController+SegueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA61A2172D5AB00DB31FC /* UIViewController+SegueIdentifiable.swift */; };
 		BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */; };
 		BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD0291421509AD4002FB9F5 /* Client.xcdatamodeld */; };
 		BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD0291721509AD5002FB9F5 /* Assets.xcassets */; };
@@ -185,6 +187,8 @@
 		BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterStudentIdentifierError.swift; sourceTree = "<group>"; };
 		BFCDA6132172C1C500DB31FC /* EnterAccessCodeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeError.swift; sourceTree = "<group>"; };
 		BFCDA6162172C3FC00DB31FC /* CreatePasswordError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordError.swift; sourceTree = "<group>"; };
+		BFCDA6182172D53700DB31FC /* SegueIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiable.swift; sourceTree = "<group>"; };
+		BFCDA61A2172D5AB00DB31FC /* UIViewController+SegueIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SegueIdentifiable.swift"; sourceTree = "<group>"; };
 		BFD0290A21509AD4002FB9F5 /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD0291521509AD4002FB9F5 /* Client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Client.xcdatamodel; sourceTree = "<group>"; };
@@ -741,6 +745,7 @@
 			children = (
 				BFD82ABB216DAD4F00A14868 /* UIStoryboard+Storyboards.swift */,
 				BFD82ABD216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift */,
+				BFCDA61A2172D5AB00DB31FC /* UIViewController+SegueIdentifiable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -749,6 +754,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */,
+				BFCDA6182172D53700DB31FC /* SegueIdentifiable.swift */,
 				BFD82ABA216DAD2600A14868 /* Extensions */,
 			);
 			path = "Storyboard Identifiable";
@@ -1040,6 +1046,7 @@
 				BFD0295C21509BB2002FB9F5 /* UICalendarViewDelegate.swift in Sources */,
 				BFF14D982160496400733323 /* MonthHelper.swift in Sources */,
 				BFD0299321509C9A002FB9F5 /* UIActionSheetCell.swift in Sources */,
+				BFCDA6192172D53700DB31FC /* SegueIdentifiable.swift in Sources */,
 				BFD82AD9216E7D3500A14868 /* Result.swift in Sources */,
 				BFD82AEF2170670400A14868 /* EnterStudentIdentifierViewController.swift in Sources */,
 				BFD82A93216D989E00A14868 /* NetworkingCache.swift in Sources */,
@@ -1058,6 +1065,7 @@
 				BFD82A87216D989E00A14868 /* NetworkingClientError.swift in Sources */,
 				BFD82ACF216E77B600A14868 /* SelectCollegeInteractor.swift in Sources */,
 				BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */,
+				BFCDA61B2172D5AB00DB31FC /* UIViewController+SegueIdentifiable.swift in Sources */,
 				BFD82A94216D989E00A14868 /* NetworkingFailure.swift in Sources */,
 				BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */,
 				BFD82A96216D989E00A14868 /* NetworkingServiceError.swift in Sources */,

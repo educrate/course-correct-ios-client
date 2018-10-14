@@ -36,14 +36,13 @@ extension CreatePasswordViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "password" {
-            let fieldViewController: UIFieldViewController = segue.viewController()
-            passwordField = fieldViewController
-        }
-        
-        if segue.identifier == "reuse" {
-            let fieldViewController: UIFieldViewController = segue.viewController()
-            reenterPasswordField = fieldViewController
+        switch segueCase(for: segue) {
+        case .password:
+            let fieldView: UIFieldViewController = segue.viewController()
+            passwordField = fieldView
+        case .reenter:
+            let fieldView: UIFieldViewController = segue.viewController()
+            reenterPasswordField = fieldView
         }
     }
 }
@@ -54,5 +53,12 @@ extension CreatePasswordViewController {
         case .passwordsDoNotMatch:
             print("passwords do not match")
         }
+    }
+}
+
+extension CreatePasswordViewController: SegueIdentifiable {
+    enum Segue: String {
+        case password
+        case reenter
     }
 }
