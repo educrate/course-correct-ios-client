@@ -36,13 +36,21 @@ extension EnterAccessCodeViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let fieldViewController: UIFieldViewController = segue.viewController()
-        field = fieldViewController
+        switch segueCase(for: segue) {
+        case .field:
+            field = segue.viewController()
+        }
     }
 }
 
 extension EnterAccessCodeViewController {
     func show(error: EnterAccessCodeError) {
         
+    }
+}
+
+extension EnterAccessCodeViewController: SegueIdentifiable {
+    enum Segue: String {
+        case field
     }
 }

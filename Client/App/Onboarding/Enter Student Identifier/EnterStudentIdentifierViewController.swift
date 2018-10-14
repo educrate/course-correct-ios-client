@@ -36,13 +36,21 @@ extension EnterStudentIdentifierViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let fieldViewController: UIFieldViewController = segue.viewController()
-        field = fieldViewController
+        switch segueCase(for: segue) {
+        case .field:
+            field = segue.viewController()
+        }
     }
 }
 
 extension EnterStudentIdentifierViewController {
     func show(error: EnterStudentIdentifierError) {
         
+    }
+}
+
+extension EnterStudentIdentifierViewController: SegueIdentifiable {
+    enum Segue: String {
+        case field
     }
 }

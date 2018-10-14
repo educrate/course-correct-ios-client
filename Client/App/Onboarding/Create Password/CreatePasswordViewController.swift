@@ -38,11 +38,9 @@ extension CreatePasswordViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segueCase(for: segue) {
         case .password:
-            let fieldView: UIFieldViewController = segue.viewController()
-            passwordField = fieldView
+            passwordField = segue.viewController()
         case .reenter:
-            let fieldView: UIFieldViewController = segue.viewController()
-            reenterPasswordField = fieldView
+            reenterPasswordField = segue.viewController()
         }
     }
 }

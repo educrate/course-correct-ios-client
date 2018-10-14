@@ -29,9 +29,11 @@ extension SelectCollegeViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dropdownViewController: UIDropdownViewController = segue.viewController()
-        collegeSelector = dropdownViewController
-        collegeSelector.delegate = self
+        switch segueCase(for: segue) {
+        case .dropdown:
+            collegeSelector = segue.viewController()
+            collegeSelector.delegate = self
+        }
     }
 }
 
@@ -59,5 +61,11 @@ extension SelectCollegeViewController: UIDropdownDelegate {
     func dropdown(_ dropdown: UITableView, didSelectRowAt indexPath: IndexPath) {
         collegeSelector.endEditing()
         presenter?.showEnterStudentIdentifier()
+    }
+}
+
+extension SelectCollegeViewController: SegueIdentifiable {
+    enum Segue: String {
+        case dropdown
     }
 }
