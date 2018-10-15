@@ -15,7 +15,7 @@ class ProfilePaymentRouter: ProfilePaymentWireframeProtocol {
 extension ProfilePaymentRouter {
     static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .profilePayment)
-        let view: ProfileSupportViewController = storyboard.instantiateViewController()
+        let view: ProfilePaymentViewController = storyboard.instantiateViewController()
         let interactor = ProfilePaymentInteractor()
         let router = ProfilePaymentRouter()
         let presenter = ProfilePaymentPresenter(interface: view, interactor: interactor, router: router)

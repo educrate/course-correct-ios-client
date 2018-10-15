@@ -71,6 +71,12 @@
 		BF5004FC217422CF00D35B69 /* NewEventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004F7217422CF00D35B69 /* NewEventProtocols.swift */; };
 		BF5004FD217422CF00D35B69 /* NewEventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004F8217422CF00D35B69 /* NewEventInteractor.swift */; };
 		BF5004FF217422DD00D35B69 /* NewEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004FE217422DD00D35B69 /* NewEvent.storyboard */; };
+		BF500507217454C600D35B69 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500502217454C600D35B69 /* SignInPresenter.swift */; };
+		BF500508217454C600D35B69 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500503217454C600D35B69 /* SignInRouter.swift */; };
+		BF500509217454C600D35B69 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500504217454C600D35B69 /* SignInViewController.swift */; };
+		BF50050A217454C600D35B69 /* SignInProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500505217454C600D35B69 /* SignInProtocols.swift */; };
+		BF50050B217454C600D35B69 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500506217454C600D35B69 /* SignInInteractor.swift */; };
+		BF50050D217454D700D35B69 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF50050C217454D700D35B69 /* SignIn.storyboard */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -278,6 +284,12 @@
 		BF5004F7217422CF00D35B69 /* NewEventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventProtocols.swift; sourceTree = "<group>"; };
 		BF5004F8217422CF00D35B69 /* NewEventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventInteractor.swift; sourceTree = "<group>"; };
 		BF5004FE217422DD00D35B69 /* NewEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEvent.storyboard; sourceTree = "<group>"; };
+		BF500502217454C600D35B69 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		BF500503217454C600D35B69 /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		BF500504217454C600D35B69 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BF500505217454C600D35B69 /* SignInProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocols.swift; sourceTree = "<group>"; };
+		BF500506217454C600D35B69 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		BF50050C217454D700D35B69 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -625,6 +637,38 @@
 			path = "Tutor Profile";
 			sourceTree = "<group>";
 		};
+		BF5005002174547700D35B69 /* New User */ = {
+			isa = PBXGroup;
+			children = (
+				BFD82AA0216DA43D00A14868 /* Select College */,
+				BFD82AE7217066CB00A14868 /* Enter Student Identifier */,
+				BF70B5CF217074AC00771E5D /* Enter Access Code */,
+				BFCDA5F321725FDB00DB31FC /* Create Password */,
+			);
+			path = "New User";
+			sourceTree = "<group>";
+		};
+		BF5005012174549B00D35B69 /* Existing User */ = {
+			isa = PBXGroup;
+			children = (
+				BF50050E2174558A00D35B69 /* Sign In */,
+			);
+			path = "Existing User";
+			sourceTree = "<group>";
+		};
+		BF50050E2174558A00D35B69 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				BF50050C217454D700D35B69 /* SignIn.storyboard */,
+				BF500504217454C600D35B69 /* SignInViewController.swift */,
+				BF500502217454C600D35B69 /* SignInPresenter.swift */,
+				BF500503217454C600D35B69 /* SignInRouter.swift */,
+				BF500506217454C600D35B69 /* SignInInteractor.swift */,
+				BF500505217454C600D35B69 /* SignInProtocols.swift */,
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
 		BF55165B215B39CD00D0CBB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,10 +705,8 @@
 		BF579339216D4485008DBB46 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				BFD82AA0216DA43D00A14868 /* Select College */,
-				BFD82AE7217066CB00A14868 /* Enter Student Identifier */,
-				BF70B5CF217074AC00771E5D /* Enter Access Code */,
-				BFCDA5F321725FDB00DB31FC /* Create Password */,
+				BF5005002174547700D35B69 /* New User */,
+				BF5005012174549B00D35B69 /* Existing User */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -1261,6 +1303,7 @@
 				BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */,
 				BF5004A02173EBB000D35B69 /* ProfileSupport.storyboard in Resources */,
 				BF5004E721741EA000D35B69 /* SelectTutor.storyboard in Resources */,
+				BF50050D217454D700D35B69 /* SignIn.storyboard in Resources */,
 				BF5004862173AD9E00D35B69 /* UIInlinePicker.storyboard in Resources */,
 				BF5004DB21741E7700D35B69 /* AddLocation.storyboard in Resources */,
 			);
@@ -1287,14 +1330,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF500507217454C600D35B69 /* SignInPresenter.swift in Sources */,
 				BFF14D88216002CB00733323 /* CalendarConfiguration.swift in Sources */,
 				BFF14D8C2160033B00733323 /* CalendarBrain.swift in Sources */,
 				BFD82ACE216E77B600A14868 /* SelectCollegeProtocols.swift in Sources */,
 				BF5004A32174111C00D35B69 /* UIStoryboard+Identifiers.swift in Sources */,
 				BFF14D922160492F00733323 /* DateHelper.swift in Sources */,
+				BF500508217454C600D35B69 /* SignInRouter.swift in Sources */,
 				BF5004ED21741EAE00D35B69 /* TutorProfilePresenter.swift in Sources */,
 				BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */,
 				BFD82A91216D989E00A14868 /* NetworkingClientResult.swift in Sources */,
+				BF50050A217454C600D35B69 /* SignInProtocols.swift in Sources */,
 				BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */,
 				BF5004BC2174127100D35B69 /* EventProtocols.swift in Sources */,
 				BFD029A621509CFD002FB9F5 /* UIInlinePickerCell.swift in Sources */,
@@ -1352,6 +1398,7 @@
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
 				BFD82AC5216DB88500A14868 /* ModuleWireframeable.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */,
+				BF50050B217454C600D35B69 /* SignInInteractor.swift in Sources */,
 				BF5004F9217422CF00D35B69 /* NewEventPresenter.swift in Sources */,
 				BFD82A89216D989E00A14868 /* NetworkingClientHTTPMethods.swift in Sources */,
 				BF5004912173EB7800D35B69 /* ProfilePaymentProtocols.swift in Sources */,
@@ -1409,6 +1456,7 @@
 				BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */,
 				BFD82A96216D989E00A14868 /* NetworkingServiceError.swift in Sources */,
 				BFD82A8A216D989E00A14868 /* NetworkingError.swift in Sources */,
+				BF500509217454C600D35B69 /* SignInViewController.swift in Sources */,
 				BF5004AE2174122200D35B69 /* CalendarViewController.swift in Sources */,
 				BFCDA5EC21725E7200DB31FC /* WelcomePresenter.swift in Sources */,
 				BFCDA5ED21725E7200DB31FC /* WelcomeRouter.swift in Sources */,

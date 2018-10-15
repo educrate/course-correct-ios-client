@@ -66,9 +66,6 @@
                     <navigationItem key="navigationItem" id="V1j-B3-mqq">
                         <barButtonItem key="backBarButtonItem" title=" " id="Evc-9m-KGf"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="hasAccountPressed" destination="5OQ-sp-Jaf" id="8Xn-gb-xAM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csc-jI-vZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

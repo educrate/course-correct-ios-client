@@ -17,11 +17,14 @@ extension UIStoryboard {
         case app = "App"
         case welcome = "Welcome"
         
-        // MARK: Onboarding
+        // MARK: Onboarding New User
         case selectCollege = "SelectCollege"
         case enterStudentIdentifier = "EnterStudentIdentifier"
         case enterAccessCode = "EnterAccessCode"
         case createPassword = "CreatePassword"
+        
+        // MARK: Onboarding Existing User
+        case signIn = "SignIn"
         
         // MARK: Schedule
         case calendar = "Calendar"
