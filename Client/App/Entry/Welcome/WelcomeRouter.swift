@@ -35,9 +35,9 @@ extension WelcomeRouter {
         }
     }
     
-    func presentCalendar() {
+    func presentSignIn() {
         if let view = viewController, let navigationController = view.navigationController {
-            navigationController.pushViewController(SelectCollegeRouter.createModule(), animated: true)
+            navigationController.pushViewController(SignInRouter.createModule(), animated: true)
         }
     }
 }
