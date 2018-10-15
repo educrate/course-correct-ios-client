@@ -14,7 +14,9 @@ class AddLocationPresenter: AddLocationPresenterProtocol {
     var interactor: AddLocationInteractorProtocol?
     private let router: AddLocationWireframeProtocol
 
-    init(interface: AddLocationViewProtocol, interactor: AddLocationInteractorProtocol?, router: AddLocationWireframeProtocol) {
+    init(interface: AddLocationViewProtocol,
+         interactor: AddLocationInteractorProtocol?,
+         router: AddLocationWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router

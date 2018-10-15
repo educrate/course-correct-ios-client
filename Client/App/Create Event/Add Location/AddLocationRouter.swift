@@ -13,7 +13,8 @@ class AddLocationRouter: AddLocationWireframeProtocol {
     weak var viewController: UIViewController?
     
     static func createModule() -> UIViewController {
-        let view = AddLocationViewController(nibName: nil, bundle: nil)
+        let storyboard = UIStoryboard(storyboard: .addLocation)
+        let view: AddLocationViewController = storyboard.instantiateViewController()
         let interactor = AddLocationInteractor()
         let router = AddLocationRouter()
         let presenter = AddLocationPresenter(interface: view, interactor: interactor, router: router)

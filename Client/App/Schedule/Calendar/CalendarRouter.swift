@@ -9,11 +9,13 @@
 import UIKit
 
 class CalendarRouter: CalendarWireframeProtocol {
-    
     weak var viewController: UIViewController?
-    
+}
+
+extension CalendarRouter {
     static func createModule() -> UIViewController {
-        let view = CalendarViewController(nibName: nil, bundle: nil)
+        let storyboard = UIStoryboard(storyboard: .calendar)
+        let view: CalendarViewController = storyboard.instantiateViewController()
         let interactor = CalendarInteractor()
         let router = CalendarRouter()
         let presenter = CalendarPresenter(interface: view, interactor: interactor, router: router)

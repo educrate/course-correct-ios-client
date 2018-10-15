@@ -14,7 +14,9 @@ class CalendarPresenter: CalendarPresenterProtocol {
     var interactor: CalendarInteractorProtocol?
     private let router: CalendarWireframeProtocol
 
-    init(interface: CalendarViewProtocol, interactor: CalendarInteractorProtocol?, router: CalendarWireframeProtocol) {
+    init(interface: CalendarViewProtocol,
+         interactor: CalendarInteractorProtocol?,
+         router: CalendarWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router

@@ -9,11 +9,13 @@
 import UIKit
 
 class SelectTutorRouter: SelectTutorWireframeProtocol {
-    
     weak var viewController: UIViewController?
-    
+}
+
+extension SelectTutorRouter {
     static func createModule() -> UIViewController {
-        let view = SelectTutorViewController(nibName: nil, bundle: nil)
+        let storyboard = UIStoryboard(storyboard: .selectTutor)
+        let view: SelectTutorViewController = storyboard.instantiateViewController()
         let interactor = SelectTutorInteractor()
         let router = SelectTutorRouter()
         let presenter = SelectTutorPresenter(interface: view, interactor: interactor, router: router)

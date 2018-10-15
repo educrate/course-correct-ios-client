@@ -13,7 +13,8 @@ class TutorProfileRouter: TutorProfileWireframeProtocol {
     weak var viewController: UIViewController?
     
     static func createModule() -> UIViewController {
-        let view = TutorProfileViewController(nibName: nil, bundle: nil)
+        let storyboard = UIStoryboard(storyboard: .tutorProfile)
+        let view: TutorProfileViewController = storyboard.instantiateViewController()
         let interactor = TutorProfileInteractor()
         let router = TutorProfileRouter()
         let presenter = TutorProfilePresenter(interface: view, interactor: interactor, router: router)

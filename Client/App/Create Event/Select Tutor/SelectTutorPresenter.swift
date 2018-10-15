@@ -14,7 +14,9 @@ class SelectTutorPresenter: SelectTutorPresenterProtocol {
     var interactor: SelectTutorInteractorProtocol?
     private let router: SelectTutorWireframeProtocol
 
-    init(interface: SelectTutorViewProtocol, interactor: SelectTutorInteractorProtocol?, router: SelectTutorWireframeProtocol) {
+    init(interface: SelectTutorViewProtocol,
+         interactor: SelectTutorInteractorProtocol?,
+         router: SelectTutorWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router

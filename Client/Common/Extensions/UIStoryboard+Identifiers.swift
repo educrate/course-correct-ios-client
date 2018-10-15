@@ -28,7 +28,7 @@ extension UIStoryboard {
         case event = "Event"
         
         // MARK: Create Event
-        case createEvent = "CreateEvent"
+        case newEvent = "NewEvent"
         case addLocation = "AddLocation"
         case selectTutor = "SelectTutor"
         case tutorProfile = "TutorProfile"

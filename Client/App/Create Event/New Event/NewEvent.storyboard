@@ -9,20 +9,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Select Tutor View Controller-->
-        <scene sceneID="Tej-9L-kdV">
+        <!--New Event View Controller-->
+        <scene sceneID="u60-ys-zDv">
             <objects>
-                <viewController storyboardIdentifier="SelectTutorViewController" id="Kyk-tA-5t6" customClass="SelectTutorViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZzG-CD-kx4">
+                <viewController storyboardIdentifier="NewEventViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M7c-X4-rYh" customClass="NewEventViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NZv-zs-rt8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ob9-Yt-TQM"/>
+                        <viewLayoutGuide key="safeArea" id="BpK-mZ-azA"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Pb-Ty-y4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKJ-bX-b2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="108"/>
+            <point key="canvasLocation" x="52" y="117"/>
         </scene>
     </scenes>
 </document>

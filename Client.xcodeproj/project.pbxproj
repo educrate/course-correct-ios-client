@@ -47,12 +47,6 @@
 		BF5004BC2174127100D35B69 /* EventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004B72174127100D35B69 /* EventProtocols.swift */; };
 		BF5004BD2174127100D35B69 /* EventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004B82174127100D35B69 /* EventInteractor.swift */; };
 		BF5004BF2174128200D35B69 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004BE2174128200D35B69 /* Event.storyboard */; };
-		BF5004C6217412BC00D35B69 /* CreateEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004C1217412BC00D35B69 /* CreateEventPresenter.swift */; };
-		BF5004C7217412BC00D35B69 /* CreateEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004C2217412BC00D35B69 /* CreateEventRouter.swift */; };
-		BF5004C8217412BC00D35B69 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004C3217412BC00D35B69 /* CreateEventViewController.swift */; };
-		BF5004C9217412BC00D35B69 /* CreateEventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004C4217412BC00D35B69 /* CreateEventProtocols.swift */; };
-		BF5004CA217412BC00D35B69 /* CreateEventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004C5217412BC00D35B69 /* CreateEventInteractor.swift */; };
-		BF5004CC217412CB00D35B69 /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004CB217412CB00D35B69 /* CreateEvent.storyboard */; };
 		BF5004D521741E6900D35B69 /* AddLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004D021741E6900D35B69 /* AddLocationPresenter.swift */; };
 		BF5004D621741E6900D35B69 /* AddLocationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004D121741E6900D35B69 /* AddLocationRouter.swift */; };
 		BF5004D721741E6900D35B69 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004D221741E6900D35B69 /* AddLocationViewController.swift */; };
@@ -71,6 +65,12 @@
 		BF5004F021741EAF00D35B69 /* TutorProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004EB21741EAE00D35B69 /* TutorProfileProtocols.swift */; };
 		BF5004F121741EAF00D35B69 /* TutorProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004EC21741EAE00D35B69 /* TutorProfileInteractor.swift */; };
 		BF5004F321741EC400D35B69 /* TutorProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004F221741EC400D35B69 /* TutorProfile.storyboard */; };
+		BF5004F9217422CF00D35B69 /* NewEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004F4217422CF00D35B69 /* NewEventPresenter.swift */; };
+		BF5004FA217422CF00D35B69 /* NewEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004F5217422CF00D35B69 /* NewEventRouter.swift */; };
+		BF5004FB217422CF00D35B69 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004F6217422CF00D35B69 /* NewEventViewController.swift */; };
+		BF5004FC217422CF00D35B69 /* NewEventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004F7217422CF00D35B69 /* NewEventProtocols.swift */; };
+		BF5004FD217422CF00D35B69 /* NewEventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004F8217422CF00D35B69 /* NewEventInteractor.swift */; };
+		BF5004FF217422DD00D35B69 /* NewEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004FE217422DD00D35B69 /* NewEvent.storyboard */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -254,12 +254,6 @@
 		BF5004B72174127100D35B69 /* EventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventProtocols.swift; sourceTree = "<group>"; };
 		BF5004B82174127100D35B69 /* EventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInteractor.swift; sourceTree = "<group>"; };
 		BF5004BE2174128200D35B69 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
-		BF5004C1217412BC00D35B69 /* CreateEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventPresenter.swift; sourceTree = "<group>"; };
-		BF5004C2217412BC00D35B69 /* CreateEventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventRouter.swift; sourceTree = "<group>"; };
-		BF5004C3217412BC00D35B69 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
-		BF5004C4217412BC00D35B69 /* CreateEventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventProtocols.swift; sourceTree = "<group>"; };
-		BF5004C5217412BC00D35B69 /* CreateEventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventInteractor.swift; sourceTree = "<group>"; };
-		BF5004CB217412CB00D35B69 /* CreateEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEvent.storyboard; sourceTree = "<group>"; };
 		BF5004D021741E6900D35B69 /* AddLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationPresenter.swift; sourceTree = "<group>"; };
 		BF5004D121741E6900D35B69 /* AddLocationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationRouter.swift; sourceTree = "<group>"; };
 		BF5004D221741E6900D35B69 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +272,12 @@
 		BF5004EB21741EAE00D35B69 /* TutorProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileProtocols.swift; sourceTree = "<group>"; };
 		BF5004EC21741EAE00D35B69 /* TutorProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileInteractor.swift; sourceTree = "<group>"; };
 		BF5004F221741EC400D35B69 /* TutorProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TutorProfile.storyboard; sourceTree = "<group>"; };
+		BF5004F4217422CF00D35B69 /* NewEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventPresenter.swift; sourceTree = "<group>"; };
+		BF5004F5217422CF00D35B69 /* NewEventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventRouter.swift; sourceTree = "<group>"; };
+		BF5004F6217422CF00D35B69 /* NewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
+		BF5004F7217422CF00D35B69 /* NewEventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventProtocols.swift; sourceTree = "<group>"; };
+		BF5004F8217422CF00D35B69 /* NewEventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventInteractor.swift; sourceTree = "<group>"; };
+		BF5004FE217422DD00D35B69 /* NewEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEvent.storyboard; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -576,12 +576,12 @@
 		BF5004C02174128F00D35B69 /* New Event */ = {
 			isa = PBXGroup;
 			children = (
-				BF5004CB217412CB00D35B69 /* CreateEvent.storyboard */,
-				BF5004C3217412BC00D35B69 /* CreateEventViewController.swift */,
-				BF5004C1217412BC00D35B69 /* CreateEventPresenter.swift */,
-				BF5004C2217412BC00D35B69 /* CreateEventRouter.swift */,
-				BF5004C5217412BC00D35B69 /* CreateEventInteractor.swift */,
-				BF5004C4217412BC00D35B69 /* CreateEventProtocols.swift */,
+				BF5004FE217422DD00D35B69 /* NewEvent.storyboard */,
+				BF5004F6217422CF00D35B69 /* NewEventViewController.swift */,
+				BF5004F4217422CF00D35B69 /* NewEventPresenter.swift */,
+				BF5004F5217422CF00D35B69 /* NewEventRouter.swift */,
+				BF5004F8217422CF00D35B69 /* NewEventInteractor.swift */,
+				BF5004F7217422CF00D35B69 /* NewEventProtocols.swift */,
 			);
 			path = "New Event";
 			sourceTree = "<group>";
@@ -1245,7 +1245,6 @@
 				BFD82AF32170671B00A14868 /* EnterStudentIdentifier.storyboard in Resources */,
 				BF5004702172F0A200D35B69 /* ProfileOverview.storyboard in Resources */,
 				BF5004B22174123200D35B69 /* Calendar.storyboard in Resources */,
-				BF5004CC217412CB00D35B69 /* CreateEvent.storyboard in Resources */,
 				BF5004842173AC3C00D35B69 /* ProfileAccount.storyboard in Resources */,
 				BF5004BF2174128200D35B69 /* Event.storyboard in Resources */,
 				BFCDA5FF2172601200DB31FC /* CreatePassword.storyboard in Resources */,
@@ -1258,6 +1257,7 @@
 				BFCDA5F221725E8500DB31FC /* Welcome.storyboard in Resources */,
 				BFD82AE2216F028600A14868 /* UIDropdown.storyboard in Resources */,
 				BFD82AE6217061DA00A14868 /* UIField.storyboard in Resources */,
+				BF5004FF217422DD00D35B69 /* NewEvent.storyboard in Resources */,
 				BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */,
 				BF5004A02173EBB000D35B69 /* ProfileSupport.storyboard in Resources */,
 				BF5004E721741EA000D35B69 /* SelectTutor.storyboard in Resources */,
@@ -1293,7 +1293,6 @@
 				BF5004A32174111C00D35B69 /* UIStoryboard+Identifiers.swift in Sources */,
 				BFF14D922160492F00733323 /* DateHelper.swift in Sources */,
 				BF5004ED21741EAE00D35B69 /* TutorProfilePresenter.swift in Sources */,
-				BF5004C8217412BC00D35B69 /* CreateEventViewController.swift in Sources */,
 				BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */,
 				BFD82A91216D989E00A14868 /* NetworkingClientResult.swift in Sources */,
 				BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */,
@@ -1307,18 +1306,17 @@
 				BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */,
 				BFD82AF02170670400A14868 /* EnterStudentIdentifierProtocols.swift in Sources */,
 				BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */,
-				BF5004CA217412BC00D35B69 /* CreateEventInteractor.swift in Sources */,
 				BF70B5D8217074C600771E5D /* EnterAccessCodeProtocols.swift in Sources */,
-				BF5004C6217412BC00D35B69 /* CreateEventPresenter.swift in Sources */,
-				BF5004C7217412BC00D35B69 /* CreateEventRouter.swift in Sources */,
 				BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */,
 				BFCDA5F021725E7200DB31FC /* WelcomeInteractor.swift in Sources */,
 				BFD82A8E216D989E00A14868 /* NetworkingClientRequest.swift in Sources */,
 				BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */,
 				BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */,
+				BF5004FB217422CF00D35B69 /* NewEventViewController.swift in Sources */,
 				BFD0299421509C9A002FB9F5 /* UIActionSheetConfig.swift in Sources */,
 				BF5004E121741E9100D35B69 /* SelectTutorPresenter.swift in Sources */,
 				BF5004902173EB7800D35B69 /* ProfilePaymentViewController.swift in Sources */,
+				BF5004FA217422CF00D35B69 /* NewEventRouter.swift in Sources */,
 				BF50046A2172F09700D35B69 /* ProfileOverviewPresenter.swift in Sources */,
 				BFD82A8B216D989E00A14868 /* NetworkingService.swift in Sources */,
 				BF5004E221741E9100D35B69 /* SelectTutorRouter.swift in Sources */,
@@ -1354,6 +1352,7 @@
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
 				BFD82AC5216DB88500A14868 /* ModuleWireframeable.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */,
+				BF5004F9217422CF00D35B69 /* NewEventPresenter.swift in Sources */,
 				BFD82A89216D989E00A14868 /* NetworkingClientHTTPMethods.swift in Sources */,
 				BF5004912173EB7800D35B69 /* ProfilePaymentProtocols.swift in Sources */,
 				BFCDA60221727A2300DB31FC /* AppNavigationController.swift in Sources */,
@@ -1395,6 +1394,7 @@
 				BFF14D942160494100733323 /* DateDescriptionHelper.swift in Sources */,
 				BF5004B02174122200D35B69 /* CalendarInteractor.swift in Sources */,
 				BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */,
+				BF5004FC217422CF00D35B69 /* NewEventProtocols.swift in Sources */,
 				BF5004BB2174127100D35B69 /* EventViewController.swift in Sources */,
 				BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */,
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
@@ -1419,7 +1419,6 @@
 				BFD82AD7216E7D3500A14868 /* AnyError.swift in Sources */,
 				BFD82ABE216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				BF5004D521741E6900D35B69 /* AddLocationPresenter.swift in Sources */,
-				BF5004C9217412BC00D35B69 /* CreateEventProtocols.swift in Sources */,
 				BFD82AB9216DA53200A14868 /* UIDropdownViewController.swift in Sources */,
 				BF5004EE21741EAF00D35B69 /* TutorProfileRouter.swift in Sources */,
 				BFD0298121509C6A002FB9F5 /* CreditCardPrefixContainable.swift in Sources */,
@@ -1436,6 +1435,7 @@
 				BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */,
 				BF5004AF2174122200D35B69 /* CalendarProtocols.swift in Sources */,
 				BF5004812173AC2200D35B69 /* ProfileAccountProtocols.swift in Sources */,
+				BF5004FD217422CF00D35B69 /* NewEventInteractor.swift in Sources */,
 				BF5004D621741E6900D35B69 /* AddLocationRouter.swift in Sources */,
 				BFCDA60D2172905800DB31FC /* UINavigationBar+Additions.swift in Sources */,
 				BFF14D962160495000733323 /* DayHelper.swift in Sources */,
