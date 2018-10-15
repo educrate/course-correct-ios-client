@@ -37,7 +37,7 @@ protocol ProfileOverviewPresenterProtocol: class {
 // MARK: - Interactor
 
 protocol ProfileOverviewInteractorProtocol: class {
-    var presenter: ProfileOverviewPresenterProtocol?  { get set }
+    var presenter: ProfileOverviewPresenterProtocol? { get set }
     
     func fetchAccountInformation()
     func fetchPaymentInformation()
@@ -49,7 +49,7 @@ protocol ProfileOverviewInteractorProtocol: class {
 // MARK: - View 
 
 protocol ProfileOverviewViewProtocol: class {
-    var presenter: ProfileOverviewPresenterProtocol?  { get set }
+    var presenter: ProfileOverviewPresenterProtocol? { get set }
     
     func show(error: ProfileOverviewError)
 }

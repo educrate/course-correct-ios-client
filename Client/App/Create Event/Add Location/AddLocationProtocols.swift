@@ -22,12 +22,12 @@ protocol AddLocationPresenterProtocol: class {}
 // MARK: - Interactor
 
 protocol AddLocationInteractorProtocol: class {
-  var presenter: AddLocationPresenterProtocol?  { get set }
+  var presenter: AddLocationPresenterProtocol? { get set }
 }
 
 
 // MARK: - View 
 
 protocol AddLocationViewProtocol: class {
-  var presenter: AddLocationPresenterProtocol?  { get set }
+  var presenter: AddLocationPresenterProtocol? { get set }
 }

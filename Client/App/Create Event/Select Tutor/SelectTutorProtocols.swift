@@ -22,12 +22,12 @@ protocol SelectTutorPresenterProtocol: class {}
 // MARK: - Interactor
 
 protocol SelectTutorInteractorProtocol: class {
-  var presenter: SelectTutorPresenterProtocol?  { get set }
+  var presenter: SelectTutorPresenterProtocol? { get set }
 }
 
 
 // MARK: - View 
 
 protocol SelectTutorViewProtocol: class {
-  var presenter: SelectTutorPresenterProtocol?  { get set }
+  var presenter: SelectTutorPresenterProtocol? { get set }
 }

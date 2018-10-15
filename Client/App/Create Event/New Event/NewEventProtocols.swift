@@ -22,12 +22,12 @@ protocol NewEventPresenterProtocol: class {}
 // MARK: - Interactor
 
 protocol NewEventInteractorProtocol: class {
-  var presenter: NewEventPresenterProtocol?  { get set }
+  var presenter: NewEventPresenterProtocol? { get set }
 }
 
 
 // MARK: - View 
 
 protocol NewEventViewProtocol: class {
-  var presenter: NewEventPresenterProtocol?  { get set }
+  var presenter: NewEventPresenterProtocol? { get set }
 }

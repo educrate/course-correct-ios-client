@@ -42,7 +42,7 @@ protocol SelectCollegePresenterProtocol: class {
 protocol SelectCollegeInteractorProtocol: class {
     
     // MARK: Properties
-    var presenter: SelectCollegePresenterProtocol?  { get set }
+    var presenter: SelectCollegePresenterProtocol? { get set }
     
     // MARK: Methods
     func fetchColleges(for input: String)
@@ -54,7 +54,7 @@ protocol SelectCollegeInteractorProtocol: class {
 protocol SelectCollegeViewProtocol: class {
     
     // MARK: Properties
-    var presenter: SelectCollegePresenterProtocol?  { get set }
+    var presenter: SelectCollegePresenterProtocol? { get set }
     
     // MARK: Methods
     func show(names: [String])

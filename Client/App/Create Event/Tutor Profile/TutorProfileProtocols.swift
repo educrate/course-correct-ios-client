@@ -22,12 +22,12 @@ protocol TutorProfilePresenterProtocol: class {}
 // MARK: - Interactor
 
 protocol TutorProfileInteractorProtocol: class {
-  var presenter: TutorProfilePresenterProtocol?  { get set }
+  var presenter: TutorProfilePresenterProtocol? { get set }
 }
 
 
 // MARK: - View 
 
 protocol TutorProfileViewProtocol: class {
-  var presenter: TutorProfilePresenterProtocol?  { get set }
+  var presenter: TutorProfilePresenterProtocol? { get set }
 }

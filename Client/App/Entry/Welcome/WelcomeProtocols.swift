@@ -28,12 +28,12 @@ protocol WelcomePresenterProtocol: class {
 // MARK: - Interactor
 
 protocol WelcomeInteractorProtocol: class {
-  var presenter: WelcomePresenterProtocol?  { get set }
+  var presenter: WelcomePresenterProtocol? { get set }
 }
 
 
 // MARK: - View 
 
 protocol WelcomeViewProtocol: class {
-  var presenter: WelcomePresenterProtocol?  { get set }
+  var presenter: WelcomePresenterProtocol? { get set }
 }

@@ -28,7 +28,7 @@ protocol EnterAccessCodePresenterProtocol: class {
 // MARK: - Interactor
 
 protocol EnterAccessCodeInteractorProtocol: class {
-  var presenter: EnterAccessCodePresenterProtocol?  { get set }
+  var presenter: EnterAccessCodePresenterProtocol? { get set }
     
     func validate(_ accessCode: String)
 }
@@ -37,7 +37,7 @@ protocol EnterAccessCodeInteractorProtocol: class {
 // MARK: - View 
 
 protocol EnterAccessCodeViewProtocol: class {
-  var presenter: EnterAccessCodePresenterProtocol?  { get set }
+  var presenter: EnterAccessCodePresenterProtocol? { get set }
     
     func show(error: EnterAccessCodeError)
 }

@@ -22,12 +22,12 @@ protocol SignInPresenterProtocol: class {}
 // MARK: - Interactor
 
 protocol SignInInteractorProtocol: class {
-  var presenter: SignInPresenterProtocol?  { get set }
+  var presenter: SignInPresenterProtocol? { get set }
 }
 
 
 // MARK: - View 
 
 protocol SignInViewProtocol: class {
-  var presenter: SignInPresenterProtocol?  { get set }
+  var presenter: SignInPresenterProtocol? { get set }
 }

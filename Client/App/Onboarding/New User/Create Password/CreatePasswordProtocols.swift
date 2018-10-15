@@ -26,7 +26,7 @@ protocol CreatePasswordPresenterProtocol: class {
 // MARK: - Interactor
 
 protocol CreatePasswordInteractorProtocol: class {
-  var presenter: CreatePasswordPresenterProtocol?  { get set }
+  var presenter: CreatePasswordPresenterProtocol? { get set }
     
     func validate(_ password: String, reenteredPassword: String)
 }
@@ -35,7 +35,7 @@ protocol CreatePasswordInteractorProtocol: class {
 // MARK: - View 
 
 protocol CreatePasswordViewProtocol: class {
-  var presenter: CreatePasswordPresenterProtocol?  { get set }
+  var presenter: CreatePasswordPresenterProtocol? { get set }
     
     func show(error: CreatePasswordError)
 }

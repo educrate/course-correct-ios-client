@@ -22,12 +22,12 @@ protocol ProfileSupportPresenterProtocol: class {}
 // MARK: - Interactor
 
 protocol ProfileSupportInteractorProtocol: class {
-  var presenter: ProfileSupportPresenterProtocol?  { get set }
+  var presenter: ProfileSupportPresenterProtocol? { get set }
 }
 
 
 // MARK: - View 
 
 protocol ProfileSupportViewProtocol: class {
-  var presenter: ProfileSupportPresenterProtocol?  { get set }
+  var presenter: ProfileSupportPresenterProtocol? { get set }
 }

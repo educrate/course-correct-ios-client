@@ -22,12 +22,12 @@ protocol CalendarPresenterProtocol: class {}
 // MARK: - Interactor
 
 protocol CalendarInteractorProtocol: class {
-  var presenter: CalendarPresenterProtocol?  { get set }
+  var presenter: CalendarPresenterProtocol? { get set }
 }
 
 
 // MARK: - View 
 
 protocol CalendarViewProtocol: class {
-  var presenter: CalendarPresenterProtocol?  { get set }
+  var presenter: CalendarPresenterProtocol? { get set }
 }

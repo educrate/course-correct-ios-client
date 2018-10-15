@@ -28,7 +28,7 @@ protocol EnterStudentIdentifierPresenterProtocol: class {
 // MARK: - Interactor
 
 protocol EnterStudentIdentifierInteractorProtocol: class {
-  var presenter: EnterStudentIdentifierPresenterProtocol?  { get set }
+  var presenter: EnterStudentIdentifierPresenterProtocol? { get set }
     
     func validate(studentIdentifier: String)
 }
@@ -37,7 +37,7 @@ protocol EnterStudentIdentifierInteractorProtocol: class {
 // MARK: - View 
 
 protocol EnterStudentIdentifierViewProtocol: class {
-  var presenter: EnterStudentIdentifierPresenterProtocol?  { get set }
+  var presenter: EnterStudentIdentifierPresenterProtocol? { get set }
     
     func show(error: EnterStudentIdentifierError)
 }

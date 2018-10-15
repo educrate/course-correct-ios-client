@@ -22,12 +22,12 @@ protocol ProfilePaymentPresenterProtocol: class {}
 // MARK: - Interactor
 
 protocol ProfilePaymentInteractorProtocol: class {
-  var presenter: ProfilePaymentPresenterProtocol?  { get set }
+  var presenter: ProfilePaymentPresenterProtocol? { get set }
 }
 
 
 // MARK: - View 
 
 protocol ProfilePaymentViewProtocol: class {
-  var presenter: ProfilePaymentPresenterProtocol?  { get set }
+  var presenter: ProfilePaymentPresenterProtocol? { get set }
 }
