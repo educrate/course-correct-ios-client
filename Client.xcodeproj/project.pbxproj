@@ -445,7 +445,8 @@
 		BF4E718D216D4C1A00100FE1 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
-				BF5004A12173EC4E00D35B69 /* App */,
+				BF50050F21745D6000D35B69 /* App Launch */,
+				BF5004A12173EC4E00D35B69 /* App Navigation */,
 				BF70B5DC21715BA800771E5D /* Welcome */,
 			);
 			path = Entry;
@@ -523,16 +524,14 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		BF5004A12173EC4E00D35B69 /* App */ = {
+		BF5004A12173EC4E00D35B69 /* App Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				BFCDA60521727B3D00DB31FC /* AppLaunch.storyboard */,
 				BFCDA60721727B4600DB31FC /* App.storyboard */,
-				BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */,
 				BFCDA60121727A2300DB31FC /* AppNavigationController.swift */,
 				BFCDA60321727AF500DB31FC /* AppViewController.swift */,
 			);
-			path = App;
+			path = "App Navigation";
 			sourceTree = "<group>";
 		};
 		BF5004A4217411A800D35B69 /* Create Event */ = {
@@ -663,6 +662,15 @@
 				BF500505217454C600D35B69 /* SignInProtocols.swift */,
 			);
 			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		BF50050F21745D6000D35B69 /* App Launch */ = {
+			isa = PBXGroup;
+			children = (
+				BFCDA60521727B3D00DB31FC /* AppLaunch.storyboard */,
+				BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */,
+			);
+			path = "App Launch";
 			sourceTree = "<group>";
 		};
 		BF55165B215B39CD00D0CBB1 /* Models */ = {
@@ -945,7 +953,6 @@
 			isa = PBXGroup;
 			children = (
 				BFF14DA22161431800733323 /* Interface */,
-				BFF14D9C2160538F00733323 /* Protocols */,
 				BFCECC9F2152066B001BB2BA /* Views */,
 				BF55165C215B3A3C00D0CBB1 /* Logic */,
 				BF55165D215B3AA000D0CBB1 /* Helpers */,
@@ -1148,13 +1155,6 @@
 				BFCDA60F2172B47500DB31FC /* Entities */,
 			);
 			path = "Enter Student Identifier";
-			sourceTree = "<group>";
-		};
-		BFF14D9C2160538F00733323 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		BFF14DA22161431800733323 /* Interface */ = {
