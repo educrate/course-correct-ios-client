@@ -846,8 +846,8 @@
 		BFD0290C21509AD4002FB9F5 /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				BFD82AC2216DB85C00A14868 /* Common */,
 				BFD0293F21509AF0002FB9F5 /* App */,
+				BFD82AC2216DB85C00A14868 /* Common */,
 				BFD0293E21509AE3002FB9F5 /* Modules */,
 				BFD0294121509B39002FB9F5 /* Utilities */,
 			);
