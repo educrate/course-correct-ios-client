@@ -9,11 +9,13 @@
 import UIKit
 
 class ProfileSupportRouter: ProfileSupportWireframeProtocol {
-    
     weak var viewController: UIViewController?
-    
+}
+
+extension ProfileSupportRouter {
     static func createModule() -> UIViewController {
-        let view = ProfileSupportViewController(nibName: nil, bundle: nil)
+        let storyboard = UIStoryboard(storyboard: .profileSupport)
+        let view: ProfileSupportViewController = storyboard.instantiateViewController()
         let interactor = ProfileSupportInteractor()
         let router = ProfileSupportRouter()
         let presenter = ProfileSupportPresenter(interface: view, interactor: interactor, router: router)

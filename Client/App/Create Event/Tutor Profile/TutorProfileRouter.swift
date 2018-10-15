@@ -9,9 +9,10 @@
 import UIKit
 
 class TutorProfileRouter: TutorProfileWireframeProtocol {
-    
     weak var viewController: UIViewController?
-    
+}
+
+extension TutorProfileRouter {
     static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .tutorProfile)
         let view: TutorProfileViewController = storyboard.instantiateViewController()

@@ -36,14 +36,20 @@ extension ProfileOverviewRouter {
     }
     
     func presentPayment() {
-
+        if let view = viewController, let navigationController = view.navigationController {
+            navigationController.pushViewController(ProfilePaymentRouter.createModule(), animated: true)
+        }
     }
     
     func presentSupport() {
-
+        if let view = viewController, let navigationController = view.navigationController {
+            navigationController.pushViewController(ProfileSupportRouter.createModule(), animated: true)
+        }
     }
     
     func presentWelcome() {
-
+        if let view = viewController, let navigationController = view.navigationController {
+            navigationController.pushViewController(WelcomeRouter.createModule(), animated: true)
+        }
     }
 }
