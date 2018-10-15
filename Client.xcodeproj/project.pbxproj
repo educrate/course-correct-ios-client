@@ -169,8 +169,6 @@
 		BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD82AAB216DA49B00A14868 /* SelectCollege.storyboard */; };
 		BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */; };
 		BFD82AB9216DA53200A14868 /* UIDropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AB3216DA53200A14868 /* UIDropdownViewController.swift */; };
-		BFD82ABC216DAD4F00A14868 /* UIStoryboard+Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82ABB216DAD4F00A14868 /* UIStoryboard+Storyboards.swift */; };
-		BFD82ABE216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82ABD216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift */; };
 		BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */; };
 		BFD82AC5216DB88500A14868 /* ModuleWireframeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC4216DB88500A14868 /* ModuleWireframeable.swift */; };
 		BFD82ACB216E77B600A14868 /* SelectCollegePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC6216E77B600A14868 /* SelectCollegePresenter.swift */; };
@@ -388,8 +386,6 @@
 		BFD82AAB216DA49B00A14868 /* SelectCollege.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCollege.storyboard; sourceTree = "<group>"; };
 		BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownCell.swift; sourceTree = "<group>"; };
 		BFD82AB3216DA53200A14868 /* UIDropdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownViewController.swift; sourceTree = "<group>"; };
-		BFD82ABB216DAD4F00A14868 /* UIStoryboard+Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Storyboards.swift"; sourceTree = "<group>"; };
-		BFD82ABD216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifier.swift"; sourceTree = "<group>"; };
 		BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		BFD82AC4216DB88500A14868 /* ModuleWireframeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleWireframeable.swift; sourceTree = "<group>"; };
 		BFD82AC6216E77B600A14868 /* SelectCollegePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegePresenter.swift; sourceTree = "<group>"; };
@@ -1080,21 +1076,11 @@
 			path = Dropdown;
 			sourceTree = "<group>";
 		};
-		BFD82ABA216DAD2600A14868 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				BFD82ABB216DAD4F00A14868 /* UIStoryboard+Storyboards.swift */,
-				BFD82ABD216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		BFD82ABF216DAD9800A14868 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */,
 				BFCDA6182172D53700DB31FC /* SegueIdentifiable.swift */,
-				BFD82ABA216DAD2600A14868 /* Extensions */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -1465,7 +1451,6 @@
 				BFCDA5EF21725E7200DB31FC /* WelcomeProtocols.swift in Sources */,
 				BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */,
 				BFD82AD7216E7D3500A14868 /* AnyError.swift in Sources */,
-				BFD82ABE216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				BF5004D521741E6900D35B69 /* AddLocationPresenter.swift in Sources */,
 				BFD82AB9216DA53200A14868 /* UIDropdownViewController.swift in Sources */,
 				BF5004EE21741EAF00D35B69 /* TutorProfileRouter.swift in Sources */,
@@ -1497,7 +1482,6 @@
 				BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeader.swift in Sources */,
 				BFD0299621509C9A002FB9F5 /* UIActionSheetDataSource.swift in Sources */,
 				BF50049A2173EB9B00D35B69 /* ProfileSupportPresenter.swift in Sources */,
-				BFD82ABC216DAD4F00A14868 /* UIStoryboard+Storyboards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
