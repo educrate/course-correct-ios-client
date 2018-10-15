@@ -27,4 +27,8 @@ extension WelcomePresenter {
     func showSelectCollege() {
         router.presentSelectCollege()
     }
+    
+    func showCalendar() {
+        router.presentCalendar()
+    }
 }

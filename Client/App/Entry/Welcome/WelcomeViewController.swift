@@ -12,9 +12,13 @@ class WelcomeViewController: UIViewController, WelcomeViewProtocol {
 	var presenter: WelcomePresenterProtocol?
 }
 
-extension WelcomeViewController {
+private extension WelcomeViewController {
     @IBAction func createAccountPressed(_ sender: UIButton, forEvent event: UIEvent) {
         presenter?.showSelectCollege()
+    }
+    
+    @IBAction func signInPressed(_ sender: UIButton, forEvent event: UIEvent) {
+        
     }
 }
 

@@ -20,10 +20,7 @@ extension AppNavigationController {
 
 private extension AppNavigationController {
     func setRootView() {
-//        let welcomeViewController = WelcomeRouter.createModule()
-//        viewControllers = [welcomeViewController]
-        
-        let profileOverviewViewController = ProfileOverviewRouter.createModule()
-        viewControllers = [profileOverviewViewController]
+        let welcomeViewController = WelcomeRouter.createModule()
+        viewControllers = [welcomeViewController]
     }
 }

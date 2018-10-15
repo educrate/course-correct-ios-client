@@ -34,6 +34,43 @@
 		BF50049D2173EB9B00D35B69 /* ProfileSupportProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004982173EB9B00D35B69 /* ProfileSupportProtocols.swift */; };
 		BF50049E2173EB9B00D35B69 /* ProfileSupportInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004992173EB9B00D35B69 /* ProfileSupportInteractor.swift */; };
 		BF5004A02173EBB000D35B69 /* ProfileSupport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF50049F2173EBB000D35B69 /* ProfileSupport.storyboard */; };
+		BF5004A32174111C00D35B69 /* UIStoryboard+Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004A22174111C00D35B69 /* UIStoryboard+Identifiers.swift */; };
+		BF5004AC2174122200D35B69 /* CalendarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004A72174122200D35B69 /* CalendarPresenter.swift */; };
+		BF5004AD2174122200D35B69 /* CalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004A82174122200D35B69 /* CalendarRouter.swift */; };
+		BF5004AE2174122200D35B69 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004A92174122200D35B69 /* CalendarViewController.swift */; };
+		BF5004AF2174122200D35B69 /* CalendarProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004AA2174122200D35B69 /* CalendarProtocols.swift */; };
+		BF5004B02174122200D35B69 /* CalendarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004AB2174122200D35B69 /* CalendarInteractor.swift */; };
+		BF5004B22174123200D35B69 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004B12174123200D35B69 /* Calendar.storyboard */; };
+		BF5004B92174127100D35B69 /* EventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004B42174127100D35B69 /* EventPresenter.swift */; };
+		BF5004BA2174127100D35B69 /* EventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004B52174127100D35B69 /* EventRouter.swift */; };
+		BF5004BB2174127100D35B69 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004B62174127100D35B69 /* EventViewController.swift */; };
+		BF5004BC2174127100D35B69 /* EventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004B72174127100D35B69 /* EventProtocols.swift */; };
+		BF5004BD2174127100D35B69 /* EventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004B82174127100D35B69 /* EventInteractor.swift */; };
+		BF5004BF2174128200D35B69 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004BE2174128200D35B69 /* Event.storyboard */; };
+		BF5004C6217412BC00D35B69 /* CreateEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004C1217412BC00D35B69 /* CreateEventPresenter.swift */; };
+		BF5004C7217412BC00D35B69 /* CreateEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004C2217412BC00D35B69 /* CreateEventRouter.swift */; };
+		BF5004C8217412BC00D35B69 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004C3217412BC00D35B69 /* CreateEventViewController.swift */; };
+		BF5004C9217412BC00D35B69 /* CreateEventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004C4217412BC00D35B69 /* CreateEventProtocols.swift */; };
+		BF5004CA217412BC00D35B69 /* CreateEventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004C5217412BC00D35B69 /* CreateEventInteractor.swift */; };
+		BF5004CC217412CB00D35B69 /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004CB217412CB00D35B69 /* CreateEvent.storyboard */; };
+		BF5004D521741E6900D35B69 /* AddLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004D021741E6900D35B69 /* AddLocationPresenter.swift */; };
+		BF5004D621741E6900D35B69 /* AddLocationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004D121741E6900D35B69 /* AddLocationRouter.swift */; };
+		BF5004D721741E6900D35B69 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004D221741E6900D35B69 /* AddLocationViewController.swift */; };
+		BF5004D821741E6900D35B69 /* AddLocationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004D321741E6900D35B69 /* AddLocationProtocols.swift */; };
+		BF5004D921741E6900D35B69 /* AddLocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004D421741E6900D35B69 /* AddLocationInteractor.swift */; };
+		BF5004DB21741E7700D35B69 /* AddLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004DA21741E7700D35B69 /* AddLocation.storyboard */; };
+		BF5004E121741E9100D35B69 /* SelectTutorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004DC21741E9100D35B69 /* SelectTutorPresenter.swift */; };
+		BF5004E221741E9100D35B69 /* SelectTutorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004DD21741E9100D35B69 /* SelectTutorRouter.swift */; };
+		BF5004E321741E9100D35B69 /* SelectTutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004DE21741E9100D35B69 /* SelectTutorViewController.swift */; };
+		BF5004E421741E9100D35B69 /* SelectTutorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004DF21741E9100D35B69 /* SelectTutorProtocols.swift */; };
+		BF5004E521741E9100D35B69 /* SelectTutorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004E021741E9100D35B69 /* SelectTutorInteractor.swift */; };
+		BF5004E721741EA000D35B69 /* SelectTutor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004E621741EA000D35B69 /* SelectTutor.storyboard */; };
+		BF5004ED21741EAE00D35B69 /* TutorProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004E821741EAE00D35B69 /* TutorProfilePresenter.swift */; };
+		BF5004EE21741EAF00D35B69 /* TutorProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004E921741EAE00D35B69 /* TutorProfileRouter.swift */; };
+		BF5004EF21741EAF00D35B69 /* TutorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004EA21741EAE00D35B69 /* TutorProfileViewController.swift */; };
+		BF5004F021741EAF00D35B69 /* TutorProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004EB21741EAE00D35B69 /* TutorProfileProtocols.swift */; };
+		BF5004F121741EAF00D35B69 /* TutorProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004EC21741EAE00D35B69 /* TutorProfileInteractor.swift */; };
+		BF5004F321741EC400D35B69 /* TutorProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004F221741EC400D35B69 /* TutorProfile.storyboard */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -204,6 +241,43 @@
 		BF5004982173EB9B00D35B69 /* ProfileSupportProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSupportProtocols.swift; sourceTree = "<group>"; };
 		BF5004992173EB9B00D35B69 /* ProfileSupportInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSupportInteractor.swift; sourceTree = "<group>"; };
 		BF50049F2173EBB000D35B69 /* ProfileSupport.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileSupport.storyboard; sourceTree = "<group>"; };
+		BF5004A22174111C00D35B69 /* UIStoryboard+Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Identifiers.swift"; sourceTree = "<group>"; };
+		BF5004A72174122200D35B69 /* CalendarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPresenter.swift; sourceTree = "<group>"; };
+		BF5004A82174122200D35B69 /* CalendarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRouter.swift; sourceTree = "<group>"; };
+		BF5004A92174122200D35B69 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		BF5004AA2174122200D35B69 /* CalendarProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarProtocols.swift; sourceTree = "<group>"; };
+		BF5004AB2174122200D35B69 /* CalendarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarInteractor.swift; sourceTree = "<group>"; };
+		BF5004B12174123200D35B69 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		BF5004B42174127100D35B69 /* EventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPresenter.swift; sourceTree = "<group>"; };
+		BF5004B52174127100D35B69 /* EventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRouter.swift; sourceTree = "<group>"; };
+		BF5004B62174127100D35B69 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		BF5004B72174127100D35B69 /* EventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventProtocols.swift; sourceTree = "<group>"; };
+		BF5004B82174127100D35B69 /* EventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInteractor.swift; sourceTree = "<group>"; };
+		BF5004BE2174128200D35B69 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
+		BF5004C1217412BC00D35B69 /* CreateEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventPresenter.swift; sourceTree = "<group>"; };
+		BF5004C2217412BC00D35B69 /* CreateEventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventRouter.swift; sourceTree = "<group>"; };
+		BF5004C3217412BC00D35B69 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		BF5004C4217412BC00D35B69 /* CreateEventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventProtocols.swift; sourceTree = "<group>"; };
+		BF5004C5217412BC00D35B69 /* CreateEventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventInteractor.swift; sourceTree = "<group>"; };
+		BF5004CB217412CB00D35B69 /* CreateEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEvent.storyboard; sourceTree = "<group>"; };
+		BF5004D021741E6900D35B69 /* AddLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationPresenter.swift; sourceTree = "<group>"; };
+		BF5004D121741E6900D35B69 /* AddLocationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationRouter.swift; sourceTree = "<group>"; };
+		BF5004D221741E6900D35B69 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		BF5004D321741E6900D35B69 /* AddLocationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationProtocols.swift; sourceTree = "<group>"; };
+		BF5004D421741E6900D35B69 /* AddLocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationInteractor.swift; sourceTree = "<group>"; };
+		BF5004DA21741E7700D35B69 /* AddLocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddLocation.storyboard; sourceTree = "<group>"; };
+		BF5004DC21741E9100D35B69 /* SelectTutorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorPresenter.swift; sourceTree = "<group>"; };
+		BF5004DD21741E9100D35B69 /* SelectTutorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorRouter.swift; sourceTree = "<group>"; };
+		BF5004DE21741E9100D35B69 /* SelectTutorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorViewController.swift; sourceTree = "<group>"; };
+		BF5004DF21741E9100D35B69 /* SelectTutorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorProtocols.swift; sourceTree = "<group>"; };
+		BF5004E021741E9100D35B69 /* SelectTutorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorInteractor.swift; sourceTree = "<group>"; };
+		BF5004E621741EA000D35B69 /* SelectTutor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectTutor.storyboard; sourceTree = "<group>"; };
+		BF5004E821741EAE00D35B69 /* TutorProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfilePresenter.swift; sourceTree = "<group>"; };
+		BF5004E921741EAE00D35B69 /* TutorProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileRouter.swift; sourceTree = "<group>"; };
+		BF5004EA21741EAE00D35B69 /* TutorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileViewController.swift; sourceTree = "<group>"; };
+		BF5004EB21741EAE00D35B69 /* TutorProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileProtocols.swift; sourceTree = "<group>"; };
+		BF5004EC21741EAE00D35B69 /* TutorProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileInteractor.swift; sourceTree = "<group>"; };
+		BF5004F221741EC400D35B69 /* TutorProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TutorProfile.storyboard; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -453,6 +527,104 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		BF5004A4217411A800D35B69 /* Create Event */ = {
+			isa = PBXGroup;
+			children = (
+				BF5004C02174128F00D35B69 /* New Event */,
+				BF5004CD21741E2900D35B69 /* Add Location */,
+				BF5004CE21741E3200D35B69 /* Select Tutor */,
+				BF5004CF21741E3F00D35B69 /* Tutor Profile */,
+			);
+			path = "Create Event";
+			sourceTree = "<group>";
+		};
+		BF5004A5217411C300D35B69 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				BF5004A62174120B00D35B69 /* Calendar */,
+				BF5004B32174124200D35B69 /* Event */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		BF5004A62174120B00D35B69 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				BF5004B12174123200D35B69 /* Calendar.storyboard */,
+				BF5004A92174122200D35B69 /* CalendarViewController.swift */,
+				BF5004A72174122200D35B69 /* CalendarPresenter.swift */,
+				BF5004A82174122200D35B69 /* CalendarRouter.swift */,
+				BF5004AB2174122200D35B69 /* CalendarInteractor.swift */,
+				BF5004AA2174122200D35B69 /* CalendarProtocols.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		BF5004B32174124200D35B69 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				BF5004BE2174128200D35B69 /* Event.storyboard */,
+				BF5004B62174127100D35B69 /* EventViewController.swift */,
+				BF5004B42174127100D35B69 /* EventPresenter.swift */,
+				BF5004B52174127100D35B69 /* EventRouter.swift */,
+				BF5004B82174127100D35B69 /* EventInteractor.swift */,
+				BF5004B72174127100D35B69 /* EventProtocols.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		BF5004C02174128F00D35B69 /* New Event */ = {
+			isa = PBXGroup;
+			children = (
+				BF5004CB217412CB00D35B69 /* CreateEvent.storyboard */,
+				BF5004C3217412BC00D35B69 /* CreateEventViewController.swift */,
+				BF5004C1217412BC00D35B69 /* CreateEventPresenter.swift */,
+				BF5004C2217412BC00D35B69 /* CreateEventRouter.swift */,
+				BF5004C5217412BC00D35B69 /* CreateEventInteractor.swift */,
+				BF5004C4217412BC00D35B69 /* CreateEventProtocols.swift */,
+			);
+			path = "New Event";
+			sourceTree = "<group>";
+		};
+		BF5004CD21741E2900D35B69 /* Add Location */ = {
+			isa = PBXGroup;
+			children = (
+				BF5004DA21741E7700D35B69 /* AddLocation.storyboard */,
+				BF5004D221741E6900D35B69 /* AddLocationViewController.swift */,
+				BF5004D021741E6900D35B69 /* AddLocationPresenter.swift */,
+				BF5004D121741E6900D35B69 /* AddLocationRouter.swift */,
+				BF5004D421741E6900D35B69 /* AddLocationInteractor.swift */,
+				BF5004D321741E6900D35B69 /* AddLocationProtocols.swift */,
+			);
+			path = "Add Location";
+			sourceTree = "<group>";
+		};
+		BF5004CE21741E3200D35B69 /* Select Tutor */ = {
+			isa = PBXGroup;
+			children = (
+				BF5004E621741EA000D35B69 /* SelectTutor.storyboard */,
+				BF5004DE21741E9100D35B69 /* SelectTutorViewController.swift */,
+				BF5004DC21741E9100D35B69 /* SelectTutorPresenter.swift */,
+				BF5004DD21741E9100D35B69 /* SelectTutorRouter.swift */,
+				BF5004E021741E9100D35B69 /* SelectTutorInteractor.swift */,
+				BF5004DF21741E9100D35B69 /* SelectTutorProtocols.swift */,
+			);
+			path = "Select Tutor";
+			sourceTree = "<group>";
+		};
+		BF5004CF21741E3F00D35B69 /* Tutor Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BF5004F221741EC400D35B69 /* TutorProfile.storyboard */,
+				BF5004EA21741EAE00D35B69 /* TutorProfileViewController.swift */,
+				BF5004E821741EAE00D35B69 /* TutorProfilePresenter.swift */,
+				BF5004E921741EAE00D35B69 /* TutorProfileRouter.swift */,
+				BF5004EC21741EAE00D35B69 /* TutorProfileInteractor.swift */,
+				BF5004EB21741EAE00D35B69 /* TutorProfileProtocols.swift */,
+			);
+			path = "Tutor Profile";
+			sourceTree = "<group>";
+		};
 		BF55165B215B39CD00D0CBB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -605,6 +777,7 @@
 				BFCDA60A2172903F00DB31FC /* UIImage+Additions.swift */,
 				BFCDA60C2172905800DB31FC /* UINavigationBar+Additions.swift */,
 				BF5004732172F8F800D35B69 /* UIImageView+Additions.swift */,
+				BF5004A22174111C00D35B69 /* UIStoryboard+Identifiers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -673,6 +846,7 @@
 		BFD0290C21509AD4002FB9F5 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				BFD82AC2216DB85C00A14868 /* Common */,
 				BFD0293F21509AF0002FB9F5 /* App */,
 				BFD0293E21509AE3002FB9F5 /* Modules */,
 				BFD0294121509B39002FB9F5 /* Utilities */,
@@ -710,9 +884,10 @@
 		BFD0293F21509AF0002FB9F5 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				BFD82AC2216DB85C00A14868 /* Common */,
 				BF4E718D216D4C1A00100FE1 /* Entry */,
 				BF579339216D4485008DBB46 /* Onboarding */,
+				BF5004A5217411C300D35B69 /* Schedule */,
+				BF5004A4217411A800D35B69 /* Create Event */,
 				BF5004632172EF9100D35B69 /* Profile */,
 			);
 			path = App;
@@ -1069,9 +1244,13 @@
 				BF5004942173EB8500D35B69 /* ProfilePayment.storyboard in Resources */,
 				BFD82AF32170671B00A14868 /* EnterStudentIdentifier.storyboard in Resources */,
 				BF5004702172F0A200D35B69 /* ProfileOverview.storyboard in Resources */,
+				BF5004B22174123200D35B69 /* Calendar.storyboard in Resources */,
+				BF5004CC217412CB00D35B69 /* CreateEvent.storyboard in Resources */,
 				BF5004842173AC3C00D35B69 /* ProfileAccount.storyboard in Resources */,
+				BF5004BF2174128200D35B69 /* Event.storyboard in Resources */,
 				BFCDA5FF2172601200DB31FC /* CreatePassword.storyboard in Resources */,
 				BF70B5DB217074D900771E5D /* EnterAccessCode.storyboard in Resources */,
+				BF5004F321741EC400D35B69 /* TutorProfile.storyboard in Resources */,
 				BFCDA60821727B4600DB31FC /* App.storyboard in Resources */,
 				BFCDA60621727B3D00DB31FC /* AppLaunch.storyboard in Resources */,
 				BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */,
@@ -1081,7 +1260,9 @@
 				BFD82AE6217061DA00A14868 /* UIField.storyboard in Resources */,
 				BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */,
 				BF5004A02173EBB000D35B69 /* ProfileSupport.storyboard in Resources */,
+				BF5004E721741EA000D35B69 /* SelectTutor.storyboard in Resources */,
 				BF5004862173AD9E00D35B69 /* UIInlinePicker.storyboard in Resources */,
+				BF5004DB21741E7700D35B69 /* AddLocation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1109,10 +1290,14 @@
 				BFF14D88216002CB00733323 /* CalendarConfiguration.swift in Sources */,
 				BFF14D8C2160033B00733323 /* CalendarBrain.swift in Sources */,
 				BFD82ACE216E77B600A14868 /* SelectCollegeProtocols.swift in Sources */,
+				BF5004A32174111C00D35B69 /* UIStoryboard+Identifiers.swift in Sources */,
 				BFF14D922160492F00733323 /* DateHelper.swift in Sources */,
+				BF5004ED21741EAE00D35B69 /* TutorProfilePresenter.swift in Sources */,
+				BF5004C8217412BC00D35B69 /* CreateEventViewController.swift in Sources */,
 				BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */,
 				BFD82A91216D989E00A14868 /* NetworkingClientResult.swift in Sources */,
 				BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */,
+				BF5004BC2174127100D35B69 /* EventProtocols.swift in Sources */,
 				BFD029A621509CFD002FB9F5 /* UIInlinePickerCell.swift in Sources */,
 				BFCDA5F921725FF700DB31FC /* CreatePasswordPresenter.swift in Sources */,
 				BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */,
@@ -1122,16 +1307,21 @@
 				BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */,
 				BFD82AF02170670400A14868 /* EnterStudentIdentifierProtocols.swift in Sources */,
 				BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */,
+				BF5004CA217412BC00D35B69 /* CreateEventInteractor.swift in Sources */,
 				BF70B5D8217074C600771E5D /* EnterAccessCodeProtocols.swift in Sources */,
+				BF5004C6217412BC00D35B69 /* CreateEventPresenter.swift in Sources */,
+				BF5004C7217412BC00D35B69 /* CreateEventRouter.swift in Sources */,
 				BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */,
 				BFCDA5F021725E7200DB31FC /* WelcomeInteractor.swift in Sources */,
 				BFD82A8E216D989E00A14868 /* NetworkingClientRequest.swift in Sources */,
 				BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */,
 				BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */,
 				BFD0299421509C9A002FB9F5 /* UIActionSheetConfig.swift in Sources */,
+				BF5004E121741E9100D35B69 /* SelectTutorPresenter.swift in Sources */,
 				BF5004902173EB7800D35B69 /* ProfilePaymentViewController.swift in Sources */,
 				BF50046A2172F09700D35B69 /* ProfileOverviewPresenter.swift in Sources */,
 				BFD82A8B216D989E00A14868 /* NetworkingService.swift in Sources */,
+				BF5004E221741E9100D35B69 /* SelectTutorRouter.swift in Sources */,
 				BFD82A92216D989E00A14868 /* NetworkingClientResponse.swift in Sources */,
 				BFD82A98216D989E00A14868 /* NetworkingResult.swift in Sources */,
 				BF50048F2173EB7800D35B69 /* ProfilePaymentRouter.swift in Sources */,
@@ -1141,18 +1331,23 @@
 				BFCDA5FD21725FF700DB31FC /* CreatePasswordInteractor.swift in Sources */,
 				BFD0295A21509BB2002FB9F5 /* UICalendarViewEventCell.swift in Sources */,
 				BFD82A97216D989E00A14868 /* NetworkingClientRequestBody.swift in Sources */,
+				BF5004E521741E9100D35B69 /* SelectTutorInteractor.swift in Sources */,
 				BFD82AED2170670400A14868 /* EnterStudentIdentifierPresenter.swift in Sources */,
 				BFD82A8C216D989E00A14868 /* Networking.swift in Sources */,
 				BFD82A95216D989E00A14868 /* NetworkingExtractable.swift in Sources */,
+				BF5004BD2174127100D35B69 /* EventInteractor.swift in Sources */,
 				BFD82A9F216DA25600A14868 /* UIInlinePickerViewController.swift in Sources */,
 				BFD0295E21509BB2002FB9F5 /* UICalendarViewController.swift in Sources */,
+				BF5004F121741EAF00D35B69 /* TutorProfileInteractor.swift in Sources */,
 				BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */,
 				BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */,
 				BF50047F2173AC2200D35B69 /* ProfileAccountRouter.swift in Sources */,
 				BF50047721730A3E00D35B69 /* ProfileOverviewError.swift in Sources */,
 				BF5004802173AC2200D35B69 /* ProfileAccountViewController.swift in Sources */,
 				BFD82A90216D989E00A14868 /* NetworkingClient.swift in Sources */,
+				BF5004EF21741EAF00D35B69 /* TutorProfileViewController.swift in Sources */,
 				BFD0298321509C6A002FB9F5 /* CreditCardMathematics.swift in Sources */,
+				BF5004AD2174122200D35B69 /* CalendarRouter.swift in Sources */,
 				BFD0297721509C1E002FB9F5 /* CreditCardView.swift in Sources */,
 				BFD0299B21509CD5002FB9F5 /* UIField.swift in Sources */,
 				BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */,
@@ -1175,6 +1370,8 @@
 				BFD82ACB216E77B600A14868 /* SelectCollegePresenter.swift in Sources */,
 				BFCDA5FC21725FF700DB31FC /* CreatePasswordProtocols.swift in Sources */,
 				BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */,
+				BF5004E321741E9100D35B69 /* SelectTutorViewController.swift in Sources */,
+				BF5004B92174127100D35B69 /* EventPresenter.swift in Sources */,
 				BFD82A9D216DA13800A14868 /* UIActionSheetView.swift in Sources */,
 				BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */,
 				BFD0299521509C9A002FB9F5 /* UIActionSheetAction.swift in Sources */,
@@ -1196,29 +1393,40 @@
 				BFCDA6142172C1C500DB31FC /* EnterAccessCodeError.swift in Sources */,
 				BFD0291621509AD4002FB9F5 /* Client.xcdatamodeld in Sources */,
 				BFF14D942160494100733323 /* DateDescriptionHelper.swift in Sources */,
+				BF5004B02174122200D35B69 /* CalendarInteractor.swift in Sources */,
 				BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */,
+				BF5004BB2174127100D35B69 /* EventViewController.swift in Sources */,
 				BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */,
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
 				BFCDA60421727AF500DB31FC /* AppViewController.swift in Sources */,
 				BFD82A87216D989E00A14868 /* NetworkingClientError.swift in Sources */,
+				BF5004BA2174127100D35B69 /* EventRouter.swift in Sources */,
 				BFD82ACF216E77B600A14868 /* SelectCollegeInteractor.swift in Sources */,
+				BF5004D821741E6900D35B69 /* AddLocationProtocols.swift in Sources */,
 				BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */,
 				BF50046D2172F09700D35B69 /* ProfileOverviewProtocols.swift in Sources */,
 				BFD82A94216D989E00A14868 /* NetworkingFailure.swift in Sources */,
 				BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */,
 				BFD82A96216D989E00A14868 /* NetworkingServiceError.swift in Sources */,
 				BFD82A8A216D989E00A14868 /* NetworkingError.swift in Sources */,
+				BF5004AE2174122200D35B69 /* CalendarViewController.swift in Sources */,
 				BFCDA5EC21725E7200DB31FC /* WelcomePresenter.swift in Sources */,
 				BFCDA5ED21725E7200DB31FC /* WelcomeRouter.swift in Sources */,
+				BF5004F021741EAF00D35B69 /* TutorProfileProtocols.swift in Sources */,
 				BFCDA6112172B48C00DB31FC /* EnterStudentIdentifierError.swift in Sources */,
 				BFCDA5EF21725E7200DB31FC /* WelcomeProtocols.swift in Sources */,
 				BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */,
 				BFD82AD7216E7D3500A14868 /* AnyError.swift in Sources */,
 				BFD82ABE216DAD7400A14868 /* UIViewController+StoryboardIdentifier.swift in Sources */,
+				BF5004D521741E6900D35B69 /* AddLocationPresenter.swift in Sources */,
+				BF5004C9217412BC00D35B69 /* CreateEventProtocols.swift in Sources */,
 				BFD82AB9216DA53200A14868 /* UIDropdownViewController.swift in Sources */,
+				BF5004EE21741EAF00D35B69 /* TutorProfileRouter.swift in Sources */,
 				BFD0298121509C6A002FB9F5 /* CreditCardPrefixContainable.swift in Sources */,
 				BFCDA5FA21725FF700DB31FC /* CreatePasswordRouter.swift in Sources */,
+				BF5004D721741E6900D35B69 /* AddLocationViewController.swift in Sources */,
 				BFF9DF172161A75300B80E9D /* CalendarLayoutCalculator.swift in Sources */,
+				BF5004E421741E9100D35B69 /* SelectTutorProtocols.swift in Sources */,
 				BFD0296021509BB2002FB9F5 /* UICalendarViewCell.swift in Sources */,
 				BF50046E2172F09700D35B69 /* ProfileOverviewInteractor.swift in Sources */,
 				BFD82A8F216D989E00A14868 /* NetworkingClientValidation.swift in Sources */,
@@ -1226,12 +1434,16 @@
 				BFCDA5FB21725FF700DB31FC /* CreatePasswordViewController.swift in Sources */,
 				BFD82AD8216E7D3500A14868 /* NoError.swift in Sources */,
 				BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */,
+				BF5004AF2174122200D35B69 /* CalendarProtocols.swift in Sources */,
 				BF5004812173AC2200D35B69 /* ProfileAccountProtocols.swift in Sources */,
+				BF5004D621741E6900D35B69 /* AddLocationRouter.swift in Sources */,
 				BFCDA60D2172905800DB31FC /* UINavigationBar+Additions.swift in Sources */,
 				BFF14D962160495000733323 /* DayHelper.swift in Sources */,
+				BF5004AC2174122200D35B69 /* CalendarPresenter.swift in Sources */,
 				BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */,
 				BF50046B2172F09700D35B69 /* ProfileOverviewRouter.swift in Sources */,
 				BF50049B2173EB9B00D35B69 /* ProfileSupportRouter.swift in Sources */,
+				BF5004D921741E6900D35B69 /* AddLocationInteractor.swift in Sources */,
 				BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */,
 				BF5004822173AC2200D35B69 /* ProfileAccountInteractor.swift in Sources */,
 				BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeader.swift in Sources */,

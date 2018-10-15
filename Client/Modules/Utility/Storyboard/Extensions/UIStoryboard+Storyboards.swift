@@ -8,35 +8,6 @@
 
 import UIKit
 
-
-// MARK: - Storyboard Conformance
-extension UIStoryboard {
-    enum Storyboard: String {
-        
-        // MARK: Main App
-        case appLaunch = "AppLaunch"
-        case app = "App"
-        case welcome = "Welcome"
-        
-        // MARK: Onboarding
-        case selectCollege = "SelectCollege"
-        case enterStudentIdentifier = "EnterStudentIdentifier"
-        case enterAccessCode = "EnterAccessCode"
-        case createPassword = "CreatePassword"
-        
-        // MARK: Profile
-        case profileOverview = "ProfileOverview"
-        case profileAccount = "ProfileAccount"
-        case profilePayment = "ProfilePayment"
-        case profileSupport = "ProfileSupport"
-        
-        // MARK: Modules
-        case uiDropdown = "UIDropdown"
-        case uiField = "UIField"
-        case uiInlinePicker = "UIInlinePicker"
-    }
-}
-
 // MARK: - Convenience Initializers
 extension UIStoryboard {
     convenience init(storyboard: Storyboard, bundle: Bundle? = nil) {

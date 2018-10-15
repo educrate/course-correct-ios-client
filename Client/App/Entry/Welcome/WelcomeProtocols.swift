@@ -13,6 +13,7 @@ import Foundation
 
 protocol WelcomeWireframeProtocol: class, ModuleWireframeable {
     func presentSelectCollege()
+    func presentCalendar()
 }
 
 
@@ -20,6 +21,7 @@ protocol WelcomeWireframeProtocol: class, ModuleWireframeable {
 
 protocol WelcomePresenterProtocol: class {
     func showSelectCollege()
+    func showCalendar()
 }
 
 

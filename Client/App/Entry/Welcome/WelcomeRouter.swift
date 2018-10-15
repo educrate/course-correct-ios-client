@@ -34,4 +34,10 @@ extension WelcomeRouter {
             navigationController.pushViewController(SelectCollegeRouter.createModule(), animated: true)
         }
     }
+    
+    func presentCalendar() {
+        if let view = viewController, let navigationController = view.navigationController {
+            navigationController.pushViewController(SelectCollegeRouter.createModule(), animated: true)
+        }
+    }
 }
