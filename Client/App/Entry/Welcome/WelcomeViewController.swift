@@ -20,6 +20,10 @@ private extension WelcomeViewController {
     @IBAction func signInPressed(_ sender: UIButton, forEvent event: UIEvent) {
         presenter?.showSignIn()
     }
+    
+    @IBAction func actionSheetPressed(_ sender: Any) {
+        presenter?.showActionSheet()
+    }
 }
 
 

@@ -31,4 +31,8 @@ extension WelcomePresenter {
     func showSignIn() {
         router.presentSignIn()
     }
+    
+    func showActionSheet() {
+        router.presentActionSheet()
+    }
 }

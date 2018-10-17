@@ -78,6 +78,8 @@
 		BF50050B217454C600D35B69 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500506217454C600D35B69 /* SignInInteractor.swift */; };
 		BF50050D217454D700D35B69 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF50050C217454D700D35B69 /* SignIn.storyboard */; };
 		BF50051A217678C500D35B69 /* SignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500519217678C500D35B69 /* SignInError.swift */; };
+		BF50051C2176D9AC00D35B69 /* UIActionSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF50051B2176D9AC00D35B69 /* UIActionSheet.storyboard */; };
+		BF50051E2176DA2F00D35B69 /* UIActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50051D2176DA2F00D35B69 /* UIActionSheetViewController.swift */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -137,13 +139,9 @@
 		BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297E21509C6A002FB9F5 /* CreditCardType.swift */; };
 		BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297F21509C6A002FB9F5 /* CreditCardTypeValidator.swift */; };
 		BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298021509C6A002FB9F5 /* CreditCardTypeValidationState.swift */; };
-		BFD0299021509C9A002FB9F5 /* UIActionSheetDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298921509C99002FB9F5 /* UIActionSheetDelegate.swift */; };
-		BFD0299221509C9A002FB9F5 /* UIActionSheetActionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298B21509C99002FB9F5 /* UIActionSheetActionStyle.swift */; };
 		BFD0299321509C9A002FB9F5 /* UIActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298C21509C99002FB9F5 /* UIActionSheetCell.swift */; };
-		BFD0299421509C9A002FB9F5 /* UIActionSheetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298D21509C9A002FB9F5 /* UIActionSheetConfig.swift */; };
-		BFD0299521509C9A002FB9F5 /* UIActionSheetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298E21509C9A002FB9F5 /* UIActionSheetAction.swift */; };
-		BFD0299621509C9A002FB9F5 /* UIActionSheetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298F21509C9A002FB9F5 /* UIActionSheetDataSource.swift */; };
-		BFD0299B21509CD5002FB9F5 /* UIField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299821509CD4002FB9F5 /* UIField.swift */; };
+		BFD0299521509C9A002FB9F5 /* UIActionSheetOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298E21509C9A002FB9F5 /* UIActionSheetOption.swift */; };
+		BFD0299B21509CD5002FB9F5 /* UIFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299821509CD4002FB9F5 /* UIFieldViewController.swift */; };
 		BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299A21509CD5002FB9F5 /* UIFieldConfiguration.swift */; };
 		BFD029A621509CFD002FB9F5 /* UIInlinePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A021509CFD002FB9F5 /* UIInlinePickerCell.swift */; };
 		BFD82A87216D989E00A14868 /* NetworkingClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A75216D989D00A14868 /* NetworkingClientError.swift */; };
@@ -164,7 +162,6 @@
 		BFD82A96216D989E00A14868 /* NetworkingServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A84216D989E00A14868 /* NetworkingServiceError.swift */; };
 		BFD82A97216D989E00A14868 /* NetworkingClientRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A85216D989E00A14868 /* NetworkingClientRequestBody.swift */; };
 		BFD82A98216D989E00A14868 /* NetworkingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A86216D989E00A14868 /* NetworkingResult.swift */; };
-		BFD82A9D216DA13800A14868 /* UIActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A9C216DA13800A14868 /* UIActionSheetView.swift */; };
 		BFD82A9F216DA25600A14868 /* UIInlinePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A9E216DA25600A14868 /* UIInlinePickerViewController.swift */; };
 		BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD82AAB216DA49B00A14868 /* SelectCollege.storyboard */; };
 		BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */; };
@@ -289,6 +286,8 @@
 		BF500506217454C600D35B69 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 		BF50050C217454D700D35B69 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		BF500519217678C500D35B69 /* SignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInError.swift; sourceTree = "<group>"; };
+		BF50051B2176D9AC00D35B69 /* UIActionSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIActionSheet.storyboard; sourceTree = "<group>"; };
+		BF50051D2176DA2F00D35B69 /* UIActionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActionSheetViewController.swift; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -354,13 +353,9 @@
 		BFD0297E21509C6A002FB9F5 /* CreditCardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardType.swift; sourceTree = "<group>"; };
 		BFD0297F21509C6A002FB9F5 /* CreditCardTypeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardTypeValidator.swift; sourceTree = "<group>"; };
 		BFD0298021509C6A002FB9F5 /* CreditCardTypeValidationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardTypeValidationState.swift; sourceTree = "<group>"; };
-		BFD0298921509C99002FB9F5 /* UIActionSheetDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheetDelegate.swift; sourceTree = "<group>"; };
-		BFD0298B21509C99002FB9F5 /* UIActionSheetActionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheetActionStyle.swift; sourceTree = "<group>"; };
 		BFD0298C21509C99002FB9F5 /* UIActionSheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheetCell.swift; sourceTree = "<group>"; };
-		BFD0298D21509C9A002FB9F5 /* UIActionSheetConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheetConfig.swift; sourceTree = "<group>"; };
-		BFD0298E21509C9A002FB9F5 /* UIActionSheetAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheetAction.swift; sourceTree = "<group>"; };
-		BFD0298F21509C9A002FB9F5 /* UIActionSheetDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheetDataSource.swift; sourceTree = "<group>"; };
-		BFD0299821509CD4002FB9F5 /* UIField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIField.swift; sourceTree = "<group>"; };
+		BFD0298E21509C9A002FB9F5 /* UIActionSheetOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheetOption.swift; sourceTree = "<group>"; };
+		BFD0299821509CD4002FB9F5 /* UIFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFieldViewController.swift; sourceTree = "<group>"; };
 		BFD0299A21509CD5002FB9F5 /* UIFieldConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFieldConfiguration.swift; sourceTree = "<group>"; };
 		BFD029A021509CFD002FB9F5 /* UIInlinePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInlinePickerCell.swift; sourceTree = "<group>"; };
 		BFD82A75216D989D00A14868 /* NetworkingClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingClientError.swift; sourceTree = "<group>"; };
@@ -381,7 +376,6 @@
 		BFD82A84216D989E00A14868 /* NetworkingServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServiceError.swift; sourceTree = "<group>"; };
 		BFD82A85216D989E00A14868 /* NetworkingClientRequestBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingClientRequestBody.swift; sourceTree = "<group>"; };
 		BFD82A86216D989E00A14868 /* NetworkingResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingResult.swift; sourceTree = "<group>"; };
-		BFD82A9C216DA13800A14868 /* UIActionSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheetView.swift; sourceTree = "<group>"; };
 		BFD82A9E216DA25600A14868 /* UIInlinePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInlinePickerViewController.swift; sourceTree = "<group>"; };
 		BFD82AAB216DA49B00A14868 /* SelectCollege.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCollege.storyboard; sourceTree = "<group>"; };
 		BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownCell.swift; sourceTree = "<group>"; };
@@ -1011,13 +1005,10 @@
 		BFD0298821509C83002FB9F5 /* Action Sheet */ = {
 			isa = PBXGroup;
 			children = (
-				BFD82A9C216DA13800A14868 /* UIActionSheetView.swift */,
-				BFD0298E21509C9A002FB9F5 /* UIActionSheetAction.swift */,
-				BFD0298B21509C99002FB9F5 /* UIActionSheetActionStyle.swift */,
+				BF50051B2176D9AC00D35B69 /* UIActionSheet.storyboard */,
+				BF50051D2176DA2F00D35B69 /* UIActionSheetViewController.swift */,
+				BFD0298E21509C9A002FB9F5 /* UIActionSheetOption.swift */,
 				BFD0298C21509C99002FB9F5 /* UIActionSheetCell.swift */,
-				BFD0298D21509C9A002FB9F5 /* UIActionSheetConfig.swift */,
-				BFD0298F21509C9A002FB9F5 /* UIActionSheetDataSource.swift */,
-				BFD0298921509C99002FB9F5 /* UIActionSheetDelegate.swift */,
 			);
 			path = "Action Sheet";
 			sourceTree = "<group>";
@@ -1026,7 +1017,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD82AE5217061DA00A14868 /* UIField.storyboard */,
-				BFD0299821509CD4002FB9F5 /* UIField.swift */,
+				BFD0299821509CD4002FB9F5 /* UIFieldViewController.swift */,
 				BFD0299A21509CD5002FB9F5 /* UIFieldConfiguration.swift */,
 			);
 			path = "Text Field";
@@ -1289,6 +1280,7 @@
 				BFCDA60821727B4600DB31FC /* App.storyboard in Resources */,
 				BFCDA60621727B3D00DB31FC /* AppLaunch.storyboard in Resources */,
 				BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */,
+				BF50051C2176D9AC00D35B69 /* UIActionSheet.storyboard in Resources */,
 				BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */,
 				BFCDA5F221725E8500DB31FC /* Welcome.storyboard in Resources */,
 				BFD82AE2216F028600A14868 /* UIDropdown.storyboard in Resources */,
@@ -1353,7 +1345,6 @@
 				BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */,
 				BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */,
 				BF5004FB217422CF00D35B69 /* NewEventViewController.swift in Sources */,
-				BFD0299421509C9A002FB9F5 /* UIActionSheetConfig.swift in Sources */,
 				BF5004E121741E9100D35B69 /* SelectTutorPresenter.swift in Sources */,
 				BF5004902173EB7800D35B69 /* ProfilePaymentViewController.swift in Sources */,
 				BF5004FA217422CF00D35B69 /* NewEventRouter.swift in Sources */,
@@ -1378,6 +1369,7 @@
 				BFD0295E21509BB2002FB9F5 /* UICalendarViewController.swift in Sources */,
 				BF5004F121741EAF00D35B69 /* TutorProfileInteractor.swift in Sources */,
 				BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */,
+				BF50051E2176DA2F00D35B69 /* UIActionSheetViewController.swift in Sources */,
 				BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */,
 				BF50047F2173AC2200D35B69 /* ProfileAccountRouter.swift in Sources */,
 				BF50047721730A3E00D35B69 /* ProfileOverviewError.swift in Sources */,
@@ -1387,7 +1379,7 @@
 				BFD0298321509C6A002FB9F5 /* CreditCardMathematics.swift in Sources */,
 				BF5004AD2174122200D35B69 /* CalendarRouter.swift in Sources */,
 				BFD0297721509C1E002FB9F5 /* CreditCardView.swift in Sources */,
-				BFD0299B21509CD5002FB9F5 /* UIField.swift in Sources */,
+				BFD0299B21509CD5002FB9F5 /* UIFieldViewController.swift in Sources */,
 				BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */,
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
 				BFD82AC5216DB88500A14868 /* ModuleWireframeable.swift in Sources */,
@@ -1404,17 +1396,14 @@
 				BFD0297621509C1E002FB9F5 /* CreditCardViewConstants.swift in Sources */,
 				BFD82A8D216D989E00A14868 /* NetworkingClientRequestEncodingType.swift in Sources */,
 				BFD0296F21509C1E002FB9F5 /* CreditCardMetadata.swift in Sources */,
-				BFD0299221509C9A002FB9F5 /* UIActionSheetActionStyle.swift in Sources */,
 				BFCDA6172172C3FC00DB31FC /* CreatePasswordError.swift in Sources */,
-				BFD0299021509C9A002FB9F5 /* UIActionSheetDelegate.swift in Sources */,
 				BFD82ACB216E77B600A14868 /* SelectCollegePresenter.swift in Sources */,
 				BFCDA5FC21725FF700DB31FC /* CreatePasswordProtocols.swift in Sources */,
 				BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */,
 				BF5004E321741E9100D35B69 /* SelectTutorViewController.swift in Sources */,
 				BF5004B92174127100D35B69 /* EventPresenter.swift in Sources */,
-				BFD82A9D216DA13800A14868 /* UIActionSheetView.swift in Sources */,
 				BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */,
-				BFD0299521509C9A002FB9F5 /* UIActionSheetAction.swift in Sources */,
+				BFD0299521509C9A002FB9F5 /* UIActionSheetOption.swift in Sources */,
 				BFD0295C21509BB2002FB9F5 /* UICalendarViewDelegate.swift in Sources */,
 				BFF14D982160496400733323 /* MonthHelper.swift in Sources */,
 				BFD0299321509C9A002FB9F5 /* UIActionSheetCell.swift in Sources */,
@@ -1488,7 +1477,6 @@
 				BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */,
 				BF5004822173AC2200D35B69 /* ProfileAccountInteractor.swift in Sources */,
 				BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeader.swift in Sources */,
-				BFD0299621509C9A002FB9F5 /* UIActionSheetDataSource.swift in Sources */,
 				BF50049A2173EB9B00D35B69 /* ProfileSupportPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
