@@ -45,6 +45,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="NxN-Yv-FbQ">
                         <barButtonItem key="backBarButtonItem" title=" " id="Bgf-c1-Wnd"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="zAq-7k-rMq">
+                            <connections>
+                                <action selector="donePressed:" destination="jAr-lp-bcd" id="e1W-iV-hI9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collegeSelector" destination="32L-MW-wF5" id="Bpv-xY-cQU"/>

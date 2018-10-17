@@ -25,6 +25,12 @@ extension SignInViewController {
 }
 
 extension SignInViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        emailField.setPlaceholder("Enter Your Email")
+        passwordField.setPlaceholder("Enter Your Password")
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segueCase(for: segue) {
         case .email:

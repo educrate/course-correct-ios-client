@@ -23,11 +23,11 @@ class CreatePasswordPresenter: CreatePasswordPresenterProtocol {
 }
 
 extension CreatePasswordPresenter {
-    func passwordsEntered(with password: String, reenteredPassword: String) {
-        interactor?.validate(password, reenteredPassword: reenteredPassword)
+    func entered(password: String, confirmedPassword: String) {
+        interactor?.validate(password, confirmedPassword: confirmedPassword)
     }
     
-    func passwordsValidated(for password: String, reenteredPassword: String, with result: Result<Void, CreatePasswordError>) {
+    func passwordsValidated(_ result: Result<Void, CreatePasswordError>) {
         switch result {
         case .success:
             router.presentCalendar()

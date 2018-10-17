@@ -17,6 +17,12 @@ class SelectCollegeViewController: UIViewController {
     @IBOutlet private weak var collegeSelector: UIDropdownViewController!
 }
 
+private extension SelectCollegeViewController {
+    @IBAction func donePressed(_ sender: UIBarButtonItem) {
+        presenter?.showEnterStudentIdentifier()
+    }
+}
+
 extension SelectCollegeViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +66,6 @@ extension SelectCollegeViewController: UIDropdownDelegate {
     
     func dropdown(_ dropdown: UITableView, didSelectRowAt indexPath: IndexPath) {
         collegeSelector.endEditing()
-        presenter?.showEnterStudentIdentifier()
     }
 }
 
