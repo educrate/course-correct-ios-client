@@ -11,18 +11,26 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol SignInWireframeProtocol: class, ModuleWireframeable {}
+protocol SignInWireframeProtocol: class, ModuleWireframeable {
+    func presentCalendar()
+}
 
 
 // MARK: - Presenter
 
-protocol SignInPresenterProtocol: class {}
+protocol SignInPresenterProtocol: class {
+    func credentialsEntered(email: String, password: String)
+    
+    func credentialsValidated(_ result: Result<Void, SignInError>)
+}
 
 
 // MARK: - Interactor
 
 protocol SignInInteractorProtocol: class {
   var presenter: SignInPresenterProtocol? { get set }
+    
+    func validate(email: String, password: String)
 }
 
 
@@ -30,4 +38,6 @@ protocol SignInInteractorProtocol: class {
 
 protocol SignInViewProtocol: class {
   var presenter: SignInPresenterProtocol? { get set }
+    
+    func show(error: SignInError)
 }

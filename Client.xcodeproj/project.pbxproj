@@ -77,6 +77,7 @@
 		BF50050A217454C600D35B69 /* SignInProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500505217454C600D35B69 /* SignInProtocols.swift */; };
 		BF50050B217454C600D35B69 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500506217454C600D35B69 /* SignInInteractor.swift */; };
 		BF50050D217454D700D35B69 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF50050C217454D700D35B69 /* SignIn.storyboard */; };
+		BF50051A217678C500D35B69 /* SignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500519217678C500D35B69 /* SignInError.swift */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -101,7 +102,6 @@
 		BFCDA5FD21725FF700DB31FC /* CreatePasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5F821725FF700DB31FC /* CreatePasswordInteractor.swift */; };
 		BFCDA5FF2172601200DB31FC /* CreatePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDA5FE2172601200DB31FC /* CreatePassword.storyboard */; };
 		BFCDA60221727A2300DB31FC /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA60121727A2300DB31FC /* AppNavigationController.swift */; };
-		BFCDA60421727AF500DB31FC /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA60321727AF500DB31FC /* AppViewController.swift */; };
 		BFCDA60621727B3D00DB31FC /* AppLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDA60521727B3D00DB31FC /* AppLaunch.storyboard */; };
 		BFCDA60821727B4600DB31FC /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCDA60721727B4600DB31FC /* App.storyboard */; };
 		BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA60A2172903F00DB31FC /* UIImage+Additions.swift */; };
@@ -288,6 +288,7 @@
 		BF500505217454C600D35B69 /* SignInProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocols.swift; sourceTree = "<group>"; };
 		BF500506217454C600D35B69 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 		BF50050C217454D700D35B69 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		BF500519217678C500D35B69 /* SignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInError.swift; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -312,7 +313,6 @@
 		BFCDA5F821725FF700DB31FC /* CreatePasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordInteractor.swift; sourceTree = "<group>"; };
 		BFCDA5FE2172601200DB31FC /* CreatePassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatePassword.storyboard; sourceTree = "<group>"; };
 		BFCDA60121727A2300DB31FC /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
-		BFCDA60321727AF500DB31FC /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		BFCDA60521727B3D00DB31FC /* AppLaunch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppLaunch.storyboard; sourceTree = "<group>"; };
 		BFCDA60721727B4600DB31FC /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		BFCDA60A2172903F00DB31FC /* UIImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
@@ -529,7 +529,6 @@
 			children = (
 				BFCDA60721727B4600DB31FC /* App.storyboard */,
 				BFCDA60121727A2300DB31FC /* AppNavigationController.swift */,
-				BFCDA60321727AF500DB31FC /* AppViewController.swift */,
 			);
 			path = "App Navigation";
 			sourceTree = "<group>";
@@ -660,6 +659,7 @@
 				BF500503217454C600D35B69 /* SignInRouter.swift */,
 				BF500506217454C600D35B69 /* SignInInteractor.swift */,
 				BF500505217454C600D35B69 /* SignInProtocols.swift */,
+				BF500518217678B700D35B69 /* Entities */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -671,6 +671,14 @@
 				BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */,
 			);
 			path = "App Launch";
+			sourceTree = "<group>";
+		};
+		BF500518217678B700D35B69 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BF500519217678C500D35B69 /* SignInError.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		BF55165B215B39CD00D0CBB1 /* Models */ = {
@@ -1431,7 +1439,6 @@
 				BF5004BB2174127100D35B69 /* EventViewController.swift in Sources */,
 				BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */,
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
-				BFCDA60421727AF500DB31FC /* AppViewController.swift in Sources */,
 				BFD82A87216D989E00A14868 /* NetworkingClientError.swift in Sources */,
 				BF5004BA2174127100D35B69 /* EventRouter.swift in Sources */,
 				BFD82ACF216E77B600A14868 /* SelectCollegeInteractor.swift in Sources */,
@@ -1439,6 +1446,7 @@
 				BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */,
 				BF50046D2172F09700D35B69 /* ProfileOverviewProtocols.swift in Sources */,
 				BFD82A94216D989E00A14868 /* NetworkingFailure.swift in Sources */,
+				BF50051A217678C500D35B69 /* SignInError.swift in Sources */,
 				BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */,
 				BFD82A96216D989E00A14868 /* NetworkingServiceError.swift in Sources */,
 				BFD82A8A216D989E00A14868 /* NetworkingError.swift in Sources */,

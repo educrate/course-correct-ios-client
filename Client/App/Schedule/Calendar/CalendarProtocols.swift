@@ -11,12 +11,22 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol CalendarWireframeProtocol: class, ModuleWireframeable {}
+protocol CalendarWireframeProtocol: class, ModuleWireframeable {
+    func presentEvent()
+    func presentCreateEvent()
+    func presentProfile()
+}
 
 
 // MARK: - Presenter
 
-protocol CalendarPresenterProtocol: class {}
+protocol CalendarPresenterProtocol: class {
+    
+    // MARK: Navigation Events
+    func showEvent()
+    func createEvent()
+    func showProfile()
+}
 
 
 // MARK: - Interactor

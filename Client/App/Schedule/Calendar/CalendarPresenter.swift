@@ -9,7 +9,6 @@
 import UIKit
 
 class CalendarPresenter: CalendarPresenterProtocol {
-
     weak private var view: CalendarViewProtocol?
     var interactor: CalendarInteractorProtocol?
     private let router: CalendarWireframeProtocol
@@ -20,5 +19,19 @@ class CalendarPresenter: CalendarPresenterProtocol {
         self.view = interface
         self.interactor = interactor
         self.router = router
+    }
+}
+
+extension CalendarPresenter {
+    func showEvent() {
+        router.presentEvent()
+    }
+    
+    func createEvent() {
+        router.presentCreateEvent()
+    }
+    
+    func showProfile() {
+        router.presentProfile()
     }
 }

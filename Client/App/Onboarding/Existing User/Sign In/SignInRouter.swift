@@ -27,3 +27,11 @@ extension SignInRouter {
         return view
     }
 }
+
+extension SignInRouter {
+    func presentCalendar() {
+        if let view = viewController, let navigationController = view.navigationController {
+            navigationController.pushViewController(CalendarRouter.createModule(), animated: true)
+        }
+    }
+}

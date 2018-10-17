@@ -16,13 +16,68 @@
                     <view key="view" contentMode="scaleToFill" id="9uH-pl-jJC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ifz-gN-X9C">
+                                <rect key="frame" x="87" y="140" width="240" height="120"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="puU-GB-q3b">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="52"/>
+                                        <connections>
+                                            <segue destination="hQP-Vz-Fcc" kind="embed" identifier="email" id="blR-1d-raz"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ao4-MK-CVw">
+                                        <rect key="frame" x="0.0" y="68" width="240" height="52"/>
+                                        <connections>
+                                            <segue destination="1Dk-kX-j96" kind="embed" identifier="password" id="Kdx-DC-cpC"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="DZV-eh-f5K"/>
+                                    <constraint firstAttribute="height" constant="120" id="MXT-Y5-NPZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ifz-gN-X9C" firstAttribute="centerX" secondItem="9uH-pl-jJC" secondAttribute="centerX" id="RPQ-3H-Qkm"/>
+                            <constraint firstItem="ifz-gN-X9C" firstAttribute="top" secondItem="9uH-pl-jJC" secondAttribute="top" constant="140" id="qSP-S9-qrh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tFH-o8-ZUF"/>
                     </view>
+                    <navigationItem key="navigationItem" id="JWb-BQ-3so">
+                        <barButtonItem key="backBarButtonItem" title=" " id="NuA-5b-9xt"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="nlk-IV-tmb">
+                            <connections>
+                                <action selector="donePressed:" destination="dkO-G9-AKZ" id="qRM-P8-MZa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailField" destination="puU-GB-q3b" id="jkP-Y4-2b6"/>
+                        <outlet property="passwordField" destination="ao4-MK-CVw" id="9OP-P4-4Gf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwe-58-5yz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238" y="160"/>
+            <point key="canvasLocation" x="849" y="97"/>
+        </scene>
+        <!--UIField-->
+        <scene sceneID="bbh-cc-9Gd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UIField" id="hQP-Vz-Fcc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vp8-U0-O3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1331" y="79"/>
+        </scene>
+        <!--UIField-->
+        <scene sceneID="K11-h1-MsZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UIField" id="1Dk-kX-j96" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6AI-0Y-RtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1331" y="111"/>
         </scene>
     </scenes>
 </document>

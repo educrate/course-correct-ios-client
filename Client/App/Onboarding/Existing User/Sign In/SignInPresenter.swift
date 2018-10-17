@@ -9,7 +9,6 @@
 import UIKit
 
 class SignInPresenter: SignInPresenterProtocol {
-
     weak private var view: SignInViewProtocol?
     var interactor: SignInInteractorProtocol?
     private let router: SignInWireframeProtocol
@@ -20,5 +19,20 @@ class SignInPresenter: SignInPresenterProtocol {
         self.view = interface
         self.interactor = interactor
         self.router = router
+    }
+}
+
+extension SignInPresenter {
+    func credentialsEntered(email: String, password: String) {
+        interactor?.validate(email: email, password: password)
+    }
+    
+    func credentialsValidated(_ result: Result<Void, SignInError>) {
+        switch result {
+        case .success:
+            router.presentCalendar()
+        case .failure(let error):
+            view?.show(error: error)
+        }
     }
 }

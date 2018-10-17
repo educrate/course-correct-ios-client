@@ -12,22 +12,22 @@ class CreatePasswordViewController: UIViewController, CreatePasswordViewProtocol
 	var presenter: CreatePasswordPresenterProtocol?
     
     @IBOutlet private weak var passwordField: UIFieldViewController!
-    @IBOutlet private weak var reenterPasswordField: UIFieldViewController!
+    @IBOutlet private weak var confirmPasswordField: UIFieldViewController!
 }
 
 private extension CreatePasswordViewController {
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
         passwordField.endEditing()
-        reenterPasswordField.endEditing()
-        presenter?.passwordsEntered(with: passwordField.text, reenteredPassword: reenterPasswordField.text)
+        confirmPasswordField.endEditing()
+        presenter?.passwordsEntered(with: passwordField.text, reenteredPassword: confirmPasswordField.text)
     }
 }
 
 extension CreatePasswordViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        passwordField.setPlaceholder("Password")
-        reenterPasswordField.setPlaceholder("Reenter Password")
+        passwordField.setPlaceholder("Create Password")
+        confirmPasswordField.setPlaceholder("Confirm Password")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,8 +39,8 @@ extension CreatePasswordViewController {
         switch segueCase(for: segue) {
         case .password:
             passwordField = segue.viewController()
-        case .reenter:
-            reenterPasswordField = segue.viewController()
+        case .confirmPassword:
+            confirmPasswordField = segue.viewController()
         }
     }
 }
@@ -57,6 +57,6 @@ extension CreatePasswordViewController {
 extension CreatePasswordViewController: SegueIdentifiable {
     enum Segue: String {
         case password
-        case reenter
+        case confirmPassword = "confirmpassword"
     }
 }

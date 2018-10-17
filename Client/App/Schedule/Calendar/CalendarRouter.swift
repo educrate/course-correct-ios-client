@@ -27,3 +27,23 @@ extension CalendarRouter {
         return view
     }
 }
+
+extension CalendarRouter {
+    func presentEvent() {
+        if let view = viewController, let navigationController = view.navigationController {
+            navigationController.pushViewController(EventRouter.createModule(), animated: true)
+        }
+    }
+    
+    func presentCreateEvent() {
+        if let view = viewController, let navigationController = view.navigationController {
+            navigationController.pushViewController(NewEventRouter.createModule(), animated: true)
+        }
+    }
+    
+    func presentProfile() {
+        if let view = viewController, let navigationController = view.navigationController {
+            navigationController.pushViewController(ProfileOverviewRouter.createModule(), animated: true)
+        }
+    }
+}

@@ -27,3 +27,11 @@ extension CreatePasswordRouter {
         return view
     }
 }
+
+extension CreatePasswordRouter {
+    func presentCalendar() {
+        if let view = viewController, let navigationController = view.navigationController {
+            navigationController.pushViewController(CalendarRouter.createModule(), animated: true)
+        }
+    }
+}

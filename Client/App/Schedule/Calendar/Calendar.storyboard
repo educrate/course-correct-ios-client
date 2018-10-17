@@ -19,6 +19,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aJ6-zU-ht1"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2Ic-2y-Twr">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="trash" id="AVK-Wo-1sR">
+                                <connections>
+                                    <action selector="profileButtonPressed:" destination="aMk-Ct-fNR" id="82O-Gs-Ipa"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="lV3-NH-mNS">
+                                <connections>
+                                    <action selector="createEventPressed:" destination="aMk-Ct-fNR" id="FsZ-BY-tYB"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmA-fq-nDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

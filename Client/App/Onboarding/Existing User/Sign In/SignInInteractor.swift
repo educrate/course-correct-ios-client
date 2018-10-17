@@ -11,3 +11,9 @@ import UIKit
 class SignInInteractor: SignInInteractorProtocol {
     weak var presenter: SignInPresenterProtocol?
 }
+
+extension SignInInteractor {
+    func validate(email: String, password: String) {
+        presenter?.credentialsValidated(Result(value: ()))
+    }
+}

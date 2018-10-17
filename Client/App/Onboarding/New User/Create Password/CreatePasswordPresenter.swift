@@ -9,7 +9,6 @@
 import UIKit
 
 class CreatePasswordPresenter: CreatePasswordPresenterProtocol {
-
     weak private var view: CreatePasswordViewProtocol?
     var interactor: CreatePasswordInteractorProtocol?
     private let router: CreatePasswordWireframeProtocol
@@ -31,7 +30,7 @@ extension CreatePasswordPresenter {
     func passwordsValidated(for password: String, reenteredPassword: String, with result: Result<Void, CreatePasswordError>) {
         switch result {
         case .success:
-            break
+            router.presentCalendar()
         case .failure(let error):
             view?.show(error: error)
         }
