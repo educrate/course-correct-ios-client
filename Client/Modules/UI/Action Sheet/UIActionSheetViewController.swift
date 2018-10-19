@@ -28,9 +28,9 @@ class UIActionSheetViewController: UIViewController {
     // MARK: Configuration
     private let backgroundColor: UIColor = .black
     private let maxBackgroundAlphaValue: CGFloat = 0.5
-    private let durationOfShowAnimation: TimeInterval = 0.4
-    private let durationOfHideAnimation: TimeInterval = 0.2
-    private let cellHeight: CGFloat = 50
+    private let durationOfShowAnimation: TimeInterval = 0.3
+    private let durationOfHideAnimation: TimeInterval = 0.1
+    private let cellHeight: CGFloat = 60
     
     // MARK: Properties
     private var actions: [UIActionSheetOption] = []

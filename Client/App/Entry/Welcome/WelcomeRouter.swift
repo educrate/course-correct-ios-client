@@ -40,14 +40,4 @@ extension WelcomeRouter {
             navigationController.pushViewController(SignInRouter.createModule(), animated: true)
         }
     }
-    
-    
-    func presentActionSheet() {
-        let action1 = UIActionSheetOption(title: "Cancel")
-        let action2 = UIActionSheetOption(title: "Next")
-        let action3 = UIActionSheetOption(title: "Back")
-        let action4 = UIActionSheetOption(title: "Close")
-        
-        UIActionSheetViewController.show(with: [action1, action2, action3, action4])
-    }
 }

@@ -27,3 +27,13 @@ extension ProfilePaymentRouter {
         return view
     }
 }
+
+extension ProfilePaymentRouter {
+    func presentAddCard() {
+        viewController?.navigationController?.pushViewController(ManageCardRouter.createModule(), animated: true)
+    }
+    
+    func presentAddBank() {
+        viewController?.navigationController?.pushViewController(ManageBankRouter.createModule(), animated: true)
+    }   
+}

@@ -14,8 +14,6 @@ import Foundation
 protocol WelcomeWireframeProtocol: class, ModuleWireframeable {
     func presentSelectCollege()
     func presentSignIn()
-    
-    func presentActionSheet()
 }
 
 
@@ -24,8 +22,6 @@ protocol WelcomeWireframeProtocol: class, ModuleWireframeable {
 protocol WelcomePresenterProtocol: class {
     func showSelectCollege()
     func showSignIn()
-    
-    func showActionSheet()
 }
 
 

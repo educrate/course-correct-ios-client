@@ -80,6 +80,20 @@
 		BF50051A217678C500D35B69 /* SignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500519217678C500D35B69 /* SignInError.swift */; };
 		BF50051C2176D9AC00D35B69 /* UIActionSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF50051B2176D9AC00D35B69 /* UIActionSheet.storyboard */; };
 		BF50051E2176DA2F00D35B69 /* UIActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50051D2176DA2F00D35B69 /* UIActionSheetViewController.swift */; };
+		BF5005212177113900D35B69 /* UINotification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5005202177113900D35B69 /* UINotification.storyboard */; };
+		BF5005232177115D00D35B69 /* UINotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005222177115D00D35B69 /* UINotificationViewController.swift */; };
+		BF50053C217A765200D35B69 /* ManageCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500537217A765200D35B69 /* ManageCardPresenter.swift */; };
+		BF50053D217A765200D35B69 /* ManageCardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500538217A765200D35B69 /* ManageCardRouter.swift */; };
+		BF50053E217A765200D35B69 /* ManageCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500539217A765200D35B69 /* ManageCardViewController.swift */; };
+		BF50053F217A765200D35B69 /* ManageCardProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50053A217A765200D35B69 /* ManageCardProtocols.swift */; };
+		BF500540217A765200D35B69 /* ManageCardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50053B217A765200D35B69 /* ManageCardInteractor.swift */; };
+		BF500546217A76A200D35B69 /* ManageBankPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500541217A76A200D35B69 /* ManageBankPresenter.swift */; };
+		BF500547217A76A200D35B69 /* ManageBankRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500542217A76A200D35B69 /* ManageBankRouter.swift */; };
+		BF500548217A76A200D35B69 /* ManageBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500543217A76A200D35B69 /* ManageBankViewController.swift */; };
+		BF500549217A76A200D35B69 /* ManageBankProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500544217A76A200D35B69 /* ManageBankProtocols.swift */; };
+		BF50054A217A76A200D35B69 /* ManageBankInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500545217A76A200D35B69 /* ManageBankInteractor.swift */; };
+		BF50054C217A76B500D35B69 /* ManageCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF50054B217A76B500D35B69 /* ManageCard.storyboard */; };
+		BF50054E217A76BF00D35B69 /* ManageBank.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF50054D217A76BF00D35B69 /* ManageBank.storyboard */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -288,6 +302,20 @@
 		BF500519217678C500D35B69 /* SignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInError.swift; sourceTree = "<group>"; };
 		BF50051B2176D9AC00D35B69 /* UIActionSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIActionSheet.storyboard; sourceTree = "<group>"; };
 		BF50051D2176DA2F00D35B69 /* UIActionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActionSheetViewController.swift; sourceTree = "<group>"; };
+		BF5005202177113900D35B69 /* UINotification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UINotification.storyboard; sourceTree = "<group>"; };
+		BF5005222177115D00D35B69 /* UINotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINotificationViewController.swift; sourceTree = "<group>"; };
+		BF500537217A765200D35B69 /* ManageCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardPresenter.swift; sourceTree = "<group>"; };
+		BF500538217A765200D35B69 /* ManageCardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardRouter.swift; sourceTree = "<group>"; };
+		BF500539217A765200D35B69 /* ManageCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardViewController.swift; sourceTree = "<group>"; };
+		BF50053A217A765200D35B69 /* ManageCardProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardProtocols.swift; sourceTree = "<group>"; };
+		BF50053B217A765200D35B69 /* ManageCardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardInteractor.swift; sourceTree = "<group>"; };
+		BF500541217A76A200D35B69 /* ManageBankPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBankPresenter.swift; sourceTree = "<group>"; };
+		BF500542217A76A200D35B69 /* ManageBankRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBankRouter.swift; sourceTree = "<group>"; };
+		BF500543217A76A200D35B69 /* ManageBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBankViewController.swift; sourceTree = "<group>"; };
+		BF500544217A76A200D35B69 /* ManageBankProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBankProtocols.swift; sourceTree = "<group>"; };
+		BF500545217A76A200D35B69 /* ManageBankInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBankInteractor.swift; sourceTree = "<group>"; };
+		BF50054B217A76B500D35B69 /* ManageCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageCard.storyboard; sourceTree = "<group>"; };
+		BF50054D217A76BF00D35B69 /* ManageBank.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageBank.storyboard; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -501,6 +529,8 @@
 				BF50048A2173EB7800D35B69 /* ProfilePaymentRouter.swift */,
 				BF50048D2173EB7800D35B69 /* ProfilePaymentInteractor.swift */,
 				BF50048C2173EB7800D35B69 /* ProfilePaymentProtocols.swift */,
+				BF500531217A74D200D35B69 /* Manage Cards */,
+				BF500532217A74D900D35B69 /* Manage Banking */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -673,6 +703,41 @@
 				BF500519217678C500D35B69 /* SignInError.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		BF50051F2177110B00D35B69 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				BF5005202177113900D35B69 /* UINotification.storyboard */,
+				BF5005222177115D00D35B69 /* UINotificationViewController.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		BF500531217A74D200D35B69 /* Manage Cards */ = {
+			isa = PBXGroup;
+			children = (
+				BF50054B217A76B500D35B69 /* ManageCard.storyboard */,
+				BF500539217A765200D35B69 /* ManageCardViewController.swift */,
+				BF500537217A765200D35B69 /* ManageCardPresenter.swift */,
+				BF500538217A765200D35B69 /* ManageCardRouter.swift */,
+				BF50053B217A765200D35B69 /* ManageCardInteractor.swift */,
+				BF50053A217A765200D35B69 /* ManageCardProtocols.swift */,
+			);
+			path = "Manage Cards";
+			sourceTree = "<group>";
+		};
+		BF500532217A74D900D35B69 /* Manage Banking */ = {
+			isa = PBXGroup;
+			children = (
+				BF50054D217A76BF00D35B69 /* ManageBank.storyboard */,
+				BF500543217A76A200D35B69 /* ManageBankViewController.swift */,
+				BF500541217A76A200D35B69 /* ManageBankPresenter.swift */,
+				BF500542217A76A200D35B69 /* ManageBankRouter.swift */,
+				BF500545217A76A200D35B69 /* ManageBankInteractor.swift */,
+				BF500544217A76A200D35B69 /* ManageBankProtocols.swift */,
+			);
+			path = "Manage Banking";
 			sourceTree = "<group>";
 		};
 		BF55165B215B39CD00D0CBB1 /* Models */ = {
@@ -1111,6 +1176,7 @@
 		BFD82AD0216E7CA600A14868 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BF50051F2177110B00D35B69 /* Notification */,
 				BFD0299721509CC0002FB9F5 /* Text Field */,
 				BFD0298821509C83002FB9F5 /* Action Sheet */,
 				BFD0294221509B8E002FB9F5 /* Calendar */,
@@ -1279,10 +1345,13 @@
 				BF5004F321741EC400D35B69 /* TutorProfile.storyboard in Resources */,
 				BFCDA60821727B4600DB31FC /* App.storyboard in Resources */,
 				BFCDA60621727B3D00DB31FC /* AppLaunch.storyboard in Resources */,
+				BF50054C217A76B500D35B69 /* ManageCard.storyboard in Resources */,
 				BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */,
+				BF50054E217A76BF00D35B69 /* ManageBank.storyboard in Resources */,
 				BF50051C2176D9AC00D35B69 /* UIActionSheet.storyboard in Resources */,
 				BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */,
 				BFCDA5F221725E8500DB31FC /* Welcome.storyboard in Resources */,
+				BF5005212177113900D35B69 /* UINotification.storyboard in Resources */,
 				BFD82AE2216F028600A14868 /* UIDropdown.storyboard in Resources */,
 				BFD82AE6217061DA00A14868 /* UIField.storyboard in Resources */,
 				BF5004FF217422DD00D35B69 /* NewEvent.storyboard in Resources */,
@@ -1326,10 +1395,13 @@
 				BF5004ED21741EAE00D35B69 /* TutorProfilePresenter.swift in Sources */,
 				BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */,
 				BFD82A91216D989E00A14868 /* NetworkingClientResult.swift in Sources */,
+				BF5005232177115D00D35B69 /* UINotificationViewController.swift in Sources */,
 				BF50050A217454C600D35B69 /* SignInProtocols.swift in Sources */,
 				BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */,
 				BF5004BC2174127100D35B69 /* EventProtocols.swift in Sources */,
 				BFD029A621509CFD002FB9F5 /* UIInlinePickerCell.swift in Sources */,
+				BF50054A217A76A200D35B69 /* ManageBankInteractor.swift in Sources */,
+				BF50053D217A765200D35B69 /* ManageCardRouter.swift in Sources */,
 				BFCDA5F921725FF700DB31FC /* CreatePasswordPresenter.swift in Sources */,
 				BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */,
 				BF50049D2173EB9B00D35B69 /* ProfileSupportProtocols.swift in Sources */,
@@ -1369,6 +1441,7 @@
 				BFD0295E21509BB2002FB9F5 /* UICalendarViewController.swift in Sources */,
 				BF5004F121741EAF00D35B69 /* TutorProfileInteractor.swift in Sources */,
 				BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */,
+				BF500549217A76A200D35B69 /* ManageBankProtocols.swift in Sources */,
 				BF50051E2176DA2F00D35B69 /* UIActionSheetViewController.swift in Sources */,
 				BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */,
 				BF50047F2173AC2200D35B69 /* ProfileAccountRouter.swift in Sources */,
@@ -1402,6 +1475,7 @@
 				BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */,
 				BF5004E321741E9100D35B69 /* SelectTutorViewController.swift in Sources */,
 				BF5004B92174127100D35B69 /* EventPresenter.swift in Sources */,
+				BF50053C217A765200D35B69 /* ManageCardPresenter.swift in Sources */,
 				BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */,
 				BFD0299521509C9A002FB9F5 /* UIActionSheetOption.swift in Sources */,
 				BFD0295C21509BB2002FB9F5 /* UICalendarViewDelegate.swift in Sources */,
@@ -1427,6 +1501,7 @@
 				BF5004FC217422CF00D35B69 /* NewEventProtocols.swift in Sources */,
 				BF5004BB2174127100D35B69 /* EventViewController.swift in Sources */,
 				BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */,
+				BF50053E217A765200D35B69 /* ManageCardViewController.swift in Sources */,
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
 				BFD82A87216D989E00A14868 /* NetworkingClientError.swift in Sources */,
 				BF5004BA2174127100D35B69 /* EventRouter.swift in Sources */,
@@ -1439,12 +1514,15 @@
 				BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */,
 				BFD82A96216D989E00A14868 /* NetworkingServiceError.swift in Sources */,
 				BFD82A8A216D989E00A14868 /* NetworkingError.swift in Sources */,
+				BF500540217A765200D35B69 /* ManageCardInteractor.swift in Sources */,
+				BF500546217A76A200D35B69 /* ManageBankPresenter.swift in Sources */,
 				BF500509217454C600D35B69 /* SignInViewController.swift in Sources */,
 				BF5004AE2174122200D35B69 /* CalendarViewController.swift in Sources */,
 				BFCDA5EC21725E7200DB31FC /* WelcomePresenter.swift in Sources */,
 				BFCDA5ED21725E7200DB31FC /* WelcomeRouter.swift in Sources */,
 				BF5004F021741EAF00D35B69 /* TutorProfileProtocols.swift in Sources */,
 				BFCDA6112172B48C00DB31FC /* EnterStudentIdentifierError.swift in Sources */,
+				BF50053F217A765200D35B69 /* ManageCardProtocols.swift in Sources */,
 				BFCDA5EF21725E7200DB31FC /* WelcomeProtocols.swift in Sources */,
 				BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */,
 				BFD82AD7216E7D3500A14868 /* AnyError.swift in Sources */,
@@ -1462,10 +1540,12 @@
 				BFCDA5EE21725E7200DB31FC /* WelcomeViewController.swift in Sources */,
 				BFCDA5FB21725FF700DB31FC /* CreatePasswordViewController.swift in Sources */,
 				BFD82AD8216E7D3500A14868 /* NoError.swift in Sources */,
+				BF500548217A76A200D35B69 /* ManageBankViewController.swift in Sources */,
 				BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */,
 				BF5004AF2174122200D35B69 /* CalendarProtocols.swift in Sources */,
 				BF5004812173AC2200D35B69 /* ProfileAccountProtocols.swift in Sources */,
 				BF5004FD217422CF00D35B69 /* NewEventInteractor.swift in Sources */,
+				BF500547217A76A200D35B69 /* ManageBankRouter.swift in Sources */,
 				BF5004D621741E6900D35B69 /* AddLocationRouter.swift in Sources */,
 				BFCDA60D2172905800DB31FC /* UINavigationBar+Additions.swift in Sources */,
 				BFF14D962160495000733323 /* DayHelper.swift in Sources */,

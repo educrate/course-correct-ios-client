@@ -9,9 +9,10 @@
 import UIKit
 
 class ProfileAccountRouter: ProfileAccountWireframeProtocol {
-    
     weak var viewController: UIViewController?
-    
+}
+
+extension ProfileAccountRouter {
     static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .profileAccount)
         let view: ProfileAccountViewController = storyboard.instantiateViewController()

@@ -11,12 +11,18 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol ProfilePaymentWireframeProtocol: class, ModuleWireframeable {}
+protocol ProfilePaymentWireframeProtocol: class, ModuleWireframeable {
+    func presentAddCard()
+    func presentAddBank()
+}
 
 
 // MARK: - Presenter
 
-protocol ProfilePaymentPresenterProtocol: class {}
+protocol ProfilePaymentPresenterProtocol: class {
+    func showAddCard()
+    func showAddBank()
+}
 
 
 // MARK: - Interactor

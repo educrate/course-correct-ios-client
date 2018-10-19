@@ -12,21 +12,23 @@ import UIKit
 extension UIStoryboard {
     enum Storyboard: String {
         
-        // MARK: Entry
+        // MARK: - Entry
         case appLaunch = "AppLaunch"
         case app = "App"
         case welcome = "Welcome"
         
-        // MARK: Onboarding New User
+        // MARK: - Onboarding
+        
+        // MARK: New User
         case selectCollege = "SelectCollege"
         case enterStudentIdentifier = "EnterStudentIdentifier"
         case enterAccessCode = "EnterAccessCode"
         case createPassword = "CreatePassword"
         
-        // MARK: Onboarding Existing User
+        // MARK: Existing User
         case signIn = "SignIn"
         
-        // MARK: Schedule
+        // MARK: - Schedule
         case calendar = "Calendar"
         case event = "Event"
         
@@ -36,11 +38,15 @@ extension UIStoryboard {
         case selectTutor = "SelectTutor"
         case tutorProfile = "TutorProfile"
         
-        // MARK: Profile
+        // MARK: - Profile
         case profileOverview = "ProfileOverview"
         case profileAccount = "ProfileAccount"
         case profilePayment = "ProfilePayment"
         case profileSupport = "ProfileSupport"
+        
+        // MARK: Payment
+        case manageCard = "ManageCard"
+        case manageBank = "ManageBank"
         
         // MARK: Modules
         case uiDropdown = "UIDropdown"
