@@ -2,7 +2,7 @@
 //  CalendarHelper.swift
 //  Client
 //
-//  Created by Ampe on 9/25/18.
+//  Created by Christian Ampe on 9/25/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 

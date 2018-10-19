@@ -2,7 +2,7 @@
 //  Networking.swift
 //  Client
 //
-//  Created by Ampe on 9/17/18.
+//  Created by Christian Ampe on 9/17/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 

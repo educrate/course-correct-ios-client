@@ -1,8 +1,9 @@
 //
 //  CreditCardViewStyle.swift
-//  UIPaymentMethod
+//  Client
 //
-//  Created by Ampe on 8/10/18.
+//  Created by Christian Ampe on 8/10/18.
+//  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import UIKit

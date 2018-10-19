@@ -1,8 +1,9 @@
 //
 //  Extractable.swift
-//  Pods
+//  Client
 //
 //  Created by Christian Ampe on 8/29/18.
+//  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import Foundation

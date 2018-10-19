@@ -1,8 +1,9 @@
 //
 //  Mathematics.swift
-//  UIPaymentMethod
+//  Client
 //
-//  Created by Ampe on 8/8/18.
+//  Created by Christian Ampe on 8/8/18.
+//  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import Foundation

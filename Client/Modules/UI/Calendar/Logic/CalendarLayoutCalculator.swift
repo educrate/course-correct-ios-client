@@ -2,7 +2,7 @@
 //  CalendarLayoutCalculator.swift
 //  Client
 //
-//  Created by Ampe on 9/30/18.
+//  Created by Christian Ampe on 9/30/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 

@@ -1,8 +1,9 @@
 //
 //  NetworkingError.swift
-//  Pods
+//  Client
 //
 //  Created by Christian Ampe on 9/5/18.
+//  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import Foundation

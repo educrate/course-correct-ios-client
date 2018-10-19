@@ -2,7 +2,7 @@
 //  Result.swift
 //  Client
 //
-//  Created Ampe on 10/10/18.
+//  Created by Christian Ampe on 10/10/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
@@ -178,6 +178,7 @@ public func materialize<T>(_ f: @autoclosure () throws -> T) -> Result<T, NSErro
 #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
 
 /// Constructs a `Result` with the result of calling `try` with an error pointer.
+//  Copyright © 2018 Educrate. All rights reserved.
 ///
 /// This is convenient for wrapping Cocoa API which returns an object or `nil` + an error, by reference. e.g.:
 ///
@@ -188,6 +189,7 @@ public func `try`<T>(_ function: String = #function, file: String = #file, line:
 }
 
 /// Constructs a `Result` with the result of calling `try` with an error pointer.
+//  Copyright © 2018 Educrate. All rights reserved.
 ///
 /// This is convenient for wrapping Cocoa API which returns a `Bool` + an error, by reference. e.g.:
 ///

@@ -1,8 +1,9 @@
 //
 //  NetworkingClientRequestEncodingType.swift
-//  Pods
+//  Client
 //
 //  Created by Christian Ampe on 9/4/18.
+//  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import Foundation

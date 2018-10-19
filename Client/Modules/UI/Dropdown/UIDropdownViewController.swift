@@ -1,8 +1,9 @@
 //
 //  UIDropdown.swift
-//  UIDropdown
+//  Client
 //
-//  Created by Ampe on 7/30/18.
+//  Created by Christian Ampe on 7/30/18.
+//  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import UIKit

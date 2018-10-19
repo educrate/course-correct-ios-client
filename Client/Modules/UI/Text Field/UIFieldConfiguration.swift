@@ -1,8 +1,9 @@
 //
 //  UIFieldConfiguration.swift
-//  UIField
+//  Client
 //
-//  Created by Ampe on 7/29/18.
+//  Created by Christian Ampe on 7/29/18.
+//  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import UIKit

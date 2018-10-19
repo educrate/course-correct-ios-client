@@ -1,9 +1,9 @@
 //
-//  StoryboardIdentifier.swift
-//  AHStoryboard
+//  StoryboardIdentifiable.swift
+//  Client
 //
-//  Created by Andyy Hope on 19/01/2016.
-//  Copyright © 2016 Andyy Hope. All rights reserved.
+//  Created by Christian Ampe on 9/4/18.
+//  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import UIKit
