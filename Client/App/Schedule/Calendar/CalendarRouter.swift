@@ -37,7 +37,7 @@ extension CalendarRouter {
     
     func presentCreateEvent() {
         if let view = viewController, let navigationController = view.navigationController {
-            navigationController.pushViewController(NewEventRouter.createModule(), animated: true)
+            navigationController.pushViewController(CreateEventRouter.createModule(), animated: true)
         }
     }
     
