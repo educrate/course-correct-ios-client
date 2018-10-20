@@ -9,12 +9,13 @@
 import UIKit
 
 class TutorProfilePresenter: TutorProfilePresenterProtocol {
-
     weak private var view: TutorProfileViewProtocol?
     var interactor: TutorProfileInteractorProtocol?
     private let router: TutorProfileWireframeProtocol
 
-    init(interface: TutorProfileViewProtocol, interactor: TutorProfileInteractorProtocol?, router: TutorProfileWireframeProtocol) {
+    init(interface: TutorProfileViewProtocol,
+         interactor: TutorProfileInteractorProtocol?,
+         router: TutorProfileWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router

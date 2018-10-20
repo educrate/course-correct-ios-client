@@ -9,12 +9,13 @@
 import UIKit
 
 class CongratulationsPresenter: CongratulationsPresenterProtocol {
-
     weak private var view: CongratulationsViewProtocol?
     var interactor: CongratulationsInteractorProtocol?
     private let router: CongratulationsWireframeProtocol
 
-    init(interface: CongratulationsViewProtocol, interactor: CongratulationsInteractorProtocol?, router: CongratulationsWireframeProtocol) {
+    init(interface: CongratulationsViewProtocol,
+         interactor: CongratulationsInteractorProtocol?,
+         router: CongratulationsWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router

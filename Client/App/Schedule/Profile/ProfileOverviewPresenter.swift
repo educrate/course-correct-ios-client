@@ -9,7 +9,6 @@
 import UIKit
 
 class ProfileOverviewPresenter: ProfileOverviewPresenterProtocol {
-
     weak private var view: ProfileOverviewViewProtocol?
     var interactor: ProfileOverviewInteractorProtocol?
     private let router: ProfileOverviewWireframeProtocol

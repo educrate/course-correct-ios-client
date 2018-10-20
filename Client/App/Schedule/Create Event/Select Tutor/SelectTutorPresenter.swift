@@ -9,7 +9,6 @@
 import UIKit
 
 class SelectTutorPresenter: SelectTutorPresenterProtocol {
-
     weak private var view: SelectTutorViewProtocol?
     var interactor: SelectTutorInteractorProtocol?
     private let router: SelectTutorWireframeProtocol

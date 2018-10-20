@@ -9,7 +9,6 @@
 import UIKit
 
 class ProfileAccountPresenter: ProfileAccountPresenterProtocol {
-
     weak private var view: ProfileAccountViewProtocol?
     var interactor: ProfileAccountInteractorProtocol?
     private let router: ProfileAccountWireframeProtocol

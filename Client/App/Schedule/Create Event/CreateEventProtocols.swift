@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol CreateEventWireframeProtocol: class {}
+protocol CreateEventWireframeProtocol: class, ModuleWireframeable {}
 
 
 // MARK: - Presenter

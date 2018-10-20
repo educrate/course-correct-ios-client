@@ -9,7 +9,6 @@
 import UIKit
 
 class EnterStudentIdentifierPresenter: EnterStudentIdentifierPresenterProtocol {
-    
     weak private var view: EnterStudentIdentifierViewProtocol?
     var interactor: EnterStudentIdentifierInteractorProtocol?
     private let router: EnterStudentIdentifierWireframeProtocol

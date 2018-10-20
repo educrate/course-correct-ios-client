@@ -9,11 +9,13 @@
 import UIKit
 
 class WalkthroughRouter: WalkthroughWireframeProtocol {
-    
     weak var viewController: UIViewController?
-    
+}
+
+extension WalkthroughRouter {
     static func createModule() -> UIViewController {
-        let view = WalkthroughViewController(nibName: nil, bundle: nil)
+        let storyboard = UIStoryboard(storyboard: .walkthrough)
+        let view: WalkthroughViewController = storyboard.instantiateViewController()
         let interactor = WalkthroughInteractor()
         let router = WalkthroughRouter()
         let presenter = WalkthroughPresenter(interface: view, interactor: interactor, router: router)

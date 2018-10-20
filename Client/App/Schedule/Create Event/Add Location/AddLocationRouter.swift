@@ -9,9 +9,10 @@
 import UIKit
 
 class AddLocationRouter: AddLocationWireframeProtocol {
-    
     weak var viewController: UIViewController?
-    
+}
+
+extension AddLocationRouter {
     static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .addLocation)
         let view: AddLocationViewController = storyboard.instantiateViewController()

@@ -676,7 +676,7 @@
 				BF500503217454C600D35B69 /* SignInRouter.swift */,
 				BF500506217454C600D35B69 /* SignInInteractor.swift */,
 				BF500505217454C600D35B69 /* SignInProtocols.swift */,
-				BF500518217678B700D35B69 /* Entities */,
+				BF500519217678C500D35B69 /* SignInError.swift */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -688,14 +688,6 @@
 				BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */,
 			);
 			path = "App Launch";
-			sourceTree = "<group>";
-		};
-		BF500518217678B700D35B69 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				BF500519217678C500D35B69 /* SignInError.swift */,
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		BF50051F2177110B00D35B69 /* Notification */ = {
@@ -811,7 +803,7 @@
 				BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */,
 				BF70B5D4217074C600771E5D /* EnterAccessCodeInteractor.swift */,
 				BF70B5D3217074C600771E5D /* EnterAccessCodeProtocols.swift */,
-				BFCDA6122172C1B100DB31FC /* Entities */,
+				BFCDA6132172C1C500DB31FC /* EnterAccessCodeError.swift */,
 			);
 			path = "Enter Access Code";
 			sourceTree = "<group>";
@@ -901,7 +893,7 @@
 				BFCDA5F521725FF700DB31FC /* CreatePasswordRouter.swift */,
 				BFCDA5F821725FF700DB31FC /* CreatePasswordInteractor.swift */,
 				BFCDA5F721725FF700DB31FC /* CreatePasswordProtocols.swift */,
-				BFCDA6152172C3EA00DB31FC /* Entities */,
+				BFCDA6162172C3FC00DB31FC /* CreatePasswordError.swift */,
 			);
 			path = "Create Password";
 			sourceTree = "<group>";
@@ -915,38 +907,6 @@
 				BF5004A22174111C00D35B69 /* UIStoryboard+Identifiers.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		BFCDA60E2172B45900DB31FC /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				BFD82ADB216E816C00A14868 /* SelectCollegeError.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		BFCDA60F2172B47500DB31FC /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		BFCDA6122172C1B100DB31FC /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				BFCDA6132172C1C500DB31FC /* EnterAccessCodeError.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		BFCDA6152172C3EA00DB31FC /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				BFCDA6162172C3FC00DB31FC /* CreatePasswordError.swift */,
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		BFCECC9F2152066B001BB2BA /* Views */ = {
@@ -1152,7 +1112,7 @@
 				BFD82AC7216E77B600A14868 /* SelectCollegeRouter.swift */,
 				BFD82ACA216E77B600A14868 /* SelectCollegeInteractor.swift */,
 				BFD82AC9216E77B600A14868 /* SelectCollegeProtocols.swift */,
-				BFCDA60E2172B45900DB31FC /* Entities */,
+				BFD82ADB216E816C00A14868 /* SelectCollegeError.swift */,
 			);
 			path = "Select College";
 			sourceTree = "<group>";
@@ -1237,7 +1197,7 @@
 				BFD82AE92170670400A14868 /* EnterStudentIdentifierRouter.swift */,
 				BFD82AEC2170670400A14868 /* EnterStudentIdentifierInteractor.swift */,
 				BFD82AEB2170670400A14868 /* EnterStudentIdentifierProtocols.swift */,
-				BFCDA60F2172B47500DB31FC /* Entities */,
+				BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */,
 			);
 			path = "Enter Student Identifier";
 			sourceTree = "<group>";

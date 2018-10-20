@@ -9,7 +9,6 @@
 import UIKit
 
 class AddLocationPresenter: AddLocationPresenterProtocol {
-
     weak private var view: AddLocationViewProtocol?
     var interactor: AddLocationInteractorProtocol?
     private let router: AddLocationWireframeProtocol

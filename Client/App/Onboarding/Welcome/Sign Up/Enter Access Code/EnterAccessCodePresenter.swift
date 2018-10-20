@@ -9,7 +9,6 @@
 import UIKit
 
 class EnterAccessCodePresenter: EnterAccessCodePresenterProtocol {
-    
     weak private var view: EnterAccessCodeViewProtocol?
     var interactor: EnterAccessCodeInteractorProtocol?
     private let router: EnterAccessCodeWireframeProtocol
