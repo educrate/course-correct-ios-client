@@ -12,33 +12,35 @@ import UIKit
 extension UIStoryboard {
     enum Storyboard: String {
         
-        // MARK: - Entry
+        // MARK: Entry
         case appLaunch = "AppLaunch"
         case app = "App"
+        
+        // MARK: Onboarding
+        case walkthrough = "Walkthrough"
         case welcome = "Welcome"
+        case congratulations = "Congratulations"
         
-        // MARK: - Onboarding
-        
-        // MARK: New User
+        // MARK: Sign Up
         case selectCollege = "SelectCollege"
         case enterStudentIdentifier = "EnterStudentIdentifier"
         case enterAccessCode = "EnterAccessCode"
         case createPassword = "CreatePassword"
         
-        // MARK: Existing User
+        // MARK: Sign In
         case signIn = "SignIn"
         
-        // MARK: - Schedule
+        // MARK: Schedule
         case calendar = "Calendar"
         case event = "Event"
         
         // MARK: Create Event
-        case newEvent = "NewEvent"
+        case createEvent = "CreateEvent"
         case addLocation = "AddLocation"
         case selectTutor = "SelectTutor"
         case tutorProfile = "TutorProfile"
         
-        // MARK: - Profile
+        // MARK: Profile
         case profileOverview = "ProfileOverview"
         case profileAccount = "ProfileAccount"
         case profilePayment = "ProfilePayment"
@@ -62,7 +64,6 @@ extension UIStoryboard {
         self.init(name: storyboard.rawValue, bundle: bundle)
     }
 }
-
 
 // MARK: - Class Functions
 extension UIStoryboard {
