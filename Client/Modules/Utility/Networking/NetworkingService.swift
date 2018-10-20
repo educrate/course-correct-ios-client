@@ -13,7 +13,7 @@ extension Networking {
     
     /// service enum holding references to network pathways
     enum Service: NetworkingClientRequest {
-        
+        case welcomeScreen
     }
 }
 

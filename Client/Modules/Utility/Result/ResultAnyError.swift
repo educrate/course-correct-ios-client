@@ -1,5 +1,5 @@
 //
-//  AnyError.swift
+//  ResultAnyError.swift
 //  Client
 //
 //  Created by Christian Ampe on 10/10/18.
@@ -10,12 +10,12 @@ import Foundation
 
 /// A type-erased error which wraps an arbitrary error instance. This should be
 /// useful for generic contexts.
-public struct AnyError: Swift.Error {
+struct ResultAnyError: Swift.Error {
 	/// The underlying error.
-	public let error: Swift.Error
+	let error: Swift.Error
 
-	public init(_ error: Swift.Error) {
-		if let anyError = error as? AnyError {
+	init(_ error: Swift.Error) {
+		if let anyError = error as? ResultAnyError {
 			self = anyError
 		} else {
 			self.error = error
@@ -23,32 +23,32 @@ public struct AnyError: Swift.Error {
 	}
 }
 
-extension AnyError: ErrorConvertible {
-	public static func error(from error: Error) -> AnyError {
-		return AnyError(error)
+extension ResultAnyError: ErrorConvertible {
+	static func error(from error: Error) -> ResultAnyError {
+		return ResultAnyError(error)
 	}
 }
 
-extension AnyError: CustomStringConvertible {
-	public var description: String {
+extension ResultAnyError: CustomStringConvertible {
+	var description: String {
 		return String(describing: error)
 	}
 }
 
-extension AnyError: LocalizedError {
-	public var errorDescription: String? {
+extension ResultAnyError: LocalizedError {
+	var errorDescription: String? {
 		return error.localizedDescription
 	}
 
-	public var failureReason: String? {
+	var failureReason: String? {
 		return (error as? LocalizedError)?.failureReason
 	}
 
-	public var helpAnchor: String? {
+	var helpAnchor: String? {
 		return (error as? LocalizedError)?.helpAnchor
 	}
 
-	public var recoverySuggestion: String? {
+	var recoverySuggestion: String? {
 		return (error as? LocalizedError)?.recoverySuggestion
 	}
 }

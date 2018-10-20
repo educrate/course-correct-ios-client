@@ -94,6 +94,18 @@
 		BF50054A217A76A200D35B69 /* ManageBankInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500545217A76A200D35B69 /* ManageBankInteractor.swift */; };
 		BF50054C217A76B500D35B69 /* ManageCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF50054B217A76B500D35B69 /* ManageCard.storyboard */; };
 		BF50054E217A76BF00D35B69 /* ManageBank.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF50054D217A76BF00D35B69 /* ManageBank.storyboard */; };
+		BF500555217B837600D35B69 /* WalkthroughPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500550217B837600D35B69 /* WalkthroughPresenter.swift */; };
+		BF500556217B837600D35B69 /* WalkthroughRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500551217B837600D35B69 /* WalkthroughRouter.swift */; };
+		BF500557217B837600D35B69 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500552217B837600D35B69 /* WalkthroughViewController.swift */; };
+		BF500558217B837600D35B69 /* WalkthroughProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500553217B837600D35B69 /* WalkthroughProtocols.swift */; };
+		BF500559217B837600D35B69 /* WalkthroughInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500554217B837600D35B69 /* WalkthroughInteractor.swift */; };
+		BF500560217B848F00D35B69 /* CongratulationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50055B217B848F00D35B69 /* CongratulationsPresenter.swift */; };
+		BF500561217B848F00D35B69 /* CongratulationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50055C217B848F00D35B69 /* CongratulationsRouter.swift */; };
+		BF500562217B848F00D35B69 /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50055D217B848F00D35B69 /* CongratulationsViewController.swift */; };
+		BF500563217B848F00D35B69 /* CongratulationsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50055E217B848F00D35B69 /* CongratulationsProtocols.swift */; };
+		BF500564217B848F00D35B69 /* CongratulationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50055F217B848F00D35B69 /* CongratulationsInteractor.swift */; };
+		BF500566217B84B000D35B69 /* Congratulations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF500565217B84B000D35B69 /* Congratulations.storyboard */; };
+		BF500568217B852900D35B69 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF500567217B852900D35B69 /* Walkthrough.storyboard */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -187,8 +199,8 @@
 		BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC8216E77B600A14868 /* SelectCollegeViewController.swift */; };
 		BFD82ACE216E77B600A14868 /* SelectCollegeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC9216E77B600A14868 /* SelectCollegeProtocols.swift */; };
 		BFD82ACF216E77B600A14868 /* SelectCollegeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82ACA216E77B600A14868 /* SelectCollegeInteractor.swift */; };
-		BFD82AD7216E7D3500A14868 /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD3216E7D3500A14868 /* AnyError.swift */; };
-		BFD82AD8216E7D3500A14868 /* NoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD4216E7D3500A14868 /* NoError.swift */; };
+		BFD82AD7216E7D3500A14868 /* ResultAnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD3216E7D3500A14868 /* ResultAnyError.swift */; };
+		BFD82AD8216E7D3500A14868 /* ResultNoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD4216E7D3500A14868 /* ResultNoError.swift */; };
 		BFD82AD9216E7D3500A14868 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD5216E7D3500A14868 /* Result.swift */; };
 		BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD6216E7D3500A14868 /* ResultProtocol.swift */; };
 		BFD82ADC216E816C00A14868 /* SelectCollegeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82ADB216E816C00A14868 /* SelectCollegeError.swift */; };
@@ -316,6 +328,18 @@
 		BF500545217A76A200D35B69 /* ManageBankInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBankInteractor.swift; sourceTree = "<group>"; };
 		BF50054B217A76B500D35B69 /* ManageCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageCard.storyboard; sourceTree = "<group>"; };
 		BF50054D217A76BF00D35B69 /* ManageBank.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageBank.storyboard; sourceTree = "<group>"; };
+		BF500550217B837600D35B69 /* WalkthroughPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPresenter.swift; sourceTree = "<group>"; };
+		BF500551217B837600D35B69 /* WalkthroughRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughRouter.swift; sourceTree = "<group>"; };
+		BF500552217B837600D35B69 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		BF500553217B837600D35B69 /* WalkthroughProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughProtocols.swift; sourceTree = "<group>"; };
+		BF500554217B837600D35B69 /* WalkthroughInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughInteractor.swift; sourceTree = "<group>"; };
+		BF50055B217B848F00D35B69 /* CongratulationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsPresenter.swift; sourceTree = "<group>"; };
+		BF50055C217B848F00D35B69 /* CongratulationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsRouter.swift; sourceTree = "<group>"; };
+		BF50055D217B848F00D35B69 /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
+		BF50055E217B848F00D35B69 /* CongratulationsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsProtocols.swift; sourceTree = "<group>"; };
+		BF50055F217B848F00D35B69 /* CongratulationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsInteractor.swift; sourceTree = "<group>"; };
+		BF500565217B84B000D35B69 /* Congratulations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Congratulations.storyboard; sourceTree = "<group>"; };
+		BF500567217B852900D35B69 /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -415,8 +439,8 @@
 		BFD82AC8216E77B600A14868 /* SelectCollegeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeViewController.swift; sourceTree = "<group>"; };
 		BFD82AC9216E77B600A14868 /* SelectCollegeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeProtocols.swift; sourceTree = "<group>"; };
 		BFD82ACA216E77B600A14868 /* SelectCollegeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeInteractor.swift; sourceTree = "<group>"; };
-		BFD82AD3216E7D3500A14868 /* AnyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyError.swift; sourceTree = "<group>"; };
-		BFD82AD4216E7D3500A14868 /* NoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoError.swift; sourceTree = "<group>"; };
+		BFD82AD3216E7D3500A14868 /* ResultAnyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultAnyError.swift; sourceTree = "<group>"; };
+		BFD82AD4216E7D3500A14868 /* ResultNoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultNoError.swift; sourceTree = "<group>"; };
 		BFD82AD5216E7D3500A14868 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		BFD82AD6216E7D3500A14868 /* ResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
 		BFD82ADB216E816C00A14868 /* SelectCollegeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeError.swift; sourceTree = "<group>"; };
@@ -469,7 +493,6 @@
 			children = (
 				BF50050F21745D6000D35B69 /* App Launch */,
 				BF5004A12173EC4E00D35B69 /* App Navigation */,
-				BF70B5DC21715BA800771E5D /* Welcome */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -572,7 +595,8 @@
 			isa = PBXGroup;
 			children = (
 				BF5004A62174120B00D35B69 /* Calendar */,
-				BF5004B32174124200D35B69 /* Event */,
+				BF5004A4217411A800D35B69 /* Create Event */,
+				BF5004632172EF9100D35B69 /* Profile */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -586,6 +610,7 @@
 				BF5004A82174122200D35B69 /* CalendarRouter.swift */,
 				BF5004AB2174122200D35B69 /* CalendarInteractor.swift */,
 				BF5004AA2174122200D35B69 /* CalendarProtocols.swift */,
+				BF5004B32174124200D35B69 /* Event */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -655,7 +680,7 @@
 			path = "Tutor Profile";
 			sourceTree = "<group>";
 		};
-		BF5005002174547700D35B69 /* New User */ = {
+		BF5005002174547700D35B69 /* Sign Up */ = {
 			isa = PBXGroup;
 			children = (
 				BFD82AA0216DA43D00A14868 /* Select College */,
@@ -663,15 +688,7 @@
 				BF70B5CF217074AC00771E5D /* Enter Access Code */,
 				BFCDA5F321725FDB00DB31FC /* Create Password */,
 			);
-			path = "New User";
-			sourceTree = "<group>";
-		};
-		BF5005012174549B00D35B69 /* Existing User */ = {
-			isa = PBXGroup;
-			children = (
-				BF50050E2174558A00D35B69 /* Sign In */,
-			);
-			path = "Existing User";
+			path = "Sign Up";
 			sourceTree = "<group>";
 		};
 		BF50050E2174558A00D35B69 /* Sign In */ = {
@@ -740,6 +757,32 @@
 			path = "Manage Banking";
 			sourceTree = "<group>";
 		};
+		BF50054F217B835700D35B69 /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				BF500567217B852900D35B69 /* Walkthrough.storyboard */,
+				BF500552217B837600D35B69 /* WalkthroughViewController.swift */,
+				BF500550217B837600D35B69 /* WalkthroughPresenter.swift */,
+				BF500551217B837600D35B69 /* WalkthroughRouter.swift */,
+				BF500554217B837600D35B69 /* WalkthroughInteractor.swift */,
+				BF500553217B837600D35B69 /* WalkthroughProtocols.swift */,
+			);
+			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		BF50055A217B847500D35B69 /* Congratulations */ = {
+			isa = PBXGroup;
+			children = (
+				BF500565217B84B000D35B69 /* Congratulations.storyboard */,
+				BF50055D217B848F00D35B69 /* CongratulationsViewController.swift */,
+				BF50055B217B848F00D35B69 /* CongratulationsPresenter.swift */,
+				BF50055C217B848F00D35B69 /* CongratulationsRouter.swift */,
+				BF50055F217B848F00D35B69 /* CongratulationsInteractor.swift */,
+				BF50055E217B848F00D35B69 /* CongratulationsProtocols.swift */,
+			);
+			path = Congratulations;
+			sourceTree = "<group>";
+		};
 		BF55165B215B39CD00D0CBB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -776,8 +819,9 @@
 		BF579339216D4485008DBB46 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				BF5005002174547700D35B69 /* New User */,
-				BF5005012174549B00D35B69 /* Existing User */,
+				BF50054F217B835700D35B69 /* Walkthrough */,
+				BF70B5DC21715BA800771E5D /* Welcome */,
+				BF50055A217B847500D35B69 /* Congratulations */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -805,6 +849,8 @@
 				BFCDA5E821725E7200DB31FC /* WelcomeRouter.swift */,
 				BFCDA5EB21725E7200DB31FC /* WelcomeInteractor.swift */,
 				BFCDA5EA21725E7200DB31FC /* WelcomeProtocols.swift */,
+				BF5005002174547700D35B69 /* Sign Up */,
+				BF50050E2174558A00D35B69 /* Sign In */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1000,8 +1046,6 @@
 				BF4E718D216D4C1A00100FE1 /* Entry */,
 				BF579339216D4485008DBB46 /* Onboarding */,
 				BF5004A5217411C300D35B69 /* Schedule */,
-				BF5004A4217411A800D35B69 /* Create Event */,
-				BF5004632172EF9100D35B69 /* Profile */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -1200,8 +1244,8 @@
 		BFD82AD2216E7CD300A14868 /* Result */ = {
 			isa = PBXGroup;
 			children = (
-				BFD82AD3216E7D3500A14868 /* AnyError.swift */,
-				BFD82AD4216E7D3500A14868 /* NoError.swift */,
+				BFD82AD3216E7D3500A14868 /* ResultAnyError.swift */,
+				BFD82AD4216E7D3500A14868 /* ResultNoError.swift */,
 				BFD82AD5216E7D3500A14868 /* Result.swift */,
 				BFD82AD6216E7D3500A14868 /* ResultProtocol.swift */,
 			);
@@ -1337,9 +1381,11 @@
 				BF5004942173EB8500D35B69 /* ProfilePayment.storyboard in Resources */,
 				BFD82AF32170671B00A14868 /* EnterStudentIdentifier.storyboard in Resources */,
 				BF5004702172F0A200D35B69 /* ProfileOverview.storyboard in Resources */,
+				BF500568217B852900D35B69 /* Walkthrough.storyboard in Resources */,
 				BF5004B22174123200D35B69 /* Calendar.storyboard in Resources */,
 				BF5004842173AC3C00D35B69 /* ProfileAccount.storyboard in Resources */,
 				BF5004BF2174128200D35B69 /* Event.storyboard in Resources */,
+				BF500566217B84B000D35B69 /* Congratulations.storyboard in Resources */,
 				BFCDA5FF2172601200DB31FC /* CreatePassword.storyboard in Resources */,
 				BF70B5DB217074D900771E5D /* EnterAccessCode.storyboard in Resources */,
 				BF5004F321741EC400D35B69 /* TutorProfile.storyboard in Resources */,
@@ -1392,6 +1438,7 @@
 				BF5004A32174111C00D35B69 /* UIStoryboard+Identifiers.swift in Sources */,
 				BFF14D922160492F00733323 /* DateHelper.swift in Sources */,
 				BF500508217454C600D35B69 /* SignInRouter.swift in Sources */,
+				BF500558217B837600D35B69 /* WalkthroughProtocols.swift in Sources */,
 				BF5004ED21741EAE00D35B69 /* TutorProfilePresenter.swift in Sources */,
 				BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */,
 				BFD82A91216D989E00A14868 /* NetworkingClientResult.swift in Sources */,
@@ -1417,6 +1464,7 @@
 				BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */,
 				BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */,
 				BF5004FB217422CF00D35B69 /* NewEventViewController.swift in Sources */,
+				BF500560217B848F00D35B69 /* CongratulationsPresenter.swift in Sources */,
 				BF5004E121741E9100D35B69 /* SelectTutorPresenter.swift in Sources */,
 				BF5004902173EB7800D35B69 /* ProfilePaymentViewController.swift in Sources */,
 				BF5004FA217422CF00D35B69 /* NewEventRouter.swift in Sources */,
@@ -1441,6 +1489,7 @@
 				BFD0295E21509BB2002FB9F5 /* UICalendarViewController.swift in Sources */,
 				BF5004F121741EAF00D35B69 /* TutorProfileInteractor.swift in Sources */,
 				BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */,
+				BF500564217B848F00D35B69 /* CongratulationsInteractor.swift in Sources */,
 				BF500549217A76A200D35B69 /* ManageBankProtocols.swift in Sources */,
 				BF50051E2176DA2F00D35B69 /* UIActionSheetViewController.swift in Sources */,
 				BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */,
@@ -1452,6 +1501,7 @@
 				BFD0298321509C6A002FB9F5 /* CreditCardMathematics.swift in Sources */,
 				BF5004AD2174122200D35B69 /* CalendarRouter.swift in Sources */,
 				BFD0297721509C1E002FB9F5 /* CreditCardView.swift in Sources */,
+				BF500555217B837600D35B69 /* WalkthroughPresenter.swift in Sources */,
 				BFD0299B21509CD5002FB9F5 /* UIFieldViewController.swift in Sources */,
 				BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */,
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
@@ -1466,11 +1516,13 @@
 				BFD0296E21509C1E002FB9F5 /* CreditCardViewModelDataSource.swift in Sources */,
 				BF50046C2172F09700D35B69 /* ProfileOverviewViewController.swift in Sources */,
 				BFD82ADC216E816C00A14868 /* SelectCollegeError.swift in Sources */,
+				BF500561217B848F00D35B69 /* CongratulationsRouter.swift in Sources */,
 				BFD0297621509C1E002FB9F5 /* CreditCardViewConstants.swift in Sources */,
 				BFD82A8D216D989E00A14868 /* NetworkingClientRequestEncodingType.swift in Sources */,
 				BFD0296F21509C1E002FB9F5 /* CreditCardMetadata.swift in Sources */,
 				BFCDA6172172C3FC00DB31FC /* CreatePasswordError.swift in Sources */,
 				BFD82ACB216E77B600A14868 /* SelectCollegePresenter.swift in Sources */,
+				BF500556217B837600D35B69 /* WalkthroughRouter.swift in Sources */,
 				BFCDA5FC21725FF700DB31FC /* CreatePasswordProtocols.swift in Sources */,
 				BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */,
 				BF5004E321741E9100D35B69 /* SelectTutorViewController.swift in Sources */,
@@ -1519,13 +1571,15 @@
 				BF500509217454C600D35B69 /* SignInViewController.swift in Sources */,
 				BF5004AE2174122200D35B69 /* CalendarViewController.swift in Sources */,
 				BFCDA5EC21725E7200DB31FC /* WelcomePresenter.swift in Sources */,
+				BF500563217B848F00D35B69 /* CongratulationsProtocols.swift in Sources */,
 				BFCDA5ED21725E7200DB31FC /* WelcomeRouter.swift in Sources */,
+				BF500562217B848F00D35B69 /* CongratulationsViewController.swift in Sources */,
 				BF5004F021741EAF00D35B69 /* TutorProfileProtocols.swift in Sources */,
 				BFCDA6112172B48C00DB31FC /* EnterStudentIdentifierError.swift in Sources */,
 				BF50053F217A765200D35B69 /* ManageCardProtocols.swift in Sources */,
 				BFCDA5EF21725E7200DB31FC /* WelcomeProtocols.swift in Sources */,
 				BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */,
-				BFD82AD7216E7D3500A14868 /* AnyError.swift in Sources */,
+				BFD82AD7216E7D3500A14868 /* ResultAnyError.swift in Sources */,
 				BF5004D521741E6900D35B69 /* AddLocationPresenter.swift in Sources */,
 				BFD82AB9216DA53200A14868 /* UIDropdownViewController.swift in Sources */,
 				BF5004EE21741EAF00D35B69 /* TutorProfileRouter.swift in Sources */,
@@ -1536,12 +1590,14 @@
 				BF5004E421741E9100D35B69 /* SelectTutorProtocols.swift in Sources */,
 				BFD0296021509BB2002FB9F5 /* UICalendarViewCell.swift in Sources */,
 				BF50046E2172F09700D35B69 /* ProfileOverviewInteractor.swift in Sources */,
+				BF500557217B837600D35B69 /* WalkthroughViewController.swift in Sources */,
 				BFD82A8F216D989E00A14868 /* NetworkingClientValidation.swift in Sources */,
 				BFCDA5EE21725E7200DB31FC /* WelcomeViewController.swift in Sources */,
 				BFCDA5FB21725FF700DB31FC /* CreatePasswordViewController.swift in Sources */,
-				BFD82AD8216E7D3500A14868 /* NoError.swift in Sources */,
+				BFD82AD8216E7D3500A14868 /* ResultNoError.swift in Sources */,
 				BF500548217A76A200D35B69 /* ManageBankViewController.swift in Sources */,
 				BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */,
+				BF500559217B837600D35B69 /* WalkthroughInteractor.swift in Sources */,
 				BF5004AF2174122200D35B69 /* CalendarProtocols.swift in Sources */,
 				BF5004812173AC2200D35B69 /* ProfileAccountProtocols.swift in Sources */,
 				BF5004FD217422CF00D35B69 /* NewEventInteractor.swift in Sources */,
