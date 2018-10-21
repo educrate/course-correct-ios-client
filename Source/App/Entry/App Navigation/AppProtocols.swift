@@ -16,7 +16,9 @@ protocol AppWireframeProtocol: class {}
 
 // MARK: - Presenter
 
-protocol AppPresenterProtocol: class {}
+protocol AppPresenterProtocol: class {
+    func determineRootView()
+}
 
 
 // MARK: - Interactor

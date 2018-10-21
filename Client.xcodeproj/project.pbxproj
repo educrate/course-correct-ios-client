@@ -959,7 +959,7 @@
 		BFD0290C21509AD4002FB9F5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BFD0293F21509AF0002FB9F5 /* Screens */,
+				BFD0293F21509AF0002FB9F5 /* App */,
 				BFD82AC2216DB85C00A14868 /* Implementations */,
 				BFD0293E21509AE3002FB9F5 /* Components */,
 				BFD0294121509B39002FB9F5 /* Storages */,
@@ -988,20 +988,20 @@
 		BFD0293E21509AE3002FB9F5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				BFD82AD1216E7CC700A14868 /* Utility */,
+				BFD82AD1216E7CC700A14868 /* Utilities */,
 				BFD82AD0216E7CA600A14868 /* UI */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		BFD0293F21509AF0002FB9F5 /* Screens */ = {
+		BFD0293F21509AF0002FB9F5 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				BF4E718D216D4C1A00100FE1 /* Entry */,
 				BF579339216D4485008DBB46 /* Onboarding */,
 				BF5004A5217411C300D35B69 /* Schedule */,
 			);
-			path = Screens;
+			path = App;
 			sourceTree = "<group>";
 		};
 		BFD0294121509B39002FB9F5 /* Storages */ = {
@@ -1185,14 +1185,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		BFD82AD1216E7CC700A14868 /* Utility */ = {
+		BFD82AD1216E7CC700A14868 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				BFD82AD2216E7CD300A14868 /* Result */,
 				BFD82A74216D987E00A14868 /* Networking */,
 				BFD82ABF216DAD9800A14868 /* Storyboard */,
 			);
-			path = Utility;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		BFD82AD2216E7CD300A14868 /* Result */ = {
