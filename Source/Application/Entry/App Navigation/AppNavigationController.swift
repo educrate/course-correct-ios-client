@@ -9,5 +9,25 @@
 import UIKit
 
 class AppNavigationController: UINavigationController, AppViewProtocol {
-	var presenter: AppPresenterProtocol?
+    lazy var presenter: AppPresenterProtocol? = AppRouter.createModule(self)
+}
+
+extension AppNavigationController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        style()
+        setInitialView()
+    }
+}
+
+extension AppNavigationController {
+    func setInitialView() {
+        presenter?.setInitialView()
+    }
+}
+
+extension AppNavigationController {
+    func style() {
+        navigationBar.makeTransparent()
+    }
 }

@@ -8,6 +8,19 @@
 
 import UIKit
 
-class OnboardingNavigationController: UINavigationController {
-    
+class OnboardingNavigationController: UINavigationController, OnboardingViewProtocol {
+    var presenter: OnboardingPresenterProtocol?
+}
+
+extension OnboardingNavigationController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        style()
+    }
+}
+
+extension OnboardingNavigationController {
+    func style() {
+        navigationBar.makeTransparent()
+    }
 }

@@ -17,6 +17,7 @@ extension UIStoryboard {
         case app = "App"
         
         // MARK: Onboarding
+        case onboarding = "Onboarding"
         case walkthrough = "Walkthrough"
         case welcome = "Welcome"
         case congratulations = "Congratulations"

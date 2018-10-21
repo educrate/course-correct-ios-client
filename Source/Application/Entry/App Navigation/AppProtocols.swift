@@ -11,25 +11,33 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol AppWireframeProtocol: class {}
+protocol AppWireframeProtocol: class {
+    func presentOnboarding()
+    func presentSchedule()
+}
 
 
 // MARK: - Presenter
 
 protocol AppPresenterProtocol: class {
-    func determineRootView()
+    func setInitialView()
+    
+    func showOnboarding()
+    func showSchedule()
 }
 
 
 // MARK: - Interactor
 
 protocol AppInteractorProtocol: class {
-  var presenter: AppPresenterProtocol?  { get set }
+    var presenter: AppPresenterProtocol?  { get set }
+    
+    func determineInitialView()
 }
 
 
 // MARK: - View 
 
 protocol AppViewProtocol: class {
-  var presenter: AppPresenterProtocol?  { get set }
+    var presenter: AppPresenterProtocol?  { get set }
 }

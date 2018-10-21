@@ -9,21 +9,34 @@
 import UIKit
 
 class AppRouter: AppWireframeProtocol {
-    weak var viewController: UIViewController?
+    weak var navigationController: UINavigationController?
 }
 
 extension AppRouter {
-    static func createModule() -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .app)
-        let view: AppNavigationController = storyboard.instantiateViewController()
+    static func createModule(_ view: AppViewProtocol) -> AppPresenterProtocol? {
+        guard let navigationController = view as? UINavigationController else {
+            assertionFailure("base view must be of type UINavigationController")
+            return nil
+        }
+        
         let interactor = AppInteractor()
         let router = AppRouter()
         let presenter = AppPresenter(interface: view, interactor: interactor, router: router)
         
         view.presenter = presenter
         interactor.presenter = presenter
-        router.viewController = view
+        router.navigationController = navigationController
         
-        return view
+        return presenter
+    }
+}
+
+extension AppRouter {
+    func presentOnboarding() {
+        navigationController?.setViewControllers([WelcomeRouter.createModule()], animated: true)
+    }
+    
+    func presentSchedule() {
+        navigationController?.setViewControllers([CalendarRouter.createModule()], animated: true)
     }
 }

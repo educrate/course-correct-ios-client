@@ -21,3 +21,17 @@ class AppPresenter: AppPresenterProtocol {
         self.router = router
     }
 }
+
+extension AppPresenter {
+    func setInitialView() {
+        interactor?.determineInitialView()
+    }
+    
+    func showOnboarding() {
+        router.presentOnboarding()
+    }
+    
+    func showSchedule() {
+        router.presentSchedule()
+    }
+}

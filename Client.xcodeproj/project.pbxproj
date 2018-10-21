@@ -114,6 +114,10 @@
 		BF50058F217CF66900D35B69 /* AppProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50058A217CF66900D35B69 /* AppProtocols.swift */; };
 		BF500590217CF66900D35B69 /* AppInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50058B217CF66900D35B69 /* AppInteractor.swift */; };
 		BF500592217CF69600D35B69 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF500591217CF69600D35B69 /* App.storyboard */; };
+		BF500598217D3BB100D35B69 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500593217D3BB100D35B69 /* OnboardingPresenter.swift */; };
+		BF500599217D3BB100D35B69 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500594217D3BB100D35B69 /* OnboardingRouter.swift */; };
+		BF50059B217D3BB100D35B69 /* OnboardingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500596217D3BB100D35B69 /* OnboardingProtocols.swift */; };
+		BF50059C217D3BB100D35B69 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500597217D3BB100D35B69 /* OnboardingInteractor.swift */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -354,6 +358,10 @@
 		BF50058A217CF66900D35B69 /* AppProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProtocols.swift; sourceTree = "<group>"; };
 		BF50058B217CF66900D35B69 /* AppInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInteractor.swift; sourceTree = "<group>"; };
 		BF500591217CF69600D35B69 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
+		BF500593217D3BB100D35B69 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		BF500594217D3BB100D35B69 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		BF500596217D3BB100D35B69 /* OnboardingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProtocols.swift; sourceTree = "<group>"; };
+		BF500597217D3BB100D35B69 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -805,6 +813,10 @@
 			children = (
 				BF500575217B9B0000D35B69 /* Onboarding.storyboard */,
 				BF500577217B9B1600D35B69 /* OnboardingNavigationController.swift */,
+				BF500593217D3BB100D35B69 /* OnboardingPresenter.swift */,
+				BF500594217D3BB100D35B69 /* OnboardingRouter.swift */,
+				BF500597217D3BB100D35B69 /* OnboardingInteractor.swift */,
+				BF500596217D3BB100D35B69 /* OnboardingProtocols.swift */,
 				BF50054F217B835700D35B69 /* Walkthrough */,
 				BF70B5DC21715BA800771E5D /* Welcome */,
 				BF50055A217B847500D35B69 /* Congratulations */,
@@ -1425,6 +1437,7 @@
 				BF50046A2172F09700D35B69 /* ProfileOverviewPresenter.swift in Sources */,
 				BFD82A8B216D989E00A14868 /* NetworkingService.swift in Sources */,
 				BF5004E221741E9100D35B69 /* SelectTutorRouter.swift in Sources */,
+				BF500598217D3BB100D35B69 /* OnboardingPresenter.swift in Sources */,
 				BFD82A92216D989E00A14868 /* NetworkingClientResponse.swift in Sources */,
 				BFD82A98216D989E00A14868 /* NetworkingResult.swift in Sources */,
 				BF50048F2173EB7800D35B69 /* ProfilePaymentRouter.swift in Sources */,
@@ -1445,6 +1458,7 @@
 				BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */,
 				BF500564217B848F00D35B69 /* CongratulationsInteractor.swift in Sources */,
 				BF500549217A76A200D35B69 /* ManageBankProtocols.swift in Sources */,
+				BF50059B217D3BB100D35B69 /* OnboardingProtocols.swift in Sources */,
 				BF50051E2176DA2F00D35B69 /* UIActionSheetViewController.swift in Sources */,
 				BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */,
 				BF50047F2173AC2200D35B69 /* ProfileAccountRouter.swift in Sources */,
@@ -1488,6 +1502,7 @@
 				BFD0299521509C9A002FB9F5 /* UIActionSheetOption.swift in Sources */,
 				BF500570217B87C900D35B69 /* CreateEventViewController.swift in Sources */,
 				BFD0295C21509BB2002FB9F5 /* UICalendarViewDelegate.swift in Sources */,
+				BF50059C217D3BB100D35B69 /* OnboardingInteractor.swift in Sources */,
 				BFF14D982160496400733323 /* MonthHelper.swift in Sources */,
 				BFD0299321509C9A002FB9F5 /* UIActionSheetCell.swift in Sources */,
 				BFCDA6192172D53700DB31FC /* SegueIdentifiable.swift in Sources */,
@@ -1510,6 +1525,7 @@
 				BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */,
 				BF5004BB2174127100D35B69 /* EventViewController.swift in Sources */,
 				BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */,
+				BF500599217D3BB100D35B69 /* OnboardingRouter.swift in Sources */,
 				BF50053E217A765200D35B69 /* ManageCardViewController.swift in Sources */,
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
 				BFD82A87216D989E00A14868 /* NetworkingClientError.swift in Sources */,
