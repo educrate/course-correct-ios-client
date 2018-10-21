@@ -2,32 +2,28 @@
 //  AppRouter.swift
 //  Client
 //
-//  Created Ampe on 10/20/18.
+//  Created Ampe on 10/21/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import UIKit
 
-class AppRouter: AppWireframeProtocol {}
-
-extension AppRouter {
-    static func createModule() -> AppPresenterProtocol {
-        let interactor = AppInteractor()
-        let router = AppRouter()
-        let presenter = AppPresenter(interactor: interactor, router: router)
-        
-        interactor.presenter = presenter
-        
-        return presenter
-    }
+class AppRouter: AppWireframeProtocol {
+    weak var viewController: UIViewController?
 }
 
 extension AppRouter {
-    func routeToOnboarding() {
+    static func createModule() -> UIViewController {
+        let storyboard = UIStoryboard(storyboard: .app)
+        let view: AppNavigationController = storyboard.instantiateViewController()
+        let interactor = AppInteractor()
+        let router = AppRouter()
+        let presenter = AppPresenter(interface: view, interactor: interactor, router: router)
         
-    }
-    
-    func routeIntoApplication() {
+        view.presenter = presenter
+        interactor.presenter = presenter
+        router.viewController = view
         
+        return view
     }
 }

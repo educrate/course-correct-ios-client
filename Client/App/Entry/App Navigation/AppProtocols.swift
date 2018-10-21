@@ -2,7 +2,7 @@
 //  AppProtocols.swift
 //  Client
 //
-//  Created Ampe on 10/20/18.
+//  Created Ampe on 10/21/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
@@ -11,23 +11,23 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol AppWireframeProtocol: class {
-    func routeToOnboarding()
-    func routeIntoApplication()
-}
+protocol AppWireframeProtocol: class {}
 
 
 // MARK: - Presenter
 
-protocol AppPresenterProtocol: class {
-    func start()
-}
+protocol AppPresenterProtocol: class {}
 
 
 // MARK: - Interactor
 
 protocol AppInteractorProtocol: class {
   var presenter: AppPresenterProtocol?  { get set }
-    
-    func checkUserStatus()
+}
+
+
+// MARK: - View 
+
+protocol AppViewProtocol: class {
+  var presenter: AppPresenterProtocol?  { get set }
 }
