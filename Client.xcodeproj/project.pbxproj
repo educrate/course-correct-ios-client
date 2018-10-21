@@ -959,7 +959,7 @@
 		BFD0290C21509AD4002FB9F5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BFD0293F21509AF0002FB9F5 /* App */,
+				BFD0293F21509AF0002FB9F5 /* Application */,
 				BFD82AC2216DB85C00A14868 /* Implementations */,
 				BFD0293E21509AE3002FB9F5 /* Components */,
 				BFD0294121509B39002FB9F5 /* Storages */,
@@ -994,14 +994,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		BFD0293F21509AF0002FB9F5 /* App */ = {
+		BFD0293F21509AF0002FB9F5 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				BF4E718D216D4C1A00100FE1 /* Entry */,
 				BF579339216D4485008DBB46 /* Onboarding */,
 				BF5004A5217411C300D35B69 /* Schedule */,
 			);
-			path = App;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		BFD0294121509B39002FB9F5 /* Storages */ = {
