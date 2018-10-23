@@ -1,5 +1,5 @@
 //
-//  AppViewController.swift
+//  AppNavigationController.swift
 //  Client
 //
 //  Created Ampe on 10/21/18.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class AppViewController: UINavigationController {}
+class AppNavigationController: UINavigationController {}
 
-extension AppViewController {
+extension AppNavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         

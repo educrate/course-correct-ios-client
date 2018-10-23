@@ -8,21 +8,21 @@
 
 import Foundation
 
-class AppCoordinator {}
+class AppNavigationCoordinator {}
 
-extension AppCoordinator: Coordinator {
+extension AppNavigationCoordinator: Coordinator {
     func start() {
         
     }
 }
 
-extension AppCoordinator: OnboardingCoordinatorDelegate {
+extension AppNavigationCoordinator: OnboardingCoordinatorDelegate {
     func onboardingCoordinator(_ onboardingCoordinator: OnboardingCoordinator, didFinishWith state: String) {
         
     }
 }
 
-extension AppCoordinator: MainCoordinatorDelegate {
+extension AppNavigationCoordinator: MainCoordinatorDelegate {
     func mainCoordinator(_ mainCoordinator: MainCoordinator, didLogOut user: String) {
         
     }

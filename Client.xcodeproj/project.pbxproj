@@ -107,14 +107,13 @@
 		BF500572217B87C900D35B69 /* CreateEventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50056D217B87C900D35B69 /* CreateEventInteractor.swift */; };
 		BF500574217B87FB00D35B69 /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF500573217B87FB00D35B69 /* CreateEvent.storyboard */; };
 		BF500576217B9B0000D35B69 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF500575217B9B0000D35B69 /* Onboarding.storyboard */; };
-		BF500578217B9B1600D35B69 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500577217B9B1600D35B69 /* OnboardingViewController.swift */; };
-		BF50058E217CF66900D35B69 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500589217CF66900D35B69 /* AppViewController.swift */; };
+		BF50058E217CF66900D35B69 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500589217CF66900D35B69 /* AppNavigationController.swift */; };
 		BF500592217CF69600D35B69 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF500591217CF69600D35B69 /* App.storyboard */; };
 		BF50059E217D706600D35B69 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50059D217D706600D35B69 /* OnboardingCoordinator.swift */; };
 		BF5005A0217EC6B600D35B69 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50059F217EC6B600D35B69 /* Coordinator.swift */; };
 		BF5005A2217EC74200D35B69 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005A1217EC74200D35B69 /* SignUpCoordinator.swift */; };
 		BF5005A4217ED6E800D35B69 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005A3217ED6E800D35B69 /* MainCoordinator.swift */; };
-		BF5005A6217ED77800D35B69 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005A5217ED77800D35B69 /* AppCoordinator.swift */; };
+		BF5005A6217ED77800D35B69 /* AppNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005A5217ED77800D35B69 /* AppNavigationCoordinator.swift */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -348,14 +347,13 @@
 		BF50056D217B87C900D35B69 /* CreateEventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventInteractor.swift; sourceTree = "<group>"; };
 		BF500573217B87FB00D35B69 /* CreateEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEvent.storyboard; sourceTree = "<group>"; };
 		BF500575217B9B0000D35B69 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
-		BF500577217B9B1600D35B69 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		BF500589217CF66900D35B69 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		BF500589217CF66900D35B69 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		BF500591217CF69600D35B69 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		BF50059D217D706600D35B69 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		BF50059F217EC6B600D35B69 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BF5005A1217EC74200D35B69 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		BF5005A3217ED6E800D35B69 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		BF5005A5217ED77800D35B69 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BF5005A5217ED77800D35B69 /* AppNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationCoordinator.swift; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -574,8 +572,8 @@
 			isa = PBXGroup;
 			children = (
 				BF500591217CF69600D35B69 /* App.storyboard */,
-				BF5005A5217ED77800D35B69 /* AppCoordinator.swift */,
-				BF500589217CF66900D35B69 /* AppViewController.swift */,
+				BF500589217CF66900D35B69 /* AppNavigationController.swift */,
+				BF5005A5217ED77800D35B69 /* AppNavigationCoordinator.swift */,
 			);
 			path = "App Navigation";
 			sourceTree = "<group>";
@@ -806,7 +804,6 @@
 			children = (
 				BF500575217B9B0000D35B69 /* Onboarding.storyboard */,
 				BF50059D217D706600D35B69 /* OnboardingCoordinator.swift */,
-				BF500577217B9B1600D35B69 /* OnboardingViewController.swift */,
 				BF50054F217B835700D35B69 /* Walkthrough */,
 				BF70B5DC21715BA800771E5D /* Welcome */,
 				BF50055A217B847500D35B69 /* Congratulations */,
@@ -1548,7 +1545,7 @@
 				BFD0298121509C6A002FB9F5 /* CreditCardPrefixContainable.swift in Sources */,
 				BFCDA5FA21725FF700DB31FC /* CreatePasswordRouter.swift in Sources */,
 				BF5004D721741E6900D35B69 /* AddLocationViewController.swift in Sources */,
-				BF50058E217CF66900D35B69 /* AppViewController.swift in Sources */,
+				BF50058E217CF66900D35B69 /* AppNavigationController.swift in Sources */,
 				BFF9DF172161A75300B80E9D /* CalendarLayoutCalculator.swift in Sources */,
 				BF5004E421741E9100D35B69 /* SelectTutorProtocols.swift in Sources */,
 				BFD0296021509BB2002FB9F5 /* UICalendarViewCell.swift in Sources */,
@@ -1568,7 +1565,7 @@
 				BFCDA60D2172905800DB31FC /* UINavigationBar+Additions.swift in Sources */,
 				BFF14D962160495000733323 /* DayHelper.swift in Sources */,
 				BF5004AC2174122200D35B69 /* CalendarPresenter.swift in Sources */,
-				BF5005A6217ED77800D35B69 /* AppCoordinator.swift in Sources */,
+				BF5005A6217ED77800D35B69 /* AppNavigationCoordinator.swift in Sources */,
 				BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */,
 				BF50046B2172F09700D35B69 /* ProfileOverviewRouter.swift in Sources */,
 				BF50049B2173EB9B00D35B69 /* ProfileSupportRouter.swift in Sources */,
@@ -1576,7 +1573,6 @@
 				BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */,
 				BF5004822173AC2200D35B69 /* ProfileAccountInteractor.swift in Sources */,
 				BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeader.swift in Sources */,
-				BF500578217B9B1600D35B69 /* OnboardingViewController.swift in Sources */,
 				BF50049A2173EB9B00D35B69 /* ProfileSupportPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
