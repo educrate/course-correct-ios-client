@@ -1,5 +1,5 @@
 //
-//  ModuleWireframeable.swift
+//  Wireframe.swift
 //  Client
 //
 //  Created by Christian Ampe on 10/9/18.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol ModuleWireframeable {
+protocol Wireframe {
     static func createModule() -> UIViewController
 }

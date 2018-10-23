@@ -118,6 +118,9 @@
 		BF500599217D3BB100D35B69 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500594217D3BB100D35B69 /* OnboardingRouter.swift */; };
 		BF50059B217D3BB100D35B69 /* OnboardingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500596217D3BB100D35B69 /* OnboardingProtocols.swift */; };
 		BF50059C217D3BB100D35B69 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500597217D3BB100D35B69 /* OnboardingInteractor.swift */; };
+		BF50059E217D706600D35B69 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50059D217D706600D35B69 /* OnboardingCoordinator.swift */; };
+		BF5005A0217EC6B600D35B69 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50059F217EC6B600D35B69 /* Coordinator.swift */; };
+		BF5005A2217EC74200D35B69 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005A1217EC74200D35B69 /* SignUpCoordinator.swift */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -203,7 +206,7 @@
 		BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */; };
 		BFD82AB9216DA53200A14868 /* UIDropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AB3216DA53200A14868 /* UIDropdownViewController.swift */; };
 		BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */; };
-		BFD82AC5216DB88500A14868 /* ModuleWireframeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC4216DB88500A14868 /* ModuleWireframeable.swift */; };
+		BFD82AC5216DB88500A14868 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC4216DB88500A14868 /* Wireframe.swift */; };
 		BFD82ACB216E77B600A14868 /* SelectCollegePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC6216E77B600A14868 /* SelectCollegePresenter.swift */; };
 		BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC7216E77B600A14868 /* SelectCollegeRouter.swift */; };
 		BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC8216E77B600A14868 /* SelectCollegeViewController.swift */; };
@@ -362,6 +365,9 @@
 		BF500594217D3BB100D35B69 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		BF500596217D3BB100D35B69 /* OnboardingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProtocols.swift; sourceTree = "<group>"; };
 		BF500597217D3BB100D35B69 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
+		BF50059D217D706600D35B69 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		BF50059F217EC6B600D35B69 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BF5005A1217EC74200D35B69 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -453,7 +459,7 @@
 		BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownCell.swift; sourceTree = "<group>"; };
 		BFD82AB3216DA53200A14868 /* UIDropdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownViewController.swift; sourceTree = "<group>"; };
 		BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
-		BFD82AC4216DB88500A14868 /* ModuleWireframeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleWireframeable.swift; sourceTree = "<group>"; };
+		BFD82AC4216DB88500A14868 /* Wireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
 		BFD82AC6216E77B600A14868 /* SelectCollegePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegePresenter.swift; sourceTree = "<group>"; };
 		BFD82AC7216E77B600A14868 /* SelectCollegeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeRouter.swift; sourceTree = "<group>"; };
 		BFD82AC8216E77B600A14868 /* SelectCollegeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeViewController.swift; sourceTree = "<group>"; };
@@ -684,6 +690,7 @@
 		BF5005002174547700D35B69 /* Sign Up */ = {
 			isa = PBXGroup;
 			children = (
+				BF5005A1217EC74200D35B69 /* SignUpCoordinator.swift */,
 				BFD82AA0216DA43D00A14868 /* Select College */,
 				BFD82AE7217066CB00A14868 /* Enter Student Identifier */,
 				BF70B5CF217074AC00771E5D /* Enter Access Code */,
@@ -812,6 +819,7 @@
 			isa = PBXGroup;
 			children = (
 				BF500575217B9B0000D35B69 /* Onboarding.storyboard */,
+				BF50059D217D706600D35B69 /* OnboardingCoordinator.swift */,
 				BF500577217B9B1600D35B69 /* OnboardingNavigationController.swift */,
 				BF500593217D3BB100D35B69 /* OnboardingPresenter.swift */,
 				BF500594217D3BB100D35B69 /* OnboardingRouter.swift */,
@@ -1178,7 +1186,8 @@
 		BFD82AC3216DB86200A14868 /* Viper */ = {
 			isa = PBXGroup;
 			children = (
-				BFD82AC4216DB88500A14868 /* ModuleWireframeable.swift */,
+				BFD82AC4216DB88500A14868 /* Wireframe.swift */,
+				BF50059F217EC6B600D35B69 /* Coordinator.swift */,
 			);
 			path = Viper;
 			sourceTree = "<group>";
@@ -1438,6 +1447,7 @@
 				BFD82A8B216D989E00A14868 /* NetworkingService.swift in Sources */,
 				BF5004E221741E9100D35B69 /* SelectTutorRouter.swift in Sources */,
 				BF500598217D3BB100D35B69 /* OnboardingPresenter.swift in Sources */,
+				BF5005A0217EC6B600D35B69 /* Coordinator.swift in Sources */,
 				BFD82A92216D989E00A14868 /* NetworkingClientResponse.swift in Sources */,
 				BFD82A98216D989E00A14868 /* NetworkingResult.swift in Sources */,
 				BF50048F2173EB7800D35B69 /* ProfilePaymentRouter.swift in Sources */,
@@ -1473,7 +1483,7 @@
 				BFD0299B21509CD5002FB9F5 /* UIFieldViewController.swift in Sources */,
 				BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */,
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
-				BFD82AC5216DB88500A14868 /* ModuleWireframeable.swift in Sources */,
+				BFD82AC5216DB88500A14868 /* Wireframe.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */,
 				BF50050B217454C600D35B69 /* SignInInteractor.swift in Sources */,
 				BFD82A89216D989E00A14868 /* NetworkingClientHTTPMethods.swift in Sources */,
@@ -1513,6 +1523,7 @@
 				BFD0298221509C6A002FB9F5 /* CreditCardImageExtractor.swift in Sources */,
 				BF70B5D9217074C600771E5D /* EnterAccessCodeInteractor.swift in Sources */,
 				BFD82A88216D989E00A14868 /* NetworkingConfiguration.swift in Sources */,
+				BF5005A2217EC74200D35B69 /* SignUpCoordinator.swift in Sources */,
 				BFD82AEE2170670400A14868 /* EnterStudentIdentifierRouter.swift in Sources */,
 				BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */,
 				BF50048E2173EB7800D35B69 /* ProfilePaymentPresenter.swift in Sources */,
@@ -1530,6 +1541,7 @@
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
 				BFD82A87216D989E00A14868 /* NetworkingClientError.swift in Sources */,
 				BF5004BA2174127100D35B69 /* EventRouter.swift in Sources */,
+				BF50059E217D706600D35B69 /* OnboardingCoordinator.swift in Sources */,
 				BFD82ACF216E77B600A14868 /* SelectCollegeInteractor.swift in Sources */,
 				BF5004D821741E6900D35B69 /* AddLocationProtocols.swift in Sources */,
 				BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */,

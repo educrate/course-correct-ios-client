@@ -8,10 +8,17 @@
 
 import UIKit
 
+protocol EnterStudentIdentifierViewControllerDelegate: class {
+    func enterStudentIdentifierViewController(_ enterStudentIdentifierViewController: EnterStudentIdentifierViewController, didEnter studentIdentifier: String)
+}
+
 class EnterStudentIdentifierViewController: UIViewController, EnterStudentIdentifierViewProtocol {
     
     // MARK: Viper
 	var presenter: EnterStudentIdentifierPresenterProtocol?
+    
+    // MARK: Coordinator
+    weak var delegate: EnterStudentIdentifierViewControllerDelegate?
     
     // MARK: Views
     @IBOutlet weak var field: UIFieldViewController!

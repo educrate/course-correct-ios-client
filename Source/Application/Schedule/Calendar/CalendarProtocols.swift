@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol CalendarWireframeProtocol: class, ModuleWireframeable {
+protocol CalendarWireframeProtocol: class, Wireframe {
     func presentEvent()
     func presentCreateEvent()
     func presentProfile()

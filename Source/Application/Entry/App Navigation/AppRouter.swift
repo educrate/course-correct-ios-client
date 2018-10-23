@@ -33,7 +33,7 @@ extension AppRouter {
 
 extension AppRouter {
     func presentOnboarding() {
-        navigationController?.setViewControllers([WelcomeRouter.createModule()], animated: true)
+        navigationController?.setViewControllers([OnboardingRouter.createModule()], animated: true)
     }
     
     func presentSchedule() {

@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol SignInWireframeProtocol: class, ModuleWireframeable {
+protocol SignInWireframeProtocol: class, Wireframe {
     func presentCalendar()
 }
 

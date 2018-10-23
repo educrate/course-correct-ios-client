@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol ManageCardWireframeProtocol: class, ModuleWireframeable {}
+protocol ManageCardWireframeProtocol: class, Wireframe {}
 
 
 // MARK: - Presenter

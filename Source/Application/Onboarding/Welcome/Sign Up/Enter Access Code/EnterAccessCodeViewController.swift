@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EnterAccessCodeViewControllerDelegate: class {
+    func enterAccessCodeViewController(_ enterAccessCodeViewController: EnterAccessCodeViewController, didEnter accessCode: String)
+}
+
 class EnterAccessCodeViewController: UIViewController, EnterAccessCodeViewProtocol {
 	
     // MARK: Viper

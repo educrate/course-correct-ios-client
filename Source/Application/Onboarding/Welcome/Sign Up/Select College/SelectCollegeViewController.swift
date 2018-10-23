@@ -8,10 +8,17 @@
 
 import UIKit
 
+protocol SelectCollegeViewControllerDelegate: class {
+    func selectCollegeViewController(_ selectCollegeViewController: SelectCollegeViewController, didSelect college: String)
+}
+
 class SelectCollegeViewController: UIViewController {
     
     // MARK: Viper
     var presenter: SelectCollegePresenterProtocol?
+    
+    // MARK: Coordinator
+    weak var delegate: SelectCollegeViewControllerDelegate?
     
     // MARK: Views
     @IBOutlet private weak var collegeSelector: UIDropdownViewController!
