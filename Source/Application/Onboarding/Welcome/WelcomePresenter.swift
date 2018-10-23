@@ -9,7 +9,6 @@
 import UIKit
 
 class WelcomePresenter: WelcomePresenterProtocol {
-    
     weak private var view: WelcomeViewProtocol?
     var interactor: WelcomeInteractorProtocol?
     private let router: WelcomeWireframeProtocol

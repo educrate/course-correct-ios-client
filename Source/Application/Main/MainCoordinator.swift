@@ -8,11 +8,13 @@
 
 import Foundation
 
-protocol MainCoordinatorDelegate {
+protocol MainCoordinatorDelegate: class {
     func mainCoordinator(_ mainCoordinator: MainCoordinator, didSignOut user: String)
 }
 
-class MainCoordinator {}
+class MainCoordinator {
+    weak var delegate: MainCoordinatorDelegate?
+}
 
 extension MainCoordinator: Coordinator {
     func start() {
