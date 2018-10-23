@@ -130,6 +130,7 @@
 		BF5005D1217F6B8F00D35B69 /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005CC217F6B8F00D35B69 /* MainProtocols.swift */; };
 		BF5005D2217F6B8F00D35B69 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005CD217F6B8F00D35B69 /* MainInteractor.swift */; };
 		BF5005D4217F6C3500D35B69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5005D3217F6C3500D35B69 /* Main.storyboard */; };
+		BF5005D6217FB09800D35B69 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5005D5217FB09800D35B69 /* SignUp.storyboard */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -386,6 +387,7 @@
 		BF5005CC217F6B8F00D35B69 /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
 		BF5005CD217F6B8F00D35B69 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		BF5005D3217F6C3500D35B69 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BF5005D5217FB09800D35B69 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -714,6 +716,7 @@
 		BF5005002174547700D35B69 /* Sign Up Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				BF5005D5217FB09800D35B69 /* SignUp.storyboard */,
 				BF5005B7217EEF2000D35B69 /* SignUpViewController.swift */,
 				BF5005B5217EEF2000D35B69 /* SignUpPresenter.swift */,
 				BF5005B6217EEF2000D35B69 /* SignUpRouter.swift */,
@@ -1410,6 +1413,7 @@
 				BF50050D217454D700D35B69 /* SignIn.storyboard in Resources */,
 				BF5004862173AD9E00D35B69 /* UIInlinePicker.storyboard in Resources */,
 				BF5005D4217F6C3500D35B69 /* Main.storyboard in Resources */,
+				BF5005D6217FB09800D35B69 /* SignUp.storyboard in Resources */,
 				BF5004DB21741E7700D35B69 /* AddLocation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

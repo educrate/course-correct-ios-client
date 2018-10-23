@@ -13,6 +13,11 @@ protocol SignUpPresenterDelegate: class {
 }
 
 class SignUpPresenter: SignUpPresenterProtocol {
+    
+    // MARK: Coordinator
+    weak var delegate: SignUpPresenterDelegate?
+    
+    // MARK: Viper
     weak private var view: SignUpViewProtocol?
     var interactor: SignUpInteractorProtocol?
     private let router: SignUpWireframeProtocol
@@ -28,24 +33,24 @@ class SignUpPresenter: SignUpPresenterProtocol {
 
 extension SignUpPresenter {
     func start() {
-        
+        router.showSelectCollege()
     }
 }
 
 extension SignUpPresenter {
     func selectCollegeViewController(_ selectCollegeViewController: SelectCollegeViewController, didSelect college: String) {
-        
+        router.showEnterStudentIdentifier()
     }
     
     func enterStudentIdentifierViewController(_ enterStudentIdentifierViewController: EnterStudentIdentifierViewController, didEnter studentIdentifier: String) {
-        
+        router.showEnterAccessCode()
     }
     
     func enterAccessCodeViewController(_ enterAccessCodeViewController: EnterAccessCodeViewController, didEnter accessCode: String) {
-        
+        router.showCreatePassword()
     }
     
     func createPasswordViewController(_ createPasswordViewController: CreatePasswordViewController, didCreate password: String) {
-        
+        delegate?.signUpPresenter(self, didSignUp: password)
     }
 }

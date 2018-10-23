@@ -13,16 +13,30 @@ class AppRouter: AppWireframeProtocol {
 }
 
 extension AppRouter {
-    static func createModule() -> UIViewController {
-        let view = AppViewController(nibName: nil, bundle: nil)
+    func presentOnboardingModule() {
+        viewController?.present(OnboardingRouter.createModule(), animated: true)
+    }
+    
+    func presentMainModule() {
+        viewController?.present(MainRouter.createModule(), animated: true)
+    }
+}
+
+extension AppRouter {
+    static func createModule(_ view: AppViewProtocol) -> AppPresenterProtocol? {
         let interactor = AppInteractor()
         let router = AppRouter()
         let presenter = AppPresenter(interface: view, interactor: interactor, router: router)
         
+        guard let viewController = view as? UIViewController else {
+            assertionFailure("view must be of type UIViewController")
+            return nil
+        }
+        
         view.presenter = presenter
         interactor.presenter = presenter
-        router.viewController = view
+        router.viewController = viewController
         
-        return view
+        return presenter
     }
 }

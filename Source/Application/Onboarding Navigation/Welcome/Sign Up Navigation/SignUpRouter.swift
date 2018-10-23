@@ -14,7 +14,8 @@ class SignUpRouter: SignUpWireframeProtocol {
 
 extension SignUpRouter {
     static func createModule() -> UIViewController {
-        let view = SignUpViewController(nibName: nil, bundle: nil)
+        let storyboard = UIStoryboard(storyboard: .signUp)
+        let view: SignUpViewController = storyboard.instantiateViewController()
         let interactor = SignUpInteractor()
         let router = SignUpRouter()
         let presenter = SignUpPresenter(interface: view, interactor: interactor, router: router)
@@ -24,5 +25,23 @@ extension SignUpRouter {
         router.viewController = view
         
         return view
+    }
+}
+
+extension SignUpRouter {
+    func showSelectCollege() {
+        viewController?.show(SelectCollegeRouter.createModule(), sender: nil)
+    }
+    
+    func showEnterStudentIdentifier() {
+        viewController?.show(EnterStudentIdentifierRouter.createModule(), sender: nil)
+    }
+    
+    func showEnterAccessCode() {
+        viewController?.show(EnterAccessCodeRouter.createModule(), sender: nil)
+    }
+    
+    func showCreatePassword() {
+        viewController?.show(CreatePasswordRouter.createModule(), sender: nil)
     }
 }

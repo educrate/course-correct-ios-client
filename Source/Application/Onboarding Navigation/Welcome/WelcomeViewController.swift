@@ -23,7 +23,7 @@ class WelcomeViewController: UIViewController, WelcomeViewProtocol {
 
 private extension WelcomeViewController {
     @IBAction func createAccountPressed(_ sender: UIButton, forEvent event: UIEvent) {
-        presenter?.showSelectCollege()
+        presenter?.showSignUp()
     }
     
     @IBAction func signInPressed(_ sender: UIButton, forEvent event: UIEvent) {

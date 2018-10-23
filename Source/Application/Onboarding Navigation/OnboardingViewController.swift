@@ -8,6 +8,15 @@
 
 import UIKit
 
-class OnboardingViewController: UIViewController, OnboardingViewProtocol {
+class OnboardingViewController: UINavigationController, OnboardingViewProtocol {
 	var presenter: OnboardingPresenterProtocol?
+}
+
+extension OnboardingViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        DispatchQueue.main.async {
+            self.presenter?.start()
+        }
+    }
 }

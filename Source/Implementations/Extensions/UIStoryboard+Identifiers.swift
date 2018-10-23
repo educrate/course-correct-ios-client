@@ -23,6 +23,7 @@ extension UIStoryboard {
         case congratulations = "Congratulations"
         
         // MARK: Sign Up
+        case signUp = "SignUp"
         case selectCollege = "SelectCollege"
         case enterStudentIdentifier = "EnterStudentIdentifier"
         case enterAccessCode = "EnterAccessCode"

@@ -9,5 +9,14 @@
 import UIKit
 
 class AppViewController: UINavigationController, AppViewProtocol {
-	var presenter: AppPresenterProtocol?
+    lazy var presenter: AppPresenterProtocol? = AppRouter.createModule(self)
+}
+
+extension AppViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        DispatchQueue.main.async {
+            self.presenter?.start()
+        }
+    }
 }

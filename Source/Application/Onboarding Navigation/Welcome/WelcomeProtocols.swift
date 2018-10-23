@@ -12,7 +12,7 @@ import Foundation
 // MARK: - Wireframe
 
 protocol WelcomeWireframeProtocol: class, Wireframe {
-    func presentSelectCollege()
+    func presentSignUpModule()
     func presentSignIn()
 }
 
@@ -20,7 +20,7 @@ protocol WelcomeWireframeProtocol: class, Wireframe {
 // MARK: - Presenter
 
 protocol WelcomePresenterProtocol: class {
-    func showSelectCollege()
+    func showSignUp()
     func showSignIn()
 }
 

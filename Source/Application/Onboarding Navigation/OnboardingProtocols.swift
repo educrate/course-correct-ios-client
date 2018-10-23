@@ -11,7 +11,11 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol OnboardingWireframeProtocol: class, Wireframe {}
+protocol OnboardingWireframeProtocol: class, Wireframe {
+    func presentWalkthrough()
+    func presentWelcome()
+    func presentCongratulations()
+}
 
 
 // MARK: - Presenter

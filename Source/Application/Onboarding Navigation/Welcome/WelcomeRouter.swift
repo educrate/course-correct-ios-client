@@ -29,15 +29,11 @@ extension WelcomeRouter {
 }
 
 extension WelcomeRouter {
-    func presentSelectCollege() {
-        if let view = viewController, let navigationController = view.navigationController {
-            navigationController.pushViewController(SelectCollegeRouter.createModule(), animated: true)
-        }
+    func presentSignUpModule() {
+        viewController?.present(SignUpRouter.createModule(), animated: true)
     }
     
     func presentSignIn() {
-        if let view = viewController, let navigationController = view.navigationController {
-            navigationController.pushViewController(SignInRouter.createModule(), animated: true)
-        }
+        viewController?.show(SignInRouter.createModule(), sender: nil)
     }
 }

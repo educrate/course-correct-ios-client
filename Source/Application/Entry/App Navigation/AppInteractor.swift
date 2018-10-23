@@ -11,3 +11,9 @@ import UIKit
 class AppInteractor: AppInteractorProtocol {
     weak var presenter: AppPresenterProtocol?
 }
+
+extension AppInteractor {
+    func determineLaunchState() {
+        presenter?.launchStateDetermined("onboarding")
+    }
+}

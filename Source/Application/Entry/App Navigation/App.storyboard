@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--App Navigation Controller-->
+        <!--App View Controller-->
         <scene sceneID="wMB-t8-Lxp">
             <objects>
-                <navigationController storyboardIdentifier="AppNavigationController" id="P3h-oX-XTA" customClass="AppNavigationController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AppViewController" id="P3h-oX-XTA" customClass="AppViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nOc-0G-52x">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

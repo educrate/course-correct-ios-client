@@ -8,6 +8,15 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController, SignUpViewProtocol {
+class SignUpViewController: UINavigationController, SignUpViewProtocol {
 	var presenter: SignUpPresenterProtocol?
+}
+
+extension SignUpViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        DispatchQueue.main.async {
+            self.presenter?.start()
+        }
+    }
 }

@@ -23,8 +23,8 @@ class WelcomePresenter: WelcomePresenterProtocol {
 }
 
 extension WelcomePresenter {
-    func showSelectCollege() {
-        router.presentSelectCollege()
+    func showSignUp() {
+        router.presentSignUpModule()
     }
     
     func showSignIn() {
