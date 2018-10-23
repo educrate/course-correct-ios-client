@@ -10,10 +10,11 @@ import UIKit
 
 class MainRouter: MainWireframeProtocol {
     weak var viewController: UIViewController?
+    private weak var delegate: MainRouterDelegate?
 }
 
 extension MainRouter {
-    static func createModule() -> UIViewController {
+    static func createModule(_ delegate: MainRouterDelegate?) -> UIViewController {
         let view = MainViewController(nibName: nil, bundle: nil)
         let interactor = MainInteractor()
         let router = MainRouter()
@@ -22,6 +23,7 @@ extension MainRouter {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
+        router.delegate = delegate
         
         return view
     }

@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol WelcomeWireframeProtocol: class {
+protocol WelcomeWireframeProtocol: SignUpRouterDelegate, SignInRouterDelegate {
     func presentSignUpModule()
     func presentSignIn()
 }

@@ -10,10 +10,11 @@ import UIKit
 
 class OnboardingRouter: OnboardingWireframeProtocol {
     weak var viewController: UIViewController?
+    private weak var delegate: OnboardingRouterDelegate?
 }
 
 extension OnboardingRouter {
-    static func createModule() -> UIViewController {
+    static func createModule(_ delegate: OnboardingRouterDelegate) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .onboarding)
         let view: OnboardingViewController = storyboard.instantiateViewController()
         let interactor = OnboardingInteractor()
@@ -23,6 +24,7 @@ extension OnboardingRouter {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
+        router.delegate = delegate
         
         return view
     }
@@ -30,15 +32,15 @@ extension OnboardingRouter {
 
 extension OnboardingRouter {
     func presentWalkthrough() {
-        
+        viewController?.present(WalkthroughRouter.createModule(self), animated: true)
     }
     
     func presentWelcome() {
-        
+        viewController?.present(WelcomeRouter.createModule(self), animated: true)
     }
     
     func presentCongratulations() {
-        
+        viewController?.present(CongratulationsRouter.createModule(self), animated: true)
     }
 }
 

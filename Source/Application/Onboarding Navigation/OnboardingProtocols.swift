@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol OnboardingWireframeProtocol: WalkthroughRouterDelegate, WelcomeRouterDelegate, SignUpRouterDelegate, SignInRouterDelegate, CongratulationsRouterDelegate {
+protocol OnboardingWireframeProtocol: WalkthroughRouterDelegate, WelcomeRouterDelegate, CongratulationsRouterDelegate {
     func presentWalkthrough()
     func presentWelcome()
     func presentCongratulations()

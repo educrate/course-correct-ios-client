@@ -26,7 +26,7 @@ class OnboardingPresenter: OnboardingPresenterProtocol {
 
 extension OnboardingPresenter {
     func start() {
-        
+        router.presentWelcome()
     }
 }
 

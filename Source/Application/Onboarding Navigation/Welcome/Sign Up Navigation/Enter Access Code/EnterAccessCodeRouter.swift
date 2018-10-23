@@ -10,10 +10,11 @@ import UIKit
 
 class EnterAccessCodeRouter: EnterAccessCodeWireframeProtocol {
     weak var viewController: UIViewController?
+    private weak var delegate: EnterAccessCodeRouterDelegate?
 }
 
 extension EnterAccessCodeRouter {
-    static func createModule() -> UIViewController {
+    static func createModule(_ delegate: EnterAccessCodeRouterDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .enterAccessCode)
         let view: EnterAccessCodeViewController = storyboard.instantiateViewController()
         let interactor = EnterAccessCodeInteractor()
@@ -23,13 +24,8 @@ extension EnterAccessCodeRouter {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
+        router.delegate = delegate
         
         return view
-    }
-}
-
-extension EnterAccessCodeRouter {
-    func presentCreatePassword() {
-        viewController?.show(CreatePasswordRouter.createModule(), sender: nil)
     }
 }

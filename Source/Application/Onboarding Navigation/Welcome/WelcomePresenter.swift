@@ -26,11 +26,11 @@ class WelcomePresenter: WelcomePresenterProtocol {
 
 extension WelcomePresenter {
     func showSignUp() {
-        
+        router.presentSignUpModule()
     }
     
     func showSignIn() {
-        
+        router.presentSignIn()
     }
 }
 

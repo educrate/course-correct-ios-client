@@ -26,13 +26,13 @@ class AppPresenter: AppPresenterProtocol {
 
 extension AppPresenter {
     func start() {
-        
+        interactor?.determineLaunchState()
     }
 }
 
 extension AppPresenter {
     func launchStateDetermined(_ state: String) {
-        
+        router.presentOnboardingModule()
     }
 }
 

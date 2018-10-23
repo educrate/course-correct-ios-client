@@ -10,10 +10,11 @@ import UIKit
 
 class WelcomeRouter: WelcomeWireframeProtocol {
     weak var viewController: UIViewController?
+    private weak var delegate: WelcomeRouterDelegate?
 }
 
 extension WelcomeRouter {
-    static func createModule() -> UIViewController {
+    static func createModule(_ delegate: WelcomeRouterDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .welcome)
         let view: WelcomeViewController = storyboard.instantiateViewController()
         let interactor = WelcomeInteractor()
@@ -23,6 +24,7 @@ extension WelcomeRouter {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
+        router.delegate = delegate
         
         return view
     }
@@ -30,10 +32,20 @@ extension WelcomeRouter {
 
 extension WelcomeRouter {
     func presentSignUpModule() {
-        
+        viewController?.present(SignUpRouter.createModule(self), animated: true)
     }
     
     func presentSignIn() {
+        
+    }
+}
+
+extension WelcomeRouter {
+    func signUpRouter(_ signUpRouter: SignUpRouter, didSignUp user: String) {
+        
+    }
+    
+    func signInRouter(_ signInRouter: SignInRouter, didSignIn user: String) {
         
     }
 }

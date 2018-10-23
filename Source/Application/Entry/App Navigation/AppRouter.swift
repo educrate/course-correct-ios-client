@@ -14,11 +14,11 @@ class AppRouter: AppWireframeProtocol {
 
 extension AppRouter {
     func presentOnboardingModule() {
-        
+        viewController?.present(OnboardingRouter.createModule(self), animated: true)
     }
     
     func presentMainModule() {
-        
+        viewController?.present(MainRouter.createModule(self), animated: true)
     }
 }
 
