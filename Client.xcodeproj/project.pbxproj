@@ -610,14 +610,14 @@
 			path = "Create Event";
 			sourceTree = "<group>";
 		};
-		BF5004A5217411C300D35B69 /* Schedule */ = {
+		BF5004A5217411C300D35B69 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				BF5004A62174120B00D35B69 /* Calendar */,
 				BF5004A4217411A800D35B69 /* Create Event */,
 				BF5004632172EF9100D35B69 /* Profile */,
 			);
-			path = Schedule;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		BF5004A62174120B00D35B69 /* Calendar */ = {
@@ -1019,7 +1019,7 @@
 			children = (
 				BF4E718D216D4C1A00100FE1 /* Entry */,
 				BF579339216D4485008DBB46 /* Onboarding */,
-				BF5004A5217411C300D35B69 /* Schedule */,
+				BF5004A5217411C300D35B69 /* Main */,
 			);
 			path = Application;
 			sourceTree = "<group>";

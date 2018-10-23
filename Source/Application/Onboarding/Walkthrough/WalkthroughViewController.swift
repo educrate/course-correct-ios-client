@@ -8,6 +8,15 @@
 
 import UIKit
 
+protocol WalkthroughViewControllerDelegate: class {
+    func walkthroughViewController(_ walkthroughViewController: WalkthroughViewController, didCompleteWith state: String)
+}
+
 class WalkthroughViewController: UIViewController, WalkthroughViewProtocol {
+    
+    // MARK: Viper
 	var presenter: WalkthroughPresenterProtocol?
+    
+    // MARK Coordinator
+    private weak var delegate: WalkthroughViewControllerDelegate?
 }
