@@ -24,10 +24,12 @@ class SignUpPresenter: SignUpPresenterProtocol {
 
     init(interface: SignUpViewProtocol,
          interactor: SignUpInteractorProtocol?,
-         router: SignUpWireframeProtocol) {
+         router: SignUpWireframeProtocol,
+         delegate: SignUpPresenterDelegate?) {
         self.view = interface
         self.interactor = interactor
         self.router = router
+        self.delegate = delegate
     }
 }
 

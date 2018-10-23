@@ -16,7 +16,4 @@ class WalkthroughViewController: UIViewController, WalkthroughViewProtocol {
     
     // MARK: Viper
 	var presenter: WalkthroughPresenterProtocol?
-    
-    // MARK Coordinator
-    private weak var delegate: WalkthroughViewControllerDelegate?
 }

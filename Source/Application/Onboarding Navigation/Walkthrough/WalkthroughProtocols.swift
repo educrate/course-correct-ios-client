@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol WalkthroughWireframeProtocol: class, Wireframe {}
+protocol WalkthroughWireframeProtocol: class {}
 
 
 // MARK: - Presenter

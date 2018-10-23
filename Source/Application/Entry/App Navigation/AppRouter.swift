@@ -13,8 +13,8 @@ class AppRouter: AppWireframeProtocol {
 }
 
 extension AppRouter {
-    func presentOnboardingModule() {
-        viewController?.present(OnboardingRouter.createModule(), animated: true)
+    func presentOnboardingModule(_ delegate: OnboardingPresenterDelegate?) {
+        viewController?.present(OnboardingRouter.createModule(delegate), animated: true)
     }
     
     func presentMainModule() {

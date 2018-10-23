@@ -16,9 +16,6 @@ class WelcomeViewController: UIViewController, WelcomeViewProtocol {
     
     // MARK: Viper
 	var presenter: WelcomePresenterProtocol?
-    
-    // MARK: Coordinator
-    private weak var delegate: WelcomeViewControllerDelegate?
 }
 
 private extension WelcomeViewController {

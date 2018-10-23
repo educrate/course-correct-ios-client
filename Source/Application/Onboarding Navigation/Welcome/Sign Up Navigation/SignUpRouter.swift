@@ -13,12 +13,12 @@ class SignUpRouter: SignUpWireframeProtocol {
 }
 
 extension SignUpRouter {
-    static func createModule() -> UIViewController {
+    static func createModule(_ delegate: SignUpPresenterDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .signUp)
         let view: SignUpViewController = storyboard.instantiateViewController()
         let interactor = SignUpInteractor()
         let router = SignUpRouter()
-        let presenter = SignUpPresenter(interface: view, interactor: interactor, router: router)
+        let presenter = SignUpPresenter(interface: view, interactor: interactor, router: router, delegate: delegate)
         
         view.presenter = presenter
         interactor.presenter = presenter

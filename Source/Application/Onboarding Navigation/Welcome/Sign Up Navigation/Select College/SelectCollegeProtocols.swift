@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol SelectCollegeWireframeProtocol: class, Wireframe {
+protocol SelectCollegeWireframeProtocol: class {
     func presentEnterStudentIdentifier()
 }
 

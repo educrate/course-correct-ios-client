@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol CreatePasswordWireframeProtocol: class, Wireframe {
+protocol CreatePasswordWireframeProtocol: class {
     func presentCalendar()
 }
 

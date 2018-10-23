@@ -13,12 +13,12 @@ class OnboardingRouter: OnboardingWireframeProtocol {
 }
 
 extension OnboardingRouter {
-    static func createModule() -> UIViewController {
+    static func createModule(_ delegate: OnboardingPresenterDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .onboarding)
         let view: OnboardingViewController = storyboard.instantiateViewController()
         let interactor = OnboardingInteractor()
         let router = OnboardingRouter()
-        let presenter = OnboardingPresenter(interface: view, interactor: interactor, router: router)
+        let presenter = OnboardingPresenter(interface: view, interactor: interactor, router: router, delegate: delegate)
         
         view.presenter = presenter
         interactor.presenter = presenter
@@ -29,15 +29,15 @@ extension OnboardingRouter {
 }
 
 extension OnboardingRouter {
-    func presentWalkthrough() {
-        viewController?.present(WalkthroughRouter.createModule(), animated: true)
+    func presentWalkthrough(_ delegate: WalkthroughViewControllerDelegate?) {
+        viewController?.present(WalkthroughRouter.createModule(delegate), animated: true)
     }
     
-    func presentWelcome() {
-        viewController?.present(WelcomeRouter.createModule(), animated: true)
+    func presentWelcome(_ delegate: WelcomeViewControllerDelegate?) {
+        viewController?.present(WelcomeRouter.createModule(delegate), animated: true)
     }
     
-    func presentCongratulations() {
-        viewController?.present(CongratulationsRouter.createModule(), animated: true)
+    func presentCongratulations(_ delegate: CongratulationsViewControllerDelegate?) {
+        viewController?.present(CongratulationsRouter.createModule(delegate), animated: true)
     }
 }

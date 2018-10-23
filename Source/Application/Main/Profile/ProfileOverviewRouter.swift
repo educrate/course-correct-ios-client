@@ -41,7 +41,7 @@ extension ProfileOverviewRouter {
         viewController?.navigationController?.pushViewController(ProfileSupportRouter.createModule(), animated: true)
     }
     
-    func presentWelcome() {
-        viewController?.navigationController?.pushViewController(WelcomeRouter.createModule(), animated: true)
+    func presentWelcome(_ delegate: WelcomeViewControllerDelegate?) {
+        viewController?.navigationController?.pushViewController(WelcomeRouter.createModule(delegate), animated: true)
     }
 }

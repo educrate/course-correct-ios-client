@@ -11,15 +11,15 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol WelcomeWireframeProtocol: class, Wireframe {
-    func presentSignUpModule()
+protocol WelcomeWireframeProtocol: class {
+    func presentSignUpModule(_ delegate: SignUpPresenterDelegate?)
     func presentSignIn()
 }
 
 
 // MARK: - Presenter
 
-protocol WelcomePresenterProtocol: class {
+protocol WelcomePresenterProtocol: SignUpPresenterDelegate {
     func showSignUp()
     func showSignIn()
 }

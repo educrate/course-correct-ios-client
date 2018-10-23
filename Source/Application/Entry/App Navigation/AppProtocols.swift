@@ -12,7 +12,7 @@ import Foundation
 // MARK: - Wireframe
 
 protocol AppWireframeProtocol: class {
-    func presentOnboardingModule()
+    func presentOnboardingModule(_ delegate: OnboardingPresenterDelegate?)
     func presentMainModule()
 }
 

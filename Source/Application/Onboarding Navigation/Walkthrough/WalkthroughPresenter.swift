@@ -9,15 +9,22 @@
 import UIKit
 
 class WalkthroughPresenter: WalkthroughPresenterProtocol {
+    
+    // MARK: Viper
     weak private var view: WalkthroughViewProtocol?
     var interactor: WalkthroughInteractorProtocol?
     private let router: WalkthroughWireframeProtocol
+    
+    // MARK: Coordinator
+    private weak var delegate: WalkthroughViewControllerDelegate?
 
     init(interface: WalkthroughViewProtocol,
          interactor: WalkthroughInteractorProtocol?,
-         router: WalkthroughWireframeProtocol) {
+         router: WalkthroughWireframeProtocol,
+         delegate: WalkthroughViewControllerDelegate?) {
         self.view = interface
         self.interactor = interactor
         self.router = router
+        self.delegate = delegate
     }
 }

@@ -11,10 +11,10 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol OnboardingWireframeProtocol: class, Wireframe {
-    func presentWalkthrough()
-    func presentWelcome()
-    func presentCongratulations()
+protocol OnboardingWireframeProtocol: class {
+    func presentWalkthrough(_ delegate: WalkthroughViewControllerDelegate?)
+    func presentWelcome(_ delegate: WelcomeViewControllerDelegate?)
+    func presentCongratulations(_ delegate: CongratulationsViewControllerDelegate?)
 }
 
 

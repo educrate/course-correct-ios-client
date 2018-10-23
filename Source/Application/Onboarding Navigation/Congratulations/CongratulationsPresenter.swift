@@ -9,15 +9,22 @@
 import UIKit
 
 class CongratulationsPresenter: CongratulationsPresenterProtocol {
+    
+    // MARK: Viper
     weak private var view: CongratulationsViewProtocol?
     var interactor: CongratulationsInteractorProtocol?
     private let router: CongratulationsWireframeProtocol
+    
+    // MARK Coordinator
+    private weak var coordinator: CongratulationsViewControllerDelegate?
 
     init(interface: CongratulationsViewProtocol,
          interactor: CongratulationsInteractorProtocol?,
-         router: CongratulationsWireframeProtocol) {
+         router: CongratulationsWireframeProtocol,
+         coordinator: CongratulationsViewControllerDelegate?) {
         self.view = interface
         self.interactor = interactor
         self.router = router
+        self.coordinator = coordinator
     }
 }

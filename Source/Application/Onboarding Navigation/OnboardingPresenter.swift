@@ -13,22 +13,29 @@ protocol OnboardingPresenterDelegate: class {
 }
 
 class OnboardingPresenter: OnboardingPresenterProtocol {
+    
+    // MARK: Coordinator
+    weak var delegate: OnboardingPresenterDelegate?
+    
+    // MARK: Viper
     weak private var view: OnboardingViewProtocol?
     var interactor: OnboardingInteractorProtocol?
     private let router: OnboardingWireframeProtocol
 
     init(interface: OnboardingViewProtocol,
          interactor: OnboardingInteractorProtocol?,
-         router: OnboardingWireframeProtocol) {
+         router: OnboardingWireframeProtocol,
+         delegate: OnboardingPresenterDelegate?) {
         self.view = interface
         self.interactor = interactor
         self.router = router
+        self.delegate = delegate
     }
 }
 
 extension OnboardingPresenter {
     func start() {
-        router.presentWelcome()
+        router.presentWelcome(self)
     }
 }
 

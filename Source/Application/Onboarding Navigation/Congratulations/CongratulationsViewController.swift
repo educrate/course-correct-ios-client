@@ -16,7 +16,4 @@ class CongratulationsViewController: UIViewController, CongratulationsViewProtoc
     
     // MARK: Viper
 	var presenter: CongratulationsPresenterProtocol?
-    
-    // MARK Coordinator
-    private weak var delegate: CongratulationsViewControllerDelegate?
 }
