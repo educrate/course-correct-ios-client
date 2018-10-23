@@ -16,7 +16,7 @@ protocol AppWireframeProtocol: class {}
 
 // MARK: - Presenter
 
-protocol AppPresenterProtocol: class {}
+protocol AppPresenterProtocol: Coordinator, OnboardingPresenterDelegate, MainPresenterDelegate {}
 
 
 // MARK: - Interactor

@@ -9,9 +9,10 @@
 import UIKit
 
 class OnboardingRouter: OnboardingWireframeProtocol {
-    
     weak var viewController: UIViewController?
-    
+}
+
+extension OnboardingRouter {
     static func createModule() -> UIViewController {
         let view = OnboardingViewController(nibName: nil, bundle: nil)
         let interactor = OnboardingInteractor()

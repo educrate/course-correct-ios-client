@@ -21,3 +21,19 @@ class AppPresenter: AppPresenterProtocol {
         self.router = router
     }
 }
+
+extension AppPresenter {
+    func start() {
+        
+    }
+}
+
+extension AppPresenter {
+    func onboardingPresenter(_ onboardingPresenter: OnboardingPresenter, didFinishWith state: String) {
+        
+    }
+    
+    func mainPresenter(_ mainPresenter: MainPresenter, didSignOut user: String) {
+        
+    }
+}
