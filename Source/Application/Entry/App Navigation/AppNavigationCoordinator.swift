@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol AppNavigationCoordinatorDelegate: class {
+    func appNavigationCoordinator(_ appNavigationCoordinator: AppNavigationCoordinator, didRespondToSignFor user: String)
+}
+
 class AppNavigationCoordinator {}
 
 extension AppNavigationCoordinator: Coordinator {
@@ -23,7 +27,7 @@ extension AppNavigationCoordinator: OnboardingCoordinatorDelegate {
 }
 
 extension AppNavigationCoordinator: MainCoordinatorDelegate {
-    func mainCoordinator(_ mainCoordinator: MainCoordinator, didLogOut user: String) {
+    func mainCoordinator(_ mainCoordinator: MainCoordinator, didSignOut user: String) {
         
     }
 }

@@ -114,6 +114,7 @@
 		BF5005A2217EC74200D35B69 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005A1217EC74200D35B69 /* SignUpCoordinator.swift */; };
 		BF5005A4217ED6E800D35B69 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005A3217ED6E800D35B69 /* MainCoordinator.swift */; };
 		BF5005A6217ED77800D35B69 /* AppNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005A5217ED77800D35B69 /* AppNavigationCoordinator.swift */; };
+		BF5005A8217EE0FA00D35B69 /* AppNavigationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005A7217EE0FA00D35B69 /* AppNavigationProtocols.swift */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -354,6 +355,7 @@
 		BF5005A1217EC74200D35B69 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		BF5005A3217ED6E800D35B69 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		BF5005A5217ED77800D35B69 /* AppNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationCoordinator.swift; sourceTree = "<group>"; };
+		BF5005A7217EE0FA00D35B69 /* AppNavigationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationProtocols.swift; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -574,6 +576,7 @@
 				BF500591217CF69600D35B69 /* App.storyboard */,
 				BF500589217CF66900D35B69 /* AppNavigationController.swift */,
 				BF5005A5217ED77800D35B69 /* AppNavigationCoordinator.swift */,
+				BF5005A7217EE0FA00D35B69 /* AppNavigationProtocols.swift */,
 			);
 			path = "App Navigation";
 			sourceTree = "<group>";
@@ -1523,6 +1526,7 @@
 				BF500572217B87C900D35B69 /* CreateEventInteractor.swift in Sources */,
 				BF50051A217678C500D35B69 /* SignInError.swift in Sources */,
 				BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */,
+				BF5005A8217EE0FA00D35B69 /* AppNavigationProtocols.swift in Sources */,
 				BFD82A96216D989E00A14868 /* NetworkingServiceError.swift in Sources */,
 				BFD82A8A216D989E00A14868 /* NetworkingError.swift in Sources */,
 				BF500540217A765200D35B69 /* ManageCardInteractor.swift in Sources */,

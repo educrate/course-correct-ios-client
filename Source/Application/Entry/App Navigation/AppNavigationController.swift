@@ -8,11 +8,15 @@
 
 import UIKit
 
-class AppNavigationController: UINavigationController {}
+class AppNavigationController: UINavigationController {
+    
+    // MARK: Coordinator
+    var coordinator: AppNavigationCoordinator?
+}
 
 extension AppNavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        coordinator?.start()
     }
 }

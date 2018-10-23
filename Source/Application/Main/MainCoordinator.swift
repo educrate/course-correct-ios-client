@@ -9,7 +9,7 @@
 import Foundation
 
 protocol MainCoordinatorDelegate {
-    func mainCoordinator(_ mainCoordinator: MainCoordinator, didLogOut user: String)
+    func mainCoordinator(_ mainCoordinator: MainCoordinator, didSignOut user: String)
 }
 
 class MainCoordinator {}
