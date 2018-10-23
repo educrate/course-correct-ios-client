@@ -696,7 +696,7 @@
 			path = "Tutor Profile";
 			sourceTree = "<group>";
 		};
-		BF5005002174547700D35B69 /* Sign Up */ = {
+		BF5005002174547700D35B69 /* Sign Up Navigation */ = {
 			isa = PBXGroup;
 			children = (
 				BF5005B7217EEF2000D35B69 /* SignUpViewController.swift */,
@@ -709,7 +709,7 @@
 				BF70B5CF217074AC00771E5D /* Enter Access Code */,
 				BFCDA5F321725FDB00DB31FC /* Create Password */,
 			);
-			path = "Sign Up";
+			path = "Sign Up Navigation";
 			sourceTree = "<group>";
 		};
 		BF50050E2174558A00D35B69 /* Sign In */ = {
@@ -828,7 +828,7 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		BF579339216D4485008DBB46 /* Onboarding */ = {
+		BF579339216D4485008DBB46 /* Onboarding Navigation */ = {
 			isa = PBXGroup;
 			children = (
 				BF500575217B9B0000D35B69 /* Onboarding.storyboard */,
@@ -841,7 +841,7 @@
 				BF70B5DC21715BA800771E5D /* Welcome */,
 				BF50055A217B847500D35B69 /* Congratulations */,
 			);
-			path = Onboarding;
+			path = "Onboarding Navigation";
 			sourceTree = "<group>";
 		};
 		BF70B5CF217074AC00771E5D /* Enter Access Code */ = {
@@ -867,7 +867,7 @@
 				BFCDA5E821725E7200DB31FC /* WelcomeRouter.swift */,
 				BFCDA5EB21725E7200DB31FC /* WelcomeInteractor.swift */,
 				BFCDA5EA21725E7200DB31FC /* WelcomeProtocols.swift */,
-				BF5005002174547700D35B69 /* Sign Up */,
+				BF5005002174547700D35B69 /* Sign Up Navigation */,
 				BF50050E2174558A00D35B69 /* Sign In */,
 			);
 			path = Welcome;
@@ -1030,7 +1030,7 @@
 			isa = PBXGroup;
 			children = (
 				BF4E718D216D4C1A00100FE1 /* Entry */,
-				BF579339216D4485008DBB46 /* Onboarding */,
+				BF579339216D4485008DBB46 /* Onboarding Navigation */,
 				BF5004A5217411C300D35B69 /* Main */,
 			);
 			path = Application;
