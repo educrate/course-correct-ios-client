@@ -13,12 +13,12 @@ class CongratulationsRouter: CongratulationsWireframeProtocol {
 }
 
 extension CongratulationsRouter {
-    static func createModule(_ delegate: CongratulationsViewControllerDelegate?) -> UIViewController {
+    static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .congratulations)
         let view: CongratulationsViewController = storyboard.instantiateViewController()
         let interactor = CongratulationsInteractor()
         let router = CongratulationsRouter()
-        let presenter = CongratulationsPresenter(interface: view, interactor: interactor, router: router, coordinator: delegate)
+        let presenter = CongratulationsPresenter(interface: view, interactor: interactor, router: router)
         
         view.presenter = presenter
         interactor.presenter = presenter

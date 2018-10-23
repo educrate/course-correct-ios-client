@@ -11,16 +11,23 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol OnboardingWireframeProtocol: class {
-    func presentWalkthrough(_ delegate: WalkthroughViewControllerDelegate?)
-    func presentWelcome(_ delegate: WelcomeViewControllerDelegate?)
-    func presentCongratulations(_ delegate: CongratulationsViewControllerDelegate?)
+protocol OnboardingWireframeProtocol: WalkthroughRouterDelegate, WelcomeRouterDelegate, SignUpRouterDelegate, SignInRouterDelegate, CongratulationsRouterDelegate {
+    func presentWalkthrough()
+    func presentWelcome()
+    func presentCongratulations()
+}
+
+
+// MARK: - Coordinator
+
+protocol OnboardingRouterDelegate: class {
+    func onboardingRouter(_ onboardingRouter: OnboardingRouter, didFinishWith state: String)
 }
 
 
 // MARK: - Presenter
 
-protocol OnboardingPresenterProtocol: Coordinator, WalkthroughViewControllerDelegate, WelcomeViewControllerDelegate, SignUpPresenterDelegate, SignInViewControllerDelegate, CongratulationsViewControllerDelegate {}
+protocol OnboardingPresenterProtocol: class, Coordinator {}
 
 
 // MARK: - Interactor

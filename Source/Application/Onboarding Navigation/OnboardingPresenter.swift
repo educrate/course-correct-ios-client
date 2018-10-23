@@ -8,14 +8,7 @@
 
 import UIKit
 
-protocol OnboardingPresenterDelegate: class {
-    func onboardingPresenter(_ onboardingPresenter: OnboardingPresenter, didFinishWith state: String)
-}
-
 class OnboardingPresenter: OnboardingPresenterProtocol {
-    
-    // MARK: Coordinator
-    weak var delegate: OnboardingPresenterDelegate?
     
     // MARK: Viper
     weak private var view: OnboardingViewProtocol?
@@ -24,18 +17,16 @@ class OnboardingPresenter: OnboardingPresenterProtocol {
 
     init(interface: OnboardingViewProtocol,
          interactor: OnboardingInteractorProtocol?,
-         router: OnboardingWireframeProtocol,
-         delegate: OnboardingPresenterDelegate?) {
+         router: OnboardingWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
-        self.delegate = delegate
     }
 }
 
 extension OnboardingPresenter {
     func start() {
-        router.presentWelcome(self)
+        
     }
 }
 

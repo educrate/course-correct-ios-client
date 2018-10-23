@@ -14,28 +14,23 @@ class WelcomePresenter: WelcomePresenterProtocol {
     weak private var view: WelcomeViewProtocol?
     var interactor: WelcomeInteractorProtocol?
     private let router: WelcomeWireframeProtocol
-    
-    // MARK: Coordinator
-    private weak var coordinator: WelcomeViewControllerDelegate?
 
     init(interface: WelcomeViewProtocol,
          interactor: WelcomeInteractorProtocol?,
-         router: WelcomeWireframeProtocol,
-         coordinator: WelcomeViewControllerDelegate?) {
+         router: WelcomeWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
-        self.coordinator = coordinator
     }
 }
 
 extension WelcomePresenter {
     func showSignUp() {
-        router.presentSignUpModule(self)
+        
     }
     
     func showSignIn() {
-        router.presentSignIn()
+        
     }
 }
 

@@ -12,14 +12,21 @@ import Foundation
 // MARK: - Wireframe
 
 protocol WelcomeWireframeProtocol: class {
-    func presentSignUpModule(_ delegate: SignUpPresenterDelegate?)
+    func presentSignUpModule()
     func presentSignIn()
+}
+
+
+// MARK: - Coordinator
+
+protocol WelcomeRouterDelegate: class {
+    func welcomeRouter(_ welcomeRouter: WelcomeRouter, didSelect option: String)
 }
 
 
 // MARK: - Presenter
 
-protocol WelcomePresenterProtocol: SignUpPresenterDelegate {
+protocol WelcomePresenterProtocol: class {
     func showSignUp()
     func showSignIn()
 }

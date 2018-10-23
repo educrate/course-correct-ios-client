@@ -26,22 +26,22 @@ class AppPresenter: AppPresenterProtocol {
 
 extension AppPresenter {
     func start() {
-        interactor?.determineLaunchState()
+        
     }
 }
 
 extension AppPresenter {
     func launchStateDetermined(_ state: String) {
-        router.presentOnboardingModule(self)
+        
     }
 }
 
 extension AppPresenter {
     func onboardingPresenter(_ onboardingPresenter: OnboardingPresenter, didFinishWith state: String) {
-        router.presentMainModule()
+        
     }
     
     func mainPresenter(_ mainPresenter: MainPresenter, didSignOut user: String) {
-        router.presentOnboardingModule(self)
+        
     }
 }

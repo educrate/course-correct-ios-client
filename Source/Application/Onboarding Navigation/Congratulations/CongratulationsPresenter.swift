@@ -14,17 +14,12 @@ class CongratulationsPresenter: CongratulationsPresenterProtocol {
     weak private var view: CongratulationsViewProtocol?
     var interactor: CongratulationsInteractorProtocol?
     private let router: CongratulationsWireframeProtocol
-    
-    // MARK Coordinator
-    private weak var coordinator: CongratulationsViewControllerDelegate?
 
     init(interface: CongratulationsViewProtocol,
          interactor: CongratulationsInteractorProtocol?,
-         router: CongratulationsWireframeProtocol,
-         coordinator: CongratulationsViewControllerDelegate?) {
+         router: CongratulationsWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
-        self.coordinator = coordinator
     }
 }

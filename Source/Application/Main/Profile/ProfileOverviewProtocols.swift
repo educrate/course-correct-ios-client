@@ -15,7 +15,7 @@ protocol ProfileOverviewWireframeProtocol: class, Wireframe {
     func presentAccount()
     func presentPayment()
     func presentSupport()
-    func presentWelcome(_ delegate: WelcomeViewControllerDelegate?)
+    func presentWelcome()
 }
 
 

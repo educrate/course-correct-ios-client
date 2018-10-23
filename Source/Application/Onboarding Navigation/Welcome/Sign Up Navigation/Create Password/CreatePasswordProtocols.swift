@@ -11,8 +11,13 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol CreatePasswordWireframeProtocol: class {
-    func presentCalendar()
+protocol CreatePasswordWireframeProtocol: class {}
+
+
+// MARK: - Coordinator
+
+protocol CreatePasswordRouterDelegate: class {
+    func createPasswordRouter(_ createPasswordRouter: CreatePasswordRouter, didCreate password: String)
 }
 
 

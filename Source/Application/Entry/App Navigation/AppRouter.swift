@@ -13,12 +13,22 @@ class AppRouter: AppWireframeProtocol {
 }
 
 extension AppRouter {
-    func presentOnboardingModule(_ delegate: OnboardingPresenterDelegate?) {
-        viewController?.present(OnboardingRouter.createModule(delegate), animated: true)
+    func presentOnboardingModule() {
+        
     }
     
     func presentMainModule() {
-        viewController?.present(MainRouter.createModule(), animated: true)
+        
+    }
+}
+
+extension AppRouter {
+    func onboardingRouter(_ onboardingRouter: OnboardingRouter, didFinishWith state: String) {
+        
+    }
+    
+    func mainRouter(_ mainRouter: MainRouter, didSignOut user: String) {
+        
     }
 }
 

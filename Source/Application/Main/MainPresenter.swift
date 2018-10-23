@@ -8,11 +8,9 @@
 
 import UIKit
 
-protocol MainPresenterDelegate: class {
-    func mainPresenter(_ mainPresenter: MainPresenter, didSignOut user: String)
-}
-
 class MainPresenter: MainPresenterProtocol {
+    
+    // MARK: Viper
     weak private var view: MainViewProtocol?
     var interactor: MainInteractorProtocol?
     private let router: MainWireframeProtocol

@@ -10,6 +10,7 @@ import UIKit
 
 class SelectCollegePresenter: SelectCollegePresenterProtocol {
     
+    // MARK: Viper
     weak private var view: SelectCollegeViewProtocol?
     var interactor: SelectCollegeInteractorProtocol?
     private let router: SelectCollegeWireframeProtocol
@@ -45,6 +46,6 @@ extension SelectCollegePresenter {
 
 extension SelectCollegePresenter {
     func showEnterStudentIdentifier() {
-        router.presentEnterStudentIdentifier()
+        
     }
 }

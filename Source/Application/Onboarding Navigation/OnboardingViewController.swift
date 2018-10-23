@@ -9,6 +9,8 @@
 import UIKit
 
 class OnboardingViewController: UINavigationController, OnboardingViewProtocol {
+    
+    // MARK: Viper
 	var presenter: OnboardingPresenterProtocol?
 }
 

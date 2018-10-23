@@ -9,6 +9,8 @@
 import UIKit
 
 class SignUpViewController: UINavigationController, SignUpViewProtocol {
+    
+    // MARK: Viper
 	var presenter: SignUpPresenterProtocol?
 }
 

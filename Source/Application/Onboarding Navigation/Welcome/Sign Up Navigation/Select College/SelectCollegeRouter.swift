@@ -30,8 +30,6 @@ extension SelectCollegeRouter {
 
 extension SelectCollegeRouter {
     func presentEnterStudentIdentifier() {
-        if let view = viewController, let navigationController = view.navigationController {
-            navigationController.pushViewController(EnterStudentIdentifierRouter.createModule(), animated: true)
-        }
+        
     }
 }

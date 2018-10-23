@@ -9,9 +9,10 @@
 import UIKit
 
 class MainRouter: MainWireframeProtocol {
-    
     weak var viewController: UIViewController?
-    
+}
+
+extension MainRouter {
     static func createModule() -> UIViewController {
         let view = MainViewController(nibName: nil, bundle: nil)
         let interactor = MainInteractor()

@@ -11,15 +11,15 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol AppWireframeProtocol: class {
-    func presentOnboardingModule(_ delegate: OnboardingPresenterDelegate?)
+protocol AppWireframeProtocol: OnboardingRouterDelegate, MainRouterDelegate {
+    func presentOnboardingModule()
     func presentMainModule()
 }
 
 
 // MARK: - Presenter
 
-protocol AppPresenterProtocol: Coordinator, OnboardingPresenterDelegate, MainPresenterDelegate {
+protocol AppPresenterProtocol: class, Coordinator {
     func launchStateDetermined(_ state: String)
 }
 

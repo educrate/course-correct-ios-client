@@ -11,8 +11,13 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol SignInWireframeProtocol: class {
-    func presentCalendar()
+protocol SignInWireframeProtocol: class {}
+
+
+// MARK: - Coordinator
+
+protocol SignInRouterDelegate: class {
+    func signInRouter(_ signInRouter: SignInRouter, didSignIn user: String)
 }
 
 

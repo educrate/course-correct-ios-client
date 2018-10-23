@@ -9,6 +9,8 @@
 import UIKit
 
 class EnterStudentIdentifierPresenter: EnterStudentIdentifierPresenterProtocol {
+    
+    // MARK: Viper
     weak private var view: EnterStudentIdentifierViewProtocol?
     var interactor: EnterStudentIdentifierInteractorProtocol?
     private let router: EnterStudentIdentifierWireframeProtocol
@@ -30,7 +32,7 @@ extension EnterStudentIdentifierPresenter {
     func studentIdentifierValidated(for identifier: String, with result: Result<Void, EnterStudentIdentifierError>) {
         switch result {
         case .success:
-            router.presentEnterAccessCode()
+            return
         case .failure(let error):
             view?.show(error: error)
         }

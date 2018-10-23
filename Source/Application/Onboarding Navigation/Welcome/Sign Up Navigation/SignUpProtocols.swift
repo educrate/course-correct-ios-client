@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol SignUpWireframeProtocol: class {
+protocol SignUpWireframeProtocol: SelectCollegeRouterDelegate, EnterStudentIdentifierRouterDelegate, EnterAccessCodeRouterDelegate, CreatePasswordRouterDelegate {
     func showSelectCollege()
     func showEnterStudentIdentifier()
     func showEnterAccessCode()
@@ -19,9 +19,16 @@ protocol SignUpWireframeProtocol: class {
 }
 
 
+// MARK: - Coordinator
+
+protocol SignUpRouterDelegate: class {
+    func signUpRouter(_ signUpRouter: SignUpRouter, didSignUp user: String)
+}
+
+
 // MARK: - Presenter
 
-protocol SignUpPresenterProtocol: Coordinator, SelectCollegeViewControllerDelegate, EnterStudentIdentifierViewControllerDelegate, EnterAccessCodeViewControllerDelegate, CreatePasswordViewControllerDelegate {}
+protocol SignUpPresenterProtocol: class, Coordinator {}
 
 
 // MARK: - Interactor

@@ -30,8 +30,6 @@ extension EnterAccessCodeRouter {
 
 extension EnterAccessCodeRouter {
     func presentCreatePassword() {
-        if let view = viewController, let navigationController = view.navigationController {
-            navigationController.pushViewController(CreatePasswordRouter.createModule(), animated: true)
-        }
+        viewController?.show(CreatePasswordRouter.createModule(), sender: nil)
     }
 }

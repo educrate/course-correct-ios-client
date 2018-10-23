@@ -11,8 +11,13 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol EnterStudentIdentifierWireframeProtocol: class {
-    func presentEnterAccessCode()
+protocol EnterStudentIdentifierWireframeProtocol: class {}
+
+
+// MARK: - Coordinatir
+
+protocol EnterStudentIdentifierRouterDelegate: class {
+    func enterStudentIdentifierRouter(_ enterStudentIdentifierRouter: EnterStudentIdentifierRouter, didEnter studentIdentifier: String)
 }
 
 

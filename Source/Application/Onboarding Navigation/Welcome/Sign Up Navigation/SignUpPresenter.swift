@@ -8,14 +8,7 @@
 
 import UIKit
 
-protocol SignUpPresenterDelegate: class {
-    func signUpPresenter(_ signUpPresenter: SignUpPresenter, didSignUp user: String)
-}
-
 class SignUpPresenter: SignUpPresenterProtocol {
-    
-    // MARK: Coordinator
-    weak var delegate: SignUpPresenterDelegate?
     
     // MARK: Viper
     weak private var view: SignUpViewProtocol?
@@ -24,35 +17,33 @@ class SignUpPresenter: SignUpPresenterProtocol {
 
     init(interface: SignUpViewProtocol,
          interactor: SignUpInteractorProtocol?,
-         router: SignUpWireframeProtocol,
-         delegate: SignUpPresenterDelegate?) {
+         router: SignUpWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
-        self.delegate = delegate
     }
 }
 
 extension SignUpPresenter {
     func start() {
-        router.showSelectCollege()
+        
     }
 }
 
 extension SignUpPresenter {
     func selectCollegeViewController(_ selectCollegeViewController: SelectCollegeViewController, didSelect college: String) {
-        router.showEnterStudentIdentifier()
+        
     }
     
     func enterStudentIdentifierViewController(_ enterStudentIdentifierViewController: EnterStudentIdentifierViewController, didEnter studentIdentifier: String) {
-        router.showEnterAccessCode()
+        
     }
     
     func enterAccessCodeViewController(_ enterAccessCodeViewController: EnterAccessCodeViewController, didEnter accessCode: String) {
-        router.showCreatePassword()
+        
     }
     
     func createPasswordViewController(_ createPasswordViewController: CreatePasswordViewController, didCreate password: String) {
-        delegate?.signUpPresenter(self, didSignUp: password)
+        
     }
 }

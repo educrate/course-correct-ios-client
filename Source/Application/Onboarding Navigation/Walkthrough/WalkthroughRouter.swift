@@ -13,12 +13,12 @@ class WalkthroughRouter: WalkthroughWireframeProtocol {
 }
 
 extension WalkthroughRouter {
-    static func createModule(_ delegate: WalkthroughViewControllerDelegate?) -> UIViewController {
+    static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .walkthrough)
         let view: WalkthroughViewController = storyboard.instantiateViewController()
         let interactor = WalkthroughInteractor()
         let router = WalkthroughRouter()
-        let presenter = WalkthroughPresenter(interface: view, interactor: interactor, router: router, delegate: delegate)
+        let presenter = WalkthroughPresenter(interface: view, interactor: interactor, router: router)
         
         view.presenter = presenter
         interactor.presenter = presenter

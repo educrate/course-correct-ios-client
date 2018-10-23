@@ -14,17 +14,12 @@ class WalkthroughPresenter: WalkthroughPresenterProtocol {
     weak private var view: WalkthroughViewProtocol?
     var interactor: WalkthroughInteractorProtocol?
     private let router: WalkthroughWireframeProtocol
-    
-    // MARK: Coordinator
-    private weak var delegate: WalkthroughViewControllerDelegate?
 
     init(interface: WalkthroughViewProtocol,
          interactor: WalkthroughInteractorProtocol?,
-         router: WalkthroughWireframeProtocol,
-         delegate: WalkthroughViewControllerDelegate?) {
+         router: WalkthroughWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
-        self.delegate = delegate
     }
 }

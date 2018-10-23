@@ -30,8 +30,6 @@ extension SignInRouter {
 
 extension SignInRouter {
     func presentCalendar() {
-        if let view = viewController, let navigationController = view.navigationController {
-            navigationController.pushViewController(CalendarRouter.createModule(), animated: true)
-        }
+        viewController?.show(CalendarRouter.createModule(), sender: nil)
     }
 }

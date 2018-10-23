@@ -13,12 +13,12 @@ class OnboardingRouter: OnboardingWireframeProtocol {
 }
 
 extension OnboardingRouter {
-    static func createModule(_ delegate: OnboardingPresenterDelegate?) -> UIViewController {
+    static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .onboarding)
         let view: OnboardingViewController = storyboard.instantiateViewController()
         let interactor = OnboardingInteractor()
         let router = OnboardingRouter()
-        let presenter = OnboardingPresenter(interface: view, interactor: interactor, router: router, delegate: delegate)
+        let presenter = OnboardingPresenter(interface: view, interactor: interactor, router: router)
         
         view.presenter = presenter
         interactor.presenter = presenter
@@ -29,15 +29,37 @@ extension OnboardingRouter {
 }
 
 extension OnboardingRouter {
-    func presentWalkthrough(_ delegate: WalkthroughViewControllerDelegate?) {
-        viewController?.present(WalkthroughRouter.createModule(delegate), animated: true)
+    func presentWalkthrough() {
+        
     }
     
-    func presentWelcome(_ delegate: WelcomeViewControllerDelegate?) {
-        viewController?.present(WelcomeRouter.createModule(delegate), animated: true)
+    func presentWelcome() {
+        
     }
     
-    func presentCongratulations(_ delegate: CongratulationsViewControllerDelegate?) {
-        viewController?.present(CongratulationsRouter.createModule(delegate), animated: true)
+    func presentCongratulations() {
+        
+    }
+}
+
+extension OnboardingRouter {
+    func walkthroughRouter(_ walkthroughRouter: WalkthroughRouter, didCompleteWith state: String) {
+        
+    }
+    
+    func welcomeRouter(_ welcomeRouter: WelcomeRouter, didSelect option: String) {
+        
+    }
+    
+    func signUpRouter(_ signUpRouter: SignUpRouter, didSignUp user: String) {
+        
+    }
+    
+    func signInRouter(_ signInRouter: SignInRouter, didSignIn user: String) {
+        
+    }
+    
+    func congratulationsRouter(_ congratulationsRouter: CongratulationsRouter, didDisplayWith state: String) {
+        
     }
 }

@@ -11,8 +11,13 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol SelectCollegeWireframeProtocol: class {
-    func presentEnterStudentIdentifier()
+protocol SelectCollegeWireframeProtocol: class {}
+
+
+// MARK: - Coordinator
+
+protocol SelectCollegeRouterDelegate: class {
+    func selectCollegeRouter(_ selectCollegeRouter: SelectCollegeRouter, didSelect college: String)
 }
 
 

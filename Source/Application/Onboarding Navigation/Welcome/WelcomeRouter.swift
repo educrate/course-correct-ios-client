@@ -13,12 +13,12 @@ class WelcomeRouter: WelcomeWireframeProtocol {
 }
 
 extension WelcomeRouter {
-    static func createModule(_ delegate: WelcomeViewControllerDelegate?) -> UIViewController {
+    static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .welcome)
         let view: WelcomeViewController = storyboard.instantiateViewController()
         let interactor = WelcomeInteractor()
         let router = WelcomeRouter()
-        let presenter = WelcomePresenter(interface: view, interactor: interactor, router: router, coordinator: delegate)
+        let presenter = WelcomePresenter(interface: view, interactor: interactor, router: router)
         
         view.presenter = presenter
         interactor.presenter = presenter
@@ -29,11 +29,11 @@ extension WelcomeRouter {
 }
 
 extension WelcomeRouter {
-    func presentSignUpModule(_ delegate: SignUpPresenterDelegate?) {
-        viewController?.present(SignUpRouter.createModule(delegate), animated: true)
+    func presentSignUpModule() {
+        
     }
     
     func presentSignIn() {
-        viewController?.show(SignInRouter.createModule(), sender: nil)
+        
     }
 }

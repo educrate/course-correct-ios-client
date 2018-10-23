@@ -30,18 +30,18 @@ extension ProfileOverviewRouter {
 
 extension ProfileOverviewRouter {
     func presentAccount() {
-        viewController?.navigationController?.pushViewController(ProfileAccountRouter.createModule(), animated: true)
+        
     }
     
     func presentPayment() {
-        viewController?.navigationController?.pushViewController(ProfilePaymentRouter.createModule(), animated: true)
+        
     }
     
     func presentSupport() {
-        viewController?.navigationController?.pushViewController(ProfileSupportRouter.createModule(), animated: true)
+        
     }
     
-    func presentWelcome(_ delegate: WelcomeViewControllerDelegate?) {
-        viewController?.navigationController?.pushViewController(WelcomeRouter.createModule(delegate), animated: true)
+    func presentWelcome() {
+        
     }
 }

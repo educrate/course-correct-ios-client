@@ -11,8 +11,13 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol EnterAccessCodeWireframeProtocol: class {
-    func presentCreatePassword()
+protocol EnterAccessCodeWireframeProtocol: class {}
+
+
+// MARK: - Coordinator
+
+protocol EnterAccessCodeRouterDelegate: class {
+    func enterAccessCodeRouter(_ enterAccessCodeRouter: EnterAccessCodeRouter, didEnter accessCode: String)
 }
 
 

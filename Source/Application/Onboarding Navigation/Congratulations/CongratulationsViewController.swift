@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol CongratulationsViewControllerDelegate: class {
-    func congratulationsViewController(_ congratulationsViewController: CongratulationsViewController, didDisplayWith state: String)
-}
-
 class CongratulationsViewController: UIViewController, CongratulationsViewProtocol {
     
     // MARK: Viper

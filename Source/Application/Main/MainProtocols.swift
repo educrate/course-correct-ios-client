@@ -13,6 +13,11 @@ import Foundation
 
 protocol MainWireframeProtocol: class {}
 
+// MARK: - Coordinator
+
+protocol MainRouterDelegate: class {
+    func mainRouter(_ mainRouter: MainRouter, didSignOut user: String)
+}
 
 // MARK: - Presenter
 

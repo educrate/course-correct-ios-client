@@ -9,6 +9,8 @@
 import UIKit
 
 class AppViewController: UINavigationController, AppViewProtocol {
+    
+    // MARK: Viper
     lazy var presenter: AppPresenterProtocol? = AppRouter.createModule(self)
 }
 

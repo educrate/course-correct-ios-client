@@ -30,8 +30,6 @@ extension EnterStudentIdentifierRouter {
 
 extension EnterStudentIdentifierRouter {
     func presentEnterAccessCode() {
-        if let view = viewController, let navigationController = view.navigationController {
-            navigationController.pushViewController(EnterAccessCodeRouter.createModule(), animated: true)
-        }
+        viewController?.show(EnterAccessCodeRouter.createModule(), sender: nil)
     }
 }

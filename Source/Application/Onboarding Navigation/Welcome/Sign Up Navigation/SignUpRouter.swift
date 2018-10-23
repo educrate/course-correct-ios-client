@@ -13,12 +13,12 @@ class SignUpRouter: SignUpWireframeProtocol {
 }
 
 extension SignUpRouter {
-    static func createModule(_ delegate: SignUpPresenterDelegate?) -> UIViewController {
+    static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .signUp)
         let view: SignUpViewController = storyboard.instantiateViewController()
         let interactor = SignUpInteractor()
         let router = SignUpRouter()
-        let presenter = SignUpPresenter(interface: view, interactor: interactor, router: router, delegate: delegate)
+        let presenter = SignUpPresenter(interface: view, interactor: interactor, router: router)
         
         view.presenter = presenter
         interactor.presenter = presenter
@@ -30,18 +30,36 @@ extension SignUpRouter {
 
 extension SignUpRouter {
     func showSelectCollege() {
-        viewController?.show(SelectCollegeRouter.createModule(), sender: nil)
+        
     }
     
     func showEnterStudentIdentifier() {
-        viewController?.show(EnterStudentIdentifierRouter.createModule(), sender: nil)
+        
     }
     
     func showEnterAccessCode() {
-        viewController?.show(EnterAccessCodeRouter.createModule(), sender: nil)
+        
     }
     
     func showCreatePassword() {
-        viewController?.show(CreatePasswordRouter.createModule(), sender: nil)
+        
+    }
+}
+
+extension SignUpRouter {
+    func selectCollegeRouter(_ selectCollegeRouter: SelectCollegeRouter, didSelect college: String) {
+        
+    }
+    
+    func enterStudentIdentifierRouter(_ enterStudentIdentifierRouter: EnterStudentIdentifierRouter, didEnter studentIdentifier: String) {
+        
+    }
+    
+    func enterAccessCodeRouter(_ enterAccessCodeRouter: EnterAccessCodeRouter, didEnter accessCode: String) {
+        
+    }
+    
+    func createPasswordRouter(_ createPasswordRouter: CreatePasswordRouter, didCreate password: String) {
+        
     }
 }

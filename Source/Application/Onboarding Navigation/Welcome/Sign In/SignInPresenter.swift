@@ -9,6 +9,8 @@
 import UIKit
 
 class SignInPresenter: SignInPresenterProtocol {
+    
+    // MARK: Viper
     weak private var view: SignInViewProtocol?
     var interactor: SignInInteractorProtocol?
     private let router: SignInWireframeProtocol
@@ -30,7 +32,7 @@ extension SignInPresenter {
     func credentialsValidated(_ result: Result<Void, SignInError>) {
         switch result {
         case .success:
-            router.presentCalendar()
+            return
         case .failure(let error):
             view?.show(error: error)
         }

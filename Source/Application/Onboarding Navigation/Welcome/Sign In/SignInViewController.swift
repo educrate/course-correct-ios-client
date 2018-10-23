@@ -8,17 +8,10 @@
 
 import UIKit
 
-protocol SignInViewControllerDelegate: class {
-    func signInViewController(_ signInViewController: SignInViewController, didSignIn user: String)
-}
-
 class SignInViewController: UIViewController, SignInViewProtocol {
 	
     // MARK: Viper
     var presenter: SignInPresenterProtocol?
-    
-    // MARK: Viper
-    private weak var delegate: SignInViewControllerDelegate?
     
     // MARK: Views
     @IBOutlet private weak var emailField: UIFieldViewController!

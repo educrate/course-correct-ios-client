@@ -9,6 +9,8 @@
 import UIKit
 
 class EnterAccessCodePresenter: EnterAccessCodePresenterProtocol {
+    
+    // MARK: Viper
     weak private var view: EnterAccessCodeViewProtocol?
     var interactor: EnterAccessCodeInteractorProtocol?
     private let router: EnterAccessCodeWireframeProtocol
@@ -30,7 +32,7 @@ extension EnterAccessCodePresenter {
     func accessCodeValidated(for code: String, with result: Result<Void, EnterAccessCodeError>) {
         switch result {
         case .success:
-            router.presentCreatePassword()
+            return
         case .failure(let error):
             view?.show(error: error)
         }
