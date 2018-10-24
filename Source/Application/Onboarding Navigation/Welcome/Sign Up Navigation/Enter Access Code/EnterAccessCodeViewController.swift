@@ -14,7 +14,7 @@ class EnterAccessCodeViewController: UIViewController, EnterAccessCodeViewProtoc
     var presenter: EnterAccessCodePresenterProtocol?
     
     // MARK: IBOutlets
-    @IBOutlet private weak var field: UIFieldViewController!
+    private weak var field: UIFieldViewController!
     
     // MARK: Deinit Verification
     deinit {
@@ -56,6 +56,6 @@ extension EnterAccessCodeViewController {
 
 extension EnterAccessCodeViewController: SegueIdentifiable {
     enum Segue: String {
-        case field
+        case field = "Field"
     }
 }

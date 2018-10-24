@@ -21,7 +21,7 @@
                                 <rect key="frame" x="87" y="283" width="240" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="Fi5-Nx-xv1" kind="embed" identifier="field" id="4w4-hh-fNR"/>
+                                    <segue destination="Fi5-Nx-xv1" kind="embed" identifier="Field" id="4w4-hh-fNR"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -36,9 +36,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="field" destination="LbI-QW-XFU" id="d63-GE-HDl"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43e-G4-PrQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,7 +14,7 @@ class SelectCollegeViewController: UIViewController {
     var presenter: SelectCollegePresenterProtocol?
     
     // MARK: Views
-    @IBOutlet private weak var collegeSelector: UIDropdownViewController!
+    private weak var collegeSelector: UIDropdownViewController!
     
     // MARK: Deinit Verification
     deinit {
@@ -76,6 +76,6 @@ extension SelectCollegeViewController: UIDropdownDelegate {
 
 extension SelectCollegeViewController: SegueIdentifiable {
     enum Segue: String {
-        case dropdown
+        case dropdown = "Dropdown"
     }
 }

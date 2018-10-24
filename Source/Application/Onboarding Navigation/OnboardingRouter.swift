@@ -40,7 +40,7 @@ extension OnboardingRouter {
     }
     
     func presentCongratulations() {
-        viewController?.setViewControllers([WelcomeRouter.createModule(self)], animated: true)
+        viewController?.setViewControllers([CongratulationsRouter.createModule(self)], animated: true)
     }
 }
 

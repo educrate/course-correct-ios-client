@@ -21,7 +21,7 @@
                                 <rect key="frame" x="87" y="283" width="240" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="odD-IK-rpx" kind="embed" identifier="field" id="leL-7U-Oco"/>
+                                    <segue destination="odD-IK-rpx" kind="embed" identifier="Field" id="leL-7U-Oco"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -37,9 +37,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="field" destination="hbX-E7-1Dl" id="gM9-yN-6i3"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lfv-7Z-wqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,8 +45,8 @@
         <!--UIField-->
         <scene sceneID="Gdd-6e-9xx">
             <objects>
-                <viewControllerPlaceholder storyboardName="UIField" id="odD-IK-rpx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRC-Vt-EGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="UIField" id="odD-IK-rpx" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="572" y="19"/>
         </scene>

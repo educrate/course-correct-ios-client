@@ -14,8 +14,8 @@ class CreatePasswordViewController: UIViewController, CreatePasswordViewProtocol
 	var presenter: CreatePasswordPresenterProtocol?
     
     // MARK: Views
-    @IBOutlet private weak var passwordField: UIFieldViewController!
-    @IBOutlet private weak var confirmPasswordField: UIFieldViewController!
+    private weak var passwordField: UIFieldViewController!
+    private weak var confirmPasswordField: UIFieldViewController!
     
     // MARK: Deinit Verification
     deinit {
@@ -64,7 +64,7 @@ extension CreatePasswordViewController {
 
 extension CreatePasswordViewController: SegueIdentifiable {
     enum Segue: String {
-        case password
-        case confirmPassword = "confirmpassword"
+        case password = "Password"
+        case confirmPassword = "ConfirmPassword"
     }
 }

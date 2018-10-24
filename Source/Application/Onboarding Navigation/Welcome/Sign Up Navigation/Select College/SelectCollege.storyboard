@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="width" constant="300" id="oUU-bP-gic"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="slO-Je-2Kl" kind="embed" identifier="dropdown" id="nhX-g7-HZk"/>
+                                    <segue destination="slO-Je-2Kl" kind="embed" identifier="Dropdown" id="nhX-g7-HZk"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -51,9 +51,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="collegeSelector" destination="32L-MW-wF5" id="Bpv-xY-cQU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHH-Jw-inE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,8 +59,8 @@
         <!--UIDropdown-->
         <scene sceneID="4rB-aj-fF8">
             <objects>
-                <viewControllerPlaceholder storyboardName="UIDropdown" id="slO-Je-2Kl" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="geO-CO-cmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="UIDropdown" id="slO-Je-2Kl" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="30" y="509"/>
         </scene>

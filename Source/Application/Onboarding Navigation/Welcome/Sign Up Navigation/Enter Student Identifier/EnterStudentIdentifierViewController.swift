@@ -14,7 +14,7 @@ class EnterStudentIdentifierViewController: UIViewController, EnterStudentIdenti
 	var presenter: EnterStudentIdentifierPresenterProtocol?
     
     // MARK: Views
-    @IBOutlet weak var field: UIFieldViewController!
+    private weak var field: UIFieldViewController!
     
     // MARK: Deinit Verification
     deinit {
@@ -56,6 +56,6 @@ extension EnterStudentIdentifierViewController {
 
 extension EnterStudentIdentifierViewController: SegueIdentifiable {
     enum Segue: String {
-        case field
+        case field = "Field"
     }
 }
