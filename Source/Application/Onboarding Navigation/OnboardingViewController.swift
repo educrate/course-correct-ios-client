@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol OnboardingViewControllerDelegate: class {
+    func onboardingViewController(_ onboardingViewController: OnboardingViewController, didFinishWith state: String)
+}
+
 class OnboardingViewController: UINavigationController, OnboardingViewProtocol {
     
     // MARK: Viper
 	var presenter: OnboardingPresenterProtocol?
+    weak var onboardingDelegate: OnboardingViewControllerDelegate?
 }
 
 extension OnboardingViewController {

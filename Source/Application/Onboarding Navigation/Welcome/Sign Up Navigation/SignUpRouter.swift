@@ -10,11 +10,10 @@ import UIKit
 
 class SignUpRouter: SignUpWireframeProtocol {
     weak var viewController: UIViewController?
-    private weak var delegate: SignUpRouterDelegate?
 }
 
 extension SignUpRouter {
-    static func createModule(_ delegate: SignUpRouterDelegate?) -> UIViewController {
+    static func createModule(_ delegate: SignUpViewControllerDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .signUp)
         let view: SignUpViewController = storyboard.instantiateViewController()
         let interactor = SignUpInteractor()
@@ -24,7 +23,6 @@ extension SignUpRouter {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
-        router.delegate = delegate
         
         return view
     }
@@ -32,36 +30,36 @@ extension SignUpRouter {
 
 extension SignUpRouter {
     func showSelectCollege() {
-        
+        viewController?.show(SelectCollegeRouter.createModule(self), sender: nil)
     }
     
     func showEnterStudentIdentifier() {
-        
+        viewController?.show(EnterStudentIdentifierRouter.createModule(self), sender: nil)
     }
     
     func showEnterAccessCode() {
-        
+        viewController?.show(EnterAccessCodeRouter.createModule(self), sender: nil)
     }
     
     func showCreatePassword() {
-        
+        viewController?.show(CreatePasswordRouter.createModule(self), sender: nil)
     }
 }
 
 extension SignUpRouter {
-    func selectCollegeRouter(_ selectCollegeRouter: SelectCollegeRouter, didSelect college: String) {
+    func selectCollegeViewController(_ selectCollegeViewController: SelectCollegeViewController, didSelect college: String) {
         
     }
     
-    func enterStudentIdentifierRouter(_ enterStudentIdentifierRouter: EnterStudentIdentifierRouter, didEnter studentIdentifier: String) {
+    func enterStudentIdentifierViewController(_ enterStudentIdentifierViewController: EnterStudentIdentifierViewController, didEnter studentIdentifier: String) {
         
     }
     
-    func enterAccessCodeRouter(_ enterAccessCodeRouter: EnterAccessCodeRouter, didEnter accessCode: String) {
+    func enterAccessCodeViewController(_ enterAccessCodeViewController: EnterAccessCodeViewController, didEnter accessCode: String) {
         
     }
     
-    func createPasswordRouter(_ createPasswordRouter: CreatePasswordRouter, didCreate password: String) {
+    func createPasswordViewController(_ createPasswordViewController: CreatePasswordViewController, didCreate password: String) {
         
     }
 }

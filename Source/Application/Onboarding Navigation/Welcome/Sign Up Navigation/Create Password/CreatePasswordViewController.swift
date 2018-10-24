@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol CreatePasswordViewControllerDelegate: class {
+    func createPasswordViewController(_ createPasswordViewController: CreatePasswordViewController, didCreate password: String)
+}
+
 class CreatePasswordViewController: UIViewController, CreatePasswordViewProtocol {
     
     // MARK: Viper
 	var presenter: CreatePasswordPresenterProtocol?
+    weak var delegate: CreatePasswordViewControllerDelegate?
     
     // MARK: Views
     @IBOutlet private weak var passwordField: UIFieldViewController!

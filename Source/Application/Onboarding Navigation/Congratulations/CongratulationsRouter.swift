@@ -10,11 +10,10 @@ import UIKit
 
 class CongratulationsRouter: CongratulationsWireframeProtocol {
     weak var viewController: UIViewController?
-    private weak var delegate: CongratulationsRouterDelegate?
 }
 
 extension CongratulationsRouter {
-    static func createModule(_ delegate: CongratulationsRouterDelegate?) -> UIViewController {
+    static func createModule(_ delegate: CongratulationsViewControllerDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .congratulations)
         let view: CongratulationsViewController = storyboard.instantiateViewController()
         let interactor = CongratulationsInteractor()
@@ -22,9 +21,9 @@ extension CongratulationsRouter {
         let presenter = CongratulationsPresenter(interface: view, interactor: interactor, router: router)
         
         view.presenter = presenter
+        view.delegate = delegate
         interactor.presenter = presenter
         router.viewController = view
-        router.delegate = delegate
         
         return view
     }

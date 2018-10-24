@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol AppWireframeProtocol: OnboardingRouterDelegate, MainRouterDelegate {
+protocol AppWireframeProtocol: OnboardingViewControllerDelegate, MainRouterDelegate {
     func presentOnboardingModule()
     func presentMainModule()
 }

@@ -10,11 +10,10 @@ import UIKit
 
 class WalkthroughRouter: WalkthroughWireframeProtocol {
     weak var viewController: UIViewController?
-    private weak var delegate: WalkthroughRouterDelegate?
 }
 
 extension WalkthroughRouter {
-    static func createModule(_ delegate: WalkthroughRouterDelegate?) -> UIViewController {
+    static func createModule(_ delegate: WalkthroughViewControllerDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .walkthrough)
         let view: WalkthroughViewController = storyboard.instantiateViewController()
         let interactor = WalkthroughInteractor()
@@ -22,9 +21,9 @@ extension WalkthroughRouter {
         let presenter = WalkthroughPresenter(interface: view, interactor: interactor, router: router)
         
         view.presenter = presenter
+        view.delegate = delegate
         interactor.presenter = presenter
         router.viewController = view
-        router.delegate = delegate
         
         return view
     }

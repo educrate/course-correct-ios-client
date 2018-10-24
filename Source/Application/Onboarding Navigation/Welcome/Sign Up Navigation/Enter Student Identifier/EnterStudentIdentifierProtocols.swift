@@ -14,13 +14,6 @@ import Foundation
 protocol EnterStudentIdentifierWireframeProtocol: class {}
 
 
-// MARK: - Coordinatir
-
-protocol EnterStudentIdentifierRouterDelegate: class {
-    func enterStudentIdentifierRouter(_ enterStudentIdentifierRouter: EnterStudentIdentifierRouter, didEnter studentIdentifier: String)
-}
-
-
 // MARK: - Presenter
 
 protocol EnterStudentIdentifierPresenterProtocol: class {

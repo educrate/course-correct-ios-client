@@ -23,7 +23,7 @@ extension AppRouter {
 }
 
 extension AppRouter {
-    func onboardingRouter(_ onboardingRouter: OnboardingRouter, didFinishWith state: String) {
+    func onboardingViewController(_ onboardingViewController: OnboardingViewController, didFinishWith state: String) {
         
     }
     

@@ -14,13 +14,6 @@ import Foundation
 protocol SelectCollegeWireframeProtocol: class {}
 
 
-// MARK: - Coordinator
-
-protocol SelectCollegeRouterDelegate: class {
-    func selectCollegeRouter(_ selectCollegeRouter: SelectCollegeRouter, didSelect college: String)
-}
-
-
 // MARK: - Presenter
 
 protocol SelectCollegePresenterProtocol: class {

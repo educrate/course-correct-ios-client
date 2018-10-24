@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol WelcomeViewControllerDelegate: class {
+    func welcomeViewController(_ welcomeViewController: WelcomeViewController, didSelect option: String)
+}
+
 class WelcomeViewController: UIViewController, WelcomeViewProtocol {
     
     // MARK: Viper
 	var presenter: WelcomePresenterProtocol?
+    weak var delegate: WelcomeViewControllerDelegate?
 }
 
 private extension WelcomeViewController {

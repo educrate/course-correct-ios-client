@@ -14,13 +14,6 @@ import Foundation
 protocol CongratulationsWireframeProtocol: class {}
 
 
-// MARK: - Coordinator
-
-protocol CongratulationsRouterDelegate: class {
-    func congratulationsRouter(_ congratulationsRouter: CongratulationsRouter, didDisplayWith state: String)
-}
-
-
 // MARK: - Presenter
 
 protocol CongratulationsPresenterProtocol: class {}
