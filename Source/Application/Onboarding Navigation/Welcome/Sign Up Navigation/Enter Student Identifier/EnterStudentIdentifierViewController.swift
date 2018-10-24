@@ -15,6 +15,11 @@ class EnterStudentIdentifierViewController: UIViewController, EnterStudentIdenti
     
     // MARK: Views
     @IBOutlet weak var field: UIFieldViewController!
+    
+    // MARK: Deinit Verification
+    deinit {
+        print("deinitialized enter student identifier screen")
+    }
 }
 
 extension EnterStudentIdentifierViewController {

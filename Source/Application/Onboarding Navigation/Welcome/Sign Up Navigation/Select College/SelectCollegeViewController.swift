@@ -15,6 +15,11 @@ class SelectCollegeViewController: UIViewController {
     
     // MARK: Views
     @IBOutlet private weak var collegeSelector: UIDropdownViewController!
+    
+    // MARK: Deinit Verification
+    deinit {
+        print("deinitialized select college screen")
+    }
 }
 
 private extension SelectCollegeViewController {

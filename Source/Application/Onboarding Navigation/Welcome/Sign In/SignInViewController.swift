@@ -16,6 +16,11 @@ class SignInViewController: UIViewController, SignInViewProtocol {
     // MARK: Views
     @IBOutlet private weak var emailField: UIFieldViewController!
     @IBOutlet private weak var passwordField: UIFieldViewController!
+    
+    // MARK: Deinit Verification
+    deinit {
+        print("deinitialized sign in screen")
+    }
 }
 
 extension SignInViewController {
@@ -25,18 +30,15 @@ extension SignInViewController {
 }
 
 extension SignInViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        emailField.setPlaceholder("Enter Your Email")
-        passwordField.setPlaceholder("Enter Your Password")
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // TODO: Need To Setup Configurations
         switch segueCase(for: segue) {
         case .email:
-            emailField = segue.viewController()
+            break
+//            emailField.setPlaceholder("Enter Your Email")
         case .password:
-            passwordField = segue.viewController()
+            break
+//            passwordField.setPlaceholder("Enter Your Password")
         }
     }
 }

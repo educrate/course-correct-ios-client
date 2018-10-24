@@ -12,4 +12,9 @@ class CongratulationsViewController: UIViewController, CongratulationsViewProtoc
     
     // MARK: Viper
 	var presenter: CongratulationsPresenterProtocol?
+    
+    // MARK: Deinit Verification
+    deinit {
+        print("deinitialized congrautulations screen")
+    }
 }

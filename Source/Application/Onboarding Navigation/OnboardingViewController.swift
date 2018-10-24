@@ -12,14 +12,19 @@ class OnboardingViewController: UINavigationController, OnboardingViewProtocol {
     
     // MARK: Viper
 	var presenter: OnboardingPresenterProtocol?
+    
+    // MARK: Deinit Verification
+    deinit {
+        print("deinitialized onboarding module")
+    }
 }
 
 extension OnboardingViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.makeTransparent()
-        DispatchQueue.main.async {
-            self.presenter?.start()
+        DispatchQueue.main.async { [weak self] in
+            self?.presenter?.start()
         }
     }
 }

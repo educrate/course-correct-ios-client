@@ -12,6 +12,11 @@ class WelcomeViewController: UIViewController, WelcomeViewProtocol {
     
     // MARK: Viper
 	var presenter: WelcomePresenterProtocol?
+    
+    // MARK: Deinit Verification
+    deinit {
+        print("deinitialized welcome module")
+    }
 }
 
 private extension WelcomeViewController {

@@ -42,8 +42,8 @@ extension WelcomeRouter {
 
 extension WelcomeRouter {
     func signUpRouter(_ signUpRouter: SignUpRouter, didSignUp user: String) {
-        signUpRouter.viewController?.dismiss(animated: true) {
-            self.delegate?.welcomeRouter(self, didCompleteWith: "user signed up")
+        signUpRouter.viewController?.dismiss(animated: true) { [weak self] in
+            self?.delegate?.welcomeRouter(self!, didCompleteWith: "user signed up")
         }
     }
     

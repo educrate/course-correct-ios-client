@@ -16,6 +16,11 @@ class CreatePasswordViewController: UIViewController, CreatePasswordViewProtocol
     // MARK: Views
     @IBOutlet private weak var passwordField: UIFieldViewController!
     @IBOutlet private weak var confirmPasswordField: UIFieldViewController!
+    
+    // MARK: Deinit Verification
+    deinit {
+        print("deinitialized create password screen")
+    }
 }
 
 private extension CreatePasswordViewController {

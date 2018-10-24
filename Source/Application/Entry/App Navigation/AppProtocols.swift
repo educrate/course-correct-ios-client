@@ -27,14 +27,7 @@ protocol AppPresenterProtocol: class, Coordinator {
 // MARK: - Interactor
 
 protocol AppInteractorProtocol: class {
-  var presenter: AppPresenterProtocol?  { get set }
+    var presenter: AppPresenterProtocol?  { get set }
     
     func determineLaunchState()
-}
-
-
-// MARK: - View 
-
-protocol AppViewProtocol: class {
-  var presenter: AppPresenterProtocol?  { get set }
 }

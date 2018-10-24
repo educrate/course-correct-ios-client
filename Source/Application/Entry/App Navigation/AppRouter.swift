@@ -26,14 +26,14 @@ extension AppRouter {
 
 extension AppRouter {
     func onboardingRouter(_ onboardingRouter: OnboardingRouter, didFinishWith state: String) {
-        onboardingRouter.viewController?.dismiss(animated: true) {
-            self.presentMainModule()
+        onboardingRouter.viewController?.dismiss(animated: true) { [weak self] in
+            self?.presentMainModule()
         }
     }
     
     func mainRouter(_ mainRouter: MainRouter, didSignOut user: String) {
-        mainRouter.viewController?.dismiss(animated: true) {
-            self.presentOnboardingModule()
+        mainRouter.viewController?.dismiss(animated: true) { [weak self] in
+            self?.presentOnboardingModule()
         }
     }
 }

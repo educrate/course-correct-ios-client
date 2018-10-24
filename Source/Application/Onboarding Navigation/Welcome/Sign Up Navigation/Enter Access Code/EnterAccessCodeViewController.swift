@@ -15,6 +15,11 @@ class EnterAccessCodeViewController: UIViewController, EnterAccessCodeViewProtoc
     
     // MARK: IBOutlets
     @IBOutlet private weak var field: UIFieldViewController!
+    
+    // MARK: Deinit Verification
+    deinit {
+        print("deinitialized enter access code screen")
+    }
 }
 
 extension EnterAccessCodeViewController {

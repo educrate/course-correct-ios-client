@@ -12,4 +12,9 @@ class WalkthroughViewController: UIViewController, WalkthroughViewProtocol {
     
     // MARK: Viper
 	var presenter: WalkthroughPresenterProtocol?
+    
+    // MARK: Deinit Verification
+    deinit {
+        print("deinitialized walkthrough module")
+    }
 }
