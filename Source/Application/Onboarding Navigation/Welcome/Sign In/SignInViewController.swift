@@ -14,8 +14,8 @@ class SignInViewController: UIViewController, SignInViewProtocol {
     var presenter: SignInPresenterProtocol?
     
     // MARK: Views
-    @IBOutlet private weak var emailField: UIFieldViewController!
-    @IBOutlet private weak var passwordField: UIFieldViewController!
+    private weak var emailField: UIFieldViewController!
+    private weak var passwordField: UIFieldViewController!
     
     // MARK: Deinit Verification
     deinit {
@@ -34,11 +34,9 @@ extension SignInViewController {
         // TODO: Need To Setup Configurations
         switch segueCase(for: segue) {
         case .email:
-            break
-//            emailField.setPlaceholder("Enter Your Email")
+            emailField = segue.viewController()
         case .password:
-            break
-//            passwordField.setPlaceholder("Enter Your Password")
+            passwordField = segue.viewController()
         }
     }
 }

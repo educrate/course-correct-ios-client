@@ -54,10 +54,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="emailField" destination="puU-GB-q3b" id="elW-dF-bdW"/>
-                        <outlet property="passwordField" destination="ao4-MK-CVw" id="qSt-Ze-dm3"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwe-58-5yz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
