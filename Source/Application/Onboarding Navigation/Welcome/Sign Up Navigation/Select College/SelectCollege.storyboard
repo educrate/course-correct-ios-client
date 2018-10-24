@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="width" constant="300" id="oUU-bP-gic"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="slO-Je-2Kl" kind="embed" identifier="Dropdown" id="nhX-g7-HZk"/>
+                                    <segue destination="slO-Je-2Kl" kind="embed" identifier="dropdown" id="nhX-g7-HZk"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -43,7 +43,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aeS-Ul-wjA"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NxN-Yv-FbQ">
+                    <navigationItem key="navigationItem" title="Select College" id="NxN-Yv-FbQ">
                         <barButtonItem key="backBarButtonItem" title=" " id="Bgf-c1-Wnd"/>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="zAq-7k-rMq">
                             <connections>

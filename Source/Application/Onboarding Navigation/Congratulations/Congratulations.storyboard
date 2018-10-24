@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Congratulations View Controller-->
+        <!--Congratulations-->
         <scene sceneID="n7k-vC-F3b">
             <objects>
                 <viewController storyboardIdentifier="CongratulationsViewController" id="8QD-H1-VZx" customClass="CongratulationsViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SNt-HB-H1A"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4cG-IV-yoT">
+                    <navigationItem key="navigationItem" title="Congratulations" id="4cG-IV-yoT">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="QrX-rh-cDB">
                             <connections>
                                 <action selector="donePressed:" destination="8QD-H1-VZx" id="EHa-uS-gzl"/>

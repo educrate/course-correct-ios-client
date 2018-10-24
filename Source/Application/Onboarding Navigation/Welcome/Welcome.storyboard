@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Welcome View Controller-->
+        <!--Welcome-->
         <scene sceneID="aDK-N6-GrW">
             <objects>
                 <viewController storyboardIdentifier="WelcomeViewController" id="FTH-rk-2Rd" customClass="WelcomeViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iby-ph-3VZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="V1j-B3-mqq">
+                    <navigationItem key="navigationItem" title="Welcome" id="V1j-B3-mqq">
                         <barButtonItem key="backBarButtonItem" title=" " id="Evc-9m-KGf"/>
                     </navigationItem>
                 </viewController>

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Enter Student Identifier View Controller-->
+        <!--Enter Student Identifier-->
         <scene sceneID="oa7-Sr-RaE">
             <objects>
                 <viewController storyboardIdentifier="EnterStudentIdentifierViewController" id="zz2-8n-heV" customClass="EnterStudentIdentifierViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                         <viewLayoutGuide key="safeArea" id="B3Q-uU-Y7e"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="SUE-fa-Z0w">
+                    <navigationItem key="navigationItem" title="Enter Student Identifier" id="SUE-fa-Z0w">
                         <barButtonItem key="backBarButtonItem" title=" " id="Jgw-hI-fAA"/>
                         <barButtonItem key="rightBarButtonItem" title=" Next" id="vtx-Zh-71h">
                             <connections>

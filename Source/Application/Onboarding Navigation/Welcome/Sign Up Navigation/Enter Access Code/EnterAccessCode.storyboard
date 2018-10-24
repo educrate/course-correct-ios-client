@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Enter Access Code View Controller-->
+        <!--Enter Access Code-->
         <scene sceneID="hig-xb-VAW">
             <objects>
                 <viewController storyboardIdentifier="EnterAccessCodeViewController" id="GUR-5h-XIw" customClass="EnterAccessCodeViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ytc-o4-gCg"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ATQ-dm-9B1">
+                    <navigationItem key="navigationItem" title="Enter Access Code" id="ATQ-dm-9B1">
                         <barButtonItem key="backBarButtonItem" title=" " id="j41-wi-Afc"/>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="zaa-cF-8eZ">
                             <connections>

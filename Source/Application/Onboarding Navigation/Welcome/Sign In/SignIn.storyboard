@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign In View Controller-->
+        <!--Sign In-->
         <scene sceneID="BR0-UQ-w6p">
             <objects>
                 <viewController storyboardIdentifier="SignInViewController" id="dkO-G9-AKZ" customClass="SignInViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tFH-o8-ZUF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JWb-BQ-3so">
+                    <navigationItem key="navigationItem" title="Sign In" id="JWb-BQ-3so">
                         <barButtonItem key="backBarButtonItem" title=" " id="NuA-5b-9xt"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="nlk-IV-tmb">
                             <connections>
