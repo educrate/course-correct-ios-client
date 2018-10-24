@@ -9,7 +9,7 @@
 import UIKit
 
 protocol WelcomeViewControllerDelegate: class {
-    func welcomeViewController(_ welcomeViewController: WelcomeViewController, didSelect option: String)
+    func welcomeViewController(_ welcomeViewController: WelcomeViewController, didSignIn user: String)
 }
 
 class WelcomeViewController: UIViewController, WelcomeViewProtocol {
@@ -21,10 +21,10 @@ class WelcomeViewController: UIViewController, WelcomeViewProtocol {
 
 private extension WelcomeViewController {
     @IBAction func createAccountPressed(_ sender: UIButton, forEvent event: UIEvent) {
-        presenter?.showSignUp()
+        delegate?.welcomeViewController(self, didSelect: "create account")
     }
     
     @IBAction func signInPressed(_ sender: UIButton, forEvent event: UIEvent) {
-        presenter?.showSignIn()
+        delegate?.welcomeViewController(self, didSelect: "sign in")
     }
 }

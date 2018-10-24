@@ -24,7 +24,7 @@ class SelectCollegeViewController: UIViewController {
 
 private extension SelectCollegeViewController {
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
-        presenter?.showEnterStudentIdentifier()
+        delegate?.selectCollegeViewController(self, didSelect: "college")
     }
 }
 

@@ -45,19 +45,11 @@ extension OnboardingRouter {
 
 extension OnboardingRouter {
     func walkthroughViewController(_ walkthroughViewController: WalkthroughViewController, didCompleteWith state: String) {
-        
+        presentWelcome()
     }
     
     func welcomeViewController(_ welcomeViewController: WelcomeViewController, didSelect option: String) {
-        
-    }
-    
-    func signUpRouter(_ signUpRouter: SignUpRouter, didSignUp user: String) {
-        
-    }
-    
-    func signInRouter(_ signInRouter: SignInRouter, didSignIn user: String) {
-        
+        presentWelcome()
     }
     
     func congratulationsViewController(_ congratulationsViewController: CongratulationsViewController, didDisplayWith state: String) {

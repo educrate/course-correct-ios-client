@@ -16,11 +16,13 @@ class SignUpViewController: UINavigationController, SignUpViewProtocol {
     
     // MARK: Viper
 	var presenter: SignUpPresenterProtocol?
+    weak var signUpDelegate: SignUpViewControllerDelegate?
 }
 
 extension SignUpViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationBar.makeTransparent()
         DispatchQueue.main.async {
             self.presenter?.start()
         }

@@ -21,6 +21,7 @@ extension SignUpRouter {
         let presenter = SignUpPresenter(interface: view, interactor: interactor, router: router)
         
         view.presenter = presenter
+        view.signUpDelegate = delegate
         interactor.presenter = presenter
         router.viewController = view
         
@@ -48,18 +49,18 @@ extension SignUpRouter {
 
 extension SignUpRouter {
     func selectCollegeViewController(_ selectCollegeViewController: SelectCollegeViewController, didSelect college: String) {
-        
+        showEnterStudentIdentifier()
     }
     
     func enterStudentIdentifierViewController(_ enterStudentIdentifierViewController: EnterStudentIdentifierViewController, didEnter studentIdentifier: String) {
-        
+        showEnterAccessCode()
     }
     
     func enterAccessCodeViewController(_ enterAccessCodeViewController: EnterAccessCodeViewController, didEnter accessCode: String) {
-        
+        showCreatePassword()
     }
     
     func createPasswordViewController(_ createPasswordViewController: CreatePasswordViewController, didCreate password: String) {
-        
+        viewController?.dismiss(animated: true, completion: nil)
     }
 }

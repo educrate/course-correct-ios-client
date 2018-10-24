@@ -25,7 +25,7 @@ class EnterAccessCodeViewController: UIViewController, EnterAccessCodeViewProtoc
 extension EnterAccessCodeViewController {
     @IBAction func nextPressed(_ sender: UIBarButtonItem) {
         field.endEditing()
-        presenter?.accessCodeEntered(with: field.text)
+        delegate?.enterAccessCodeViewController(self, didEnter: field.text)
     }
 }
 
