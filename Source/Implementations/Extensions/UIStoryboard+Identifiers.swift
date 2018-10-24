@@ -31,6 +31,9 @@ extension UIStoryboard {
         // MARK: Sign In
         case signIn = "SignIn"
         
+        // MARK: Main
+        case main = "Main"
+        
         // MARK: Schedule
         case calendar = "Calendar"
         case event = "Event"

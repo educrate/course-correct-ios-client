@@ -9,7 +9,7 @@
 import UIKit
 
 class EventRouter: EventWireframeProtocol {
-    weak var viewController: UIViewController?
+    private weak var viewController: UIViewController?
 }
 
 extension EventRouter {

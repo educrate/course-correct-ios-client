@@ -9,23 +9,7 @@
 import UIKit
 
 class ProfileOverviewRouter: ProfileOverviewWireframeProtocol {
-    weak var viewController: UIViewController?
-}
-
-extension ProfileOverviewRouter {
-    static func createModule() -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .profileOverview)
-        let view: ProfileOverviewViewController = storyboard.instantiateViewController()
-        let interactor = ProfileOverviewInteractor()
-        let router = ProfileOverviewRouter()
-        let presenter = ProfileOverviewPresenter(interface: view, interactor: interactor, router: router)
-        
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-        
-        return view
-    }
+    private weak var viewController: UIViewController?
 }
 
 extension ProfileOverviewRouter {
@@ -43,5 +27,21 @@ extension ProfileOverviewRouter {
     
     func presentWelcome() {
         
+    }
+}
+
+extension ProfileOverviewRouter {
+    static func createModule() -> UIViewController {
+        let storyboard = UIStoryboard(storyboard: .profileOverview)
+        let view: ProfileOverviewViewController = storyboard.instantiateViewController()
+        let interactor = ProfileOverviewInteractor()
+        let router = ProfileOverviewRouter()
+        let presenter = ProfileOverviewPresenter(interface: view, interactor: interactor, router: router)
+        
+        view.presenter = presenter
+        interactor.presenter = presenter
+        router.viewController = view
+        
+        return view
     }
 }

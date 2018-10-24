@@ -9,7 +9,7 @@
 import UIKit
 
 class AddLocationRouter: AddLocationWireframeProtocol {
-    weak var viewController: UIViewController?
+    private weak var viewController: UIViewController?
 }
 
 extension AddLocationRouter {

@@ -9,7 +9,7 @@
 import UIKit
 
 class TutorProfileRouter: TutorProfileWireframeProtocol {
-    weak var viewController: UIViewController?
+    private weak var viewController: UIViewController?
 }
 
 extension TutorProfileRouter {

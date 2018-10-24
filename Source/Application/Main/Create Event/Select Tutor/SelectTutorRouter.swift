@@ -9,7 +9,7 @@
 import UIKit
 
 class SelectTutorRouter: SelectTutorWireframeProtocol {
-    weak var viewController: UIViewController?
+    private weak var viewController: UIViewController?
 }
 
 extension SelectTutorRouter {

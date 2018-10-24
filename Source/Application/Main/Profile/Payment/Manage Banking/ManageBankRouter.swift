@@ -9,7 +9,7 @@
 import UIKit
 
 class ManageBankRouter: ManageBankWireframeProtocol {
-    weak var viewController: UIViewController?
+    private weak var viewController: UIViewController?
 }
 
 extension ManageBankRouter {

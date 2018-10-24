@@ -13,6 +13,16 @@ class ProfilePaymentRouter: ProfilePaymentWireframeProtocol {
 }
 
 extension ProfilePaymentRouter {
+    func presentAddCard() {
+        viewController?.navigationController?.pushViewController(ManageCardRouter.createModule(), animated: true)
+    }
+    
+    func presentAddBank() {
+        viewController?.navigationController?.pushViewController(ManageBankRouter.createModule(), animated: true)
+    }   
+}
+
+extension ProfilePaymentRouter {
     static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .profilePayment)
         let view: ProfilePaymentViewController = storyboard.instantiateViewController()
@@ -26,14 +36,4 @@ extension ProfilePaymentRouter {
         
         return view
     }
-}
-
-extension ProfilePaymentRouter {
-    func presentAddCard() {
-        viewController?.navigationController?.pushViewController(ManageCardRouter.createModule(), animated: true)
-    }
-    
-    func presentAddBank() {
-        viewController?.navigationController?.pushViewController(ManageBankRouter.createModule(), animated: true)
-    }   
 }

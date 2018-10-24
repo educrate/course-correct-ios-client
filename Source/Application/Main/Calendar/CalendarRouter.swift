@@ -9,7 +9,21 @@
 import UIKit
 
 class CalendarRouter: CalendarWireframeProtocol {
-    weak var viewController: UIViewController?
+    private weak var viewController: UIViewController?
+}
+
+extension CalendarRouter {
+    func presentEvent() {
+        viewController?.show(EventRouter.createModule(), sender: nil)
+    }
+    
+    func presentCreateEvent() {
+        viewController?.show(CreateEventRouter.createModule(), sender: nil)
+    }
+    
+    func presentProfile() {
+        viewController?.show(ProfileOverviewRouter.createModule(), sender: nil)
+    }
 }
 
 extension CalendarRouter {
@@ -25,25 +39,5 @@ extension CalendarRouter {
         router.viewController = view
         
         return view
-    }
-}
-
-extension CalendarRouter {
-    func presentEvent() {
-        if let view = viewController, let navigationController = view.navigationController {
-            navigationController.pushViewController(EventRouter.createModule(), animated: true)
-        }
-    }
-    
-    func presentCreateEvent() {
-        if let view = viewController, let navigationController = view.navigationController {
-            navigationController.pushViewController(CreateEventRouter.createModule(), animated: true)
-        }
-    }
-    
-    func presentProfile() {
-        if let view = viewController, let navigationController = view.navigationController {
-            navigationController.pushViewController(ProfileOverviewRouter.createModule(), animated: true)
-        }
     }
 }

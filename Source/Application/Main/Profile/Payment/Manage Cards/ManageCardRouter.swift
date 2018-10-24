@@ -9,7 +9,7 @@
 import UIKit
 
 class ManageCardRouter: ManageCardWireframeProtocol {
-    weak var viewController: UIViewController?
+    private weak var viewController: UIViewController?
 }
 
 extension ManageCardRouter {

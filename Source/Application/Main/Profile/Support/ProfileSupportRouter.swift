@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileSupportRouter: ProfileSupportWireframeProtocol {
-    weak var viewController: UIViewController?
+    private weak var viewController: UIViewController?
 }
 
 extension ProfileSupportRouter {

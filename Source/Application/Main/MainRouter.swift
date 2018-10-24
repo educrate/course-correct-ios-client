@@ -15,7 +15,8 @@ class MainRouter: MainWireframeProtocol {
 
 extension MainRouter {
     static func createModule(_ delegate: MainRouterDelegate?) -> UIViewController {
-        let view = MainViewController(nibName: nil, bundle: nil)
+        let storyboard = UIStoryboard(storyboard: .main)
+        let view: MainViewController = storyboard.instantiateViewController()
         let interactor = MainInteractor()
         let router = MainRouter()
         let presenter = MainPresenter(interface: view, interactor: interactor, router: router)
