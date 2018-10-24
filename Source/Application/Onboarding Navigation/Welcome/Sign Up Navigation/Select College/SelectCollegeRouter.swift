@@ -31,7 +31,7 @@ extension SelectCollegeRouter {
 }
 
 extension SelectCollegeRouter {
-    func presentEnterStudentIdentifier() {
-        
+    func showNextScreen() {
+        delegate?.selectCollegeRouter(self, didSelect: "college")
     }
 }

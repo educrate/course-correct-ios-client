@@ -31,7 +31,7 @@ extension CreatePasswordRouter {
 }
 
 extension CreatePasswordRouter {
-    func presentCalendar() {
-        viewController?.show(CalendarRouter.createModule(), sender: nil)
+    func showNextScreen() {
+        delegate?.createPasswordRouter(self, didCreate: "password")
     }
 }

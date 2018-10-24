@@ -29,3 +29,9 @@ extension EnterAccessCodeRouter {
         return view
     }
 }
+
+extension EnterAccessCodeRouter {
+    func showNextScreen() {
+        delegate?.enterAccessCodeRouter(self, didEnter: "access code")
+    }
+}

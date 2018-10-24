@@ -20,7 +20,7 @@ protocol WelcomeWireframeProtocol: SignUpRouterDelegate, SignInRouterDelegate {
 // MARK: - Coordinator
 
 protocol WelcomeRouterDelegate: class {
-    func welcomeRouter(_ welcomeRouter: WelcomeRouter, didSelect option: String)
+    func welcomeRouter(_ welcomeRouter: WelcomeRouter, didCompleteWith user: String)
 }
 
 

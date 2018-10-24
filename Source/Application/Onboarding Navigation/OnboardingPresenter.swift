@@ -29,25 +29,3 @@ extension OnboardingPresenter {
         router.presentWelcome()
     }
 }
-
-extension OnboardingPresenter {
-    func walkthroughViewController(_ walkthroughViewController: WalkthroughViewController, didCompleteWith state: String) {
-        
-    }
-    
-    func welcomeViewController(_ welcomeViewController: WelcomeViewController, didSelect option: String) {
-        
-    }
-    
-    func signUpPresenter(_ signUpPresenter: SignUpPresenter, didSignUp user: String) {
-        
-    }
-    
-    func signInViewController(_ signInViewController: SignInViewController, didSignIn user: String) {
-        
-    }
-    
-    func congratulationsViewController(_ congratulationsViewController: CongratulationsViewController, didDisplayWith state: String) {
-        
-    }
-}

@@ -32,7 +32,7 @@ extension EnterStudentIdentifierPresenter {
     func studentIdentifierValidated(for identifier: String, with result: Result<Void, EnterStudentIdentifierError>) {
         switch result {
         case .success:
-            return
+            router.showNextScreen()
         case .failure(let error):
             view?.show(error: error)
         }

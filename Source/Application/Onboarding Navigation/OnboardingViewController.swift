@@ -17,6 +17,7 @@ class OnboardingViewController: UINavigationController, OnboardingViewProtocol {
 extension OnboardingViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationBar.makeTransparent()
         DispatchQueue.main.async {
             self.presenter?.start()
         }

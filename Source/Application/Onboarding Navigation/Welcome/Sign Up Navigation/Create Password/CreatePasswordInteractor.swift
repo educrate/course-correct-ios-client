@@ -14,9 +14,6 @@ class CreatePasswordInteractor: CreatePasswordInteractorProtocol {
 
 extension CreatePasswordInteractor {
     func validate(_ password: String, confirmedPassword: String) {
-//        presenter?.passwordsValidated(Result(value: ()))
-        
-        // Network call for validate is made
-        
+        presenter?.passwordsValidated(Result(value: ()))
     }
 }

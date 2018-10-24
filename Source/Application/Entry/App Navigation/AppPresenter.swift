@@ -11,14 +11,11 @@ import UIKit
 class AppPresenter: AppPresenterProtocol {
     
     // MARK: Viper
-    weak private var view: AppViewProtocol?
     var interactor: AppInteractorProtocol?
     private let router: AppWireframeProtocol
 
-    init(interface: AppViewProtocol,
-         interactor: AppInteractorProtocol?,
+    init(interactor: AppInteractorProtocol?,
          router: AppWireframeProtocol) {
-        self.view = interface
         self.interactor = interactor
         self.router = router
     }

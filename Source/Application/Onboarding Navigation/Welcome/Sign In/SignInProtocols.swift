@@ -11,7 +11,9 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol SignInWireframeProtocol: class {}
+protocol SignInWireframeProtocol: class {
+    func showNextScreen()
+}
 
 
 // MARK: - Coordinator

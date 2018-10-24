@@ -32,7 +32,7 @@ extension CreatePasswordPresenter {
     func passwordsValidated(_ result: Result<Void, CreatePasswordError>) {
         switch result {
         case .success:
-            return
+            router.showNextScreen()
         case .failure(let error):
             view?.show(error: error)
         }

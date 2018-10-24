@@ -33,8 +33,7 @@ extension SelectCollegePresenter {
         interactor?.fetchColleges(for: input)
     }
     
-    func collegesFetched(for input: String,
-                         with result: Result<[String], SelectCollegeError>) {
+    func collegesFetched(for input: String, with result: Result<[String], SelectCollegeError>) {
         switch result {
         case .failure(let error):
             view?.show(error: error)
@@ -42,10 +41,17 @@ extension SelectCollegePresenter {
             view?.show(names: colleges)
         }
     }
-}
-
-extension SelectCollegePresenter {
-    func showEnterStudentIdentifier() {
-        
+    
+    func selected(college identifier: String) {
+        interactor?.validate(college: identifier)
+    }
+    
+    func collegeValidated(for identifier: String, with result: Result<Void, SelectCollegeError>) {
+        switch result {
+        case .success:
+            router.showNextScreen()
+        case .failure(let error):
+            view?.show(error: error)
+        }
     }
 }

@@ -22,8 +22,6 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>AppLaunch</string>
-	<key>UIMainStoryboardFile</key>
-	<string>App</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

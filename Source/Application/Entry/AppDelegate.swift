@@ -12,3 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 }
+
+extension AppDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        AppRouter.createModule(window!)?.start()
+        return true
+    }
+}

@@ -11,7 +11,9 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol CreatePasswordWireframeProtocol: class {}
+protocol CreatePasswordWireframeProtocol: class {
+    func showNextScreen()
+}
 
 
 // MARK: - Coordinator

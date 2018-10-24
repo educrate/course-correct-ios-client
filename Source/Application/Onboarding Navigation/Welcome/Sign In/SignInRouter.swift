@@ -31,7 +31,7 @@ extension SignInRouter {
 }
 
 extension SignInRouter {
-    func presentCalendar() {
-        viewController?.show(CalendarRouter.createModule(), sender: nil)
+    func showNextScreen() {
+        delegate?.signInRouter(self, didSignIn: "user signed in")
     }
 }

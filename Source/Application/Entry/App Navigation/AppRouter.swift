@@ -9,43 +9,48 @@
 import UIKit
 
 class AppRouter: AppWireframeProtocol {
-    weak var viewController: UIViewController?
+    weak var window: UIWindow?
 }
 
 extension AppRouter {
     func presentOnboardingModule() {
-        viewController?.present(OnboardingRouter.createModule(self), animated: true)
+        window?.rootViewController = OnboardingRouter.createModule(self)
+        window?.makeKeyAndVisible()
     }
     
     func presentMainModule() {
-        viewController?.present(MainRouter.createModule(self), animated: true)
+        window?.rootViewController = MainRouter.createModule(self)
+        window?.makeKeyAndVisible()
     }
 }
 
 extension AppRouter {
     func onboardingRouter(_ onboardingRouter: OnboardingRouter, didFinishWith state: String) {
-        
+        onboardingRouter.viewController?.dismiss(animated: true) {
+            self.presentMainModule()
+        }
     }
     
     func mainRouter(_ mainRouter: MainRouter, didSignOut user: String) {
-        
+        mainRouter.viewController?.dismiss(animated: true) {
+            self.presentOnboardingModule()
+        }
     }
 }
 
 extension AppRouter {
-    static func createModule(_ view: AppViewProtocol) -> AppPresenterProtocol? {
-        let interactor = AppInteractor()
-        let router = AppRouter()
-        let presenter = AppPresenter(interface: view, interactor: interactor, router: router)
-        
-        guard let viewController = view as? UIViewController else {
-            assertionFailure("view must be of type UIViewController")
+    static func createModule(_ window: UIWindow?) -> AppPresenterProtocol? {
+        guard let view = window else {
+            assertionFailure("there must be a root window set")
             return nil
         }
         
-        view.presenter = presenter
+        let interactor = AppInteractor()
+        let router = AppRouter()
+        let presenter = AppPresenter(interactor: interactor, router: router)
+        
         interactor.presenter = presenter
-        router.viewController = viewController
+        router.window = view
         
         return presenter
     }

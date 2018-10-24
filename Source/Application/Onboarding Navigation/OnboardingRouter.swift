@@ -9,12 +9,12 @@
 import UIKit
 
 class OnboardingRouter: OnboardingWireframeProtocol {
-    weak var viewController: UIViewController?
+    weak var viewController: UINavigationController?
     weak var delegate: OnboardingRouterDelegate?
 }
 
 extension OnboardingRouter {
-    static func createModule(_ delegate: OnboardingRouterDelegate?) -> UIViewController {
+    static func createModule(_ delegate: OnboardingRouterDelegate?) -> UINavigationController {
         let storyboard = UIStoryboard(storyboard: .onboarding)
         let view: OnboardingViewController = storyboard.instantiateViewController()
         let interactor = OnboardingInteractor()
@@ -32,28 +32,28 @@ extension OnboardingRouter {
 
 extension OnboardingRouter {
     func presentWalkthrough() {
-        viewController?.present(WalkthroughRouter.createModule(self), animated: true)
+        viewController?.setViewControllers([WalkthroughRouter.createModule(self)], animated: true)
     }
     
     func presentWelcome() {
-        viewController?.present(WelcomeRouter.createModule(self), animated: true)
+        viewController?.setViewControllers([WelcomeRouter.createModule(self)], animated: true)
     }
     
     func presentCongratulations() {
-        viewController?.present(CongratulationsRouter.createModule(self), animated: true)
+        viewController?.setViewControllers([CongratulationsRouter.createModule(self)], animated: true)
     }
 }
 
 extension OnboardingRouter {
     func walkthroughRouter(_ walkthroughRouter: WalkthroughRouter, didCompleteWith state: String) {
-        
+        presentWelcome()
     }
     
-    func welcomeRouter(_ welcomeRouter: WelcomeRouter, didSelect option: String) {
-        
+    func welcomeRouter(_ welcomeRouter: WelcomeRouter, didCompleteWith user: String) {
+        presentCongratulations()
     }
     
     func congratulationsRouter(_ congratulationsRouter: CongratulationsRouter, didDisplayWith state: String) {
-        
+        delegate?.onboardingRouter(self, didFinishWith: "congratulations screen handled")
     }
 }

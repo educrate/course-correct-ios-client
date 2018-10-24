@@ -32,7 +32,7 @@ extension SignInPresenter {
     func credentialsValidated(_ result: Result<Void, SignInError>) {
         switch result {
         case .success:
-            return
+            router.showNextScreen()
         case .failure(let error):
             view?.show(error: error)
         }

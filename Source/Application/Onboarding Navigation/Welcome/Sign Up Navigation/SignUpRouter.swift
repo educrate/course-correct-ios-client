@@ -50,18 +50,18 @@ extension SignUpRouter {
 
 extension SignUpRouter {
     func selectCollegeRouter(_ selectCollegeRouter: SelectCollegeRouter, didSelect college: String) {
-        viewController?.show(SelectCollegeRouter.createModule(self), sender: nil)
+        showEnterStudentIdentifier()
     }
     
     func enterStudentIdentifierRouter(_ enterStudentIdentifierRouter: EnterStudentIdentifierRouter, didEnter studentIdentifier: String) {
-        viewController?.show(EnterStudentIdentifierRouter.createModule(self), sender: nil)
+        showEnterAccessCode()
     }
     
     func enterAccessCodeRouter(_ enterAccessCodeRouter: EnterAccessCodeRouter, didEnter accessCode: String) {
-        viewController?.show(EnterAccessCodeRouter.createModule(self), sender: nil)
+        showCreatePassword()
     }
     
     func createPasswordRouter(_ createPasswordRouter: CreatePasswordRouter, didCreate password: String) {
-        viewController?.show(CreatePasswordRouter.createModule(self), sender: nil)
+        delegate?.signUpRouter(self, didSignUp: "new user created with password")
     }
 }

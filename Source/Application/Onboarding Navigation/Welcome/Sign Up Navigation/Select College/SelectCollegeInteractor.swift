@@ -16,4 +16,8 @@ extension SelectCollegeInteractor {
     func fetchColleges(for input: String) {
         presenter?.collegesFetched(for: input, with: Result(value: ["UCI", "UCLA", "USC", "UCSD"]))
     }
+    
+    func validate(college identifier: String) {
+        presenter?.collegeValidated(for: identifier, with: Result(value: ()))
+    }
 }

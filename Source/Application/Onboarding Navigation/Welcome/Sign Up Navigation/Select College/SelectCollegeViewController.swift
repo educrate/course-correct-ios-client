@@ -19,7 +19,7 @@ class SelectCollegeViewController: UIViewController {
 
 private extension SelectCollegeViewController {
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
-        
+        presenter?.selected(college: "identifier")
     }
 }
 

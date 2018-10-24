@@ -14,7 +14,6 @@ extension UIStoryboard {
         
         // MARK: Entry
         case appLaunch = "AppLaunch"
-        case app = "App"
         
         // MARK: Onboarding
         case onboarding = "Onboarding"

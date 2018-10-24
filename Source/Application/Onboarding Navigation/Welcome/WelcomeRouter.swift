@@ -32,20 +32,22 @@ extension WelcomeRouter {
 
 extension WelcomeRouter {
     func presentSignUpModule() {
-        viewController?.present(SignUpRouter.createModule(self), animated: true)
+        viewController?.show(SignUpRouter.createModule(self), sender: nil)
     }
     
     func presentSignIn() {
-        
+        viewController?.show(SignInRouter.createModule(self), sender: nil)
     }
 }
 
 extension WelcomeRouter {
     func signUpRouter(_ signUpRouter: SignUpRouter, didSignUp user: String) {
-        
+        signUpRouter.viewController?.dismiss(animated: true) {
+            self.delegate?.welcomeRouter(self, didCompleteWith: "user signed up")
+        }
     }
     
     func signInRouter(_ signInRouter: SignInRouter, didSignIn user: String) {
-        
+        delegate?.welcomeRouter(self, didCompleteWith: "user signed in")
     }
 }

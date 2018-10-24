@@ -20,6 +20,7 @@ class EnterStudentIdentifierViewController: UIViewController, EnterStudentIdenti
 extension EnterStudentIdentifierViewController {
     @IBAction func nextPressed(_ sender: UIBarButtonItem) {
         field.endEditing()
+        presenter?.studentIdentifierEntered(with: field.text)
     }
 }
 

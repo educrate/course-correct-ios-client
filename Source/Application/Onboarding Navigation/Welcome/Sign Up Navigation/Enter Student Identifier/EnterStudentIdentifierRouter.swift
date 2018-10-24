@@ -29,3 +29,9 @@ extension EnterStudentIdentifierRouter {
         return view
     }
 }
+
+extension EnterStudentIdentifierRouter {
+    func showNextScreen() {
+        delegate?.enterStudentIdentifierRouter(self, didEnter: "identifier")
+    }
+}

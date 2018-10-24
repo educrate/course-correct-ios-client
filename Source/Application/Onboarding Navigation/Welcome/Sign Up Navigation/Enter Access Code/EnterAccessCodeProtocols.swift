@@ -11,7 +11,9 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol EnterAccessCodeWireframeProtocol: class {}
+protocol EnterAccessCodeWireframeProtocol: class {
+    func showNextScreen()
+}
 
 
 // MARK: - Coordinator

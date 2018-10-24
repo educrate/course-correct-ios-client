@@ -22,6 +22,7 @@ private extension CreatePasswordViewController {
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
         passwordField.endEditing()
         confirmPasswordField.endEditing()
+        presenter?.entered(password: passwordField.text, confirmedPassword: confirmPasswordField.text)
     }
 }
 

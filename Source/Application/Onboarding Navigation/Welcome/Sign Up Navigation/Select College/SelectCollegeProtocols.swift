@@ -11,7 +11,9 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol SelectCollegeWireframeProtocol: class {}
+protocol SelectCollegeWireframeProtocol: class {
+    func showNextScreen()
+}
 
 
 // MARK: - Coordinator
@@ -25,20 +27,14 @@ protocol SelectCollegeRouterDelegate: class {
 
 protocol SelectCollegePresenterProtocol: class {
     
-    
-    // MARK: - From View
-    
-    // MARK: Update Methods
+    // MARK: From View
     func updateView(for input: String?)
-    
-    // MARK: Routing Methods
-    func showEnterStudentIdentifier()
+    func selected(college identifier: String)
     
     
-    // MARK: - To View
-    
-    // MARK: Update Methods
+    // MARK: To View
     func collegesFetched(for input: String, with result: Result<[String], SelectCollegeError>)
+    func collegeValidated(for identifier: String, with result: Result<Void, SelectCollegeError>)
 }
 
 
@@ -51,6 +47,7 @@ protocol SelectCollegeInteractorProtocol: class {
     
     // MARK: Methods
     func fetchColleges(for input: String)
+    func validate(college identifier: String)
 }
 
 

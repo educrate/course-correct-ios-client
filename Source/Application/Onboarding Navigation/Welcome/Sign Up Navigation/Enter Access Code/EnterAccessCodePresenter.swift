@@ -32,7 +32,7 @@ extension EnterAccessCodePresenter {
     func accessCodeValidated(for code: String, with result: Result<Void, EnterAccessCodeError>) {
         switch result {
         case .success:
-            return
+            router.showNextScreen()
         case .failure(let error):
             view?.show(error: error)
         }
