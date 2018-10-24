@@ -11,10 +11,17 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol OnboardingWireframeProtocol: WalkthroughViewControllerDelegate, WelcomeViewControllerDelegate, CongratulationsViewControllerDelegate {
+protocol OnboardingWireframeProtocol: WalkthroughRouterDelegate, WelcomeRouterDelegate, CongratulationsRouterDelegate {
     func presentWalkthrough()
     func presentWelcome()
     func presentCongratulations()
+}
+
+
+// MARK: - Coordinator
+
+protocol OnboardingRouterDelegate: class {
+    func onboardingRouter(_ onboardingRouter: OnboardingRouter, didFinishWith state: String)
 }
 
 

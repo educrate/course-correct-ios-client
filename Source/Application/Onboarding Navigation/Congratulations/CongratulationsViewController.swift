@@ -8,13 +8,8 @@
 
 import UIKit
 
-protocol CongratulationsViewControllerDelegate: class {
-    func congratulationsViewController(_ congratulationsViewController: CongratulationsViewController, didDisplayWith state: String)
-}
-
 class CongratulationsViewController: UIViewController, CongratulationsViewProtocol {
     
     // MARK: Viper
 	var presenter: CongratulationsPresenterProtocol?
-    weak var delegate: CongratulationsViewControllerDelegate?
 }

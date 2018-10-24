@@ -11,9 +11,16 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol WelcomeWireframeProtocol: SignUpViewControllerDelegate, SignInViewControllerDelegate {
+protocol WelcomeWireframeProtocol: SignUpRouterDelegate, SignInRouterDelegate {
     func presentSignUpModule()
     func presentSignIn()
+}
+
+
+// MARK: - Coordinator
+
+protocol WelcomeRouterDelegate: class {
+    func welcomeRouter(_ welcomeRouter: WelcomeRouter, didSelect option: String)
 }
 
 

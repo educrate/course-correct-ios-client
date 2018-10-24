@@ -8,15 +8,10 @@
 
 import UIKit
 
-protocol SelectCollegeViewControllerDelegate: class {
-    func selectCollegeViewController(_ selectCollegeViewController: SelectCollegeViewController, didSelect college: String)
-}
-
 class SelectCollegeViewController: UIViewController {
     
     // MARK: Viper
     var presenter: SelectCollegePresenterProtocol?
-    weak var delegate: SelectCollegeViewControllerDelegate?
     
     // MARK: Views
     @IBOutlet private weak var collegeSelector: UIDropdownViewController!
@@ -24,7 +19,7 @@ class SelectCollegeViewController: UIViewController {
 
 private extension SelectCollegeViewController {
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
-        delegate?.selectCollegeViewController(self, didSelect: "college")
+        
     }
 }
 

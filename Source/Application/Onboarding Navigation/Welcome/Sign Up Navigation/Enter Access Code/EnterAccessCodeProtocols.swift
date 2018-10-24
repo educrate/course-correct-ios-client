@@ -14,6 +14,13 @@ import Foundation
 protocol EnterAccessCodeWireframeProtocol: class {}
 
 
+// MARK: - Coordinator
+
+protocol EnterAccessCodeRouterDelegate: class {
+    func enterAccessCodeRouter(_ enterAccessCodeRouter: EnterAccessCodeRouter, didEnter accessCode: String)
+}
+
+
 // MARK: - Presenter
 
 protocol EnterAccessCodePresenterProtocol: class {

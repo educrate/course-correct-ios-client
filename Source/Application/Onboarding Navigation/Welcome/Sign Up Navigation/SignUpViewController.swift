@@ -8,15 +8,10 @@
 
 import UIKit
 
-protocol SignUpViewControllerDelegate: class {
-    func signUpViewController(_ signUpViewController: SignUpViewController, didSignUp user: String)
-}
-
 class SignUpViewController: UINavigationController, SignUpViewProtocol {
     
     // MARK: Viper
 	var presenter: SignUpPresenterProtocol?
-    weak var signUpDelegate: SignUpViewControllerDelegate?
 }
 
 extension SignUpViewController {

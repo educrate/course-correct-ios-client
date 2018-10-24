@@ -10,10 +10,11 @@ import UIKit
 
 class EnterStudentIdentifierRouter: EnterStudentIdentifierWireframeProtocol {
     weak var viewController: UIViewController?
+    weak var delegate: EnterStudentIdentifierRouterDelegate?
 }
 
 extension EnterStudentIdentifierRouter {
-    static func createModule(_ delegate: EnterStudentIdentifierViewControllerDelegate?) -> UIViewController {
+    static func createModule(_ delegate: EnterStudentIdentifierRouterDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .enterStudentIdentifier)
         let view: EnterStudentIdentifierViewController = storyboard.instantiateViewController()
         let interactor = EnterStudentIdentifierInteractor()
@@ -21,9 +22,9 @@ extension EnterStudentIdentifierRouter {
         let presenter = EnterStudentIdentifierPresenter(interface: view, interactor: interactor, router: router)
         
         view.presenter = presenter
-        view.delegate = delegate
         interactor.presenter = presenter
         router.viewController = view
+        router.delegate = delegate
         
         return view
     }

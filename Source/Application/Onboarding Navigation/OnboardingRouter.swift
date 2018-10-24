@@ -10,10 +10,11 @@ import UIKit
 
 class OnboardingRouter: OnboardingWireframeProtocol {
     weak var viewController: UIViewController?
+    weak var delegate: OnboardingRouterDelegate?
 }
 
 extension OnboardingRouter {
-    static func createModule(_ delegate: OnboardingViewControllerDelegate?) -> UIViewController {
+    static func createModule(_ delegate: OnboardingRouterDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .onboarding)
         let view: OnboardingViewController = storyboard.instantiateViewController()
         let interactor = OnboardingInteractor()
@@ -21,9 +22,9 @@ extension OnboardingRouter {
         let presenter = OnboardingPresenter(interface: view, interactor: interactor, router: router)
         
         view.presenter = presenter
-        view.onboardingDelegate = delegate
         interactor.presenter = presenter
         router.viewController = view
+        router.delegate = delegate
         
         return view
     }
@@ -44,15 +45,15 @@ extension OnboardingRouter {
 }
 
 extension OnboardingRouter {
-    func walkthroughViewController(_ walkthroughViewController: WalkthroughViewController, didCompleteWith state: String) {
-        presentWelcome()
+    func walkthroughRouter(_ walkthroughRouter: WalkthroughRouter, didCompleteWith state: String) {
+        
     }
     
-    func welcomeViewController(_ welcomeViewController: WelcomeViewController, didSelect option: String) {
-        presentWelcome()
+    func welcomeRouter(_ welcomeRouter: WelcomeRouter, didSelect option: String) {
+        
     }
     
-    func congratulationsViewController(_ congratulationsViewController: CongratulationsViewController, didDisplayWith state: String) {
+    func congratulationsRouter(_ congratulationsRouter: CongratulationsRouter, didDisplayWith state: String) {
         
     }
 }

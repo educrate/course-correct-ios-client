@@ -14,6 +14,13 @@ import Foundation
 protocol CreatePasswordWireframeProtocol: class {}
 
 
+// MARK: - Coordinator
+
+protocol CreatePasswordRouterDelegate: class {
+    func createPasswordRouter(_ createPasswordRouter: CreatePasswordRouter, didCreate password: String)
+}
+
+
 // MARK: - Presenter
 
 protocol CreatePasswordPresenterProtocol: class {

@@ -14,6 +14,13 @@ import Foundation
 protocol WalkthroughWireframeProtocol: class {}
 
 
+// MARK: - Coordinator
+
+protocol WalkthroughRouterDelegate: class {
+    func walkthroughRouter(_ walkthroughRouter: WalkthroughRouter, didCompleteWith state: String)
+}
+
+
 // MARK: - Presenter
 
 protocol WalkthroughPresenterProtocol: class {}

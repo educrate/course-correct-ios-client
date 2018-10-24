@@ -14,6 +14,13 @@ import Foundation
 protocol SignInWireframeProtocol: class {}
 
 
+// MARK: - Coordinator
+
+protocol SignInRouterDelegate: class {
+    func signInRouter(_ signInRouter: SignInRouter, didSignIn user: String)
+}
+
+
 // MARK: - Presenter
 
 protocol SignInPresenterProtocol: class {
