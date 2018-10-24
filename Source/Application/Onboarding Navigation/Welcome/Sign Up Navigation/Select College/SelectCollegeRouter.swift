@@ -9,8 +9,14 @@
 import UIKit
 
 class SelectCollegeRouter: SelectCollegeWireframeProtocol {
-    weak var viewController: UIViewController?
-    weak var delegate: SelectCollegeRouterDelegate?
+    private weak var viewController: UIViewController?
+    private weak var delegate: SelectCollegeRouterDelegate?
+}
+
+extension SelectCollegeRouter {
+    func showNextScreen() {
+        delegate?.selectCollegeRouter(self, didSelect: "college")
+    }
 }
 
 extension SelectCollegeRouter {
@@ -27,11 +33,5 @@ extension SelectCollegeRouter {
         router.delegate = delegate
         
         return view
-    }
-}
-
-extension SelectCollegeRouter {
-    func showNextScreen() {
-        delegate?.selectCollegeRouter(self, didSelect: "college")
     }
 }

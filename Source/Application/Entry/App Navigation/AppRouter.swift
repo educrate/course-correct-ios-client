@@ -9,7 +9,7 @@
 import UIKit
 
 class AppRouter: AppWireframeProtocol {
-    weak var window: UIWindow?
+    private weak var window: UIWindow?
 }
 
 extension AppRouter {
@@ -26,15 +26,11 @@ extension AppRouter {
 
 extension AppRouter {
     func onboardingRouter(_ onboardingRouter: OnboardingRouter, didFinishWith state: String) {
-        onboardingRouter.viewController?.dismiss(animated: true) { [weak self] in
-            self?.presentMainModule()
-        }
+        presentMainModule()
     }
     
     func mainRouter(_ mainRouter: MainRouter, didSignOut user: String) {
-        mainRouter.viewController?.dismiss(animated: true) { [weak self] in
-            self?.presentOnboardingModule()
-        }
+        presentOnboardingModule()
     }
 }
 

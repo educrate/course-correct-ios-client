@@ -9,8 +9,14 @@
 import UIKit
 
 class CongratulationsRouter: CongratulationsWireframeProtocol {
-    weak var viewController: UIViewController?
-    weak var delegate: CongratulationsRouterDelegate?
+    private weak var viewController: UIViewController?
+    private weak var delegate: CongratulationsRouterDelegate?
+}
+
+extension CongratulationsRouter {
+    func nextScreen() {
+        delegate?.congratulationsRouter(self, didDisplayWith: "congratulations screen complete")
+    }
 }
 
 extension CongratulationsRouter {

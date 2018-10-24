@@ -9,8 +9,8 @@
 import UIKit
 
 class WalkthroughRouter: WalkthroughWireframeProtocol {
-    weak var viewController: UIViewController?
-    weak var delegate: WalkthroughRouterDelegate?
+    private weak var viewController: UIViewController?
+    private weak var delegate: WalkthroughRouterDelegate?
 }
 
 extension WalkthroughRouter {

@@ -18,3 +18,9 @@ class CongratulationsViewController: UIViewController, CongratulationsViewProtoc
         print("deinitialized congrautulations screen")
     }
 }
+
+extension CongratulationsViewController {
+    @IBAction func donePressed(_ sender: UIBarButtonItem) {
+        presenter?.screenHandled()
+    }
+}

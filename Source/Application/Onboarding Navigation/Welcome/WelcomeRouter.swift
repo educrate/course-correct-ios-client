@@ -9,8 +9,30 @@
 import UIKit
 
 class WelcomeRouter: WelcomeWireframeProtocol {
-    weak var viewController: UIViewController?
-    weak var delegate: WelcomeRouterDelegate?
+    private weak var viewController: UIViewController?
+    private weak var delegate: WelcomeRouterDelegate?
+}
+
+extension WelcomeRouter {
+    func presentSignUpModule() {
+        viewController?.show(SignUpRouter.createModule(self), sender: nil)
+    }
+    
+    func presentSignIn() {
+        viewController?.show(SignInRouter.createModule(self), sender: nil)
+    }
+}
+
+extension WelcomeRouter {
+    func signUpRouter(_ signUpRouter: SignUpRouter, didSignUp user: String) {
+        signUpRouter.dismissSignUp {
+            self.delegate?.welcomeRouter(self, didCompleteWith: "user signed up")
+        }
+    }
+    
+    func signInRouter(_ signInRouter: SignInRouter, didSignIn user: String) {
+        delegate?.welcomeRouter(self, didCompleteWith: "user signed in")
+    }
 }
 
 extension WelcomeRouter {
@@ -27,27 +49,5 @@ extension WelcomeRouter {
         router.delegate = delegate
         
         return view
-    }
-}
-
-extension WelcomeRouter {
-    func presentSignUpModule() {
-        viewController?.show(SignUpRouter.createModule(self), sender: nil)
-    }
-    
-    func presentSignIn() {
-        viewController?.show(SignInRouter.createModule(self), sender: nil)
-    }
-}
-
-extension WelcomeRouter {
-    func signUpRouter(_ signUpRouter: SignUpRouter, didSignUp user: String) {
-        signUpRouter.viewController?.dismiss(animated: true) { [weak self] in
-            self?.delegate?.welcomeRouter(self!, didCompleteWith: "user signed up")
-        }
-    }
-    
-    func signInRouter(_ signInRouter: SignInRouter, didSignIn user: String) {
-        delegate?.welcomeRouter(self, didCompleteWith: "user signed in")
     }
 }

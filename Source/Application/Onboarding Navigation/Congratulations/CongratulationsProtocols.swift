@@ -11,7 +11,9 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol CongratulationsWireframeProtocol: class {}
+protocol CongratulationsWireframeProtocol: class {
+    func nextScreen()
+}
 
 
 // MARK: - Coordinator
@@ -23,7 +25,9 @@ protocol CongratulationsRouterDelegate: class {
 
 // MARK: - Presenter
 
-protocol CongratulationsPresenterProtocol: class {}
+protocol CongratulationsPresenterProtocol: class {
+    func screenHandled()
+}
 
 
 // MARK: - Interactor

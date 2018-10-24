@@ -9,25 +9,8 @@
 import UIKit
 
 class SignUpRouter: SignUpWireframeProtocol {
-    weak var viewController: UIViewController?
-    weak var delegate: SignUpRouterDelegate?
-}
-
-extension SignUpRouter {
-    static func createModule(_ delegate: SignUpRouterDelegate?) -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .signUp)
-        let view: SignUpViewController = storyboard.instantiateViewController()
-        let interactor = SignUpInteractor()
-        let router = SignUpRouter()
-        let presenter = SignUpPresenter(interface: view, interactor: interactor, router: router)
-        
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-        router.delegate = delegate
-        
-        return view
-    }
+    private weak var viewController: UIViewController?
+    private weak var delegate: SignUpRouterDelegate?
 }
 
 extension SignUpRouter {
@@ -46,6 +29,10 @@ extension SignUpRouter {
     func showCreatePassword() {
         viewController?.show(CreatePasswordRouter.createModule(self), sender: nil)
     }
+    
+    func dismissSignUp(_ completion: (() -> Void)?) {
+        viewController?.dismiss(animated: true, completion: completion)
+    }
 }
 
 extension SignUpRouter {
@@ -63,5 +50,22 @@ extension SignUpRouter {
     
     func createPasswordRouter(_ createPasswordRouter: CreatePasswordRouter, didCreate password: String) {
         delegate?.signUpRouter(self, didSignUp: "new user created with password")
+    }
+}
+
+extension SignUpRouter {
+    static func createModule(_ delegate: SignUpRouterDelegate?) -> UIViewController {
+        let storyboard = UIStoryboard(storyboard: .signUp)
+        let view: SignUpViewController = storyboard.instantiateViewController()
+        let interactor = SignUpInteractor()
+        let router = SignUpRouter()
+        let presenter = SignUpPresenter(interface: view, interactor: interactor, router: router)
+        
+        view.presenter = presenter
+        interactor.presenter = presenter
+        router.viewController = view
+        router.delegate = delegate
+        
+        return view
     }
 }

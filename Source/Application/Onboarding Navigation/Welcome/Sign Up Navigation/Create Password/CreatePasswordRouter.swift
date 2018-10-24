@@ -9,8 +9,14 @@
 import UIKit
 
 class CreatePasswordRouter: CreatePasswordWireframeProtocol {
-    weak var viewController: UIViewController?
-    weak var delegate: CreatePasswordRouterDelegate?
+    private weak var viewController: UIViewController?
+    private weak var delegate: CreatePasswordRouterDelegate?
+}
+
+extension CreatePasswordRouter {
+    func showNextScreen() {
+        delegate?.createPasswordRouter(self, didCreate: "password")
+    }
 }
 
 extension CreatePasswordRouter {
@@ -27,11 +33,5 @@ extension CreatePasswordRouter {
         router.delegate = delegate
         
         return view
-    }
-}
-
-extension CreatePasswordRouter {
-    func showNextScreen() {
-        delegate?.createPasswordRouter(self, didCreate: "password")
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class MainRouter: MainWireframeProtocol {
-    weak var viewController: UIViewController?
+    private weak var viewController: UIViewController?
     private weak var delegate: MainRouterDelegate?
 }
 

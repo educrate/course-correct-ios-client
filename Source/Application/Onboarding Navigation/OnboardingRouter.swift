@@ -9,25 +9,8 @@
 import UIKit
 
 class OnboardingRouter: OnboardingWireframeProtocol {
-    weak var viewController: UINavigationController?
-    weak var delegate: OnboardingRouterDelegate?
-}
-
-extension OnboardingRouter {
-    static func createModule(_ delegate: OnboardingRouterDelegate?) -> UINavigationController {
-        let storyboard = UIStoryboard(storyboard: .onboarding)
-        let view: OnboardingViewController = storyboard.instantiateViewController()
-        let interactor = OnboardingInteractor()
-        let router = OnboardingRouter()
-        let presenter = OnboardingPresenter(interface: view, interactor: interactor, router: router)
-        
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-        router.delegate = delegate
-        
-        return view
-    }
+    private weak var viewController: UINavigationController?
+    private weak var delegate: OnboardingRouterDelegate?
 }
 
 extension OnboardingRouter {
@@ -55,5 +38,22 @@ extension OnboardingRouter {
     
     func congratulationsRouter(_ congratulationsRouter: CongratulationsRouter, didDisplayWith state: String) {
         delegate?.onboardingRouter(self, didFinishWith: "congratulations screen handled")
+    }
+}
+
+extension OnboardingRouter {
+    static func createModule(_ delegate: OnboardingRouterDelegate?) -> UINavigationController {
+        let storyboard = UIStoryboard(storyboard: .onboarding)
+        let view: OnboardingViewController = storyboard.instantiateViewController()
+        let interactor = OnboardingInteractor()
+        let router = OnboardingRouter()
+        let presenter = OnboardingPresenter(interface: view, interactor: interactor, router: router)
+        
+        view.presenter = presenter
+        interactor.presenter = presenter
+        router.viewController = view
+        router.delegate = delegate
+        
+        return view
     }
 }

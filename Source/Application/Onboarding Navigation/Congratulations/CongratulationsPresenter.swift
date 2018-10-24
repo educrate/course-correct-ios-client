@@ -23,3 +23,9 @@ class CongratulationsPresenter: CongratulationsPresenterProtocol {
         self.router = router
     }
 }
+
+extension CongratulationsPresenter {
+    func screenHandled() {
+        router.nextScreen()
+    }
+}

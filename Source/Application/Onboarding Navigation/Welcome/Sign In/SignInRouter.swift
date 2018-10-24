@@ -9,8 +9,14 @@
 import UIKit
 
 class SignInRouter: SignInWireframeProtocol {
-    weak var viewController: UIViewController?
-    weak var delegate: SignInRouterDelegate?
+    private weak var viewController: UIViewController?
+    private weak var delegate: SignInRouterDelegate?
+}
+
+extension SignInRouter {
+    func showNextScreen() {
+        delegate?.signInRouter(self, didSignIn: "user signed in")
+    }
 }
 
 extension SignInRouter {
@@ -27,11 +33,5 @@ extension SignInRouter {
         router.delegate = delegate
         
         return view
-    }
-}
-
-extension SignInRouter {
-    func showNextScreen() {
-        delegate?.signInRouter(self, didSignIn: "user signed in")
     }
 }

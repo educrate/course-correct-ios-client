@@ -9,8 +9,14 @@
 import UIKit
 
 class EnterAccessCodeRouter: EnterAccessCodeWireframeProtocol {
-    weak var viewController: UIViewController?
-    weak var delegate: EnterAccessCodeRouterDelegate?
+    private weak var viewController: UIViewController?
+    private weak var delegate: EnterAccessCodeRouterDelegate?
+}
+
+extension EnterAccessCodeRouter {
+    func showNextScreen() {
+        delegate?.enterAccessCodeRouter(self, didEnter: "access code")
+    }
 }
 
 extension EnterAccessCodeRouter {
@@ -27,11 +33,5 @@ extension EnterAccessCodeRouter {
         router.delegate = delegate
         
         return view
-    }
-}
-
-extension EnterAccessCodeRouter {
-    func showNextScreen() {
-        delegate?.enterAccessCodeRouter(self, didEnter: "access code")
     }
 }

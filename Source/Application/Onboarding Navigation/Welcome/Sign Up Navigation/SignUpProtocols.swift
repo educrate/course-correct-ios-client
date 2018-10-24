@@ -16,6 +16,7 @@ protocol SignUpWireframeProtocol: SelectCollegeRouterDelegate, EnterStudentIdent
     func showEnterStudentIdentifier()
     func showEnterAccessCode()
     func showCreatePassword()
+    func dismissSignUp(_ completion: (() -> Void)?)
 }
 
 

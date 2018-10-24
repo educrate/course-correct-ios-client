@@ -9,8 +9,14 @@
 import UIKit
 
 class EnterStudentIdentifierRouter: EnterStudentIdentifierWireframeProtocol {
-    weak var viewController: UIViewController?
-    weak var delegate: EnterStudentIdentifierRouterDelegate?
+    private weak var viewController: UIViewController?
+    private weak var delegate: EnterStudentIdentifierRouterDelegate?
+}
+
+extension EnterStudentIdentifierRouter {
+    func showNextScreen() {
+        delegate?.enterStudentIdentifierRouter(self, didEnter: "identifier")
+    }
 }
 
 extension EnterStudentIdentifierRouter {
@@ -27,11 +33,5 @@ extension EnterStudentIdentifierRouter {
         router.delegate = delegate
         
         return view
-    }
-}
-
-extension EnterStudentIdentifierRouter {
-    func showNextScreen() {
-        delegate?.enterStudentIdentifierRouter(self, didEnter: "identifier")
     }
 }
