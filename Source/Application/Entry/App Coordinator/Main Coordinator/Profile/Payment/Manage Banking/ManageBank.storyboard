@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Manage Bank View Controller-->
+        <!--Manage Banking-->
         <scene sceneID="EdZ-Me-Bvj">
             <objects>
                 <viewController storyboardIdentifier="ManageBankViewController" id="ZG3-03-qAX" customClass="ManageBankViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,6 +19,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NnW-kw-enO"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Manage Banking" id="5FO-hQ-bHM">
+                        <barButtonItem key="backBarButtonItem" title=" " id="7uq-HM-bIN"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMK-Om-Fo3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,4 +10,8 @@ import UIKit
 
 class ProfileSupportViewController: UIViewController, ProfileSupportViewProtocol {
 	var presenter: ProfileSupportPresenterProtocol?
+    
+    deinit {
+        print("deinitialized profile support screen")
+    }
 }

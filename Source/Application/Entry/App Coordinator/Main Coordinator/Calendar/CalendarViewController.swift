@@ -10,6 +10,10 @@ import UIKit
 
 class CalendarViewController: UIViewController, CalendarViewProtocol {
 	var presenter: CalendarPresenterProtocol?
+    
+    deinit {
+        print("deinitialized calendar screen")
+    }
 }
 
 extension CalendarViewController {

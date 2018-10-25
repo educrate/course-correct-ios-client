@@ -10,4 +10,8 @@ import UIKit
 
 class ManageBankViewController: UIViewController, ManageBankViewProtocol {
 	var presenter: ManageBankPresenterProtocol?
+    
+    deinit {
+        print("deinitialized manage bank screen")
+    }
 }

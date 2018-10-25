@@ -10,6 +10,10 @@ import UIKit
 
 class ProfilePaymentViewController: UIViewController, ProfilePaymentViewProtocol {
 	var presenter: ProfilePaymentPresenterProtocol?
+    
+    deinit {
+        print("deinitialized profile payment screen")
+    }
 }
 
 extension ProfilePaymentViewController {

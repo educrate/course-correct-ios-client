@@ -10,4 +10,8 @@ import UIKit
 
 class EventViewController: UIViewController, EventViewProtocol {
 	var presenter: EventPresenterProtocol?
+    
+    deinit {
+        print("deinitialized event screen")
+    }
 }

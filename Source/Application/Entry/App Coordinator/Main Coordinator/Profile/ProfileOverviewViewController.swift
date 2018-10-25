@@ -16,6 +16,10 @@ class ProfileOverviewViewController: UIViewController, ProfileOverviewViewProtoc
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var majorLabel: UILabel!
     @IBOutlet private weak var gradeLabel: UILabel!
+    
+    deinit {
+        print("deinitialized profile overview screen")
+    }
 }
 
 private extension ProfileOverviewViewController {

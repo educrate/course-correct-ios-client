@@ -10,4 +10,8 @@ import UIKit
 
 class AddLocationViewController: UIViewController, AddLocationViewProtocol {
 	var presenter: AddLocationPresenterProtocol?
+    
+    deinit {
+        print("deinitialized add location screen")
+    }
 }

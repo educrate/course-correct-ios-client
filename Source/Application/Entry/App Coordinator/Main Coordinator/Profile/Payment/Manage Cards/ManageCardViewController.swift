@@ -10,4 +10,8 @@ import UIKit
 
 class ManageCardViewController: UIViewController, ManageCardViewProtocol {
 	var presenter: ManageCardPresenterProtocol?
+    
+    deinit {
+        print("deinitialized manage card screen")
+    }
 }

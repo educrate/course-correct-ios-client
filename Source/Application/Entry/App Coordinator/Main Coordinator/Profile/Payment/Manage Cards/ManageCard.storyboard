@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Manage Card View Controller-->
+        <!--Manage Payment-->
         <scene sceneID="Zvp-fr-kO9">
             <objects>
                 <viewController storyboardIdentifier="ManageCardViewController" id="XIX-cN-ayh" customClass="ManageCardViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,6 +19,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="okw-7h-omy"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Manage Payment" id="COu-QJ-35d">
+                        <barButtonItem key="backBarButtonItem" title=" " id="kgE-vJ-kG3"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jay-2O-LdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

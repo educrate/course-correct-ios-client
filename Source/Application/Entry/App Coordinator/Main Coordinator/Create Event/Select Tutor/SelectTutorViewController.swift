@@ -10,4 +10,8 @@ import UIKit
 
 class SelectTutorViewController: UIViewController, SelectTutorViewProtocol {
 	var presenter: SelectTutorPresenterProtocol?
+    
+    deinit {
+        print("deinitialized select tutor screen")
+    }
 }

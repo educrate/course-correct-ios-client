@@ -10,4 +10,8 @@ import UIKit
 
 class TutorProfileViewController: UIViewController, TutorProfileViewProtocol {
 	var presenter: TutorProfilePresenterProtocol?
+    
+    deinit {
+        print("deinitialized tutor profile screen")
+    }
 }

@@ -13,6 +13,10 @@ class ProfileAccountViewController: UIViewController, ProfileAccountViewProtocol
     
     @IBOutlet private weak var coursePicker: UIInlinePickerViewController!
     @IBOutlet private weak var coursePickerHeight: NSLayoutConstraint!
+    
+    deinit {
+        print("deinitialized profile account screen")
+    }
 }
 
 extension ProfileAccountViewController {
