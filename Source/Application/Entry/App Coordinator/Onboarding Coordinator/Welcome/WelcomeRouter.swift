@@ -11,11 +11,12 @@ import UIKit
 class WelcomeRouter: WelcomeWireframeProtocol {
     private weak var viewController: UIViewController?
     private weak var delegate: WelcomeRouterDelegate?
+    private lazy var signUpCoordinator: SignUpPresenter? = SignUpRouter.createModule(self, with: viewController)
 }
 
 extension WelcomeRouter {
     func presentSignUpModule() {
-        viewController?.show(SignUpRouter.createModule(self), sender: nil)
+        signUpCoordinator?.start()
     }
     
     func presentSignIn() {
@@ -25,9 +26,7 @@ extension WelcomeRouter {
 
 extension WelcomeRouter {
     func signUpRouter(_ signUpRouter: SignUpRouter, didSignUp user: String) {
-        signUpRouter.dismissSignUp {
-            self.delegate?.welcomeRouter(self, didCompleteWith: "user signed up")
-        }
+        delegate?.welcomeRouter(self, didCompleteWith: "user signed up")
     }
     
     func signInRouter(_ signInRouter: SignInRouter, didSignIn user: String) {

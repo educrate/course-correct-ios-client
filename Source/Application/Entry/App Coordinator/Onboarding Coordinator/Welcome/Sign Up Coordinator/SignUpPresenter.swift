@@ -11,14 +11,11 @@ import UIKit
 class SignUpPresenter: SignUpPresenterProtocol {
     
     // MARK: Viper
-    weak private var view: SignUpViewProtocol?
     var interactor: SignUpInteractorProtocol?
     private let router: SignUpWireframeProtocol
 
-    init(interface: SignUpViewProtocol,
-         interactor: SignUpInteractorProtocol?,
+    init(interactor: SignUpInteractorProtocol?,
          router: SignUpWireframeProtocol) {
-        self.view = interface
         self.interactor = interactor
         self.router = router
     }

@@ -54,18 +54,15 @@ extension SignUpRouter {
 }
 
 extension SignUpRouter {
-    static func createModule(_ delegate: SignUpRouterDelegate?) -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .signUp)
-        let view: SignUpViewController = storyboard.instantiateViewController()
+    static func createModule(_ delegate: SignUpRouterDelegate?, with navigationController: UIViewController?) -> SignUpPresenter {
         let interactor = SignUpInteractor()
         let router = SignUpRouter()
-        let presenter = SignUpPresenter(interface: view, interactor: interactor, router: router)
+        let presenter = SignUpPresenter(interactor: interactor, router: router)
         
-        view.presenter = presenter
         interactor.presenter = presenter
-        router.viewController = view
+        router.viewController = navigationController
         router.delegate = delegate
         
-        return view
+        return presenter
     }
 }

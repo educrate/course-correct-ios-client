@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF4F48BB21823C2E000D98D1 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4F48BA21823C2E000D98D1 /* App.storyboard */; };
+		BF4F48BF21823C75000D98D1 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48BE21823C75000D98D1 /* AppViewController.swift */; };
+		BF4F48F221826A82000D98D1 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48EE21826A82000D98D1 /* MainPresenter.swift */; };
+		BF4F48F321826A82000D98D1 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48EF21826A82000D98D1 /* MainRouter.swift */; };
+		BF4F48F421826A82000D98D1 /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48F021826A82000D98D1 /* MainProtocols.swift */; };
+		BF4F48F521826A82000D98D1 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48F121826A82000D98D1 /* MainInteractor.swift */; };
 		BF50046A2172F09700D35B69 /* ProfileOverviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004652172F09700D35B69 /* ProfileOverviewPresenter.swift */; };
 		BF50046B2172F09700D35B69 /* ProfileOverviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004662172F09700D35B69 /* ProfileOverviewRouter.swift */; };
 		BF50046C2172F09700D35B69 /* ProfileOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004672172F09700D35B69 /* ProfileOverviewViewController.swift */; };
@@ -106,7 +112,6 @@
 		BF500571217B87C900D35B69 /* CreateEventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50056C217B87C900D35B69 /* CreateEventProtocols.swift */; };
 		BF500572217B87C900D35B69 /* CreateEventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50056D217B87C900D35B69 /* CreateEventInteractor.swift */; };
 		BF500574217B87FB00D35B69 /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF500573217B87FB00D35B69 /* CreateEvent.storyboard */; };
-		BF500576217B9B0000D35B69 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF500575217B9B0000D35B69 /* Onboarding.storyboard */; };
 		BF5005A0217EC6B600D35B69 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50059F217EC6B600D35B69 /* Coordinator.swift */; };
 		BF5005B0217EEE9C00D35B69 /* AppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005AB217EEE9C00D35B69 /* AppPresenter.swift */; };
 		BF5005B1217EEE9C00D35B69 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005AC217EEE9C00D35B69 /* AppRouter.swift */; };
@@ -114,21 +119,12 @@
 		BF5005B4217EEE9C00D35B69 /* AppInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005AF217EEE9C00D35B69 /* AppInteractor.swift */; };
 		BF5005BA217EEF2000D35B69 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005B5217EEF2000D35B69 /* SignUpPresenter.swift */; };
 		BF5005BB217EEF2000D35B69 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005B6217EEF2000D35B69 /* SignUpRouter.swift */; };
-		BF5005BC217EEF2000D35B69 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005B7217EEF2000D35B69 /* SignUpViewController.swift */; };
 		BF5005BD217EEF2000D35B69 /* SignUpProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005B8217EEF2000D35B69 /* SignUpProtocols.swift */; };
 		BF5005BE217EEF2000D35B69 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005B9217EEF2000D35B69 /* SignUpInteractor.swift */; };
 		BF5005C4217EF4FF00D35B69 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005BF217EF4FF00D35B69 /* OnboardingPresenter.swift */; };
 		BF5005C5217EF4FF00D35B69 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005C0217EF4FF00D35B69 /* OnboardingRouter.swift */; };
-		BF5005C6217EF4FF00D35B69 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005C1217EF4FF00D35B69 /* OnboardingViewController.swift */; };
 		BF5005C7217EF4FF00D35B69 /* OnboardingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005C2217EF4FF00D35B69 /* OnboardingProtocols.swift */; };
 		BF5005C8217EF4FF00D35B69 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005C3217EF4FF00D35B69 /* OnboardingInteractor.swift */; };
-		BF5005CE217F6B8F00D35B69 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005C9217F6B8F00D35B69 /* MainPresenter.swift */; };
-		BF5005CF217F6B8F00D35B69 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005CA217F6B8F00D35B69 /* MainRouter.swift */; };
-		BF5005D0217F6B8F00D35B69 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005CB217F6B8F00D35B69 /* MainViewController.swift */; };
-		BF5005D1217F6B8F00D35B69 /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005CC217F6B8F00D35B69 /* MainProtocols.swift */; };
-		BF5005D2217F6B8F00D35B69 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005CD217F6B8F00D35B69 /* MainInteractor.swift */; };
-		BF5005D4217F6C3500D35B69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5005D3217F6C3500D35B69 /* Main.storyboard */; };
-		BF5005D6217FB09800D35B69 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5005D5217FB09800D35B69 /* SignUp.storyboard */; };
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
@@ -262,6 +258,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF4F48BA21823C2E000D98D1 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
+		BF4F48BE21823C75000D98D1 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		BF4F48EE21826A82000D98D1 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		BF4F48EF21826A82000D98D1 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		BF4F48F021826A82000D98D1 /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
+		BF4F48F121826A82000D98D1 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		BF5004652172F09700D35B69 /* ProfileOverviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOverviewPresenter.swift; sourceTree = "<group>"; };
 		BF5004662172F09700D35B69 /* ProfileOverviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOverviewRouter.swift; sourceTree = "<group>"; };
 		BF5004672172F09700D35B69 /* ProfileOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOverviewViewController.swift; sourceTree = "<group>"; };
@@ -361,7 +363,6 @@
 		BF50056C217B87C900D35B69 /* CreateEventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventProtocols.swift; sourceTree = "<group>"; };
 		BF50056D217B87C900D35B69 /* CreateEventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventInteractor.swift; sourceTree = "<group>"; };
 		BF500573217B87FB00D35B69 /* CreateEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEvent.storyboard; sourceTree = "<group>"; };
-		BF500575217B9B0000D35B69 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		BF50059F217EC6B600D35B69 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BF5005AB217EEE9C00D35B69 /* AppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPresenter.swift; sourceTree = "<group>"; };
 		BF5005AC217EEE9C00D35B69 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -369,21 +370,12 @@
 		BF5005AF217EEE9C00D35B69 /* AppInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInteractor.swift; sourceTree = "<group>"; };
 		BF5005B5217EEF2000D35B69 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		BF5005B6217EEF2000D35B69 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
-		BF5005B7217EEF2000D35B69 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BF5005B8217EEF2000D35B69 /* SignUpProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProtocols.swift; sourceTree = "<group>"; };
 		BF5005B9217EEF2000D35B69 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		BF5005BF217EF4FF00D35B69 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
 		BF5005C0217EF4FF00D35B69 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
-		BF5005C1217EF4FF00D35B69 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BF5005C2217EF4FF00D35B69 /* OnboardingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProtocols.swift; sourceTree = "<group>"; };
 		BF5005C3217EF4FF00D35B69 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
-		BF5005C9217F6B8F00D35B69 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
-		BF5005CA217F6B8F00D35B69 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
-		BF5005CB217F6B8F00D35B69 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		BF5005CC217F6B8F00D35B69 /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
-		BF5005CD217F6B8F00D35B69 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
-		BF5005D3217F6C3500D35B69 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		BF5005D5217FB09800D35B69 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
@@ -535,7 +527,7 @@
 			children = (
 				BFD0290D21509AD4002FB9F5 /* AppDelegate.swift */,
 				BF50050F21745D6000D35B69 /* App Launch */,
-				BF5004A12173EC4E00D35B69 /* App Navigation */,
+				BF5004A12173EC4E00D35B69 /* App Coordinator */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -598,15 +590,19 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		BF5004A12173EC4E00D35B69 /* App Navigation */ = {
+		BF5004A12173EC4E00D35B69 /* App Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				BF4F48BA21823C2E000D98D1 /* App.storyboard */,
+				BF4F48BE21823C75000D98D1 /* AppViewController.swift */,
 				BF5005AB217EEE9C00D35B69 /* AppPresenter.swift */,
 				BF5005AC217EEE9C00D35B69 /* AppRouter.swift */,
 				BF5005AF217EEE9C00D35B69 /* AppInteractor.swift */,
 				BF5005AE217EEE9C00D35B69 /* AppProtocols.swift */,
+				BF579339216D4485008DBB46 /* Onboarding Coordinator */,
+				BF5004A5217411C300D35B69 /* Main Coordinator */,
 			);
-			path = "App Navigation";
+			path = "App Coordinator";
 			sourceTree = "<group>";
 		};
 		BF5004A4217411A800D35B69 /* Create Event */ = {
@@ -624,20 +620,18 @@
 			path = "Create Event";
 			sourceTree = "<group>";
 		};
-		BF5004A5217411C300D35B69 /* Main */ = {
+		BF5004A5217411C300D35B69 /* Main Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				BF5005D3217F6C3500D35B69 /* Main.storyboard */,
-				BF5005CB217F6B8F00D35B69 /* MainViewController.swift */,
-				BF5005C9217F6B8F00D35B69 /* MainPresenter.swift */,
-				BF5005CA217F6B8F00D35B69 /* MainRouter.swift */,
-				BF5005CD217F6B8F00D35B69 /* MainInteractor.swift */,
-				BF5005CC217F6B8F00D35B69 /* MainProtocols.swift */,
 				BF5004A62174120B00D35B69 /* Calendar */,
 				BF5004A4217411A800D35B69 /* Create Event */,
 				BF5004632172EF9100D35B69 /* Profile */,
+				BF4F48EE21826A82000D98D1 /* MainPresenter.swift */,
+				BF4F48EF21826A82000D98D1 /* MainRouter.swift */,
+				BF4F48F021826A82000D98D1 /* MainProtocols.swift */,
+				BF4F48F121826A82000D98D1 /* MainInteractor.swift */,
 			);
-			path = Main;
+			path = "Main Coordinator";
 			sourceTree = "<group>";
 		};
 		BF5004A62174120B00D35B69 /* Calendar */ = {
@@ -707,11 +701,9 @@
 			path = "Tutor Profile";
 			sourceTree = "<group>";
 		};
-		BF5005002174547700D35B69 /* Sign Up Navigation */ = {
+		BF5005002174547700D35B69 /* Sign Up Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				BF5005D5217FB09800D35B69 /* SignUp.storyboard */,
-				BF5005B7217EEF2000D35B69 /* SignUpViewController.swift */,
 				BF5005B5217EEF2000D35B69 /* SignUpPresenter.swift */,
 				BF5005B6217EEF2000D35B69 /* SignUpRouter.swift */,
 				BF5005B9217EEF2000D35B69 /* SignUpInteractor.swift */,
@@ -721,7 +713,7 @@
 				BF70B5CF217074AC00771E5D /* Enter Access Code */,
 				BFCDA5F321725FDB00DB31FC /* Create Password */,
 			);
-			path = "Sign Up Navigation";
+			path = "Sign Up Coordinator";
 			sourceTree = "<group>";
 		};
 		BF50050E2174558A00D35B69 /* Sign In */ = {
@@ -840,11 +832,9 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		BF579339216D4485008DBB46 /* Onboarding Navigation */ = {
+		BF579339216D4485008DBB46 /* Onboarding Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				BF500575217B9B0000D35B69 /* Onboarding.storyboard */,
-				BF5005C1217EF4FF00D35B69 /* OnboardingViewController.swift */,
 				BF5005BF217EF4FF00D35B69 /* OnboardingPresenter.swift */,
 				BF5005C0217EF4FF00D35B69 /* OnboardingRouter.swift */,
 				BF5005C3217EF4FF00D35B69 /* OnboardingInteractor.swift */,
@@ -853,7 +843,7 @@
 				BF70B5DC21715BA800771E5D /* Welcome */,
 				BF50055A217B847500D35B69 /* Congratulations */,
 			);
-			path = "Onboarding Navigation";
+			path = "Onboarding Coordinator";
 			sourceTree = "<group>";
 		};
 		BF70B5CF217074AC00771E5D /* Enter Access Code */ = {
@@ -879,7 +869,7 @@
 				BFCDA5E821725E7200DB31FC /* WelcomeRouter.swift */,
 				BFCDA5EB21725E7200DB31FC /* WelcomeInteractor.swift */,
 				BFCDA5EA21725E7200DB31FC /* WelcomeProtocols.swift */,
-				BF5005002174547700D35B69 /* Sign Up Navigation */,
+				BF5005002174547700D35B69 /* Sign Up Coordinator */,
 				BF50050E2174558A00D35B69 /* Sign In */,
 			);
 			path = Welcome;
@@ -1042,8 +1032,6 @@
 			isa = PBXGroup;
 			children = (
 				BF4E718D216D4C1A00100FE1 /* Entry */,
-				BF579339216D4485008DBB46 /* Onboarding Navigation */,
-				BF5004A5217411C300D35B69 /* Main */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -1391,13 +1379,13 @@
 				BFCDA60621727B3D00DB31FC /* AppLaunch.storyboard in Resources */,
 				BF50054C217A76B500D35B69 /* ManageCard.storyboard in Resources */,
 				BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */,
+				BF4F48BB21823C2E000D98D1 /* App.storyboard in Resources */,
 				BF50054E217A76BF00D35B69 /* ManageBank.storyboard in Resources */,
 				BF50051C2176D9AC00D35B69 /* UIActionSheet.storyboard in Resources */,
 				BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */,
 				BFCDA5F221725E8500DB31FC /* Welcome.storyboard in Resources */,
 				BF5005212177113900D35B69 /* UINotification.storyboard in Resources */,
 				BFD82AE2216F028600A14868 /* UIDropdown.storyboard in Resources */,
-				BF500576217B9B0000D35B69 /* Onboarding.storyboard in Resources */,
 				BF500574217B87FB00D35B69 /* CreateEvent.storyboard in Resources */,
 				BFD82AE6217061DA00A14868 /* UIField.storyboard in Resources */,
 				BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */,
@@ -1405,8 +1393,6 @@
 				BF5004E721741EA000D35B69 /* SelectTutor.storyboard in Resources */,
 				BF50050D217454D700D35B69 /* SignIn.storyboard in Resources */,
 				BF5004862173AD9E00D35B69 /* UIInlinePicker.storyboard in Resources */,
-				BF5005D4217F6C3500D35B69 /* Main.storyboard in Resources */,
-				BF5005D6217FB09800D35B69 /* SignUp.storyboard in Resources */,
 				BF5004DB21741E7700D35B69 /* AddLocation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1434,7 +1420,6 @@
 			files = (
 				BF500507217454C600D35B69 /* SignInPresenter.swift in Sources */,
 				BFF14D88216002CB00733323 /* CalendarConfiguration.swift in Sources */,
-				BF5005D1217F6B8F00D35B69 /* MainProtocols.swift in Sources */,
 				BFF14D8C2160033B00733323 /* CalendarBrain.swift in Sources */,
 				BFD82ACE216E77B600A14868 /* SelectCollegeProtocols.swift in Sources */,
 				BF5004A32174111C00D35B69 /* UIStoryboard+Identifiers.swift in Sources */,
@@ -1469,7 +1454,6 @@
 				BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */,
 				BF500560217B848F00D35B69 /* CongratulationsPresenter.swift in Sources */,
 				BF5004E121741E9100D35B69 /* SelectTutorPresenter.swift in Sources */,
-				BF5005BC217EEF2000D35B69 /* SignUpViewController.swift in Sources */,
 				BF5005BD217EEF2000D35B69 /* SignUpProtocols.swift in Sources */,
 				BF5004902173EB7800D35B69 /* ProfilePaymentViewController.swift in Sources */,
 				BF50046A2172F09700D35B69 /* ProfileOverviewPresenter.swift in Sources */,
@@ -1487,6 +1471,8 @@
 				BFD82A97216D989E00A14868 /* NetworkingClientRequestBody.swift in Sources */,
 				BF5004E521741E9100D35B69 /* SelectTutorInteractor.swift in Sources */,
 				BFD82AED2170670400A14868 /* EnterStudentIdentifierPresenter.swift in Sources */,
+				BF4F48F321826A82000D98D1 /* MainRouter.swift in Sources */,
+				BF4F48F421826A82000D98D1 /* MainProtocols.swift in Sources */,
 				BF5005BE217EEF2000D35B69 /* SignUpInteractor.swift in Sources */,
 				BFD82A8C216D989E00A14868 /* Networking.swift in Sources */,
 				BFD82A95216D989E00A14868 /* NetworkingExtractable.swift in Sources */,
@@ -1497,12 +1483,12 @@
 				BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */,
 				BF500564217B848F00D35B69 /* CongratulationsInteractor.swift in Sources */,
 				BF500549217A76A200D35B69 /* ManageBankProtocols.swift in Sources */,
-				BF5005CF217F6B8F00D35B69 /* MainRouter.swift in Sources */,
 				BF50051E2176DA2F00D35B69 /* UIActionSheetViewController.swift in Sources */,
 				BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */,
 				BF50047F2173AC2200D35B69 /* ProfileAccountRouter.swift in Sources */,
 				BF50047721730A3E00D35B69 /* ProfileOverviewError.swift in Sources */,
 				BF5004802173AC2200D35B69 /* ProfileAccountViewController.swift in Sources */,
+				BF4F48F221826A82000D98D1 /* MainPresenter.swift in Sources */,
 				BFD82A90216D989E00A14868 /* NetworkingClient.swift in Sources */,
 				BF5004EF21741EAF00D35B69 /* TutorProfileViewController.swift in Sources */,
 				BFD0298321509C6A002FB9F5 /* CreditCardMathematics.swift in Sources */,
@@ -1514,7 +1500,6 @@
 				BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */,
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
 				BFD82AC5216DB88500A14868 /* Wireframe.swift in Sources */,
-				BF5005D2217F6B8F00D35B69 /* MainInteractor.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */,
 				BF50050B217454C600D35B69 /* SignInInteractor.swift in Sources */,
 				BFD82A89216D989E00A14868 /* NetworkingClientHTTPMethods.swift in Sources */,
@@ -1531,7 +1516,6 @@
 				BFCDA6172172C3FC00DB31FC /* CreatePasswordError.swift in Sources */,
 				BFD82ACB216E77B600A14868 /* SelectCollegePresenter.swift in Sources */,
 				BF500556217B837600D35B69 /* WalkthroughRouter.swift in Sources */,
-				BF5005C6217EF4FF00D35B69 /* OnboardingViewController.swift in Sources */,
 				BFCDA5FC21725FF700DB31FC /* CreatePasswordProtocols.swift in Sources */,
 				BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */,
 				BF5004E321741E9100D35B69 /* SelectTutorViewController.swift in Sources */,
@@ -1549,14 +1533,12 @@
 				BFD82AEF2170670400A14868 /* EnterStudentIdentifierViewController.swift in Sources */,
 				BFD82A93216D989E00A14868 /* NetworkingCache.swift in Sources */,
 				BFD0298221509C6A002FB9F5 /* CreditCardImageExtractor.swift in Sources */,
-				BF5005CE217F6B8F00D35B69 /* MainPresenter.swift in Sources */,
 				BF70B5D9217074C600771E5D /* EnterAccessCodeInteractor.swift in Sources */,
 				BFD82A88216D989E00A14868 /* NetworkingConfiguration.swift in Sources */,
 				BFD82AEE2170670400A14868 /* EnterStudentIdentifierRouter.swift in Sources */,
 				BF5005C7217EF4FF00D35B69 /* OnboardingProtocols.swift in Sources */,
 				BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */,
 				BF50048E2173EB7800D35B69 /* ProfilePaymentPresenter.swift in Sources */,
-				BF5005D0217F6B8F00D35B69 /* MainViewController.swift in Sources */,
 				BF50049C2173EB9B00D35B69 /* ProfileSupportViewController.swift in Sources */,
 				BF50049E2173EB9B00D35B69 /* ProfileSupportInteractor.swift in Sources */,
 				BFCDA6142172C1C500DB31FC /* EnterAccessCodeError.swift in Sources */,
@@ -1607,6 +1589,7 @@
 				BF5004E421741E9100D35B69 /* SelectTutorProtocols.swift in Sources */,
 				BFD0296021509BB2002FB9F5 /* UICalendarViewCell.swift in Sources */,
 				BF50046E2172F09700D35B69 /* ProfileOverviewInteractor.swift in Sources */,
+				BF4F48BF21823C75000D98D1 /* AppViewController.swift in Sources */,
 				BF500557217B837600D35B69 /* WalkthroughViewController.swift in Sources */,
 				BFD82A8F216D989E00A14868 /* NetworkingClientValidation.swift in Sources */,
 				BF5005BB217EEF2000D35B69 /* SignUpRouter.swift in Sources */,
@@ -1618,6 +1601,7 @@
 				BF5005B0217EEE9C00D35B69 /* AppPresenter.swift in Sources */,
 				BF5005B3217EEE9C00D35B69 /* AppProtocols.swift in Sources */,
 				BF500559217B837600D35B69 /* WalkthroughInteractor.swift in Sources */,
+				BF4F48F521826A82000D98D1 /* MainInteractor.swift in Sources */,
 				BF5004AF2174122200D35B69 /* CalendarProtocols.swift in Sources */,
 				BF5004812173AC2200D35B69 /* ProfileAccountProtocols.swift in Sources */,
 				BF500547217A76A200D35B69 /* ManageBankRouter.swift in Sources */,

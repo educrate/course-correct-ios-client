@@ -9,18 +9,18 @@
 import UIKit
 
 class AppRouter: AppWireframeProtocol {
-    private weak var window: UIWindow?
+    private weak var viewController: UINavigationController?
+    private lazy var onboardingCoordinator: OnboardingPresenter = OnboardingRouter.createModule(self, with: viewController)
+    private lazy var mainCoordinator: MainPresenter = MainRouter.createModule(self, with: viewController)
 }
 
 extension AppRouter {
     func presentOnboardingModule() {
-        window?.rootViewController = OnboardingRouter.createModule(self)
-        window?.makeKeyAndVisible()
+        onboardingCoordinator.start()
     }
     
     func presentMainModule() {
-        window?.rootViewController = MainRouter.createModule(self)
-        window?.makeKeyAndVisible()
+        mainCoordinator.start()
     }
 }
 
@@ -35,18 +35,13 @@ extension AppRouter {
 }
 
 extension AppRouter {
-    static func createModule(_ window: UIWindow?) -> AppPresenterProtocol? {
-        guard let view = window else {
-            assertionFailure("there must be a root window set")
-            return nil
-        }
-        
+    static func createModule(with navigationController: UINavigationController?) -> AppPresenter? {
         let interactor = AppInteractor()
         let router = AppRouter()
         let presenter = AppPresenter(interactor: interactor, router: router)
         
         interactor.presenter = presenter
-        router.window = view
+        router.viewController = navigationController
         
         return presenter
     }

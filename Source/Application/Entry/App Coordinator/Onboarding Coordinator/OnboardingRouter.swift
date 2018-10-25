@@ -42,18 +42,15 @@ extension OnboardingRouter {
 }
 
 extension OnboardingRouter {
-    static func createModule(_ delegate: OnboardingRouterDelegate?) -> UINavigationController {
-        let storyboard = UIStoryboard(storyboard: .onboarding)
-        let view: OnboardingViewController = storyboard.instantiateViewController()
+    static func createModule(_ delegate: OnboardingRouterDelegate?, with navigationController: UINavigationController?) -> OnboardingPresenter {
         let interactor = OnboardingInteractor()
         let router = OnboardingRouter()
-        let presenter = OnboardingPresenter(interface: view, interactor: interactor, router: router)
+        let presenter = OnboardingPresenter(interactor: interactor, router: router)
         
-        view.presenter = presenter
         interactor.presenter = presenter
-        router.viewController = view
         router.delegate = delegate
+        router.viewController = navigationController
         
-        return view
+        return presenter
     }
 }

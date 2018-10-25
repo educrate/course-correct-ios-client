@@ -11,14 +11,11 @@ import UIKit
 class OnboardingPresenter: OnboardingPresenterProtocol {
     
     // MARK: Viper
-    weak private var view: OnboardingViewProtocol?
     var interactor: OnboardingInteractorProtocol?
     private let router: OnboardingWireframeProtocol
 
-    init(interface: OnboardingViewProtocol,
-         interactor: OnboardingInteractorProtocol?,
+    init(interactor: OnboardingInteractorProtocol?,
          router: OnboardingWireframeProtocol) {
-        self.view = interface
         self.interactor = interactor
         self.router = router
     }

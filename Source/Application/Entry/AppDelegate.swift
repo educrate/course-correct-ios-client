@@ -10,14 +10,5 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
-    
-    lazy var presenter: AppPresenterProtocol? = AppRouter.createModule(window)
-}
-
-extension AppDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        presenter?.start()
-        return true
-    }
+    var window: UIWindow?
 }

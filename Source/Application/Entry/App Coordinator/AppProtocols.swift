@@ -31,3 +31,7 @@ protocol AppInteractorProtocol: class {
     
     func determineLaunchState()
 }
+
+protocol AppViewProtocol: class {
+    var presenter: AppPresenterProtocol? { get set }
+}

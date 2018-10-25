@@ -35,10 +35,3 @@ protocol OnboardingPresenterProtocol: class, Coordinator {}
 protocol OnboardingInteractorProtocol: class {
   var presenter: OnboardingPresenterProtocol?  { get set }
 }
-
-
-// MARK: - View 
-
-protocol OnboardingViewProtocol: class {
-  var presenter: OnboardingPresenterProtocol?  { get set }
-}
