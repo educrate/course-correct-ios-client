@@ -14,6 +14,12 @@ class MainRouter: MainWireframeProtocol {
 }
 
 extension MainRouter {
+    func presentCalendar() {
+        viewController?.setViewControllers([CalendarRouter.createModule()], animated: true)
+    }
+}
+
+extension MainRouter {
     static func createModule(_ delegate: MainRouterDelegate?, with navigationController: UINavigationController?) -> MainPresenter {
         let interactor = MainInteractor()
         let router = MainRouter()

@@ -10,7 +10,9 @@ import Foundation
 
 
 // MARK: - Wireframe
-protocol MainWireframeProtocol: class {}
+protocol MainWireframeProtocol: class {
+    func presentCalendar()
+}
 
 
 // MARK: - Coordinator

@@ -15,6 +15,7 @@ class AppViewController: UINavigationController, AppViewProtocol {
 extension AppViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationBar.makeTransparent()
         presenter?.start()
     }
 }

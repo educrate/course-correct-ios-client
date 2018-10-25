@@ -14,15 +14,15 @@ class ProfileOverviewRouter: ProfileOverviewWireframeProtocol {
 
 extension ProfileOverviewRouter {
     func presentAccount() {
-        
+        viewController?.show(ProfileAccountRouter.createModule(), sender: nil)
     }
     
     func presentPayment() {
-        
+        viewController?.show(ProfilePaymentRouter.createModule(), sender: nil)
     }
     
     func presentSupport() {
-        
+        viewController?.show(ProfileSupportRouter.createModule(), sender: nil)
     }
     
     func presentWelcome() {

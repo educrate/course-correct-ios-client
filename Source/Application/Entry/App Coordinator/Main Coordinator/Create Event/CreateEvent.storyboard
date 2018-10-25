@@ -12,7 +12,7 @@
         <!--Create Event View Controller-->
         <scene sceneID="PPd-pe-DrB">
             <objects>
-                <viewController id="QyG-af-jN8" customClass="CreateEventViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateEventViewController" id="QyG-af-jN8" customClass="CreateEventViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V8E-cV-5cn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

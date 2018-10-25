@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile Overview View Controller-->
+        <!--Profile-->
         <scene sceneID="1SV-o7-qeK">
             <objects>
                 <viewController storyboardIdentifier="ProfileOverviewViewController" id="8oO-JV-nPh" customClass="ProfileOverviewViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
@@ -129,7 +129,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Z0-1S-hLc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="D7m-UO-jWt">
+                    <navigationItem key="navigationItem" title="Profile" id="D7m-UO-jWt">
                         <barButtonItem key="backBarButtonItem" title=" " id="5E4-yt-OD8"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="XPk-rr-j4h"/>
                     </navigationItem>

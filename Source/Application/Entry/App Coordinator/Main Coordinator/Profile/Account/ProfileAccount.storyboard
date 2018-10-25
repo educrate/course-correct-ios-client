@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile Account View Controller-->
+        <!--Account-->
         <scene sceneID="Dwd-v0-bgQ">
             <objects>
                 <viewController storyboardIdentifier="ProfileAccountViewController" id="Hco-C3-aO5" customClass="ProfileAccountViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WHF-MR-Jj8"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vsd-0G-5WR">
+                    <navigationItem key="navigationItem" title="Account" id="Vsd-0G-5WR">
                         <barButtonItem key="backBarButtonItem" title=" " id="2Qd-ve-wdb"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="p1Q-ex-PlA"/>
                     </navigationItem>

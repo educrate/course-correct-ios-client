@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile Payment View Controller-->
+        <!--Payment-->
         <scene sceneID="uh1-Wi-LhS">
             <objects>
                 <viewController storyboardIdentifier="ProfilePaymentViewController" id="vsV-Sl-jIU" customClass="ProfilePaymentViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RzM-uB-EhJ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SbB-ER-KEB">
+                    <navigationItem key="navigationItem" title="Payment" id="SbB-ER-KEB">
                         <barButtonItem key="backBarButtonItem" title=" " id="5ay-b1-7sW"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="DkD-p3-ixW">
                             <connections>

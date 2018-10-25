@@ -35,10 +35,10 @@ extension AppPresenter {
 
 extension AppPresenter {
     func onboardingPresenter(_ onboardingPresenter: OnboardingPresenter, didFinishWith state: String) {
-        
+        router.presentMainModule()
     }
     
     func mainPresenter(_ mainPresenter: MainPresenter, didSignOut user: String) {
-        
+        router.presentOnboardingModule()
     }
 }

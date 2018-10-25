@@ -21,6 +21,6 @@ class MainPresenter: MainPresenterProtocol {
 
 extension MainPresenter {
     func start() {
-        
+        router.presentCalendar()
     }
 }
