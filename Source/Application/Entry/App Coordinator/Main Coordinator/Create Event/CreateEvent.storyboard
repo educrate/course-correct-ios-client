@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Create Event View Controller-->
+        <!--Create Event-->
         <scene sceneID="PPd-pe-DrB">
             <objects>
                 <viewController storyboardIdentifier="CreateEventViewController" id="QyG-af-jN8" customClass="CreateEventViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,6 +19,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wV0-GF-hzA"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Create Event" id="9Hx-gf-JFK">
+                        <barButtonItem key="backBarButtonItem" title=" " id="WXM-Ck-pw3"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oWs-SF-Apx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
