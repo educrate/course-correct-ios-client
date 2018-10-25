@@ -14,7 +14,7 @@ class MainRouter: MainWireframeProtocol {
 }
 
 extension MainRouter {
-    static func createModule(_ delegate: MainRouterDelegate?, with navigationController: UINavigationController?) -> UIViewController {
+    static func createModule(_ delegate: MainRouterDelegate?, with navigationController: UINavigationController?) -> MainPresenter {
         let interactor = MainInteractor()
         let router = MainRouter()
         let presenter = MainPresenter(interactor: interactor, router: router)

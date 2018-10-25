@@ -623,13 +623,13 @@
 		BF5004A5217411C300D35B69 /* Main Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				BF4F48EE21826A82000D98D1 /* MainPresenter.swift */,
+				BF4F48EF21826A82000D98D1 /* MainRouter.swift */,
+				BF4F48F121826A82000D98D1 /* MainInteractor.swift */,
+				BF4F48F021826A82000D98D1 /* MainProtocols.swift */,
 				BF5004A62174120B00D35B69 /* Calendar */,
 				BF5004A4217411A800D35B69 /* Create Event */,
 				BF5004632172EF9100D35B69 /* Profile */,
-				BF4F48EE21826A82000D98D1 /* MainPresenter.swift */,
-				BF4F48EF21826A82000D98D1 /* MainRouter.swift */,
-				BF4F48F021826A82000D98D1 /* MainProtocols.swift */,
-				BF4F48F121826A82000D98D1 /* MainInteractor.swift */,
 			);
 			path = "Main Coordinator";
 			sourceTree = "<group>";
