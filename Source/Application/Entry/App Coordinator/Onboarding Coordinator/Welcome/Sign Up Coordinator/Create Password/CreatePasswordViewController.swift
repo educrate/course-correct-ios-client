@@ -34,8 +34,8 @@ private extension CreatePasswordViewController {
 extension CreatePasswordViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        passwordField.setPlaceholder("Create Password")
-        confirmPasswordField.setPlaceholder("Confirm Password")
+        passwordField.setPlaceholder("Create a password")
+        confirmPasswordField.setPlaceholder("Confirm password")
     }
     
     override func viewDidAppear(_ animated: Bool) {

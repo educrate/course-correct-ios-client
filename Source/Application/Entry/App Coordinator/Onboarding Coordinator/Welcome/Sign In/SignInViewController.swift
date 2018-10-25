@@ -24,6 +24,14 @@ class SignInViewController: UIViewController, SignInViewProtocol {
 }
 
 extension SignInViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        emailField.setPlaceholder("Enter your email")
+        passwordField.setPlaceholder("Enter your password")
+    }
+}
+
+extension SignInViewController {
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
         presenter?.credentialsEntered(email: emailField.text, password: passwordField.text)
     }
