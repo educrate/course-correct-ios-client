@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileOverviewRouter: ProfileOverviewWireframeProtocol {
     private weak var viewController: UIViewController?
+    private weak var delegate: ProfileOverviewRouterDelegate?
 }
 
 extension ProfileOverviewRouter {
@@ -25,13 +26,13 @@ extension ProfileOverviewRouter {
         viewController?.show(ProfileSupportRouter.createModule(), sender: nil)
     }
     
-    func presentWelcome() {
-        
+    func presentLogout() {
+        delegate?.profileOverviewRouter(self, didSignOut: "user signed out")
     }
 }
 
 extension ProfileOverviewRouter {
-    static func createModule() -> UIViewController {
+    static func createModule(_ delegate: ProfileOverviewRouterDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .profileOverview)
         let view: ProfileOverviewViewController = storyboard.instantiateViewController()
         let interactor = ProfileOverviewInteractor()
@@ -41,6 +42,7 @@ extension ProfileOverviewRouter {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
+        router.delegate = delegate
         
         return view
     }

@@ -8,19 +8,22 @@
 
 import Foundation
 
-
 // MARK: - Wireframe
-
-protocol ProfileOverviewWireframeProtocol: class, Wireframe {
+protocol ProfileOverviewWireframeProtocol: class {
     func presentAccount()
     func presentPayment()
     func presentSupport()
-    func presentWelcome()
+    func presentLogout()
+}
+
+
+// MARK: Coordinator
+protocol ProfileOverviewRouterDelegate: class {
+    func profileOverviewRouter(_ profileOverviewRouter: ProfileOverviewRouter, didSignOut user: String)
 }
 
 
 // MARK: - Presenter
-
 protocol ProfileOverviewPresenterProtocol: class {
     func showAccountScreen()
     func showPaymentScreen()
@@ -35,7 +38,6 @@ protocol ProfileOverviewPresenterProtocol: class {
 
 
 // MARK: - Interactor
-
 protocol ProfileOverviewInteractorProtocol: class {
     var presenter: ProfileOverviewPresenterProtocol? { get set }
     
@@ -46,8 +48,7 @@ protocol ProfileOverviewInteractorProtocol: class {
 }
 
 
-// MARK: - View 
-
+// MARK: - View
 protocol ProfileOverviewViewProtocol: class {
     var presenter: ProfileOverviewPresenterProtocol? { get set }
     

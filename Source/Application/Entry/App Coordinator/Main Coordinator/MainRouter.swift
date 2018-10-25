@@ -14,8 +14,18 @@ class MainRouter: MainWireframeProtocol {
 }
 
 extension MainRouter {
+    func presentOnboarding() {
+        delegate?.mainRouter(self, didSignOut: "user signed out")
+    }
+    
     func presentCalendar() {
-        viewController?.setViewControllers([CalendarRouter.createModule()], animated: true)
+        viewController?.setViewControllers([CalendarRouter.createModule(self)], animated: true)
+    }
+}
+
+extension MainRouter {
+    func calendarRouter(_ calendarRouter: CalendarRouter, didSignOut user: String) {
+        presentOnboarding()
     }
 }
 

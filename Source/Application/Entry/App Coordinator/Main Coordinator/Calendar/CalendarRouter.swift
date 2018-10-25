@@ -10,6 +10,7 @@ import UIKit
 
 class CalendarRouter: CalendarWireframeProtocol {
     private weak var viewController: UIViewController?
+    private weak var delegate: CalendarRouterDelegate?
 }
 
 extension CalendarRouter {
@@ -22,12 +23,18 @@ extension CalendarRouter {
     }
     
     func presentProfile() {
-        viewController?.show(ProfileOverviewRouter.createModule(), sender: nil)
+        viewController?.show(ProfileOverviewRouter.createModule(self), sender: nil)
     }
 }
 
 extension CalendarRouter {
-    static func createModule() -> UIViewController {
+    func profileOverviewRouter(_ profileOverviewRouter: ProfileOverviewRouter, didSignOut user: String) {
+        delegate?.calendarRouter(self, didSignOut: "user signed out")
+    }
+}
+
+extension CalendarRouter {
+    static func createModule(_ delegate: CalendarRouterDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .calendar)
         let view: CalendarViewController = storyboard.instantiateViewController()
         let interactor = CalendarInteractor()
@@ -37,6 +44,7 @@ extension CalendarRouter {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
+        router.delegate = delegate
         
         return view
     }

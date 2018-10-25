@@ -69,7 +69,7 @@ extension ProfileOverviewPresenter {
     func logoutProfileFetched(with result: Result<Void, ProfileOverviewError>) {
         switch result {
         case .success:
-            router.presentSupport()
+            router.presentLogout()
         case .failure(let error):
             view?.show(error: error)
         }

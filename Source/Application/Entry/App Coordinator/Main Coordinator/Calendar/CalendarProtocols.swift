@@ -8,18 +8,21 @@
 
 import Foundation
 
-
 // MARK: - Wireframe
-
-protocol CalendarWireframeProtocol: class, Wireframe {
+protocol CalendarWireframeProtocol: ProfileOverviewRouterDelegate {
     func presentEvent()
     func presentCreateEvent()
     func presentProfile()
 }
 
 
-// MARK: - Presenter
+// MARK: - Coordinator
+protocol CalendarRouterDelegate: class {
+    func calendarRouter(_ calendarRouter: CalendarRouter, didSignOut user: String)
+}
 
+
+// MARK: - Presenter
 protocol CalendarPresenterProtocol: class {
     
     // MARK: Navigation Events
@@ -30,14 +33,12 @@ protocol CalendarPresenterProtocol: class {
 
 
 // MARK: - Interactor
-
 protocol CalendarInteractorProtocol: class {
   var presenter: CalendarPresenterProtocol? { get set }
 }
 
 
-// MARK: - View 
-
+// MARK: - View
 protocol CalendarViewProtocol: class {
   var presenter: CalendarPresenterProtocol? { get set }
 }

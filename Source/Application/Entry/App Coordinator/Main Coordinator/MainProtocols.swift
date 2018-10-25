@@ -10,13 +10,16 @@ import Foundation
 
 
 // MARK: - Wireframe
-protocol MainWireframeProtocol: class {
+protocol MainWireframeProtocol: CalendarRouterDelegate {
+    func presentOnboarding()
     func presentCalendar()
 }
 
 
 // MARK: - Coordinator
-protocol MainRouterDelegate: class {}
+protocol MainRouterDelegate: class {
+    func mainRouter(_ mainRouter: MainRouter, didSignOut user: String)
+}
 
 
 // MARK: - Presenter
