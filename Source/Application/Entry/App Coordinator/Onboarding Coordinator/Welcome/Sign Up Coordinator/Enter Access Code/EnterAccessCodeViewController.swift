@@ -30,11 +30,6 @@ extension EnterAccessCodeViewController {
 }
 
 extension EnterAccessCodeViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        field.setPlaceholder("Access Code")
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         field.beginEditing()
@@ -44,6 +39,7 @@ extension EnterAccessCodeViewController {
         switch segueCase(for: segue) {
         case .field:
             field = segue.viewController()
+            field.style(with: "Enter your access code")
         }
     }
 }

@@ -26,8 +26,7 @@ class SignInViewController: UIViewController, SignInViewProtocol {
 extension SignInViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailField.setPlaceholder("Enter your email")
-        passwordField.setPlaceholder("Enter your password")
+        emailField.beginEditing()
     }
 }
 
@@ -39,12 +38,13 @@ extension SignInViewController {
 
 extension SignInViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO: Need To Setup Configurations
         switch segueCase(for: segue) {
         case .email:
             emailField = segue.viewController()
+            emailField.style(with: "Enter your email")
         case .password:
             passwordField = segue.viewController()
+            passwordField.style(with: "Enter your password")
         }
     }
 }

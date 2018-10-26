@@ -31,13 +31,7 @@ private extension CreatePasswordViewController {
     }
 }
 
-extension CreatePasswordViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        passwordField.setPlaceholder("Create a password")
-        confirmPasswordField.setPlaceholder("Confirm password")
-    }
-    
+extension CreatePasswordViewController {  
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         passwordField.beginEditing()
@@ -47,8 +41,10 @@ extension CreatePasswordViewController {
         switch segueCase(for: segue) {
         case .password:
             passwordField = segue.viewController()
+            passwordField.style(with: "Create a password")
         case .confirmPassword:
             confirmPasswordField = segue.viewController()
+            confirmPasswordField.style(with: "Confirm password")
         }
     }
 }

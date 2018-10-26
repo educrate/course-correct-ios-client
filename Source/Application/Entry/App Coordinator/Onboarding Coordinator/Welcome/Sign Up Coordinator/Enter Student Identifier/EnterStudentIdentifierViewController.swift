@@ -30,11 +30,6 @@ extension EnterStudentIdentifierViewController {
 }
 
 extension EnterStudentIdentifierViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        field.setPlaceholder("Student Identifier")
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         field.beginEditing()
@@ -44,6 +39,7 @@ extension EnterStudentIdentifierViewController {
         switch segueCase(for: segue) {
         case .field:
             field = segue.viewController()
+            field.style(with: "Enter your student identifier")
         }
     }
 }

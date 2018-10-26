@@ -14,6 +14,10 @@ class SignInInteractor: SignInInteractorProtocol {
 
 extension SignInInteractor {
     func validate(email: String, password: String) {
-        presenter?.credentialsValidated(Result(value: ()))
+        if email == "campe@uci.edu", password == "AmpeC749" {
+            presenter?.credentialsValidated(Result(value: ()))
+        } else {
+            presenter?.credentialsValidated(Result(error: .invalidCredentials))
+        }
     }
 }

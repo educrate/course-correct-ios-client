@@ -11,7 +11,7 @@ import UIKit
 // MARK: - Config For UI Field
 struct UIFieldConfiguration {
     let text: String
-    let placeholderText: String
+    let placeholder: String
     let cursorColor: UIColor
     let textColor: UIColor
     let placeholderColor: UIColor
@@ -21,17 +21,17 @@ struct UIFieldConfiguration {
     let textAlignment: NSTextAlignment
     
     init(text: String,
-                placeholderText: String,
-                cursorColor: UIColor,
-                textColor: UIColor,
-                placeholderColor: UIColor,
-                underlineColor: UIColor,
-                underlineThickness: CGFloat,
-                thicknessChange: CGFloat,
-                textAlignment: NSTextAlignment) {
+         placeholder: String,
+         cursorColor: UIColor,
+         textColor: UIColor,
+         placeholderColor: UIColor,
+         underlineColor: UIColor,
+         underlineThickness: CGFloat,
+         thicknessChange: CGFloat,
+         textAlignment: NSTextAlignment) {
         
         self.text = text
-        self.placeholderText = placeholderText
+        self.placeholder = placeholder
         self.cursorColor = cursorColor
         self.textColor = textColor
         self.placeholderColor = placeholderColor
@@ -41,9 +41,9 @@ struct UIFieldConfiguration {
         self.textAlignment = textAlignment
     }
     
-    init(placeholderText: String) {
+    init(placeholder: String) {
         self.init(text: "",
-                  placeholderText: placeholderText,
+                  placeholder: placeholder,
                   cursorColor: .gray,
                   textColor: .black,
                   placeholderColor: .gray,
@@ -52,6 +52,8 @@ struct UIFieldConfiguration {
                   thicknessChange: 1.0,
                   textAlignment: .left)
     }
-    
-    static let `default` = UIFieldConfiguration(placeholderText: "Placeholder")
+}
+
+extension UIFieldConfiguration {
+    static let `default` = UIFieldConfiguration(placeholder: "Placeholder")
 }

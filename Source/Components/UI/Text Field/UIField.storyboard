@@ -24,8 +24,8 @@
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="editingDidBegin:forEvent:" destination="ilv-Lx-Pm8" eventType="editingDidBegin" id="dgF-Xw-gxL"/>
-                                    <action selector="editingDidEnd:forEvent:" destination="ilv-Lx-Pm8" eventType="editingDidEnd" id="Fjz-zd-bYc"/>
+                                    <action selector="editingDidBegin:forEvent:" destination="ilv-Lx-Pm8" eventType="editingDidBegin" id="iOe-ae-gHS"/>
+                                    <action selector="editingDidEnd:forEvent:" destination="ilv-Lx-Pm8" eventType="editingDidEnd" id="yYK-ky-F20"/>
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jc2-Yp-uaa" userLabel="Underline">
