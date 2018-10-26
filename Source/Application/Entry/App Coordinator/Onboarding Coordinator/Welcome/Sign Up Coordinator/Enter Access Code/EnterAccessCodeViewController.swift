@@ -39,7 +39,7 @@ extension EnterAccessCodeViewController {
         switch segueCase(for: segue) {
         case .field:
             field = segue.viewController()
-            field.style(with: "Enter your access code")
+            field.style(with: UIFieldConfiguration(placeholder: "Enter your access code", keyboardType: .numberPad))
         }
     }
 }

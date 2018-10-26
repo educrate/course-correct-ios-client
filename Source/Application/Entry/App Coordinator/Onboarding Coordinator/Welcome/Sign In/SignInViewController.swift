@@ -41,10 +41,10 @@ extension SignInViewController {
         switch segueCase(for: segue) {
         case .email:
             emailField = segue.viewController()
-            emailField.style(with: "Enter your email")
+            emailField.style(with: UIFieldConfiguration(placeholder: "Enter your email"))
         case .password:
             passwordField = segue.viewController()
-            passwordField.style(with: "Enter your password")
+            passwordField.style(with: UIFieldConfiguration(placeholder: "Enter your password", isSecureTextEntry: true))
         }
     }
 }

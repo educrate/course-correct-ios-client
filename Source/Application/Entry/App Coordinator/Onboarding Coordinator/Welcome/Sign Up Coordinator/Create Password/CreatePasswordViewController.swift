@@ -41,10 +41,10 @@ extension CreatePasswordViewController {
         switch segueCase(for: segue) {
         case .password:
             passwordField = segue.viewController()
-            passwordField.style(with: "Create a password")
+            passwordField.style(with: UIFieldConfiguration(placeholder: "Create a password", isSecureTextEntry: true))
         case .confirmPassword:
             confirmPasswordField = segue.viewController()
-            confirmPasswordField.style(with: "Confirm password")
+            confirmPasswordField.style(with: UIFieldConfiguration(placeholder: "Confirm password", isSecureTextEntry: true))
         }
     }
 }

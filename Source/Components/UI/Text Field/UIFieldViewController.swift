@@ -54,10 +54,6 @@ extension UIFieldViewController {
         self.configuration = configuration
     }
     
-    func style(with placeholder: String) {
-        configuration = UIFieldConfiguration(placeholder: placeholder)
-    }
-    
     func beginEditing() {
         field.becomeFirstResponder()
     }
@@ -75,6 +71,17 @@ private extension UIFieldViewController {
         field.textAlignment = configuration.textAlignment
         field.attributedPlaceholder = NSAttributedString(string: configuration.placeholder,
                                                          attributes: [NSAttributedString.Key.foregroundColor: configuration.placeholderColor])
+        field.autocapitalizationType = configuration.autocapitalizationType
+        field.autocorrectionType = configuration.autocorrectionType
+        field.spellCheckingType = configuration.spellCheckingType
+        field.smartQuotesType = configuration.smartQuotesType
+        field.smartDashesType = configuration.smartDashesType
+        field.smartInsertDeleteType = configuration.smartInsertDeleteType
+        field.keyboardType = configuration.keyboardType
+        field.keyboardAppearance = configuration.keyboardAppearance
+        field.returnKeyType = configuration.returnKeyType
+        field.enablesReturnKeyAutomatically = configuration.enablesReturnKeyAutomatically
+        field.isSecureTextEntry = configuration.isSecureTextEntry
         underline.backgroundColor = configuration.underlineColor
         underlineHeightConstraint.constant = configuration.underlineThickness
     }

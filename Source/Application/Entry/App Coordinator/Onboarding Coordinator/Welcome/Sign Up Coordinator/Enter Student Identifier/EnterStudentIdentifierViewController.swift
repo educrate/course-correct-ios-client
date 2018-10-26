@@ -39,7 +39,7 @@ extension EnterStudentIdentifierViewController {
         switch segueCase(for: segue) {
         case .field:
             field = segue.viewController()
-            field.style(with: "Enter your student identifier")
+            field.style(with: UIFieldConfiguration(placeholder: "Enter your student identifier", keyboardType: .numberPad))
         }
     }
 }
