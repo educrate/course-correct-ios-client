@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Calendar View Controller-->
+        <!--Schedule-->
         <scene sceneID="BXr-p1-vkB">
             <objects>
                 <viewController storyboardIdentifier="CalendarViewController" id="aMk-Ct-fNR" customClass="CalendarViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aJ6-zU-ht1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2Ic-2y-Twr">
+                    <navigationItem key="navigationItem" title="Schedule" id="2Ic-2y-Twr">
                         <barButtonItem key="backBarButtonItem" title=" " id="siw-tc-KQ1"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="trash" id="AVK-Wo-1sR">
