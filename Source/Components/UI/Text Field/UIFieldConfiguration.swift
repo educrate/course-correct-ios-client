@@ -12,48 +12,69 @@ import UIKit
 struct UIFieldConfiguration {
     let text: String
     let placeholder: String
-    let cursorColor: UIColor
     let textColor: UIColor
+    let cursorColor: UIColor
     let placeholderColor: UIColor
     let underlineColor: UIColor
     let underlineThickness: CGFloat
     let thicknessChange: CGFloat
     let textAlignment: NSTextAlignment
+    let autocapitalizationType: UITextAutocapitalizationType
+    let autocorrectionType: UITextAutocorrectionType
+    let spellCheckingType: UITextSpellCheckingType
+    let smartQuotesType: UITextSmartQuotesType
+    let smartDashesType: UITextSmartDashesType
+    let smartInsertDeleteType: UITextSmartInsertDeleteType
+    let keyboardType: UIKeyboardType
+    let keyboardAppearance: UIKeyboardAppearance
+    let returnKeyType: UIReturnKeyType
+    let enablesReturnKeyAutomatically: Bool
+    let isSecureTextEntry: Bool
     
-    init(text: String,
-         placeholder: String,
-         cursorColor: UIColor,
-         textColor: UIColor,
-         placeholderColor: UIColor,
-         underlineColor: UIColor,
-         underlineThickness: CGFloat,
-         thicknessChange: CGFloat,
-         textAlignment: NSTextAlignment) {
+    init(text: String = "",
+         placeholder: String = "",
+         textColor: UIColor = .black,
+         cursorColor: UIColor = .darkGray,
+         placeholderColor: UIColor = .darkGray,
+         underlineColor: UIColor = .darkGray,
+         underlineThickness: CGFloat = 1.0,
+         thicknessChange: CGFloat = 1.0,
+         textAlignment: NSTextAlignment = .left,
+         autocapitalizationType: UITextAutocapitalizationType = .none,
+         autocorrectionType: UITextAutocorrectionType = .default,
+         spellCheckingType: UITextSpellCheckingType = .default,
+         smartQuotesType: UITextSmartQuotesType = .default,
+         smartDashesType: UITextSmartDashesType = .default,
+         smartInsertDeleteType: UITextSmartInsertDeleteType = .default,
+         keyboardType: UIKeyboardType = .default,
+         keyboardAppearance: UIKeyboardAppearance = .default,
+         returnKeyType: UIReturnKeyType = .default,
+         enablesReturnKeyAutomatically: Bool = false,
+         isSecureTextEntry: Bool = false) {
         
         self.text = text
         self.placeholder = placeholder
-        self.cursorColor = cursorColor
         self.textColor = textColor
+        self.cursorColor = cursorColor
         self.placeholderColor = placeholderColor
         self.underlineColor = underlineColor
         self.underlineThickness = underlineThickness
         self.thicknessChange = thicknessChange
         self.textAlignment = textAlignment
-    }
-    
-    init(placeholder: String) {
-        self.init(text: "",
-                  placeholder: placeholder,
-                  cursorColor: .gray,
-                  textColor: .black,
-                  placeholderColor: .gray,
-                  underlineColor: .gray,
-                  underlineThickness: 1.0,
-                  thicknessChange: 1.0,
-                  textAlignment: .left)
+        self.autocapitalizationType = autocapitalizationType
+        self.autocorrectionType = autocorrectionType
+        self.spellCheckingType = spellCheckingType
+        self.smartQuotesType = smartQuotesType
+        self.smartDashesType = smartDashesType
+        self.smartInsertDeleteType = smartInsertDeleteType
+        self.keyboardType = keyboardType
+        self.keyboardAppearance = keyboardAppearance
+        self.returnKeyType = returnKeyType
+        self.enablesReturnKeyAutomatically = enablesReturnKeyAutomatically
+        self.isSecureTextEntry = isSecureTextEntry
     }
 }
 
 extension UIFieldConfiguration {
-    static let `default` = UIFieldConfiguration(placeholder: "Placeholder")
+    static let `default` = UIFieldConfiguration()
 }
