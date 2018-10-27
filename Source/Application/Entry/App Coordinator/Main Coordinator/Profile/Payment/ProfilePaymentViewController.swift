@@ -24,7 +24,10 @@ extension ProfilePaymentViewController {
         let addBankOption = UIActionSheetOption(title: "Add banking information",
                                                 action: presenter?.showAddBank)
         
+        let cancelOption = UIActionSheetOption(title: "Cancel")
+        
         UIActionSheetViewController.show(with: [addCardOption,
-                                                addBankOption])
+                                                addBankOption,
+                                                cancelOption])
     }
 }
