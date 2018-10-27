@@ -15,7 +15,7 @@ class EnterAccessCodeRouter: EnterAccessCodeWireframeProtocol {
 
 extension EnterAccessCodeRouter {
     func showNextScreen() {
-        delegate?.enterAccessCodeRouter(self, didEnter: "access code")
+        delegate?.enterAccessCode(didEnter: "access code")
     }
 }
 

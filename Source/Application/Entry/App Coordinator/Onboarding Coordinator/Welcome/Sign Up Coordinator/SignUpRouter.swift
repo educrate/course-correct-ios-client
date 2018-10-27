@@ -36,20 +36,20 @@ extension SignUpRouter {
 }
 
 extension SignUpRouter {
-    func selectCollegeRouter(_ selectCollegeRouter: SelectCollegeRouter, didSelect college: String) {
+    func selectCollege(didSelect college: String) {
         showEnterStudentIdentifier()
     }
     
-    func enterStudentIdentifierRouter(_ enterStudentIdentifierRouter: EnterStudentIdentifierRouter, didEnter studentIdentifier: String) {
+    func enterStudentIdentifier(didEnter studentIdentifier: String) {
         showEnterAccessCode()
     }
     
-    func enterAccessCodeRouter(_ enterAccessCodeRouter: EnterAccessCodeRouter, didEnter accessCode: String) {
+    func enterAccessCode(didEnter accessCode: String) {
         showCreatePassword()
     }
     
-    func createPasswordRouter(_ createPasswordRouter: CreatePasswordRouter, didCreate password: String) {
-        delegate?.signUpRouter(self, didSignUp: "new user created with password")
+    func createPassword(didCreate password: String) {
+        delegate?.signUp(didSignUp: "new user created with password")
     }
 }
 

@@ -15,7 +15,7 @@ class SelectCollegeRouter: SelectCollegeWireframeProtocol {
 
 extension SelectCollegeRouter {
     func showNextScreen() {
-        delegate?.selectCollegeRouter(self, didSelect: "college")
+        delegate?.selectCollege(didSelect: "college")
     }
 }
 

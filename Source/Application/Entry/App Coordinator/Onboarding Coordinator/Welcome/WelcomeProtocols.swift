@@ -10,22 +10,20 @@ import Foundation
 
 
 // MARK: - Wireframe
-
 protocol WelcomeWireframeProtocol: SignUpRouterDelegate, SignInRouterDelegate {
-    func presentSignUpModule()
+    func presentSignUp()
     func presentSignIn()
 }
 
 
 // MARK: - Coordinator
-
 protocol WelcomeRouterDelegate: class {
-    func welcomeRouter(_ welcomeRouter: WelcomeRouter, didCompleteWith user: String)
+    func welcome(didSignUp user: String)
+    func welcome(didSignIn user: String)
 }
 
 
 // MARK: - Presenter
-
 protocol WelcomePresenterProtocol: class {
     func showSignUp()
     func showSignIn()
@@ -33,14 +31,12 @@ protocol WelcomePresenterProtocol: class {
 
 
 // MARK: - Interactor
-
 protocol WelcomeInteractorProtocol: class {
   var presenter: WelcomePresenterProtocol? { get set }
 }
 
 
-// MARK: - View 
-
+// MARK: - View
 protocol WelcomeViewProtocol: class {
   var presenter: WelcomePresenterProtocol? { get set }
 }

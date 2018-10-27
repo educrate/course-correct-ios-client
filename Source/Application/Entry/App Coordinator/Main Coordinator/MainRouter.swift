@@ -15,7 +15,7 @@ class MainRouter: MainWireframeProtocol {
 
 extension MainRouter {
     func presentOnboarding() {
-        delegate?.mainRouter(self, didSignOut: "user signed out")
+        delegate?.main(didSignOut: "user signed out")
     }
     
     func presentCalendar() {

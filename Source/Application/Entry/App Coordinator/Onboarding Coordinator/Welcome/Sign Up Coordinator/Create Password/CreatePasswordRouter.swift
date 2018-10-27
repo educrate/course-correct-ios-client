@@ -15,7 +15,7 @@ class CreatePasswordRouter: CreatePasswordWireframeProtocol {
 
 extension CreatePasswordRouter {
     func showNextScreen() {
-        delegate?.createPasswordRouter(self, didCreate: "password")
+        delegate?.createPassword(didCreate: "password")
     }
 }
 

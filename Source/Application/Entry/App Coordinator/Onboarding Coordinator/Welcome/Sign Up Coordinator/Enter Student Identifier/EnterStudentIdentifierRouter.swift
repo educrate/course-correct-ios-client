@@ -15,7 +15,7 @@ class EnterStudentIdentifierRouter: EnterStudentIdentifierWireframeProtocol {
 
 extension EnterStudentIdentifierRouter {
     func showNextScreen() {
-        delegate?.enterStudentIdentifierRouter(self, didEnter: "identifier")
+        delegate?.enterStudentIdentifier(didEnter: "identifier")
     }
 }
 

@@ -10,21 +10,18 @@ import Foundation
 
 
 // MARK: - Wireframe
-
 protocol CreatePasswordWireframeProtocol: class {
     func showNextScreen()
 }
 
 
 // MARK: - Coordinator
-
 protocol CreatePasswordRouterDelegate: class {
-    func createPasswordRouter(_ createPasswordRouter: CreatePasswordRouter, didCreate password: String)
+    func createPassword(didCreate password: String)
 }
 
 
 // MARK: - Presenter
-
 protocol CreatePasswordPresenterProtocol: class {
     func entered(password: String, confirmedPassword: String)
     
@@ -33,7 +30,6 @@ protocol CreatePasswordPresenterProtocol: class {
 
 
 // MARK: - Interactor
-
 protocol CreatePasswordInteractorProtocol: class {
   var presenter: CreatePasswordPresenterProtocol? { get set }
     
@@ -42,7 +38,6 @@ protocol CreatePasswordInteractorProtocol: class {
 
 
 // MARK: - View 
-
 protocol CreatePasswordViewProtocol: class {
   var presenter: CreatePasswordPresenterProtocol? { get set }
     

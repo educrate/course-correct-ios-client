@@ -15,7 +15,7 @@ class CongratulationsRouter: CongratulationsWireframeProtocol {
 
 extension CongratulationsRouter {
     func nextScreen() {
-        delegate?.congratulationsRouter(self, didDisplayWith: "congratulations screen complete")
+        delegate?.congratulations(didDisplayWith: "congratulations screen complete")
     }
 }
 

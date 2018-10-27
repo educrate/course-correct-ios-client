@@ -10,31 +10,26 @@ import Foundation
 
 
 // MARK: - Wireframe
-
 protocol WalkthroughWireframeProtocol: class {}
 
 
 // MARK: - Coordinator
-
 protocol WalkthroughRouterDelegate: class {
-    func walkthroughRouter(_ walkthroughRouter: WalkthroughRouter, didCompleteWith state: String)
+    func walkthrough(didCompleteWith action: String)
 }
 
 
 // MARK: - Presenter
-
 protocol WalkthroughPresenterProtocol: class {}
 
 
 // MARK: - Interactor
-
 protocol WalkthroughInteractorProtocol: class {
   var presenter: WalkthroughPresenterProtocol?  { get set }
 }
 
 
-// MARK: - View 
-
+// MARK: - View
 protocol WalkthroughViewProtocol: class {
   var presenter: WalkthroughPresenterProtocol?  { get set }
 }

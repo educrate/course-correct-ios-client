@@ -28,16 +28,20 @@ extension OnboardingRouter {
 }
 
 extension OnboardingRouter {
-    func walkthroughRouter(_ walkthroughRouter: WalkthroughRouter, didCompleteWith state: String) {
+    func walkthrough(didCompleteWith action: String) {
         presentWelcome()
     }
     
-    func welcomeRouter(_ welcomeRouter: WelcomeRouter, didCompleteWith user: String) {
+    func welcome(didSignUp user: String) {
         presentCongratulations()
     }
     
-    func congratulationsRouter(_ congratulationsRouter: CongratulationsRouter, didDisplayWith state: String) {
-        delegate?.onboardingRouter(self, didFinishWith: "congratulations screen handled")
+    func welcome(didSignIn user: String) {
+        delegate?.onboarding(didFinishWith: user)
+    }
+    
+    func congratulations(didDisplayWith state: String) {
+        delegate?.onboarding(didFinishWith: "congratulations completed")
     }
 }
 

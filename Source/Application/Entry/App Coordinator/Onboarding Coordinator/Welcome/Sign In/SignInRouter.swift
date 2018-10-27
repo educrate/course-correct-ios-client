@@ -15,7 +15,7 @@ class SignInRouter: SignInWireframeProtocol {
 
 extension SignInRouter {
     func showNextScreen() {
-        delegate?.signInRouter(self, didSignIn: "user signed in")
+        delegate?.signIn(didSignIn: "user signed in")
     }
 }
 

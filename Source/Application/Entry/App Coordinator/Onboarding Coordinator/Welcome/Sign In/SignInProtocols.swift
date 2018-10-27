@@ -10,21 +10,18 @@ import Foundation
 
 
 // MARK: - Wireframe
-
 protocol SignInWireframeProtocol: class {
     func showNextScreen()
 }
 
 
 // MARK: - Coordinator
-
 protocol SignInRouterDelegate: class {
-    func signInRouter(_ signInRouter: SignInRouter, didSignIn user: String)
+    func signIn(didSignIn user: String)
 }
 
 
 // MARK: - Presenter
-
 protocol SignInPresenterProtocol: class {
     func credentialsEntered(email: String, password: String)
     
@@ -33,7 +30,6 @@ protocol SignInPresenterProtocol: class {
 
 
 // MARK: - Interactor
-
 protocol SignInInteractorProtocol: class {
   var presenter: SignInPresenterProtocol? { get set }
     
@@ -41,8 +37,7 @@ protocol SignInInteractorProtocol: class {
 }
 
 
-// MARK: - View 
-
+// MARK: - View
 protocol SignInViewProtocol: class {
   var presenter: SignInPresenterProtocol? { get set }
     

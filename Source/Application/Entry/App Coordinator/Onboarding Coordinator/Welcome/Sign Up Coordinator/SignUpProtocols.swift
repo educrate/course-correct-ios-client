@@ -10,37 +10,31 @@ import Foundation
 
 
 // MARK: - Wireframe
-
 protocol SignUpWireframeProtocol: SelectCollegeRouterDelegate, EnterStudentIdentifierRouterDelegate, EnterAccessCodeRouterDelegate, CreatePasswordRouterDelegate {
     func showSelectCollege()
     func showEnterStudentIdentifier()
     func showEnterAccessCode()
     func showCreatePassword()
-    func dismissSignUp(_ completion: (() -> Void)?)
 }
 
 
 // MARK: - Coordinator
-
 protocol SignUpRouterDelegate: class {
-    func signUpRouter(_ signUpRouter: SignUpRouter, didSignUp user: String)
+    func signUp(didSignUp user: String)
 }
 
 
 // MARK: - Presenter
-
 protocol SignUpPresenterProtocol: class, Coordinator {}
 
 
 // MARK: - Interactor
-
 protocol SignUpInteractorProtocol: class {
   var presenter: SignUpPresenterProtocol?  { get set }
 }
 
 
-// MARK: - View 
-
+// MARK: - View
 protocol SignUpViewProtocol: class {
   var presenter: SignUpPresenterProtocol?  { get set }
 }

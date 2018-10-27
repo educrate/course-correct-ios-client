@@ -28,13 +28,13 @@ extension AppPresenter {
 }
 
 extension AppPresenter {
-    func launchStateDetermined(_ state: String) {
+    func launchStateDetermined(_ state: AppUserState) {
         router.presentOnboardingModule()
     }
 }
 
 extension AppPresenter {
-    func onboardingPresenter(_ onboardingPresenter: OnboardingPresenter, didFinishWith state: String) {
+    func onboardingPresenter(_ onboardingPresenter: OnboardingPresenter, didFinishWith state: AppUserState) {
         router.presentMainModule()
     }
     

@@ -10,7 +10,6 @@ import Foundation
 
 
 // MARK: - Wireframe
-
 protocol OnboardingWireframeProtocol: WalkthroughRouterDelegate, WelcomeRouterDelegate, CongratulationsRouterDelegate {
     func presentWalkthrough()
     func presentWelcome()
@@ -19,19 +18,16 @@ protocol OnboardingWireframeProtocol: WalkthroughRouterDelegate, WelcomeRouterDe
 
 
 // MARK: - Coordinator
-
 protocol OnboardingRouterDelegate: class {
-    func onboardingRouter(_ onboardingRouter: OnboardingRouter, didFinishWith state: String)
+    func onboarding(didFinishWith user: String)
 }
 
 
 // MARK: - Presenter
-
 protocol OnboardingPresenterProtocol: class, Coordinator {}
 
 
 // MARK: - Interactor
-
 protocol OnboardingInteractorProtocol: class {
   var presenter: OnboardingPresenterProtocol?  { get set }
 }

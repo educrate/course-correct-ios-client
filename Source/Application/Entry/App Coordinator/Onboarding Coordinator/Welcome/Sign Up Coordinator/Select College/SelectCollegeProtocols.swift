@@ -10,21 +10,18 @@ import Foundation
 
 
 // MARK: - Wireframe
-
 protocol SelectCollegeWireframeProtocol: class {
     func showNextScreen()
 }
 
 
 // MARK: - Coordinator
-
 protocol SelectCollegeRouterDelegate: class {
-    func selectCollegeRouter(_ selectCollegeRouter: SelectCollegeRouter, didSelect college: String)
+    func selectCollege(didSelect college: String)
 }
 
 
 // MARK: - Presenter
-
 protocol SelectCollegePresenterProtocol: class {
     
     // MARK: From View
@@ -39,7 +36,6 @@ protocol SelectCollegePresenterProtocol: class {
 
 
 // MARK: - Interactor
-
 protocol SelectCollegeInteractorProtocol: class {
     
     // MARK: Properties
@@ -52,7 +48,6 @@ protocol SelectCollegeInteractorProtocol: class {
 
 
 // MARK: - View 
-
 protocol SelectCollegeViewProtocol: class {
     
     // MARK: Properties

@@ -237,6 +237,8 @@
 		BFF14D962160495000733323 /* DayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D952160495000733323 /* DayHelper.swift */; };
 		BFF14D982160496400733323 /* MonthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D972160496400733323 /* MonthHelper.swift */; };
 		BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF14DA32161433B00733323 /* UICalendarViewController.storyboard */; };
+		BFF6C28E2184BF60003F7D96 /* OnboardingUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */; };
+		BFF6C2902184C3A0003F7D96 /* AppUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */; };
 		BFF9DF172161A75300B80E9D /* CalendarLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF9DF162161A75300B80E9D /* CalendarLayoutCalculator.swift */; };
 /* End PBXBuildFile section */
 
@@ -494,6 +496,8 @@
 		BFF14D952160495000733323 /* DayHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHelper.swift; sourceTree = "<group>"; };
 		BFF14D972160496400733323 /* MonthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthHelper.swift; sourceTree = "<group>"; };
 		BFF14DA32161433B00733323 /* UICalendarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UICalendarViewController.storyboard; sourceTree = "<group>"; };
+		BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserState.swift; sourceTree = "<group>"; };
+		BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserState.swift; sourceTree = "<group>"; };
 		BFF9DF162161A75300B80E9D /* CalendarLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLayoutCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -599,6 +603,7 @@
 				BF5005AC217EEE9C00D35B69 /* AppRouter.swift */,
 				BF5005AF217EEE9C00D35B69 /* AppInteractor.swift */,
 				BF5005AE217EEE9C00D35B69 /* AppProtocols.swift */,
+				BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */,
 				BF579339216D4485008DBB46 /* Onboarding Coordinator */,
 				BF5004A5217411C300D35B69 /* Main Coordinator */,
 			);
@@ -839,6 +844,7 @@
 				BF5005C0217EF4FF00D35B69 /* OnboardingRouter.swift */,
 				BF5005C3217EF4FF00D35B69 /* OnboardingInteractor.swift */,
 				BF5005C2217EF4FF00D35B69 /* OnboardingProtocols.swift */,
+				BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */,
 				BF50054F217B835700D35B69 /* Walkthrough */,
 				BF70B5DC21715BA800771E5D /* Welcome */,
 				BF50055A217B847500D35B69 /* Congratulations */,
@@ -1423,6 +1429,7 @@
 				BFF14D8C2160033B00733323 /* CalendarBrain.swift in Sources */,
 				BFD82ACE216E77B600A14868 /* SelectCollegeProtocols.swift in Sources */,
 				BF5004A32174111C00D35B69 /* UIStoryboard+Identifiers.swift in Sources */,
+				BFF6C28E2184BF60003F7D96 /* OnboardingUserState.swift in Sources */,
 				BFF14D922160492F00733323 /* DateHelper.swift in Sources */,
 				BF500508217454C600D35B69 /* SignInRouter.swift in Sources */,
 				BF500558217B837600D35B69 /* WalkthroughProtocols.swift in Sources */,
@@ -1519,6 +1526,7 @@
 				BFCDA5FC21725FF700DB31FC /* CreatePasswordProtocols.swift in Sources */,
 				BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */,
 				BF5004E321741E9100D35B69 /* SelectTutorViewController.swift in Sources */,
+				BFF6C2902184C3A0003F7D96 /* AppUserState.swift in Sources */,
 				BF500571217B87C900D35B69 /* CreateEventProtocols.swift in Sources */,
 				BF5004B92174127100D35B69 /* EventPresenter.swift in Sources */,
 				BF50053C217A765200D35B69 /* ManageCardPresenter.swift in Sources */,

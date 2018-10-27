@@ -10,21 +10,18 @@ import Foundation
 
 
 // MARK: - Wireframe
-
 protocol EnterStudentIdentifierWireframeProtocol: class {
     func showNextScreen()
 }
 
 
-// MARK: - Coordinatir
-
+// MARK: - Coordinator
 protocol EnterStudentIdentifierRouterDelegate: class {
-    func enterStudentIdentifierRouter(_ enterStudentIdentifierRouter: EnterStudentIdentifierRouter, didEnter studentIdentifier: String)
+    func enterStudentIdentifier(didEnter studentIdentifier: String)
 }
 
 
 // MARK: - Presenter
-
 protocol EnterStudentIdentifierPresenterProtocol: class {
     func studentIdentifierEntered(with value: String)
     
@@ -33,7 +30,6 @@ protocol EnterStudentIdentifierPresenterProtocol: class {
 
 
 // MARK: - Interactor
-
 protocol EnterStudentIdentifierInteractorProtocol: class {
   var presenter: EnterStudentIdentifierPresenterProtocol? { get set }
     
@@ -42,7 +38,6 @@ protocol EnterStudentIdentifierInteractorProtocol: class {
 
 
 // MARK: - View 
-
 protocol EnterStudentIdentifierViewProtocol: class {
   var presenter: EnterStudentIdentifierPresenterProtocol? { get set }
     

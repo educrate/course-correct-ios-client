@@ -25,11 +25,11 @@ extension AppRouter {
 }
 
 extension AppRouter {
-    func onboardingRouter(_ onboardingRouter: OnboardingRouter, didFinishWith state: String) {
+    func onboarding(didFinishWith user: String) {
         presentMainModule()
     }
     
-    func mainRouter(_ mainRouter: MainRouter, didSignOut user: String) {
+    func main(didSignOut user: String) {
         presentOnboardingModule()
     }
 }

@@ -10,21 +10,18 @@ import Foundation
 
 
 // MARK: - Wireframe
-
 protocol EnterAccessCodeWireframeProtocol: class {
     func showNextScreen()
 }
 
 
 // MARK: - Coordinator
-
 protocol EnterAccessCodeRouterDelegate: class {
-    func enterAccessCodeRouter(_ enterAccessCodeRouter: EnterAccessCodeRouter, didEnter accessCode: String)
+    func enterAccessCode(didEnter accessCode: String)
 }
 
 
 // MARK: - Presenter
-
 protocol EnterAccessCodePresenterProtocol: class {
     func accessCodeEntered(with value: String)
     
@@ -33,7 +30,6 @@ protocol EnterAccessCodePresenterProtocol: class {
 
 
 // MARK: - Interactor
-
 protocol EnterAccessCodeInteractorProtocol: class {
   var presenter: EnterAccessCodePresenterProtocol? { get set }
     
@@ -42,7 +38,6 @@ protocol EnterAccessCodeInteractorProtocol: class {
 
 
 // MARK: - View 
-
 protocol EnterAccessCodeViewProtocol: class {
   var presenter: EnterAccessCodePresenterProtocol? { get set }
     

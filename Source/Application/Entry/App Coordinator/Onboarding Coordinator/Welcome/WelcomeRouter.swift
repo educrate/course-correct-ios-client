@@ -15,7 +15,7 @@ class WelcomeRouter: WelcomeWireframeProtocol {
 }
 
 extension WelcomeRouter {
-    func presentSignUpModule() {
+    func presentSignUp() {
         signUpCoordinator?.start()
     }
     
@@ -25,12 +25,12 @@ extension WelcomeRouter {
 }
 
 extension WelcomeRouter {
-    func signUpRouter(_ signUpRouter: SignUpRouter, didSignUp user: String) {
-        delegate?.welcomeRouter(self, didCompleteWith: "user signed up")
+    func signUp(didSignUp user: String) {
+        delegate?.welcome(didSignUp: user)
     }
     
-    func signInRouter(_ signInRouter: SignInRouter, didSignIn user: String) {
-        delegate?.welcomeRouter(self, didCompleteWith: "user signed in")
+    func signIn(didSignIn user: String) {
+        delegate?.welcome(didSignIn: user)
     }
 }
 

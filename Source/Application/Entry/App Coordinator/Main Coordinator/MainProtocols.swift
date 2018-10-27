@@ -18,7 +18,7 @@ protocol MainWireframeProtocol: CalendarRouterDelegate {
 
 // MARK: - Coordinator
 protocol MainRouterDelegate: class {
-    func mainRouter(_ mainRouter: MainRouter, didSignOut user: String)
+    func main(didSignOut user: String)
 }
 
 
