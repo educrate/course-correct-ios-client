@@ -66,7 +66,7 @@ private extension UINotificationViewController {
     
     func hide() {
         animate(view: view,
-                to: -labelHeight,
+                to: -viewHeight,
                 with: configuration.durationOfHideAnimation) { didComplete in
                     self.view.removeFromSuperview()
         }
@@ -110,7 +110,6 @@ private extension UINotificationViewController {
             newFrame.origin.y = minY
 
             view.frame = newFrame
-            view.superview?.layoutIfNeeded()
         }, completion: completion)
     }
 }
@@ -124,8 +123,8 @@ private extension UINotificationViewController {
 }
 
 private extension UINotificationViewController {
-    var labelHeight: CGFloat {
-        return label.bounds.height
+    var viewHeight: CGFloat {
+        return view.bounds.height
     }
     
     var safeSpaceHeight: CGFloat {
@@ -133,7 +132,7 @@ private extension UINotificationViewController {
             return 0
         }
         
-        return keyWindow.safeAreaInsets.bottom
+        return keyWindow.safeAreaInsets.top
     }
     
     var maxVisibleHeight: CGFloat {
