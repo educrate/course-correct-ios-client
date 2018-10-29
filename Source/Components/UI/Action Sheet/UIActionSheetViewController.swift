@@ -120,7 +120,7 @@ private extension UIActionSheetViewController {
         CATransaction.begin()
         CATransaction.setAnimationDuration(durationOfHideAnimation)
         CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear))
-        CATransaction.setCompletionBlock { self.view.removeFromSuperview() }
+        
         
         animate(constraint: optionTableVisibilityConstraint,
                 to: 0,
@@ -128,6 +128,10 @@ private extension UIActionSheetViewController {
         
         animate(alpha: 0,
                 with: durationOfHideAnimation)
+        
+        CATransaction.setCompletionBlock {
+            self.view.removeFromSuperview()
+        }
         
         CATransaction.commit()
     }
@@ -159,10 +163,10 @@ private extension UIActionSheetViewController {
     }
     
     var safeSpaceHeight: CGFloat {
-        if #available(iOS 11.0, *) {
-            return UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
-        } else {
+        guard #available(iOS 11.0, *), let keyWindow = UIApplication.shared.keyWindow else {
             return 0
         }
+        
+        return keyWindow.safeAreaInsets.bottom
     }
 }

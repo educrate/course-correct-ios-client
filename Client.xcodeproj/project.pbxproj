@@ -239,6 +239,7 @@
 		BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF14DA32161433B00733323 /* UICalendarViewController.storyboard */; };
 		BFF6C28E2184BF60003F7D96 /* OnboardingUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */; };
 		BFF6C2902184C3A0003F7D96 /* AppUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */; };
+		BFF6C2922184E1F8003F7D96 /* UINotificationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C2912184E1F8003F7D96 /* UINotificationConfiguration.swift */; };
 		BFF9DF172161A75300B80E9D /* CalendarLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF9DF162161A75300B80E9D /* CalendarLayoutCalculator.swift */; };
 /* End PBXBuildFile section */
 
@@ -498,6 +499,7 @@
 		BFF14DA32161433B00733323 /* UICalendarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UICalendarViewController.storyboard; sourceTree = "<group>"; };
 		BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserState.swift; sourceTree = "<group>"; };
 		BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserState.swift; sourceTree = "<group>"; };
+		BFF6C2912184E1F8003F7D96 /* UINotificationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINotificationConfiguration.swift; sourceTree = "<group>"; };
 		BFF9DF162161A75300B80E9D /* CalendarLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLayoutCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -748,6 +750,7 @@
 			children = (
 				BF5005202177113900D35B69 /* UINotification.storyboard */,
 				BF5005222177115D00D35B69 /* UINotificationViewController.swift */,
+				BFF6C2912184E1F8003F7D96 /* UINotificationConfiguration.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -1506,6 +1509,7 @@
 				BFD0299B21509CD5002FB9F5 /* UIFieldViewController.swift in Sources */,
 				BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */,
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
+				BFF6C2922184E1F8003F7D96 /* UINotificationConfiguration.swift in Sources */,
 				BFD82AC5216DB88500A14868 /* Wireframe.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */,
 				BF50050B217454C600D35B69 /* SignInInteractor.swift in Sources */,

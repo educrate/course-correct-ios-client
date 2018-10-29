@@ -60,6 +60,7 @@ extension UIStoryboard {
         case uiField = "UIField"
         case uiInlinePicker = "UIInlinePicker"
         case uiActionSheet = "UIActionSheet"
+        case uiNotification = "UINotification"
     }
 }
 

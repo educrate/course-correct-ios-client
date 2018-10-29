@@ -9,7 +9,7 @@
 import UIKit
 
 class SignInViewController: UIViewController, SignInViewProtocol {
-	
+    
     // MARK: Viper
     var presenter: SignInPresenterProtocol?
     
@@ -51,7 +51,10 @@ extension SignInViewController {
 
 extension SignInViewController {
     func show(error: SignInError) {
-        
+        switch error {
+        case .invalidCredentials:
+            UINotificationViewController.show(with: "email or password entered was invalid")
+        }
     }
 }
 

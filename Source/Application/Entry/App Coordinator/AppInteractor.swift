@@ -14,7 +14,6 @@ class AppInteractor: AppInteractorProtocol {
 
 extension AppInteractor {
     func determineLaunchState() {
-        let userState: AppUserState = arc4random() % 2 == 0 ? .authenticated : .unauthenticated
-        presenter?.launchStateDetermined(userState)
+        presenter?.launchStateDetermined(.unauthenticated)
     }
 }
