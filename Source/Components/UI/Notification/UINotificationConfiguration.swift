@@ -20,7 +20,7 @@ struct UINotificationConfiguration {
          textAlignment: NSTextAlignment = .center,
          backgroundColor: UIColor = .red,
          durationOfShowAnimation: TimeInterval = 0.2,
-         durationOfPersistence: TimeInterval = 5,
+         durationOfPersistence: TimeInterval = 3,
          durationOfHideAnimation: TimeInterval = 0.1) {
         
         self.textColor = textColor
