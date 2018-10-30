@@ -8,4 +8,18 @@
 
 import Foundation
 
-enum EnterAccessCodeError: Error {}
+enum EnterAccessCodeError: Error {
+    case emptyAccessCode
+    case invalidAccessCode
+}
+
+extension EnterAccessCodeError: ClientReadable {
+    var message: String {
+        switch self {
+        case .emptyAccessCode:
+            return "Please enter the access code emailed to you."
+        case .invalidAccessCode:
+            return "You have entered an invalid access code, please try again."
+        }
+    }
+}

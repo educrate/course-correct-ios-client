@@ -8,4 +8,18 @@
 
 import Foundation
 
-enum EnterStudentIdentifierError: Error {}
+enum EnterStudentIdentifierError: Error {
+    case emptyIdentifier
+    case invalidIdentifier
+}
+
+extension EnterStudentIdentifierError: ClientReadable {
+    var message: String {
+        switch self {
+        case .emptyIdentifier:
+            return "Please enter a valid student identifier."
+        case .invalidIdentifier:
+            return "The entered student identifier is invalid."
+        }
+    }
+}

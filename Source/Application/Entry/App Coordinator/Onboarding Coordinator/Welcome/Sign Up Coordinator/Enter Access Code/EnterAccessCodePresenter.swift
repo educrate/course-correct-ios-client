@@ -34,7 +34,7 @@ extension EnterAccessCodePresenter {
         case .success:
             router.showNextScreen()
         case .failure(let error):
-            view?.show(error: error)
+            view?.show(errorMessage: error.message)
         }
     }
 }

@@ -9,5 +9,20 @@
 import Foundation
 
 enum CreatePasswordError: Error {
+    case emptyPassword
     case passwordsDoNotMatch
+    case invalidPassword
+}
+
+extension CreatePasswordError: ClientReadable {
+    var message: String {
+        switch self {
+        case .emptyPassword:
+            return "Please enter a password for your account."
+        case .passwordsDoNotMatch:
+            return "Your passwords do not match."
+        case .invalidPassword:
+            return "Your password must be at least six characters in length."
+        }
+    }
 }

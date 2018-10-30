@@ -41,5 +41,5 @@ protocol EnterStudentIdentifierInteractorProtocol: class {
 protocol EnterStudentIdentifierViewProtocol: class {
   var presenter: EnterStudentIdentifierPresenterProtocol? { get set }
     
-    func show(error: EnterStudentIdentifierError)
+    func show(errorMessage: String)
 }

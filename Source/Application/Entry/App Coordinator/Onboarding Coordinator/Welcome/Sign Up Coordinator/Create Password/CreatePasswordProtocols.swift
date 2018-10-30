@@ -41,5 +41,5 @@ protocol CreatePasswordInteractorProtocol: class {
 protocol CreatePasswordViewProtocol: class {
   var presenter: CreatePasswordPresenterProtocol? { get set }
     
-    func show(error: CreatePasswordError)
+    func show(errorMessage: String)
 }

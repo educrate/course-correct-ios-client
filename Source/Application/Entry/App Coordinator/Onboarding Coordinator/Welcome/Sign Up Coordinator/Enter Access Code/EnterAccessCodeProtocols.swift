@@ -41,5 +41,5 @@ protocol EnterAccessCodeInteractorProtocol: class {
 protocol EnterAccessCodeViewProtocol: class {
   var presenter: EnterAccessCodePresenterProtocol? { get set }
     
-    func show(error: EnterAccessCodeError)
+    func show(errorMessage: String)
 }
