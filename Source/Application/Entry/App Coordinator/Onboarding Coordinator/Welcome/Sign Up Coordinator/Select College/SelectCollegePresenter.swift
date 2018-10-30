@@ -36,7 +36,7 @@ extension SelectCollegePresenter {
     func collegesFetched(for input: String, with result: Result<[String], SelectCollegeError>) {
         switch result {
         case .failure(let error):
-            view?.show(error: error)
+            view?.show(errorMessage: error.message)
         case .success(let colleges):
             view?.show(names: colleges)
         }
@@ -51,7 +51,7 @@ extension SelectCollegePresenter {
         case .success:
             router.showNextScreen()
         case .failure(let error):
-            view?.show(error: error)
+            view?.show(errorMessage: error.message)
         }
     }
 }

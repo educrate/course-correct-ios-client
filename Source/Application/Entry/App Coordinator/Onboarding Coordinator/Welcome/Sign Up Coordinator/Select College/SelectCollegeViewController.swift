@@ -24,7 +24,7 @@ class SelectCollegeViewController: UIViewController {
 
 private extension SelectCollegeViewController {
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
-        presenter?.selected(college: "identifier")
+        presenter?.selected(college: collegeSelector.selection)
     }
 }
 
@@ -54,8 +54,8 @@ extension SelectCollegeViewController: SelectCollegeViewProtocol {
         collegeSelector.setDropdown(names)
     }
     
-    func show(error: SelectCollegeError) {
-        
+    func show(errorMessage: String) {
+        UINotificationViewController.show(with: errorMessage)
     }
 }
 

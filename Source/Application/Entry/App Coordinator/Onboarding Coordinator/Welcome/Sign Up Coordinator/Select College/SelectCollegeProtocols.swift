@@ -55,5 +55,5 @@ protocol SelectCollegeViewProtocol: class {
     
     // MARK: Methods
     func show(names: [String])
-    func show(error: SelectCollegeError)
+    func show(errorMessage: String)
 }

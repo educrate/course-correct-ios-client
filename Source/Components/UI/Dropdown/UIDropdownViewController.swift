@@ -31,6 +31,11 @@ class UIDropdownViewController: UIViewController {
     
     // MARK: Internal Properties
     private var data: [String] = []
+    
+    // MARK: Public Properties
+    var selection: String {
+        return inputField.text ?? ""
+    }
 }
 
 extension UIDropdownViewController {
