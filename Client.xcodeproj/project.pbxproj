@@ -240,6 +240,7 @@
 		BFF6C28E2184BF60003F7D96 /* OnboardingUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */; };
 		BFF6C2902184C3A0003F7D96 /* AppUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */; };
 		BFF6C2922184E1F8003F7D96 /* UINotificationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C2912184E1F8003F7D96 /* UINotificationConfiguration.swift */; };
+		BFF6C2962187E2D0003F7D96 /* ClientReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C2952187E2D0003F7D96 /* ClientReadable.swift */; };
 		BFF9DF172161A75300B80E9D /* CalendarLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF9DF162161A75300B80E9D /* CalendarLayoutCalculator.swift */; };
 /* End PBXBuildFile section */
 
@@ -500,6 +501,7 @@
 		BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserState.swift; sourceTree = "<group>"; };
 		BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserState.swift; sourceTree = "<group>"; };
 		BFF6C2912184E1F8003F7D96 /* UINotificationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINotificationConfiguration.swift; sourceTree = "<group>"; };
+		BFF6C2952187E2D0003F7D96 /* ClientReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientReadable.swift; sourceTree = "<group>"; };
 		BFF9DF162161A75300B80E9D /* CalendarLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLayoutCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1198,6 +1200,7 @@
 		BFD82AC2216DB85C00A14868 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				BFF6C2932187E2A5003F7D96 /* Protocols */,
 				BFCDA6092172902F00DB31FC /* Extensions */,
 				BFD82AC3216DB86200A14868 /* Viper */,
 			);
@@ -1268,6 +1271,22 @@
 				BFF14DA32161433B00733323 /* UICalendarViewController.storyboard */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		BFF6C2932187E2A5003F7D96 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BFF6C2942187E2B8003F7D96 /* Errors */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BFF6C2942187E2B8003F7D96 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				BFF6C2952187E2D0003F7D96 /* ClientReadable.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1601,6 +1620,7 @@
 				BF5004E421741E9100D35B69 /* SelectTutorProtocols.swift in Sources */,
 				BFD0296021509BB2002FB9F5 /* UICalendarViewCell.swift in Sources */,
 				BF50046E2172F09700D35B69 /* ProfileOverviewInteractor.swift in Sources */,
+				BFF6C2962187E2D0003F7D96 /* ClientReadable.swift in Sources */,
 				BF4F48BF21823C75000D98D1 /* AppViewController.swift in Sources */,
 				BF500557217B837600D35B69 /* WalkthroughViewController.swift in Sources */,
 				BFD82A8F216D989E00A14868 /* NetworkingClientValidation.swift in Sources */,

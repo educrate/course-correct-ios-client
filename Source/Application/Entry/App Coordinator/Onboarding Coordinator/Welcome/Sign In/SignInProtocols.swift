@@ -41,5 +41,5 @@ protocol SignInInteractorProtocol: class {
 protocol SignInViewProtocol: class {
   var presenter: SignInPresenterProtocol? { get set }
     
-    func show(error: SignInError)
+    func show(errorMessage: String)
 }

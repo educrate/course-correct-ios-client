@@ -50,11 +50,8 @@ extension SignInViewController {
 }
 
 extension SignInViewController {
-    func show(error: SignInError) {
-        switch error {
-        case .invalidCredentials:
-            UINotificationViewController.show(with: "email or password entered was invalid")
-        }
+    func show(errorMessage: String) {
+        UINotificationViewController.show(with: errorMessage)
     }
 }
 
