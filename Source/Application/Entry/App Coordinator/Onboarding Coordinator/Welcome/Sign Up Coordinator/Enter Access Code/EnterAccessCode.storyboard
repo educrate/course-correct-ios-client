@@ -30,12 +30,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Enter Access Code" id="ATQ-dm-9B1">
                         <barButtonItem key="backBarButtonItem" title=" " id="j41-wi-Afc"/>
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="zaa-cF-8eZ">
+                        <barButtonItem key="rightBarButtonItem" image="tick" id="zaa-cF-8eZ">
                             <connections>
                                 <action selector="nextPressed:" destination="GUR-5h-XIw" id="fP0-Wg-3or"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43e-G4-PrQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,5 +51,8 @@
             <point key="canvasLocation" x="470" y="27"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tick" width="20" height="20"/>
+    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.75278253419999996" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

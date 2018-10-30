@@ -17,11 +17,13 @@ class CalendarViewController: UIViewController, CalendarViewProtocol {
 }
 
 extension CalendarViewController {
-    @IBAction func profileButtonPressed(_ sender: UIBarButtonItem) {
+    @IBAction func profileButtonPressed(_ sender: UIButton, forEvent event: UIEvent) {
         presenter?.showProfile()
     }
-    
-    @IBAction func createEventPressed(_ sender: UIBarButtonItem) {
+
+    @IBAction func addEventPressed(_ sender: UIButton, forEvent event: UIEvent) {
         presenter?.createEvent()
     }
+    
+
 }

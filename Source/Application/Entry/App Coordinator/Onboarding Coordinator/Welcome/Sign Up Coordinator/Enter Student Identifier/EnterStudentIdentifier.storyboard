@@ -31,12 +31,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Enter Student Identifier" id="SUE-fa-Z0w">
                         <barButtonItem key="backBarButtonItem" title=" " id="Jgw-hI-fAA"/>
-                        <barButtonItem key="rightBarButtonItem" title=" Next" id="vtx-Zh-71h">
+                        <barButtonItem key="rightBarButtonItem" image="tick" id="vtx-Zh-71h">
                             <connections>
                                 <action selector="nextPressed:" destination="zz2-8n-heV" id="ugF-cJ-faD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lfv-7Z-wqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,11 +46,14 @@
         <!--UIField-->
         <scene sceneID="Gdd-6e-9xx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WRC-Vt-EGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="UIField" id="odD-IK-rpx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRC-Vt-EGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="572" y="19"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tick" width="20" height="20"/>
+    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.75278253419999996" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

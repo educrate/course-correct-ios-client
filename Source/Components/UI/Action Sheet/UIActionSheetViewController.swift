@@ -120,7 +120,9 @@ private extension UIActionSheetViewController {
         CATransaction.begin()
         CATransaction.setAnimationDuration(durationOfHideAnimation)
         CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear))
-        
+        CATransaction.setCompletionBlock {
+            self.view.removeFromSuperview()
+        }
         
         animate(constraint: optionTableVisibilityConstraint,
                 to: 0,
@@ -128,10 +130,6 @@ private extension UIActionSheetViewController {
         
         animate(alpha: 0,
                 with: durationOfHideAnimation)
-        
-        CATransaction.setCompletionBlock {
-            self.view.removeFromSuperview()
-        }
         
         CATransaction.commit()
     }

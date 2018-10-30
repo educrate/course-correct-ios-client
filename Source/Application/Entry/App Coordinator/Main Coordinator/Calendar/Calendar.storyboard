@@ -21,24 +21,50 @@
                     </view>
                     <navigationItem key="navigationItem" title="Schedule" id="2Ic-2y-Twr">
                         <barButtonItem key="backBarButtonItem" title=" " id="siw-tc-KQ1"/>
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="trash" id="AVK-Wo-1sR">
-                                <connections>
-                                    <action selector="profileButtonPressed:" destination="aMk-Ct-fNR" id="82O-Gs-Ipa"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="add" id="lV3-NH-mNS">
-                                <connections>
-                                    <action selector="createEventPressed:" destination="aMk-Ct-fNR" id="FsZ-BY-tYB"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" id="x7H-hl-G8e">
+                            <view key="customView" contentMode="scaleToFill" id="KMf-ug-c5g">
+                                <rect key="frame" x="328" y="5.6666666666666661" width="74" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dwb-TL-600">
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="33"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFX-62-6fA">
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="33"/>
+                                                <state key="normal" image="user"/>
+                                                <connections>
+                                                    <action selector="profileButtonPressed:forEvent:" destination="aMk-Ct-fNR" eventType="touchUpInside" id="QaW-3b-fYg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j91-kv-2ky">
+                                                <rect key="frame" x="54" y="0.0" width="20" height="33"/>
+                                                <state key="normal" image="plus"/>
+                                                <connections>
+                                                    <action selector="addEventPressed:forEvent:" destination="aMk-Ct-fNR" eventType="touchUpInside" id="EbJ-2i-8zc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Dwb-TL-600" firstAttribute="top" secondItem="KMf-ug-c5g" secondAttribute="top" id="Crg-qh-2dw"/>
+                                    <constraint firstItem="Dwb-TL-600" firstAttribute="leading" secondItem="KMf-ug-c5g" secondAttribute="leading" id="N3f-Pk-ySf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dwb-TL-600" secondAttribute="trailing" id="SAm-8f-ECz"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dwb-TL-600" secondAttribute="bottom" id="wRB-zO-GKl"/>
+                                </constraints>
+                            </view>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmA-fq-nDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="-28"/>
+            <point key="canvasLocation" x="-113.04347826086958" y="-28.125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" width="20" height="20"/>
+        <image name="user" width="20" height="20"/>
+    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.75278253419999996" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

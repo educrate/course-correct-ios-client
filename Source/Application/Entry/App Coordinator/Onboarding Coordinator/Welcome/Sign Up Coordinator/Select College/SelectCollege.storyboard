@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What university are you affiliated with?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJY-Mn-tTv">
-                                <rect key="frame" x="40" y="144" width="215" height="14"/>
+                                <rect key="frame" x="40" y="188" width="215" height="14"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32L-MW-wF5">
-                                <rect key="frame" x="40" y="188" width="300" height="350"/>
+                                <rect key="frame" x="40" y="232" width="300" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="Sgh-1J-NxU"/>
                                     <constraint firstAttribute="width" constant="300" id="oUU-bP-gic"/>
@@ -45,12 +45,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Select College" id="NxN-Yv-FbQ">
                         <barButtonItem key="backBarButtonItem" title=" " id="Bgf-c1-Wnd"/>
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="zAq-7k-rMq">
+                        <barButtonItem key="rightBarButtonItem" image="tick" id="zAq-7k-rMq">
                             <connections>
                                 <action selector="donePressed:" destination="jAr-lp-bcd" id="e1W-iV-hI9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHH-Jw-inE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,11 +60,14 @@
         <!--UIDropdown-->
         <scene sceneID="4rB-aj-fF8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="geO-CO-cmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="UIDropdown" id="slO-Je-2Kl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geO-CO-cmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="30" y="509"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tick" width="20" height="20"/>
+    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.75278253419999996" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
