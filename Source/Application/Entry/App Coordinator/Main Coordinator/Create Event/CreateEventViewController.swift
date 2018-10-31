@@ -8,10 +8,16 @@
 
 import UIKit
 
-class CreateEventViewController: UIViewController, CreateEventViewProtocol {
+class CreateEventViewController: UITableViewController, CreateEventViewProtocol {
 	var presenter: CreateEventPresenterProtocol?
     
     deinit {
         print("deinitialized create event screen")
+    }
+}
+
+extension CreateEventViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }

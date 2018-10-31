@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IB4-VW-cXN" userLabel="Calendar Collection View">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="DAr-Yx-tgb">
                                     <size key="itemSize" width="400" height="100"/>
@@ -176,12 +176,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IB4-VW-cXN" firstAttribute="leading" secondItem="8t0-nQ-qCd" secondAttribute="leading" id="6Mq-iW-Ehc"/>
-                            <constraint firstItem="IB4-VW-cXN" firstAttribute="top" secondItem="8t0-nQ-qCd" secondAttribute="top" constant="44" id="AM1-qW-M50"/>
-                            <constraint firstAttribute="bottom" secondItem="IB4-VW-cXN" secondAttribute="bottom" constant="34" id="B3D-kD-SIw"/>
+                            <constraint firstItem="IB4-VW-cXN" firstAttribute="top" secondItem="8t0-nQ-qCd" secondAttribute="top" id="AM1-qW-M50"/>
+                            <constraint firstAttribute="bottom" secondItem="IB4-VW-cXN" secondAttribute="bottom" id="B3D-kD-SIw"/>
                             <constraint firstAttribute="trailing" secondItem="IB4-VW-cXN" secondAttribute="trailing" id="Ga0-7P-ISc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MjP-34-36Y"/>
                     </view>
+                    <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="collectionView" destination="IB4-VW-cXN" id="vbp-am-gs1"/>
                     </connections>
