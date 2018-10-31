@@ -114,17 +114,17 @@
                                                     </connections>
                                                 </collectionView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cRH-Ck-XNZ">
-                                                    <rect key="frame" x="24" y="0.0" width="40" height="53"/>
+                                                    <rect key="frame" x="24" y="0.0" width="40" height="43.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zVo-f1-trd" userLabel="Title Label">
-                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="33.666666666666664"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="26.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Noc-8Y-6NC" userLabel="Detail Label">
-                                                            <rect key="frame" x="0.0" y="33.666666666666664" width="40" height="19.333333333333336"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                            <rect key="frame" x="0.0" y="26.333333333333329" width="40" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -153,8 +153,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="August" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvU-8C-sj5">
-                                            <rect key="frame" x="24" y="18.333333333333332" width="89" height="33.666666666666671"/>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                            <rect key="frame" x="24" y="25.666666666666671" width="70.333333333333329" height="26.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
