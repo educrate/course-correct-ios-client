@@ -26,7 +26,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Co-Oj-Bpo">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="course-png" translatesAutoresizingMaskIntoConstraints="NO" id="1Co-Oj-Bpo">
                                                     <rect key="frame" x="8" y="14" width="36" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="36" id="2Tf-sW-Ea8"/>
@@ -81,7 +81,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nQ4-5F-KLK">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-png" translatesAutoresizingMaskIntoConstraints="NO" id="nQ4-5F-KLK">
                                                     <rect key="frame" x="8" y="14" width="36" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="4lf-EO-OCu"/>
@@ -275,5 +275,9 @@
             <point key="canvasLocation" x="898" y="153"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clock-png" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="course-png" width="20" height="20"/>
+    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.75278253419999996" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

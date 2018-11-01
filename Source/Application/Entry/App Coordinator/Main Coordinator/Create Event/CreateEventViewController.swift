@@ -48,7 +48,7 @@ extension CreateEventViewController {
         
         // if is initial cell in section set height to 50
         if indexPath.row == 0 {
-            return 50
+            return 100
         }
         
         let previousIndexPath = IndexPath(row: indexPath.row - 1, section: indexPath.section)
