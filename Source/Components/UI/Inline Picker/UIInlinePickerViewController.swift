@@ -26,7 +26,9 @@ extension UIInlinePickerViewController {
 extension UIInlinePickerViewController {
     func setOptions(_ newOptions: [String]) {
         options = newOptions
-        inlinePicker.reloadData()
+        DispatchQueue.main.async {
+            self.inlinePicker.reloadData()
+        }
     }
 }
 
