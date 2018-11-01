@@ -63,7 +63,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNL-53-2TX">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="33"/>
                                 </button>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carrot-down" translatesAutoresizingMaskIntoConstraints="NO" id="wmw-li-hsW">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carrot-down-vector" translatesAutoresizingMaskIntoConstraints="NO" id="wmw-li-hsW">
                                     <rect key="frame" x="86.666666666666671" y="8.6666666666666643" width="16" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="16" id="Idc-MQ-nOW"/>
@@ -131,14 +131,14 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFX-62-6fA">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="33"/>
-                                                <state key="normal" image="user"/>
+                                                <state key="normal" image="user-vector"/>
                                                 <connections>
                                                     <action selector="profileButtonPressed:forEvent:" destination="aMk-Ct-fNR" eventType="touchUpInside" id="QaW-3b-fYg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j91-kv-2ky">
                                                 <rect key="frame" x="54" y="0.0" width="20" height="33"/>
-                                                <state key="normal" image="plus"/>
+                                                <state key="normal" image="plus-vector"/>
                                                 <connections>
                                                     <action selector="addEventPressed:forEvent:" destination="aMk-Ct-fNR" eventType="touchUpInside" id="EbJ-2i-8zc"/>
                                                 </connections>
@@ -174,9 +174,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="carrot-down" width="20" height="20"/>
-        <image name="plus" width="20" height="20"/>
-        <image name="user" width="20" height="20"/>
+        <image name="carrot-down-vector" width="20" height="20"/>
+        <image name="plus-vector" width="20" height="20"/>
+        <image name="user-vector" width="20" height="20"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.75278253419999996" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

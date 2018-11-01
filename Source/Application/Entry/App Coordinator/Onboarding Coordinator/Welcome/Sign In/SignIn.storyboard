@@ -48,12 +48,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="JWb-BQ-3so">
                         <barButtonItem key="backBarButtonItem" title=" " id="NuA-5b-9xt"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="nlk-IV-tmb">
+                        <barButtonItem key="rightBarButtonItem" image="tick-vector" id="nlk-IV-tmb">
                             <connections>
                                 <action selector="donePressed:" destination="dkO-G9-AKZ" id="qRM-P8-MZa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwe-58-5yz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,5 +77,8 @@
             <point key="canvasLocation" x="1331" y="111"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tick-vector" width="20" height="20"/>
+    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.75278253419999996" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -11,12 +11,18 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol CreateEventWireframeProtocol: class, Wireframe {}
+protocol CreateEventWireframeProtocol: class {
+    func showAddLocation()
+    func showSelectTutor()
+}
 
 
 // MARK: - Presenter
 
-protocol CreateEventPresenterProtocol: class {}
+protocol CreateEventPresenterProtocol: class {
+    func pressedAddLocation()
+    func pressedSelectTutor()
+}
 
 
 // MARK: - Interactor

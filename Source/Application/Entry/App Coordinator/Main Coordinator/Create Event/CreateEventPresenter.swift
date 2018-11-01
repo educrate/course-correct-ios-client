@@ -9,6 +9,8 @@
 import UIKit
 
 class CreateEventPresenter: CreateEventPresenterProtocol {
+    
+    // MARK: Viper
     weak private var view: CreateEventViewProtocol?
     var interactor: CreateEventInteractorProtocol?
     private let router: CreateEventWireframeProtocol
@@ -19,5 +21,15 @@ class CreateEventPresenter: CreateEventPresenterProtocol {
         self.view = interface
         self.interactor = interactor
         self.router = router
+    }
+}
+
+extension CreateEventPresenter {
+    func pressedAddLocation() {
+        router.showAddLocation()
+    }
+    
+    func pressedSelectTutor() {
+        router.showSelectTutor()
     }
 }

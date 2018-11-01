@@ -45,7 +45,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Select College" id="NxN-Yv-FbQ">
                         <barButtonItem key="backBarButtonItem" title=" " id="Bgf-c1-Wnd"/>
-                        <barButtonItem key="rightBarButtonItem" image="tick" id="zAq-7k-rMq">
+                        <barButtonItem key="rightBarButtonItem" image="tick-vector" id="zAq-7k-rMq">
                             <connections>
                                 <action selector="donePressed:" destination="jAr-lp-bcd" id="e1W-iV-hI9"/>
                             </connections>
@@ -67,7 +67,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tick" width="20" height="20"/>
+        <image name="tick-vector" width="20" height="20"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.75278253419999996" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

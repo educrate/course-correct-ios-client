@@ -13,6 +13,16 @@ class CreateEventRouter: CreateEventWireframeProtocol {
 }
 
 extension CreateEventRouter {
+    func showAddLocation() {
+        viewController?.show(AddLocationRouter.createModule(), sender: nil)
+    }
+    
+    func showSelectTutor() {
+        viewController?.show(SelectTutorRouter.createModule(), sender: nil)
+    }
+}
+
+extension CreateEventRouter {
     static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .createEvent)
         let view: CreateEventViewController = storyboard.instantiateViewController()

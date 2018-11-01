@@ -40,8 +40,24 @@ extension CreateEventViewController {
             return
         }
         
-        tableView.beginUpdates()
-        tableView.endUpdates()
+        // switch on index and perform anticipated operation
+        switch indexPath.section {
+        case CellType.selectCourse.rawValue:
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        case CellType.addDate.rawValue:
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        case CellType.addDuration.rawValue:
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        case CellType.addLocation.rawValue:
+            presenter?.pressedAddLocation()
+        case CellType.selectTutor.rawValue:
+            presenter?.pressedSelectTutor()
+        default:
+            return
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -58,7 +74,7 @@ extension CreateEventViewController {
             return 0
         }
         
-        // switch on index and set hardcoded value
+        // switch on index and set hardcoded height value
         switch indexPath.section {
         case CellType.selectCourse.rawValue:
             return courseInlinePicker.recommendedHeight
@@ -79,7 +95,7 @@ extension CreateEventViewController: SegueIdentifiable {
 }
 
 private extension CreateEventViewController {
-    private enum CellType: Int {
+    enum CellType: Int {
         case selectCourse = 0
         case addDate
         case addDuration
@@ -87,3 +103,19 @@ private extension CreateEventViewController {
         case selectTutor
     }
 }
+
+//private extension CreateEventViewController.CellType {
+//    enum Behavior {
+//        case expand
+//        case segue
+//    }
+//
+//    var behavior: Behavior {
+//        switch self {
+//        case .selectCourse, .addDate, .addDuration:
+//            return .expand
+//        case .addLocation, .selectTutor:
+//            return .segue
+//        }
+//    }
+//}
