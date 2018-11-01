@@ -12,7 +12,7 @@
         <scene sceneID="5T0-BZ-Fxk">
             <objects>
                 <tableViewController storyboardIdentifier="CreateEventViewController" id="ECg-uu-IXC" customClass="CreateEventViewController" customModule="Client" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="PQC-jU-mZT">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PQC-jU-mZT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,17 +111,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="DwU-Eb-AQr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="167"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="160" id="PnW-6Z-NHA"/>
+                                                    </constraints>
                                                     <date key="date" timeIntervalSinceReferenceDate="562730652.03966999">
                                                         <!--2018-11-01 02:04:12 +0000-->
                                                     </date>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="DwU-Eb-AQr" secondAttribute="bottom" id="05G-YB-e16"/>
-                                                <constraint firstItem="DwU-Eb-AQr" firstAttribute="leading" secondItem="Wcz-m7-cEV" secondAttribute="leading" id="hOY-RJ-ApT"/>
-                                                <constraint firstAttribute="trailing" secondItem="DwU-Eb-AQr" secondAttribute="trailing" id="kf9-Wh-B54"/>
-                                                <constraint firstItem="DwU-Eb-AQr" firstAttribute="top" secondItem="Wcz-m7-cEV" secondAttribute="top" id="m1e-sx-lfQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="DwU-Eb-AQr" secondAttribute="trailing" id="a6v-td-cFu"/>
+                                                <constraint firstItem="DwU-Eb-AQr" firstAttribute="leading" secondItem="Wcz-m7-cEV" secondAttribute="leading" id="ejB-3J-o9g"/>
+                                                <constraint firstItem="DwU-Eb-AQr" firstAttribute="top" secondItem="Wcz-m7-cEV" secondAttribute="top" id="woe-z2-vSa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -166,7 +168,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="3600" minuteInterval="15" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01G-qH-Nhb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="167"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="160" id="CNO-Ex-EwK"/>
+                                                    </constraints>
                                                     <date key="date" timeIntervalSinceReferenceDate="562730652.03966999">
                                                         <!--2018-11-01 02:04:12 +0000-->
                                                     </date>
@@ -175,7 +180,6 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="01G-qH-Nhb" secondAttribute="trailing" id="Pt4-6T-71T"/>
                                                 <constraint firstItem="01G-qH-Nhb" firstAttribute="leading" secondItem="08s-Aw-JGu" secondAttribute="leading" id="TTC-l5-C9B"/>
-                                                <constraint firstAttribute="bottom" secondItem="01G-qH-Nhb" secondAttribute="bottom" id="WaU-T0-HJE"/>
                                                 <constraint firstItem="01G-qH-Nhb" firstAttribute="top" secondItem="08s-Aw-JGu" secondAttribute="top" id="gkk-Eg-LXg"/>
                                             </constraints>
                                         </tableViewCellContentView>
