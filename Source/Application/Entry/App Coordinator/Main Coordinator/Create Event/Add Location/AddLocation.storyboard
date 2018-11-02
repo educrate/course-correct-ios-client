@@ -43,6 +43,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Location" id="e2i-0F-6zi">
                         <barButtonItem key="backBarButtonItem" title=" " id="daI-GX-ZdR"/>
+                        <barButtonItem key="rightBarButtonItem" image="tick-vector" id="de9-sv-INL"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -70,5 +71,8 @@
             <point key="canvasLocation" x="1186" y="76"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tick-vector" width="20" height="20"/>
+    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.75278253419999996" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
