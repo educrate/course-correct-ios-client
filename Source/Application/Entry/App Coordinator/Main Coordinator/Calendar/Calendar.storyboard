@@ -156,9 +156,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="calendar" destination="B6X-cC-4jW" id="0Ci-gk-P49"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmA-fq-nDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

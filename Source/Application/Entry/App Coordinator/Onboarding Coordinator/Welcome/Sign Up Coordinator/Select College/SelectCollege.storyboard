@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What university are you affiliated with?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJY-Mn-tTv">
-                                <rect key="frame" x="40" y="188" width="215" height="14"/>
+                                <rect key="frame" x="40" y="124" width="215" height="14"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32L-MW-wF5">
-                                <rect key="frame" x="40" y="232" width="300" height="350"/>
+                                <rect key="frame" x="40" y="154" width="300" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="Sgh-1J-NxU"/>
                                     <constraint firstAttribute="width" constant="300" id="oUU-bP-gic"/>
@@ -36,9 +36,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YJY-Mn-tTv" firstAttribute="top" secondItem="aeS-Ul-wjA" secondAttribute="top" constant="100" id="MjS-96-oMq"/>
+                            <constraint firstItem="YJY-Mn-tTv" firstAttribute="top" secondItem="aeS-Ul-wjA" secondAttribute="top" constant="36" id="MjS-96-oMq"/>
                             <constraint firstItem="YJY-Mn-tTv" firstAttribute="leading" secondItem="aeS-Ul-wjA" secondAttribute="leading" constant="40" id="RZK-jD-Gvg"/>
-                            <constraint firstItem="32L-MW-wF5" firstAttribute="top" secondItem="YJY-Mn-tTv" secondAttribute="bottom" constant="30" id="ZVV-g0-Avp"/>
+                            <constraint firstItem="32L-MW-wF5" firstAttribute="top" secondItem="YJY-Mn-tTv" secondAttribute="bottom" constant="16" id="ZVV-g0-Avp"/>
                             <constraint firstItem="32L-MW-wF5" firstAttribute="leading" secondItem="aeS-Ul-wjA" secondAttribute="leading" constant="40" id="hIT-2a-ACM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aeS-Ul-wjA"/>

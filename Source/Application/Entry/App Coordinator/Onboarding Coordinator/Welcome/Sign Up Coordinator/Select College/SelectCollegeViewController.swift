@@ -29,11 +29,6 @@ private extension SelectCollegeViewController {
 }
 
 extension SelectCollegeViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        collegeSelector.setPlaceholder("Name of University")
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         collegeSelector.beginEditing()
@@ -43,6 +38,7 @@ extension SelectCollegeViewController {
         switch segueCase(for: segue) {
         case .dropdown:
             collegeSelector = segue.viewController()
+            collegeSelector.style(with: UIDropdownConfiguration(placeholder: "Name of University"))
             collegeSelector.delegate = self
         }
     }

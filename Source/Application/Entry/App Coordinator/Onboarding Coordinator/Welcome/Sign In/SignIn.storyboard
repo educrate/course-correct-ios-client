@@ -23,13 +23,13 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="puU-GB-q3b">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="52"/>
                                         <connections>
-                                            <segue destination="hQP-Vz-Fcc" kind="embed" identifier="email" id="blR-1d-raz"/>
+                                            <segue destination="hQP-Vz-Fcc" kind="embed" identifier="Email" id="blR-1d-raz"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ao4-MK-CVw">
                                         <rect key="frame" x="0.0" y="68" width="240" height="52"/>
                                         <connections>
-                                            <segue destination="1Dk-kX-j96" kind="embed" identifier="password" id="Kdx-DC-cpC"/>
+                                            <segue destination="1Dk-kX-j96" kind="embed" identifier="Password" id="Kdx-DC-cpC"/>
                                         </connections>
                                     </containerView>
                                 </subviews>

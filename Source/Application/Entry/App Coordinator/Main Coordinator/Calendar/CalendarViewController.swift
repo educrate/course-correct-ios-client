@@ -14,11 +14,20 @@ class CalendarViewController: UIViewController, CalendarViewProtocol {
 	var presenter: CalendarPresenterProtocol?
     
     // MARK: View
-    @IBOutlet private weak var calendar: UICalendarViewController!
+    private weak var calendar: UICalendarViewController!
     
     // MARK: Deinit Verification
     deinit {
         print("deinitialized calendar screen")
+    }
+}
+
+extension CalendarViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segueCase(for: segue) {
+        case .calendar:
+            calendar = segue.viewController()
+        }
     }
 }
 
@@ -34,6 +43,6 @@ extension CalendarViewController {
 
 extension CalendarViewController: SegueIdentifiable {
     enum Segue: String {
-        case calendar
+        case calendar = "Calendar"
     }
 }

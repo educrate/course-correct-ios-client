@@ -8,6 +8,31 @@
 
 import UIKit
 
+class CreateEventDateHelper {
+    static let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E, MMM d, h:mm a"
+        return dateFormatter
+    }()
+    
+    static func formattedDuration(for timeInterval: TimeInterval) -> String {
+        let durations = duration(for: timeInterval)
+        let hours = durations.hours
+        let minutes = durations.minutes
+        return "\(hours) Hr \(minutes) Min"
+    }
+    
+    static func duration(for timeInterval: TimeInterval) -> (hours: Int, minutes: Int) {
+        let hours = Int(timeInterval / 3600)
+        let minutes = (Int(timeInterval) % 3600) / 60
+        return (hours, minutes)
+    }
+    
+    static func formattedDate(for date: Date) -> String {
+        return dateFormatter.string(from: date)
+    }
+}
+
 class CreateEventViewController: UITableViewController, CreateEventViewProtocol {
 	
     // MARK: Viper
@@ -15,10 +40,25 @@ class CreateEventViewController: UITableViewController, CreateEventViewProtocol 
     
     // MARK: Views
     @IBOutlet private weak var courseInlinePicker: UIInlinePickerViewController!
+    @IBOutlet private weak var datePicker: UIDatePicker!
+    @IBOutlet private weak var timePicker: UIDatePicker!
+
+    @IBOutlet private weak var dateLabel: UITextField!
+    @IBOutlet private weak var timeLabel: UITextField!
     
     // MARK: Deinitializer Verification
     deinit {
         print("deinitialized create event screen")
+    }
+}
+
+extension CreateEventViewController {
+    @IBAction func datePickerSelectedValue(_ sender: UIDatePicker, forEvent event: UIEvent) {
+        dateLabel.text = CreateEventDateHelper.formattedDate(for: sender.date)
+    }
+    
+    @IBAction func timePickerSelectedValue(_ sender: UIDatePicker, forEvent event: UIEvent) {
+        timeLabel.text = CreateEventDateHelper.formattedDuration(for: sender.countDownDuration)
     }
 }
 
@@ -62,7 +102,7 @@ extension CreateEventViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        // if is initial cell in section set height to 50
+        // if is initial cell in section set height to 100
         if indexPath.row == 0 {
             return 100
         }
@@ -103,19 +143,3 @@ private extension CreateEventViewController {
         case selectTutor
     }
 }
-
-//private extension CreateEventViewController.CellType {
-//    enum Behavior {
-//        case expand
-//        case segue
-//    }
-//
-//    var behavior: Behavior {
-//        switch self {
-//        case .selectCourse, .addDate, .addDuration:
-//            return .expand
-//        case .addLocation, .selectTutor:
-//            return .segue
-//        }
-//    }
-//}

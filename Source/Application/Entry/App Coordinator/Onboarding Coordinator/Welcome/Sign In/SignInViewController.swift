@@ -57,7 +57,7 @@ extension SignInViewController {
 
 extension SignInViewController: SegueIdentifiable {
     enum Segue: String {
-        case email
-        case password
+        case email = "Email"
+        case password = "Password"
     }
 }

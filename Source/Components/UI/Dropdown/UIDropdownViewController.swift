@@ -31,6 +31,7 @@ class UIDropdownViewController: UIViewController {
     
     // MARK: Internal Properties
     private var data: [String] = []
+    private var configuration: UIDropdownConfiguration = .default
     
     // MARK: Public Properties
     var selection: String {
@@ -39,14 +40,24 @@ class UIDropdownViewController: UIViewController {
 }
 
 extension UIDropdownViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configure(for: configuration)
+    }
+}
+
+// MARK: Public API
+extension UIDropdownViewController {
     func setDropdown(_ newData: [String]) {
         data = newData
         dropdown.reloadData()
         dropdown.isHidden = false
     }
-}
-
-extension UIDropdownViewController {
+    
+    func style(with configuration: UIDropdownConfiguration) {
+        self.configuration = configuration
+    }
+    
     func beginEditing() {
         inputField.becomeFirstResponder()
     }
@@ -56,9 +67,15 @@ extension UIDropdownViewController {
     }
 }
 
-extension UIDropdownViewController {
-    func setPlaceholder(_ text: String) {
-        inputField.placeholder = text
+// MARK: Private Methods
+private extension UIDropdownViewController {
+    func configure(for configuration: UIDropdownConfiguration) {
+        inputField.text = configuration.text
+        inputField.tintColor = configuration.cursorColor
+        inputField.textColor = configuration.textColor
+        inputField.textAlignment = configuration.textAlignment
+        inputField.attributedPlaceholder = NSAttributedString(string: configuration.placeholder,
+                                                         attributes: [NSAttributedString.Key.foregroundColor: configuration.placeholderColor])
     }
 }
 
