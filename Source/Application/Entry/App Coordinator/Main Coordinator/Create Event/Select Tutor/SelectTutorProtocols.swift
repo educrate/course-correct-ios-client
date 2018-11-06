@@ -11,12 +11,16 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol SelectTutorWireframeProtocol: class, Wireframe {}
+protocol SelectTutorWireframeProtocol: class {
+    func presentTutorProfile()
+}
 
 
 // MARK: - Presenter
 
-protocol SelectTutorPresenterProtocol: class {}
+protocol SelectTutorPresenterProtocol: class {
+    func selectedTutor(at indexPath: IndexPath)
+}
 
 
 // MARK: - Interactor

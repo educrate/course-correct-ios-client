@@ -13,6 +13,12 @@ class SelectTutorRouter: SelectTutorWireframeProtocol {
 }
 
 extension SelectTutorRouter {
+    func presentTutorProfile() {
+        viewController?.show(TutorProfileRouter.createModule(), sender: nil)
+    }
+}
+
+extension SelectTutorRouter {
     static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .selectTutor)
         let view: SelectTutorViewController = storyboard.instantiateViewController()
