@@ -128,6 +128,7 @@
 		BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* CalendarDate.swift */; };
 		BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */; };
 		BF5F6210218FCCCB00E43B75 /* SelectTutorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F620F218FCCCB00E43B75 /* SelectTutorCell.swift */; };
+		BF5F621821916D6F00E43B75 /* TutorProfileReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F621721916D6F00E43B75 /* TutorProfileReviewCell.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
 		BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */; };
 		BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D2217074C600771E5D /* EnterAccessCodeViewController.swift */; };
@@ -385,6 +386,7 @@
 		BF551659215B374D00D0CBB1 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		BF55165E215B3AC000D0CBB1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		BF5F620F218FCCCB00E43B75 /* SelectTutorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorCell.swift; sourceTree = "<group>"; };
+		BF5F621721916D6F00E43B75 /* TutorProfileReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileReviewCell.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
 		BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeRouter.swift; sourceTree = "<group>"; };
 		BF70B5D2217074C600771E5D /* EnterAccessCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeViewController.swift; sourceTree = "<group>"; };
@@ -707,6 +709,7 @@
 			children = (
 				BF5004F221741EC400D35B69 /* TutorProfile.storyboard */,
 				BF5004EA21741EAE00D35B69 /* TutorProfileViewController.swift */,
+				BF5F621721916D6F00E43B75 /* TutorProfileReviewCell.swift */,
 				BF5004E821741EAE00D35B69 /* TutorProfilePresenter.swift */,
 				BF5004E921741EAE00D35B69 /* TutorProfileRouter.swift */,
 				BF5004EC21741EAE00D35B69 /* TutorProfileInteractor.swift */,
@@ -1521,6 +1524,7 @@
 				BF500549217A76A200D35B69 /* ManageBankProtocols.swift in Sources */,
 				BF50051E2176DA2F00D35B69 /* UIActionSheetViewController.swift in Sources */,
 				BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */,
+				BF5F621821916D6F00E43B75 /* TutorProfileReviewCell.swift in Sources */,
 				BF50047F2173AC2200D35B69 /* ProfileAccountRouter.swift in Sources */,
 				BF50047721730A3E00D35B69 /* ProfileOverviewError.swift in Sources */,
 				BF5004802173AC2200D35B69 /* ProfileAccountViewController.swift in Sources */,

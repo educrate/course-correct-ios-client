@@ -15,3 +15,20 @@ class TutorProfileViewController: UIViewController, TutorProfileViewProtocol {
         print("deinitialized tutor profile screen")
     }
 }
+
+// MARK: - Table View Delegate Conformation
+extension TutorProfileViewController: UITableViewDelegate {
+    
+}
+
+// MARK: - Table View Data Source Conformation
+extension TutorProfileViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 24
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: TutorProfileReviewCell = tableView.dequeueReusableCell(for: indexPath)
+        return cell
+    }
+}
