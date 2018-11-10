@@ -26,9 +26,10 @@ extension UIInlinePickerViewController {
 extension UIInlinePickerViewController {
     func setOptions(_ newOptions: [String]) {
         options = newOptions
-        DispatchQueue.main.async {
-            self.inlinePicker.reloadData()
-        }
+    }
+    
+    func reloadData() {
+        inlinePicker.reloadData()
     }
 }
 
@@ -36,6 +37,7 @@ extension UIInlinePickerViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView()
+        inlinePicker.reloadData()
     }
 }
 

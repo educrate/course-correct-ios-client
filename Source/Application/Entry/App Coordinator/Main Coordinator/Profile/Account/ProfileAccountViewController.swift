@@ -8,56 +8,72 @@
 
 import UIKit
 
-class ProfileAccountViewController: UIViewController, ProfileAccountViewProtocol {
+class ProfileAccountViewController: UITableViewController, ProfileAccountViewProtocol {
 	var presenter: ProfileAccountPresenterProtocol?
     
-    @IBOutlet private weak var coursePicker: UIInlinePickerViewController!
-    @IBOutlet private weak var coursePickerHeight: NSLayoutConstraint!
+    // MARK: Views
+    private weak var coursePicker: UIInlinePickerViewController!
     
     deinit {
         print("deinitialized profile account screen")
     }
 }
 
+// MARK: - Controller Lifecycle
 extension ProfileAccountViewController {
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        set(options: ["Physics 7C",
-                      "Chemistry 1A",
-                      "Math 3D",
-                      "Python 101",
-                      "Psychology 12C",
-                      "Java 13B",
-                      "Biology 93"])
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segueCase(for: segue) {
         case .inlinePicker:
             coursePicker = segue.viewController()
+            coursePicker.setOptions(["Physics 7C",
+                                     "Chem 1A",
+                                     "Java 13B",
+                                     "Math 3D",
+                                     "Python 101",
+                                     "Psychology 12C",
+                                     "Biology 93"])
         }
     }
 }
 
-private extension ProfileAccountViewController {
-    func set(options: [String]) {
-        coursePicker.setOptions(options)
-        updateCoursePickerHeight()
-    }
-    
-    func updateCoursePickerHeight() {
-        DispatchQueue.main.async {
-            self.coursePickerHeight.constant = self.coursePicker.recommendedHeight
+extension ProfileAccountViewController {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        switch indexPath.row {
+        case CellType.courses.rawValue:
+            return 120
+        case CellType.name.rawValue:
+            return 60
+        case CellType.email.rawValue:
+            return 60
+        case CellType.studentIdenfier.rawValue:
+            return 60
+        case CellType.areaOfStudy.rawValue:
+            return 60
+        case CellType.classOf.rawValue:
+            return 60
+        case CellType.profilePicture.rawValue:
+            return 100
+        default:
+            return 0
         }
     }
 }
 
 extension ProfileAccountViewController: SegueIdentifiable {
     enum Segue: String {
-        case inlinePicker = "inlinepicker"
+        case inlinePicker = "InlinePicker"
+    }
+}
+
+private extension ProfileAccountViewController {
+    enum CellType: Int {
+        case courses = 0
+        case name
+        case email
+        case studentIdenfier
+        case areaOfStudy
+        case classOf
+        case profilePicture
     }
 }

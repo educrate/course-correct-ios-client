@@ -39,7 +39,9 @@ class CreateEventViewController: UITableViewController, CreateEventViewProtocol 
     var presenter: CreateEventPresenterProtocol?
     
     // MARK: Views
-    @IBOutlet private weak var courseInlinePicker: UIInlinePickerViewController!
+    private weak var courseInlinePicker: UIInlinePickerViewController!
+    
+    // MARK: Outlets
     @IBOutlet private weak var datePicker: UIDatePicker!
     @IBOutlet private weak var timePicker: UIDatePicker!
 
@@ -67,7 +69,10 @@ extension CreateEventViewController {
         switch segueCase(for: segue) {
         case .inlinePicker:
             courseInlinePicker = segue.viewController()
-            courseInlinePicker.setOptions(["Physics 7C", "Chemistry 1A", "Python 101", "Bio 93"])
+            courseInlinePicker.setOptions(["Physics 7C",
+                                           "Chemistry 1A",
+                                           "Python 101",
+                                           "Bio 93"])
         }
     }
 }
