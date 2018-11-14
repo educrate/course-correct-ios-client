@@ -13,9 +13,3 @@ class ManageCardCell: UITableViewCell {
     // MARK: View Outlets
     @IBOutlet private weak var creditCardView: UICreditCardView!
 }
-
-extension ManageCardCell {
-    func setUp () {
-        creditCardView.setUp()
-    }
-}

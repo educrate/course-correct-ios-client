@@ -25,7 +25,6 @@ class XIBView: UIView {
 private extension XIBView {
     func setUp() {
         create()
-        style()
         constrain()
     }
 }
@@ -34,10 +33,6 @@ private extension XIBView {
     func create() {
         view = instantiateXIB()
         addSubview(view)
-    }
-    
-    func style() {
-        view.backgroundColor = .white
     }
     
     func constrain() {

@@ -30,7 +30,6 @@ extension ManageCardViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ManageCardCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setUp()
         return cell
     }
 }

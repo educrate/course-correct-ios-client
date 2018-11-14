@@ -46,6 +46,13 @@ final class UICreditCardView: XIBView {
 }
 
 extension UICreditCardView {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setUp()
+    }
+}
+
+private extension UICreditCardView {
     func setUp() {
         style()
         constrain()

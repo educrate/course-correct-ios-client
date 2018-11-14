@@ -245,6 +245,8 @@
 		BFF5312B2199E44C00255CD4 /* UICreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5312A2199E44C00255CD4 /* UICreditCardView.swift */; };
 		BFF5312D219A2D7A00255CD4 /* XIBIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5312C219A2D7A00255CD4 /* XIBIdentifiable.swift */; };
 		BFF53131219B6EFB00255CD4 /* XIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF53130219B6EFB00255CD4 /* XIBView.swift */; };
+		BFF53133219BF05000255CD4 /* UINotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF53132219BF05000255CD4 /* UINotificationView.swift */; };
+		BFF53136219BF06900255CD4 /* UINotificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF53135219BF06900255CD4 /* UINotificationView.xib */; };
 		BFF6C28E2184BF60003F7D96 /* OnboardingUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */; };
 		BFF6C2902184C3A0003F7D96 /* AppUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */; };
 		BFF6C2922184E1F8003F7D96 /* UINotificationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C2912184E1F8003F7D96 /* UINotificationConfiguration.swift */; };
@@ -514,6 +516,8 @@
 		BFF5312A2199E44C00255CD4 /* UICreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICreditCardView.swift; sourceTree = "<group>"; };
 		BFF5312C219A2D7A00255CD4 /* XIBIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBIdentifiable.swift; sourceTree = "<group>"; };
 		BFF53130219B6EFB00255CD4 /* XIBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBView.swift; sourceTree = "<group>"; };
+		BFF53132219BF05000255CD4 /* UINotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINotificationView.swift; sourceTree = "<group>"; };
+		BFF53135219BF06900255CD4 /* UINotificationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UINotificationView.xib; sourceTree = "<group>"; };
 		BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserState.swift; sourceTree = "<group>"; };
 		BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserState.swift; sourceTree = "<group>"; };
 		BFF6C2912184E1F8003F7D96 /* UINotificationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINotificationConfiguration.swift; sourceTree = "<group>"; };
@@ -768,6 +772,7 @@
 		BF50051F2177110B00D35B69 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
+				BFF53134219BF05300255CD4 /* Refactor */,
 				BF5005202177113900D35B69 /* UINotification.storyboard */,
 				BF5005222177115D00D35B69 /* UINotificationViewController.swift */,
 				BFF6C2912184E1F8003F7D96 /* UINotificationConfiguration.swift */,
@@ -1321,6 +1326,15 @@
 			path = XIB;
 			sourceTree = "<group>";
 		};
+		BFF53134219BF05300255CD4 /* Refactor */ = {
+			isa = PBXGroup;
+			children = (
+				BFF53135219BF06900255CD4 /* UINotificationView.xib */,
+				BFF53132219BF05000255CD4 /* UINotificationView.swift */,
+			);
+			path = Refactor;
+			sourceTree = "<group>";
+		};
 		BFF6C2932187E2A5003F7D96 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -1448,6 +1462,7 @@
 				BF500568217B852900D35B69 /* Walkthrough.storyboard in Resources */,
 				BF5004B22174123200D35B69 /* Calendar.storyboard in Resources */,
 				BF5004842173AC3C00D35B69 /* ProfileAccount.storyboard in Resources */,
+				BFF53136219BF06900255CD4 /* UINotificationView.xib in Resources */,
 				BF5004BF2174128200D35B69 /* Event.storyboard in Resources */,
 				BF500566217B84B000D35B69 /* Congratulations.storyboard in Resources */,
 				BFCDA5FF2172601200DB31FC /* CreatePassword.storyboard in Resources */,
@@ -1526,6 +1541,7 @@
 				BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */,
 				BF70B5D8217074C600771E5D /* EnterAccessCodeProtocols.swift in Sources */,
 				BF50056E217B87C900D35B69 /* CreateEventPresenter.swift in Sources */,
+				BFF53133219BF05000255CD4 /* UINotificationView.swift in Sources */,
 				BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */,
 				BFCDA5F021725E7200DB31FC /* WelcomeInteractor.swift in Sources */,
 				BFD82A8E216D989E00A14868 /* NetworkingClientRequest.swift in Sources */,

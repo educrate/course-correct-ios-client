@@ -51,7 +51,8 @@ extension SignInViewController {
 
 extension SignInViewController {
     func show(errorMessage: String) {
-        UINotificationViewController.show(with: errorMessage)
+        UINotificationView.show(with: errorMessage)
+//        UINotificationViewController.show(with: errorMessage)
     }
 }
 
