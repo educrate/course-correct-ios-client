@@ -97,6 +97,8 @@ private extension UIActionView {
         
         constrain(to: keyWindow)
         
+        layoutIfNeeded()
+        
         CATransaction.begin()
         CATransaction.setAnimationDuration(configuration.durationOfShowAnimation)
         CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear))
