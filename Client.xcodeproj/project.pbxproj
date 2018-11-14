@@ -245,6 +245,12 @@
 		BFF53131219B6EFB00255CD4 /* XIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF53130219B6EFB00255CD4 /* XIBView.swift */; };
 		BFF53133219BF05000255CD4 /* UINotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF53132219BF05000255CD4 /* UINotificationView.swift */; };
 		BFF53136219BF06900255CD4 /* UINotificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF53135219BF06900255CD4 /* UINotificationView.xib */; };
+		BFF53139219C025A00255CD4 /* UIActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF53138219C025A00255CD4 /* UIActionView.xib */; };
+		BFF5313B219C026700255CD4 /* UIActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5313A219C026700255CD4 /* UIActionView.swift */; };
+		BFF5313D219CAC9100255CD4 /* UIActionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5313C219CAC9100255CD4 /* UIActionViewCell.swift */; };
+		BFF5313F219CAD1100255CD4 /* UIActionViewOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5313E219CAD1100255CD4 /* UIActionViewOption.swift */; };
+		BFF53141219CADA100255CD4 /* UIActionViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF53140219CADA100255CD4 /* UIActionViewConfiguration.swift */; };
+		BFF53143219CB13F00255CD4 /* UIActionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF53142219CB13F00255CD4 /* UIActionViewCell.xib */; };
 		BFF6C28E2184BF60003F7D96 /* OnboardingUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */; };
 		BFF6C2902184C3A0003F7D96 /* AppUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */; };
 		BFF6C2922184E1F8003F7D96 /* UINotificationViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C2912184E1F8003F7D96 /* UINotificationViewConfiguration.swift */; };
@@ -514,6 +520,12 @@
 		BFF53130219B6EFB00255CD4 /* XIBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBView.swift; sourceTree = "<group>"; };
 		BFF53132219BF05000255CD4 /* UINotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINotificationView.swift; sourceTree = "<group>"; };
 		BFF53135219BF06900255CD4 /* UINotificationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UINotificationView.xib; sourceTree = "<group>"; };
+		BFF53138219C025A00255CD4 /* UIActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIActionView.xib; sourceTree = "<group>"; };
+		BFF5313A219C026700255CD4 /* UIActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActionView.swift; sourceTree = "<group>"; };
+		BFF5313C219CAC9100255CD4 /* UIActionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActionViewCell.swift; sourceTree = "<group>"; };
+		BFF5313E219CAD1100255CD4 /* UIActionViewOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActionViewOption.swift; sourceTree = "<group>"; };
+		BFF53140219CADA100255CD4 /* UIActionViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActionViewConfiguration.swift; sourceTree = "<group>"; };
+		BFF53142219CB13F00255CD4 /* UIActionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIActionViewCell.xib; sourceTree = "<group>"; };
 		BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserState.swift; sourceTree = "<group>"; };
 		BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserState.swift; sourceTree = "<group>"; };
 		BFF6C2912184E1F8003F7D96 /* UINotificationViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINotificationViewConfiguration.swift; sourceTree = "<group>"; };
@@ -1131,6 +1143,7 @@
 		BFD0298821509C83002FB9F5 /* Action Sheet */ = {
 			isa = PBXGroup;
 			children = (
+				BFF53137219C024300255CD4 /* Refactor */,
 				BF50051B2176D9AC00D35B69 /* UIActionSheet.storyboard */,
 				BF50051D2176DA2F00D35B69 /* UIActionSheetViewController.swift */,
 				BFD0298E21509C9A002FB9F5 /* UIActionSheetOption.swift */,
@@ -1321,6 +1334,19 @@
 			path = XIB;
 			sourceTree = "<group>";
 		};
+		BFF53137219C024300255CD4 /* Refactor */ = {
+			isa = PBXGroup;
+			children = (
+				BFF53138219C025A00255CD4 /* UIActionView.xib */,
+				BFF5313A219C026700255CD4 /* UIActionView.swift */,
+				BFF53142219CB13F00255CD4 /* UIActionViewCell.xib */,
+				BFF5313C219CAC9100255CD4 /* UIActionViewCell.swift */,
+				BFF5313E219CAD1100255CD4 /* UIActionViewOption.swift */,
+				BFF53140219CADA100255CD4 /* UIActionViewConfiguration.swift */,
+			);
+			path = Refactor;
+			sourceTree = "<group>";
+		};
 		BFF6C2932187E2A5003F7D96 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -1449,6 +1475,7 @@
 				BF5004B22174123200D35B69 /* Calendar.storyboard in Resources */,
 				BF5004842173AC3C00D35B69 /* ProfileAccount.storyboard in Resources */,
 				BFF53136219BF06900255CD4 /* UINotificationView.xib in Resources */,
+				BFF53139219C025A00255CD4 /* UIActionView.xib in Resources */,
 				BF5004BF2174128200D35B69 /* Event.storyboard in Resources */,
 				BF500566217B84B000D35B69 /* Congratulations.storyboard in Resources */,
 				BFCDA5FF2172601200DB31FC /* CreatePassword.storyboard in Resources */,
@@ -1468,6 +1495,7 @@
 				BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */,
 				BF5004A02173EBB000D35B69 /* ProfileSupport.storyboard in Resources */,
 				BF5004E721741EA000D35B69 /* SelectTutor.storyboard in Resources */,
+				BFF53143219CB13F00255CD4 /* UIActionViewCell.xib in Resources */,
 				BF50050D217454D700D35B69 /* SignIn.storyboard in Resources */,
 				BF5004862173AD9E00D35B69 /* UIInlinePicker.storyboard in Resources */,
 				BF5004DB21741E7700D35B69 /* AddLocation.storyboard in Resources */,
@@ -1497,6 +1525,7 @@
 			files = (
 				BF500507217454C600D35B69 /* SignInPresenter.swift in Sources */,
 				BFF14D88216002CB00733323 /* CalendarConfiguration.swift in Sources */,
+				BFF5313B219C026700255CD4 /* UIActionView.swift in Sources */,
 				BFF531262198AABA00255CD4 /* ManageCardCell.swift in Sources */,
 				BFF14D8C2160033B00733323 /* CalendarBrain.swift in Sources */,
 				BFD82ACE216E77B600A14868 /* SelectCollegeProtocols.swift in Sources */,
@@ -1559,6 +1588,7 @@
 				BF5004BD2174127100D35B69 /* EventInteractor.swift in Sources */,
 				BFD82A9F216DA25600A14868 /* UIInlinePickerViewController.swift in Sources */,
 				BFD0295E21509BB2002FB9F5 /* UICalendarViewController.swift in Sources */,
+				BFF5313F219CAD1100255CD4 /* UIActionViewOption.swift in Sources */,
 				BF5004F121741EAF00D35B69 /* TutorProfileInteractor.swift in Sources */,
 				BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */,
 				BF500564217B848F00D35B69 /* CongratulationsInteractor.swift in Sources */,
@@ -1646,6 +1676,7 @@
 				BFF53131219B6EFB00255CD4 /* XIBView.swift in Sources */,
 				BF50046D2172F09700D35B69 /* ProfileOverviewProtocols.swift in Sources */,
 				BFD82A94216D989E00A14868 /* NetworkingFailure.swift in Sources */,
+				BFF5313D219CAC9100255CD4 /* UIActionViewCell.swift in Sources */,
 				BF500572217B87C900D35B69 /* CreateEventInteractor.swift in Sources */,
 				BF50051A217678C500D35B69 /* SignInError.swift in Sources */,
 				BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */,
@@ -1681,6 +1712,7 @@
 				BFD82A8F216D989E00A14868 /* NetworkingClientValidation.swift in Sources */,
 				BF5005BB217EEF2000D35B69 /* SignUpRouter.swift in Sources */,
 				BFCDA5EE21725E7200DB31FC /* WelcomeViewController.swift in Sources */,
+				BFF53141219CADA100255CD4 /* UIActionViewConfiguration.swift in Sources */,
 				BFCDA5FB21725FF700DB31FC /* CreatePasswordViewController.swift in Sources */,
 				BFD82AD8216E7D3500A14868 /* ResultNoError.swift in Sources */,
 				BFF5312D219A2D7A00255CD4 /* XIBIdentifiable.swift in Sources */,

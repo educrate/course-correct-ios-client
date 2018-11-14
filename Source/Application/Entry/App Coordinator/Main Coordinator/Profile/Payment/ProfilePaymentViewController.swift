@@ -18,16 +18,16 @@ class ProfilePaymentViewController: UIViewController, ProfilePaymentViewProtocol
 
 extension ProfilePaymentViewController {
     @IBAction func addPressed(_ sender: UIBarButtonItem) {
-        let addCardOption = UIActionSheetOption(title: "Add payment method",
-                                                action: presenter?.showAddCard)
+        let addCardOption = UIActionViewOption(title: "Add payment method",
+                                               action: presenter?.showAddCard)
         
-        let addBankOption = UIActionSheetOption(title: "Add banking information",
-                                                action: presenter?.showAddBank)
+        let addBankOption = UIActionViewOption(title: "Add banking information",
+                                               action: presenter?.showAddBank)
         
-        let cancelOption = UIActionSheetOption(title: "Cancel")
+        let cancelOption = UIActionViewOption(title: "Cancel")
         
-        UIActionSheetViewController.show(with: [addCardOption,
-                                                addBankOption,
-                                                cancelOption])
+        UIActionView.show(with: [addCardOption,
+                                 addBankOption,
+                                 cancelOption])
     }
 }

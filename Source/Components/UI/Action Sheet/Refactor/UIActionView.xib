@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIActionView" customModule="Client" customModuleProvider="target">
+            <connections>
+                <outlet property="optionsTableView" destination="swe-2C-iiz" id="tby-6l-wbB"/>
+                <outlet property="optionsTableViewHeightConstraint" destination="3U6-zb-FUs" id="PQM-R0-tit"/>
+                <outlet property="optionsTableViewVisibilityConstraint" destination="llq-pI-h5V" id="47S-YO-rNg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3Ov-9m-gUA">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="swe-2C-iiz">
+                    <rect key="frame" x="0.0" y="120" width="400" height="0.0"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="3U6-zb-FUs"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="OYc-xG-dBg"/>
+                        <outlet property="delegate" destination="-1" id="hTH-8L-WGP"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="xac-RS-cod" firstAttribute="trailing" secondItem="swe-2C-iiz" secondAttribute="trailing" id="ZfJ-sx-ywU"/>
+                <constraint firstAttribute="bottom" secondItem="swe-2C-iiz" secondAttribute="top" id="llq-pI-h5V"/>
+                <constraint firstItem="swe-2C-iiz" firstAttribute="leading" secondItem="xac-RS-cod" secondAttribute="leading" id="w4W-EE-0VO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="xac-RS-cod"/>
+            <point key="canvasLocation" x="747.20000000000005" y="-89.505247376311857"/>
+        </view>
+    </objects>
+</document>
