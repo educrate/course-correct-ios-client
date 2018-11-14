@@ -46,7 +46,7 @@ extension EnterAccessCodeViewController {
 
 extension EnterAccessCodeViewController {
     func show(errorMessage: String) {
-        UINotificationViewController.show(with: errorMessage)
+        UINotificationView.show(with: errorMessage)
     }
 }
 

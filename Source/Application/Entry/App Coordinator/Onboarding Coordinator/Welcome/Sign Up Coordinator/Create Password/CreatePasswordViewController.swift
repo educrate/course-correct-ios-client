@@ -51,7 +51,7 @@ extension CreatePasswordViewController {
 
 extension CreatePasswordViewController {
     func show(errorMessage: String) {
-        UINotificationViewController.show(with: errorMessage)
+        UINotificationView.show(with: errorMessage)
     }
 }
 

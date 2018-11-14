@@ -46,7 +46,7 @@ extension EnterStudentIdentifierViewController {
 
 extension EnterStudentIdentifierViewController {
     func show(errorMessage: String) {
-        UINotificationViewController.show(with: errorMessage)
+        UINotificationView.show(with: errorMessage)
     }
 }
 

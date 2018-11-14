@@ -46,7 +46,7 @@ extension UINotificationView {
         main.hide()
     }
     
-    static func style(with configuration: UINotificationConfiguration) {
+    static func style(with configuration: UINotificationViewConfiguration) {
         main.style(with: configuration)
     }
 }
@@ -87,7 +87,7 @@ private extension UINotificationView {
         }
     }
     
-    func style(with configuration: UINotificationConfiguration) {
+    func style(with configuration: UINotificationViewConfiguration) {
         self.configuration = configuration
     }
 }
@@ -110,7 +110,7 @@ private extension UINotificationView {
 }
 
 private extension UINotificationView {
-    func configure(with configuration: UINotificationConfiguration) {
+    func configure(with configuration: UINotificationViewConfiguration) {
         label.textColor = configuration.textColor
         label.textAlignment = configuration.textAlignment
         backgroundColor = configuration.backgroundColor
