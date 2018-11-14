@@ -14,8 +14,8 @@ class CreditCard {
     var style: CreditCardViewStyle
     
     init(metadata: CreditCardMetadata,
-                warning: CreditCardWarning,
-                style: CreditCardViewStyle) {
+         warning: CreditCardWarning,
+         style: CreditCardViewStyle) {
         
         self.metadata = metadata
         self.warning = warning
@@ -25,12 +25,12 @@ class CreditCard {
 
 extension CreditCard {
     static let `default` = CreditCard(metadata: .default,
-                                             warning: .default,
-                                             style: .default)
+                                      warning: .default,
+                                      style: .default)
 }
 
 extension CreditCard {
     static let empty = CreditCard(metadata: .empty,
-                                         warning: .default,
-                                         style: .default)
+                                  warning: .default,
+                                  style: .default)
 }

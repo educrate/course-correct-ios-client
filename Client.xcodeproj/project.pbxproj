@@ -240,6 +240,11 @@
 		BFF14D962160495000733323 /* DayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D952160495000733323 /* DayHelper.swift */; };
 		BFF14D982160496400733323 /* MonthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF14D972160496400733323 /* MonthHelper.swift */; };
 		BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF14DA32161433B00733323 /* UICalendarViewController.storyboard */; };
+		BFF531262198AABA00255CD4 /* ManageCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF531252198AABA00255CD4 /* ManageCardCell.swift */; };
+		BFF531292199E43D00255CD4 /* UICreditCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF531282199E43D00255CD4 /* UICreditCardView.xib */; };
+		BFF5312B2199E44C00255CD4 /* UICreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5312A2199E44C00255CD4 /* UICreditCardView.swift */; };
+		BFF5312D219A2D7A00255CD4 /* XIBIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5312C219A2D7A00255CD4 /* XIBIdentifiable.swift */; };
+		BFF53131219B6EFB00255CD4 /* XIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF53130219B6EFB00255CD4 /* XIBView.swift */; };
 		BFF6C28E2184BF60003F7D96 /* OnboardingUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */; };
 		BFF6C2902184C3A0003F7D96 /* AppUserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */; };
 		BFF6C2922184E1F8003F7D96 /* UINotificationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6C2912184E1F8003F7D96 /* UINotificationConfiguration.swift */; };
@@ -504,6 +509,11 @@
 		BFF14D952160495000733323 /* DayHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHelper.swift; sourceTree = "<group>"; };
 		BFF14D972160496400733323 /* MonthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthHelper.swift; sourceTree = "<group>"; };
 		BFF14DA32161433B00733323 /* UICalendarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UICalendarViewController.storyboard; sourceTree = "<group>"; };
+		BFF531252198AABA00255CD4 /* ManageCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardCell.swift; sourceTree = "<group>"; };
+		BFF531282199E43D00255CD4 /* UICreditCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICreditCardView.xib; sourceTree = "<group>"; };
+		BFF5312A2199E44C00255CD4 /* UICreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICreditCardView.swift; sourceTree = "<group>"; };
+		BFF5312C219A2D7A00255CD4 /* XIBIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBIdentifiable.swift; sourceTree = "<group>"; };
+		BFF53130219B6EFB00255CD4 /* XIBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBView.swift; sourceTree = "<group>"; };
 		BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserState.swift; sourceTree = "<group>"; };
 		BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserState.swift; sourceTree = "<group>"; };
 		BFF6C2912184E1F8003F7D96 /* UINotificationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINotificationConfiguration.swift; sourceTree = "<group>"; };
@@ -770,6 +780,7 @@
 			children = (
 				BF50054B217A76B500D35B69 /* ManageCard.storyboard */,
 				BF500539217A765200D35B69 /* ManageCardViewController.swift */,
+				BFF531252198AABA00255CD4 /* ManageCardCell.swift */,
 				BF500537217A765200D35B69 /* ManageCardPresenter.swift */,
 				BF500538217A765200D35B69 /* ManageCardRouter.swift */,
 				BF50053B217A765200D35B69 /* ManageCardInteractor.swift */,
@@ -1080,6 +1091,7 @@
 		BFD0296321509C02002FB9F5 /* Credit Card */ = {
 			isa = PBXGroup;
 			children = (
+				BFF531272199E42800255CD4 /* Refactor */,
 				BFD0297921509C53002FB9F5 /* Validator */,
 				BFD0297821509C49002FB9F5 /* View */,
 			);
@@ -1197,13 +1209,13 @@
 			path = Dropdown;
 			sourceTree = "<group>";
 		};
-		BFD82ABF216DAD9800A14868 /* Storyboard */ = {
+		BFD82ABF216DAD9800A14868 /* Interface Builder */ = {
 			isa = PBXGroup;
 			children = (
-				BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */,
-				BFCDA6182172D53700DB31FC /* SegueIdentifiable.swift */,
+				BFF5312F219B6EE300255CD4 /* XIB */,
+				BFF5312E219B6ED800255CD4 /* Storyboard */,
 			);
-			path = Storyboard;
+			path = "Interface Builder";
 			sourceTree = "<group>";
 		};
 		BFD82AC2216DB85C00A14868 /* Implementations */ = {
@@ -1244,7 +1256,7 @@
 			children = (
 				BFD82AD2216E7CD300A14868 /* Result */,
 				BFD82A74216D987E00A14868 /* Networking */,
-				BFD82ABF216DAD9800A14868 /* Storyboard */,
+				BFD82ABF216DAD9800A14868 /* Interface Builder */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1280,6 +1292,33 @@
 				BFF14DA32161433B00733323 /* UICalendarViewController.storyboard */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		BFF531272199E42800255CD4 /* Refactor */ = {
+			isa = PBXGroup;
+			children = (
+				BFF531282199E43D00255CD4 /* UICreditCardView.xib */,
+				BFF5312A2199E44C00255CD4 /* UICreditCardView.swift */,
+			);
+			path = Refactor;
+			sourceTree = "<group>";
+		};
+		BFF5312E219B6ED800255CD4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */,
+				BFCDA6182172D53700DB31FC /* SegueIdentifiable.swift */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BFF5312F219B6EE300255CD4 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				BFF5312C219A2D7A00255CD4 /* XIBIdentifiable.swift */,
+				BFF53130219B6EFB00255CD4 /* XIBView.swift */,
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 		BFF6C2932187E2A5003F7D96 /* Protocols */ = {
@@ -1403,6 +1442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5004942173EB8500D35B69 /* ProfilePayment.storyboard in Resources */,
+				BFF531292199E43D00255CD4 /* UICreditCardView.xib in Resources */,
 				BFD82AF32170671B00A14868 /* EnterStudentIdentifier.storyboard in Resources */,
 				BF5004702172F0A200D35B69 /* ProfileOverview.storyboard in Resources */,
 				BF500568217B852900D35B69 /* Walkthrough.storyboard in Resources */,
@@ -1457,6 +1497,7 @@
 			files = (
 				BF500507217454C600D35B69 /* SignInPresenter.swift in Sources */,
 				BFF14D88216002CB00733323 /* CalendarConfiguration.swift in Sources */,
+				BFF531262198AABA00255CD4 /* ManageCardCell.swift in Sources */,
 				BFF14D8C2160033B00733323 /* CalendarBrain.swift in Sources */,
 				BFD82ACE216E77B600A14868 /* SelectCollegeProtocols.swift in Sources */,
 				BF5004A32174111C00D35B69 /* UIStoryboard+Identifiers.swift in Sources */,
@@ -1525,6 +1566,7 @@
 				BF50051E2176DA2F00D35B69 /* UIActionSheetViewController.swift in Sources */,
 				BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */,
 				BF5F621821916D6F00E43B75 /* TutorProfileReviewCell.swift in Sources */,
+				BFF5312B2199E44C00255CD4 /* UICreditCardView.swift in Sources */,
 				BF50047F2173AC2200D35B69 /* ProfileAccountRouter.swift in Sources */,
 				BF50047721730A3E00D35B69 /* ProfileOverviewError.swift in Sources */,
 				BF5004802173AC2200D35B69 /* ProfileAccountViewController.swift in Sources */,
@@ -1601,6 +1643,7 @@
 				BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */,
 				BF5005C8217EF4FF00D35B69 /* OnboardingInteractor.swift in Sources */,
 				BF5005C5217EF4FF00D35B69 /* OnboardingRouter.swift in Sources */,
+				BFF53131219B6EFB00255CD4 /* XIBView.swift in Sources */,
 				BF50046D2172F09700D35B69 /* ProfileOverviewProtocols.swift in Sources */,
 				BFD82A94216D989E00A14868 /* NetworkingFailure.swift in Sources */,
 				BF500572217B87C900D35B69 /* CreateEventInteractor.swift in Sources */,
@@ -1640,6 +1683,7 @@
 				BFCDA5EE21725E7200DB31FC /* WelcomeViewController.swift in Sources */,
 				BFCDA5FB21725FF700DB31FC /* CreatePasswordViewController.swift in Sources */,
 				BFD82AD8216E7D3500A14868 /* ResultNoError.swift in Sources */,
+				BFF5312D219A2D7A00255CD4 /* XIBIdentifiable.swift in Sources */,
 				BF500548217A76A200D35B69 /* ManageBankViewController.swift in Sources */,
 				BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */,
 				BF5005B0217EEE9C00D35B69 /* AppPresenter.swift in Sources */,

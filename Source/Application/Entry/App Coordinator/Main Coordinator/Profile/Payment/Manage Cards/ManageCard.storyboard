@@ -16,16 +16,66 @@
                     <view key="view" contentMode="scaleToFill" id="6Bt-6V-sR6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pFt-3B-Jo4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ManageCardCell" rowHeight="200" id="SxH-tS-W4g" customClass="ManageCardCell" customModule="Client" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SxH-tS-W4g" id="ysO-Yn-CH1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQR-QJ-52q" customClass="UICreditCardView" customModule="Client" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="16" width="382" height="168"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EQR-QJ-52q" firstAttribute="top" secondItem="ysO-Yn-CH1" secondAttribute="top" constant="16" id="1Dg-Bb-vt9"/>
+                                                <constraint firstAttribute="bottom" secondItem="EQR-QJ-52q" secondAttribute="bottom" constant="16" id="J7j-mC-Jsm"/>
+                                                <constraint firstAttribute="trailing" secondItem="EQR-QJ-52q" secondAttribute="trailing" constant="16" id="JaF-e6-Lck"/>
+                                                <constraint firstItem="EQR-QJ-52q" firstAttribute="leading" secondItem="ysO-Yn-CH1" secondAttribute="leading" constant="16" id="yCy-aK-Wou"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="creditCardView" destination="EQR-QJ-52q" id="1tM-cu-TfE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XIX-cN-ayh" id="o0f-3t-I7d"/>
+                                    <outlet property="delegate" destination="XIX-cN-ayh" id="T0X-Eq-x7Y"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pFt-3B-Jo4" firstAttribute="leading" secondItem="okw-7h-omy" secondAttribute="leading" id="f2a-VB-QFb"/>
+                            <constraint firstItem="pFt-3B-Jo4" firstAttribute="trailing" secondItem="okw-7h-omy" secondAttribute="trailing" id="h9V-Bi-PxC"/>
+                            <constraint firstItem="pFt-3B-Jo4" firstAttribute="top" secondItem="okw-7h-omy" secondAttribute="top" id="oec-OY-f5y"/>
+                            <constraint firstAttribute="bottom" secondItem="pFt-3B-Jo4" secondAttribute="bottom" id="pQr-gU-i8E"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="okw-7h-omy"/>
                     </view>
                     <navigationItem key="navigationItem" title="Manage Payment" id="COu-QJ-35d">
                         <barButtonItem key="backBarButtonItem" title=" " id="kgE-vJ-kG3"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus-vector" id="g39-OY-TDh"/>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cardTableView" destination="pFt-3B-Jo4" id="Zct-bO-WAG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jay-2O-LdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="116"/>
+            <point key="canvasLocation" x="69.565217391304358" y="115.84821428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus-vector" width="20" height="20"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
