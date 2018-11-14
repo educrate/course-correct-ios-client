@@ -83,34 +83,33 @@ private extension UICreditCardView {
     }
     
     func constrainLogo() {
+        logoLeadingConstraint.constant = cardView.frame.height/10
         logoWidthConstraint.constant = cardView.frame.width/5
         logoHeightConstraint.constant = cardView.frame.height/5
-        logoLeadingConstraint.constant = cardView.frame.height/10
         logoTopConstraint.constant = cardView.frame.height/10
     }
     
     func constrainNumber() {
-        numberHeightConstraint.constant = cardView.frame.height/10
         numberLeadingConstraint.constant = cardView.frame.height/10
+        numberHeightConstraint.constant = cardView.frame.height/10
         numberBottomConstraint.constant = 0
-        
     }
     
     func constrainCVV() {
-        cvvHeightConstraint.constant = cardView.frame.height/20
         cvvLeadingConstraint.constant = cardView.frame.height/10
+        cvvHeightConstraint.constant = cardView.frame.height/15
         cvvBottomConstraint.constant = cardView.frame.height/20
     }
     
     func constrainExpiration() {
-        expirationHeightConstraint.constant = cardView.frame.height/15
         expirationLeadingConstraint.constant = cardView.frame.height/10
-        cvvBottomConstraint.constant = 0
+        expirationHeightConstraint.constant = cardView.frame.height/15
+        expirationBottomConstraint.constant = 0
     }
     
     func constrainName() {
-        nameHeightConstraint.constant = cardView.frame.height/10
         nameLeadingConstraint.constant = cardView.frame.height/10
+        nameHeightConstraint.constant = cardView.frame.height/10
         nameBottomConstraint.constant = cardView.frame.height/10
     }
 }
