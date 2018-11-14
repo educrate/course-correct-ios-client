@@ -60,9 +60,9 @@ private extension UICreditCardView {
 
 private extension UICreditCardView {
     func style() {
+        cardView.layer.cornerRadius = 3.0
         cardView.layer.borderWidth = 1.0
         cardView.layer.borderColor = UIColor.black.cgColor
-        cardView.layer.cornerRadius = 3.0
     }
 }
 
