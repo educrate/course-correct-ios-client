@@ -25,7 +25,7 @@ final class UINotificationView: XIBView {
     @IBOutlet private weak var labelTopConstraint: NSLayoutConstraint!
     
     // MARK: Properties
-    private var configuration: UINotificationConfiguration = .default
+    private var configuration: UINotificationViewConfiguration = .default
 }
 
 extension UINotificationView {

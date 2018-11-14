@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct UINotificationConfiguration {
+struct UINotificationViewConfiguration {
     let textColor: UIColor
     let textAlignment: NSTextAlignment
     let backgroundColor: UIColor
@@ -32,6 +32,6 @@ struct UINotificationConfiguration {
     }
 }
 
-extension UINotificationConfiguration {
-    static let `default` = UINotificationConfiguration()
+extension UINotificationViewConfiguration {
+    static let `default` = UINotificationViewConfiguration()
 }
