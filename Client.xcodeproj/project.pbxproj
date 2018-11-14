@@ -768,7 +768,9 @@
 		BF50051F2177110B00D35B69 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				BFF53134219BF05300255CD4 /* Refactor */,
+				BFF53135219BF06900255CD4 /* UINotificationView.xib */,
+				BFF53132219BF05000255CD4 /* UINotificationView.swift */,
+				BFF6C2912184E1F8003F7D96 /* UINotificationViewConfiguration.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -1317,16 +1319,6 @@
 				BFF53130219B6EFB00255CD4 /* XIBView.swift */,
 			);
 			path = XIB;
-			sourceTree = "<group>";
-		};
-		BFF53134219BF05300255CD4 /* Refactor */ = {
-			isa = PBXGroup;
-			children = (
-				BFF53135219BF06900255CD4 /* UINotificationView.xib */,
-				BFF53132219BF05000255CD4 /* UINotificationView.swift */,
-				BFF6C2912184E1F8003F7D96 /* UINotificationViewConfiguration.swift */,
-			);
-			path = Refactor;
 			sourceTree = "<group>";
 		};
 		BFF6C2932187E2A5003F7D96 /* Protocols */ = {
