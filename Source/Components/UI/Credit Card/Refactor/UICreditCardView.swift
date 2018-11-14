@@ -26,7 +26,6 @@ final class UICreditCardView: XIBView {
     @IBOutlet private weak var cardLeadingConstraint: NSLayoutConstraint!
     @IBOutlet private weak var cardCenterXConstraint: NSLayoutConstraint!
     @IBOutlet private weak var cardCenterYConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var cardAspectRatio: NSLayoutConstraint!
     @IBOutlet private weak var logoTopConstraint: NSLayoutConstraint!
     @IBOutlet private weak var numberBottomConstraint: NSLayoutConstraint!
     @IBOutlet private weak var cvvBottomConstraint: NSLayoutConstraint!
@@ -78,13 +77,15 @@ private extension UICreditCardView {
     }
     
     func constrainContent() {
-        if frame.width/frame.height >= cardAspectRatio.constant {
+        if frame.width/frame.height >= CreditCardViewConstants.aspectRatio {
             cardLeadingConstraint.isActive = false
             cardTrailingConstraint.isActive = false
         } else {
             cardTopConstraint.isActive = false
             cardBottomConstraint.isActive = false
         }
+        
+        cardView.widthAnchor.constraint(equalTo: cardView.heightAnchor, multiplier: CreditCardViewConstants.aspectRatio).isActive = true
 
         layoutIfNeeded()
     }
