@@ -59,7 +59,8 @@ extension UIInlinePickerView: UICollectionViewDataSource {
         let cell: UIInlinePickerViewCell = collectionView.dequeueReusableCell(for:  indexPath)
         let title = options[indexPath.row]
         
-        cell.setTitle(title)
+        cell.set(title)
+        cell.set(configuration.cellConfiguration)
         
         return cell
     }

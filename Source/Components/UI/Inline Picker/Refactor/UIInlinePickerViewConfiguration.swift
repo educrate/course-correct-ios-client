@@ -10,9 +10,12 @@ import UIKit
 
 struct UIInlinePickerViewConfiguration {
     let allowsMultipleSelection: Bool
+    let cellConfiguration: UIInlinePickerViewCellConfiguration
     
-    init(allowsMultipleSelection: Bool = false) {
+    init(allowsMultipleSelection: Bool = false,
+         cellConfiguration: UIInlinePickerViewCellConfiguration = .default) {
         self.allowsMultipleSelection = allowsMultipleSelection
+        self.cellConfiguration = cellConfiguration
     }
 }
 

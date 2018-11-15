@@ -18,8 +18,12 @@ class UIInlinePickerViewCell: UICollectionViewCell {
 }
 
 extension UIInlinePickerViewCell {
-    func setTitle(_ text: String) {
-        label.text = text
+    func set(_ title: String) {
+        label.text = title
+    }
+    
+    func set(_ newConfiguration: UIInlinePickerViewCellConfiguration) {
+        configuration = newConfiguration
     }
 }
 
