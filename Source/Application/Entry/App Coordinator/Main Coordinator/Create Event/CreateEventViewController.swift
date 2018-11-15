@@ -39,7 +39,14 @@ class CreateEventViewController: UITableViewController, CreateEventViewProtocol 
     var presenter: CreateEventPresenterProtocol?
     
     // MARK: Views
-    private weak var courseInlinePicker: UIInlinePickerViewController!
+    @IBOutlet private weak var courseInlinePicker: UIInlinePickerView! {
+        didSet {
+            courseInlinePicker.set(["Physics 7C",
+                                    "Chemistry 1A",
+                                    "Python 101",
+                                    "Bio 93"])
+        }
+    }
     
     // MARK: Outlets
     @IBOutlet private weak var datePicker: UIDatePicker!
@@ -61,19 +68,6 @@ extension CreateEventViewController {
     
     @IBAction func timePickerSelectedValue(_ sender: UIDatePicker, forEvent event: UIEvent) {
         timeLabel.text = CreateEventDateHelper.formattedDuration(for: sender.countDownDuration)
-    }
-}
-
-extension CreateEventViewController {    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segueCase(for: segue) {
-        case .inlinePicker:
-            courseInlinePicker = segue.viewController()
-            courseInlinePicker.setOptions(["Physics 7C",
-                                           "Chemistry 1A",
-                                           "Python 101",
-                                           "Bio 93"])
-        }
     }
 }
 

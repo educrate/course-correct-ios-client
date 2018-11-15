@@ -87,6 +87,10 @@ extension UICollectionView {
         
         return cell
     }
+    
+    func register<T: UICollectionViewCell>(xibCell: T.Type) {
+        register(UINib(nibName: T.storyboardIdentifier, bundle: nil), forCellWithReuseIdentifier: T.storyboardIdentifier)
+    }
 }
 
 

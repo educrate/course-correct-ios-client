@@ -55,18 +55,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnP-2F-pSc">
-                                                    <rect key="frame" x="16" y="0.0" width="390" height="71"/>
-                                                    <connections>
-                                                        <segue destination="SfE-tW-dQi" kind="embed" identifier="InlinePicker" id="OwW-2F-laQ"/>
-                                                    </connections>
-                                                </containerView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Luj-Ci-uZu" customClass="UIInlinePickerView" customModule="Client" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="0.0" width="382" height="71"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="vnP-2F-pSc" secondAttribute="trailing" constant="8" id="M1A-au-vzn"/>
-                                                <constraint firstItem="vnP-2F-pSc" firstAttribute="top" secondItem="fum-Wb-0nO" secondAttribute="top" id="RsI-mS-8wL"/>
-                                                <constraint firstItem="vnP-2F-pSc" firstAttribute="leading" secondItem="fum-Wb-0nO" secondAttribute="leading" constant="16" id="Vcf-rd-MTM"/>
-                                                <constraint firstAttribute="bottom" secondItem="vnP-2F-pSc" secondAttribute="bottom" id="Vka-gP-6dJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="Luj-Ci-uZu" secondAttribute="bottom" id="GLq-hF-Hz2"/>
+                                                <constraint firstItem="Luj-Ci-uZu" firstAttribute="top" secondItem="fum-Wb-0nO" secondAttribute="top" id="SmO-Ej-Cjx"/>
+                                                <constraint firstItem="Luj-Ci-uZu" firstAttribute="leading" secondItem="fum-Wb-0nO" secondAttribute="leading" constant="16" id="bBL-FC-hP9"/>
+                                                <constraint firstAttribute="trailing" secondItem="Luj-Ci-uZu" secondAttribute="trailing" constant="16" id="lEq-7J-eaC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -270,6 +268,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="courseInlinePicker" destination="Luj-Ci-uZu" id="YXX-bh-iTs"/>
                         <outlet property="dateLabel" destination="zEb-uw-9bg" id="msB-Z8-qgg"/>
                         <outlet property="datePicker" destination="DwU-Eb-AQr" id="koC-FO-fUg"/>
                         <outlet property="timeLabel" destination="KqA-G5-7dP" id="In8-wN-VpO"/>
@@ -279,14 +278,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z69-42-Rcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="356.52173913043481" y="152.67857142857142"/>
-        </scene>
-        <!--UIInlinePicker-->
-        <scene sceneID="4gt-5X-Gxi">
-            <objects>
-                <viewControllerPlaceholder storyboardName="UIInlinePicker" id="SfE-tW-dQi" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="scH-mS-JLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="898" y="153"/>
         </scene>
     </scenes>
     <resources>
