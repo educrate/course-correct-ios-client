@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		BF1723A8219CD63F0060B9CD /* UICreditCardViewMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723A7219CD63F0060B9CD /* UICreditCardViewMetadata.swift */; };
 		BF1723AC219CD6590060B9CD /* UICreditCardViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723AB219CD6590060B9CD /* UICreditCardViewConfiguration.swift */; };
+		BF1723AF219CF3330060B9CD /* UIInputField.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1723AE219CF3330060B9CD /* UIInputField.xib */; };
+		BF1723B1219CF3750060B9CD /* UIInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723B0219CF3750060B9CD /* UIInputField.swift */; };
+		BF1723B3219CF5710060B9CD /* UIInputFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723B2219CF5710060B9CD /* UIInputFieldConfiguration.swift */; };
 		BF4F48BB21823C2E000D98D1 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4F48BA21823C2E000D98D1 /* App.storyboard */; };
 		BF4F48BF21823C75000D98D1 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48BE21823C75000D98D1 /* AppViewController.swift */; };
 		BF4F48F221826A82000D98D1 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48EE21826A82000D98D1 /* MainPresenter.swift */; };
@@ -280,6 +283,9 @@
 /* Begin PBXFileReference section */
 		BF1723A7219CD63F0060B9CD /* UICreditCardViewMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICreditCardViewMetadata.swift; sourceTree = "<group>"; };
 		BF1723AB219CD6590060B9CD /* UICreditCardViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICreditCardViewConfiguration.swift; sourceTree = "<group>"; };
+		BF1723AE219CF3330060B9CD /* UIInputField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIInputField.xib; sourceTree = "<group>"; };
+		BF1723B0219CF3750060B9CD /* UIInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInputField.swift; sourceTree = "<group>"; };
+		BF1723B2219CF5710060B9CD /* UIInputFieldConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInputFieldConfiguration.swift; sourceTree = "<group>"; };
 		BF4F48BA21823C2E000D98D1 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		BF4F48BE21823C75000D98D1 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		BF4F48EE21826A82000D98D1 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -562,6 +568,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF1723AD219CF3150060B9CD /* Refactor */ = {
+			isa = PBXGroup;
+			children = (
+				BF1723AE219CF3330060B9CD /* UIInputField.xib */,
+				BF1723B0219CF3750060B9CD /* UIInputField.swift */,
+				BF1723B2219CF5710060B9CD /* UIInputFieldConfiguration.swift */,
+			);
+			path = Refactor;
+			sourceTree = "<group>";
+		};
 		BF4E718D216D4C1A00100FE1 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
@@ -1159,6 +1175,7 @@
 		BFD0299721509CC0002FB9F5 /* Text Field */ = {
 			isa = PBXGroup;
 			children = (
+				BF1723AD219CF3150060B9CD /* Refactor */,
 				BFD82AE5217061DA00A14868 /* UIField.storyboard */,
 				BFD0299821509CD4002FB9F5 /* UIFieldViewController.swift */,
 				BFD0299A21509CD5002FB9F5 /* UIFieldConfiguration.swift */,
@@ -1495,6 +1512,7 @@
 				BF50051C2176D9AC00D35B69 /* UIActionSheet.storyboard in Resources */,
 				BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */,
 				BFCDA5F221725E8500DB31FC /* Welcome.storyboard in Resources */,
+				BF1723AF219CF3330060B9CD /* UIInputField.xib in Resources */,
 				BFD82AE2216F028600A14868 /* UIDropdown.storyboard in Resources */,
 				BF500574217B87FB00D35B69 /* CreateEvent.storyboard in Resources */,
 				BFD82AE6217061DA00A14868 /* UIField.storyboard in Resources */,
@@ -1656,6 +1674,7 @@
 				BFD82AEF2170670400A14868 /* EnterStudentIdentifierViewController.swift in Sources */,
 				BFD82A93216D989E00A14868 /* NetworkingCache.swift in Sources */,
 				BFD0298221509C6A002FB9F5 /* CreditCardImageExtractor.swift in Sources */,
+				BF1723B3219CF5710060B9CD /* UIInputFieldConfiguration.swift in Sources */,
 				BF70B5D9217074C600771E5D /* EnterAccessCodeInteractor.swift in Sources */,
 				BFD82A88216D989E00A14868 /* NetworkingConfiguration.swift in Sources */,
 				BFD82AEE2170670400A14868 /* EnterStudentIdentifierRouter.swift in Sources */,
@@ -1740,6 +1759,7 @@
 				BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */,
 				BF50046B2172F09700D35B69 /* ProfileOverviewRouter.swift in Sources */,
 				BF50049B2173EB9B00D35B69 /* ProfileSupportRouter.swift in Sources */,
+				BF1723B1219CF3750060B9CD /* UIInputField.swift in Sources */,
 				BF5004D921741E6900D35B69 /* AddLocationInteractor.swift in Sources */,
 				BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */,
 				BF5005B1217EEE9C00D35B69 /* AppRouter.swift in Sources */,

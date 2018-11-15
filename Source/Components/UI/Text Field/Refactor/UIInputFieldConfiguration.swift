@@ -1,15 +1,15 @@
 //
-//  UIFieldConfiguration.swift
+//  UIInputFieldConfiguration.swift
 //  Client
 //
-//  Created by Christian Ampe on 7/29/18.
+//  Created by Ampe on 11/14/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import UIKit
 
 // MARK: - Configuration For UI Field
-struct UIFieldConfiguration {
+struct UIInputFieldConfiguration {
     let text: String
     let placeholder: String
     let textColor: UIColor
@@ -75,6 +75,6 @@ struct UIFieldConfiguration {
     }
 }
 
-extension UIFieldConfiguration {
-    static let `default` = UIFieldConfiguration()
+extension UIInputFieldConfiguration {
+    static let `default` = UIInputFieldConfiguration()
 }
