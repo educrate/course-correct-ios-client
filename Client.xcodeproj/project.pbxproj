@@ -574,13 +574,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BF1723AD219CF3150060B9CD /* Refactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Refactor;
-			sourceTree = "<group>";
-		};
 		BF1723B4219D39300060B9CD /* Refactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -1191,7 +1184,6 @@
 		BFD0299721509CC0002FB9F5 /* Text Field */ = {
 			isa = PBXGroup;
 			children = (
-				BF1723AD219CF3150060B9CD /* Refactor */,
 				BFD82AE5217061DA00A14868 /* UIField.storyboard */,
 				BFD0299821509CD4002FB9F5 /* UIFieldViewController.swift */,
 				BFD0299A21509CD5002FB9F5 /* UIFieldConfiguration.swift */,
