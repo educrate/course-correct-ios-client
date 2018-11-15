@@ -18,15 +18,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZY-Ww-wqM">
-                        <rect key="frame" x="40" y="25" width="0.0" height="0.0"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.75278253419999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="60" y="25" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="xZY-Ww-wqM" firstAttribute="centerY" secondItem="cZd-ef-ian" secondAttribute="centerY" id="gV5-Jv-xrE"/>
-                    <constraint firstItem="xZY-Ww-wqM" firstAttribute="leading" secondItem="cZd-ef-ian" secondAttribute="leading" constant="40" id="pEC-HA-uhx"/>
+                    <constraint firstItem="xZY-Ww-wqM" firstAttribute="leading" secondItem="cZd-ef-ian" secondAttribute="leading" constant="60" id="pEC-HA-uhx"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

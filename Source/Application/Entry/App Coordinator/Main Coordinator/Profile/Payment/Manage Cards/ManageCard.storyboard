@@ -62,7 +62,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Manage Payment" id="COu-QJ-35d">
                         <barButtonItem key="backBarButtonItem" title=" " id="kgE-vJ-kG3"/>
-                        <barButtonItem key="rightBarButtonItem" image="plus-vector" id="g39-OY-TDh"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus-vector" id="g39-OY-TDh">
+                            <connections>
+                                <action selector="didSelectAddCard:" destination="XIX-cN-ayh" id="S7o-03-a1Y"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>

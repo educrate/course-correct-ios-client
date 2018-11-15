@@ -21,6 +21,17 @@ class ManageCardViewController: UIViewController, ManageCardViewProtocol {
     }
 }
 
+private extension ManageCardViewController {
+    @IBAction func didSelectAddCard(_ sender: UIBarButtonItem) {
+        let addCardOption = UIActionViewOption(title: "Add payment method")
+        
+        let cancelOption = UIActionViewOption(title: "Cancel")
+        
+        UIActionView.show(with: [addCardOption,
+                                 cancelOption])
+    }
+}
+
 extension ManageCardViewController: UITableViewDelegate {}
 
 extension ManageCardViewController: UITableViewDataSource {

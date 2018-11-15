@@ -16,10 +16,10 @@ struct UIActionViewConfiguration {
     let cellHeight: CGFloat
     
     init(backgroundColor: UIColor = .black,
-         maxBackgroundAlphaValue: CGFloat = 0.5,
+         maxBackgroundAlphaValue: CGFloat = 0.3,
          durationOfShowAnimation: TimeInterval = 0.3,
          durationOfHideAnimation: TimeInterval = 0.1,
-         cellHeight: CGFloat = 60) {
+         cellHeight: CGFloat = 50) {
         
         self.backgroundColor = backgroundColor
         self.maxBackgroundAlphaValue = maxBackgroundAlphaValue
