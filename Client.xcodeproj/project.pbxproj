@@ -14,6 +14,7 @@
 		BF1723BA219D3D020060B9CD /* UIInlinePickerViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723B9219D3D020060B9CD /* UIInlinePickerViewConfiguration.swift */; };
 		BF1723BC219DFCA40060B9CD /* UIInlinePickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1723BB219DFCA40060B9CD /* UIInlinePickerViewCell.xib */; };
 		BF1723BE219DFCBB0060B9CD /* UIInlinePickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723BD219DFCBB0060B9CD /* UIInlinePickerViewCell.swift */; };
+		BF1723C0219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723BF219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift */; };
 		BF4F48BB21823C2E000D98D1 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4F48BA21823C2E000D98D1 /* App.storyboard */; };
 		BF4F48BF21823C75000D98D1 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48BE21823C75000D98D1 /* AppViewController.swift */; };
 		BF4F48F221826A82000D98D1 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48EE21826A82000D98D1 /* MainPresenter.swift */; };
@@ -290,6 +291,7 @@
 		BF1723B9219D3D020060B9CD /* UIInlinePickerViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInlinePickerViewConfiguration.swift; sourceTree = "<group>"; };
 		BF1723BB219DFCA40060B9CD /* UIInlinePickerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIInlinePickerViewCell.xib; sourceTree = "<group>"; };
 		BF1723BD219DFCBB0060B9CD /* UIInlinePickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInlinePickerViewCell.swift; sourceTree = "<group>"; };
+		BF1723BF219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInlinePickerViewCellConfiguration.swift; sourceTree = "<group>"; };
 		BF4F48BA21823C2E000D98D1 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		BF4F48BE21823C75000D98D1 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		BF4F48EE21826A82000D98D1 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -587,6 +589,7 @@
 				BF1723B9219D3D020060B9CD /* UIInlinePickerViewConfiguration.swift */,
 				BF1723BB219DFCA40060B9CD /* UIInlinePickerViewCell.xib */,
 				BF1723BD219DFCBB0060B9CD /* UIInlinePickerViewCell.swift */,
+				BF1723BF219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift */,
 			);
 			path = Refactor;
 			sourceTree = "<group>";
@@ -1598,6 +1601,7 @@
 				BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */,
 				BFCDA5F021725E7200DB31FC /* WelcomeInteractor.swift in Sources */,
 				BFD82A8E216D989E00A14868 /* NetworkingClientRequest.swift in Sources */,
+				BF1723C0219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift in Sources */,
 				BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */,
 				BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */,
 				BF500560217B848F00D35B69 /* CongratulationsPresenter.swift in Sources */,

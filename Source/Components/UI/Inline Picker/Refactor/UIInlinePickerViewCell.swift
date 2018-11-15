@@ -7,10 +7,14 @@
 //
 
 import UIKit
+
 class UIInlinePickerViewCell: UICollectionViewCell {
     
     // MARK: Views
     @IBOutlet private weak var label: UILabel!
+    
+    // MARK: Properties
+    private var configuration: UIInlinePickerViewCellConfiguration = .default
 }
 
 extension UIInlinePickerViewCell {
@@ -42,15 +46,15 @@ private extension UIInlinePickerViewCell {
     }
     
     func setSelected() {
-        label.textColor = .white
-        layer.borderColor = UIColor.clear.cgColor
-        backgroundColor = .orange
+        label.textColor = configuration.selectedTextColor
+        backgroundColor = configuration.selectedBackgroundColor
+        layer.borderColor = configuration.selectedBorderColor.cgColor
     }
     
     func setUnselected() {
-        label.textColor = .black
-        layer.borderColor = UIColor.black.cgColor
-        backgroundColor = .clear
+        label.textColor = configuration.unselectedTextColor
+        backgroundColor = configuration.unselectedBackgroundColor
+        layer.borderColor = configuration.unselectedBorderColor.cgColor
     }
 }
 

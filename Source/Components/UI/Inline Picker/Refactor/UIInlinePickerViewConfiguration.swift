@@ -6,9 +6,9 @@
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct UIInlinePickerConfiguration {
+struct UIInlinePickerViewConfiguration {
     let allowsMultipleSelection: Bool
     
     init(allowsMultipleSelection: Bool = false) {
@@ -16,6 +16,6 @@ struct UIInlinePickerConfiguration {
     }
 }
 
-extension UIInlinePickerConfiguration {
-    static let `default` = UIInlinePickerConfiguration()
+extension UIInlinePickerViewConfiguration {
+    static let `default` = UIInlinePickerViewConfiguration()
 }

@@ -15,7 +15,7 @@ final class UIInlinePickerView: XIBView {
     @IBOutlet private weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     // MARK: Properties
-    private var configuration: UIInlinePickerConfiguration = .default
+    private var configuration: UIInlinePickerViewConfiguration = .default
     private var options: [String] = []
 }
 
@@ -37,7 +37,7 @@ extension UIInlinePickerView {
         options = newOptions
     }
     
-    func set(_ newConfiguration: UIInlinePickerConfiguration) {
+    func set(_ newConfiguration: UIInlinePickerViewConfiguration) {
         configuration = newConfiguration
     }
     
