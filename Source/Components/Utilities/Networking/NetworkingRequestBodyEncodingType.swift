@@ -9,11 +9,9 @@
 import Foundation
 
 // MARK: - Request Body Encoding Type Enumeration
-
-/// supported request body encodings
 enum NetworkingRequestBodyEncodingType {
     
-    /// json encoded request body]
+    /// json encoded request body
     /// header key - content-type
     /// header value - application/json
     case jsonEncoded

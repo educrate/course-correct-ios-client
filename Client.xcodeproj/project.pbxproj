@@ -15,7 +15,6 @@
 		BF1723BC219DFCA40060B9CD /* UIInlinePickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1723BB219DFCA40060B9CD /* UIInlinePickerViewCell.xib */; };
 		BF1723BE219DFCBB0060B9CD /* UIInlinePickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723BD219DFCBB0060B9CD /* UIInlinePickerViewCell.swift */; };
 		BF1723C0219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723BF219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift */; };
-		BF1723C2219E5A3C0060B9CD /* SignInNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723C1219E5A3C0060B9CD /* SignInNetworking.swift */; };
 		BF1723C4219FBE340060B9CD /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723C3219FBE340060B9CD /* NetworkingError.swift */; };
 		BF1723C821A0BA120060B9CD /* NetworkingExtractableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723C721A0BA120060B9CD /* NetworkingExtractableError.swift */; };
 		BF1723CA21A0BFE20060B9CD /* NetworkingRequestValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723C921A0BFE10060B9CD /* NetworkingRequestValidation.swift */; };
@@ -287,7 +286,6 @@
 		BF1723BB219DFCA40060B9CD /* UIInlinePickerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIInlinePickerViewCell.xib; sourceTree = "<group>"; };
 		BF1723BD219DFCBB0060B9CD /* UIInlinePickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInlinePickerViewCell.swift; sourceTree = "<group>"; };
 		BF1723BF219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInlinePickerViewCellConfiguration.swift; sourceTree = "<group>"; };
-		BF1723C1219E5A3C0060B9CD /* SignInNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNetworking.swift; sourceTree = "<group>"; };
 		BF1723C3219FBE340060B9CD /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		BF1723C721A0BA120060B9CD /* NetworkingExtractableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingExtractableError.swift; sourceTree = "<group>"; };
 		BF1723C921A0BFE10060B9CD /* NetworkingRequestValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestValidation.swift; sourceTree = "<group>"; };
@@ -784,7 +782,6 @@
 				BF500506217454C600D35B69 /* SignInInteractor.swift */,
 				BF500505217454C600D35B69 /* SignInProtocols.swift */,
 				BF500519217678C500D35B69 /* SignInError.swift */,
-				BF1723C1219E5A3C0060B9CD /* SignInNetworking.swift */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -1205,9 +1202,9 @@
 				BFD82A77216D989D00A14868 /* NetworkingRequestHTTPMethod.swift */,
 				BFD82A80216D989D00A14868 /* NetworkingResponse.swift */,
 				BF1723C3219FBE340060B9CD /* NetworkingError.swift */,
-				BFD82A81216D989D00A14868 /* NetworkingCache.swift */,
 				BFD82A83216D989E00A14868 /* NetworkingExtractable.swift */,
 				BF1723C721A0BA120060B9CD /* NetworkingExtractableError.swift */,
+				BFD82A81216D989D00A14868 /* NetworkingCache.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -1747,7 +1744,6 @@
 				BF5004D621741E6900D35B69 /* AddLocationRouter.swift in Sources */,
 				BFCDA60D2172905800DB31FC /* UINavigationBar+Additions.swift in Sources */,
 				BFF14D962160495000733323 /* DayHelper.swift in Sources */,
-				BF1723C2219E5A3C0060B9CD /* SignInNetworking.swift in Sources */,
 				BF5004AC2174122200D35B69 /* CalendarPresenter.swift in Sources */,
 				BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */,
 				BF50046B2172F09700D35B69 /* ProfileOverviewRouter.swift in Sources */,

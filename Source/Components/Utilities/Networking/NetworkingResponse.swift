@@ -9,17 +9,26 @@
 import Foundation
 
 struct NetworkingResponse {
-    let statusCode: Int
+    
+    /// data returned from the network request
     let data: Data
+    
+    /// url request sent to server
     let request: URLRequest
+    
+    /// http url response returned from server
     let response: HTTPURLResponse
     
-    init(statusCode: Int,
-        data: Data,
-        request: URLRequest,
-        response: HTTPURLResponse) {
+    /// explicit initializer
+    ///
+    /// - Parameters:
+    ///   - data: data returned from the network request
+    ///   - request: url request sent to server
+    ///   - response: http url response returned from server
+    init(data: Data,
+         request: URLRequest,
+         response: HTTPURLResponse) {
         
-        self.statusCode = statusCode
         self.data = data
         self.request = request
         self.response = response

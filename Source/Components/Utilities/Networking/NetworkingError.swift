@@ -9,9 +9,16 @@
 import Foundation
 
 enum NetworkingError: Error {
+    
+    /// returned when no response is returned from a data task
     case unresponsive
+    
+    /// returned when the data task returns an error
     case underlying(Error)
+    
+    /// returned when the service gets an unexpected response
     case responseMapping(NetworkingResponse)
-    case requestMapping
+    
+    /// returned when client declared validation fails
     case statusCode(NetworkingResponse)
 }

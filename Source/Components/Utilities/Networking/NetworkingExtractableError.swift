@@ -9,5 +9,7 @@
 import Foundation
 
 enum NetworkingExtractableError: Error {
+    
+    /// error thrown when parsing an extractable fails
     case parsing
 }

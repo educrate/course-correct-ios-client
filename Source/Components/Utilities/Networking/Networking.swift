@@ -8,11 +8,11 @@
 
 import Foundation
 
-// MARK: - Global Namespaced Networking Class
+// MARK: - Networking Class
 class Networking {
-
-    /// inialized provider holding reference to the innerworkings
-    /// of the service layer
+    
+    /// inialized provider holding reference
+    /// to the innerworkings of the service layer
     private let service = NetworkingService()
 }
 
@@ -43,28 +43,41 @@ extension Networking {
     ///     - target: enum holding possible network requests
     ///     - completion: result returning either a parsed model or an error
     func request<E: NetworkingExtractable>(_ target: NetworkingRequest,
-                                          completion: @escaping (Result<E, NetworkingError>) -> Void) {
+                                           completion: @escaping (Result<E, NetworkingError>) -> Void) {
         
+        // make request to specified target
         service.request(target) { result in
+            
+            // switch on result of network request
             switch result {
-            case .success(let response):
-                let statusCode = response.statusCode
                 
-                guard target.validation.range.contains(statusCode) else {
+            case .success(let response):
+                
+                // validate response status code from specified request
+                guard target.validation.range.contains(response.response.statusCode) else {
+                    
+                    // invalid status code according to client
                     completion(Result(error: .statusCode(response)))
                     return
                 }
                 
-                let decodingResult = E.decode(response.data)
-                
-                switch decodingResult {
+                // switch on decode result of response data
+                switch E.decode(response.data) {
+                    
                 case .success(let object):
+                    
+                    // successful result with parsed object
                     completion(Result(value: object))
+                    
                 case .failure:
+                    
+                    // unexpected data returned
                     completion(Result(error: .responseMapping(response)))
                 }
                 
             case .failure(let error):
+                
+                // something went wrong with the network request
                 completion(Result(error: error))
             }
         }

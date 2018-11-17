@@ -14,7 +14,6 @@ class NetworkingService {
     private let session = URLSession(configuration: .default)
 }
 
-
 extension NetworkingService {
     
     /// core method for making a network request
@@ -25,21 +24,32 @@ extension NetworkingService {
     func request(_ request: NetworkingRequest,
                  completion: @escaping (Result<NetworkingResponse, NetworkingError>) -> Void) {
         
+        // make network request utilizing Apple's API
         session.dataTask(with: request.urlRequest) { data, response, error in
+            
+            // ensure the response exists and is an HTTPURLResponse
             guard let response = response as? HTTPURLResponse else {
+                
+                // server did not responsd to request
                 completion(Result(error: .unresponsive))
                 return
             }
             
+            // if there is an error this means the request failed
             if let error = error {
+                
+                // something went wrong and no data will be returned
                 completion(Result(error: .underlying(error)))
+                
             } else if let data = data {
-                completion(Result(value: NetworkingResponse(statusCode: response.statusCode,
-                                                            data: data,
+                
+                // if there is data map it into a NetworkingResponse
+                completion(Result(value: NetworkingResponse(data: data,
                                                             request: request.urlRequest,
                                                             response: response)))
             }
             
+            // resume execution
             }.resume()
     }
 }

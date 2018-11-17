@@ -9,10 +9,14 @@
 import Foundation
 
 enum NetworkingRequestValidation {
+    
+    // filter for only 2xx http statuc codes
     case successCodes
 }
 
 extension NetworkingRequestValidation {
+    
+    /// static code ranges
     var range: ClosedRange<Int> {
         switch self {
         case .successCodes:
