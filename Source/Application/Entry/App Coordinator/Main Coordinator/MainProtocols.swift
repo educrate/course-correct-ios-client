@@ -23,7 +23,7 @@ protocol MainRouterDelegate: class {
 
 
 // MARK: - Presenter
-protocol MainPresenterProtocol: class, Coordinator {}
+protocol MainPresenterProtocol: class {}
 
 
 // MARK: - Interactor

@@ -25,7 +25,7 @@ protocol SignUpRouterDelegate: class {
 
 
 // MARK: - Presenter
-protocol SignUpPresenterProtocol: class, Coordinator {}
+protocol SignUpPresenterProtocol: class {}
 
 
 // MARK: - Interactor

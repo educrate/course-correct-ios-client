@@ -17,8 +17,9 @@ protocol AppWireframeProtocol: OnboardingRouterDelegate, MainRouterDelegate {
 
 
 // MARK: - Presenter
-protocol AppPresenterProtocol: class, Coordinator {
+protocol AppPresenterProtocol: class {
     func launchStateDetermined(_ state: AppUserState)
+    func start()
 }
 
 

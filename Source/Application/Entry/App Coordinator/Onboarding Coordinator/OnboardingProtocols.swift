@@ -24,7 +24,7 @@ protocol OnboardingRouterDelegate: class {
 
 
 // MARK: - Presenter
-protocol OnboardingPresenterProtocol: class, Coordinator {}
+protocol OnboardingPresenterProtocol: class {}
 
 
 // MARK: - Interactor

@@ -121,7 +121,6 @@
 		BF500571217B87C900D35B69 /* CreateEventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50056C217B87C900D35B69 /* CreateEventProtocols.swift */; };
 		BF500572217B87C900D35B69 /* CreateEventInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50056D217B87C900D35B69 /* CreateEventInteractor.swift */; };
 		BF500574217B87FB00D35B69 /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF500573217B87FB00D35B69 /* CreateEvent.storyboard */; };
-		BF5005A0217EC6B600D35B69 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50059F217EC6B600D35B69 /* Coordinator.swift */; };
 		BF5005B0217EEE9C00D35B69 /* AppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005AB217EEE9C00D35B69 /* AppPresenter.swift */; };
 		BF5005B1217EEE9C00D35B69 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005AC217EEE9C00D35B69 /* AppRouter.swift */; };
 		BF5005B3217EEE9C00D35B69 /* AppProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005AE217EEE9C00D35B69 /* AppProtocols.swift */; };
@@ -213,7 +212,6 @@
 		BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */; };
 		BFD82AB9216DA53200A14868 /* UIDropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AB3216DA53200A14868 /* UIDropdownViewController.swift */; };
 		BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */; };
-		BFD82AC5216DB88500A14868 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC4216DB88500A14868 /* Wireframe.swift */; };
 		BFD82ACB216E77B600A14868 /* SelectCollegePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC6216E77B600A14868 /* SelectCollegePresenter.swift */; };
 		BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC7216E77B600A14868 /* SelectCollegeRouter.swift */; };
 		BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AC8216E77B600A14868 /* SelectCollegeViewController.swift */; };
@@ -392,7 +390,6 @@
 		BF50056C217B87C900D35B69 /* CreateEventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventProtocols.swift; sourceTree = "<group>"; };
 		BF50056D217B87C900D35B69 /* CreateEventInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventInteractor.swift; sourceTree = "<group>"; };
 		BF500573217B87FB00D35B69 /* CreateEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEvent.storyboard; sourceTree = "<group>"; };
-		BF50059F217EC6B600D35B69 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BF5005AB217EEE9C00D35B69 /* AppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPresenter.swift; sourceTree = "<group>"; };
 		BF5005AC217EEE9C00D35B69 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		BF5005AE217EEE9C00D35B69 /* AppProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProtocols.swift; sourceTree = "<group>"; };
@@ -490,7 +487,6 @@
 		BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownCell.swift; sourceTree = "<group>"; };
 		BFD82AB3216DA53200A14868 /* UIDropdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownViewController.swift; sourceTree = "<group>"; };
 		BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
-		BFD82AC4216DB88500A14868 /* Wireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
 		BFD82AC6216E77B600A14868 /* SelectCollegePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegePresenter.swift; sourceTree = "<group>"; };
 		BFD82AC7216E77B600A14868 /* SelectCollegeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeRouter.swift; sourceTree = "<group>"; };
 		BFD82AC8216E77B600A14868 /* SelectCollegeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeViewController.swift; sourceTree = "<group>"; };
@@ -1248,18 +1244,8 @@
 			children = (
 				BFF6C2932187E2A5003F7D96 /* Protocols */,
 				BFCDA6092172902F00DB31FC /* Extensions */,
-				BFD82AC3216DB86200A14868 /* Viper */,
 			);
 			path = Implementations;
-			sourceTree = "<group>";
-		};
-		BFD82AC3216DB86200A14868 /* Viper */ = {
-			isa = PBXGroup;
-			children = (
-				BFD82AC4216DB88500A14868 /* Wireframe.swift */,
-				BF50059F217EC6B600D35B69 /* Coordinator.swift */,
-			);
-			path = Viper;
 			sourceTree = "<group>";
 		};
 		BFD82AD0216E7CA600A14868 /* UI */ = {
@@ -1584,7 +1570,6 @@
 				BF5004902173EB7800D35B69 /* ProfilePaymentViewController.swift in Sources */,
 				BF50046A2172F09700D35B69 /* ProfileOverviewPresenter.swift in Sources */,
 				BF5004E221741E9100D35B69 /* SelectTutorRouter.swift in Sources */,
-				BF5005A0217EC6B600D35B69 /* Coordinator.swift in Sources */,
 				BFD82A92216D989E00A14868 /* NetworkingResponse.swift in Sources */,
 				BF50048F2173EB7800D35B69 /* ProfilePaymentRouter.swift in Sources */,
 				BFD0297221509C1E002FB9F5 /* CreditCardViewStyle.swift in Sources */,
@@ -1629,7 +1614,6 @@
 				BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */,
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
 				BFF6C2922184E1F8003F7D96 /* UINotificationViewConfiguration.swift in Sources */,
-				BFD82AC5216DB88500A14868 /* Wireframe.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */,
 				BF50050B217454C600D35B69 /* SignInInteractor.swift in Sources */,
 				BFD82A89216D989E00A14868 /* NetworkingRequestHTTPMethod.swift in Sources */,

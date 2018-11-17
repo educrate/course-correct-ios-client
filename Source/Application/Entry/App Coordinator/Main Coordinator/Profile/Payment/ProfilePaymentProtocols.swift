@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Wireframe
 
-protocol ProfilePaymentWireframeProtocol: class, Wireframe {
+protocol ProfilePaymentWireframeProtocol: class {
     func presentAddCard()
     func presentAddBank()
 }
