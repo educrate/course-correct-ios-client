@@ -9,5 +9,7 @@
 import UIKit.UIImage
 
 extension UIImage {
+    
+    /// static empty image
     static let empty = UIImage()
 }

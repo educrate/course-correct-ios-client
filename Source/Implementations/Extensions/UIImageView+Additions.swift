@@ -9,6 +9,8 @@
 import UIKit.UIImageView
 
 extension UIImageView {
+    
+    /// rounds an image view
     func round() {
         layer.cornerRadius = frame.width / 2
         clipsToBounds = true
