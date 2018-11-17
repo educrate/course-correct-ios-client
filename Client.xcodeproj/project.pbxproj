@@ -15,6 +15,10 @@
 		BF1723BC219DFCA40060B9CD /* UIInlinePickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1723BB219DFCA40060B9CD /* UIInlinePickerViewCell.xib */; };
 		BF1723BE219DFCBB0060B9CD /* UIInlinePickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723BD219DFCBB0060B9CD /* UIInlinePickerViewCell.swift */; };
 		BF1723C0219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723BF219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift */; };
+		BF1723C2219E5A3C0060B9CD /* SignInNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723C1219E5A3C0060B9CD /* SignInNetworking.swift */; };
+		BF1723C4219FBE340060B9CD /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723C3219FBE340060B9CD /* NetworkingError.swift */; };
+		BF1723C821A0BA120060B9CD /* NetworkingExtractableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723C721A0BA120060B9CD /* NetworkingExtractableError.swift */; };
+		BF1723CA21A0BFE20060B9CD /* NetworkingRequestValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723C921A0BFE10060B9CD /* NetworkingRequestValidation.swift */; };
 		BF4F48BB21823C2E000D98D1 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4F48BA21823C2E000D98D1 /* App.storyboard */; };
 		BF4F48BF21823C75000D98D1 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48BE21823C75000D98D1 /* AppViewController.swift */; };
 		BF4F48F221826A82000D98D1 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48EE21826A82000D98D1 /* MainPresenter.swift */; };
@@ -196,24 +200,15 @@
 		BFD0299B21509CD5002FB9F5 /* UIFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299821509CD4002FB9F5 /* UIFieldViewController.swift */; };
 		BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299A21509CD5002FB9F5 /* UIFieldConfiguration.swift */; };
 		BFD029A621509CFD002FB9F5 /* UIInlinePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A021509CFD002FB9F5 /* UIInlinePickerCell.swift */; };
-		BFD82A87216D989E00A14868 /* NetworkingClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A75216D989D00A14868 /* NetworkingClientError.swift */; };
-		BFD82A88216D989E00A14868 /* NetworkingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A76216D989D00A14868 /* NetworkingConfiguration.swift */; };
-		BFD82A89216D989E00A14868 /* NetworkingClientHTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A77216D989D00A14868 /* NetworkingClientHTTPMethods.swift */; };
-		BFD82A8A216D989E00A14868 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A78216D989D00A14868 /* NetworkingError.swift */; };
-		BFD82A8B216D989E00A14868 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A79216D989D00A14868 /* NetworkingService.swift */; };
+		BFD82A89216D989E00A14868 /* NetworkingRequestHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A77216D989D00A14868 /* NetworkingRequestHTTPMethod.swift */; };
 		BFD82A8C216D989E00A14868 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7A216D989D00A14868 /* Networking.swift */; };
-		BFD82A8D216D989E00A14868 /* NetworkingClientRequestEncodingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7B216D989D00A14868 /* NetworkingClientRequestEncodingType.swift */; };
-		BFD82A8E216D989E00A14868 /* NetworkingClientRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7C216D989D00A14868 /* NetworkingClientRequest.swift */; };
-		BFD82A8F216D989E00A14868 /* NetworkingClientValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7D216D989D00A14868 /* NetworkingClientValidation.swift */; };
-		BFD82A90216D989E00A14868 /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7E216D989D00A14868 /* NetworkingClient.swift */; };
-		BFD82A91216D989E00A14868 /* NetworkingClientResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7F216D989D00A14868 /* NetworkingClientResult.swift */; };
-		BFD82A92216D989E00A14868 /* NetworkingClientResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A80216D989D00A14868 /* NetworkingClientResponse.swift */; };
+		BFD82A8D216D989E00A14868 /* NetworkingRequestBodyEncodingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7B216D989D00A14868 /* NetworkingRequestBodyEncodingType.swift */; };
+		BFD82A8E216D989E00A14868 /* NetworkingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7C216D989D00A14868 /* NetworkingRequest.swift */; };
+		BFD82A90216D989E00A14868 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7E216D989D00A14868 /* NetworkingService.swift */; };
+		BFD82A92216D989E00A14868 /* NetworkingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A80216D989D00A14868 /* NetworkingResponse.swift */; };
 		BFD82A93216D989E00A14868 /* NetworkingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A81216D989D00A14868 /* NetworkingCache.swift */; };
-		BFD82A94216D989E00A14868 /* NetworkingFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A82216D989E00A14868 /* NetworkingFailure.swift */; };
 		BFD82A95216D989E00A14868 /* NetworkingExtractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A83216D989E00A14868 /* NetworkingExtractable.swift */; };
-		BFD82A96216D989E00A14868 /* NetworkingServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A84216D989E00A14868 /* NetworkingServiceError.swift */; };
-		BFD82A97216D989E00A14868 /* NetworkingClientRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A85216D989E00A14868 /* NetworkingClientRequestBody.swift */; };
-		BFD82A98216D989E00A14868 /* NetworkingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A86216D989E00A14868 /* NetworkingResult.swift */; };
+		BFD82A97216D989E00A14868 /* NetworkingRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A85216D989E00A14868 /* NetworkingRequestBody.swift */; };
 		BFD82A9F216DA25600A14868 /* UIInlinePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A9E216DA25600A14868 /* UIInlinePickerViewController.swift */; };
 		BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD82AAB216DA49B00A14868 /* SelectCollege.storyboard */; };
 		BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */; };
@@ -292,6 +287,10 @@
 		BF1723BB219DFCA40060B9CD /* UIInlinePickerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIInlinePickerViewCell.xib; sourceTree = "<group>"; };
 		BF1723BD219DFCBB0060B9CD /* UIInlinePickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInlinePickerViewCell.swift; sourceTree = "<group>"; };
 		BF1723BF219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInlinePickerViewCellConfiguration.swift; sourceTree = "<group>"; };
+		BF1723C1219E5A3C0060B9CD /* SignInNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNetworking.swift; sourceTree = "<group>"; };
+		BF1723C3219FBE340060B9CD /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		BF1723C721A0BA120060B9CD /* NetworkingExtractableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingExtractableError.swift; sourceTree = "<group>"; };
+		BF1723C921A0BFE10060B9CD /* NetworkingRequestValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestValidation.swift; sourceTree = "<group>"; };
 		BF4F48BA21823C2E000D98D1 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		BF4F48BE21823C75000D98D1 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		BF4F48EE21826A82000D98D1 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -479,24 +478,15 @@
 		BFD0299821509CD4002FB9F5 /* UIFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFieldViewController.swift; sourceTree = "<group>"; };
 		BFD0299A21509CD5002FB9F5 /* UIFieldConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFieldConfiguration.swift; sourceTree = "<group>"; };
 		BFD029A021509CFD002FB9F5 /* UIInlinePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInlinePickerCell.swift; sourceTree = "<group>"; };
-		BFD82A75216D989D00A14868 /* NetworkingClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingClientError.swift; sourceTree = "<group>"; };
-		BFD82A76216D989D00A14868 /* NetworkingConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingConfiguration.swift; sourceTree = "<group>"; };
-		BFD82A77216D989D00A14868 /* NetworkingClientHTTPMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingClientHTTPMethods.swift; sourceTree = "<group>"; };
-		BFD82A78216D989D00A14868 /* NetworkingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
-		BFD82A79216D989D00A14868 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		BFD82A77216D989D00A14868 /* NetworkingRequestHTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestHTTPMethod.swift; sourceTree = "<group>"; };
 		BFD82A7A216D989D00A14868 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		BFD82A7B216D989D00A14868 /* NetworkingClientRequestEncodingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingClientRequestEncodingType.swift; sourceTree = "<group>"; };
-		BFD82A7C216D989D00A14868 /* NetworkingClientRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingClientRequest.swift; sourceTree = "<group>"; };
-		BFD82A7D216D989D00A14868 /* NetworkingClientValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingClientValidation.swift; sourceTree = "<group>"; };
-		BFD82A7E216D989D00A14868 /* NetworkingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingClient.swift; sourceTree = "<group>"; };
-		BFD82A7F216D989D00A14868 /* NetworkingClientResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingClientResult.swift; sourceTree = "<group>"; };
-		BFD82A80216D989D00A14868 /* NetworkingClientResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingClientResponse.swift; sourceTree = "<group>"; };
+		BFD82A7B216D989D00A14868 /* NetworkingRequestBodyEncodingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestBodyEncodingType.swift; sourceTree = "<group>"; };
+		BFD82A7C216D989D00A14868 /* NetworkingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequest.swift; sourceTree = "<group>"; };
+		BFD82A7E216D989D00A14868 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		BFD82A80216D989D00A14868 /* NetworkingResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingResponse.swift; sourceTree = "<group>"; };
 		BFD82A81216D989D00A14868 /* NetworkingCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingCache.swift; sourceTree = "<group>"; };
-		BFD82A82216D989E00A14868 /* NetworkingFailure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingFailure.swift; sourceTree = "<group>"; };
 		BFD82A83216D989E00A14868 /* NetworkingExtractable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingExtractable.swift; sourceTree = "<group>"; };
-		BFD82A84216D989E00A14868 /* NetworkingServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServiceError.swift; sourceTree = "<group>"; };
-		BFD82A85216D989E00A14868 /* NetworkingClientRequestBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingClientRequestBody.swift; sourceTree = "<group>"; };
-		BFD82A86216D989E00A14868 /* NetworkingResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingResult.swift; sourceTree = "<group>"; };
+		BFD82A85216D989E00A14868 /* NetworkingRequestBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestBody.swift; sourceTree = "<group>"; };
 		BFD82A9E216DA25600A14868 /* UIInlinePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInlinePickerViewController.swift; sourceTree = "<group>"; };
 		BFD82AAB216DA49B00A14868 /* SelectCollege.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCollege.storyboard; sourceTree = "<group>"; };
 		BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownCell.swift; sourceTree = "<group>"; };
@@ -794,6 +784,7 @@
 				BF500506217454C600D35B69 /* SignInInteractor.swift */,
 				BF500505217454C600D35B69 /* SignInProtocols.swift */,
 				BF500519217678C500D35B69 /* SignInError.swift */,
+				BF1723C1219E5A3C0060B9CD /* SignInNetworking.swift */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -1206,23 +1197,17 @@
 			isa = PBXGroup;
 			children = (
 				BFD82A7A216D989D00A14868 /* Networking.swift */,
+				BFD82A7E216D989D00A14868 /* NetworkingService.swift */,
+				BFD82A7C216D989D00A14868 /* NetworkingRequest.swift */,
+				BFD82A85216D989E00A14868 /* NetworkingRequestBody.swift */,
+				BF1723C921A0BFE10060B9CD /* NetworkingRequestValidation.swift */,
+				BFD82A7B216D989D00A14868 /* NetworkingRequestBodyEncodingType.swift */,
+				BFD82A77216D989D00A14868 /* NetworkingRequestHTTPMethod.swift */,
+				BFD82A80216D989D00A14868 /* NetworkingResponse.swift */,
+				BF1723C3219FBE340060B9CD /* NetworkingError.swift */,
 				BFD82A81216D989D00A14868 /* NetworkingCache.swift */,
-				BFD82A7E216D989D00A14868 /* NetworkingClient.swift */,
-				BFD82A75216D989D00A14868 /* NetworkingClientError.swift */,
-				BFD82A77216D989D00A14868 /* NetworkingClientHTTPMethods.swift */,
-				BFD82A7C216D989D00A14868 /* NetworkingClientRequest.swift */,
-				BFD82A85216D989E00A14868 /* NetworkingClientRequestBody.swift */,
-				BFD82A7B216D989D00A14868 /* NetworkingClientRequestEncodingType.swift */,
-				BFD82A80216D989D00A14868 /* NetworkingClientResponse.swift */,
-				BFD82A7F216D989D00A14868 /* NetworkingClientResult.swift */,
-				BFD82A7D216D989D00A14868 /* NetworkingClientValidation.swift */,
-				BFD82A76216D989D00A14868 /* NetworkingConfiguration.swift */,
-				BFD82A78216D989D00A14868 /* NetworkingError.swift */,
 				BFD82A83216D989E00A14868 /* NetworkingExtractable.swift */,
-				BFD82A82216D989E00A14868 /* NetworkingFailure.swift */,
-				BFD82A86216D989E00A14868 /* NetworkingResult.swift */,
-				BFD82A79216D989D00A14868 /* NetworkingService.swift */,
-				BFD82A84216D989E00A14868 /* NetworkingServiceError.swift */,
+				BF1723C721A0BA120060B9CD /* NetworkingExtractableError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -1570,7 +1555,6 @@
 				BF500558217B837600D35B69 /* WalkthroughProtocols.swift in Sources */,
 				BF5004ED21741EAE00D35B69 /* TutorProfilePresenter.swift in Sources */,
 				BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */,
-				BFD82A91216D989E00A14868 /* NetworkingClientResult.swift in Sources */,
 				BF5005C4217EF4FF00D35B69 /* OnboardingPresenter.swift in Sources */,
 				BF50050A217454C600D35B69 /* SignInProtocols.swift in Sources */,
 				BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */,
@@ -1584,6 +1568,7 @@
 				BF5004922173EB7800D35B69 /* ProfilePaymentInteractor.swift in Sources */,
 				BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */,
 				BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */,
+				BF1723C821A0BA120060B9CD /* NetworkingExtractableError.swift in Sources */,
 				BFD82AF02170670400A14868 /* EnterStudentIdentifierProtocols.swift in Sources */,
 				BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */,
 				BF1723B6219D399D0060B9CD /* UIInlinePickerView.swift in Sources */,
@@ -1592,7 +1577,7 @@
 				BFF53133219BF05000255CD4 /* UINotificationView.swift in Sources */,
 				BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */,
 				BFCDA5F021725E7200DB31FC /* WelcomeInteractor.swift in Sources */,
-				BFD82A8E216D989E00A14868 /* NetworkingClientRequest.swift in Sources */,
+				BFD82A8E216D989E00A14868 /* NetworkingRequest.swift in Sources */,
 				BF1723C0219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift in Sources */,
 				BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */,
 				BFBE6FD321649618007EDE49 /* UICalendarViewCellDelegate.swift in Sources */,
@@ -1601,18 +1586,16 @@
 				BF5005BD217EEF2000D35B69 /* SignUpProtocols.swift in Sources */,
 				BF5004902173EB7800D35B69 /* ProfilePaymentViewController.swift in Sources */,
 				BF50046A2172F09700D35B69 /* ProfileOverviewPresenter.swift in Sources */,
-				BFD82A8B216D989E00A14868 /* NetworkingService.swift in Sources */,
 				BF5004E221741E9100D35B69 /* SelectTutorRouter.swift in Sources */,
 				BF5005A0217EC6B600D35B69 /* Coordinator.swift in Sources */,
-				BFD82A92216D989E00A14868 /* NetworkingClientResponse.swift in Sources */,
-				BFD82A98216D989E00A14868 /* NetworkingResult.swift in Sources */,
+				BFD82A92216D989E00A14868 /* NetworkingResponse.swift in Sources */,
 				BF50048F2173EB7800D35B69 /* ProfilePaymentRouter.swift in Sources */,
 				BFD0297221509C1E002FB9F5 /* CreditCardViewStyle.swift in Sources */,
 				BFD0297021509C1E002FB9F5 /* CreditCardViewModelDelegate.swift in Sources */,
 				BF5004742172F8F800D35B69 /* UIImageView+Additions.swift in Sources */,
 				BFCDA5FD21725FF700DB31FC /* CreatePasswordInteractor.swift in Sources */,
 				BFD0295A21509BB2002FB9F5 /* UICalendarViewEventCell.swift in Sources */,
-				BFD82A97216D989E00A14868 /* NetworkingClientRequestBody.swift in Sources */,
+				BFD82A97216D989E00A14868 /* NetworkingRequestBody.swift in Sources */,
 				BF5004E521741E9100D35B69 /* SelectTutorInteractor.swift in Sources */,
 				BFBAEAEE218C02280035DF09 /* UIDropdownConfiguration.swift in Sources */,
 				BFD82AED2170670400A14868 /* EnterStudentIdentifierPresenter.swift in Sources */,
@@ -1638,7 +1621,7 @@
 				BF50047721730A3E00D35B69 /* ProfileOverviewError.swift in Sources */,
 				BF5004802173AC2200D35B69 /* ProfileAccountViewController.swift in Sources */,
 				BF4F48F221826A82000D98D1 /* MainPresenter.swift in Sources */,
-				BFD82A90216D989E00A14868 /* NetworkingClient.swift in Sources */,
+				BFD82A90216D989E00A14868 /* NetworkingService.swift in Sources */,
 				BF5004EF21741EAF00D35B69 /* TutorProfileViewController.swift in Sources */,
 				BFD0298321509C6A002FB9F5 /* CreditCardMathematics.swift in Sources */,
 				BF5004AD2174122200D35B69 /* CalendarRouter.swift in Sources */,
@@ -1652,7 +1635,7 @@
 				BFD82AC5216DB88500A14868 /* Wireframe.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* CalendarDate.swift in Sources */,
 				BF50050B217454C600D35B69 /* SignInInteractor.swift in Sources */,
-				BFD82A89216D989E00A14868 /* NetworkingClientHTTPMethods.swift in Sources */,
+				BFD82A89216D989E00A14868 /* NetworkingRequestHTTPMethod.swift in Sources */,
 				BF5004912173EB7800D35B69 /* ProfilePaymentProtocols.swift in Sources */,
 				BFD82AF12170670400A14868 /* EnterStudentIdentifierInteractor.swift in Sources */,
 				BF5F6210218FCCCB00E43B75 /* SelectTutorCell.swift in Sources */,
@@ -1661,7 +1644,7 @@
 				BFD82ADC216E816C00A14868 /* SelectCollegeError.swift in Sources */,
 				BF500561217B848F00D35B69 /* CongratulationsRouter.swift in Sources */,
 				BFD0297621509C1E002FB9F5 /* CreditCardViewConstants.swift in Sources */,
-				BFD82A8D216D989E00A14868 /* NetworkingClientRequestEncodingType.swift in Sources */,
+				BFD82A8D216D989E00A14868 /* NetworkingRequestBodyEncodingType.swift in Sources */,
 				BFD0296F21509C1E002FB9F5 /* CreditCardMetadata.swift in Sources */,
 				BF50056F217B87C900D35B69 /* CreateEventRouter.swift in Sources */,
 				BFCDA6172172C3FC00DB31FC /* CreatePasswordError.swift in Sources */,
@@ -1681,6 +1664,7 @@
 				BFF14D982160496400733323 /* MonthHelper.swift in Sources */,
 				BFD0299321509C9A002FB9F5 /* UIActionSheetCell.swift in Sources */,
 				BF1723BA219D3D020060B9CD /* UIInlinePickerViewConfiguration.swift in Sources */,
+				BF1723CA21A0BFE20060B9CD /* NetworkingRequestValidation.swift in Sources */,
 				BFCDA6192172D53700DB31FC /* SegueIdentifiable.swift in Sources */,
 				BF1723A8219CD63F0060B9CD /* UICreditCardViewMetadata.swift in Sources */,
 				BFD82AD9216E7D3500A14868 /* Result.swift in Sources */,
@@ -1688,7 +1672,6 @@
 				BFD82A93216D989E00A14868 /* NetworkingCache.swift in Sources */,
 				BFD0298221509C6A002FB9F5 /* CreditCardImageExtractor.swift in Sources */,
 				BF70B5D9217074C600771E5D /* EnterAccessCodeInteractor.swift in Sources */,
-				BFD82A88216D989E00A14868 /* NetworkingConfiguration.swift in Sources */,
 				BFD82AEE2170670400A14868 /* EnterStudentIdentifierRouter.swift in Sources */,
 				BF5005C7217EF4FF00D35B69 /* OnboardingProtocols.swift in Sources */,
 				BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */,
@@ -1705,7 +1688,6 @@
 				BF50053E217A765200D35B69 /* ManageCardViewController.swift in Sources */,
 				BF5005BA217EEF2000D35B69 /* SignUpPresenter.swift in Sources */,
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
-				BFD82A87216D989E00A14868 /* NetworkingClientError.swift in Sources */,
 				BF5004BA2174127100D35B69 /* EventRouter.swift in Sources */,
 				BFD82ACF216E77B600A14868 /* SelectCollegeInteractor.swift in Sources */,
 				BF5004D821741E6900D35B69 /* AddLocationProtocols.swift in Sources */,
@@ -1714,13 +1696,10 @@
 				BF5005C5217EF4FF00D35B69 /* OnboardingRouter.swift in Sources */,
 				BFF53131219B6EFB00255CD4 /* XIBView.swift in Sources */,
 				BF50046D2172F09700D35B69 /* ProfileOverviewProtocols.swift in Sources */,
-				BFD82A94216D989E00A14868 /* NetworkingFailure.swift in Sources */,
 				BFF5313D219CAC9100255CD4 /* UIActionViewCell.swift in Sources */,
 				BF500572217B87C900D35B69 /* CreateEventInteractor.swift in Sources */,
 				BF50051A217678C500D35B69 /* SignInError.swift in Sources */,
 				BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */,
-				BFD82A96216D989E00A14868 /* NetworkingServiceError.swift in Sources */,
-				BFD82A8A216D989E00A14868 /* NetworkingError.swift in Sources */,
 				BF500540217A765200D35B69 /* ManageCardInteractor.swift in Sources */,
 				BF500546217A76A200D35B69 /* ManageBankPresenter.swift in Sources */,
 				BF500509217454C600D35B69 /* SignInViewController.swift in Sources */,
@@ -1731,6 +1710,7 @@
 				BF500562217B848F00D35B69 /* CongratulationsViewController.swift in Sources */,
 				BF5004F021741EAF00D35B69 /* TutorProfileProtocols.swift in Sources */,
 				BFCDA6112172B48C00DB31FC /* EnterStudentIdentifierError.swift in Sources */,
+				BF1723C4219FBE340060B9CD /* NetworkingError.swift in Sources */,
 				BF50053F217A765200D35B69 /* ManageCardProtocols.swift in Sources */,
 				BFCDA5EF21725E7200DB31FC /* WelcomeProtocols.swift in Sources */,
 				BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */,
@@ -1748,7 +1728,6 @@
 				BFF6C2962187E2D0003F7D96 /* ClientReadable.swift in Sources */,
 				BF4F48BF21823C75000D98D1 /* AppViewController.swift in Sources */,
 				BF500557217B837600D35B69 /* WalkthroughViewController.swift in Sources */,
-				BFD82A8F216D989E00A14868 /* NetworkingClientValidation.swift in Sources */,
 				BF5005BB217EEF2000D35B69 /* SignUpRouter.swift in Sources */,
 				BFCDA5EE21725E7200DB31FC /* WelcomeViewController.swift in Sources */,
 				BFF53141219CADA100255CD4 /* UIActionViewConfiguration.swift in Sources */,
@@ -1768,6 +1747,7 @@
 				BF5004D621741E6900D35B69 /* AddLocationRouter.swift in Sources */,
 				BFCDA60D2172905800DB31FC /* UINavigationBar+Additions.swift in Sources */,
 				BFF14D962160495000733323 /* DayHelper.swift in Sources */,
+				BF1723C2219E5A3C0060B9CD /* SignInNetworking.swift in Sources */,
 				BF5004AC2174122200D35B69 /* CalendarPresenter.swift in Sources */,
 				BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */,
 				BF50046B2172F09700D35B69 /* ProfileOverviewRouter.swift in Sources */,

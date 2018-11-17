@@ -1,5 +1,5 @@
 //
-//  NetworkingClientHTTPMethods.swift
+//  NetworkingRequestHTTPMethod.swift
 //  Client
 //
 //  Created by Christian Ampe on 9/17/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum NetworkingClientHTTPMethod: String {
+enum NetworkingRequestHTTPMethod: String {
     case get
     case head
     case post
@@ -19,7 +19,7 @@ enum NetworkingClientHTTPMethod: String {
     case trace
 }
 
-extension NetworkingClientHTTPMethod {
+extension NetworkingRequestHTTPMethod {
     var name: String {
         return rawValue.uppercased()
     }

@@ -10,22 +10,10 @@ import Foundation
 
 // MARK: - Global Namespaced Networking Class
 class Networking {
-    
-    // MARK: Public Init
-    
-    /// entry point for networking layer configuration
-    /// - Parameters:
-    ///     - configuration: model holding all endpoints and pathways
-    init(_ configuration: Configuration) {
-        Networking.Service.configuration = configuration
-    }
-    
-    // MARK: Private Properties
-    
+
     /// inialized provider holding reference to the innerworkings
     /// of the service layer
-    private let provider = NetworkingClient()
-    private let cache = NetworkingCache()
+    private let service = NetworkingService()
 }
 
 // MARK: - Cached Properties
@@ -54,25 +42,30 @@ extension Networking {
     /// - Parameters:
     ///     - target: enum holding possible network requests
     ///     - completion: result returning either a parsed model or an error
-    func request<E: NetworkingExtractable>(_ target: Networking.Service,
-                                          completion: @escaping (Result<E, Networking.Service.Error>) -> Swift.Void) {
+    func request<E: NetworkingExtractable>(_ target: NetworkingRequest,
+                                          completion: @escaping (Result<E, NetworkingError>) -> Void) {
         
-        provider.request(target) { result in
+        service.request(target) { result in
             switch result {
-            case .success(let result):
-                let statusCode = result.statusCode
+            case .success(let response):
+                let statusCode = response.statusCode
                 
-                guard result.isValid else {
-                    completion(Result(error: .network(.badResponse(httpStatusCode: statusCode))))
+                guard target.validation.range.contains(statusCode) else {
+                    completion(Result(error: .statusCode(response)))
                     return
                 }
                 
-                let response = E.decode(result.data)
-                self.cache.updateCache(for: target, with: response)
-                completion(response)
+                let decodingResult = E.decode(response.data)
                 
-            case .failure:
-                completion(Result(error: .network(.failure)))
+                switch decodingResult {
+                case .success(let object):
+                    completion(Result(value: object))
+                case .failure:
+                    completion(Result(error: .responseMapping(response)))
+                }
+                
+            case .failure(let error):
+                completion(Result(error: error))
             }
         }
     }

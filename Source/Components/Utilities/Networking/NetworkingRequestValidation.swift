@@ -1,5 +1,5 @@
 //
-//  NetworkingClientValidation.swift
+//  NetworkingRequestValidation.swift
 //  Client
 //
 //  Created by Christian Ampe on 9/17/18.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum NetworkingClientValidation {
+enum NetworkingRequestValidation {
     case successCodes
 }
 
-extension NetworkingClientValidation {
+extension NetworkingRequestValidation {
     var range: ClosedRange<Int> {
         switch self {
         case .successCodes:

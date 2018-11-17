@@ -1,5 +1,5 @@
 //
-//  NetworkingClientRequestEncodingType.swift
+//  NetworkingRequestBodyEncodingType.swift
 //  Client
 //
 //  Created by Christian Ampe on 9/4/18.
@@ -11,7 +11,7 @@ import Foundation
 // MARK: - Request Body Encoding Type Enumeration
 
 /// supported request body encodings
-enum NetworkingClientRequestEncodingType {
+enum NetworkingRequestBodyEncodingType {
     
     /// json encoded request body]
     /// header key - content-type
@@ -20,7 +20,7 @@ enum NetworkingClientRequestEncodingType {
 }
 
 // MARK: - Computed Variables
-extension NetworkingClientRequestEncodingType {
+extension NetworkingRequestBodyEncodingType {
     
     /// value of the content-type header
     var contentTypeValue: String {
@@ -32,7 +32,7 @@ extension NetworkingClientRequestEncodingType {
 }
 
 // MARK: - Static Storage
-extension NetworkingClientRequestEncodingType {
+extension NetworkingRequestBodyEncodingType {
     
     /// key for content-type header
     static let contentTypeKey = "Content-Type"

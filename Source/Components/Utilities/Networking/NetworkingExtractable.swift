@@ -17,10 +17,10 @@ protocol NetworkingExtractable {
     /// method which takes in data and decodes it into itself
     ///  - Parameters:
     ///     - data: data to be parsed out into its cooresponding model
-    static func decode(_ data: Data) -> Networking.Result<Self, Networking.Service.Error>
+    static func decode(_ data: Data) -> Result<Self, NetworkingError>
     
     /// method which transforms itself into a data representation
-    static func encode(_ extractable: Self) -> Networking.Result<Data, Networking.Service.Error>
+    static func encode(_ extractable: Self) -> Result<Data, NetworkingError>
 }
 
 // MARK: - Extractable Conformance Of Type Codable
@@ -31,12 +31,12 @@ extension NetworkingExtractable where Self: Codable {
     /// found in the networking layer
     ///  - Parameters:
     ///     - data: data to be parsed out into its cooresponding model
-    static func decode(_ data: Data) -> Networking.Result<Self, Networking.Service.Error> {
+    static func decode(_ data: Data) -> Result<Self, NetworkingExtractableError> {
         do {
             let result: Self = try Networking.jsonDecoder.decode(Self.self, from: data)
-            return Networking.Result(value: result)
+            return Result(value: result)
         } catch {
-            return Networking.Result(error: .service(.parsing))
+            return Result(error: .parsing)
         }
     }
     
@@ -45,12 +45,12 @@ extension NetworkingExtractable where Self: Codable {
     /// found in the networking layer
     ///  - Parameters:
     ///     - extractable: object which can be extracted
-    static func encode(_ extractable: Self) -> Networking.Result<Data, Networking.Service.Error> {
+    static func encode(_ extractable: Self) -> Result<Data, NetworkingExtractableError> {
         do {
             let result: Data = try Networking.jsonEncoder.encode(extractable)
-            return Networking.Result(value: result)
+            return Result(value: result)
         } catch {
-            return Networking.Result(error: .service(.parsing))
+            return Result(error: .parsing)
         }
     }
 }

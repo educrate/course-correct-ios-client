@@ -2,82 +2,44 @@
 //  NetworkingService.swift
 //  Client
 //
-//  Created by Christian Ampe on 8/29/18.
+//  Created by Christian Ampe on 9/17/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import Foundation
 
-// MARK: - Networking Services
-extension Networking {
+class NetworkingService {
     
-    /// service enum holding references to network pathways
-    enum Service: NetworkingClientRequest {
-        case welcomeScreen
-    }
+    /// url session used to make all network requests
+    private let session = URLSession(configuration: .default)
 }
 
-// MARK: - Stored Properties
-extension Networking.Service {
-    
-    /// configuration which defaults at initialization
-    /// to avoid an unusable networking layer
-    /// property to be set at the init of the network class
-    /// this property will always be set on initialization
-    /// ensure this property is never set to nil
-    static var configuration: Networking.Configuration!
-}
 
-// MARK: - Computed Routes
-extension Networking.Service {
+extension NetworkingService {
     
-    /// base url of this service
-    var baseURL: URL {
-        return Networking.Service.configuration.baseURL
-    }
-    
-    /// routes for the different service pathways
-    var path: String {
-        return ""
-    }
-    
-    /// parameters to be added to the url request
-    var parameters: [String: String]? {
-        return nil
-    }
-}
-
-// MARK: - Computed Network Request Parameters
-extension Networking.Service {
-    
-    /// methods for the different service pathways
-    var method: NetworkingClientHTTPMethod {
-        return .get
-    }
-    
-    // parameters to be passed in the network requests
-    var body: NetworkingClientRequestBody? {
-       return nil
-    }
-    
-    /// headers to be passed in the network request
-    var headers: [String: String]? {
-        return nil
-    }
-}
-
-// MARK: - Post Response Validation
-extension Networking.Service {
-    var validation: NetworkingClientValidation {
-        return .successCodes
-    }
-}
-
-// MARK: - Internal Computed Properties
-extension Networking.Service {
-    
-    /// keys used to extract cached successful network responses
-    var cacheKey: String {
-        return ""
+    /// core method for making a network request
+    ///
+    /// - Parameters:
+    ///   - request: a request object containing all information necessary for making a network request
+    ///   - completion: returns a generic result containing either an error or successful response
+    func request(_ request: NetworkingRequest,
+                 completion: @escaping (Result<NetworkingResponse, NetworkingError>) -> Void) {
+        
+        session.dataTask(with: request.urlRequest) { data, response, error in
+            guard let response = response as? HTTPURLResponse else {
+                completion(Result(error: .unresponsive))
+                return
+            }
+            
+            if let error = error {
+                completion(Result(error: .underlying(error)))
+            } else if let data = data {
+                completion(Result(value: NetworkingResponse(statusCode: response.statusCode,
+                                                            data: data,
+                                                            request: request.urlRequest,
+                                                            response: response)))
+            }
+            
+            }.resume()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  NetworkingClientRequest.swift
+//  NetworkingRequest.swift
 //  Client
 //
 //  Created by Christian Ampe on 9/17/18.
@@ -9,9 +9,7 @@
 import Foundation
 
 // MARK: - Network Request Protocol
-
-/// used for constructing universal network requests
-protocol NetworkingClientRequest {
+protocol NetworkingRequest {
     
     /// the targets base url
     var baseURL: URL { get }
@@ -23,20 +21,20 @@ protocol NetworkingClientRequest {
     var parameters: [String: String]? { get }
     
     /// the http method used in the request
-    var method: NetworkingClientHTTPMethod { get }
+    var method: NetworkingRequestHTTPMethod { get }
     
     /// the headers to be used in the request
     var headers: [String: String]? { get }
     
     /// the body to be used in the request
-    var body: NetworkingClientRequestBody? { get }
+    var body: NetworkingRequestBody? { get }
     
-    /// the validation of a request response status codes
-    var validation: NetworkingClientValidation { get }
+    // the validation codes of the response
+    var validation: NetworkingRequestValidation { get set }
 }
 
 // MARK: - Public Constructor
-extension NetworkingClientRequest {
+extension NetworkingRequest {
     
     /// url request constructed from the object
     var urlRequest: URLRequest {
@@ -61,27 +59,13 @@ extension NetworkingClientRequest {
         
         return urlRequest
     }
-    
-    
-    /// response returned from network request
-    ///
-    /// - Parameters:
-    ///   - data: information returned from network request
-    ///   - urlResponse: response returned from network request
-    /// - Returns: constructed networking response
-    func response(from data: Data,
-                  urlResponse: HTTPURLResponse) -> NetworkingClientResponse {
-        
-        return NetworkingClientResponse(statusCode: urlResponse.statusCode,
-                                        data: data)
-    }
 }
 
 // MARK: - Private Request Constructor Helpers
-private extension NetworkingClientRequest {
+private extension NetworkingRequest {
     
     /// adds the http method type to the request
-    func addMethod(_ method: NetworkingClientHTTPMethod,
+    func addMethod(_ method: NetworkingRequestHTTPMethod,
                    to request: inout URLRequest) {
         
         request.httpMethod = method.name
@@ -127,7 +111,7 @@ private extension NetworkingClientRequest {
     }
     
     /// adds given body data to the request
-    func addRequestBody(_ body: NetworkingClientRequestBody?,
+    func addRequestBody(_ body: NetworkingRequestBody?,
                         to request: inout URLRequest) {
         
         guard let body = body else {
@@ -137,7 +121,7 @@ private extension NetworkingClientRequest {
         switch body.encoding {
         case .jsonEncoded:
             request.setValue(body.encoding.contentTypeValue,
-                             forHTTPHeaderField: NetworkingClientRequestEncodingType.contentTypeKey)
+                             forHTTPHeaderField: NetworkingRequestBodyEncodingType.contentTypeKey)
         }
         
         request.httpBody = body.data

@@ -9,7 +9,6 @@
 import Foundation
 
 enum AppUserState: Equatable {
-    case new
-    case unauthenticated
     case authenticated
+    case unauthenticated
 }

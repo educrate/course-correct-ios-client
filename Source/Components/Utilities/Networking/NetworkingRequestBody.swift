@@ -1,5 +1,5 @@
 //
-//  NetworkingClientRequestBody.swift
+//  NetworkingRequestBody.swift
 //  Client
 //
 //  Created by Christian Ampe on 9/4/18.
@@ -11,15 +11,15 @@ import Foundation
 // MARK: - Request Body Object Declaration
 
 /// the object responsible for holding the http request body
-struct NetworkingClientRequestBody {
+struct NetworkingRequestBody {
     
     /// type of data encoding applied to the data object
-    let encoding: NetworkingClientRequestEncodingType
+    let encoding: NetworkingRequestBodyEncodingType
     
     /// encoded data to be passed in the http body
     let data: Data
     
-    init(encoding: NetworkingClientRequestEncodingType,
+    init(encoding: NetworkingRequestBodyEncodingType,
          data: Data) {
         
         self.encoding = encoding
@@ -28,7 +28,7 @@ struct NetworkingClientRequestBody {
 }
 
 // MARK: - Helper Initializers
-extension NetworkingClientRequestBody {
+extension NetworkingRequestBody {
     
     /// generic init for the extractable object
     /// returns an optional body object
@@ -42,3 +42,4 @@ extension NetworkingClientRequestBody {
         }
     }
 }
+

@@ -9,7 +9,6 @@
 import Foundation
 
 enum OnboardingUserState: Equatable {
-    case signedUp
-    case signedIn
-    case signedOut
+    case new
+    case returning
 }
