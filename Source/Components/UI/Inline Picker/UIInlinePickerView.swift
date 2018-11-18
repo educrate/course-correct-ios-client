@@ -24,6 +24,7 @@ extension UIInlinePickerView {
         super.awakeFromNib()
         registerCell()
         setUpCollectionViewFlowLayout()
+        configure(configuration)
         layoutIfNeeded()
     }
 }
@@ -73,5 +74,9 @@ private extension UIInlinePickerView {
     
     func setUpCollectionViewFlowLayout() {
         collectionViewFlowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+    }
+    
+    func configure(_ configuration: UIInlinePickerViewConfiguration) {
+        collectionView.allowsMultipleSelection = configuration.allowsMultipleSelection
     }
 }

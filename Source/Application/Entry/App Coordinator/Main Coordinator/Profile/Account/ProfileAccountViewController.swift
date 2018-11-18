@@ -11,28 +11,23 @@ import UIKit
 class ProfileAccountViewController: UITableViewController, ProfileAccountViewProtocol {
 	var presenter: ProfileAccountPresenterProtocol?
     
-    // MARK: Views
-    private weak var coursePicker: UIInlinePickerViewController!
+    // MARK: View Outlets
+    @IBOutlet private weak var coursePicker: UIInlinePickerView! {
+        didSet {
+            coursePicker.set(["Physics 7C",
+                              "Chem 1A",
+                              "Java 13B",
+                              "Math 3D",
+                              "Python 101",
+                              "Psychology 12C",
+                              "Biology 93"])
+            
+            coursePicker.set(UIInlinePickerViewConfiguration(allowsMultipleSelection: true))
+        }
+    }
     
     deinit {
         print("deinitialized profile account screen")
-    }
-}
-
-// MARK: - Controller Lifecycle
-extension ProfileAccountViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segueCase(for: segue) {
-        case .inlinePicker:
-            coursePicker = segue.viewController()
-            coursePicker.setOptions(["Physics 7C",
-                                     "Chem 1A",
-                                     "Java 13B",
-                                     "Math 3D",
-                                     "Python 101",
-                                     "Psychology 12C",
-                                     "Biology 93"])
-        }
     }
 }
 
@@ -41,7 +36,7 @@ extension ProfileAccountViewController {
         
         switch indexPath.row {
         case CellType.courses.rawValue:
-            return 120
+            return coursePicker.recommendedHeight + 24
         case CellType.name.rawValue:
             return 60
         case CellType.email.rawValue:

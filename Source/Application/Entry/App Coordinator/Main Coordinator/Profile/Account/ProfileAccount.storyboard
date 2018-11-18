@@ -26,26 +26,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qs5-sb-obu">
-                                                    <rect key="frame" x="16" y="22.333333333333336" width="382" height="77.666666666666657"/>
-                                                    <connections>
-                                                        <segue destination="FdL-YQ-IPo" kind="embed" identifier="InlinePicker" id="han-7K-3Um"/>
-                                                    </connections>
-                                                </containerView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFr-16-WsV">
                                                     <rect key="frame" x="16.000000000000004" y="4.0000000000000009" width="46.333333333333343" height="14.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdE-up-3hr" customClass="UIInlinePickerView" customModule="Client" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="22.333333333333336" width="382" height="77.666666666666657"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Qs5-sb-obu" firstAttribute="top" secondItem="cFr-16-WsV" secondAttribute="bottom" constant="4" id="2dw-3L-1nB"/>
-                                                <constraint firstAttribute="bottom" secondItem="Qs5-sb-obu" secondAttribute="bottom" id="8JY-LU-uf0"/>
+                                                <constraint firstAttribute="bottom" secondItem="kdE-up-3hr" secondAttribute="bottom" id="5fe-p3-nwT"/>
+                                                <constraint firstAttribute="trailing" secondItem="kdE-up-3hr" secondAttribute="trailing" constant="16" id="68i-Mo-lK9"/>
                                                 <constraint firstItem="cFr-16-WsV" firstAttribute="leading" secondItem="yWv-hd-AEz" secondAttribute="leading" constant="16" id="Bn4-JC-SWa"/>
-                                                <constraint firstItem="Qs5-sb-obu" firstAttribute="leading" secondItem="yWv-hd-AEz" secondAttribute="leading" constant="16" id="CcP-j9-Cz0"/>
-                                                <constraint firstAttribute="trailing" secondItem="Qs5-sb-obu" secondAttribute="trailing" constant="16" id="DUe-Wm-98M"/>
                                                 <constraint firstItem="cFr-16-WsV" firstAttribute="top" secondItem="yWv-hd-AEz" secondAttribute="top" constant="4" id="G9x-s9-fyC"/>
+                                                <constraint firstItem="kdE-up-3hr" firstAttribute="leading" secondItem="yWv-hd-AEz" secondAttribute="leading" constant="16" id="RCR-02-KiG"/>
+                                                <constraint firstItem="kdE-up-3hr" firstAttribute="top" secondItem="cFr-16-WsV" secondAttribute="bottom" constant="4" id="yEU-X6-VY3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -249,18 +247,13 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="0sL-4T-To1"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="coursePicker" destination="kdE-up-3hr" id="yHk-bE-yED"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kc0-TA-OwK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="126.5625"/>
-        </scene>
-        <!--UIInlinePicker-->
-        <scene sceneID="EWs-M0-Mu1">
-            <objects>
-                <viewControllerPlaceholder storyboardName="UIInlinePicker" id="FdL-YQ-IPo" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p3K-VP-IeA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1491" y="-23"/>
         </scene>
     </scenes>
     <resources>

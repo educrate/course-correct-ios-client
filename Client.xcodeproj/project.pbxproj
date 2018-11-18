@@ -38,7 +38,6 @@
 		BF5004812173AC2200D35B69 /* ProfileAccountProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50047C2173AC2200D35B69 /* ProfileAccountProtocols.swift */; };
 		BF5004822173AC2200D35B69 /* ProfileAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50047D2173AC2200D35B69 /* ProfileAccountInteractor.swift */; };
 		BF5004842173AC3C00D35B69 /* ProfileAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004832173AC3C00D35B69 /* ProfileAccount.storyboard */; };
-		BF5004862173AD9E00D35B69 /* UIInlinePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004852173AD9E00D35B69 /* UIInlinePicker.storyboard */; };
 		BF50048E2173EB7800D35B69 /* ProfilePaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004892173EB7800D35B69 /* ProfilePaymentPresenter.swift */; };
 		BF50048F2173EB7800D35B69 /* ProfilePaymentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50048A2173EB7800D35B69 /* ProfilePaymentRouter.swift */; };
 		BF5004902173EB7800D35B69 /* ProfilePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50048B2173EB7800D35B69 /* ProfilePaymentViewController.swift */; };
@@ -89,8 +88,6 @@
 		BF50050B217454C600D35B69 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500506217454C600D35B69 /* SignInInteractor.swift */; };
 		BF50050D217454D700D35B69 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF50050C217454D700D35B69 /* SignIn.storyboard */; };
 		BF50051A217678C500D35B69 /* SignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500519217678C500D35B69 /* SignInError.swift */; };
-		BF50051C2176D9AC00D35B69 /* UIActionSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF50051B2176D9AC00D35B69 /* UIActionSheet.storyboard */; };
-		BF50051E2176DA2F00D35B69 /* UIActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50051D2176DA2F00D35B69 /* UIActionSheetViewController.swift */; };
 		BF50053C217A765200D35B69 /* ManageCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500537217A765200D35B69 /* ManageCardPresenter.swift */; };
 		BF50053D217A765200D35B69 /* ManageCardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500538217A765200D35B69 /* ManageCardRouter.swift */; };
 		BF50053E217A765200D35B69 /* ManageCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF500539217A765200D35B69 /* ManageCardViewController.swift */; };
@@ -193,11 +190,8 @@
 		BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297E21509C6A002FB9F5 /* CreditCardType.swift */; };
 		BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297F21509C6A002FB9F5 /* CreditCardTypeValidator.swift */; };
 		BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298021509C6A002FB9F5 /* CreditCardTypeValidationState.swift */; };
-		BFD0299321509C9A002FB9F5 /* UIActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298C21509C99002FB9F5 /* UIActionSheetCell.swift */; };
-		BFD0299521509C9A002FB9F5 /* UIActionSheetOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298E21509C9A002FB9F5 /* UIActionSheetOption.swift */; };
 		BFD0299B21509CD5002FB9F5 /* UIFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299821509CD4002FB9F5 /* UIFieldViewController.swift */; };
 		BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299A21509CD5002FB9F5 /* UIFieldConfiguration.swift */; };
-		BFD029A621509CFD002FB9F5 /* UIInlinePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD029A021509CFD002FB9F5 /* UIInlinePickerCell.swift */; };
 		BFD82A89216D989E00A14868 /* NetworkingRequestHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A77216D989D00A14868 /* NetworkingRequestHTTPMethod.swift */; };
 		BFD82A8C216D989E00A14868 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7A216D989D00A14868 /* Networking.swift */; };
 		BFD82A8D216D989E00A14868 /* NetworkingRequestBodyEncodingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7B216D989D00A14868 /* NetworkingRequestBodyEncodingType.swift */; };
@@ -207,7 +201,6 @@
 		BFD82A93216D989E00A14868 /* NetworkingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A81216D989D00A14868 /* NetworkingCache.swift */; };
 		BFD82A95216D989E00A14868 /* NetworkingExtractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A83216D989E00A14868 /* NetworkingExtractable.swift */; };
 		BFD82A97216D989E00A14868 /* NetworkingRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A85216D989E00A14868 /* NetworkingRequestBody.swift */; };
-		BFD82A9F216DA25600A14868 /* UIInlinePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A9E216DA25600A14868 /* UIInlinePickerViewController.swift */; };
 		BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD82AAB216DA49B00A14868 /* SelectCollege.storyboard */; };
 		BFD82AB5216DA53200A14868 /* UIDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */; };
 		BFD82AB9216DA53200A14868 /* UIDropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AB3216DA53200A14868 /* UIDropdownViewController.swift */; };
@@ -307,7 +300,6 @@
 		BF50047C2173AC2200D35B69 /* ProfileAccountProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountProtocols.swift; sourceTree = "<group>"; };
 		BF50047D2173AC2200D35B69 /* ProfileAccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountInteractor.swift; sourceTree = "<group>"; };
 		BF5004832173AC3C00D35B69 /* ProfileAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileAccount.storyboard; sourceTree = "<group>"; };
-		BF5004852173AD9E00D35B69 /* UIInlinePicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIInlinePicker.storyboard; sourceTree = "<group>"; };
 		BF5004892173EB7800D35B69 /* ProfilePaymentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePaymentPresenter.swift; sourceTree = "<group>"; };
 		BF50048A2173EB7800D35B69 /* ProfilePaymentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePaymentRouter.swift; sourceTree = "<group>"; };
 		BF50048B2173EB7800D35B69 /* ProfilePaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePaymentViewController.swift; sourceTree = "<group>"; };
@@ -358,8 +350,6 @@
 		BF500506217454C600D35B69 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 		BF50050C217454D700D35B69 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		BF500519217678C500D35B69 /* SignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInError.swift; sourceTree = "<group>"; };
-		BF50051B2176D9AC00D35B69 /* UIActionSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIActionSheet.storyboard; sourceTree = "<group>"; };
-		BF50051D2176DA2F00D35B69 /* UIActionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActionSheetViewController.swift; sourceTree = "<group>"; };
 		BF500537217A765200D35B69 /* ManageCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardPresenter.swift; sourceTree = "<group>"; };
 		BF500538217A765200D35B69 /* ManageCardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardRouter.swift; sourceTree = "<group>"; };
 		BF500539217A765200D35B69 /* ManageCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardViewController.swift; sourceTree = "<group>"; };
@@ -468,11 +458,8 @@
 		BFD0297E21509C6A002FB9F5 /* CreditCardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardType.swift; sourceTree = "<group>"; };
 		BFD0297F21509C6A002FB9F5 /* CreditCardTypeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardTypeValidator.swift; sourceTree = "<group>"; };
 		BFD0298021509C6A002FB9F5 /* CreditCardTypeValidationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardTypeValidationState.swift; sourceTree = "<group>"; };
-		BFD0298C21509C99002FB9F5 /* UIActionSheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheetCell.swift; sourceTree = "<group>"; };
-		BFD0298E21509C9A002FB9F5 /* UIActionSheetOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActionSheetOption.swift; sourceTree = "<group>"; };
 		BFD0299821509CD4002FB9F5 /* UIFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFieldViewController.swift; sourceTree = "<group>"; };
 		BFD0299A21509CD5002FB9F5 /* UIFieldConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFieldConfiguration.swift; sourceTree = "<group>"; };
-		BFD029A021509CFD002FB9F5 /* UIInlinePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInlinePickerCell.swift; sourceTree = "<group>"; };
 		BFD82A77216D989D00A14868 /* NetworkingRequestHTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestHTTPMethod.swift; sourceTree = "<group>"; };
 		BFD82A7A216D989D00A14868 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BFD82A7B216D989D00A14868 /* NetworkingRequestBodyEncodingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestBodyEncodingType.swift; sourceTree = "<group>"; };
@@ -482,7 +469,6 @@
 		BFD82A81216D989D00A14868 /* NetworkingCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingCache.swift; sourceTree = "<group>"; };
 		BFD82A83216D989E00A14868 /* NetworkingExtractable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingExtractable.swift; sourceTree = "<group>"; };
 		BFD82A85216D989E00A14868 /* NetworkingRequestBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestBody.swift; sourceTree = "<group>"; };
-		BFD82A9E216DA25600A14868 /* UIInlinePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInlinePickerViewController.swift; sourceTree = "<group>"; };
 		BFD82AAB216DA49B00A14868 /* SelectCollege.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCollege.storyboard; sourceTree = "<group>"; };
 		BFD82AAF216DA53200A14868 /* UIDropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownCell.swift; sourceTree = "<group>"; };
 		BFD82AB3216DA53200A14868 /* UIDropdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDropdownViewController.swift; sourceTree = "<group>"; };
@@ -558,19 +544,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BF1723B4219D39300060B9CD /* Refactor */ = {
-			isa = PBXGroup;
-			children = (
-				BF1723B7219D39A90060B9CD /* UIInlinePickerView.xib */,
-				BF1723B5219D399D0060B9CD /* UIInlinePickerView.swift */,
-				BF1723B9219D3D020060B9CD /* UIInlinePickerViewConfiguration.swift */,
-				BF1723BB219DFCA40060B9CD /* UIInlinePickerViewCell.xib */,
-				BF1723BD219DFCBB0060B9CD /* UIInlinePickerViewCell.swift */,
-				BF1723BF219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift */,
-			);
-			path = Refactor;
-			sourceTree = "<group>";
-		};
 		BF4E718D216D4C1A00100FE1 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
@@ -1156,11 +1129,12 @@
 		BFD0298821509C83002FB9F5 /* Action Sheet */ = {
 			isa = PBXGroup;
 			children = (
-				BFF53137219C024300255CD4 /* Refactor */,
-				BF50051B2176D9AC00D35B69 /* UIActionSheet.storyboard */,
-				BF50051D2176DA2F00D35B69 /* UIActionSheetViewController.swift */,
-				BFD0298E21509C9A002FB9F5 /* UIActionSheetOption.swift */,
-				BFD0298C21509C99002FB9F5 /* UIActionSheetCell.swift */,
+				BFF53138219C025A00255CD4 /* UIActionView.xib */,
+				BFF5313A219C026700255CD4 /* UIActionView.swift */,
+				BFF53142219CB13F00255CD4 /* UIActionViewCell.xib */,
+				BFF5313C219CAC9100255CD4 /* UIActionViewCell.swift */,
+				BFF5313E219CAD1100255CD4 /* UIActionViewOption.swift */,
+				BFF53140219CADA100255CD4 /* UIActionViewConfiguration.swift */,
 			);
 			path = "Action Sheet";
 			sourceTree = "<group>";
@@ -1178,10 +1152,12 @@
 		BFD0299E21509CEE002FB9F5 /* Inline Picker */ = {
 			isa = PBXGroup;
 			children = (
-				BF1723B4219D39300060B9CD /* Refactor */,
-				BF5004852173AD9E00D35B69 /* UIInlinePicker.storyboard */,
-				BFD82A9E216DA25600A14868 /* UIInlinePickerViewController.swift */,
-				BFD029A021509CFD002FB9F5 /* UIInlinePickerCell.swift */,
+				BF1723B7219D39A90060B9CD /* UIInlinePickerView.xib */,
+				BF1723B5219D399D0060B9CD /* UIInlinePickerView.swift */,
+				BF1723B9219D3D020060B9CD /* UIInlinePickerViewConfiguration.swift */,
+				BF1723BB219DFCA40060B9CD /* UIInlinePickerViewCell.xib */,
+				BF1723BD219DFCBB0060B9CD /* UIInlinePickerViewCell.swift */,
+				BF1723BF219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift */,
 			);
 			path = "Inline Picker";
 			sourceTree = "<group>";
@@ -1334,19 +1310,6 @@
 			path = XIB;
 			sourceTree = "<group>";
 		};
-		BFF53137219C024300255CD4 /* Refactor */ = {
-			isa = PBXGroup;
-			children = (
-				BFF53138219C025A00255CD4 /* UIActionView.xib */,
-				BFF5313A219C026700255CD4 /* UIActionView.swift */,
-				BFF53142219CB13F00255CD4 /* UIActionViewCell.xib */,
-				BFF5313C219CAC9100255CD4 /* UIActionViewCell.swift */,
-				BFF5313E219CAD1100255CD4 /* UIActionViewOption.swift */,
-				BFF53140219CADA100255CD4 /* UIActionViewConfiguration.swift */,
-			);
-			path = Refactor;
-			sourceTree = "<group>";
-		};
 		BFF6C2932187E2A5003F7D96 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -1487,7 +1450,6 @@
 				BF4F48BB21823C2E000D98D1 /* App.storyboard in Resources */,
 				BF50054E217A76BF00D35B69 /* ManageBank.storyboard in Resources */,
 				BF1723BC219DFCA40060B9CD /* UIInlinePickerViewCell.xib in Resources */,
-				BF50051C2176D9AC00D35B69 /* UIActionSheet.storyboard in Resources */,
 				BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */,
 				BFCDA5F221725E8500DB31FC /* Welcome.storyboard in Resources */,
 				BFD82AE2216F028600A14868 /* UIDropdown.storyboard in Resources */,
@@ -1499,7 +1461,6 @@
 				BFF53143219CB13F00255CD4 /* UIActionViewCell.xib in Resources */,
 				BF50050D217454D700D35B69 /* SignIn.storyboard in Resources */,
 				BF1723B8219D39A90060B9CD /* UIInlinePickerView.xib in Resources */,
-				BF5004862173AD9E00D35B69 /* UIInlinePicker.storyboard in Resources */,
 				BF5004DB21741E7700D35B69 /* AddLocation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1542,7 +1503,6 @@
 				BF50050A217454C600D35B69 /* SignInProtocols.swift in Sources */,
 				BFF14D902160072600733323 /* CalendarDataMapper.swift in Sources */,
 				BF5004BC2174127100D35B69 /* EventProtocols.swift in Sources */,
-				BFD029A621509CFD002FB9F5 /* UIInlinePickerCell.swift in Sources */,
 				BF50054A217A76A200D35B69 /* ManageBankInteractor.swift in Sources */,
 				BF50053D217A765200D35B69 /* ManageCardRouter.swift in Sources */,
 				BFCDA5F921725FF700DB31FC /* CreatePasswordPresenter.swift in Sources */,
@@ -1587,14 +1547,12 @@
 				BFD82A8C216D989E00A14868 /* Networking.swift in Sources */,
 				BFD82A95216D989E00A14868 /* NetworkingExtractable.swift in Sources */,
 				BF5004BD2174127100D35B69 /* EventInteractor.swift in Sources */,
-				BFD82A9F216DA25600A14868 /* UIInlinePickerViewController.swift in Sources */,
 				BFD0295E21509BB2002FB9F5 /* UICalendarViewController.swift in Sources */,
 				BFF5313F219CAD1100255CD4 /* UIActionViewOption.swift in Sources */,
 				BF5004F121741EAF00D35B69 /* TutorProfileInteractor.swift in Sources */,
 				BFD0295921509BB2002FB9F5 /* CalendarEvent.swift in Sources */,
 				BF500564217B848F00D35B69 /* CongratulationsInteractor.swift in Sources */,
 				BF500549217A76A200D35B69 /* ManageBankProtocols.swift in Sources */,
-				BF50051E2176DA2F00D35B69 /* UIActionSheetViewController.swift in Sources */,
 				BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */,
 				BF1723AC219CD6590060B9CD /* UICreditCardViewConfiguration.swift in Sources */,
 				BF5F621821916D6F00E43B75 /* TutorProfileReviewCell.swift in Sources */,
@@ -1639,11 +1597,9 @@
 				BF5004B92174127100D35B69 /* EventPresenter.swift in Sources */,
 				BF50053C217A765200D35B69 /* ManageCardPresenter.swift in Sources */,
 				BF55165F215B3AC000D0CBB1 /* CalendarHelper.swift in Sources */,
-				BFD0299521509C9A002FB9F5 /* UIActionSheetOption.swift in Sources */,
 				BF500570217B87C900D35B69 /* CreateEventViewController.swift in Sources */,
 				BFD0295C21509BB2002FB9F5 /* UICalendarViewDelegate.swift in Sources */,
 				BFF14D982160496400733323 /* MonthHelper.swift in Sources */,
-				BFD0299321509C9A002FB9F5 /* UIActionSheetCell.swift in Sources */,
 				BF1723BA219D3D020060B9CD /* UIInlinePickerViewConfiguration.swift in Sources */,
 				BF1723CA21A0BFE20060B9CD /* NetworkingRequestValidation.swift in Sources */,
 				BFCDA6192172D53700DB31FC /* SegueIdentifiable.swift in Sources */,
