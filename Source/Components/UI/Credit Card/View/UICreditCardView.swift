@@ -77,7 +77,7 @@ private extension UICreditCardView {
     }
     
     func constrainContent() {
-        if frame.width/frame.height >= CreditCardViewConstants.aspectRatio {
+        if frame.width/frame.height >= 1.586 {
             cardLeadingConstraint.isActive = false
             cardTrailingConstraint.isActive = false
         } else {
@@ -85,7 +85,7 @@ private extension UICreditCardView {
             cardBottomConstraint.isActive = false
         }
         
-        cardView.widthAnchor.constraint(equalTo: cardView.heightAnchor, multiplier: CreditCardViewConstants.aspectRatio).isActive = true
+        cardView.widthAnchor.constraint(equalTo: cardView.heightAnchor, multiplier: 1.586).isActive = true
 
         layoutIfNeeded()
     }

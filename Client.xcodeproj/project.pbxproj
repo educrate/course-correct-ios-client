@@ -174,15 +174,6 @@
 		BFD0295E21509BB2002FB9F5 /* UICalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295021509BB2002FB9F5 /* UICalendarViewController.swift */; };
 		BFD0295F21509BB2002FB9F5 /* CalendarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295321509BB2002FB9F5 /* CalendarDay.swift */; };
 		BFD0296021509BB2002FB9F5 /* UICalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0295521509BB2002FB9F5 /* UICalendarViewCell.swift */; };
-		BFD0296E21509C1E002FB9F5 /* CreditCardViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296421509C1D002FB9F5 /* CreditCardViewModelDataSource.swift */; };
-		BFD0296F21509C1E002FB9F5 /* CreditCardMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296521509C1D002FB9F5 /* CreditCardMetadata.swift */; };
-		BFD0297021509C1E002FB9F5 /* CreditCardViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296621509C1D002FB9F5 /* CreditCardViewModelDelegate.swift */; };
-		BFD0297221509C1E002FB9F5 /* CreditCardViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296821509C1D002FB9F5 /* CreditCardViewStyle.swift */; };
-		BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296921509C1E002FB9F5 /* CreditCardWarning.swift */; };
-		BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296A21509C1E002FB9F5 /* CreditCard.swift */; };
-		BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296B21509C1E002FB9F5 /* CreditCardViewModel.swift */; };
-		BFD0297621509C1E002FB9F5 /* CreditCardViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296C21509C1E002FB9F5 /* CreditCardViewConstants.swift */; };
-		BFD0297721509C1E002FB9F5 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0296D21509C1E002FB9F5 /* CreditCardView.swift */; };
 		BFD0298121509C6A002FB9F5 /* CreditCardPrefixContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297A21509C69002FB9F5 /* CreditCardPrefixContainable.swift */; };
 		BFD0298221509C6A002FB9F5 /* CreditCardImageExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297B21509C69002FB9F5 /* CreditCardImageExtractor.swift */; };
 		BFD0298321509C6A002FB9F5 /* CreditCardMathematics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297C21509C69002FB9F5 /* CreditCardMathematics.swift */; };
@@ -442,15 +433,6 @@
 		BFD0295021509BB2002FB9F5 /* UICalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICalendarViewController.swift; sourceTree = "<group>"; };
 		BFD0295321509BB2002FB9F5 /* CalendarDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDay.swift; sourceTree = "<group>"; };
 		BFD0295521509BB2002FB9F5 /* UICalendarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICalendarViewCell.swift; sourceTree = "<group>"; };
-		BFD0296421509C1D002FB9F5 /* CreditCardViewModelDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewModelDataSource.swift; sourceTree = "<group>"; };
-		BFD0296521509C1D002FB9F5 /* CreditCardMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardMetadata.swift; sourceTree = "<group>"; };
-		BFD0296621509C1D002FB9F5 /* CreditCardViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewModelDelegate.swift; sourceTree = "<group>"; };
-		BFD0296821509C1D002FB9F5 /* CreditCardViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewStyle.swift; sourceTree = "<group>"; };
-		BFD0296921509C1E002FB9F5 /* CreditCardWarning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardWarning.swift; sourceTree = "<group>"; };
-		BFD0296A21509C1E002FB9F5 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
-		BFD0296B21509C1E002FB9F5 /* CreditCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewModel.swift; sourceTree = "<group>"; };
-		BFD0296C21509C1E002FB9F5 /* CreditCardViewConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewConstants.swift; sourceTree = "<group>"; };
-		BFD0296D21509C1E002FB9F5 /* CreditCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
 		BFD0297A21509C69002FB9F5 /* CreditCardPrefixContainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardPrefixContainable.swift; sourceTree = "<group>"; };
 		BFD0297B21509C69002FB9F5 /* CreditCardImageExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardImageExtractor.swift; sourceTree = "<group>"; };
 		BFD0297C21509C69002FB9F5 /* CreditCardMathematics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardMathematics.swift; sourceTree = "<group>"; };
@@ -1089,27 +1071,10 @@
 		BFD0296321509C02002FB9F5 /* Credit Card */ = {
 			isa = PBXGroup;
 			children = (
-				BFF531272199E42800255CD4 /* Refactor */,
+				BFF531272199E42800255CD4 /* View */,
 				BFD0297921509C53002FB9F5 /* Validator */,
-				BFD0297821509C49002FB9F5 /* View */,
 			);
 			path = "Credit Card";
-			sourceTree = "<group>";
-		};
-		BFD0297821509C49002FB9F5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BFD0296A21509C1E002FB9F5 /* CreditCard.swift */,
-				BFD0296521509C1D002FB9F5 /* CreditCardMetadata.swift */,
-				BFD0296D21509C1E002FB9F5 /* CreditCardView.swift */,
-				BFD0296C21509C1E002FB9F5 /* CreditCardViewConstants.swift */,
-				BFD0296B21509C1E002FB9F5 /* CreditCardViewModel.swift */,
-				BFD0296421509C1D002FB9F5 /* CreditCardViewModelDataSource.swift */,
-				BFD0296621509C1D002FB9F5 /* CreditCardViewModelDelegate.swift */,
-				BFD0296821509C1D002FB9F5 /* CreditCardViewStyle.swift */,
-				BFD0296921509C1E002FB9F5 /* CreditCardWarning.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		BFD0297921509C53002FB9F5 /* Validator */ = {
@@ -1281,7 +1246,7 @@
 			path = Interface;
 			sourceTree = "<group>";
 		};
-		BFF531272199E42800255CD4 /* Refactor */ = {
+		BFF531272199E42800255CD4 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				BFF531282199E43D00255CD4 /* UICreditCardView.xib */,
@@ -1289,7 +1254,7 @@
 				BF1723A7219CD63F0060B9CD /* UICreditCardViewMetadata.swift */,
 				BF1723AB219CD6590060B9CD /* UICreditCardViewConfiguration.swift */,
 			);
-			path = Refactor;
+			path = View;
 			sourceTree = "<group>";
 		};
 		BFF5312E219B6ED800255CD4 /* Storyboard */ = {
@@ -1510,7 +1475,6 @@
 				BF50049D2173EB9B00D35B69 /* ProfileSupportProtocols.swift in Sources */,
 				BF5004922173EB7800D35B69 /* ProfilePaymentInteractor.swift in Sources */,
 				BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */,
-				BFD0297421509C1E002FB9F5 /* CreditCard.swift in Sources */,
 				BF1723C821A0BA120060B9CD /* NetworkingExtractableError.swift in Sources */,
 				BFD82AF02170670400A14868 /* EnterStudentIdentifierProtocols.swift in Sources */,
 				BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */,
@@ -1532,8 +1496,6 @@
 				BF5004E221741E9100D35B69 /* SelectTutorRouter.swift in Sources */,
 				BFD82A92216D989E00A14868 /* NetworkingResponse.swift in Sources */,
 				BF50048F2173EB7800D35B69 /* ProfilePaymentRouter.swift in Sources */,
-				BFD0297221509C1E002FB9F5 /* CreditCardViewStyle.swift in Sources */,
-				BFD0297021509C1E002FB9F5 /* CreditCardViewModelDelegate.swift in Sources */,
 				BF5004742172F8F800D35B69 /* UIImageView+Additions.swift in Sources */,
 				BFCDA5FD21725FF700DB31FC /* CreatePasswordInteractor.swift in Sources */,
 				BFD0295A21509BB2002FB9F5 /* UICalendarViewEventCell.swift in Sources */,
@@ -1565,7 +1527,6 @@
 				BF5004EF21741EAF00D35B69 /* TutorProfileViewController.swift in Sources */,
 				BFD0298321509C6A002FB9F5 /* CreditCardMathematics.swift in Sources */,
 				BF5004AD2174122200D35B69 /* CalendarRouter.swift in Sources */,
-				BFD0297721509C1E002FB9F5 /* CreditCardView.swift in Sources */,
 				BF5005B4217EEE9C00D35B69 /* AppInteractor.swift in Sources */,
 				BF500555217B837600D35B69 /* WalkthroughPresenter.swift in Sources */,
 				BFD0299B21509CD5002FB9F5 /* UIFieldViewController.swift in Sources */,
@@ -1578,13 +1539,10 @@
 				BF5004912173EB7800D35B69 /* ProfilePaymentProtocols.swift in Sources */,
 				BFD82AF12170670400A14868 /* EnterStudentIdentifierInteractor.swift in Sources */,
 				BF5F6210218FCCCB00E43B75 /* SelectTutorCell.swift in Sources */,
-				BFD0296E21509C1E002FB9F5 /* CreditCardViewModelDataSource.swift in Sources */,
 				BF50046C2172F09700D35B69 /* ProfileOverviewViewController.swift in Sources */,
 				BFD82ADC216E816C00A14868 /* SelectCollegeError.swift in Sources */,
 				BF500561217B848F00D35B69 /* CongratulationsRouter.swift in Sources */,
-				BFD0297621509C1E002FB9F5 /* CreditCardViewConstants.swift in Sources */,
 				BFD82A8D216D989E00A14868 /* NetworkingRequestBodyEncodingType.swift in Sources */,
-				BFD0296F21509C1E002FB9F5 /* CreditCardMetadata.swift in Sources */,
 				BF50056F217B87C900D35B69 /* CreateEventRouter.swift in Sources */,
 				BFCDA6172172C3FC00DB31FC /* CreatePasswordError.swift in Sources */,
 				BFD82ACB216E77B600A14868 /* SelectCollegePresenter.swift in Sources */,
@@ -1611,7 +1569,6 @@
 				BF70B5D9217074C600771E5D /* EnterAccessCodeInteractor.swift in Sources */,
 				BFD82AEE2170670400A14868 /* EnterStudentIdentifierRouter.swift in Sources */,
 				BF5005C7217EF4FF00D35B69 /* OnboardingProtocols.swift in Sources */,
-				BFD0297521509C1E002FB9F5 /* CreditCardViewModel.swift in Sources */,
 				BF50048E2173EB7800D35B69 /* ProfilePaymentPresenter.swift in Sources */,
 				BF50049C2173EB9B00D35B69 /* ProfileSupportViewController.swift in Sources */,
 				BF50049E2173EB9B00D35B69 /* ProfileSupportInteractor.swift in Sources */,
@@ -1673,7 +1630,6 @@
 				BFF5312D219A2D7A00255CD4 /* XIBIdentifiable.swift in Sources */,
 				BF1723BE219DFCBB0060B9CD /* UIInlinePickerViewCell.swift in Sources */,
 				BF500548217A76A200D35B69 /* ManageBankViewController.swift in Sources */,
-				BFD0297321509C1E002FB9F5 /* CreditCardWarning.swift in Sources */,
 				BF5005B0217EEE9C00D35B69 /* AppPresenter.swift in Sources */,
 				BF5005B3217EEE9C00D35B69 /* AppProtocols.swift in Sources */,
 				BF500559217B837600D35B69 /* WalkthroughInteractor.swift in Sources */,
