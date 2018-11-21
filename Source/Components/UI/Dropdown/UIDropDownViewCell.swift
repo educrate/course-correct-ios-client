@@ -1,14 +1,14 @@
 //
-//  UIDropdownCell.swift
+//  UIDropDownViewCell.swift
 //  Client
 //
-//  Created by Christian Ampe on 7/30/18.
+//  Created by Ampe on 11/20/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import UIKit
 
-class UIDropdownCell: UITableViewCell {
+class UIDropDownViewCell: UITableViewCell {
     
     // MARK: Views
     
@@ -17,19 +17,20 @@ class UIDropdownCell: UITableViewCell {
 }
 
 // MARK: - Public Methods
-extension UIDropdownCell {
+extension UIDropDownViewCell {
     
     /// Method used to set title of cell with a plain string.
     ///
     /// - Parameter text: Text to be set as the cell's title
-    func setTitle(with text: String) {
+    func set(_ text: String) {
         titleLabel.text = text
     }
     
     /// Method used to set title of cell with an attributed string.
     ///
     /// - Parameter attributedString: Text to be set as the cell's title
-    func setTitle(with attributedString: NSAttributedString) {
+    func set(_ attributedString: NSAttributedString) {
         titleLabel.attributedText = attributedString
     }
 }
+

@@ -14,7 +14,12 @@ class SelectCollegeViewController: UIViewController {
     var presenter: SelectCollegePresenterProtocol?
     
     // MARK: Views
-    private weak var collegeSelector: UIDropdownViewController!
+    @IBOutlet weak var collegeSelector: UIDropDownView! {
+        didSet {
+            collegeSelector.delegate = self
+            collegeSelector.set(UIDropDownViewConfiguration(placeholder: "Name of University"))
+        }
+    }
     
     // MARK: Deinit Verification
     deinit {
@@ -33,21 +38,12 @@ extension SelectCollegeViewController {
         super.viewDidAppear(animated)
         collegeSelector.beginEditing()
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segueCase(for: segue) {
-        case .dropdown:
-            collegeSelector = segue.viewController()
-            collegeSelector.style(with: UIDropdownConfiguration(placeholder: "Name of University"))
-            collegeSelector.delegate = self
-        }
-    }
 }
 
 // MARK: - Viper Methods
 extension SelectCollegeViewController: SelectCollegeViewProtocol {
     func show(names: [String]) {
-        collegeSelector.setDropdown(names)
+        collegeSelector.set(names)
     }
     
     func show(errorMessage: String) {
@@ -56,22 +52,12 @@ extension SelectCollegeViewController: SelectCollegeViewProtocol {
 }
 
 // MARK: - Dropdown Data Source & Delegate Conformance
-extension SelectCollegeViewController: UIDropdownDelegate {
-    var cellHeight: CGFloat {
-        return 50
-    }
-    
+extension SelectCollegeViewController: UIDropDownViewDelegate {
     func inputChanged(_ sender: UITextField) {
         presenter?.updateView(for: sender.text)
     }
     
-    func dropdown(_ dropdown: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func dropDown(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         collegeSelector.endEditing()
-    }
-}
-
-extension SelectCollegeViewController: SegueIdentifiable {
-    enum Segue: String {
-        case dropdown = "Dropdown"
     }
 }

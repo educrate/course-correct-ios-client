@@ -23,23 +23,21 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32L-MW-wF5">
-                                <rect key="frame" x="40" y="154" width="300" height="350"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tmz-Oa-lLc" customClass="UIDropDownView" customModule="Client" customModuleProvider="target">
+                                <rect key="frame" x="40" y="162" width="300" height="350"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="350" id="Sgh-1J-NxU"/>
-                                    <constraint firstAttribute="width" constant="300" id="oUU-bP-gic"/>
+                                    <constraint firstAttribute="width" constant="300" id="ADt-o5-EcH"/>
+                                    <constraint firstAttribute="height" constant="350" id="bOi-mN-KSJ"/>
                                 </constraints>
-                                <connections>
-                                    <segue destination="slO-Je-2Kl" kind="embed" identifier="Dropdown" id="nhX-g7-HZk"/>
-                                </connections>
-                            </containerView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YJY-Mn-tTv" firstAttribute="top" secondItem="aeS-Ul-wjA" secondAttribute="top" constant="36" id="MjS-96-oMq"/>
                             <constraint firstItem="YJY-Mn-tTv" firstAttribute="leading" secondItem="aeS-Ul-wjA" secondAttribute="leading" constant="40" id="RZK-jD-Gvg"/>
-                            <constraint firstItem="32L-MW-wF5" firstAttribute="top" secondItem="YJY-Mn-tTv" secondAttribute="bottom" constant="16" id="ZVV-g0-Avp"/>
-                            <constraint firstItem="32L-MW-wF5" firstAttribute="leading" secondItem="aeS-Ul-wjA" secondAttribute="leading" constant="40" id="hIT-2a-ACM"/>
+                            <constraint firstItem="Tmz-Oa-lLc" firstAttribute="leading" secondItem="aeS-Ul-wjA" secondAttribute="leading" constant="40" id="sSC-2R-ZwX"/>
+                            <constraint firstItem="Tmz-Oa-lLc" firstAttribute="top" secondItem="YJY-Mn-tTv" secondAttribute="bottom" constant="24" id="wt6-R5-T1c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aeS-Ul-wjA"/>
                     </view>
@@ -52,18 +50,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collegeSelector" destination="Tmz-Oa-lLc" id="uOb-1o-fyf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHH-Jw-inE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="114.50892857142857"/>
-        </scene>
-        <!--UIDropdown-->
-        <scene sceneID="4rB-aj-fF8">
-            <objects>
-                <viewControllerPlaceholder storyboardName="UIDropdown" id="slO-Je-2Kl" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="geO-CO-cmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="30" y="509"/>
         </scene>
     </scenes>
     <resources>

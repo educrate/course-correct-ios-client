@@ -13,8 +13,13 @@ class AddLocationViewController: UIViewController, AddLocationViewProtocol {
     // MARK: Viper
     var presenter: AddLocationPresenterProtocol?
     
-    // MARK: Views
-    private weak var locationDropdown: UIDropdownViewController!
+    // MARK: View Outlets
+    @IBOutlet private weak var locationSelector: UIDropDownView! {
+        didSet {
+            locationSelector.delegate = self
+            locationSelector.set(UIDropDownViewConfiguration(placeholder: "Address"))
+        }
+    }
     
     // MARK: Deinitialization Verification
     deinit {
@@ -22,32 +27,12 @@ class AddLocationViewController: UIViewController, AddLocationViewProtocol {
     }
 }
 
-extension AddLocationViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segueCase(for: segue) {
-        case .dropdown:
-            locationDropdown = segue.viewController()
-            locationDropdown.style(with: UIDropdownConfiguration(placeholder: "Address"))
-        }
-    }
-}
-
-extension AddLocationViewController: UIDropdownDelegate {
-    var cellHeight: CGFloat {
-        return 50
-    }
-    
+extension AddLocationViewController: UIDropDownViewDelegate {
     func inputChanged(_ sender: UITextField) {
         
     }
     
-    func dropdown(_ dropdown: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func dropDown(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-    }
-}
-
-extension AddLocationViewController: SegueIdentifiable {
-    enum Segue: String {
-        case dropdown = "Dropdown"
     }
 }

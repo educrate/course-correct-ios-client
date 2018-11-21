@@ -1,14 +1,14 @@
 //
-//  UIDropdownConfiguration.swift
+//  UIDropDownViewConfiguration.swift
 //  Client
 //
-//  Created by Ampe on 11/1/18.
+//  Created by Ampe on 11/20/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import UIKit
 
-struct UIDropdownConfiguration {
+struct UIDropDownViewConfiguration {
     let text: String
     let placeholder: String
     let textColor: UIColor
@@ -32,6 +32,7 @@ struct UIDropdownConfiguration {
     }
 }
 
-extension UIDropdownConfiguration {
-    static let `default` = UIDropdownConfiguration()
+extension UIDropDownViewConfiguration {
+    static let `default` = UIDropDownViewConfiguration()
 }
+
