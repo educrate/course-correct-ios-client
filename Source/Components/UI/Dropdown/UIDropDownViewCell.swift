@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIDropDownViewCell: UITableViewCell {
+final class UIDropDownViewCell: UITableViewCell {
     
     // MARK: Views
     
