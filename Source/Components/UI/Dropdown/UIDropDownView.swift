@@ -74,11 +74,6 @@ private extension UIDropDownView {
     }
     
     func configure(_ configuration: UIDropDownViewConfiguration) {
-        textField.layer.borderColor = UIColor.red.cgColor
-        textField.layer.borderWidth = 1.0
-        tableView.layer.borderColor = UIColor.red.cgColor
-        tableView.layer.borderWidth = 1.0
-        
         textField.text = configuration.text
         textField.tintColor = configuration.cursorColor
         textField.textColor = configuration.textColor
