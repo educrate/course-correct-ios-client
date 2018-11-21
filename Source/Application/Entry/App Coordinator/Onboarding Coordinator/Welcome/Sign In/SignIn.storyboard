@@ -20,18 +20,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ifz-gN-X9C">
                                 <rect key="frame" x="87" y="140" width="240" height="120"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="puU-GB-q3b">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbW-XQ-1uN" customClass="UIFieldView" customModule="Client" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="52"/>
-                                        <connections>
-                                            <segue destination="hQP-Vz-Fcc" kind="embed" identifier="Email" id="blR-1d-raz"/>
-                                        </connections>
-                                    </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ao4-MK-CVw">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq5-uP-r28" customClass="UIFieldView" customModule="Client" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="68" width="240" height="52"/>
-                                        <connections>
-                                            <segue destination="1Dk-kX-j96" kind="embed" identifier="Password" id="Kdx-DC-cpC"/>
-                                        </connections>
-                                    </containerView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="DZV-eh-f5K"/>
@@ -60,26 +56,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="emailField" destination="HbW-XQ-1uN" id="dxt-xH-vh4"/>
+                        <outlet property="passwordField" destination="dq5-uP-r28" id="zNd-KT-06a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwe-58-5yz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="849" y="97"/>
-        </scene>
-        <!--UIField-->
-        <scene sceneID="bbh-cc-9Gd">
-            <objects>
-                <viewControllerPlaceholder storyboardName="UIField" id="hQP-Vz-Fcc" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vp8-U0-O3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1331" y="79"/>
-        </scene>
-        <!--UIField-->
-        <scene sceneID="K11-h1-MsZ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="UIField" id="1Dk-kX-j96" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6AI-0Y-RtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1331" y="111"/>
         </scene>
     </scenes>
     <resources>

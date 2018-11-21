@@ -14,7 +14,11 @@ class EnterAccessCodeViewController: UIViewController, EnterAccessCodeViewProtoc
     var presenter: EnterAccessCodePresenterProtocol?
     
     // MARK: IBOutlets
-    private weak var field: UIFieldViewController!
+    @IBOutlet private weak var accessCodeField: UIFieldView! {
+        didSet {
+            accessCodeField.set(UIFieldViewConfiguration(placeholder: "Enter your access code", keyboardType: .numberPad))
+        }
+    }
     
     // MARK: Deinit Verification
     deinit {
@@ -24,34 +28,20 @@ class EnterAccessCodeViewController: UIViewController, EnterAccessCodeViewProtoc
 
 extension EnterAccessCodeViewController {
     @IBAction func nextPressed(_ sender: UIBarButtonItem) {
-        field.endEditing()
-        presenter?.accessCodeEntered(with: field.text)
+        accessCodeField.endEditing()
+        presenter?.accessCodeEntered(with: accessCodeField.text)
     }
 }
 
 extension EnterAccessCodeViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        field.beginEditing()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segueCase(for: segue) {
-        case .field:
-            field = segue.viewController()
-            field.style(with: UIFieldConfiguration(placeholder: "Enter your access code", keyboardType: .numberPad))
-        }
+        accessCodeField.beginEditing()
     }
 }
 
 extension EnterAccessCodeViewController {
     func show(errorMessage: String) {
         UINotificationView.show(with: errorMessage)
-    }
-}
-
-extension EnterAccessCodeViewController: SegueIdentifiable {
-    enum Segue: String {
-        case field = "Field"
     }
 }

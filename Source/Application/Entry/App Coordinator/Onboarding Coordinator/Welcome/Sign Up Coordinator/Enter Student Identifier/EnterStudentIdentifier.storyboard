@@ -17,13 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbX-E7-1Dl">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yec-jH-3vS" customClass="UIFieldView" customModule="Client" customModuleProvider="target">
                                 <rect key="frame" x="87" y="283" width="240" height="60"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="odD-IK-rpx" kind="embed" identifier="Field" id="leL-7U-Oco"/>
-                                </connections>
-                            </containerView>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="B3Q-uU-Y7e"/>
@@ -38,18 +36,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="studentIdentifierField" destination="Yec-jH-3vS" id="4Vy-em-byj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lfv-7Z-wqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="43" y="19"/>
-        </scene>
-        <!--UIField-->
-        <scene sceneID="Gdd-6e-9xx">
-            <objects>
-                <viewControllerPlaceholder storyboardName="UIField" id="odD-IK-rpx" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WRC-Vt-EGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="572" y="19"/>
+            <point key="canvasLocation" x="42.028985507246382" y="18.75"/>
         </scene>
     </scenes>
     <resources>

@@ -14,7 +14,11 @@ class EnterStudentIdentifierViewController: UIViewController, EnterStudentIdenti
 	var presenter: EnterStudentIdentifierPresenterProtocol?
     
     // MARK: Views
-    private weak var field: UIFieldViewController!
+    @IBOutlet private weak var studentIdentifierField: UIFieldView! {
+        didSet {
+            studentIdentifierField.set(UIFieldViewConfiguration(placeholder: "Enter your student identifier", keyboardType: .numberPad))
+        }
+    }
     
     // MARK: Deinit Verification
     deinit {
@@ -24,34 +28,20 @@ class EnterStudentIdentifierViewController: UIViewController, EnterStudentIdenti
 
 extension EnterStudentIdentifierViewController {
     @IBAction func nextPressed(_ sender: UIBarButtonItem) {
-        field.endEditing()
-        presenter?.studentIdentifierEntered(with: field.text)
+        studentIdentifierField.endEditing()
+        presenter?.studentIdentifierEntered(with: studentIdentifierField.text)
     }
 }
 
 extension EnterStudentIdentifierViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        field.beginEditing()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segueCase(for: segue) {
-        case .field:
-            field = segue.viewController()
-            field.style(with: UIFieldConfiguration(placeholder: "Enter your student identifier", keyboardType: .numberPad))
-        }
+        studentIdentifierField.beginEditing()
     }
 }
 
 extension EnterStudentIdentifierViewController {
     func show(errorMessage: String) {
         UINotificationView.show(with: errorMessage)
-    }
-}
-
-extension EnterStudentIdentifierViewController: SegueIdentifiable {
-    enum Segue: String {
-        case field = "Field"
     }
 }

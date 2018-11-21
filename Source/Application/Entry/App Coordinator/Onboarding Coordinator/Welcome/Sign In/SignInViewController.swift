@@ -14,9 +14,18 @@ class SignInViewController: UIViewController, SignInViewProtocol {
     var presenter: SignInPresenterProtocol?
     
     // MARK: Views
-    private weak var emailField: UIFieldViewController!
-    private weak var passwordField: UIFieldViewController!
+    @IBOutlet private weak var emailField: UIFieldView! {
+        didSet {
+            emailField.set(UIFieldViewConfiguration(placeholder: "Enter your email"))
+        }
+    }
     
+    @IBOutlet private weak var passwordField: UIFieldView! {
+        didSet {
+            passwordField.set(UIFieldViewConfiguration(placeholder: "Enter your password", isSecureTextEntry: true))
+        }
+    }
+
     // MARK: Deinit Verification
     deinit {
         print("deinitialized sign in screen")
@@ -37,27 +46,7 @@ extension SignInViewController {
 }
 
 extension SignInViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segueCase(for: segue) {
-        case .email:
-            emailField = segue.viewController()
-            emailField.style(with: UIFieldConfiguration(placeholder: "Enter your email"))
-        case .password:
-            passwordField = segue.viewController()
-            passwordField.style(with: UIFieldConfiguration(placeholder: "Enter your password", isSecureTextEntry: true))
-        }
-    }
-}
-
-extension SignInViewController {
     func show(errorMessage: String) {
         UINotificationView.show(with: errorMessage)
-    }
-}
-
-extension SignInViewController: SegueIdentifiable {
-    enum Segue: String {
-        case email = "Email"
-        case password = "Password"
     }
 }

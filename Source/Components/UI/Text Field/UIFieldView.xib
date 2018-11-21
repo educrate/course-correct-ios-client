@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIFieldView" customModule="Client" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="00r-Aq-IZB" id="dS5-Rb-OZ5"/>
+                <outlet property="underlineView" destination="DZB-cW-kOa" id="g9p-Rc-oKQ"/>
+                <outlet property="underlineViewHeightConstraint" destination="FUg-AU-4CY" id="Ldm-ut-LyY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="IrA-pe-xMu">
+            <rect key="frame" x="0.0" y="0.0" width="476" height="119"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="00r-Aq-IZB" userLabel="Text Field">
+                    <rect key="frame" x="0.0" y="0.0" width="476" height="118"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.24571917800000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.24571917800000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZB-cW-kOa" userLabel="Underline">
+                    <rect key="frame" x="0.0" y="118" width="476" height="1"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.24571917800000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="FUg-AU-4CY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="krS-iv-Rbq" firstAttribute="trailing" secondItem="00r-Aq-IZB" secondAttribute="trailing" id="FSj-fv-9Xq"/>
+                <constraint firstItem="krS-iv-Rbq" firstAttribute="leading" secondItem="DZB-cW-kOa" secondAttribute="leading" id="RYj-eg-rkM"/>
+                <constraint firstItem="DZB-cW-kOa" firstAttribute="top" secondItem="00r-Aq-IZB" secondAttribute="bottom" id="WBP-hP-mNw"/>
+                <constraint firstItem="DZB-cW-kOa" firstAttribute="bottom" secondItem="IrA-pe-xMu" secondAttribute="bottom" id="iMA-ye-byP"/>
+                <constraint firstItem="krS-iv-Rbq" firstAttribute="trailing" secondItem="DZB-cW-kOa" secondAttribute="trailing" id="kaP-dQ-9qk"/>
+                <constraint firstItem="00r-Aq-IZB" firstAttribute="top" secondItem="IrA-pe-xMu" secondAttribute="top" id="onf-O2-dT6"/>
+                <constraint firstItem="00r-Aq-IZB" firstAttribute="leading" secondItem="krS-iv-Rbq" secondAttribute="leading" id="r4V-Nd-anY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="krS-iv-Rbq"/>
+            <point key="canvasLocation" x="185.50724637681162" y="-105.46875"/>
+        </view>
+    </objects>
+</document>

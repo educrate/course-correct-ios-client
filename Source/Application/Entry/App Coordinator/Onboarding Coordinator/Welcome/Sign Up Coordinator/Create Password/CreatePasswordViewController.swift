@@ -14,9 +14,18 @@ class CreatePasswordViewController: UIViewController, CreatePasswordViewProtocol
 	var presenter: CreatePasswordPresenterProtocol?
     
     // MARK: Views
-    private weak var passwordField: UIFieldViewController!
-    private weak var confirmPasswordField: UIFieldViewController!
+    @IBOutlet private weak var passwordField: UIFieldView! {
+        didSet {
+            passwordField.set(UIFieldViewConfiguration(placeholder: "Create a password", isSecureTextEntry: true))
+        }
+    }
     
+    @IBOutlet private weak var confirmPasswordField: UIFieldView! {
+        didSet {
+            confirmPasswordField.set(UIFieldViewConfiguration(placeholder: "Confirm password", isSecureTextEntry: true))
+        }
+    }
+
     // MARK: Deinit Verification
     deinit {
         print("deinitialized create password screen")
@@ -36,28 +45,10 @@ extension CreatePasswordViewController {
         super.viewDidAppear(animated)
         passwordField.beginEditing()
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segueCase(for: segue) {
-        case .password:
-            passwordField = segue.viewController()
-            passwordField.style(with: UIFieldConfiguration(placeholder: "Create a password", isSecureTextEntry: true))
-        case .confirmPassword:
-            confirmPasswordField = segue.viewController()
-            confirmPasswordField.style(with: UIFieldConfiguration(placeholder: "Confirm password", isSecureTextEntry: true))
-        }
-    }
 }
 
 extension CreatePasswordViewController {
     func show(errorMessage: String) {
         UINotificationView.show(with: errorMessage)
-    }
-}
-
-extension CreatePasswordViewController: SegueIdentifiable {
-    enum Segue: String {
-        case password = "Password"
-        case confirmPassword = "ConfirmPassword"
     }
 }

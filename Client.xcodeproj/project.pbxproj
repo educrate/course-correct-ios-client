@@ -180,8 +180,6 @@
 		BFD0298521509C6A002FB9F5 /* CreditCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297E21509C6A002FB9F5 /* CreditCardType.swift */; };
 		BFD0298621509C6A002FB9F5 /* CreditCardTypeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0297F21509C6A002FB9F5 /* CreditCardTypeValidator.swift */; };
 		BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0298021509C6A002FB9F5 /* CreditCardTypeValidationState.swift */; };
-		BFD0299B21509CD5002FB9F5 /* UIFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299821509CD4002FB9F5 /* UIFieldViewController.swift */; };
-		BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0299A21509CD5002FB9F5 /* UIFieldConfiguration.swift */; };
 		BFD82A89216D989E00A14868 /* NetworkingRequestHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A77216D989D00A14868 /* NetworkingRequestHTTPMethod.swift */; };
 		BFD82A8C216D989E00A14868 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7A216D989D00A14868 /* Networking.swift */; };
 		BFD82A8D216D989E00A14868 /* NetworkingRequestBodyEncodingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7B216D989D00A14868 /* NetworkingRequestBodyEncodingType.swift */; };
@@ -203,7 +201,6 @@
 		BFD82AD9216E7D3500A14868 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD5216E7D3500A14868 /* Result.swift */; };
 		BFD82ADA216E7D3500A14868 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AD6216E7D3500A14868 /* ResultProtocol.swift */; };
 		BFD82ADC216E816C00A14868 /* SelectCollegeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82ADB216E816C00A14868 /* SelectCollegeError.swift */; };
-		BFD82AE6217061DA00A14868 /* UIField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD82AE5217061DA00A14868 /* UIField.storyboard */; };
 		BFD82AED2170670400A14868 /* EnterStudentIdentifierPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AE82170670400A14868 /* EnterStudentIdentifierPresenter.swift */; };
 		BFD82AEE2170670400A14868 /* EnterStudentIdentifierRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AE92170670400A14868 /* EnterStudentIdentifierRouter.swift */; };
 		BFD82AEF2170670400A14868 /* EnterStudentIdentifierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AEA2170670400A14868 /* EnterStudentIdentifierViewController.swift */; };
@@ -242,6 +239,9 @@
 		BFFFF2EE21A4BCF500D2BD62 /* UIDropDownViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF2ED21A4BCF500D2BD62 /* UIDropDownViewCell.xib */; };
 		BFFFF2F021A4BD0400D2BD62 /* UIDropDownViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2EF21A4BD0400D2BD62 /* UIDropDownViewConfiguration.swift */; };
 		BFFFF2F221A4CFC100D2BD62 /* UIDropDownViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2F121A4CFC100D2BD62 /* UIDropDownViewDelegate.swift */; };
+		BFFFF2F521A50E4100D2BD62 /* UIFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2F421A50E4100D2BD62 /* UIFieldView.swift */; };
+		BFFFF2F721A50E4B00D2BD62 /* UIFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF2F621A50E4B00D2BD62 /* UIFieldView.xib */; };
+		BFFFF2F921A50E5A00D2BD62 /* UIFieldViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2F821A50E5A00D2BD62 /* UIFieldViewConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -441,8 +441,6 @@
 		BFD0297E21509C6A002FB9F5 /* CreditCardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardType.swift; sourceTree = "<group>"; };
 		BFD0297F21509C6A002FB9F5 /* CreditCardTypeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardTypeValidator.swift; sourceTree = "<group>"; };
 		BFD0298021509C6A002FB9F5 /* CreditCardTypeValidationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardTypeValidationState.swift; sourceTree = "<group>"; };
-		BFD0299821509CD4002FB9F5 /* UIFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFieldViewController.swift; sourceTree = "<group>"; };
-		BFD0299A21509CD5002FB9F5 /* UIFieldConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFieldConfiguration.swift; sourceTree = "<group>"; };
 		BFD82A77216D989D00A14868 /* NetworkingRequestHTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestHTTPMethod.swift; sourceTree = "<group>"; };
 		BFD82A7A216D989D00A14868 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BFD82A7B216D989D00A14868 /* NetworkingRequestBodyEncodingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestBodyEncodingType.swift; sourceTree = "<group>"; };
@@ -464,7 +462,6 @@
 		BFD82AD5216E7D3500A14868 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		BFD82AD6216E7D3500A14868 /* ResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
 		BFD82ADB216E816C00A14868 /* SelectCollegeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeError.swift; sourceTree = "<group>"; };
-		BFD82AE5217061DA00A14868 /* UIField.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIField.storyboard; sourceTree = "<group>"; };
 		BFD82AE82170670400A14868 /* EnterStudentIdentifierPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterStudentIdentifierPresenter.swift; sourceTree = "<group>"; };
 		BFD82AE92170670400A14868 /* EnterStudentIdentifierRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterStudentIdentifierRouter.swift; sourceTree = "<group>"; };
 		BFD82AEA2170670400A14868 /* EnterStudentIdentifierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterStudentIdentifierViewController.swift; sourceTree = "<group>"; };
@@ -503,6 +500,9 @@
 		BFFFF2ED21A4BCF500D2BD62 /* UIDropDownViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIDropDownViewCell.xib; sourceTree = "<group>"; };
 		BFFFF2EF21A4BD0400D2BD62 /* UIDropDownViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDropDownViewConfiguration.swift; sourceTree = "<group>"; };
 		BFFFF2F121A4CFC100D2BD62 /* UIDropDownViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDropDownViewDelegate.swift; sourceTree = "<group>"; };
+		BFFFF2F421A50E4100D2BD62 /* UIFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFieldView.swift; sourceTree = "<group>"; };
+		BFFFF2F621A50E4B00D2BD62 /* UIFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIFieldView.xib; sourceTree = "<group>"; };
+		BFFFF2F821A50E5A00D2BD62 /* UIFieldViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFieldViewConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1111,10 +1111,9 @@
 		BFD0299721509CC0002FB9F5 /* Text Field */ = {
 			isa = PBXGroup;
 			children = (
-				BFFFF2F321A50A5D00D2BD62 /* Refactor */,
-				BFD82AE5217061DA00A14868 /* UIField.storyboard */,
-				BFD0299821509CD4002FB9F5 /* UIFieldViewController.swift */,
-				BFD0299A21509CD5002FB9F5 /* UIFieldConfiguration.swift */,
+				BFFFF2F621A50E4B00D2BD62 /* UIFieldView.xib */,
+				BFFFF2F421A50E4100D2BD62 /* UIFieldView.swift */,
+				BFFFF2F821A50E5A00D2BD62 /* UIFieldViewConfiguration.swift */,
 			);
 			path = "Text Field";
 			sourceTree = "<group>";
@@ -1298,13 +1297,6 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
-		BFFFF2F321A50A5D00D2BD62 /* Refactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Refactor;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1412,6 +1404,7 @@
 				BF5004942173EB8500D35B69 /* ProfilePayment.storyboard in Resources */,
 				BFF531292199E43D00255CD4 /* UICreditCardView.xib in Resources */,
 				BFD82AF32170671B00A14868 /* EnterStudentIdentifier.storyboard in Resources */,
+				BFFFF2F721A50E4B00D2BD62 /* UIFieldView.xib in Resources */,
 				BF5004702172F0A200D35B69 /* ProfileOverview.storyboard in Resources */,
 				BF500568217B852900D35B69 /* Walkthrough.storyboard in Resources */,
 				BF5004B22174123200D35B69 /* Calendar.storyboard in Resources */,
@@ -1434,7 +1427,6 @@
 				BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */,
 				BFCDA5F221725E8500DB31FC /* Welcome.storyboard in Resources */,
 				BF500574217B87FB00D35B69 /* CreateEvent.storyboard in Resources */,
-				BFD82AE6217061DA00A14868 /* UIField.storyboard in Resources */,
 				BFF14DA42161433B00733323 /* UICalendarViewController.storyboard in Resources */,
 				BF5004A02173EBB000D35B69 /* ProfileSupport.storyboard in Resources */,
 				BF5004E721741EA000D35B69 /* SelectTutor.storyboard in Resources */,
@@ -1540,13 +1532,14 @@
 				BF50047721730A3E00D35B69 /* ProfileOverviewError.swift in Sources */,
 				BF5004802173AC2200D35B69 /* ProfileAccountViewController.swift in Sources */,
 				BF4F48F221826A82000D98D1 /* MainPresenter.swift in Sources */,
+				BFFFF2F521A50E4100D2BD62 /* UIFieldView.swift in Sources */,
 				BFD82A90216D989E00A14868 /* NetworkingService.swift in Sources */,
 				BF5004EF21741EAF00D35B69 /* TutorProfileViewController.swift in Sources */,
 				BFD0298321509C6A002FB9F5 /* CreditCardMathematics.swift in Sources */,
 				BF5004AD2174122200D35B69 /* CalendarRouter.swift in Sources */,
 				BF5005B4217EEE9C00D35B69 /* AppInteractor.swift in Sources */,
 				BF500555217B837600D35B69 /* WalkthroughPresenter.swift in Sources */,
-				BFD0299B21509CD5002FB9F5 /* UIFieldViewController.swift in Sources */,
+				BFFFF2F921A50E5A00D2BD62 /* UIFieldViewConfiguration.swift in Sources */,
 				BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */,
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
 				BFF6C2922184E1F8003F7D96 /* UINotificationViewConfiguration.swift in Sources */,
@@ -1609,7 +1602,6 @@
 				BFF5313D219CAC9100255CD4 /* UIActionViewCell.swift in Sources */,
 				BF500572217B87C900D35B69 /* CreateEventInteractor.swift in Sources */,
 				BF50051A217678C500D35B69 /* SignInError.swift in Sources */,
-				BFD0299D21509CD5002FB9F5 /* UIFieldConfiguration.swift in Sources */,
 				BF500540217A765200D35B69 /* ManageCardInteractor.swift in Sources */,
 				BF500546217A76A200D35B69 /* ManageBankPresenter.swift in Sources */,
 				BF500509217454C600D35B69 /* SignInViewController.swift in Sources */,
