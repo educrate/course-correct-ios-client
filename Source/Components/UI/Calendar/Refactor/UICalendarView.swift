@@ -1,18 +1,16 @@
 //
-//  CalendarView.swift
+//  UICalendarView.swift
 //  Client
 //
-//  Created by Christian Ampe on 9/11/18.
+//  Created by Ampe on 11/21/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import UIKit
 
-class UICalendarViewController: UIViewController {
-    
+class UICalendarView: UIView {
     
     // MARK: Properties
-    
     var brain: CalendarBrain = .default
     
     
@@ -21,9 +19,7 @@ class UICalendarViewController: UIViewController {
     /// encompasing table view which holds
     /// the date object as well as the
     /// table view for a single day
-    @IBOutlet
-    weak var collectionView: UICollectionView!
-    
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: Protocols
     var delegate: UICalendarViewDelegate?
@@ -31,19 +27,16 @@ class UICalendarViewController: UIViewController {
 }
 
 
-extension UICalendarViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+extension UICalendarView {
+    override func awakeFromNib() {
+        super.awakeFromNib()
         moveTo(CalendarConfiguration.default.startDate,
                animated: false)
     }
 }
 
-
 // MARK: - Public Update Methods
-
-extension UICalendarViewController {
+extension UICalendarView {
     func moveTo(_ newDate: Date,
                 animated: Bool = true) {
         
@@ -59,10 +52,8 @@ extension UICalendarViewController {
     }
 }
 
-
 // MARK: - Table View Data Source Conformation
-
-extension UICalendarViewController: UICollectionViewDataSource {
+extension UICalendarView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return brain.dataSource.monthCount()
     }
@@ -86,21 +77,21 @@ extension UICalendarViewController: UICollectionViewDataSource {
         guard
             let dateHelper = brain.dataSource.calendarDate(for: dayHelper),
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICalendarViewCell.identifier,
-                                                            for: indexPath) as? UICalendarViewCell
-        else {
-            return UICollectionViewCell()
+                                                          for: indexPath) as? UICalendarViewCell
+            else {
+                return UICollectionViewCell()
         }
         
         guard
             let dataSource = dataSource,
             let day = dataSource.day(for: dateHelper)
-        else {
-            let day = CalendarDay(date: dateHelper,
-                                  events: [])
-            cell.set(day)
-            cell.reload()
-            
-            return cell
+            else {
+                let day = CalendarDay(date: dateHelper,
+                                      events: [])
+                cell.set(day)
+                cell.reload()
+                
+                return cell
         }
         
         cell.set(day)
@@ -110,7 +101,7 @@ extension UICalendarViewController: UICollectionViewDataSource {
     }
 }
 
-extension UICalendarViewController: UICollectionViewDelegate {
+extension UICalendarView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         viewForSupplementaryElementOfKind kind: String,
                         at indexPath: IndexPath) -> UICollectionReusableView {
@@ -123,8 +114,8 @@ extension UICalendarViewController: UICollectionViewDelegate {
                 .dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                                                   withReuseIdentifier: UICalendarViewMonthHeader.identifier,
                                                   for: indexPath) as? UICalendarViewMonthHeader
-        else {
-            return UICollectionReusableView()
+            else {
+                return UICollectionReusableView()
         }
         
         let longMonthDescription = dateHelper.monthFull
@@ -134,7 +125,7 @@ extension UICalendarViewController: UICollectionViewDelegate {
     }
 }
 
-extension UICalendarViewController: UICollectionViewDelegateFlowLayout {
+extension UICalendarView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -147,9 +138,9 @@ extension UICalendarViewController: UICollectionViewDelegateFlowLayout {
             let dateHelper = brain.dataSource.calendarDate(for: dayHelper),
             let dataSource = dataSource,
             let day = dataSource.day(for: dateHelper)
-        else {
-            return CGSize(width: fullCollectionWidth,
-                          height: UICalendarViewCell.minimumHeight)
+            else {
+                return CGSize(width: fullCollectionWidth,
+                              height: UICalendarViewCell.minimumHeight)
         }
         
         let heightOfEventCells: CGFloat = CGFloat(day.events.count) * UICalendarViewEventCell.defaultHeight

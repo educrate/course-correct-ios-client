@@ -1,8 +1,8 @@
 //
-//  CalendarViewDayCell.swift
+//  UICalendarViewCell.swift
 //  Client
 //
-//  Created by Christian Ampe on 9/11/18.
+//  Created by Ampe on 11/21/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
@@ -13,46 +13,45 @@ import UIKit
 /// contains a table view in the middle
 class UICalendarViewCell: UICollectionViewCell {
     
-    
     // MARK: Properties
     
+    /// contains necessary information to
+    /// set 2up the day collection view
     private var day: CalendarDay?
     
-    
-    // MARK: Views
+    // MARK: View Outlets
     
     /// holds the information surrounding
-    /// the day of the month and the day of the week
-    @IBOutlet
-    weak var titleLabel: UILabel!
+    /// the day of the month
+    @IBOutlet private weak var titleLabel: UILabel!
     
-    @IBOutlet
-    weak var detailLabel: UILabel!
+    /// holds the information surrounding
+    /// the day of the week
+    @IBOutlet private weak var detailLabel: UILabel!
     
     /// contains all the events for a single day
     /// one cell per event
-    @IBOutlet
-    weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
 }
 
-
 // MARK: - Public Setup Methods
-
 extension UICalendarViewCell {
-    func setUp(_ calendarDay: CalendarDay) {
-        
+    func set(_ calendarDay: CalendarDay) {
         day = calendarDay
+    }
+    
+    func reload() {
+        guard let day = day else {
+            return
+        }
         
-        titleLabel.text = calendarDay.date.dayNumberString
-        detailLabel.text = calendarDay.date.weekdayShort
-        
+        titleLabel.text = day.date.dayNumberString
+        detailLabel.text = day.date.weekdayShort
         collectionView.reloadData()
     }
 }
 
-
 // MARK: - Table View Protocol Conformance
-
 extension UICalendarViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let day = day else {
@@ -69,8 +68,8 @@ extension UICalendarViewCell: UICollectionViewDataSource {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICalendarViewEventCell.identifier,
                                                             for: indexPath) as? UICalendarViewEventCell
-        else {
-            return UICollectionViewCell()
+            else {
+                return UICollectionViewCell()
         }
         
         let events = day.events
@@ -114,9 +113,7 @@ extension UICalendarViewCell: UICollectionViewDelegateFlowLayout {
     }
 }
 
-
 // MARK: - Static Properties
-
 extension UICalendarViewCell {
     static let identifier = "uicalendarviewcell"
     static let minimumHeight: CGFloat = 80
