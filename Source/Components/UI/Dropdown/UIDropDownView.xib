@@ -27,15 +27,15 @@
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="inputChanged:forEvent:" destination="-1" eventType="editingDidEnd" id="50x-Vt-NOq"/>
+                        <action selector="inputChanged:forEvent:" destination="-1" eventType="editingChanged" id="v5s-Eo-F7h"/>
                     </connections>
                 </textField>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hqD-lq-OnQ" userLabel="Dropdown Table">
                     <rect key="frame" x="0.0" y="36" width="323" height="345"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="dPF-UX-8kC"/>
-                        <outlet property="delegate" destination="-1" id="3Uo-WY-lgh"/>
+                        <outlet property="dataSource" destination="-1" id="t5r-Oo-dNr"/>
+                        <outlet property="delegate" destination="-1" id="te2-Sh-IGg"/>
                     </connections>
                 </tableView>
             </subviews>

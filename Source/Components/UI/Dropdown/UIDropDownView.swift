@@ -11,14 +11,15 @@ import UIKit
 // MARK: - Class Declaration
 final class UIDropDownView: XIBView {
     
-    private let cellHeight: CGFloat = 50
-    
     // MARK: View Outlets
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: Delegation
     weak var delegate: UIDropDownViewDelegate?
+    
+    // MARK: Internal Constants
+    private let cellHeight: CGFloat = 50
     
     // MARK: Internal Properties
     private var data: [String] = []
@@ -56,6 +57,7 @@ extension UIDropDownView {
     
     func reload() {
         tableView.reloadData()
+        tableView.isHidden = false
     }
     
     func set(_ newData: [String]) {

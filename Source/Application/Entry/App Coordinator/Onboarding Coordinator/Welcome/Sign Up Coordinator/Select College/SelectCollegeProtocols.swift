@@ -28,7 +28,6 @@ protocol SelectCollegePresenterProtocol: class {
     func updateView(for input: String?)
     func selected(college identifier: String)
     
-    
     // MARK: To View
     func collegesFetched(for input: String, with result: Result<[String], SelectCollegeError>)
     func collegeValidated(for identifier: String, with result: Result<Void, SelectCollegeError>)

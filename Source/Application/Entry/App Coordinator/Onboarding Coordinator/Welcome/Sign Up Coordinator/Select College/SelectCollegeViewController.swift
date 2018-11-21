@@ -44,6 +44,7 @@ extension SelectCollegeViewController {
 extension SelectCollegeViewController: SelectCollegeViewProtocol {
     func show(names: [String]) {
         collegeSelector.set(names)
+        collegeSelector.reload()
     }
     
     func show(errorMessage: String) {

@@ -18,6 +18,7 @@ class AddLocationViewController: UIViewController, AddLocationViewProtocol {
         didSet {
             locationSelector.delegate = self
             locationSelector.set(UIDropDownViewConfiguration(placeholder: "Address"))
+            locationSelector.reload()
         }
     }
     
