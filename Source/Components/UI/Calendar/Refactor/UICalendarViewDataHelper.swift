@@ -1,5 +1,5 @@
 //
-//  UICalendarViewDataMapper.swift
+//  UICalendarViewDataHelper.swift
 //  Client
 //
 //  Created by Ampe on 11/21/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UICalendarViewDataMapper {
+class UICalendarViewDataHelper {
     private let helper: UICalendarViewHelper
     private var minDateIndex: UICalendarViewDateIndex
     private var maxDateIndex: UICalendarViewDateIndex
@@ -22,7 +22,7 @@ class UICalendarViewDataMapper {
     }
 }
 
-extension UICalendarViewDataMapper {
+extension UICalendarViewDataHelper {
     func numberOfMonths() -> Int {
         return 1
     }

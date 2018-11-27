@@ -9,12 +9,12 @@
 import Foundation
 
 class UICalendarViewBrain {
-    let dataSource: UICalendarViewDataMapper
+    let dataSource: UICalendarViewDataHelper
     let layoutCalculator: UICalendarViewLayoutCalculator
     
     init(configuration: UICalendarViewConfiguration = .default) {
         layoutCalculator = UICalendarViewLayoutCalculator(configuration.heightInPixelsOfOneHour)
-        dataSource = UICalendarViewDataMapper(helper: UICalendarViewHelper(configuration.calendar),
+        dataSource = UICalendarViewDataHelper(helper: UICalendarViewHelper(configuration.calendar),
                                               startDateIndex: configuration.startDateIndex)
     }
 }

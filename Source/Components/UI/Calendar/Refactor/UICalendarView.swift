@@ -96,6 +96,12 @@ extension UICalendarView: UICollectionViewDelegate {
         
         return monthHeader
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        
+    }
 }
 
 extension UICalendarView: UICollectionViewDelegateFlowLayout {

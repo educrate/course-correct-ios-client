@@ -232,7 +232,7 @@
 		BFFFF2FC21A5EAC100D2BD62 /* UICalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF2FB21A5EAC100D2BD62 /* UICalendarView.xib */; };
 		BFFFF2FE21A5EAD100D2BD62 /* UICalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2FD21A5EAD100D2BD62 /* UICalendarView.swift */; };
 		BFFFF30021A5EDFA00D2BD62 /* UICalendarViewBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2FF21A5EDFA00D2BD62 /* UICalendarViewBrain.swift */; };
-		BFFFF30221A5EE2100D2BD62 /* UICalendarViewDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataMapper.swift */; };
+		BFFFF30221A5EE2100D2BD62 /* UICalendarViewDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataHelper.swift */; };
 		BFFFF30421A5EE4A00D2BD62 /* UICalendarViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30321A5EE4A00D2BD62 /* UICalendarViewConfiguration.swift */; };
 		BFFFF30621A5F30000D2BD62 /* UICalendarViewLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30521A5F30000D2BD62 /* UICalendarViewLayoutCalculator.swift */; };
 		BFFFF30821A5F61F00D2BD62 /* UICalendarViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30721A5F61F00D2BD62 /* UICalendarViewHelper.swift */; };
@@ -494,7 +494,7 @@
 		BFFFF2FB21A5EAC100D2BD62 /* UICalendarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICalendarView.xib; sourceTree = "<group>"; };
 		BFFFF2FD21A5EAD100D2BD62 /* UICalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarView.swift; sourceTree = "<group>"; };
 		BFFFF2FF21A5EDFA00D2BD62 /* UICalendarViewBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewBrain.swift; sourceTree = "<group>"; };
-		BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataMapper.swift; sourceTree = "<group>"; };
+		BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataHelper.swift; sourceTree = "<group>"; };
 		BFFFF30321A5EE4A00D2BD62 /* UICalendarViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewConfiguration.swift; sourceTree = "<group>"; };
 		BFFFF30521A5F30000D2BD62 /* UICalendarViewLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewLayoutCalculator.swift; sourceTree = "<group>"; };
 		BFFFF30721A5F61F00D2BD62 /* UICalendarViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewHelper.swift; sourceTree = "<group>"; };
@@ -1203,7 +1203,7 @@
 				BFD0294C21509BB2002FB9F5 /* UICalendarViewDelegate.swift */,
 				BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */,
 				BFFFF2FF21A5EDFA00D2BD62 /* UICalendarViewBrain.swift */,
-				BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataMapper.swift */,
+				BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataHelper.swift */,
 				BFFFF30521A5F30000D2BD62 /* UICalendarViewLayoutCalculator.swift */,
 				BFFFF30721A5F61F00D2BD62 /* UICalendarViewHelper.swift */,
 				BF551659215B374D00D0CBB1 /* UICalendarViewDate.swift */,
@@ -1534,7 +1534,7 @@
 				BFCDA5EF21725E7200DB31FC /* WelcomeProtocols.swift in Sources */,
 				BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */,
 				BFD82AD7216E7D3500A14868 /* ResultAnyError.swift in Sources */,
-				BFFFF30221A5EE2100D2BD62 /* UICalendarViewDataMapper.swift in Sources */,
+				BFFFF30221A5EE2100D2BD62 /* UICalendarViewDataHelper.swift in Sources */,
 				BF5004D521741E6900D35B69 /* AddLocationPresenter.swift in Sources */,
 				BF5004EE21741EAF00D35B69 /* TutorProfileRouter.swift in Sources */,
 				BFD0298121509C6A002FB9F5 /* CreditCardPrefixContainable.swift in Sources */,
@@ -1729,8 +1729,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8T6KWW939D;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Storages/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1748,8 +1749,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8T6KWW939D;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Storages/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
