@@ -11,115 +11,88 @@ import UIKit
 class UICalendarView: UIView {
     
     // MARK: Properties
-    var brain: CalendarBrain = .default
     
+    /// controlls all internal computation
+    /// necessary for setting up the calendar
+    private let brain: UICalendarViewBrain = .default
     
-    // MARK: Views
+    /// configuration of the calendar view
+    /// and configurations of subviews
+    private let configuration: UICalendarViewConfiguration = .default
+    
+    // MARK: View Outlets
     
     /// encompasing table view which holds
     /// the date object as well as the
     /// table view for a single day
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    /// flow layout of the collection view
+    @IBOutlet private weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
     // MARK: Protocols
+    
+    /// delegate for the calendar collection
     var delegate: UICalendarViewDelegate?
+    
+    /// data source for the calendar collection
     var dataSource: UICalendarViewDataSource?
 }
 
-
+// MARK: - View Lifecycle
 extension UICalendarView {
     override func awakeFromNib() {
         super.awakeFromNib()
-        moveTo(CalendarConfiguration.default.startDate,
-               animated: false)
+        move(to: Date(),
+             animated: false)
     }
 }
 
 // MARK: - Public Update Methods
 extension UICalendarView {
-    func moveTo(_ newDate: Date,
+    func move(to newDate: Date,
                 animated: Bool = true) {
         
-        guard let indexPath = brain.dataSource.indexPath(for: newDate) else {
-            return
-        }
-        
-        collectionView.layoutIfNeeded()
-        
-        collectionView.scrollToItem(at: indexPath,
-                                    at: .top,
-                                    animated: animated)
+//        guard let indexPath = brain.dataSource.indexPath(for: newDate) else {
+//            return
+//        }
+//
+//        collectionView.layoutIfNeeded()
+//
+//        collectionView.scrollToItem(at: indexPath,
+//                                    at: .top,
+//                                    animated: animated)
     }
 }
 
 // MARK: - Table View Data Source Conformation
 extension UICalendarView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return brain.dataSource.monthCount()
+        return brain.dataSource.numberOfMonths()
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        
-        guard let dayCount = brain.dataSource.days(in: section) else {
-            assert(false, "apple api for date extraction has failed")
-            return 0
-        }
-        
-        return dayCount
+       
+        return brain.dataSource.numberOfDays(in: section)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let dayHelper = brain.dataSource.day(from: indexPath)
-        
-        guard
-            let dateHelper = brain.dataSource.calendarDate(for: dayHelper),
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICalendarViewCell.identifier,
-                                                          for: indexPath) as? UICalendarViewCell
-            else {
-                return UICollectionViewCell()
-        }
-        
-        guard
-            let dataSource = dataSource,
-            let day = dataSource.day(for: dateHelper)
-            else {
-                let day = CalendarDay(date: dateHelper,
-                                      events: [])
-                cell.set(day)
-                cell.reload()
-                
-                return cell
-        }
-        
-        cell.set(day)
-        cell.reload()
+        let cell: UICalendarViewDayCell = collectionView.dequeueReusableCell(for: indexPath)
         
         return cell
     }
 }
 
+// MARK: - Table View Data Source Conformation
 extension UICalendarView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         viewForSupplementaryElementOfKind kind: String,
                         at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let dayHelper = brain.dataSource.day(from: indexPath)
-        
-        guard
-            let dateHelper = brain.dataSource.calendarDate(for: dayHelper),
-            let monthHeader = collectionView
-                .dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
-                                                  withReuseIdentifier: UICalendarViewMonthHeader.identifier,
-                                                  for: indexPath) as? UICalendarViewMonthHeader
-            else {
-                return UICollectionReusableView()
-        }
-        
-        let longMonthDescription = dateHelper.monthFull
-        monthHeader.setup(longMonthDescription)
+        let monthHeader: UICalendarViewMonthHeader = collectionView.dequeueHeaderView(for: indexPath)
         
         return monthHeader
     }
@@ -130,38 +103,21 @@ extension UICalendarView: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let fullCollectionWidth = collectionView.bounds.width
-        
-        let dayHelper = brain.dataSource.day(from: indexPath)
-        
-        guard
-            let dateHelper = brain.dataSource.calendarDate(for: dayHelper),
-            let dataSource = dataSource,
-            let day = dataSource.day(for: dateHelper)
-            else {
-                return CGSize(width: fullCollectionWidth,
-                              height: UICalendarViewCell.minimumHeight)
-        }
-        
-        let heightOfEventCells: CGFloat = CGFloat(day.events.count) * UICalendarViewEventCell.defaultHeight
-        let heightOfCellSpacing: CGFloat = CGFloat(day.events.count - 1) * UICalendarViewEventCell.lineSpacing
-        let totalHeight: CGFloat = heightOfEventCells + heightOfCellSpacing
-        
-        return CGSize(width: fullCollectionWidth,
-                      height: totalHeight)
+        return CGSize(width: collectionView.bounds.width,
+                      height: configuration.cellConfiguration.minimumHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         
-        return UICalendarViewCell.interitemSpacing
+        return configuration.cellConfiguration.interitemSpacing
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return UICalendarViewCell.lineSpacing
+        return configuration.cellConfiguration.lineSpacing
     }
 }

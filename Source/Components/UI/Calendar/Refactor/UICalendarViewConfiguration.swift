@@ -10,24 +10,22 @@ import Foundation
 
 struct UICalendarViewConfiguration {
     let calendar: Calendar
-    let startDate: Date
-    let minimumCalendarYear: Int
-    let maximumCalendarYear: Int
+    let startDateIndex: UICalendarViewDateIndex
     let heightInPixelsOfOneHour: Int
+    let cellConfiguration: UICalendarViewCellConfguration
+    
+    init(calendar: Calendar = Calendar(identifier: .gregorian),
+         startDateIndex: UICalendarViewDateIndex = .today,
+         heightInPixelsOfOneHour: Int = 30,
+         cellConfiguration: UICalendarViewCellConfguration = .default) {
+        
+        self.calendar = calendar
+        self.startDateIndex = startDateIndex
+        self.heightInPixelsOfOneHour = heightInPixelsOfOneHour
+        self.cellConfiguration = cellConfiguration
+    }
 }
 
 extension UICalendarViewConfiguration {
-    static let `default`: UICalendarViewConfiguration = {
-        let now = Date()
-        let calendar = Calendar(identifier: .gregorian)
-        let currentYear = calendar.component(.year, from: now)
-        let yearSpread = 1
-        
-        return UICalendarViewConfiguration(calendar: .current,
-                                           startDate: now,
-                                           minimumCalendarYear: currentYear - yearSpread,
-                                           maximumCalendarYear: currentYear + yearSpread,
-                                           heightInPixelsOfOneHour: 30)
-    }()
+    static let `default` = UICalendarViewConfiguration()
 }
-

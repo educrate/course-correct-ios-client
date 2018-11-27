@@ -9,5 +9,5 @@
 import Foundation
 
 protocol UICalendarViewDataSource {
-    func day(for date: CalendarDate) -> CalendarDay?
+    func day(for date: UICalendarViewDateIndex) -> UICalendarViewDay?
 }

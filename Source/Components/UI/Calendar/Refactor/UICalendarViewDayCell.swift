@@ -1,5 +1,5 @@
 //
-//  UICalendarViewCell.swift
+//  UICalendarViewDayCell.swift
 //  Client
 //
 //  Created by Ampe on 11/21/18.
@@ -11,13 +11,16 @@ import UIKit
 /// this cell holds all the data for a single calendar day
 /// contains a date label on the left
 /// contains a table view in the middle
-class UICalendarViewCell: UICollectionViewCell {
+class UICalendarViewDayCell: UICollectionViewCell {
     
     // MARK: Properties
     
     /// contains necessary information to
-    /// set 2up the day collection view
-    private var day: CalendarDay?
+    /// set up the day collection view
+    private var day: UICalendarViewDay?
+    
+    /// contains all the styling for the cell
+    private var configuration: UICalendarViewCellConfguration = .default
     
     // MARK: View Outlets
     
@@ -35,24 +38,25 @@ class UICalendarViewCell: UICollectionViewCell {
 }
 
 // MARK: - Public Setup Methods
-extension UICalendarViewCell {
-    func set(_ calendarDay: CalendarDay) {
+extension UICalendarViewDayCell {
+    func set(_ calendarDay: UICalendarViewDay) {
         day = calendarDay
     }
     
+    func set(_ newConfiguration: UICalendarViewCellConfguration) {
+        configuration = newConfiguration
+    }
+    
     func reload() {
-        guard let day = day else {
-            return
-        }
+        titleLabel.text = "16"
+        detailLabel.text = "Tue"
         
-        titleLabel.text = day.date.dayNumberString
-        detailLabel.text = day.date.weekdayShort
         collectionView.reloadData()
     }
 }
 
 // MARK: - Table View Protocol Conformance
-extension UICalendarViewCell: UICollectionViewDataSource {
+extension UICalendarViewDayCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let day = day else {
             return 0
@@ -66,12 +70,6 @@ extension UICalendarViewCell: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UICalendarViewEventCell.identifier,
-                                                            for: indexPath) as? UICalendarViewEventCell
-            else {
-                return UICollectionViewCell()
-        }
-        
         let events = day.events
         let rowIndex = indexPath.row
         
@@ -81,13 +79,16 @@ extension UICalendarViewCell: UICollectionViewDataSource {
         
         let event = events[rowIndex]
         
-        cell.setUp(event)
+        let cell: UICalendarViewEventCell = collectionView.dequeueReusableCell(for: indexPath)
+        
+        cell.set(event)
+        cell.reload()
         
         return cell
     }
 }
 
-extension UICalendarViewCell: UICollectionViewDelegateFlowLayout {
+extension UICalendarViewDayCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -95,28 +96,20 @@ extension UICalendarViewCell: UICollectionViewDelegateFlowLayout {
         let fullCollectionWidth = collectionView.bounds.width
         
         return CGSize(width: fullCollectionWidth,
-                      height: UICalendarViewEventCell.defaultHeight)
+                      height: configuration.minimumHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         
-        return UICalendarViewEventCell.interitemSpacing
+        return configuration.interitemSpacing
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return UICalendarViewEventCell.lineSpacing
+        return configuration.lineSpacing
     }
-}
-
-// MARK: - Static Properties
-extension UICalendarViewCell {
-    static let identifier = "uicalendarviewcell"
-    static let minimumHeight: CGFloat = 80
-    static let interitemSpacing: CGFloat = 8
-    static let lineSpacing: CGFloat = 8
 }

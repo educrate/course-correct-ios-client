@@ -69,10 +69,10 @@ extension UITableView {
 // MARK: - Collection View
 
 // MARK: Conforms UICollectionViewCell to StoryboardIdentifiable
-extension UICollectionViewCell: StoryboardIdentifiable {}
+extension UICollectionReusableView: StoryboardIdentifiable {}
 
 // MARK: Extract Identifier From Reusable Cell
-extension StoryboardIdentifiable where Self: UICollectionViewCell {
+extension StoryboardIdentifiable where Self: UICollectionReusableView {
     static var storyboardIdentifier: String {
         return String(describing: self)
     }
@@ -86,6 +86,14 @@ extension UICollectionView {
         }
         
         return cell
+    }
+    
+    func dequeueHeaderView<T: UICollectionReusableView>(for indexPath: IndexPath) -> T {
+        guard let view = dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: T.storyboardIdentifier, for: indexPath) as? T else {
+            fatalError("Cannot dequeue: \(T.self) with identifier: \(T.storyboardIdentifier)")
+        }
+        
+        return view
     }
     
     func register<T: UICollectionViewCell>(xibCell: T.Type) {

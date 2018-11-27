@@ -1,5 +1,5 @@
 //
-//  CalendarEvent.swift
+//  UICalendarViewEvent.swift
 //  Client
 //
 //  Created by Christian Ampe on 9/11/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct CalendarEvent {
+struct UICalendarViewEvent {
     let title: String
     let time: String
     let location: String

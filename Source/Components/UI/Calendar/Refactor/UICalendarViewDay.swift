@@ -1,5 +1,5 @@
 //
-//  CalendarDay.swift
+//  UICalendarViewDay.swift
 //  Client
 //
 //  Created by Christian Ampe on 9/11/18.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct CalendarDay {
+struct UICalendarViewDay {
     
     /// date for extracting day of the week and day of the month
-    let date: CalendarDate
+    let date: UICalendarViewDate
     
     /// events occurring during this day
-    let events: [CalendarEvent]
+    let events: [UICalendarViewEvent]
 }

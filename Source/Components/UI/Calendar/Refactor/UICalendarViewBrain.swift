@@ -9,22 +9,16 @@
 import Foundation
 
 class UICalendarViewBrain {
+    let dataSource: UICalendarViewDataMapper
+    let layoutCalculator: UICalendarViewLayoutCalculator
     
-    var dataSource: CalendarDataMapper
-    var layoutCalculator: CalendarLayoutCalculator
-    
-    init(configuration: CalendarConfiguration) {
-        let calendarHelper = CalendarHelper(configuration.calendar)
-        let controllerDataSource = CalendarDataMapper(minimumCalendarYear: configuration.minimumCalendarYear,
-                                                      maximumCalendarYear: configuration.maximumCalendarYear,
-                                                      calendarHelper: calendarHelper)
-        dataSource = controllerDataSource
-        
-        let calendarLayoutCalculator = CalendarLayoutCalculator(configuration.heightInPixelsOfOneHour)
-        layoutCalculator = calendarLayoutCalculator
+    init(configuration: UICalendarViewConfiguration = .default) {
+        layoutCalculator = UICalendarViewLayoutCalculator(configuration.heightInPixelsOfOneHour)
+        dataSource = UICalendarViewDataMapper(helper: UICalendarViewHelper(configuration.calendar),
+                                              startDateIndex: configuration.startDateIndex)
     }
 }
 
 extension UICalendarViewBrain {
-    static let `default` = CalendarBrain(configuration: .default)
+    static let `default` = UICalendarViewBrain()
 }

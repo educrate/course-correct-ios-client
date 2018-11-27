@@ -9,16 +9,13 @@
 import UIKit
 
 class UICalendarViewMonthHeader: UICollectionReusableView {
-    @IBOutlet
-    weak var monthLabel: UILabel!
+    
+    // MARK: View Outlets
+    @IBOutlet weak var monthLabel: UILabel!
 }
 
 extension UICalendarViewMonthHeader {
-    func setup(_ month: String) {
+    func set(_ month: String) {
         monthLabel.text = month
     }
-}
-
-extension UICalendarViewMonthHeader {
-    static let identifier = "uicalendarviewmonthheader"
 }
