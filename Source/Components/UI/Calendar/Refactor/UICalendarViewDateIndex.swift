@@ -23,7 +23,22 @@ struct UICalendarViewDateIndex {
     }
 }
 
-extension UICalendarViewDateIndex: Hashable {}
+extension UICalendarViewDateIndex: Hashable {
+    var hashValue: Int {
+        guard let integer = Int("\(year)\(month)\(day)") else {
+            assertionFailure("internal inconsistency - issue mapping string to integer")
+            return -1
+        }
+        
+        return integer
+    }
+}
+
+extension UICalendarViewDateIndex: Comparable {
+    static func < (lhs: UICalendarViewDateIndex, rhs: UICalendarViewDateIndex) -> Bool {
+        return lhs.hashValue < rhs.hashValue
+    }
+}
 
 extension UICalendarViewDateIndex {
     static let reference = UICalendarViewDateIndex(day: 1, month: 1, year: 1970)

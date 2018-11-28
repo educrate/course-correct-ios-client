@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UICalendarView: UIView {
+class UICalendarView: XIBView {
     
     // MARK: Properties
     
@@ -52,16 +52,7 @@ extension UICalendarView {
 extension UICalendarView {
     func move(to newDate: Date,
                 animated: Bool = true) {
-        
-//        guard let indexPath = brain.dataSource.indexPath(for: newDate) else {
-//            return
-//        }
-//
-//        collectionView.layoutIfNeeded()
-//
-//        collectionView.scrollToItem(at: indexPath,
-//                                    at: .top,
-//                                    animated: animated)
+        // todo
     }
 }
 
@@ -100,6 +91,7 @@ extension UICalendarView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
+        
         
     }
 }

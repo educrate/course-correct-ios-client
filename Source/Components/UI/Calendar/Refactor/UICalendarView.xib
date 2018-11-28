@@ -1,31 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UICalendarView" customModule="Client" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="JlE-3U-ZOE" id="2D2-Lv-cmA"/>
+                <outlet property="collectionView" destination="JlE-3U-ZOE" id="u25-jF-eVn"/>
                 <outlet property="collectionViewFlowLayout" destination="V4h-48-DPp" id="ken-HE-VkQ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" id="JlE-3U-ZOE" userLabel="Calendar Collection View">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+        <view contentMode="scaleToFill" id="29y-qt-6Kv">
+            <rect key="frame" x="0.0" y="0.0" width="447" height="515"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JlE-3U-ZOE" userLabel="Calendar Collection View">
+                    <rect key="frame" x="0.0" y="0.0" width="447" height="515"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="V4h-48-DPp">
+                        <size key="itemSize" width="400" height="100"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="txm-Vu-ce6"/>
+                        <outlet property="delegate" destination="-1" id="cNS-2q-aG4"/>
+                    </connections>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="V4h-48-DPp">
-                <size key="itemSize" width="400" height="100"/>
-                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-            </collectionViewFlowLayout>
-            <cells/>
-        </collectionView>
+            <constraints>
+                <constraint firstItem="JlE-3U-ZOE" firstAttribute="trailing" secondItem="cQz-Xv-xIl" secondAttribute="trailing" id="6Fx-xJ-xSM"/>
+                <constraint firstItem="JlE-3U-ZOE" firstAttribute="top" secondItem="29y-qt-6Kv" secondAttribute="top" id="7zO-V0-yU8"/>
+                <constraint firstItem="JlE-3U-ZOE" firstAttribute="leading" secondItem="cQz-Xv-xIl" secondAttribute="leading" id="EVt-pl-LVn"/>
+                <constraint firstItem="JlE-3U-ZOE" firstAttribute="bottom" secondItem="cQz-Xv-xIl" secondAttribute="bottom" id="rvg-SZ-hoy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="cQz-Xv-xIl"/>
+            <point key="canvasLocation" x="820" y="-35.532233883058474"/>
+        </view>
     </objects>
 </document>

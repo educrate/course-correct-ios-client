@@ -34,5 +34,3 @@ extension UICalendarViewDate: Equatable {
         return lhs.dateIndex == rhs.dateIndex
     }
 }
-
-extension UICalendarViewDate: Hashable {}

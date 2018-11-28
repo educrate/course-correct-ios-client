@@ -10,15 +10,19 @@ import Foundation
 
 class UICalendarViewDataHelper {
     private let helper: UICalendarViewHelper
+    private var earilestDateIndex: UICalendarViewDateIndex
     private var currentDateIndex: UICalendarViewDateIndex
+    private var latestDateIndex: UICalendarViewDateIndex
     private var daysInCurrentMonth: Int
-    private var data: [Int: UICalendarViewDay]
+    private var data: [Int: [Int: [Int: UICalendarViewDay]]]
     
     init(helper: UICalendarViewHelper,
          startDateIndex: UICalendarViewDateIndex) {
         
         self.helper = helper
+        self.earilestDateIndex = startDateIndex
         self.currentDateIndex = startDateIndex
+        self.latestDateIndex = startDateIndex
         self.daysInCurrentMonth = helper.days(month: startDateIndex.month, year: startDateIndex.year)
         self.data = [:]
     }
@@ -27,22 +31,16 @@ class UICalendarViewDataHelper {
 extension UICalendarViewDataHelper {
     func yesterday() -> UICalendarViewDay {
         let previousIndex = previousDateIndex(from: currentDateIndex)
-        updateIndex(to: previousIndex)
+        updateStoredIndices(to: previousIndex)
         
-        let yesterday = day(for: previousIndex)
-        cache(yesterday)
-        
-        return yesterday
+        return day(for: previousIndex)
     }
     
     func tomorrow() -> UICalendarViewDay {
         let nextIndex = nextDateIndex(from: currentDateIndex)
-        updateIndex(to: nextIndex)
+        updateStoredIndices(to: nextIndex)
         
-        let tomorrow = day(for: nextIndex)
-        cache(tomorrow)
-        
-        return tomorrow
+        return day(for: nextIndex)
     }
 }
 
@@ -161,30 +159,116 @@ private extension UICalendarViewDataHelper {
 
 private extension UICalendarViewDataHelper {
     func day(for index: UICalendarViewDateIndex) -> UICalendarViewDay {
-        guard let day = data[index.hashValue] else {
-            return UICalendarViewDay(date: UICalendarViewDate(dateIndex: index, helper: helper))
-        }
         
-        return day
+        // if the day index exists in the cache return that value
+        if let yearCache = data[index.year], let monthCache = yearCache[index.month], let dayCache = monthCache[index.day] {
+            return dayCache
+            
+            // if the cache is empty for that index
+            // construct the day and add it to the cache
+        } else {
+            let day = UICalendarViewDay(date: UICalendarViewDate(dateIndex: index, helper: helper))
+            cache(day)
+            return day
+        }
     }
 }
 
 private extension UICalendarViewDataHelper {
-    func updateIndex(to newIndex: UICalendarViewDateIndex) {
+    func updateStoredIndices(to newIndex: UICalendarViewDateIndex) {
+        if newIndex < earilestDateIndex {
+            updateEarilestIndex(to: newIndex)
+            updateCurrentIndex(to: newIndex)
+        } else if newIndex > latestDateIndex {
+            updateLatestIndex(to: newIndex)
+            updateCurrentIndex(to: newIndex)
+        } else {
+            updateCurrentIndex(to: newIndex)
+        }
+    }
+    
+    func updateEarilestIndex(to newIndex: UICalendarViewDateIndex) {
+        guard newIndex < earilestDateIndex else {
+            assertionFailure("internal inconsistency - should not attempt to update earliest index with an older date")
+            return
+        }
+        
+        earilestDateIndex = newIndex
+    }
+    
+    func updateCurrentIndex(to newIndex: UICalendarViewDateIndex) {
         currentDateIndex = newIndex
     }
     
+    func updateLatestIndex(to newIndex: UICalendarViewDateIndex) {
+        guard newIndex > latestDateIndex else {
+            assertionFailure("internal inconsistency - should not attempt to update latest index with an eariler date")
+            return
+        }
+        
+        latestDateIndex = newIndex
+    }
+    
     func cache(_ day: UICalendarViewDay) {
-        data[day.date.dateIndex.hashValue] = day
+        
+        // if the year exists in the cache continue
+        // otherwise create the year in the data structure
+        guard data[day.date.dateIndex.year] != nil else {
+            
+            // safe to force unwrap as we guard against the possibility of nil above
+            data[day.date.dateIndex.year] = [day.date.dateIndex.month: [day.date.dateIndex.month: day]]
+            return
+        }
+        
+        // if the month exists in the cache continue
+        // otherwise create the month in the data structure
+        guard data[day.date.dateIndex.year]?[day.date.dateIndex.month] != nil else {
+            
+            // safe to force unwrap as we guard against the possibility of nil above
+            data[day.date.dateIndex.year]![day.date.dateIndex.month] = [day.date.dateIndex.month: day]
+            return
+        }
+        
+        // safe to force unwrap as we guard against the possibility of nil above
+        data[day.date.dateIndex.year]![day.date.dateIndex.month]![day.date.dateIndex.day] = day
     }
 }
 
 extension UICalendarViewDataHelper {
     func numberOfMonths() -> Int {
-        return 1
+        var accumulatedMonths: Int = 0
+        
+        data.forEach { yearCache in
+            accumulatedMonths += yearCache.value.count
+        }
+        
+        return accumulatedMonths
     }
     
     func numberOfDays(in month: Int) -> Int {
-        return 10
+        let numberOfYears = month / 12
+        let numberOfMonthsRemaining = month % 12
+        let monthCount = earilestDateIndex.month + numberOfMonthsRemaining
+        let monthCountRemainder = monthCount % 12
+        
+        var year = earilestDateIndex.year + numberOfYears
+        var month = earilestDateIndex.month
+        
+        if monthCount > 12 {
+            year += 1
+            month = monthCountRemainder
+        } else {
+            month = monthCountRemainder
+        }
+        
+        guard
+            let yearCache = data[year],
+            let monthCache = yearCache[month]
+        else {
+            assertionFailure("internal inconsistency - trying to access number of days without having loaded them")
+            return 0
+        }
+        
+        return monthCache.count
     }
 }
