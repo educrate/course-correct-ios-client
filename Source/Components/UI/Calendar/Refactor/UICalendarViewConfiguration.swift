@@ -15,7 +15,7 @@ struct UICalendarViewConfiguration {
     let cellConfiguration: UICalendarViewCellConfguration
     
     init(calendar: Calendar = Calendar(identifier: .gregorian),
-         startDateIndex: UICalendarViewDateIndex = .today,
+         startDateIndex: UICalendarViewDateIndex = .reference,
          heightInPixelsOfOneHour: Int = 30,
          cellConfiguration: UICalendarViewCellConfguration = .default) {
         

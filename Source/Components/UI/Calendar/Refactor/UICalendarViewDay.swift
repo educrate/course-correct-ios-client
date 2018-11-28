@@ -15,4 +15,11 @@ struct UICalendarViewDay {
     
     /// events occurring during this day
     let events: [UICalendarViewEvent]
+    
+    init(date: UICalendarViewDate,
+         events: [UICalendarViewEvent] = []) {
+        
+        self.date = date
+        self.events = events
+    }
 }

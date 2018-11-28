@@ -12,11 +12,18 @@ struct UICalendarViewDate {
     let date: Date
     let dateIndex: UICalendarViewDateIndex
     
-    init?(_ date: Date,
-          calendarHelper: UICalendarViewHelper) {
+    init(date: Date,
+         helper: UICalendarViewHelper) {
        
         self.date = date
-        self.dateIndex = UICalendarViewDateIndex(day: 1, month: 1, year: 2020)
+        self.dateIndex = helper.dateIndex(from: date)
+    }
+    
+    init(dateIndex: UICalendarViewDateIndex,
+         helper: UICalendarViewHelper) {
+        
+        self.date = helper.date(from: dateIndex)
+        self.dateIndex = dateIndex
     }
 }
 

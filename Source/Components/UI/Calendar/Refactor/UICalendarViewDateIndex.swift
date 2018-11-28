@@ -26,5 +26,5 @@ struct UICalendarViewDateIndex {
 extension UICalendarViewDateIndex: Hashable {}
 
 extension UICalendarViewDateIndex {
-    static let today = UICalendarViewDateIndex(day: 1, month: 1, year: 2018)
+    static let reference = UICalendarViewDateIndex(day: 1, month: 1, year: 1970)
 }
