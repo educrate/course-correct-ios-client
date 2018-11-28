@@ -66,6 +66,7 @@ private extension UICalendarViewDataHelper {
                 let newMonth = 12
                 let newDay = helper.days(month: newMonth, year: newYear)
                 
+                // a new month requires an update to the days in current month property
                 daysInCurrentMonth = newDay
                 
                 return UICalendarViewDateIndex(day: newDay, month: newMonth, year: newYear)
@@ -76,6 +77,7 @@ private extension UICalendarViewDataHelper {
                 let newMonth = 12
                 let newDay = helper.days(month: newMonth, year: currentYear)
                 
+                // a new month requires an update to the days in current month property
                 daysInCurrentMonth = newDay
                 
                 return UICalendarViewDateIndex(day: newDay, month: newMonth, year: currentYear)
@@ -119,6 +121,7 @@ private extension UICalendarViewDataHelper {
                 let newMonth = 1
                 let newDay = 1
                 
+                // a new month requires an update to the days in current month property
                 daysInCurrentMonth = helper.days(month: newMonth, year: newYear)
                 
                 return UICalendarViewDateIndex(day: newDay, month: newMonth, year: newYear)
@@ -129,6 +132,7 @@ private extension UICalendarViewDataHelper {
                 let newMonth = referenceDateIndex.month + 1
                 let newDay = 1
                 
+                // a new month requires an update to the days in current month property
                 daysInCurrentMonth = helper.days(month: newMonth, year: currentYear)
                 
                 return UICalendarViewDateIndex(day: newDay, month: newMonth, year: currentYear)
