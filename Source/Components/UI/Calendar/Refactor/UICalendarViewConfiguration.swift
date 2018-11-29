@@ -9,19 +9,16 @@
 import Foundation
 
 struct UICalendarViewConfiguration {
-    let calendar: Calendar
-    let startDateIndex: UICalendarViewDateIndex
-    let heightInPixelsOfOneHour: Int
+    let dataConfiguration: UICalendarViewDataConfiguration
+    let layoutConfiguration: UICalendarViewLayoutConfiguration
     let cellConfiguration: UICalendarViewCellConfguration
     
-    init(calendar: Calendar = Calendar(identifier: .gregorian),
-         startDateIndex: UICalendarViewDateIndex = .earliestDateIndex,
-         heightInPixelsOfOneHour: Int = 30,
+    init(dataConfiguration: UICalendarViewDataConfiguration = .default,
+         layoutConfiguration: UICalendarViewLayoutConfiguration = .default,
          cellConfiguration: UICalendarViewCellConfguration = .default) {
         
-        self.calendar = calendar
-        self.startDateIndex = startDateIndex
-        self.heightInPixelsOfOneHour = heightInPixelsOfOneHour
+        self.dataConfiguration = dataConfiguration
+        self.layoutConfiguration = layoutConfiguration
         self.cellConfiguration = cellConfiguration
     }
 }

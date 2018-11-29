@@ -9,9 +9,9 @@
 import UIKit
 
 class UICalendarViewLayoutCalculator {
-    private let heightOfOneHour: Int
+    private let heightOfOneHour: CGFloat
     
-    init(_ heightInPixelsOfOneHour: Int) {
+    init(_ heightInPixelsOfOneHour: CGFloat) {
         heightOfOneHour = heightInPixelsOfOneHour
     }
 }
@@ -20,8 +20,8 @@ extension UICalendarViewLayoutCalculator {
     func height(for timeInterval: TimeInterval,
                 minimumHeight: CGFloat) -> CGFloat {
         
-        let numberOfHours = timeInterval / UICalendarViewHelper.secondsInAnHour
-        let height = CGFloat(heightOfOneHour) * CGFloat(numberOfHours)
+        let numberOfHours = timeInterval / UICalendarViewDateHelper.secondsInAnHour
+        let height = heightOfOneHour * CGFloat(numberOfHours)
         
         guard height > minimumHeight else {
             return minimumHeight
@@ -33,7 +33,7 @@ extension UICalendarViewLayoutCalculator {
     func height(for numberOfMinutes: Int,
                 minimumHeight: CGFloat) -> CGFloat {
         
-        let numberOfHours = TimeInterval(numberOfMinutes) / UICalendarViewHelper.minutesInAnHour
+        let numberOfHours = TimeInterval(numberOfMinutes) / UICalendarViewDateHelper.minutesInAnHour
         let height = CGFloat(Double(heightOfOneHour) * numberOfHours)
         
         guard height > minimumHeight else {

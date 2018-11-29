@@ -139,8 +139,12 @@
 		BF70B5D8217074C600771E5D /* EnterAccessCodeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D3217074C600771E5D /* EnterAccessCodeProtocols.swift */; };
 		BF70B5D9217074C600771E5D /* EnterAccessCodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D4217074C600771E5D /* EnterAccessCodeInteractor.swift */; };
 		BF70B5DB217074D900771E5D /* EnterAccessCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF70B5DA217074D900771E5D /* EnterAccessCode.storyboard */; };
-		BF7B2C4A21AF4E4D00E91E38 /* UICalendarViewMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C4921AF4E4D00E91E38 /* UICalendarViewMonth.swift */; };
-		BF7B2C4C21AF4E5800E91E38 /* UICalendarViewYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C4B21AF4E5800E91E38 /* UICalendarViewYear.swift */; };
+		BF7B2C4E21B0687900E91E38 /* UICalendarViewDateDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C4D21B0687900E91E38 /* UICalendarViewDateDescription.swift */; };
+		BF7B2C5021B093ED00E91E38 /* UICalendarViewDataConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C4F21B093ED00E91E38 /* UICalendarViewDataConfiguration.swift */; };
+		BF7B2C5221B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C5121B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift */; };
+		BF7B2C5521B0ACCD00E91E38 /* LazyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C5421B0ACCD00E91E38 /* LazyBox.swift */; };
+		BF7B2C5721B0ACFC00E91E38 /* LazyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C5621B0ACFC00E91E38 /* LazyValue.swift */; };
+		BF7B2C5921B0B0DB00E91E38 /* DispatchQueue+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C5821B0B0DB00E91E38 /* DispatchQueue+Labels.swift */; };
 		BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */; };
 		BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeader.swift */; };
 		BFBEAADD21ACF5AB003D19F7 /* UICalendarViewDateIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEAADC21ACF5AB003D19F7 /* UICalendarViewDateIndex.swift */; };
@@ -237,7 +241,7 @@
 		BFFFF30221A5EE2100D2BD62 /* UICalendarViewDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataHelper.swift */; };
 		BFFFF30421A5EE4A00D2BD62 /* UICalendarViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30321A5EE4A00D2BD62 /* UICalendarViewConfiguration.swift */; };
 		BFFFF30621A5F30000D2BD62 /* UICalendarViewLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30521A5F30000D2BD62 /* UICalendarViewLayoutCalculator.swift */; };
-		BFFFF30821A5F61F00D2BD62 /* UICalendarViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30721A5F61F00D2BD62 /* UICalendarViewHelper.swift */; };
+		BFFFF30821A5F61F00D2BD62 /* UICalendarViewDateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30721A5F61F00D2BD62 /* UICalendarViewDateHelper.swift */; };
 		BFFFF30A21A6016F00D2BD62 /* UICalendarViewDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30921A6016F00D2BD62 /* UICalendarViewDayCell.swift */; };
 		BFFFF30C21A6036000D2BD62 /* UICalendarViewDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF30B21A6036000D2BD62 /* UICalendarViewDayCell.xib */; };
 		BFFFF30E21A6144400D2BD62 /* UICalendarViewEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF30D21A6144400D2BD62 /* UICalendarViewEventCell.xib */; };
@@ -397,8 +401,12 @@
 		BF70B5D3217074C600771E5D /* EnterAccessCodeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeProtocols.swift; sourceTree = "<group>"; };
 		BF70B5D4217074C600771E5D /* EnterAccessCodeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeInteractor.swift; sourceTree = "<group>"; };
 		BF70B5DA217074D900771E5D /* EnterAccessCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnterAccessCode.storyboard; sourceTree = "<group>"; };
-		BF7B2C4921AF4E4D00E91E38 /* UICalendarViewMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewMonth.swift; sourceTree = "<group>"; };
-		BF7B2C4B21AF4E5800E91E38 /* UICalendarViewYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewYear.swift; sourceTree = "<group>"; };
+		BF7B2C4D21B0687900E91E38 /* UICalendarViewDateDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDateDescription.swift; sourceTree = "<group>"; };
+		BF7B2C4F21B093ED00E91E38 /* UICalendarViewDataConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataConfiguration.swift; sourceTree = "<group>"; };
+		BF7B2C5121B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewLayoutConfiguration.swift; sourceTree = "<group>"; };
+		BF7B2C5421B0ACCD00E91E38 /* LazyBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBox.swift; sourceTree = "<group>"; };
+		BF7B2C5621B0ACFC00E91E38 /* LazyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyValue.swift; sourceTree = "<group>"; };
+		BF7B2C5821B0B0DB00E91E38 /* DispatchQueue+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Labels.swift"; sourceTree = "<group>"; };
 		BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataSource.swift; sourceTree = "<group>"; };
 		BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewMonthHeader.swift; sourceTree = "<group>"; };
 		BFBEAADC21ACF5AB003D19F7 /* UICalendarViewDateIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDateIndex.swift; sourceTree = "<group>"; };
@@ -501,7 +509,7 @@
 		BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataHelper.swift; sourceTree = "<group>"; };
 		BFFFF30321A5EE4A00D2BD62 /* UICalendarViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewConfiguration.swift; sourceTree = "<group>"; };
 		BFFFF30521A5F30000D2BD62 /* UICalendarViewLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewLayoutCalculator.swift; sourceTree = "<group>"; };
-		BFFFF30721A5F61F00D2BD62 /* UICalendarViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewHelper.swift; sourceTree = "<group>"; };
+		BFFFF30721A5F61F00D2BD62 /* UICalendarViewDateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDateHelper.swift; sourceTree = "<group>"; };
 		BFFFF30921A6016F00D2BD62 /* UICalendarViewDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDayCell.swift; sourceTree = "<group>"; };
 		BFFFF30B21A6036000D2BD62 /* UICalendarViewDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICalendarViewDayCell.xib; sourceTree = "<group>"; };
 		BFFFF30D21A6144400D2BD62 /* UICalendarViewEventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICalendarViewEventCell.xib; sourceTree = "<group>"; };
@@ -862,6 +870,15 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		BF7B2C5321B0ACC000E91E38 /* Lazy */ = {
+			isa = PBXGroup;
+			children = (
+				BF7B2C5421B0ACCD00E91E38 /* LazyBox.swift */,
+				BF7B2C5621B0ACFC00E91E38 /* LazyValue.swift */,
+			);
+			path = Lazy;
+			sourceTree = "<group>";
+		};
 		BFCDA5F321725FDB00DB31FC /* Create Password */ = {
 			isa = PBXGroup;
 			children = (
@@ -883,6 +900,7 @@
 				BFCDA60C2172905800DB31FC /* UINavigationBar+Additions.swift */,
 				BF5004732172F8F800D35B69 /* UIImageView+Additions.swift */,
 				BF5004A22174111C00D35B69 /* UIStoryboard+Identifiers.swift */,
+				BF7B2C5821B0B0DB00E91E38 /* DispatchQueue+Labels.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1111,6 +1129,7 @@
 		BFD82AD1216E7CC700A14868 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				BF7B2C5321B0ACC000E91E38 /* Lazy */,
 				BFD82AD2216E7CD300A14868 /* Result */,
 				BFD82A74216D987E00A14868 /* Networking */,
 				BFD82ABF216DAD9800A14868 /* Interface Builder */,
@@ -1194,10 +1213,8 @@
 				BFFFF2FB21A5EAC100D2BD62 /* UICalendarView.xib */,
 				BFFFF2FD21A5EAD100D2BD62 /* UICalendarView.swift */,
 				BFFFF30321A5EE4A00D2BD62 /* UICalendarViewConfiguration.swift */,
-				BFD0295321509BB2002FB9F5 /* UICalendarViewDay.swift */,
-				BF7B2C4921AF4E4D00E91E38 /* UICalendarViewMonth.swift */,
-				BF7B2C4B21AF4E5800E91E38 /* UICalendarViewYear.swift */,
 				BFFFF30B21A6036000D2BD62 /* UICalendarViewDayCell.xib */,
+				BFD0295321509BB2002FB9F5 /* UICalendarViewDay.swift */,
 				BFFFF30921A6016F00D2BD62 /* UICalendarViewDayCell.swift */,
 				BFFFF31121A8D84100D2BD62 /* UICalendarViewCellConfguration.swift */,
 				BFD0294621509BB2002FB9F5 /* UICalendarViewEvent.swift */,
@@ -1210,10 +1227,13 @@
 				BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */,
 				BFFFF2FF21A5EDFA00D2BD62 /* UICalendarViewBrain.swift */,
 				BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataHelper.swift */,
+				BF7B2C4F21B093ED00E91E38 /* UICalendarViewDataConfiguration.swift */,
 				BFFFF30521A5F30000D2BD62 /* UICalendarViewLayoutCalculator.swift */,
-				BFFFF30721A5F61F00D2BD62 /* UICalendarViewHelper.swift */,
 				BF551659215B374D00D0CBB1 /* UICalendarViewDate.swift */,
 				BFBEAADC21ACF5AB003D19F7 /* UICalendarViewDateIndex.swift */,
+				BF7B2C4D21B0687900E91E38 /* UICalendarViewDateDescription.swift */,
+				BFFFF30721A5F61F00D2BD62 /* UICalendarViewDateHelper.swift */,
+				BF7B2C5121B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift */,
 			);
 			path = Refactor;
 			sourceTree = "<group>";
@@ -1390,6 +1410,7 @@
 				BFF6C28E2184BF60003F7D96 /* OnboardingUserState.swift in Sources */,
 				BF500508217454C600D35B69 /* SignInRouter.swift in Sources */,
 				BF500558217B837600D35B69 /* WalkthroughProtocols.swift in Sources */,
+				BF7B2C5921B0B0DB00E91E38 /* DispatchQueue+Labels.swift in Sources */,
 				BF5004ED21741EAE00D35B69 /* TutorProfilePresenter.swift in Sources */,
 				BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */,
 				BFFFF2EA21A4BCB200D2BD62 /* UIDropDownView.swift in Sources */,
@@ -1406,7 +1427,6 @@
 				BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */,
 				BF1723C821A0BA120060B9CD /* NetworkingExtractableError.swift in Sources */,
 				BFD82AF02170670400A14868 /* EnterStudentIdentifierProtocols.swift in Sources */,
-				BF7B2C4C21AF4E5800E91E38 /* UICalendarViewYear.swift in Sources */,
 				BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */,
 				BF1723B6219D399D0060B9CD /* UIInlinePickerView.swift in Sources */,
 				BF70B5D8217074C600771E5D /* EnterAccessCodeProtocols.swift in Sources */,
@@ -1482,7 +1502,7 @@
 				BFCDA5FC21725FF700DB31FC /* CreatePasswordProtocols.swift in Sources */,
 				BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */,
 				BF5004E321741E9100D35B69 /* SelectTutorViewController.swift in Sources */,
-				BFFFF30821A5F61F00D2BD62 /* UICalendarViewHelper.swift in Sources */,
+				BFFFF30821A5F61F00D2BD62 /* UICalendarViewDateHelper.swift in Sources */,
 				BFF6C2902184C3A0003F7D96 /* AppUserState.swift in Sources */,
 				BF500571217B87C900D35B69 /* CreateEventProtocols.swift in Sources */,
 				BF5004B92174127100D35B69 /* EventPresenter.swift in Sources */,
@@ -1517,6 +1537,9 @@
 				BFFFF30021A5EDFA00D2BD62 /* UICalendarViewBrain.swift in Sources */,
 				BF5004D821741E6900D35B69 /* AddLocationProtocols.swift in Sources */,
 				BFFFF31421A8D89200D2BD62 /* UICalendarViewEventCellConfiguration.swift in Sources */,
+				BF7B2C5721B0ACFC00E91E38 /* LazyValue.swift in Sources */,
+				BF7B2C4E21B0687900E91E38 /* UICalendarViewDateDescription.swift in Sources */,
+				BF7B2C5221B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift in Sources */,
 				BF5005C8217EF4FF00D35B69 /* OnboardingInteractor.swift in Sources */,
 				BF5005C5217EF4FF00D35B69 /* OnboardingRouter.swift in Sources */,
 				BFFFF31221A8D84100D2BD62 /* UICalendarViewCellConfguration.swift in Sources */,
@@ -1538,6 +1561,7 @@
 				BFCDA6112172B48C00DB31FC /* EnterStudentIdentifierError.swift in Sources */,
 				BF1723C4219FBE340060B9CD /* NetworkingError.swift in Sources */,
 				BF50053F217A765200D35B69 /* ManageCardProtocols.swift in Sources */,
+				BF7B2C5521B0ACCD00E91E38 /* LazyBox.swift in Sources */,
 				BFCDA5EF21725E7200DB31FC /* WelcomeProtocols.swift in Sources */,
 				BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */,
 				BFD82AD7216E7D3500A14868 /* ResultAnyError.swift in Sources */,
@@ -1555,7 +1579,6 @@
 				BF500557217B837600D35B69 /* WalkthroughViewController.swift in Sources */,
 				BF5005BB217EEF2000D35B69 /* SignUpRouter.swift in Sources */,
 				BFCDA5EE21725E7200DB31FC /* WelcomeViewController.swift in Sources */,
-				BF7B2C4A21AF4E4D00E91E38 /* UICalendarViewMonth.swift in Sources */,
 				BFF53141219CADA100255CD4 /* UIActionViewConfiguration.swift in Sources */,
 				BFCDA5FB21725FF700DB31FC /* CreatePasswordViewController.swift in Sources */,
 				BFD82AD8216E7D3500A14868 /* ResultNoError.swift in Sources */,
@@ -1580,6 +1603,7 @@
 				BF5005B1217EEE9C00D35B69 /* AppRouter.swift in Sources */,
 				BF5004822173AC2200D35B69 /* ProfileAccountInteractor.swift in Sources */,
 				BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeader.swift in Sources */,
+				BF7B2C5021B093ED00E91E38 /* UICalendarViewDataConfiguration.swift in Sources */,
 				BFFFF2F221A4CFC100D2BD62 /* UIDropDownViewDelegate.swift in Sources */,
 				BF50049A2173EB9B00D35B69 /* ProfileSupportPresenter.swift in Sources */,
 			);

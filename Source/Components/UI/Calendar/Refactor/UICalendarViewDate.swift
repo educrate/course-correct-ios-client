@@ -10,20 +10,29 @@ import Foundation
 
 struct UICalendarViewDate {
     let date: Date
-    let dateIndex: UICalendarViewDateIndex
+    private let helper: UICalendarViewDateHelper
     
-    init(date: Date,
-         helper: UICalendarViewHelper) {
-       
-        self.date = date
-        self.dateIndex = helper.dateIndex(from: date)
+    private let _indices = LazyBox<UICalendarViewDate, UICalendarViewDateIndex> { date in
+        return date.helper.dateIndex(from: date.date)
     }
     
-    init(dateIndex: UICalendarViewDateIndex,
-         helper: UICalendarViewHelper) {
+    private let _descriptions = LazyBox<UICalendarViewDate, UICalendarViewDateDescription> { date in
+        return date.helper.dateDescription(from: date.date, indices: date.indices)
+    }
+    
+    var indices: UICalendarViewDateIndex {
+        return _indices.value(input: self)
+    }
+    
+    var descriptions: UICalendarViewDateDescription {
+        return _descriptions.value(input: self)
+    }
+    
+    init(date: Date,
+         helper: UICalendarViewDateHelper) {
         
-        self.date = helper.date(from: dateIndex)
-        self.dateIndex = dateIndex
+        self.date = date
+        self.helper = helper
     }
 }
 
@@ -31,6 +40,6 @@ extension UICalendarViewDate: Equatable {
     static func == (lhs: UICalendarViewDate,
                     rhs: UICalendarViewDate) -> Bool {
         
-        return lhs.dateIndex == rhs.dateIndex
+        return lhs.indices == rhs.indices
     }
 }

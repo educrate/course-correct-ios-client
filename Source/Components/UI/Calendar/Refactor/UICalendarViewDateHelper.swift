@@ -1,5 +1,5 @@
 //
-//  UICalendarViewHelper.swift
+//  UICalendarViewDateHelper.swift
 //  Client
 //
 //  Created by Ampe on 11/21/18.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-class UICalendarViewHelper {
+class UICalendarViewDateHelper {
     private let calendar: Calendar
     
-    init(_ calendar: Calendar) {
+    init(calendar: Calendar) {
         self.calendar = calendar
     }
 }
 
-extension UICalendarViewHelper {
+extension UICalendarViewDateHelper {
     func dateIndex(from date: Date) -> UICalendarViewDateIndex {
         let components = calendar.dateComponents([.day,
                                                   .month,
@@ -29,7 +29,7 @@ extension UICalendarViewHelper {
             let yearIndex = components.year
         else {
             assertionFailure("internal inconsistency - issue extracting date component")
-            return .earliestDateIndex
+            return .epoch
         }
         
         return UICalendarViewDateIndex(day: dayIndex,
@@ -37,6 +37,32 @@ extension UICalendarViewHelper {
                                        year: yearIndex)
     }
     
+    func dateDescription(from date: Date, indices: UICalendarViewDateIndex) -> UICalendarViewDateDescription {
+        let components = calendar.dateComponents([.weekday],
+                                                 from: date)
+        
+        guard let weekdayIndex = components.weekday else {
+            assertionFailure("internal inconsistency - issue extracting date component")
+            return .epoch
+        }
+        
+        return UICalendarViewDateDescription(dateIndex: indices,
+                                             weekdayIndex: weekdayIndex)
+    }
+    
+    func days(month: Int, year: Int) -> Int {
+        let monthDate = date(from: UICalendarViewDateIndex(day: 1, month: month, year: year))
+        
+        guard let dayRange = calendar.range(of: .day, in: .month, for: monthDate) else {
+            assertionFailure("internal inconsistency - issue determining day range in month")
+            return 0
+        }
+        
+        return dayRange.count
+    }
+}
+
+private extension UICalendarViewDateHelper {
     func date(from dateIndex: UICalendarViewDateIndex) -> Date {
         var components = DateComponents()
         
@@ -51,22 +77,9 @@ extension UICalendarViewHelper {
         
         return date
     }
-    
-    func days(month: Int, year: Int) -> Int {
-        return days(for: date(from: UICalendarViewDateIndex(day: 1, month: month, year: year)))
-    }
-    
-    func days(for monthDate: Date) -> Int {
-        guard let dayRange = calendar.range(of: .day, in: .month, for: monthDate) else {
-            assertionFailure("internal inconsistency - issue determining day range in month")
-            return 0
-        }
-        
-        return dayRange.count
-    }
 }
 
-extension UICalendarViewHelper {
+extension UICalendarViewDateHelper {
     static let secondsInAnHour: TimeInterval = 3600
     static let minutesInAnHour: TimeInterval = 60
 }

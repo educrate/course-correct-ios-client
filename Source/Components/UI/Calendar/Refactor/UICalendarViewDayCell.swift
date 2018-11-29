@@ -57,10 +57,6 @@ extension UICalendarViewDayCell {
         
         collectionView.reloadData()
     }
-    
-    func registerCells() {
-        collectionView.register(xibCell: UICalendarViewEventCell.self)
-    }
 }
 
 // MARK: - Table View Protocol Conformance
@@ -119,5 +115,11 @@ extension UICalendarViewDayCell: UICollectionViewDelegateFlowLayout {
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         return configuration.lineSpacing
+    }
+}
+
+private extension UICalendarViewDayCell {
+    func registerCells() {
+        collectionView.register(xibCell: UICalendarViewEventCell.self)
     }
 }
