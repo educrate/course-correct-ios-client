@@ -34,7 +34,11 @@ class UICalendarViewDayCell: UICollectionViewCell {
     
     /// contains all the events for a single day
     /// one cell per event
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView! {
+        didSet {
+            registerCells()
+        }
+    }
 }
 
 // MARK: - Public Setup Methods
@@ -52,6 +56,10 @@ extension UICalendarViewDayCell {
         detailLabel.text = "Tue"
         
         collectionView.reloadData()
+    }
+    
+    func registerCells() {
+        collectionView.register(xibCell: UICalendarViewEventCell.self)
     }
 }
 

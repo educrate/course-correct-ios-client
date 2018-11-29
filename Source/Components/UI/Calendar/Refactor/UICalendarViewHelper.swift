@@ -29,7 +29,7 @@ extension UICalendarViewHelper {
             let yearIndex = components.year
         else {
             assertionFailure("internal inconsistency - issue extracting date component")
-            return .reference
+            return .earliestDateIndex
         }
         
         return UICalendarViewDateIndex(day: dayIndex,

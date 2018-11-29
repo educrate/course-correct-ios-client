@@ -41,5 +41,6 @@ extension UICalendarViewDateIndex: Comparable {
 }
 
 extension UICalendarViewDateIndex {
-    static let reference = UICalendarViewDateIndex(day: 1, month: 1, year: 1970)
+    static let earliestDateIndex = UICalendarViewDateIndex(day: 1, month: 1, year: 2010)
+    static let latestDateIndex = UICalendarViewDateIndex(day: 31, month: 12, year: 2029)
 }

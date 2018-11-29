@@ -10,34 +10,76 @@ import Foundation
 
 class UICalendarViewDataHelper {
     private let helper: UICalendarViewHelper
-    private var earilestDateIndex: UICalendarViewDateIndex
-    private var currentDateIndex: UICalendarViewDateIndex
-    private var latestDateIndex: UICalendarViewDateIndex
+    private let earliestPossibleDateIndex: UICalendarViewDateIndex
+    private let latestPossibleDateIndex: UICalendarViewDateIndex
+    
+    private var earilestLoadedDateIndex: UICalendarViewDateIndex
+    private var currentlyLoadedDateIndex: UICalendarViewDateIndex
+    private var latestLoadedDateIndex: UICalendarViewDateIndex
     private var daysInCurrentMonth: Int
     private var data: [Int: [Int: [Int: UICalendarViewDay]]]
     
     init(helper: UICalendarViewHelper,
+         earliestPossibleDateIndex: UICalendarViewDateIndex = .earliestDateIndex,
+         latestPossibleDateIndex: UICalendarViewDateIndex = .latestDateIndex,
          startDateIndex: UICalendarViewDateIndex) {
         
         self.helper = helper
-        self.earilestDateIndex = startDateIndex
-        self.currentDateIndex = startDateIndex
-        self.latestDateIndex = startDateIndex
+        self.earliestPossibleDateIndex = earliestPossibleDateIndex
+        self.latestPossibleDateIndex = latestPossibleDateIndex
+        self.earilestLoadedDateIndex = startDateIndex
+        self.currentlyLoadedDateIndex = startDateIndex
+        self.latestLoadedDateIndex = startDateIndex
         self.daysInCurrentMonth = helper.days(month: startDateIndex.month, year: startDateIndex.year)
         self.data = [:]
     }
 }
 
 extension UICalendarViewDataHelper {
+    func dateIndex(for indexPath: IndexPath) -> UICalendarViewDateIndex {
+        let sectionsCount = indexPath.section + 1
+        let year = sectionsCount / 12
+        let month = indexPath.section % 12
+        let day = indexPath.row + 1
+        return UICalendarViewDateIndex(day: day, month: month, year: year)
+    }
+    
+    func months() -> Int {
+        let yearDelta = latestPossibleDateIndex.year - earliestPossibleDateIndex.year
+        let monthsInYearDelta = yearDelta * 12
+        let monthsInFinalYear = latestPossibleDateIndex.month
+        return monthsInYearDelta + monthsInFinalYear
+    }
+    
+    func days(in section: Int) -> Int {
+        let years = fullYears(from: section)
+        let months = monthsInFinalYear(from: section)
+        
+        let year = earliestPossibleDateIndex.year + years
+        let month = earliestPossibleDateIndex.month + months
+        
+        return helper.days(month: month, year: year)
+    }
+    
+    func fullYears(from monthCount: Int) -> Int {
+        return monthCount / 12
+    }
+    
+    func monthsInFinalYear(from monthCount: Int) -> Int {
+        return monthCount % 12
+    }
+}
+
+extension UICalendarViewDataHelper {
     func yesterday() -> UICalendarViewDay {
-        let previousIndex = previousDateIndex(from: currentDateIndex)
+        let previousIndex = previousDateIndex(from: currentlyLoadedDateIndex)
         updateStoredIndices(to: previousIndex)
         
         return day(for: previousIndex)
     }
     
     func tomorrow() -> UICalendarViewDay {
-        let nextIndex = nextDateIndex(from: currentDateIndex)
+        let nextIndex = nextDateIndex(from: currentlyLoadedDateIndex)
         updateStoredIndices(to: nextIndex)
         
         return day(for: nextIndex)
@@ -83,7 +125,7 @@ private extension UICalendarViewDataHelper {
                 // issue with handling number of months in year
             } else {
                 assertionFailure("internal inconsistency - issue handling number of months in a year")
-                return .reference
+                return .earliestDateIndex
             }
             
             // decrement day value by one
@@ -97,7 +139,7 @@ private extension UICalendarViewDataHelper {
             // issue with handling number of days in a month
         } else {
             assertionFailure("internal inconsistency - issue handling number of days in a month")
-            return .reference
+            return .earliestDateIndex
         }
     }
     
@@ -138,7 +180,7 @@ private extension UICalendarViewDataHelper {
                 // issue with handling number of months in year
             } else {
                 assertionFailure("internal inconsistency - issue handling number of months in a year")
-                return .reference
+                return .earliestDateIndex
             }
             
             // increment day value by one
@@ -152,7 +194,7 @@ private extension UICalendarViewDataHelper {
             // issue with handling number of days in a month
         } else {
             assertionFailure("internal inconsistency - issue handling number of days in a month")
-            return .reference
+            return .earliestDateIndex
         }
     }
 }
@@ -176,10 +218,10 @@ private extension UICalendarViewDataHelper {
 
 private extension UICalendarViewDataHelper {
     func updateStoredIndices(to newIndex: UICalendarViewDateIndex) {
-        if newIndex < earilestDateIndex {
+        if newIndex < earilestLoadedDateIndex {
             updateEarilestIndex(to: newIndex)
             updateCurrentIndex(to: newIndex)
-        } else if newIndex > latestDateIndex {
+        } else if newIndex > latestLoadedDateIndex {
             updateLatestIndex(to: newIndex)
             updateCurrentIndex(to: newIndex)
         } else {
@@ -188,25 +230,25 @@ private extension UICalendarViewDataHelper {
     }
     
     func updateEarilestIndex(to newIndex: UICalendarViewDateIndex) {
-        guard newIndex < earilestDateIndex else {
+        guard newIndex < earilestLoadedDateIndex else {
             assertionFailure("internal inconsistency - should not attempt to update earliest index with an older date")
             return
         }
         
-        earilestDateIndex = newIndex
+        earilestLoadedDateIndex = newIndex
     }
     
     func updateCurrentIndex(to newIndex: UICalendarViewDateIndex) {
-        currentDateIndex = newIndex
+        currentlyLoadedDateIndex = newIndex
     }
     
     func updateLatestIndex(to newIndex: UICalendarViewDateIndex) {
-        guard newIndex > latestDateIndex else {
+        guard newIndex > latestLoadedDateIndex else {
             assertionFailure("internal inconsistency - should not attempt to update latest index with an eariler date")
             return
         }
         
-        latestDateIndex = newIndex
+        latestLoadedDateIndex = newIndex
     }
     
     func cache(_ day: UICalendarViewDay) {
@@ -248,11 +290,11 @@ extension UICalendarViewDataHelper {
     func numberOfDays(in month: Int) -> Int {
         let numberOfYears = month / 12
         let numberOfMonthsRemaining = month % 12
-        let monthCount = earilestDateIndex.month + numberOfMonthsRemaining
+        let monthCount = earilestLoadedDateIndex.month + numberOfMonthsRemaining
         let monthCountRemainder = monthCount % 12
         
-        var year = earilestDateIndex.year + numberOfYears
-        var month = earilestDateIndex.month
+        var year = earilestLoadedDateIndex.year + numberOfYears
+        var month = earilestLoadedDateIndex.month
         
         if monthCount > 12 {
             year += 1

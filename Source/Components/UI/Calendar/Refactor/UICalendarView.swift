@@ -25,7 +25,11 @@ class UICalendarView: XIBView {
     /// encompasing table view which holds
     /// the date object as well as the
     /// table view for a single day
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView! {
+        didSet {
+            registerCells()
+        }
+    }
     
     /// flow layout of the collection view
     @IBOutlet private weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
@@ -46,6 +50,10 @@ extension UICalendarView {
         move(to: Date(),
              animated: false)
     }
+    
+    func registerCells() {
+        collectionView.register(xibCell: UICalendarViewDayCell.self)
+    }
 }
 
 // MARK: - Public Update Methods
@@ -59,13 +67,13 @@ extension UICalendarView {
 // MARK: - Table View Data Source Conformation
 extension UICalendarView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return brain.dataSource.numberOfMonths()
+        return brain.dataSource.months()
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
        
-        return brain.dataSource.numberOfDays(in: section)
+        return brain.dataSource.days(in: section)
     }
     
     func collectionView(_ collectionView: UICollectionView,
