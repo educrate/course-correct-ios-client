@@ -1214,8 +1214,8 @@
 				BFFFF2FD21A5EAD100D2BD62 /* UICalendarView.swift */,
 				BFFFF30321A5EE4A00D2BD62 /* UICalendarViewConfiguration.swift */,
 				BFFFF30B21A6036000D2BD62 /* UICalendarViewDayCell.xib */,
-				BFD0295321509BB2002FB9F5 /* UICalendarViewDay.swift */,
 				BFFFF30921A6016F00D2BD62 /* UICalendarViewDayCell.swift */,
+				BFD0295321509BB2002FB9F5 /* UICalendarViewDay.swift */,
 				BFFFF31121A8D84100D2BD62 /* UICalendarViewCellConfguration.swift */,
 				BFD0294621509BB2002FB9F5 /* UICalendarViewEvent.swift */,
 				BFFFF30D21A6144400D2BD62 /* UICalendarViewEventCell.xib */,
@@ -1229,11 +1229,11 @@
 				BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataHelper.swift */,
 				BF7B2C4F21B093ED00E91E38 /* UICalendarViewDataConfiguration.swift */,
 				BFFFF30521A5F30000D2BD62 /* UICalendarViewLayoutCalculator.swift */,
+				BF7B2C5121B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift */,
 				BF551659215B374D00D0CBB1 /* UICalendarViewDate.swift */,
 				BFBEAADC21ACF5AB003D19F7 /* UICalendarViewDateIndex.swift */,
 				BF7B2C4D21B0687900E91E38 /* UICalendarViewDateDescription.swift */,
 				BFFFF30721A5F61F00D2BD62 /* UICalendarViewDateHelper.swift */,
-				BF7B2C5121B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift */,
 			);
 			path = Refactor;
 			sourceTree = "<group>";

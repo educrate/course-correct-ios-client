@@ -43,7 +43,7 @@ extension UICalendarViewDataHelper {
     func dateIndex(for indexPath: IndexPath) -> UICalendarViewDateComponents {
         let sectionsCount = indexPath.section + 1
         let year = (sectionsCount / 12) + earliestPossibleDateIndex.year
-        let month = (sectionsCount % 12)
+        let month = (indexPath.section % 12) + 1
         let day = (indexPath.row + 1)
         return UICalendarViewDateComponents(day: day, month: month, year: year)
     }

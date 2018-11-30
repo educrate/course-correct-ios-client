@@ -110,13 +110,6 @@ extension UICalendarView: UICollectionViewDelegate {
         
         return monthHeader
     }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        willDisplay cell: UICollectionViewCell,
-                        forItemAt indexPath: IndexPath) {
-        
-        
-    }
 }
 
 extension UICalendarView: UICollectionViewDelegateFlowLayout {
@@ -124,8 +117,20 @@ extension UICalendarView: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
+        let dateIndex = brain.dataSource.dateIndex(for: indexPath)
+        
+        guard let dataSource = dataSource else {
+            return .zero
+        }
+        
+        let eventCount = CGFloat(dataSource.events(for: dateIndex).count)
+        
+        guard eventCount > 0 else {
+            return .zero
+        }
+        
         return CGSize(width: collectionView.bounds.width,
-                      height: configuration.cellConfiguration.minimumHeight)
+                      height: ((configuration.cellConfiguration.minimumHeight + configuration.cellConfiguration.interitemSpacing) * eventCount))
     }
     
     func collectionView(_ collectionView: UICollectionView,

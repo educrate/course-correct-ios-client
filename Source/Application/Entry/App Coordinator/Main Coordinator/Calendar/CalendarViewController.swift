@@ -14,11 +14,27 @@ class CalendarViewController: UIViewController, CalendarViewProtocol {
 	var presenter: CalendarPresenterProtocol?
     
     // MARK: View
-    @IBOutlet private weak var calendarView: UICalendarView!
+    @IBOutlet private weak var calendarView: UICalendarView! {
+        didSet {
+            calendarView.dataSource = self
+        }
+    }
     
     // MARK: Deinit Verification
     deinit {
         print("deinitialized calendar screen")
+    }
+}
+
+extension CalendarViewController: UICalendarViewDataSource {
+    func events(for dateIndex: UICalendarViewDateComponents) -> [UICalendarViewEvent] {
+        if dateIndex.day % 5 == 0 {
+            return [UICalendarViewEvent(title: "Physics 101 with Dustin Tran", time: "10 AM-12:30 PM", location: "Langston Library"),
+                    UICalendarViewEvent(title: "Physics 101 with Dustin Tran", time: "10 AM-12:30 PM", location: "Langston Library"),
+                    UICalendarViewEvent(title: "Physics 101 with Dustin Tran", time: "10 AM-12:30 PM", location: "Langston Library")]
+        } else {
+            return []
+        }
     }
 }
 
