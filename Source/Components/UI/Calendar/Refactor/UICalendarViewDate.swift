@@ -10,7 +10,7 @@ import Foundation
 
 struct UICalendarViewDate {
     private let helper: UICalendarViewDateHelper
-    private let indices: UICalendarViewDateIndex
+    private let indices: UICalendarViewDateComponents
     
     private let _descriptions = LazyBox<UICalendarViewDate, UICalendarViewDateDescription> { date in
         return date.helper.dateDescription(from: date.indices)
@@ -21,7 +21,7 @@ struct UICalendarViewDate {
     }
     
     init(helper: UICalendarViewDateHelper,
-         indices: UICalendarViewDateIndex) {
+         indices: UICalendarViewDateComponents) {
         
         self.helper = helper
         self.indices = indices

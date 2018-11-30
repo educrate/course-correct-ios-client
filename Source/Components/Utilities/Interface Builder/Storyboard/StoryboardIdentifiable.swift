@@ -88,7 +88,7 @@ extension UICollectionView {
         return cell
     }
     
-    func dequeueHeaderView<T: UICollectionReusableView>(for indexPath: IndexPath) -> T {
+    func dequeueReusableSupplementaryView<T: UICollectionReusableView>(for indexPath: IndexPath) -> T {
         guard let view = dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: T.storyboardIdentifier, for: indexPath) as? T else {
             fatalError("Cannot dequeue: \(T.self) with identifier: \(T.storyboardIdentifier)")
         }
@@ -96,8 +96,12 @@ extension UICollectionView {
         return view
     }
     
-    func register<T: UICollectionViewCell>(xibCell: T.Type) {
+    func registerCollectionViewCell<T: UICollectionViewCell>(xibCell: T.Type) {
         register(UINib(nibName: T.storyboardIdentifier, bundle: nil), forCellWithReuseIdentifier: T.storyboardIdentifier)
+    }
+    
+    func registerReusableHeaderView<T: UICollectionReusableView>(xibCell: T.Type) {
+        register(UINib(nibName: T.storyboardIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: T.storyboardIdentifier)
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  UICalendarViewDateIndex.swift
+//  UICalendarViewDateComponents.swift
 //  Client
 //
 //  Created by Ampe on 11/26/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UICalendarViewDateIndex {
+struct UICalendarViewDateComponents {
     let day: Int
     let month: Int
     let year: Int
@@ -23,7 +23,7 @@ struct UICalendarViewDateIndex {
     }
 }
 
-extension UICalendarViewDateIndex: Hashable {
+extension UICalendarViewDateComponents: Hashable {
     var hashValue: Int {
         guard let integer = Int("\(year)\(month)\(day)") else {
             assertionFailure("internal inconsistency - issue mapping string to integer")
@@ -34,12 +34,12 @@ extension UICalendarViewDateIndex: Hashable {
     }
 }
 
-extension UICalendarViewDateIndex: Comparable {
-    static func < (lhs: UICalendarViewDateIndex, rhs: UICalendarViewDateIndex) -> Bool {
+extension UICalendarViewDateComponents: Comparable {
+    static func < (lhs: UICalendarViewDateComponents, rhs: UICalendarViewDateComponents) -> Bool {
         return lhs.hashValue < rhs.hashValue
     }
 }
 
-extension UICalendarViewDateIndex {
-    static let epoch = UICalendarViewDateIndex(day: 1, month: 1, year: 1970)
+extension UICalendarViewDateComponents {
+    static let epoch = UICalendarViewDateComponents(day: 1, month: 1, year: 1970)
 }

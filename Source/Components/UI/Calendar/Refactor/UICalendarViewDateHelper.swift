@@ -17,23 +17,23 @@ class UICalendarViewDateHelper {
 }
 
 extension UICalendarViewDateHelper {
-    func dateDescription(from indices: UICalendarViewDateIndex) -> UICalendarViewDateDescription {
-        let calendarDate = date(from: indices)
+    func dateDescription(from dateComponents: UICalendarViewDateComponents) -> UICalendarViewDateDescription {
+        let calendarDate = date(from: dateComponents)
         let components = calendar.dateComponents([.weekday],
                                                  from: calendarDate)
         
-        guard let weekdayIndex = components.weekday else {
+        guard let weekdayComponent = components.weekday else {
             assertionFailure("internal inconsistency - issue extracting date component")
             return .epoch
         }
         
         return UICalendarViewDateDescription(calendar: calendar,
-                                             dateIndex: indices,
-                                             weekdayIndex: weekdayIndex - 1)
+                                             dateComponents: dateComponents,
+                                             weekdayComponent: weekdayComponent)
     }
     
     func days(month: Int, year: Int) -> Int {
-        let monthDate = date(from: UICalendarViewDateIndex(day: 1, month: month, year: year))
+        let monthDate = date(from: UICalendarViewDateComponents(day: 1, month: month, year: year))
         
         guard let dayRange = calendar.range(of: .day, in: .month, for: monthDate) else {
             assertionFailure("internal inconsistency - issue determining day range in month")
@@ -45,12 +45,12 @@ extension UICalendarViewDateHelper {
 }
 
 private extension UICalendarViewDateHelper {
-    func date(from dateIndex: UICalendarViewDateIndex) -> Date {
+    func date(from dateComponents: UICalendarViewDateComponents) -> Date {
         var components = DateComponents()
         
-        components.day = dateIndex.day + 1
-        components.month = dateIndex.month + 1
-        components.year = dateIndex.year + 1
+        components.day = dateComponents.day
+        components.month = dateComponents.month
+        components.year = dateComponents.year
         
         guard let date = calendar.date(from: components) else {
             assertionFailure("internal inconsistency - issue extracting date from components")

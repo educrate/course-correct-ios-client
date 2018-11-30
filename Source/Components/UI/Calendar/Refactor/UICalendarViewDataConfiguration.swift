@@ -10,16 +10,20 @@ import Foundation
 
 struct UICalendarViewDataConfiguration {
     let calendar: Calendar
-    let earliestPossibleDateIndex: UICalendarViewDateIndex
-    let latestPossibleDateIndex: UICalendarViewDateIndex
+    let earliestPossibleDateIndex: UICalendarViewDateComponents
+    let latestPossibleDateIndex: UICalendarViewDateComponents
     
     init(calendar: Calendar = Calendar(identifier: .gregorian),
+         locale: Locale = .current,
          earliestPossibleYear: Int = 2010,
          latestPossibleYear: Int = 2030) {
         
+        var calendar = calendar
+        calendar.locale = locale
+        
         self.calendar = calendar
-        self.earliestPossibleDateIndex = UICalendarViewDateIndex(day: 1, month: 1, year: earliestPossibleYear)
-        self.latestPossibleDateIndex = UICalendarViewDateIndex(day: 31, month: 12, year: latestPossibleYear)
+        self.earliestPossibleDateIndex = UICalendarViewDateComponents(day: 1, month: 1, year: earliestPossibleYear)
+        self.latestPossibleDateIndex = UICalendarViewDateComponents(day: 31, month: 12, year: latestPossibleYear)
     }
 }
 

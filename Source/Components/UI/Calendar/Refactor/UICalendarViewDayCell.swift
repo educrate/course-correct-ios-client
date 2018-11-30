@@ -124,6 +124,6 @@ extension UICalendarViewDayCell: UICollectionViewDelegateFlowLayout {
 
 private extension UICalendarViewDayCell {
     func registerCells() {
-        collectionView.register(xibCell: UICalendarViewEventCell.self)
+        collectionView.registerCollectionViewCell(xibCell: UICalendarViewEventCell.self)
     }
 }

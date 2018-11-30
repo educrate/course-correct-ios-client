@@ -12,10 +12,21 @@ class UICalendarViewMonthHeader: UICollectionReusableView {
     
     // MARK: View Outlets
     @IBOutlet weak var monthLabel: UILabel!
+    
+    // MARK: View Properties
+    private var monthName: String?
 }
 
 extension UICalendarViewMonthHeader {
     func set(_ month: String) {
+        monthName = month
+    }
+    
+    func reload() {
+        guard let month = monthName else {
+            return
+        }
+        
         monthLabel.text = month
     }
 }

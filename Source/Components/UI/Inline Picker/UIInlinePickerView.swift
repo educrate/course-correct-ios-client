@@ -69,7 +69,7 @@ extension UIInlinePickerView: UICollectionViewDataSource {
 
 private extension UIInlinePickerView {
     func registerCell() {
-         collectionView.register(xibCell: UIInlinePickerViewCell.self)
+         collectionView.registerCollectionViewCell(xibCell: UIInlinePickerViewCell.self)
     }
     
     func setUpCollectionViewFlowLayout() {

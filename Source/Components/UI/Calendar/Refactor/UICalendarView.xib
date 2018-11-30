@@ -25,7 +25,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="V4h-48-DPp">
                         <size key="itemSize" width="400" height="100"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="headerReferenceSize" width="50" height="50"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
@@ -38,10 +38,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="JlE-3U-ZOE" firstAttribute="trailing" secondItem="cQz-Xv-xIl" secondAttribute="trailing" id="6Fx-xJ-xSM"/>
+                <constraint firstItem="JlE-3U-ZOE" firstAttribute="trailing" secondItem="29y-qt-6Kv" secondAttribute="trailing" id="6Fx-xJ-xSM"/>
                 <constraint firstItem="JlE-3U-ZOE" firstAttribute="top" secondItem="29y-qt-6Kv" secondAttribute="top" id="7zO-V0-yU8"/>
-                <constraint firstItem="JlE-3U-ZOE" firstAttribute="leading" secondItem="cQz-Xv-xIl" secondAttribute="leading" id="EVt-pl-LVn"/>
-                <constraint firstItem="JlE-3U-ZOE" firstAttribute="bottom" secondItem="cQz-Xv-xIl" secondAttribute="bottom" id="rvg-SZ-hoy"/>
+                <constraint firstItem="JlE-3U-ZOE" firstAttribute="leading" secondItem="29y-qt-6Kv" secondAttribute="leading" id="EVt-pl-LVn"/>
+                <constraint firstItem="JlE-3U-ZOE" firstAttribute="bottom" secondItem="29y-qt-6Kv" secondAttribute="bottom" id="rvg-SZ-hoy"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="cQz-Xv-xIl"/>

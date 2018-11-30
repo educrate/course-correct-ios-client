@@ -18,25 +18,25 @@ struct UICalendarViewDateDescription {
     let dayName: String
     
     init(calendar: Calendar,
-         dateIndex: UICalendarViewDateIndex,
-         weekdayIndex: Int) {
+         dateComponents: UICalendarViewDateComponents,
+         weekdayComponent: Int) {
         
-        self.dayValue = String(dateIndex.day)
-        self.monthValue = String(dateIndex.month)
-        self.yearValue = String(dateIndex.year)
+        self.dayValue = String(dateComponents.day)
+        self.monthValue = String(dateComponents.month)
+        self.yearValue = String(dateComponents.year)
         
         let monthSymbols = calendar.monthSymbols
         let monthSymbolsShort = calendar.shortMonthSymbols
         let weekdaySymbols = calendar.weekdaySymbols
         let weekdaySymbolsShort = calendar.shortWeekdaySymbols
         
-        self.monthNameShort = monthSymbolsShort[dateIndex.month]
-        self.monthName = monthSymbols[dateIndex.month]
-        self.dayNameShort = weekdaySymbols[weekdayIndex]
-        self.dayName = weekdaySymbolsShort[weekdayIndex]
+        self.monthNameShort = monthSymbolsShort[dateComponents.month - 1]
+        self.monthName = monthSymbols[dateComponents.month - 1]
+        self.dayNameShort = weekdaySymbolsShort[weekdayComponent - 1]
+        self.dayName = weekdaySymbols[weekdayComponent - 1]
     }
 }
 
 extension UICalendarViewDateDescription {
-    static let epoch = UICalendarViewDateDescription(calendar: .current, dateIndex: .epoch, weekdayIndex: 3)
+    static let epoch = UICalendarViewDateDescription(calendar: .current, dateComponents: .epoch, weekdayComponent: 4)
 }

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol UICalendarViewDataSource {
-    func events(for dateIndex: UICalendarViewDateIndex) -> [UICalendarViewEvent]
+    func events(for dateIndex: UICalendarViewDateComponents) -> [UICalendarViewEvent]
 }

@@ -27,7 +27,7 @@ class UICalendarView: XIBView {
     /// table view for a single day
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
-            registerCells()
+            registerReusableViews()
         }
     }
     
@@ -51,8 +51,9 @@ extension UICalendarView {
              animated: false)
     }
     
-    func registerCells() {
-        collectionView.register(xibCell: UICalendarViewDayCell.self)
+    func registerReusableViews() {
+        collectionView.registerCollectionViewCell(xibCell: UICalendarViewDayCell.self)
+        collectionView.registerReusableHeaderView(xibCell: UICalendarViewMonthHeader.self)
     }
 }
 
@@ -99,7 +100,13 @@ extension UICalendarView: UICollectionViewDelegate {
                         viewForSupplementaryElementOfKind kind: String,
                         at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let monthHeader: UICalendarViewMonthHeader = collectionView.dequeueHeaderView(for: indexPath)
+        let monthHeader: UICalendarViewMonthHeader = collectionView.dequeueReusableSupplementaryView(for: indexPath)
+        
+        let dateIndex = brain.dataSource.dateIndex(for: indexPath)
+        let date = UICalendarViewDate(helper: brain.dataSource.helper, indices: dateIndex)
+        
+        monthHeader.set("\(date.descriptions.monthName) \(date.descriptions.yearValue)")
+        monthHeader.reload()
         
         return monthHeader
     }
