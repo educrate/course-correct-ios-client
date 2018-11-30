@@ -9,17 +9,34 @@
 import Foundation
 
 struct UICalendarViewDateDescription {
-    let dateIndex: UICalendarViewDateIndex
-    let weekdayIndex: Int
+    let dayValue: String
+    let monthValue: String
+    let yearValue: String
+    let monthNameShort: String
+    let monthName: String
+    let dayNameShort: String
+    let dayName: String
     
-    init(dateIndex: UICalendarViewDateIndex,
+    init(calendar: Calendar,
+         dateIndex: UICalendarViewDateIndex,
          weekdayIndex: Int) {
         
-        self.dateIndex = dateIndex
-        self.weekdayIndex = weekdayIndex
+        self.dayValue = String(dateIndex.day)
+        self.monthValue = String(dateIndex.month)
+        self.yearValue = String(dateIndex.year)
+        
+        let monthSymbols = calendar.monthSymbols
+        let monthSymbolsShort = calendar.shortMonthSymbols
+        let weekdaySymbols = calendar.weekdaySymbols
+        let weekdaySymbolsShort = calendar.shortWeekdaySymbols
+        
+        self.monthNameShort = monthSymbolsShort[dateIndex.month]
+        self.monthName = monthSymbols[dateIndex.month]
+        self.dayNameShort = weekdaySymbols[weekdayIndex]
+        self.dayName = weekdaySymbolsShort[weekdayIndex]
     }
 }
 
 extension UICalendarViewDateDescription {
-    static let epoch = UICalendarViewDateDescription(dateIndex: .epoch, weekdayIndex: 3)
+    static let epoch = UICalendarViewDateDescription(calendar: .current, dateIndex: .epoch, weekdayIndex: 3)
 }

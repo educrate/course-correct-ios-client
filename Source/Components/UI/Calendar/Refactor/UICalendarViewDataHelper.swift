@@ -9,7 +9,7 @@
 import Foundation
 
 class UICalendarViewDataHelper {
-    private let helper: UICalendarViewDateHelper
+    let helper: UICalendarViewDateHelper
     private let earliestPossibleDateIndex: UICalendarViewDateIndex
     private let latestPossibleDateIndex: UICalendarViewDateIndex
     
@@ -43,7 +43,7 @@ extension UICalendarViewDataHelper {
         let sectionsCount = indexPath.section + 1
         let year = sectionsCount / 12
         let month = indexPath.section % 12
-        let day = indexPath.row + 1
+        let day = indexPath.row
         return UICalendarViewDateIndex(day: day, month: month, year: year)
     }
 }

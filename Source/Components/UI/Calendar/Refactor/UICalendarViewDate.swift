@@ -9,30 +9,22 @@
 import Foundation
 
 struct UICalendarViewDate {
-    let date: Date
     private let helper: UICalendarViewDateHelper
-    
-    private let _indices = LazyBox<UICalendarViewDate, UICalendarViewDateIndex> { date in
-        return date.helper.dateIndex(from: date.date)
-    }
+    private let indices: UICalendarViewDateIndex
     
     private let _descriptions = LazyBox<UICalendarViewDate, UICalendarViewDateDescription> { date in
-        return date.helper.dateDescription(from: date.date, indices: date.indices)
-    }
-    
-    var indices: UICalendarViewDateIndex {
-        return _indices.value(input: self)
+        return date.helper.dateDescription(from: date.indices)
     }
     
     var descriptions: UICalendarViewDateDescription {
         return _descriptions.value(input: self)
     }
     
-    init(date: Date,
-         helper: UICalendarViewDateHelper) {
+    init(helper: UICalendarViewDateHelper,
+         indices: UICalendarViewDateIndex) {
         
-        self.date = date
         self.helper = helper
+        self.indices = indices
     }
 }
 

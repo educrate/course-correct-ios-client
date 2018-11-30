@@ -52,8 +52,12 @@ extension UICalendarViewDayCell {
     }
     
     func reload() {
-        titleLabel.text = "16"
-        detailLabel.text = "Tue"
+        guard let day = day else {
+            return
+        }
+        
+        titleLabel.text = day.date.descriptions.dayValue
+        detailLabel.text = day.date.descriptions.dayNameShort
         
         collectionView.reloadData()
     }

@@ -81,6 +81,14 @@ extension UICalendarView: UICollectionViewDataSource {
         
         let cell: UICalendarViewDayCell = collectionView.dequeueReusableCell(for: indexPath)
         
+        let dateIndex = brain.dataSource.dateIndex(for: indexPath)
+        let events = dataSource?.events(for: dateIndex)
+        let date = UICalendarViewDate(helper: brain.dataSource.helper, indices: dateIndex)
+        let day = UICalendarViewDay(date: date, events: events ?? [])
+        
+        cell.set(day)
+        cell.reload()
+        
         return cell
     }
 }
