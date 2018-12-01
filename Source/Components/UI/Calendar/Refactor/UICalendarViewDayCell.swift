@@ -43,10 +43,11 @@ class UICalendarViewDayCell: UICollectionViewCell {
 
 // MARK: - Public Setup Methods
 extension UICalendarViewDayCell {
-    func set(day: UICalendarViewDay,
-             _ configuration: UICalendarViewDayCellConfguration) {
-        
+    func set(_ day: UICalendarViewDay) {
         self.day = day
+    }
+    
+    func set(_ configuration: UICalendarViewDayCellConfguration) {
         self.configuration = configuration
     }
     
@@ -88,7 +89,8 @@ extension UICalendarViewDayCell: UICollectionViewDataSource {
         
         let cell: UICalendarViewEventCell = collectionView.dequeueReusableCell(for: indexPath)
         
-        cell.set(event: event, configuration.eventCellConfiguration)
+        cell.set(event)
+        cell.set(configuration.eventCellConfiguration)
         
         return cell
     }

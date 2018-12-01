@@ -28,10 +28,11 @@ class UICalendarViewEventCell: UICollectionViewCell {
 
 // MARK: - Public Setup Methods
 extension UICalendarViewEventCell {
-    func set(event: UICalendarViewEvent,
-             _ configuration: UICalendarViewEventCellConfiguration) {
-        
+    func set(_ event: UICalendarViewEvent) {
         self.event = event
+    }
+    
+    func set(_ configuration: UICalendarViewEventCellConfiguration) {
         self.configuration = configuration
     }
     
