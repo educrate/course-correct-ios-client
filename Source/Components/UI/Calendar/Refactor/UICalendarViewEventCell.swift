@@ -11,7 +11,12 @@ import UIKit
 class UICalendarViewEventCell: UICollectionViewCell {
     
     // MARK: Properties
+    
+    /// contains the information regarding a single event
     private var event: UICalendarViewEvent?
+    
+    /// contains all the styling for the cell
+    private var configuration: UICalendarViewEventCellConfiguration = .default
     
     // MARK: View Outlets
     @IBOutlet private weak var leftImageView: UIImageView!
@@ -23,8 +28,11 @@ class UICalendarViewEventCell: UICollectionViewCell {
 
 // MARK: - Public Setup Methods
 extension UICalendarViewEventCell {
-    func set(_ calendarEvent: UICalendarViewEvent) {
-        event = calendarEvent
+    func set(event: UICalendarViewEvent,
+             _ configuration: UICalendarViewEventCellConfiguration) {
+        
+        self.event = event
+        self.configuration = configuration
     }
     
     func reload() {
@@ -32,16 +40,12 @@ extension UICalendarViewEventCell {
             return
         }
         
+        layer.cornerRadius = configuration.cornerRadius
+        layer.borderWidth = configuration.borderWidth
+        layer.borderColor = configuration.borderColor.cgColor
+        
         titleLabel.text = event.title
         detailLabel.text = event.time
         infoLabel.text = event.location
-    }
-}
-
-private extension UICalendarViewEventCell {
-    func style(_ configuration: Any) {
-        layer.cornerRadius = 3
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.darkGray.cgColor
     }
 }

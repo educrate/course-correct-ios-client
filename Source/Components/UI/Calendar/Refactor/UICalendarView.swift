@@ -87,7 +87,7 @@ extension UICalendarView: UICollectionViewDataSource {
         let date = UICalendarViewDate(helper: brain.dataSource.helper, indices: dateIndex)
         let day = UICalendarViewDay(date: date, events: events ?? [])
         
-        cell.set(day)
+        cell.set(day: day, configuration.cellConfiguration)
         cell.reload()
         
         return cell

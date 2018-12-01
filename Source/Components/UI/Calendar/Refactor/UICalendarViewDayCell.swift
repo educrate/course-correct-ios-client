@@ -20,7 +20,7 @@ class UICalendarViewDayCell: UICollectionViewCell {
     private var day: UICalendarViewDay?
     
     /// contains all the styling for the cell
-    private var configuration: UICalendarViewCellConfguration = .default
+    private var configuration: UICalendarViewDayCellConfguration = .default
     
     // MARK: View Outlets
     
@@ -43,12 +43,11 @@ class UICalendarViewDayCell: UICollectionViewCell {
 
 // MARK: - Public Setup Methods
 extension UICalendarViewDayCell {
-    func set(_ calendarDay: UICalendarViewDay) {
-        day = calendarDay
-    }
-    
-    func set(_ newConfiguration: UICalendarViewCellConfguration) {
-        configuration = newConfiguration
+    func set(day: UICalendarViewDay,
+             _ configuration: UICalendarViewDayCellConfguration) {
+        
+        self.day = day
+        self.configuration = configuration
     }
     
     func reload() {
@@ -89,8 +88,7 @@ extension UICalendarViewDayCell: UICollectionViewDataSource {
         
         let cell: UICalendarViewEventCell = collectionView.dequeueReusableCell(for: indexPath)
         
-        cell.set(event)
-        cell.reload()
+        cell.set(event: event, configuration.eventCellConfiguration)
         
         return cell
     }

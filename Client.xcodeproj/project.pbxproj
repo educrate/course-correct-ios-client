@@ -246,7 +246,7 @@
 		BFFFF30C21A6036000D2BD62 /* UICalendarViewDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF30B21A6036000D2BD62 /* UICalendarViewDayCell.xib */; };
 		BFFFF30E21A6144400D2BD62 /* UICalendarViewEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF30D21A6144400D2BD62 /* UICalendarViewEventCell.xib */; };
 		BFFFF31021A6145300D2BD62 /* UICalendarViewEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30F21A6145300D2BD62 /* UICalendarViewEventCell.swift */; };
-		BFFFF31221A8D84100D2BD62 /* UICalendarViewCellConfguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF31121A8D84100D2BD62 /* UICalendarViewCellConfguration.swift */; };
+		BFFFF31221A8D84100D2BD62 /* UICalendarViewDayCellConfguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF31121A8D84100D2BD62 /* UICalendarViewDayCellConfguration.swift */; };
 		BFFFF31421A8D89200D2BD62 /* UICalendarViewEventCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF31321A8D89200D2BD62 /* UICalendarViewEventCellConfiguration.swift */; };
 		BFFFF31621A8DA4E00D2BD62 /* UICalendarViewMonthHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF31521A8DA4E00D2BD62 /* UICalendarViewMonthHeader.xib */; };
 /* End PBXBuildFile section */
@@ -514,7 +514,7 @@
 		BFFFF30B21A6036000D2BD62 /* UICalendarViewDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICalendarViewDayCell.xib; sourceTree = "<group>"; };
 		BFFFF30D21A6144400D2BD62 /* UICalendarViewEventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICalendarViewEventCell.xib; sourceTree = "<group>"; };
 		BFFFF30F21A6145300D2BD62 /* UICalendarViewEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewEventCell.swift; sourceTree = "<group>"; };
-		BFFFF31121A8D84100D2BD62 /* UICalendarViewCellConfguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewCellConfguration.swift; sourceTree = "<group>"; };
+		BFFFF31121A8D84100D2BD62 /* UICalendarViewDayCellConfguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDayCellConfguration.swift; sourceTree = "<group>"; };
 		BFFFF31321A8D89200D2BD62 /* UICalendarViewEventCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewEventCellConfiguration.swift; sourceTree = "<group>"; };
 		BFFFF31521A8DA4E00D2BD62 /* UICalendarViewMonthHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICalendarViewMonthHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1216,7 +1216,7 @@
 				BFFFF30B21A6036000D2BD62 /* UICalendarViewDayCell.xib */,
 				BFFFF30921A6016F00D2BD62 /* UICalendarViewDayCell.swift */,
 				BFD0295321509BB2002FB9F5 /* UICalendarViewDay.swift */,
-				BFFFF31121A8D84100D2BD62 /* UICalendarViewCellConfguration.swift */,
+				BFFFF31121A8D84100D2BD62 /* UICalendarViewDayCellConfguration.swift */,
 				BFD0294621509BB2002FB9F5 /* UICalendarViewEvent.swift */,
 				BFFFF30D21A6144400D2BD62 /* UICalendarViewEventCell.xib */,
 				BFFFF30F21A6145300D2BD62 /* UICalendarViewEventCell.swift */,
@@ -1542,7 +1542,7 @@
 				BF7B2C5221B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift in Sources */,
 				BF5005C8217EF4FF00D35B69 /* OnboardingInteractor.swift in Sources */,
 				BF5005C5217EF4FF00D35B69 /* OnboardingRouter.swift in Sources */,
-				BFFFF31221A8D84100D2BD62 /* UICalendarViewCellConfguration.swift in Sources */,
+				BFFFF31221A8D84100D2BD62 /* UICalendarViewDayCellConfguration.swift in Sources */,
 				BFF53131219B6EFB00255CD4 /* XIBView.swift in Sources */,
 				BF50046D2172F09700D35B69 /* ProfileOverviewProtocols.swift in Sources */,
 				BFF5313D219CAC9100255CD4 /* UIActionViewCell.swift in Sources */,

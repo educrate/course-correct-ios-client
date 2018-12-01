@@ -1,5 +1,5 @@
 //
-//  UICalendarViewCellConfguration.swift
+//  UICalendarViewDayCellConfguration.swift
 //  Client
 //
 //  Created by Ampe on 11/23/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct UICalendarViewCellConfguration {
+struct UICalendarViewDayCellConfguration {
     let minimumHeight: CGFloat
     let interitemSpacing: CGFloat
     let lineSpacing: CGFloat
@@ -26,6 +26,6 @@ struct UICalendarViewCellConfguration {
     }
 }
 
-extension UICalendarViewCellConfguration {
-    static let `default` = UICalendarViewCellConfguration()
+extension UICalendarViewDayCellConfguration {
+    static let `default` = UICalendarViewDayCellConfguration()
 }
