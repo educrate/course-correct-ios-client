@@ -21,6 +21,14 @@ class UICalendarViewDataHelper {
 }
 
 extension UICalendarViewDataHelper: UICalendarViewDateDataSource {
+    func numberOfMonths() -> Int {
+        return 12
+    }
+    
+    func numberOfDays(in section: Int) -> Int {
+        return 30
+    }
+    
     func date(for indexPath: IndexPath) -> UICalendarViewDate {
         let comp = UICalendarViewDateComponents(day: 3, month: 12, year: 2018)
         let desc = dateHelper.dateDescription(from: comp)

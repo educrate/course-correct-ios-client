@@ -1,5 +1,5 @@
 //
-//  UICalendarViewMonthHeader.swift
+//  UICalendarViewMonthHeaderView.swift
 //  Client
 //
 //  Created by Christian Ampe on 10/2/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UICalendarViewMonthHeader: UICollectionReusableView {
+class UICalendarViewMonthHeaderView: UICollectionReusableView {
     
     // MARK: View Outlets
     @IBOutlet weak var monthLabel: UILabel!
@@ -17,7 +17,7 @@ class UICalendarViewMonthHeader: UICollectionReusableView {
     private var monthName: String?
 }
 
-extension UICalendarViewMonthHeader {
+extension UICalendarViewMonthHeaderView {
     func set(_ month: String) {
         monthName = month
     }

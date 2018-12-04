@@ -10,16 +10,6 @@ import UIKit
 
 class UICalendarView: XIBView {
     
-    // MARK: Properties
-    
-    /// controlls all internal computation
-    /// necessary for setting up the calendar
-    private let brain: UICalendarViewBrain = .default
-    
-    /// configuration of the calendar view
-    /// and configurations of subviews
-    private let configuration: UICalendarViewConfiguration = .default
-    
     // MARK: View Outlets
     
     /// encompasing table view which holds
@@ -33,6 +23,16 @@ class UICalendarView: XIBView {
     
     /// flow layout of the collection view
     @IBOutlet private weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
+    // MARK: Properties
+    
+    /// controlls all internal computation
+    /// necessary for setting up the calendar
+    private let brain: UICalendarViewBrain = .default
+    
+    /// configuration of the calendar view
+    /// and configurations of subviews
+    private let configuration: UICalendarViewConfiguration = .default
     
     // MARK: Internal Protocols
     
@@ -69,7 +69,7 @@ extension UICalendarView {
     
     func registerReusableViews() {
         collectionView.registerCollectionViewCell(xibCell: UICalendarViewDayCell.self)
-        collectionView.registerReusableHeaderView(xibCell: UICalendarViewMonthHeader.self)
+        collectionView.registerReusableHeaderView(xibCell: UICalendarViewMonthHeaderView.self)
     }
 }
 
@@ -114,7 +114,7 @@ extension UICalendarView: UICollectionViewDelegate {
                         viewForSupplementaryElementOfKind kind: String,
                         at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let monthHeader: UICalendarViewMonthHeader = collectionView.dequeueReusableSupplementaryView(for: indexPath)
+        let monthHeader: UICalendarViewMonthHeaderView = collectionView.dequeueReusableSupplementaryView(for: indexPath)
         let date = dateDataSource.date(for: indexPath)
         
         monthHeader.set("\(date.descriptions.monthName) \(date.descriptions.yearValue)")
