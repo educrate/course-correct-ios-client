@@ -19,10 +19,20 @@ class UICalendarViewEventCell: UICollectionViewCell {
     private var configuration: UICalendarViewEventCellConfiguration = .default
     
     // MARK: - View Outlets
+    
+    /// Image to be displayed on the left of the event cell.
     @IBOutlet private weak var leftImageView: UIImageView!
+    
+    /// Title to be displayed in the event cell.
     @IBOutlet private weak var titleLabel: UILabel!
+    
+    /// Detail information to be displayed in the event cell below the title label.
     @IBOutlet private weak var detailLabel: UILabel!
+   
+    /// Additional information to be displayed in the event cell below the detail label.
     @IBOutlet private weak var infoLabel: UILabel!
+    
+    /// Image to be displayed on the right of the event cell.
     @IBOutlet private weak var rightImageView: UIImageView!
 }
 
