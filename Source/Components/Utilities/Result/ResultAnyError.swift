@@ -8,10 +8,11 @@
 
 import Foundation
 
-/// A type-erased error which wraps an arbitrary error instance. This should be
-/// useful for generic contexts.
+/// A type-erased error which wraps an arbitrary error instance.
+/// This should be useful for generic contexts.
 struct ResultAnyError: Swift.Error {
-	/// The underlying error.
+	
+    /// The underlying error.
 	let error: Swift.Error
 
 	init(_ error: Swift.Error) {

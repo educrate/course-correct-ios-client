@@ -20,6 +20,7 @@ protocol ResultProtocol {
 }
 
 extension Result {
+    
 	/// Returns the value if self represents a success, `nil` otherwise.
 	var value: Value? {
 		switch self {
@@ -77,16 +78,16 @@ extension Result {
 	}
 }
 
+// MARK: - Higher Order Functions
+
 extension Result {
 
-	// MARK: Higher-order functions
-
-	/// Returns `self.value` if this result is a .Success, or the given value otherwise. Equivalent with `??`
+	/// Returns `self.value` if this result is a .Success, or the given value otherwise. Equivalent with `??`.
 	func recover(_ value: @autoclosure () -> Value) -> Value {
 		return self.value ?? value()
 	}
 
-	/// Returns this result if it is a .Success, or the given result otherwise. Equivalent with `??`
+	/// Returns this result if it is a .Success, or the given result otherwise. Equivalent with `??`.
 	func recover(with result: @autoclosure () -> Result<Value, Error>) -> Result<Value, Error> {
 		switch self {
 		case .success: return self
@@ -118,9 +119,10 @@ extension Result where Error: ErrorConvertible {
 }
 
 // MARK: - Operators
-
 extension Result where Value: Equatable, Error: Equatable {
-	/// Returns `true` if `left` and `right` are both `Success`es and their values are equal, or if `left` and `right` are both `Failure`s and their errors are equal.
+	
+    /// Returns `true` if `left` and `right` are both `Success`es and their values are equal
+    /// or if `left` and `right` are both `Failure`s and their errors are equal.
 	static func ==(left: Result<Value, Error>, right: Result<Value, Error>) -> Bool {
 		if let left = left.value, let right = right.value {
 			return left == right
@@ -131,19 +133,11 @@ extension Result where Value: Equatable, Error: Equatable {
 	}
 }
 
-#if swift(>=4.1)
-	extension Result: Equatable where Value: Equatable, Error: Equatable { }
-#else
-	extension Result where Value: Equatable, Error: Equatable {
-		/// Returns `true` if `left` and `right` represent different cases, or if they represent the same case but different values.
-		static func !=(left: Result<Value, Error>, right: Result<Value, Error>) -> Bool {
-			return !(left == right)
-		}
-	}
-#endif
+extension Result: Equatable where Value: Equatable, Error: Equatable {}
 
 extension Result {
-	/// Returns the value of `left` if it is a `Success`, or `right` otherwise. Short-circuits.
+	
+    /// Returns the value of `left` if it is a `Success`, or `right` otherwise. Short-circuits.
 	static func ??(left: Result<Value, Error>, right: @autoclosure () -> Value) -> Value {
 		return left.recover(right())
 	}
@@ -154,7 +148,6 @@ extension Result {
 	}
 }
 
-// MARK: - migration support
-
+// MARK: - Migration Support
 @available(*, unavailable, renamed: "ErrorConvertible")
 protocol ErrorProtocolConvertible: ErrorConvertible {}
