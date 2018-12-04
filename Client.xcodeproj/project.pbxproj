@@ -1126,11 +1126,10 @@
 		BFD0296321509C02002FB9F5 /* Credit Card */ = {
 			isa = PBXGroup;
 			children = (
-				BF70B2CE21B73DCD001E550D /* Configurations */,
-				BF70B2CD21B73DC2001E550D /* Models */,
 				BF70B2CB21B73DA5001E550D /* Interfaces */,
 				BF70B2CC21B73DB4001E550D /* Views */,
-				BFF531272199E42800255CD4 /* View */,
+				BF70B2CD21B73DC2001E550D /* Models */,
+				BF70B2CE21B73DCD001E550D /* Configurations */,
 				BFD0297921509C53002FB9F5 /* Validator */,
 			);
 			path = "Credit Card";
@@ -1297,13 +1296,6 @@
 				BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */,
 			);
 			path = "Enter Student Identifier";
-			sourceTree = "<group>";
-		};
-		BFF531272199E42800255CD4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		BFF5312E219B6ED800255CD4 /* Storyboard */ = {
