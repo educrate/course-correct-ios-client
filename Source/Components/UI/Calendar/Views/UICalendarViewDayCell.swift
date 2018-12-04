@@ -8,49 +8,62 @@
 
 import UIKit
 
-/// this cell holds all the data for a single calendar day
-/// contains a date label on the left
-/// contains a table view in the middle
+/// This cell holds all the data for a single calendar day.
+/// It contains a date label on the left.
+/// It contains a table view in the middle.
 class UICalendarViewDayCell: UICollectionViewCell {
     
-    // MARK: Properties
+    // MARK: - Properties
     
-    /// contains necessary information to
-    /// set up the day collection view
+    /// Contains necessary information to
+    /// set up the day collection view.
     private var day: UICalendarViewDay?
     
-    /// contains all the styling for the cell
+    /// Contains all the styling for the cell.
     private var configuration: UICalendarViewDayCellConfguration = .default
     
-    // MARK: View Outlets
+    // MARK: - View Outlets
     
-    /// holds the information surrounding
-    /// the day of the month
+    /// Holds the information surrounding
+    /// the day of the month.
     @IBOutlet private weak var titleLabel: UILabel!
     
-    /// holds the information surrounding
-    /// the day of the week
+    /// Holds the information surrounding
+    /// the day of the week.
     @IBOutlet private weak var detailLabel: UILabel!
     
-    /// contains all the events for a single day
-    /// one cell per event
-    @IBOutlet private weak var collectionView: UICollectionView! {
-        didSet {
-            registerCells()
-        }
+    /// Contains all the events for a single day.
+    /// One cell per event.
+    @IBOutlet private weak var collectionView: UICollectionView!
+}
+
+// MARK: - View Lifecycle
+extension UICalendarViewDayCell {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        registerCells()
     }
 }
 
 // MARK: - Public Setup Methods
 extension UICalendarViewDayCell {
+    
+    /// Method used for setting the day property.
+    ///
+    /// - Parameter day: Contains information regarding the specifc cell's day.
     func set(_ day: UICalendarViewDay) {
         self.day = day
     }
     
+    /// Method used for setting the configuration of this cell.
+    ///
+    /// - Parameter configuration: Contains information regarding the setup of this cell.
     func set(_ configuration: UICalendarViewDayCellConfguration) {
         self.configuration = configuration
     }
     
+    /// Method used to reload all inputs on the cell.
+    /// Call after setting the day or configuration.
     func reload() {
         guard let day = day else {
             return
@@ -63,7 +76,7 @@ extension UICalendarViewDayCell {
     }
 }
 
-// MARK: - Table View Protocol Conformance
+// MARK: - Table View Data Source Implementation
 extension UICalendarViewDayCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let day = day else {
@@ -96,6 +109,7 @@ extension UICalendarViewDayCell: UICollectionViewDataSource {
     }
 }
 
+// MARK: - Flow Layout Implementation
 extension UICalendarViewDayCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
@@ -122,7 +136,10 @@ extension UICalendarViewDayCell: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: - Private Helper MethodsH
 private extension UICalendarViewDayCell {
+    
+    /// Used to register the cells contained in the calendar collection view.
     func registerCells() {
         collectionView.registerCollectionViewCell(xibCell: UICalendarViewEventCell.self)
     }

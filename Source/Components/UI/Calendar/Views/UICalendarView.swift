@@ -75,15 +75,16 @@ extension UICalendarView {
         super.awakeFromNib()
         registerReusableViews()
     }
-    
-    func registerReusableViews() {
-        collectionView.registerCollectionViewCell(xibCell: UICalendarViewDayCell.self)
-        collectionView.registerReusableHeaderView(xibCell: UICalendarViewMonthHeaderView.self)
-    }
 }
 
 // MARK: - Public Update Methods
 extension UICalendarView {
+    
+    /// Scrolls the calendar to the specified date.
+    ///
+    /// - Parameters:
+    ///   - dateComponents: Components representing the date you want to scroll to.
+    ///   - animated: Flag determing whether to perform this operation animated or not.
     func move(to dateComponents: UICalendarViewDateComponents,
                 animated: Bool = true) {
         
@@ -184,5 +185,15 @@ extension UICalendarView: UICollectionViewDelegateFlowLayout {
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         return configuration.cellConfiguration.lineSpacing
+    }
+}
+
+// MARK: - Private Helper Methods
+private extension UICalendarView {
+    
+    /// Used to register the cells contained in the calendar collection view.
+    func registerReusableViews() {
+        collectionView.registerCollectionViewCell(xibCell: UICalendarViewDayCell.self)
+        collectionView.registerReusableHeaderView(xibCell: UICalendarViewMonthHeaderView.self)
     }
 }

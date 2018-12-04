@@ -10,15 +10,15 @@ import UIKit
 
 class UICalendarViewEventCell: UICollectionViewCell {
     
-    // MARK: Properties
+    // MARK: - Properties
     
-    /// contains the information regarding a single event
+    /// Contains the information regarding a single event.
     private var event: UICalendarViewEvent?
     
-    /// contains all the styling for the cell
+    /// Contains all the styling for the cell.
     private var configuration: UICalendarViewEventCellConfiguration = .default
     
-    // MARK: View Outlets
+    // MARK: - View Outlets
     @IBOutlet private weak var leftImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var detailLabel: UILabel!
@@ -28,14 +28,23 @@ class UICalendarViewEventCell: UICollectionViewCell {
 
 // MARK: - Public Setup Methods
 extension UICalendarViewEventCell {
+    
+    /// Method used for setting the day property.
+    ///
+    /// - Parameter event: Contains information pertinent the specifc event.
     func set(_ event: UICalendarViewEvent) {
         self.event = event
     }
     
+    /// Method used for setting the configuration of this cell.
+    ///
+    /// - Parameter configuration: Contains information regarding the setup of this cell.
     func set(_ configuration: UICalendarViewEventCellConfiguration) {
         self.configuration = configuration
     }
     
+    /// Method used to reload all inputs on the cell.
+    /// Call after setting the event or configuration.
     func reload() {
         guard let event = event else {
             return

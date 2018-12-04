@@ -10,23 +10,30 @@ import UIKit
 
 class UICalendarViewMonthHeaderView: UICollectionReusableView {
     
-    // MARK: View Outlets
+    // MARK: - View Outlets
     @IBOutlet weak var monthLabel: UILabel!
     
-    // MARK: View Properties
+    // MARK: - View Properties
     private var monthName: String?
 }
 
+// MARK: - Public Setup Methods
 extension UICalendarViewMonthHeaderView {
-    func set(_ month: String) {
-        monthName = month
+    
+    /// Method used for setting the month's description property.
+    ///
+    /// - Parameter monthName: Contains the description of the current month.
+    func set(_ monthName: String) {
+        self.monthName = monthName
     }
     
+    /// Method used to reload all inputs on the cell.
+    /// Call after setting the event or configuration.
     func reload() {
-        guard let month = monthName else {
+        guard let monthName = monthName else {
             return
         }
         
-        monthLabel.text = month
+        monthLabel.text = monthName
     }
 }
