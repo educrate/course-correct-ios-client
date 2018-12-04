@@ -13,10 +13,7 @@ class UICalendarViewBrain {
     let layoutCalculator: UICalendarViewLayoutCalculator
     
     init(configuration: UICalendarViewConfiguration = .default) {
-        dataSource = UICalendarViewDataHelper(helper: UICalendarViewDateHelper(calendar: configuration.dataConfiguration.calendar),
-                                              earliestPossibleDateIndex: configuration.dataConfiguration.earliestPossibleDateIndex,
-                                              latestPossibleDateIndex: configuration.dataConfiguration.latestPossibleDateIndex)
-        
+        dataSource = UICalendarViewDataHelper(calendar: configuration.dataConfiguration.calendar)
         layoutCalculator = UICalendarViewLayoutCalculator(configuration.layoutConfiguration.heightInPixelsOfOneHour)
     }
 }

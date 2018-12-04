@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol UICalendarViewDataSource {
-    func events(for dateIndex: UICalendarViewDateComponents) -> [UICalendarViewEvent]
+protocol UICalendarViewDataSource: class {
+    func events(for components: UICalendarViewDateComponents) -> [UICalendarViewEvent]
 }

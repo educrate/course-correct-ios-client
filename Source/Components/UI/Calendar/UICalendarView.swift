@@ -34,21 +34,37 @@ class UICalendarView: XIBView {
     /// flow layout of the collection view
     @IBOutlet private weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
-    // MARK: Protocols
+    // MARK: Internal Protocols
+    
+    /// delegate for the calendar collection layout
+    private weak var layoutDelegate: UICalendarViewLayoutDelegate!
+    
+    /// data source for the calendar date formatting
+    private weak var dateDataSource: UICalendarViewDateDataSource!
+    
+    // MARK: External Protocols
     
     /// delegate for the calendar collection
-    var delegate: UICalendarViewDelegate?
+    weak var delegate: UICalendarViewDelegate?
     
     /// data source for the calendar collection
-    var dataSource: UICalendarViewDataSource?
+    weak var dataSource: UICalendarViewDataSource?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        dateDataSource = brain.dataSource
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        dateDataSource = brain.dataSource
+    }
 }
 
 // MARK: - View Lifecycle
 extension UICalendarView {
     override func awakeFromNib() {
         super.awakeFromNib()
-        move(to: Date(),
-             animated: false)
     }
     
     func registerReusableViews() {
@@ -59,7 +75,7 @@ extension UICalendarView {
 
 // MARK: - Public Update Methods
 extension UICalendarView {
-    func move(to newDate: Date,
+    func move(to dateComponents: UICalendarViewDateComponents,
                 animated: Bool = true) {
         // todo
     }
@@ -68,24 +84,21 @@ extension UICalendarView {
 // MARK: - Table View Data Source Conformation
 extension UICalendarView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return brain.dataSource.months()
+        return dateDataSource.numberOfMonths()
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-       
-        return brain.dataSource.days(in: section)
+        return dateDataSource.numberOfDays(in: section)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell: UICalendarViewDayCell = collectionView.dequeueReusableCell(for: indexPath)
-        
-        let dateIndex = brain.dataSource.dateIndex(for: indexPath)
-        let events = dataSource?.events(for: dateIndex)
-        let date = UICalendarViewDate(helper: brain.dataSource.helper, indices: dateIndex)
-        let day = UICalendarViewDay(date: date, events: events ?? [])
+        let date = dateDataSource.date(for: indexPath)
+        let events = dataSource?.events(for: date.components) ?? []
+        let day = UICalendarViewDay(date: date, events: events)
         
         cell.set(day)
         cell.set(configuration.cellConfiguration)
@@ -102,9 +115,7 @@ extension UICalendarView: UICollectionViewDelegate {
                         at indexPath: IndexPath) -> UICollectionReusableView {
         
         let monthHeader: UICalendarViewMonthHeader = collectionView.dequeueReusableSupplementaryView(for: indexPath)
-        
-        let dateIndex = brain.dataSource.dateIndex(for: indexPath)
-        let date = UICalendarViewDate(helper: brain.dataSource.helper, indices: dateIndex)
+        let date = dateDataSource.date(for: indexPath)
         
         monthHeader.set("\(date.descriptions.monthName) \(date.descriptions.yearValue)")
         monthHeader.reload()
@@ -118,13 +129,13 @@ extension UICalendarView: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let dateIndex = brain.dataSource.dateIndex(for: indexPath)
+        let date = dateDataSource.date(for: indexPath)
         
         guard let dataSource = dataSource else {
             return .zero
         }
         
-        let eventCount = CGFloat(dataSource.events(for: dateIndex).count)
+        let eventCount = CGFloat(dataSource.events(for: date.components).count)
         
         guard eventCount > 0 else {
             return .zero
