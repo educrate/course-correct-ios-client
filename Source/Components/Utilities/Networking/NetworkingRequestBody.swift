@@ -10,20 +10,20 @@ import Foundation
 
 // MARK: - Request Body Object Declaration
 
-/// the object responsible for holding the http request body
+/// The object responsible for holding the http request body.
 struct NetworkingRequestBody {
     
-    /// type of data encoding applied to the data object
+    /// Type of data encoding applied to the data object.
     let encoding: NetworkingRequestBodyEncodingType
     
-    /// encoded data to be passed in the http body
+    /// Encoded data to be passed in the http body.
     let data: Data
     
-    /// explicit initializer
+    /// Explicit initializer.
     ///
     /// - Parameters:
-    ///   - encoding: type of data encoding applied to the data object
-    ///   - data: information being passed in the http body
+    ///   - encoding: Type of data encoding applied to the data object.
+    ///   - data: Information being passed in the http body.
     init(encoding: NetworkingRequestBodyEncodingType,
          data: Data) {
         
@@ -35,9 +35,9 @@ struct NetworkingRequestBody {
 // MARK: - Helper Initializers
 extension NetworkingRequestBody {
     
-    /// extractable optional initializer
+    /// Extractable optional initializer.
     ///
-    /// - Parameter extractable: object to be passed in the request body
+    /// - Parameter extractable: Object to be passed in the request body.
     init?<E: NetworkingExtractable>(_ extractable: E) {
         switch E.encode(extractable) {
         case .success(let data):

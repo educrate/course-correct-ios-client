@@ -11,16 +11,14 @@ import Foundation
 // MARK: - Request Body Encoding Type Enumeration
 enum NetworkingRequestBodyEncodingType {
     
-    /// json encoded request body
-    /// header key - content-type
-    /// header value - application/json
+    /// JSON encoded request body.
     case jsonEncoded
 }
 
 // MARK: - Computed Variables
 extension NetworkingRequestBodyEncodingType {
     
-    /// value of the content-type header
+    /// Value of the content-type header.
     var contentTypeValue: String {
         switch self {
         case .jsonEncoded:
@@ -32,6 +30,6 @@ extension NetworkingRequestBodyEncodingType {
 // MARK: - Static Storage
 extension NetworkingRequestBodyEncodingType {
     
-    /// key for content-type header
+    /// Key for content-type header.
     static let contentTypeKey = "Content-Type"
 }

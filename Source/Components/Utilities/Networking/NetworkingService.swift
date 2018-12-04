@@ -10,17 +10,17 @@ import Foundation
 
 class NetworkingService {
     
-    /// url session used to make all network requests
+    /// URL session used to make all network requests.
     private let session = URLSession(configuration: .default)
 }
 
 extension NetworkingService {
     
-    /// core method for making a network request
+    /// Core method for making a network request.
     ///
     /// - Parameters:
-    ///   - request: a request object containing all information necessary for making a network request
-    ///   - completion: returns a generic result containing either an error or successful response
+    ///   - request: A request object containing all information necessary for making a network request.
+    ///   - completion: Returns a generic result containing either an error or successful response.
     func request(_ request: NetworkingRequest,
                  completion: @escaping (Result<NetworkingResponse, NetworkingError>) -> Void) {
         

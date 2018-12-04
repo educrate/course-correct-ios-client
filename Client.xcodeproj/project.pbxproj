@@ -191,7 +191,6 @@
 		BFD82A8E216D989E00A14868 /* NetworkingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7C216D989D00A14868 /* NetworkingRequest.swift */; };
 		BFD82A90216D989E00A14868 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A7E216D989D00A14868 /* NetworkingService.swift */; };
 		BFD82A92216D989E00A14868 /* NetworkingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A80216D989D00A14868 /* NetworkingResponse.swift */; };
-		BFD82A93216D989E00A14868 /* NetworkingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A81216D989D00A14868 /* NetworkingCache.swift */; };
 		BFD82A95216D989E00A14868 /* NetworkingExtractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A83216D989E00A14868 /* NetworkingExtractable.swift */; };
 		BFD82A97216D989E00A14868 /* NetworkingRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82A85216D989E00A14868 /* NetworkingRequestBody.swift */; };
 		BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD82AAB216DA49B00A14868 /* SelectCollege.storyboard */; };
@@ -462,7 +461,6 @@
 		BFD82A7C216D989D00A14868 /* NetworkingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequest.swift; sourceTree = "<group>"; };
 		BFD82A7E216D989D00A14868 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		BFD82A80216D989D00A14868 /* NetworkingResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingResponse.swift; sourceTree = "<group>"; };
-		BFD82A81216D989D00A14868 /* NetworkingCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingCache.swift; sourceTree = "<group>"; };
 		BFD82A83216D989E00A14868 /* NetworkingExtractable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingExtractable.swift; sourceTree = "<group>"; };
 		BFD82A85216D989E00A14868 /* NetworkingRequestBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestBody.swift; sourceTree = "<group>"; };
 		BFD82AAB216DA49B00A14868 /* SelectCollege.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCollege.storyboard; sourceTree = "<group>"; };
@@ -1166,7 +1164,6 @@
 				BF1723C3219FBE340060B9CD /* NetworkingError.swift */,
 				BFD82A83216D989E00A14868 /* NetworkingExtractable.swift */,
 				BF1723C721A0BA120060B9CD /* NetworkingExtractableError.swift */,
-				BFD82A81216D989D00A14868 /* NetworkingCache.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -1588,7 +1585,6 @@
 				BF1723A8219CD63F0060B9CD /* UICreditCardViewMetadata.swift in Sources */,
 				BFD82AD9216E7D3500A14868 /* Result.swift in Sources */,
 				BFD82AEF2170670400A14868 /* EnterStudentIdentifierViewController.swift in Sources */,
-				BFD82A93216D989E00A14868 /* NetworkingCache.swift in Sources */,
 				BFD0298221509C6A002FB9F5 /* CreditCardImageExtractor.swift in Sources */,
 				BF70B5D9217074C600771E5D /* EnterAccessCodeInteractor.swift in Sources */,
 				BFD82AEE2170670400A14868 /* EnterStudentIdentifierRouter.swift in Sources */,

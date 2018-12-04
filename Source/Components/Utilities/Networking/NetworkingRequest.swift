@@ -11,32 +11,32 @@ import Foundation
 // MARK: - Network Request Protocol
 protocol NetworkingRequest {
     
-    /// the targets base url
+    /// The target's base url.
     var baseURL: URL { get }
     
-    /// the path to be appended to base url to form the full url
+    /// The path to be appended to base url to form the full url.
     var path: String { get }
     
-    /// the parameters to be appended to the full formed url
+    /// The parameters to be appended to the full formed url.
     var parameters: [String: String]? { get }
     
-    /// the http method used in the request
+    /// The http method used in the request.
     var method: NetworkingRequestHTTPMethod { get }
     
-    /// the headers to be used in the request
+    /// The headers to be used in the request.
     var headers: [String: String]? { get }
     
-    /// the body to be used in the request
+    /// The body to be used in the request.
     var body: NetworkingRequestBody? { get }
     
-    // the validation codes of the response
+    // The validation codes of the response.
     var validation: NetworkingRequestValidation { get }
 }
 
 // MARK: - Public Constructor
 extension NetworkingRequest {
     
-    /// url request constructed from the object
+    /// URL request constructed from the object.
     var urlRequest: URLRequest {
         
         // construct url request from base url
@@ -65,33 +65,33 @@ extension NetworkingRequest {
 // MARK: - Private Request Constructor Helpers
 private extension NetworkingRequest {
     
-    /// adds the http method type to the request
+    /// Adds the http method type to the request.
     ///
     /// - Parameters:
-    ///   - method: http method to be executed
-    ///   - request: inout url request being constructed
+    ///   - method: HTTP method to be executed.
+    ///   - request: Inout url request being constructed.
     func addMethod(_ method: NetworkingRequestHTTPMethod,
                    to request: inout URLRequest) {
         
         request.httpMethod = method.name
     }
     
-    /// appends the given path to the request url
+    /// Appends the given path to the request url.
     ///
     /// - Parameters:
-    ///   - path: url endpoint path to be added to the base url
-    ///   - request: inout url request being constructed
+    ///   - path: URL endpoint path to be added to the base url.
+    ///   - request: Inout url request being constructed.
     func addPath(_ path: String,
                  to request: inout URLRequest) {
         
         request.url?.appendPathComponent(path)
     }
     
-    /// encodes and appends the given request parameters to the request url
+    /// Encodes and appends the given request parameters to the request url.
     ///
     /// - Parameters:
-    ///   - parameters: parameters to be added to the url query
-    ///   - request: inout url request being constructed
+    ///   - parameters: Parameters to be added to the url query.
+    ///   - request: Inout url request being constructed.
     func addQueryParameters(_ parameters: [String: String]?,
                             to request: inout URLRequest) {
         
@@ -107,11 +107,11 @@ private extension NetworkingRequest {
         request.url = urlComponents?.url
     }
     
-    /// adds given headers to the request
+    /// Adds given headers to the request.
     ///
     /// - Parameters:
-    ///   - headers: headers to be added to the http header field
-    ///   - request: inout url request being constructed
+    ///   - headers: Headers to be added to the http header field.
+    ///   - request: Inout url request being constructed.
     func addHeaders(_ headers: [String: String]?,
                     to request: inout URLRequest) {
         
@@ -124,11 +124,11 @@ private extension NetworkingRequest {
         }
     }
     
-    /// adds given body data to the request
+    /// Adds given body data to the request.
     ///
     /// - Parameters:
-    ///   - body: http request body to be added
-    ///   - request: inout url request being constructed
+    ///   - body: HTTP request body to be added.
+    ///   - request: Inout url request being constructed.
     func addRequestBody(_ body: NetworkingRequestBody?,
                         to request: inout URLRequest) {
         

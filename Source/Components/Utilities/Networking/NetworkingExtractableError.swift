@@ -10,6 +10,6 @@ import Foundation
 
 enum NetworkingExtractableError: Error {
     
-    /// error thrown when parsing an extractable fails
+    /// Thrown when parsing an extractable fails.
     case parsing
 }

@@ -11,23 +11,23 @@ import Foundation
 // MARK: - Networking Class
 class Networking {
     
-    /// inialized provider holding reference
-    /// to the innerworkings of the service layer
+    /// Initialized provider holding reference
+    /// to the innerworkings of the service layer.
     private let service = NetworkingService()
 }
 
 // MARK: - Cached Properties
 extension Networking {
     
-    /// default json decoder to be utilized
-    /// for all internally-conformed codables
+    /// Default json decoder to be utilized
+    /// for all internally-conformed codables.
     static let jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
         return decoder
     }()
     
-    /// default json encoder to be utilized
-    /// for all internally-conformed codables
+    /// Default json encoder to be utilized
+    /// for all internally-conformed codables.
     static let jsonEncoder: JSONEncoder = {
         let encoder = JSONEncoder()
         return encoder
@@ -37,11 +37,11 @@ extension Networking {
 // MARK: - Internal API
 extension Networking {
     
-    /// request method used for requesting
-    /// any service supported network calls
+    /// Request method used for requesting
+    /// any service supported network calls.
     /// - Parameters:
-    ///     - target: enum holding possible network requests
-    ///     - completion: result returning either a parsed model or an error
+    ///     - target: Enum holding possible network requests.
+    ///     - completion: Result returning either a parsed model or an error.
     func request<E: NetworkingExtractable>(_ target: NetworkingRequest,
                                            completion: @escaping (Result<E, NetworkingError>) -> Void) {
         

@@ -10,21 +10,21 @@ import Foundation
 
 struct NetworkingResponse {
     
-    /// data returned from the network request
+    /// Data returned from the network request.
     let data: Data
     
-    /// url request sent to server
+    /// URL request sent to server.
     let request: URLRequest
     
-    /// http url response returned from server
+    /// HTTP url response returned from server.
     let response: HTTPURLResponse
     
-    /// explicit initializer
+    /// Explicit initializer.
     ///
     /// - Parameters:
-    ///   - data: data returned from the network request
-    ///   - request: url request sent to server
-    ///   - response: http url response returned from server
+    ///   - data: The data returned from the network request.
+    ///   - request: The url request sent to server.
+    ///   - response: The HTTP url response returned from server.
     init(data: Data,
          request: URLRequest,
          response: HTTPURLResponse) {

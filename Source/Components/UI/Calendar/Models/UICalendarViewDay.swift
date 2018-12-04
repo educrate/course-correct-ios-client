@@ -10,7 +10,7 @@ import Foundation
 
 struct UICalendarViewDay {
     
-    /// date for extracting day of the week and day of the month
+    /// Date for extracting day of the week and day of the month.
     let date: UICalendarViewDate
     
     /// events occurring during this day

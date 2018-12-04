@@ -37,7 +37,7 @@ enum NetworkingRequestHTTPMethod: String {
 
 extension NetworkingRequestHTTPMethod {
     
-    /// uppercased method name
+    /// Uppercased representation of the method name.
     var name: String {
         return rawValue.uppercased()
     }
