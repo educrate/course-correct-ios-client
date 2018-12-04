@@ -251,7 +251,7 @@
 		BFFFF31021A6145300D2BD62 /* UICalendarViewEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30F21A6145300D2BD62 /* UICalendarViewEventCell.swift */; };
 		BFFFF31221A8D84100D2BD62 /* UICalendarViewDayCellConfguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF31121A8D84100D2BD62 /* UICalendarViewDayCellConfguration.swift */; };
 		BFFFF31421A8D89200D2BD62 /* UICalendarViewEventCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF31321A8D89200D2BD62 /* UICalendarViewEventCellConfiguration.swift */; };
-		BFFFF31621A8DA4E00D2BD62 /* UICalendarViewMonthHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF31521A8DA4E00D2BD62 /* UICalendarViewMonthHeader.xib */; };
+		BFFFF31621A8DA4E00D2BD62 /* UICalendarViewMonthHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF31521A8DA4E00D2BD62 /* UICalendarViewMonthHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -522,7 +522,7 @@
 		BFFFF30F21A6145300D2BD62 /* UICalendarViewEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewEventCell.swift; sourceTree = "<group>"; };
 		BFFFF31121A8D84100D2BD62 /* UICalendarViewDayCellConfguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDayCellConfguration.swift; sourceTree = "<group>"; };
 		BFFFF31321A8D89200D2BD62 /* UICalendarViewEventCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewEventCellConfiguration.swift; sourceTree = "<group>"; };
-		BFFFF31521A8DA4E00D2BD62 /* UICalendarViewMonthHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICalendarViewMonthHeader.xib; sourceTree = "<group>"; };
+		BFFFF31521A8DA4E00D2BD62 /* UICalendarViewMonthHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICalendarViewMonthHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -853,7 +853,7 @@
 				BFFFF2FB21A5EAC100D2BD62 /* UICalendarView.xib */,
 				BFFFF30D21A6144400D2BD62 /* UICalendarViewEventCell.xib */,
 				BFFFF30B21A6036000D2BD62 /* UICalendarViewDayCell.xib */,
-				BFFFF31521A8DA4E00D2BD62 /* UICalendarViewMonthHeader.xib */,
+				BFFFF31521A8DA4E00D2BD62 /* UICalendarViewMonthHeaderView.xib */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -1439,7 +1439,7 @@
 				BFFFF2EE21A4BCF500D2BD62 /* UIDropDownViewCell.xib in Resources */,
 				BFD0291821509AD5002FB9F5 /* Assets.xcassets in Resources */,
 				BF4F48BB21823C2E000D98D1 /* App.storyboard in Resources */,
-				BFFFF31621A8DA4E00D2BD62 /* UICalendarViewMonthHeader.xib in Resources */,
+				BFFFF31621A8DA4E00D2BD62 /* UICalendarViewMonthHeaderView.xib in Resources */,
 				BF50054E217A76BF00D35B69 /* ManageBank.storyboard in Resources */,
 				BF1723BC219DFCA40060B9CD /* UIInlinePickerViewCell.xib in Resources */,
 				BFD82AAC216DA49B00A14868 /* SelectCollege.storyboard in Resources */,
