@@ -111,7 +111,8 @@ extension Result where Error: ErrorConvertible {
 			}
 			catch {
 				let convertedError = Error.error(from: error)
-				// Revisit this in a future version of Swift. https://twitter.com/jckarter/status/672931114944696321
+				// Revisit this in a future version of Swift.
+                // https://twitter.com/jckarter/status/672931114944696321
 				return .failure(convertedError)
 			}
 		}
