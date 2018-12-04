@@ -937,6 +937,38 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		BF70B2CB21B73DA5001E550D /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				BFF531282199E43D00255CD4 /* UICreditCardView.xib */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		BF70B2CC21B73DB4001E550D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFF5312A2199E44C00255CD4 /* UICreditCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF70B2CD21B73DC2001E550D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF1723A7219CD63F0060B9CD /* UICreditCardViewMetadata.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF70B2CE21B73DCD001E550D /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				BF1723AB219CD6590060B9CD /* UICreditCardViewConfiguration.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 		BF70B5CF217074AC00771E5D /* Enter Access Code */ = {
 			isa = PBXGroup;
 			children = (
@@ -1094,6 +1126,10 @@
 		BFD0296321509C02002FB9F5 /* Credit Card */ = {
 			isa = PBXGroup;
 			children = (
+				BF70B2CE21B73DCD001E550D /* Configurations */,
+				BF70B2CD21B73DC2001E550D /* Models */,
+				BF70B2CB21B73DA5001E550D /* Interfaces */,
+				BF70B2CC21B73DB4001E550D /* Views */,
 				BFF531272199E42800255CD4 /* View */,
 				BFD0297921509C53002FB9F5 /* Validator */,
 			);
@@ -1266,10 +1302,6 @@
 		BFF531272199E42800255CD4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BFF531282199E43D00255CD4 /* UICreditCardView.xib */,
-				BFF5312A2199E44C00255CD4 /* UICreditCardView.swift */,
-				BF1723A7219CD63F0060B9CD /* UICreditCardViewMetadata.swift */,
-				BF1723AB219CD6590060B9CD /* UICreditCardViewConfiguration.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
