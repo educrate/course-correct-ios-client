@@ -17,14 +17,14 @@ class UICalendarViewHelper {
 }
 
 extension UICalendarViewHelper {
-    func dateDescription(from dateComponents: UICalendarViewDateComponents) -> UICalendarViewDateDescription {
+    func dateDescription(from dateComponents: UICalendarViewDateComponents) -> UICalendarViewDateDescription? {
         let calendarDate = date(from: dateComponents)
         let components = calendar.dateComponents([.weekday],
                                                  from: calendarDate)
         
         guard let weekdayComponent = components.weekday else {
             assertionFailure("internal inconsistency - issue extracting date component")
-            return .epoch
+            return nil
         }
         
         return UICalendarViewDateDescription(calendar: calendar,

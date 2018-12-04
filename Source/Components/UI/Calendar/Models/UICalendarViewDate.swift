@@ -13,10 +13,10 @@ struct UICalendarViewDate {
     let descriptions: UICalendarViewDateDescription
     
     init(components: UICalendarViewDateComponents,
-         description: UICalendarViewDateDescription) {
+         descriptions: UICalendarViewDateDescription) {
         
         self.components = components
-        self.descriptions = description
+        self.descriptions = descriptions
     }
 }
 

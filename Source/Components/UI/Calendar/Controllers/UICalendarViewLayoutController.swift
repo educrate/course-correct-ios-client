@@ -18,6 +18,6 @@ class UICalendarViewLayoutController {
 
 extension UICalendarViewLayoutController: UICalendarViewLayoutDelegate {
     func heightForCell(_ eventCount: Int) -> CGFloat {
-        return 50 * CGFloat(eventCount)
+        return 50
     }
 }

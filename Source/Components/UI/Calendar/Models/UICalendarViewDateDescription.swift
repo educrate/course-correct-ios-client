@@ -36,7 +36,3 @@ struct UICalendarViewDateDescription {
         self.dayName = weekdaySymbols[weekdayComponent - 1]
     }
 }
-
-extension UICalendarViewDateDescription {
-    static let epoch = UICalendarViewDateDescription(calendar: .current, dateComponents: .epoch, weekdayComponent: 4)
-}

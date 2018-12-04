@@ -108,8 +108,22 @@ extension UICalendarView: UICollectionViewDataSource {
         
         let cell: UICalendarViewDayCell = collectionView.dequeueReusableCell(for: indexPath)
         
-        let date = dateDataSource.date(for: indexPath)
-        let events = dataSource?.events(for: date.components) ?? []
+        guard let dataSource = dataSource else {
+            return cell
+        }
+        
+        let components = dateDataSource.components(for: indexPath)
+        let events = dataSource.events(for: components)
+        
+        guard events.count > 0 else {
+            return cell
+        }
+        
+        guard let descriptions = dateDataSource.descriptions(for: components) else {
+            return cell
+        }
+        
+        let date = UICalendarViewDate(components: components, descriptions: descriptions)
         let day = UICalendarViewDay(date: date, events: events)
         
         cell.set(day)
@@ -128,9 +142,13 @@ extension UICalendarView: UICollectionViewDelegate {
         
         let monthHeader: UICalendarViewMonthHeaderView = collectionView.dequeueReusableSupplementaryView(for: indexPath)
         
-        let date = dateDataSource.date(for: indexPath)
+        let components = dateDataSource.components(for: indexPath)
         
-        monthHeader.set("\(date.descriptions.monthName) \(date.descriptions.yearValue)")
+        guard let descriptions = dateDataSource.descriptions(for: components) else {
+            return monthHeader
+        }
+        
+        monthHeader.set("\(descriptions.monthName) \(descriptions.yearValue)")
         monthHeader.reload()
         
         return monthHeader
@@ -142,17 +160,13 @@ extension UICalendarView: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let date = dateDataSource.date(for: indexPath)
+        let components = dateDataSource.components(for: indexPath)
         
         guard let dataSource = dataSource else {
             return .zero
         }
         
-        let eventCount = dataSource.events(for: date.components).count
-        
-        guard eventCount > 0 else {
-            return .zero
-        }
+        let eventCount = dataSource.events(for: components).count
         
         return CGSize(width: collectionView.bounds.width,
                       height: (layoutDelegate.heightForCell(eventCount)))

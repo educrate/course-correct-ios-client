@@ -29,9 +29,11 @@ extension UICalendarViewDataController: UICalendarViewDateDataSource {
         return 30
     }
     
-    func date(for indexPath: IndexPath) -> UICalendarViewDate {
-        let comp = UICalendarViewDateComponents(day: 3, month: 12, year: 2018)
-        let desc = helper.dateDescription(from: comp)
-        return UICalendarViewDate(components: comp, description: desc)
+    func components(for indexPath: IndexPath) -> UICalendarViewDateComponents {
+        return UICalendarViewDateComponents(day: 3, month: 12, year: 2018)
+    }
+    
+    func descriptions(for components: UICalendarViewDateComponents) -> UICalendarViewDateDescription? {
+        return helper.dateDescription(from: components)
     }
 }

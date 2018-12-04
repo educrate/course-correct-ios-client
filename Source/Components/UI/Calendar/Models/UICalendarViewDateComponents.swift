@@ -39,7 +39,3 @@ extension UICalendarViewDateComponents: Comparable {
         return lhs.hashValue < rhs.hashValue
     }
 }
-
-extension UICalendarViewDateComponents {
-    static let epoch = UICalendarViewDateComponents(day: 1, month: 1, year: 1970)
-}

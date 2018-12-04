@@ -11,5 +11,6 @@ import Foundation
 protocol UICalendarViewDateDataSource: class {
     func numberOfMonths() -> Int
     func numberOfDays(in section: Int) -> Int
-    func date(for indexPath: IndexPath) -> UICalendarViewDate
+    func components(for indexPath: IndexPath) -> UICalendarViewDateComponents
+    func descriptions(for components: UICalendarViewDateComponents) -> UICalendarViewDateDescription?
 }
