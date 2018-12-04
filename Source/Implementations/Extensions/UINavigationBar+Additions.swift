@@ -10,7 +10,7 @@ import UIKit.UINavigationBar
 
 extension UINavigationBar {
     
-    /// removes image and shadow from navigation bar
+    /// Removes image and shadow from navigation bar.
     func makeTransparent() {
         setBackgroundImage(.empty, for: .default)
         shadowImage = .empty

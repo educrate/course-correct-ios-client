@@ -6,61 +6,54 @@
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
-import UIKit
+import UIKit.UIStoryboard
 
 // MARK: - Storyboard Conformance
 extension UIStoryboard {
     enum Storyboard: String {
         
-        // MARK: Entry
+        // MARK: - Entry
         case appLaunch = "AppLaunch"
         case app = "App"
         
-        // MARK: Onboarding
+        // MARK: - Onboarding
         case onboarding = "Onboarding"
         case walkthrough = "Walkthrough"
         case welcome = "Welcome"
         case congratulations = "Congratulations"
         
-        // MARK: Sign Up
+        // MARK: - Sign Up
         case signUp = "SignUp"
         case selectCollege = "SelectCollege"
         case enterStudentIdentifier = "EnterStudentIdentifier"
         case enterAccessCode = "EnterAccessCode"
         case createPassword = "CreatePassword"
         
-        // MARK: Sign In
+        // MARK: - Sign In
         case signIn = "SignIn"
         
-        // MARK: Main
+        // MARK: - Main
         case main = "Main"
         
-        // MARK: Schedule
+        // MARK: - Schedule
         case calendar = "Calendar"
         case event = "Event"
         
-        // MARK: Create Event
+        // MARK: - Create Event
         case createEvent = "CreateEvent"
         case addLocation = "AddLocation"
         case selectTutor = "SelectTutor"
         case tutorProfile = "TutorProfile"
         
-        // MARK: Profile
+        // MARK: - Profile
         case profileOverview = "ProfileOverview"
         case profileAccount = "ProfileAccount"
         case profilePayment = "ProfilePayment"
         case profileSupport = "ProfileSupport"
         
-        // MARK: Payment
+        // MARK: - Payment
         case manageCard = "ManageCard"
         case manageBank = "ManageBank"
-        
-        // MARK: Modules
-        case uiDropdown = "UIDropdown"
-        case uiField = "UIField"
-        case uiInlinePicker = "UIInlinePicker"
-        case uiActionSheet = "UIActionSheet"
-        case uiNotification = "UINotification"
     }
 }
 

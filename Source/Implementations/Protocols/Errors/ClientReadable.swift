@@ -10,6 +10,6 @@ import Foundation
 
 protocol ClientReadable {
     
-    /// message to be displayed to the user
+    /// Message to be displayed to the user.
     var message: String { get }
 }
