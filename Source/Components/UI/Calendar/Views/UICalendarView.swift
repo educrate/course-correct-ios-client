@@ -10,54 +10,62 @@ import UIKit
 
 class UICalendarView: XIBView {
     
-    // MARK: View Outlets
+    // MARK: - View Outlets
     
-    /// encompasing table view which holds
+    /// Encompasing table view which holds
     /// the date object as well as the
-    /// table view for a single day
-    @IBOutlet private weak var collectionView: UICollectionView! {
-        didSet {
-            registerReusableViews()
-        }
-    }
+    /// table view for a single day.
+    @IBOutlet private weak var collectionView: UICollectionView!
     
-    /// flow layout of the collection view
+    /// Flow layout of the collection view.
     @IBOutlet private weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
-    // MARK: Properties
+    // MARK: - Properties
     
-    /// controlls all internal computation
-    /// necessary for setting up the calendar
-    private let brain: UICalendarViewBrain = .default
+    /// Controlls all internal computation
+    /// necessary for setting up the calendar.
+    private let controller: UICalendarViewController = .default
     
-    /// configuration of the calendar view
+    /// Configuration of the calendar view
     /// and configurations of subviews
     private let configuration: UICalendarViewConfiguration = .default
     
-    // MARK: Internal Protocols
+    // MARK: - Internal Protocols
     
-    /// delegate for the calendar collection layout
+    /// Delegate for the calendar collection layout.
     private weak var layoutDelegate: UICalendarViewLayoutDelegate!
     
-    /// data source for the calendar date formatting
+    /// Data source for the calendar date formatting.
     private weak var dateDataSource: UICalendarViewDateDataSource!
     
-    // MARK: External Protocols
+    // MARK: - External Protocols
     
-    /// delegate for the calendar collection
+    /// Delegate for the calendar collection.
     weak var delegate: UICalendarViewDelegate?
     
-    /// data source for the calendar collection
+    /// Data source for the calendar collection.
     weak var dataSource: UICalendarViewDataSource?
     
+    // MARK: - Initializers
+    
+    /// Programmatic initializer override used to set
+    /// internal delegates and data sources.
+    ///
+    /// - Parameter frame: Frame passed by the caller.
     override init(frame: CGRect) {
         super.init(frame: frame)
-        dateDataSource = brain.dataSource
+        layoutDelegate = controller.layoutDelegate
+        dateDataSource = controller.dataSource
     }
     
+    /// Internal storyboard initializer override used to set
+    /// internal delegates and data sources.
+    ///
+    /// - Parameter aDecoder: Internal coder passed from the storyboard.
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        dateDataSource = brain.dataSource
+        layoutDelegate = controller.layoutDelegate
+        dateDataSource = controller.dataSource
     }
 }
 
@@ -65,6 +73,7 @@ class UICalendarView: XIBView {
 extension UICalendarView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        registerReusableViews()
     }
     
     func registerReusableViews() {
@@ -77,6 +86,7 @@ extension UICalendarView {
 extension UICalendarView {
     func move(to dateComponents: UICalendarViewDateComponents,
                 animated: Bool = true) {
+        
         // todo
     }
 }
@@ -89,6 +99,7 @@ extension UICalendarView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
+        
         return dateDataSource.numberOfDays(in: section)
     }
     
@@ -96,6 +107,7 @@ extension UICalendarView: UICollectionViewDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell: UICalendarViewDayCell = collectionView.dequeueReusableCell(for: indexPath)
+        
         let date = dateDataSource.date(for: indexPath)
         let events = dataSource?.events(for: date.components) ?? []
         let day = UICalendarViewDay(date: date, events: events)
@@ -115,6 +127,7 @@ extension UICalendarView: UICollectionViewDelegate {
                         at indexPath: IndexPath) -> UICollectionReusableView {
         
         let monthHeader: UICalendarViewMonthHeaderView = collectionView.dequeueReusableSupplementaryView(for: indexPath)
+        
         let date = dateDataSource.date(for: indexPath)
         
         monthHeader.set("\(date.descriptions.monthName) \(date.descriptions.yearValue)")
@@ -135,14 +148,14 @@ extension UICalendarView: UICollectionViewDelegateFlowLayout {
             return .zero
         }
         
-        let eventCount = CGFloat(dataSource.events(for: date.components).count)
+        let eventCount = dataSource.events(for: date.components).count
         
         guard eventCount > 0 else {
             return .zero
         }
         
         return CGSize(width: collectionView.bounds.width,
-                      height: ((configuration.cellConfiguration.minimumHeight + configuration.cellConfiguration.interitemSpacing) * eventCount))
+                      height: (layoutDelegate.heightForCell(eventCount)))
     }
     
     func collectionView(_ collectionView: UICollectionView,

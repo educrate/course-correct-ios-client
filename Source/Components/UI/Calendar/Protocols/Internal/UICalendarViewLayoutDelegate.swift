@@ -6,8 +6,8 @@
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol UICalendarViewLayoutDelegate: class {
-    
+    func heightForCell(_ eventCount: Int) -> CGFloat
 }

@@ -1,5 +1,5 @@
 //
-//  UICalendarViewDateHelper.swift
+//  UICalendarViewHelper.swift
 //  Client
 //
 //  Created by Ampe on 11/21/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UICalendarViewDateHelper {
+class UICalendarViewHelper {
     private let calendar: Calendar
     
     init(calendar: Calendar) {
@@ -16,7 +16,7 @@ class UICalendarViewDateHelper {
     }
 }
 
-extension UICalendarViewDateHelper {
+extension UICalendarViewHelper {
     func dateDescription(from dateComponents: UICalendarViewDateComponents) -> UICalendarViewDateDescription {
         let calendarDate = date(from: dateComponents)
         let components = calendar.dateComponents([.weekday],
@@ -44,7 +44,7 @@ extension UICalendarViewDateHelper {
     }
 }
 
-private extension UICalendarViewDateHelper {
+private extension UICalendarViewHelper {
     func date(from dateComponents: UICalendarViewDateComponents) -> Date {
         var components = DateComponents()
         
@@ -61,7 +61,7 @@ private extension UICalendarViewDateHelper {
     }
 }
 
-extension UICalendarViewDateHelper {
+extension UICalendarViewHelper {
     static let secondsInAnHour: TimeInterval = 3600
     static let minutesInAnHour: TimeInterval = 60
 }
