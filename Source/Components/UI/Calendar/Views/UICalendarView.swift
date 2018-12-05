@@ -112,51 +112,19 @@ extension UICalendarView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell: UICalendarViewDayCell = collectionView.dequeueReusableCell(for: indexPath)
+        return collectionView.dequeueReusableCell(for: indexPath) as UICalendarViewDayCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
         
-        cell.set(configuration.cellConfiguration)
-        cell.reload()
-        
-        return cell
+        return collectionView.dequeueReusableSupplementaryView(for: indexPath) as UICalendarViewMonthHeaderView
     }
 }
 
 // MARK: - Table View Data Source Conformation
 extension UICalendarView: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView,
-                        viewForSupplementaryElementOfKind kind: String,
-                        at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        let monthHeader: UICalendarViewMonthHeaderView = collectionView.dequeueReusableSupplementaryView(for: indexPath)
-        
-        return monthHeader
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        willDisplaySupplementaryView view: UICollectionReusableView,
-                        forElementKind elementKind: String, at indexPath: IndexPath) {
-        
-        DispatchQueue.main.async { [weak self] in
-            guard let `self` = self else {
-                return
-            }
-            
-            guard let monthHeader = view as? UICalendarViewMonthHeaderView else {
-                assertionFailure("internal inconsistency - incorrect header view type passed forward")
-                return
-            }
-            
-            let components = self.dateDataSource.components(for: indexPath)
-            
-            guard let descriptions = self.dateDataSource.descriptions(for: components) else {
-                return
-            }
-            
-            monthHeader.set("\(descriptions.monthName) \(descriptions.yearValue)")
-            monthHeader.reload()
-        }
-    }
-    
     func collectionView(_ collectionView: UICollectionView,
                         willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
@@ -183,6 +151,31 @@ extension UICalendarView: UICollectionViewDelegate {
             
             cell.set(date)
             cell.reload()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplaySupplementaryView view: UICollectionReusableView,
+                        forElementKind elementKind: String, at indexPath: IndexPath) {
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else {
+                return
+            }
+            
+            guard let monthHeader = view as? UICalendarViewMonthHeaderView else {
+                assertionFailure("internal inconsistency - incorrect header view type passed forward")
+                return
+            }
+            
+            let components = self.dateDataSource.components(for: indexPath)
+            
+            guard let descriptions = self.dateDataSource.descriptions(for: components) else {
+                return
+            }
+            
+            monthHeader.set("\(descriptions.monthName) \(descriptions.yearValue)")
+            monthHeader.reload()
         }
     }
 }
