@@ -32,11 +32,14 @@ class UICalendarView: XIBView {
     
     // MARK: - Internal Protocols
     
-    /// Delegate for the calendar collection layout.
-    private weak var layoutDelegate: UICalendarViewLayoutDelegate!
+    /// Delegate for the calendar collection view.
+    private weak var dateDelegate: UICalendarViewDateDelegate!
     
     /// Data source for the calendar date formatting.
     private weak var dateDataSource: UICalendarViewDateDataSource!
+    
+    /// Delegate for the calendar collection layout.
+    private weak var layoutDelegate: UICalendarViewLayoutDelegate!
     
     // MARK: - External Protocols
     
@@ -54,18 +57,20 @@ class UICalendarView: XIBView {
     /// - Parameter frame: Frame passed by the caller.
     override init(frame: CGRect) {
         super.init(frame: frame)
-        layoutDelegate = controller.layoutDelegate
+        dateDelegate = controller.dataSource
         dateDataSource = controller.dataSource
+        layoutDelegate = controller.layoutDelegate
     }
     
     /// Internal storyboard initializer override used to set
-    /// internal delegates and data sources.
+    /// delegates and data sources.
     ///
     /// - Parameter aDecoder: Internal coder passed from the storyboard.
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        layoutDelegate = controller.layoutDelegate
+        dateDelegate = controller.dataSource
         dateDataSource = controller.dataSource
+        layoutDelegate = controller.layoutDelegate
     }
 }
 
@@ -109,25 +114,6 @@ extension UICalendarView: UICollectionViewDataSource {
         
         let cell: UICalendarViewDayCell = collectionView.dequeueReusableCell(for: indexPath)
         
-        guard let dataSource = dataSource else {
-            return cell
-        }
-        
-        let components = dateDataSource.components(for: indexPath)
-        let events = dataSource.events(for: components)
-        
-        guard events.count > 0 else {
-            return cell
-        }
-        
-        guard let descriptions = dateDataSource.descriptions(for: components) else {
-            return cell
-        }
-        
-        let date = UICalendarViewDate(components: components, descriptions: descriptions)
-        let day = UICalendarViewDay(date: date, events: events)
-        
-        cell.set(day)
         cell.set(configuration.cellConfiguration)
         cell.reload()
         
@@ -153,6 +139,29 @@ extension UICalendarView: UICollectionViewDelegate {
         monthHeader.reload()
         
         return monthHeader
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        
+        dateDelegate.willDisplay(indexPath)
+        
+        guard let cell = cell as? UICalendarViewDayCell else {
+            assertionFailure("internal inconsistency - incorrect cell type passed forward")
+            return
+        }
+        
+        let components = dateDataSource.components(for: indexPath)
+        
+        guard let descriptions = dateDataSource.descriptions(for: components) else {
+            return
+        }
+        
+        let date = UICalendarViewDate(components: components, descriptions: descriptions)
+        
+        cell.set(date)
+        cell.reload()
     }
 }
 

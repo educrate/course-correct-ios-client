@@ -16,8 +16,12 @@ class UICalendarViewDayCell: UICollectionViewCell {
     // MARK: - Properties
     
     /// Contains necessary information to
-    /// set up the day collection view.
-    private var day: UICalendarViewDay?
+    /// set up the date in the collection view.
+    private var date: UICalendarViewDate?
+    
+    /// Contains necessary information to
+    /// set up the events in the collection view.
+    private var events: [UICalendarViewEvent]?
     
     /// Contains all the styling for the cell.
     private var configuration: UICalendarViewDayCellConfguration = .default
@@ -51,8 +55,12 @@ extension UICalendarViewDayCell {
     /// Method used for setting the day property.
     ///
     /// - Parameter day: Contains information regarding the specifc cell's day.
-    func set(_ day: UICalendarViewDay) {
-        self.day = day
+    func set(_ date: UICalendarViewDate) {
+        self.date = date
+    }
+    
+    func set(_ events: [UICalendarViewEvent]) {
+        self.events = events
     }
     
     /// Method used for setting the configuration of this cell.
@@ -65,42 +73,41 @@ extension UICalendarViewDayCell {
     /// Method used to reload all inputs on the cell.
     /// Call after setting the day or configuration.
     func reload() {
-        guard let day = day else {
-            return
+        if let date = date {
+            titleLabel.text = date.descriptions.dayValue
+            detailLabel.text = date.descriptions.dayNameShort
         }
         
-        titleLabel.text = day.date.descriptions.dayValue
-        detailLabel.text = day.date.descriptions.dayNameShort
-        
-        collectionView.reloadData()
+        if let events = events, !events.isEmpty {
+            collectionView.reloadData()
+        }
     }
 }
 
 // MARK: - Table View Data Source Implementation
 extension UICalendarViewDayCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let day = day else {
+        guard let events = events else {
             return 0
         }
         
-        return day.events.count
+        return events.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let day = day else {
-            return UICollectionViewCell()
+        let cell: UICalendarViewEventCell = collectionView.dequeueReusableCell(for: indexPath)
+        
+        guard let events = events else {
+            return cell
         }
         
-        let events = day.events
         let rowIndex = indexPath.row
         
         guard events.indices.contains(rowIndex) else {
-            return UICollectionViewCell()
+            return cell
         }
         
         let event = events[rowIndex]
-        
-        let cell: UICalendarViewEventCell = collectionView.dequeueReusableCell(for: indexPath)
         
         cell.set(event)
         cell.set(configuration.eventCellConfiguration)
