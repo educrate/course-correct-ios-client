@@ -129,16 +129,32 @@ extension UICalendarView: UICollectionViewDelegate {
         
         let monthHeader: UICalendarViewMonthHeaderView = collectionView.dequeueReusableSupplementaryView(for: indexPath)
         
-        let components = dateDataSource.components(for: indexPath)
-        
-        guard let descriptions = dateDataSource.descriptions(for: components) else {
-            return monthHeader
-        }
-        
-        monthHeader.set("\(descriptions.monthName) \(descriptions.yearValue)")
-        monthHeader.reload()
-        
         return monthHeader
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplaySupplementaryView view: UICollectionReusableView,
+                        forElementKind elementKind: String, at indexPath: IndexPath) {
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else {
+                return
+            }
+            
+            guard let monthHeader = view as? UICalendarViewMonthHeaderView else {
+                assertionFailure("internal inconsistency - incorrect header view type passed forward")
+                return
+            }
+            
+            let components = self.dateDataSource.components(for: indexPath)
+            
+            guard let descriptions = self.dateDataSource.descriptions(for: components) else {
+                return
+            }
+            
+            monthHeader.set("\(descriptions.monthName) \(descriptions.yearValue)")
+            monthHeader.reload()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -147,21 +163,27 @@ extension UICalendarView: UICollectionViewDelegate {
         
         dateDelegate.willDisplay(indexPath)
         
-        guard let cell = cell as? UICalendarViewDayCell else {
-            assertionFailure("internal inconsistency - incorrect cell type passed forward")
-            return
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else {
+                return
+            }
+            
+            guard let cell = cell as? UICalendarViewDayCell else {
+                assertionFailure("internal inconsistency - incorrect cell type passed forward")
+                return
+            }
+            
+            let components = self.dateDataSource.components(for: indexPath)
+            
+            guard let descriptions = self.dateDataSource.descriptions(for: components) else {
+                return
+            }
+            
+            let date = UICalendarViewDate(components: components, descriptions: descriptions)
+            
+            cell.set(date)
+            cell.reload()
         }
-        
-        let components = dateDataSource.components(for: indexPath)
-        
-        guard let descriptions = dateDataSource.descriptions(for: components) else {
-            return
-        }
-        
-        let date = UICalendarViewDate(components: components, descriptions: descriptions)
-        
-        cell.set(date)
-        cell.reload()
     }
 }
 
