@@ -9,5 +9,5 @@
 import Foundation
 
 protocol UICalendarViewDateDelegate: class {
-    func willDisplay(_ indexPath: IndexPath)
+    func willDisplay(_ section: Int)
 }

@@ -9,12 +9,14 @@
 import Foundation
 
 class UICalendarViewDataController {
-    private let earliestAvailableYear: Int = 2010
+    var delegate: UICalendarViewDataControllerDelegate?
+    
+    private let earliestAvailableYear: Int = 2018
     private let latestAvailableYear: Int = 2019
     private let helper: UICalendarViewHelper
     private let cache: UICalendarViewDataHelperDictionary
     
-    private var currentSection: Int = 0
+    private var loadedSections: ClosedRange<Int> = 0...0
     
     init(calendar: Calendar,
          cache: UICalendarViewDataHelperDictionary = UICalendarViewDataHelperDictionary()) {
@@ -31,7 +33,7 @@ extension UICalendarViewDataController: UICalendarViewDateDataSource {
     }
     
     func numberOfDays(in section: Int) -> Int {
-        guard section >= currentSection - 1 && section <= currentSection + 1 else {
+        guard loadedSections.contains(section) else {
             return 0
         }
         
@@ -68,7 +70,75 @@ private extension UICalendarViewDataController {
 }
 
 extension UICalendarViewDataController: UICalendarViewDateDelegate {
-    func willDisplay(_ indexPath: IndexPath) {
-        currentSection = indexPath.section
+    func willDisplay(_ section: Int) {
+        let previousRange = loadedSections
+        let newRange = (max(0, section - 1))...(section + 1)
+        
+        loadedSections = newRange
+        
+        var sectionsToExpand: [Int] = []
+        var sectionsToCollapse: [Int] = []
+        
+        // discard lower bound objects
+        // behavior is scrolling to the future
+        if previousRange.lowerBound < newRange.lowerBound {
+            sectionsToCollapse.append(contentsOf: previousRange.lowerBound...(newRange.lowerBound - 1))
+        }
+        
+        // discard upper bound objects
+        // behavior is scrolling to the past
+        if newRange.upperBound < previousRange.upperBound {
+            sectionsToCollapse.append(contentsOf: (newRange.upperBound + 1)...previousRange.upperBound)
+        }
+        
+        // expand lower bound objects
+        // behavior is scrolling to the past
+        if newRange.lowerBound < previousRange.lowerBound {
+            sectionsToExpand.append(contentsOf: newRange.lowerBound...(previousRange.lowerBound - 1))
+        }
+        
+        // expand upper bound objects
+        // behavior is scrolling to the future
+        if previousRange.upperBound < newRange.upperBound {
+            sectionsToExpand.append(contentsOf: (previousRange.lowerBound + 1)...newRange.upperBound)
+        }
+        
+        delegate?.reload(IndexSet(sectionsToExpand + sectionsToCollapse))
+        
+//        if !sectionsToExpand.isEmpty {
+//            var indexPaths: [IndexPath] = []
+//
+//            for section in sectionsToExpand {
+//                guard section > 0 else {
+//                    continue
+//                }
+//
+//                for row in 0...numberOfDays(in: section) - 1 {
+//                    indexPaths.append(IndexPath(row: row, section: section))
+//                }
+//            }
+//
+//            guard !indexPaths.isEmpty else {
+//                return
+//            }
+//
+//            delegate?.insert(indexPaths)
+//        }
+//
+//        if !sectionsToCollapse.isEmpty {
+//            var indexPaths: [IndexPath] = []
+//
+//            for section in sectionsToCollapse {
+//                for row in 0...numberOfDays(in: section) {
+//                    indexPaths.append(IndexPath(row: row, section: section))
+//                }
+//            }
+//
+//            guard !indexPaths.isEmpty else {
+//                return
+//            }
+//
+//            delegate?.remove(indexPaths)
+//        }
     }
 }

@@ -60,6 +60,7 @@ class UICalendarView: XIBView {
         dateDelegate = controller.dataSource
         dateDataSource = controller.dataSource
         layoutDelegate = controller.layoutDelegate
+        controller.dataSource.delegate = self
     }
     
     /// Internal storyboard initializer override used to set
@@ -71,6 +72,7 @@ class UICalendarView: XIBView {
         dateDelegate = controller.dataSource
         dateDataSource = controller.dataSource
         layoutDelegate = controller.layoutDelegate
+        controller.dataSource.delegate = self
     }
 }
 
@@ -123,13 +125,11 @@ extension UICalendarView: UICollectionViewDataSource {
     }
 }
 
-// MARK: - Table View Data Source Conformation
+// MARK: - Collection View Data Source Conformation
 extension UICalendarView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
-        
-        dateDelegate.willDisplay(indexPath)
         
         DispatchQueue.main.async { [weak self] in
             guard let `self` = self else {
@@ -158,6 +158,8 @@ extension UICalendarView: UICollectionViewDelegate {
                         willDisplaySupplementaryView view: UICollectionReusableView,
                         forElementKind elementKind: String, at indexPath: IndexPath) {
         
+        dateDelegate.willDisplay(indexPath.section)
+        
         DispatchQueue.main.async { [weak self] in
             guard let `self` = self else {
                 return
@@ -180,6 +182,7 @@ extension UICalendarView: UICollectionViewDelegate {
     }
 }
 
+// MARK: - Collection View Data Source Conformation
 extension UICalendarView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
@@ -209,6 +212,21 @@ extension UICalendarView: UICollectionViewDelegateFlowLayout {
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         return configuration.cellConfiguration.lineSpacing
+    }
+}
+
+// MARK: - Calendar View Data Controller Delegate Conformation
+extension UICalendarView: UICalendarViewDataControllerDelegate {
+    func reload(_ sections: IndexSet) {
+        collectionView.reloadSections(sections)
+    }
+    
+    func insert(_ indexPaths: [IndexPath]) {
+//        collectionView.reloadSections()
+    }
+    
+    func remove(_ indexPaths: [IndexPath]) {
+//        collectionView.reloadSections()
     }
 }
 

@@ -137,6 +137,7 @@
 		BF70B2BF21B5C453001E550D /* UICalendarViewLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B2BE21B5C453001E550D /* UICalendarViewLayoutDelegate.swift */; };
 		BF70B2C121B5C4A1001E550D /* UICalendarViewDateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B2C021B5C4A1001E550D /* UICalendarViewDateDataSource.swift */; };
 		BF70B2D021B783E5001E550D /* UICalendarViewDateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B2CF21B783E5001E550D /* UICalendarViewDateDelegate.swift */; };
+		BF70B2D221B86E49001E550D /* UICalendarViewDataControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B2D121B86E49001E550D /* UICalendarViewDataControllerDelegate.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
 		BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */; };
 		BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D2217074C600771E5D /* EnterAccessCodeViewController.swift */; };
@@ -402,6 +403,7 @@
 		BF70B2BE21B5C453001E550D /* UICalendarViewLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewLayoutDelegate.swift; sourceTree = "<group>"; };
 		BF70B2C021B5C4A1001E550D /* UICalendarViewDateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDateDataSource.swift; sourceTree = "<group>"; };
 		BF70B2CF21B783E5001E550D /* UICalendarViewDateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDateDelegate.swift; sourceTree = "<group>"; };
+		BF70B2D121B86E49001E550D /* UICalendarViewDataControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataControllerDelegate.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
 		BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeRouter.swift; sourceTree = "<group>"; };
 		BF70B5D2217074C600771E5D /* EnterAccessCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeViewController.swift; sourceTree = "<group>"; };
@@ -926,6 +928,7 @@
 				BF70B2BE21B5C453001E550D /* UICalendarViewLayoutDelegate.swift */,
 				BF70B2C021B5C4A1001E550D /* UICalendarViewDateDataSource.swift */,
 				BF70B2CF21B783E5001E550D /* UICalendarViewDateDelegate.swift */,
+				BF70B2D121B86E49001E550D /* UICalendarViewDataControllerDelegate.swift */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -1580,6 +1583,7 @@
 				BF500555217B837600D35B69 /* WalkthroughPresenter.swift in Sources */,
 				BFFFF2F921A50E5A00D2BD62 /* UIFieldViewConfiguration.swift in Sources */,
 				BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */,
+				BF70B2D221B86E49001E550D /* UICalendarViewDataControllerDelegate.swift in Sources */,
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
 				BFF6C2922184E1F8003F7D96 /* UINotificationViewConfiguration.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* UICalendarViewDate.swift in Sources */,
