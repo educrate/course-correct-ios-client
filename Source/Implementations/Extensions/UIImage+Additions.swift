@@ -10,6 +10,6 @@ import UIKit.UIImage
 
 extension UIImage {
     
-    /// Static empty image.
+    /// An empty image.
     static let empty = UIImage()
 }
