@@ -155,6 +155,9 @@ extension UICreditCardView {
 
 // MARK: - Constraint Methods
 private extension UICreditCardView {
+    
+    /// Helper method used to properly order the execution of
+    /// constraint additions to the view.
     func constrain() {
         constrainContent()
         constrainLogo()
@@ -164,6 +167,8 @@ private extension UICreditCardView {
         constrainName()
     }
     
+    /// This method is used to resize the internal card view to be of the
+    /// proper aspect ratio of a true credit card.
     func constrainContent() {
         if frame.width/frame.height >= 1.586 {
             cardLeadingConstraint.isActive = false
@@ -178,6 +183,8 @@ private extension UICreditCardView {
         layoutIfNeeded()
     }
     
+    /// This method is used to constrain the logo into its proper size
+    /// and exact location in the top left corner of the credit card view.
     func constrainLogo() {
         logoLeadingConstraint.constant = cardView.frame.height/10
         logoWidthConstraint.constant = cardView.frame.width/5
@@ -185,24 +192,32 @@ private extension UICreditCardView {
         logoTopConstraint.constant = cardView.frame.height/10
     }
     
+    /// This method is used to constrain the account number label inside
+    /// the credit card view.
     func constrainNumber() {
         numberLeadingConstraint.constant = cardView.frame.height/10
         numberHeightConstraint.constant = cardView.frame.height/10
         numberBottomConstraint.constant = 0
     }
     
+    /// This method is used to constrain the cvv label inside
+    /// the credit card view.
     func constrainCVV() {
         cvvLeadingConstraint.constant = cardView.frame.height/10
         cvvHeightConstraint.constant = cardView.frame.height/15
         cvvBottomConstraint.constant = cardView.frame.height/20
     }
     
+    /// This method is used to constrain the expiration label inside
+    /// the credit card view.
     func constrainExpiration() {
         expirationLeadingConstraint.constant = cardView.frame.height/10
         expirationHeightConstraint.constant = cardView.frame.height/15
         expirationBottomConstraint.constant = 0
     }
     
+    /// This method is used to constrain the name label inside
+    /// the credit card view.
     func constrainName() {
         nameLeadingConstraint.constant = cardView.frame.height/10
         nameHeightConstraint.constant = cardView.frame.height/10
