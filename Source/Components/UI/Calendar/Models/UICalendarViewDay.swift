@@ -16,10 +16,15 @@ struct UICalendarViewDay {
     /// Events occurring during this day.
     let events: [UICalendarViewEvent]
     
-    init(date: UICalendarViewDayDescription,
+    /// Explicit initializer.
+    ///
+    /// - Parameters:
+    ///   - description: Description of a single day.
+    ///   - events: Events associated with the day description.
+    init(description: UICalendarViewDayDescription,
          events: [UICalendarViewEvent]) {
         
-        self.description = date
+        self.description = description
         self.events = events
     }
 }
