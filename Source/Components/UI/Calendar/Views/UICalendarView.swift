@@ -22,10 +22,6 @@ class UICalendarView: XIBView {
     
     // MARK: - Properties
     
-    /// Controlls all internal computation
-    /// necessary for setting up the calendar.
-    private let controller: UICalendarViewController = .default
-    
     /// Configuration of the calendar view
     /// and configurations of subviews
     private let configuration: UICalendarViewConfiguration = .default

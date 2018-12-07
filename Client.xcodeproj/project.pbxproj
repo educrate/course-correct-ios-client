@@ -139,7 +139,6 @@
 		BF70B5D8217074C600771E5D /* EnterAccessCodeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D3217074C600771E5D /* EnterAccessCodeProtocols.swift */; };
 		BF70B5D9217074C600771E5D /* EnterAccessCodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D4217074C600771E5D /* EnterAccessCodeInteractor.swift */; };
 		BF70B5DB217074D900771E5D /* EnterAccessCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF70B5DA217074D900771E5D /* EnterAccessCode.storyboard */; };
-		BF7B2C5221B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C5121B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift */; };
 		BF7B2C5521B0ACCD00E91E38 /* LazyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C5421B0ACCD00E91E38 /* LazyBox.swift */; };
 		BF7B2C5721B0ACFC00E91E38 /* LazyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C5621B0ACFC00E91E38 /* LazyValue.swift */; };
 		BF7B2C5921B0B0DB00E91E38 /* DispatchQueue+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C5821B0B0DB00E91E38 /* DispatchQueue+Labels.swift */; };
@@ -233,10 +232,7 @@
 		BFFFF2F921A50E5A00D2BD62 /* UIFieldViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2F821A50E5A00D2BD62 /* UIFieldViewConfiguration.swift */; };
 		BFFFF2FC21A5EAC100D2BD62 /* UICalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF2FB21A5EAC100D2BD62 /* UICalendarView.xib */; };
 		BFFFF2FE21A5EAD100D2BD62 /* UICalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2FD21A5EAD100D2BD62 /* UICalendarView.swift */; };
-		BFFFF30021A5EDFA00D2BD62 /* UICalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2FF21A5EDFA00D2BD62 /* UICalendarViewController.swift */; };
-		BFFFF30221A5EE2100D2BD62 /* UICalendarViewDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataController.swift */; };
 		BFFFF30421A5EE4A00D2BD62 /* UICalendarViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30321A5EE4A00D2BD62 /* UICalendarViewConfiguration.swift */; };
-		BFFFF30621A5F30000D2BD62 /* UICalendarViewLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30521A5F30000D2BD62 /* UICalendarViewLayoutController.swift */; };
 		BFFFF30A21A6016F00D2BD62 /* UICalendarViewDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF30921A6016F00D2BD62 /* UICalendarViewDayCell.swift */; };
 		BFFFF30C21A6036000D2BD62 /* UICalendarViewDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF30B21A6036000D2BD62 /* UICalendarViewDayCell.xib */; };
 		BFFFF30E21A6144400D2BD62 /* UICalendarViewEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF30D21A6144400D2BD62 /* UICalendarViewEventCell.xib */; };
@@ -396,7 +392,6 @@
 		BF70B5D3217074C600771E5D /* EnterAccessCodeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeProtocols.swift; sourceTree = "<group>"; };
 		BF70B5D4217074C600771E5D /* EnterAccessCodeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeInteractor.swift; sourceTree = "<group>"; };
 		BF70B5DA217074D900771E5D /* EnterAccessCode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnterAccessCode.storyboard; sourceTree = "<group>"; };
-		BF7B2C5121B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewLayoutConfiguration.swift; sourceTree = "<group>"; };
 		BF7B2C5421B0ACCD00E91E38 /* LazyBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBox.swift; sourceTree = "<group>"; };
 		BF7B2C5621B0ACFC00E91E38 /* LazyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyValue.swift; sourceTree = "<group>"; };
 		BF7B2C5821B0B0DB00E91E38 /* DispatchQueue+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Labels.swift"; sourceTree = "<group>"; };
@@ -496,10 +491,7 @@
 		BFFFF2F821A50E5A00D2BD62 /* UIFieldViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFieldViewConfiguration.swift; sourceTree = "<group>"; };
 		BFFFF2FB21A5EAC100D2BD62 /* UICalendarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICalendarView.xib; sourceTree = "<group>"; };
 		BFFFF2FD21A5EAD100D2BD62 /* UICalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarView.swift; sourceTree = "<group>"; };
-		BFFFF2FF21A5EDFA00D2BD62 /* UICalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewController.swift; sourceTree = "<group>"; };
-		BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataController.swift; sourceTree = "<group>"; };
 		BFFFF30321A5EE4A00D2BD62 /* UICalendarViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewConfiguration.swift; sourceTree = "<group>"; };
-		BFFFF30521A5F30000D2BD62 /* UICalendarViewLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewLayoutController.swift; sourceTree = "<group>"; };
 		BFFFF30921A6016F00D2BD62 /* UICalendarViewDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDayCell.swift; sourceTree = "<group>"; };
 		BFFFF30B21A6036000D2BD62 /* UICalendarViewDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICalendarViewDayCell.xib; sourceTree = "<group>"; };
 		BFFFF30D21A6144400D2BD62 /* UICalendarViewEventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICalendarViewEventCell.xib; sourceTree = "<group>"; };
@@ -859,7 +851,6 @@
 				BFFFF30321A5EE4A00D2BD62 /* UICalendarViewConfiguration.swift */,
 				BFFFF31121A8D84100D2BD62 /* UICalendarViewDayCellConfguration.swift */,
 				BFFFF31321A8D89200D2BD62 /* UICalendarViewEventCellConfiguration.swift */,
-				BF7B2C5121B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -881,16 +872,6 @@
 				BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		BF70B2CA21B6597F001E550D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BFFFF2FF21A5EDFA00D2BD62 /* UICalendarViewController.swift */,
-				BFFFF30521A5F30000D2BD62 /* UICalendarViewLayoutController.swift */,
-				BFFFF30121A5EE2100D2BD62 /* UICalendarViewDataController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		BF70B2CB21B73DA5001E550D /* Interfaces */ = {
@@ -1070,7 +1051,6 @@
 			children = (
 				BF70B2C221B655E7001E550D /* Interfaces */,
 				BF70B2C321B655FB001E550D /* Views */,
-				BF70B2CA21B6597F001E550D /* Controllers */,
 				BF70B2C721B656B2001E550D /* Protocols */,
 				BF70B2C521B6567A001E550D /* Models */,
 				BF70B2C421B6564E001E550D /* Configurations */,
@@ -1581,11 +1561,9 @@
 				BFD0298421509C6A002FB9F5 /* CreditCardTypeValidationRequirement.swift in Sources */,
 				BF5004BA2174127100D35B69 /* EventRouter.swift in Sources */,
 				BFD82ACF216E77B600A14868 /* SelectCollegeInteractor.swift in Sources */,
-				BFFFF30021A5EDFA00D2BD62 /* UICalendarViewController.swift in Sources */,
 				BF5004D821741E6900D35B69 /* AddLocationProtocols.swift in Sources */,
 				BFFFF31421A8D89200D2BD62 /* UICalendarViewEventCellConfiguration.swift in Sources */,
 				BF7B2C5721B0ACFC00E91E38 /* LazyValue.swift in Sources */,
-				BF7B2C5221B0962C00E91E38 /* UICalendarViewLayoutConfiguration.swift in Sources */,
 				BF5005C8217EF4FF00D35B69 /* OnboardingInteractor.swift in Sources */,
 				BF5005C5217EF4FF00D35B69 /* OnboardingRouter.swift in Sources */,
 				BFFFF31221A8D84100D2BD62 /* UICalendarViewDayCellConfguration.swift in Sources */,
@@ -1610,7 +1588,6 @@
 				BFCDA5EF21725E7200DB31FC /* WelcomeProtocols.swift in Sources */,
 				BFD82ACD216E77B600A14868 /* SelectCollegeViewController.swift in Sources */,
 				BFD82AD7216E7D3500A14868 /* ResultAnyError.swift in Sources */,
-				BFFFF30221A5EE2100D2BD62 /* UICalendarViewDataController.swift in Sources */,
 				BF5004D521741E6900D35B69 /* AddLocationPresenter.swift in Sources */,
 				BF5004EE21741EAF00D35B69 /* TutorProfileRouter.swift in Sources */,
 				BFD0298121509C6A002FB9F5 /* CreditCardPrefixContainable.swift in Sources */,
@@ -1618,7 +1595,6 @@
 				BF5004D721741E6900D35B69 /* AddLocationViewController.swift in Sources */,
 				BF5004E421741E9100D35B69 /* SelectTutorProtocols.swift in Sources */,
 				BF50046E2172F09700D35B69 /* ProfileOverviewInteractor.swift in Sources */,
-				BFFFF30621A5F30000D2BD62 /* UICalendarViewLayoutController.swift in Sources */,
 				BFF6C2962187E2D0003F7D96 /* ClientReadable.swift in Sources */,
 				BF4F48BF21823C75000D98D1 /* AppViewController.swift in Sources */,
 				BF500557217B837600D35B69 /* WalkthroughViewController.swift in Sources */,
