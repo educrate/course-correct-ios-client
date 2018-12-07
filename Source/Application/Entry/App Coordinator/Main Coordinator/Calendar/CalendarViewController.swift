@@ -38,9 +38,9 @@ extension CalendarViewController: UICalendarViewDataSource {
     func calendarView(_ calendarView: UICalendarView,
                       dayForItemAt indexPath: IndexPath) -> UICalendarViewDay {
         
-        return UICalendarViewDay(date: UICalendarViewDayDescription(day: 1,
-                                                                    month: 1,
-                                                                    year: 2018,
+        return UICalendarViewDay(date: UICalendarViewDayDescription(day: indexPath.row + 1,
+                                                                    month: indexPath.section + 1,
+                                                                    year: 2018 + (indexPath.section / 12),
                                                                     dayNameShort: "Fri",
                                                                     monthNameShort: "Jan",
                                                                     monthName: "January"),
