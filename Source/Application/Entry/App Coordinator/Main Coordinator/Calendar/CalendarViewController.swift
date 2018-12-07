@@ -10,19 +10,22 @@ import UIKit
 
 class CalendarViewController: UIViewController, CalendarViewProtocol {
     
-    // MARK: Viper
+    // MARK: - Viper Components
 	var presenter: CalendarPresenterProtocol?
     
-    // MARK: View
-    @IBOutlet private weak var calendarView: UICalendarView! {
-        didSet {
-            calendarView.dataSource = self
-        }
-    }
+    // MARK: - View Outlets
+    @IBOutlet private weak var calendarView: UICalendarView!
     
-    // MARK: Deinit Verification
+    // MARK: - Deinit Verification
     deinit {
         print("deinitialized calendar screen")
+    }
+}
+
+extension CalendarViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        calendarView.dataSource = self
     }
 }
 
@@ -50,7 +53,8 @@ extension CalendarViewController: UICalendarViewDataSource {
     }
 }
 
-extension CalendarViewController {
+// MARK: - IBActions
+private extension CalendarViewController {
     @IBAction func profileButtonPressed(_ sender: UIButton, forEvent event: UIEvent) {
         presenter?.showProfile()
     }
