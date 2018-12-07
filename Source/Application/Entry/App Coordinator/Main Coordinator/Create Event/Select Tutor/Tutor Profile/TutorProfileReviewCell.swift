@@ -2,7 +2,7 @@
 //  TutorProfileReviewCell.swift
 //  Client
 //
-//  Created by Ampe on 11/5/18.
+//  Created by Christian Ampe on 11/5/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 

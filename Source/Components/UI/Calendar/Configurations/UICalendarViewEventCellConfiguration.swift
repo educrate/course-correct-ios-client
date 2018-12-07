@@ -2,7 +2,7 @@
 //  UICalendarViewEventCellConfiguration.swift
 //  Client
 //
-//  Created by Ampe on 11/23/18.
+//  Created by Christian Ampe on 11/23/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 

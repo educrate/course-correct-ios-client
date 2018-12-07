@@ -2,12 +2,15 @@
 //  UICalendarView.swift
 //  Client
 //
-//  Created by Ampe on 11/21/18.
+//  Created by Christian Ampe on 11/21/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import UIKit
 
+/// A view used for representing a continuous scrolling
+/// calendar.  The data is provided through the data source
+/// and information is displayed through the delegate.
 final class UICalendarView: XIBView {
     
     // MARK: - View Outlets

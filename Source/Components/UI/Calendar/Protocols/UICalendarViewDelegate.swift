@@ -8,4 +8,6 @@
 
 import Foundation
 
+/// External facing delegate which provides the implementer
+/// with necessary information about interactions on the calendar.
 protocol UICalendarViewDelegate: class {}

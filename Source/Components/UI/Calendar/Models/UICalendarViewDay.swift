@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Model containing information for a single calendar day.
 struct UICalendarViewDay {
     
     /// Description for extracting information on the week and day of the month.

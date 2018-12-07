@@ -2,12 +2,14 @@
 //  UICalendarViewEventCell.swift
 //  Client
 //
-//  Created by Ampe on 11/21/18.
+//  Created by Christian Ampe on 11/21/18.
 //  Copyright © 2018 Educrate. All rights reserved.
 //
 
 import UIKit
 
+/// This cell contains the information for a single
+/// event contained inside a day cell.
 class UICalendarViewEventCell: UICollectionViewCell {
     
     // MARK: - Properties

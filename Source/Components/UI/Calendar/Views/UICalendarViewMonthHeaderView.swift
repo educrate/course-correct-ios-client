@@ -8,6 +8,8 @@
 
 import UIKit
 
+/// This header view contains the necessary information
+/// to display the month and year description to the user.
 class UICalendarViewMonthHeaderView: UICollectionReusableView {
     
     // MARK: - View Outlets
