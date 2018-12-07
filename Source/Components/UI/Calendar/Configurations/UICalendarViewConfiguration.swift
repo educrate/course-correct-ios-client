@@ -9,15 +9,12 @@
 import Foundation
 
 struct UICalendarViewConfiguration {
-    let dataConfiguration: UICalendarViewDataConfiguration
     let layoutConfiguration: UICalendarViewLayoutConfiguration
     let cellConfiguration: UICalendarViewDayCellConfguration
     
-    init(dataConfiguration: UICalendarViewDataConfiguration = .default,
-         layoutConfiguration: UICalendarViewLayoutConfiguration = .default,
+    init(layoutConfiguration: UICalendarViewLayoutConfiguration = .default,
          cellConfiguration: UICalendarViewDayCellConfguration = .default) {
         
-        self.dataConfiguration = dataConfiguration
         self.layoutConfiguration = layoutConfiguration
         self.cellConfiguration = cellConfiguration
     }

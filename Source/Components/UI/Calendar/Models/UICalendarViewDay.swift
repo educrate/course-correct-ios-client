@@ -10,16 +10,16 @@ import Foundation
 
 struct UICalendarViewDay {
     
-    /// Date for extracting day of the week and day of the month.
-    let date: UICalendarViewDate
+    /// Description for extracting information on the week and day of the month.
+    let description: UICalendarViewDayDescription
     
-    /// events occurring during this day
+    /// Events occurring during this day.
     let events: [UICalendarViewEvent]
     
-    init(date: UICalendarViewDate,
-         events: [UICalendarViewEvent] = []) {
+    init(date: UICalendarViewDayDescription,
+         events: [UICalendarViewEvent]) {
         
-        self.date = date
+        self.description = date
         self.events = events
     }
 }

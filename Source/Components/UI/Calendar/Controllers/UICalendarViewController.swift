@@ -13,7 +13,7 @@ class UICalendarViewController {
     let layoutDelegate: UICalendarViewLayoutController
     
     init(configuration: UICalendarViewConfiguration = .default) {
-        dataSource = UICalendarViewDataController(calendar: configuration.dataConfiguration.calendar)
+        dataSource = UICalendarViewDataController()
         layoutDelegate = UICalendarViewLayoutController(heightInPixelsOfOneHour: configuration.layoutConfiguration.heightInPixelsOfOneHour)
     }
 }

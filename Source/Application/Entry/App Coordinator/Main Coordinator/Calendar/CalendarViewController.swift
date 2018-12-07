@@ -27,14 +27,26 @@ class CalendarViewController: UIViewController, CalendarViewProtocol {
 }
 
 extension CalendarViewController: UICalendarViewDataSource {
-    func events(for dateIndex: UICalendarViewDateComponents) -> [UICalendarViewEvent] {
-        if dateIndex.day % 5 == 0 {
-            return [UICalendarViewEvent(title: "Physics 101 with Dustin Tran", time: "10 AM-12:30 PM", location: "Langston Library"),
-                    UICalendarViewEvent(title: "Physics 101 with Dustin Tran", time: "10 AM-12:30 PM", location: "Langston Library"),
-                    UICalendarViewEvent(title: "Physics 101 with Dustin Tran", time: "10 AM-12:30 PM", location: "Langston Library")]
-        } else {
-            return []
-        }
+    func numberOfMonths(in calendarView: UICalendarView) -> Int {
+        return 12
+    }
+    
+    func calendarView(_ calendarView: UICalendarView, numberOfDaysInSection section: Int) -> Int {
+        return 31
+    }
+    
+    func calendarView(_ calendarView: UICalendarView,
+                      dayForItemAt indexPath: IndexPath) -> UICalendarViewDay {
+        
+        return UICalendarViewDay(date: UICalendarViewDayDescription(day: 1,
+                                                                    month: 1,
+                                                                    year: 2018,
+                                                                    dayNameShort: "Fri",
+                                                                    monthNameShort: "Jan",
+                                                                    monthName: "January"),
+                                 events: [UICalendarViewEvent(title: "Physics 7C with Dustin Tran",
+                                                              time: "12-1:15 PM",
+                                                              location: "Langston Library")])
     }
 }
 

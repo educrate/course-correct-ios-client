@@ -30,17 +30,6 @@ class UICalendarView: XIBView {
     /// and configurations of subviews
     private let configuration: UICalendarViewConfiguration = .default
     
-    // MARK: - Internal Protocols
-    
-    /// Delegate for the calendar collection view.
-    private weak var dateDelegate: UICalendarViewDateDelegate!
-    
-    /// Data source for the calendar date formatting.
-    private weak var dateDataSource: UICalendarViewDateDataSource!
-    
-    /// Delegate for the calendar collection layout.
-    private weak var layoutDelegate: UICalendarViewLayoutDelegate!
-    
     // MARK: - External Protocols
     
     /// Delegate for the calendar collection.
@@ -51,28 +40,18 @@ class UICalendarView: XIBView {
     
     // MARK: - Initializers
     
-    /// Programmatic initializer override used to set
-    /// internal delegates and data sources.
+    /// Programmatic initializer override.
     ///
     /// - Parameter frame: Frame passed by the caller.
     override init(frame: CGRect) {
         super.init(frame: frame)
-        dateDelegate = controller.dataSource
-        dateDataSource = controller.dataSource
-        layoutDelegate = controller.layoutDelegate
-        controller.dataSource.delegate = self
     }
     
-    /// Internal storyboard initializer override used to set
-    /// delegates and data sources.
+    /// Internal storyboard initializer override.
     ///
     /// - Parameter aDecoder: Internal coder passed from the storyboard.
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        dateDelegate = controller.dataSource
-        dateDataSource = controller.dataSource
-        layoutDelegate = controller.layoutDelegate
-        controller.dataSource.delegate = self
     }
 }
 
@@ -84,31 +63,16 @@ extension UICalendarView {
     }
 }
 
-// MARK: - Public Update Methods
-extension UICalendarView {
-    
-    /// Scrolls the calendar to the specified date.
-    ///
-    /// - Parameters:
-    ///   - dateComponents: Components representing the date you want to scroll to.
-    ///   - animated: Flag determing whether to perform this operation animated or not.
-    func move(to dateComponents: UICalendarViewDateComponents,
-                animated: Bool = true) {
-        
-        // todo
-    }
-}
-
 // MARK: - Table View Data Source Conformation
 extension UICalendarView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return dateDataSource.numberOfMonths()
+        return dataSource?.numberOfMonths(in: self) ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         
-        return dateDataSource.numberOfDays(in: section)
+        return dataSource?.calendarView(self, numberOfDaysInSection: section) ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -132,51 +96,41 @@ extension UICalendarView: UICollectionViewDelegate {
                         forItemAt indexPath: IndexPath) {
         
         DispatchQueue.main.async { [weak self] in
-            guard let `self` = self else {
+            guard
+                let `self` = self,
+                let dataSource = self.dataSource,
+                let cell = cell as? UICalendarViewDayCell
+            else {
                 return
             }
             
-            guard let cell = cell as? UICalendarViewDayCell else {
-                assertionFailure("internal inconsistency - incorrect cell type passed forward")
-                return
-            }
+            let day = dataSource.calendarView(self, dayForItemAt: indexPath)
             
-            let components = self.dateDataSource.components(for: indexPath)
+            cell.set(day)
+            cell.set(self.configuration.cellConfiguration)
             
-            guard let descriptions = self.dateDataSource.descriptions(for: components) else {
-                return
-            }
-            
-            let date = UICalendarViewDate(components: components, descriptions: descriptions)
-            
-            cell.set(date)
             cell.reload()
         }
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         willDisplaySupplementaryView view: UICollectionReusableView,
-                        forElementKind elementKind: String, at indexPath: IndexPath) {
-        
-        dateDelegate.willDisplay(indexPath.section)
+                        forElementKind elementKind: String,
+                        at indexPath: IndexPath) {
         
         DispatchQueue.main.async { [weak self] in
-            guard let `self` = self else {
+            guard
+                let `self` = self,
+                let dataSource = self.dataSource,
+                let monthHeader = view as? UICalendarViewMonthHeaderView
+            else {
                 return
             }
             
-            guard let monthHeader = view as? UICalendarViewMonthHeaderView else {
-                assertionFailure("internal inconsistency - incorrect header view type passed forward")
-                return
-            }
+            let day = dataSource.calendarView(self, dayForItemAt: indexPath)
             
-            let components = self.dateDataSource.components(for: indexPath)
+            monthHeader.set("\(day.description.monthName) \(day.description.yearValue)")
             
-            guard let descriptions = self.dateDataSource.descriptions(for: components) else {
-                return
-            }
-            
-            monthHeader.set("\(descriptions.monthName) \(descriptions.yearValue)")
             monthHeader.reload()
         }
     }
@@ -188,16 +142,8 @@ extension UICalendarView: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let components = dateDataSource.components(for: indexPath)
-        
-        guard let dataSource = dataSource else {
-            return .zero
-        }
-        
-        let eventCount = dataSource.events(for: components).count
-        
         return CGSize(width: collectionView.bounds.width,
-                      height: (layoutDelegate.heightForCell(eventCount)))
+                      height: 100)
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -212,21 +158,6 @@ extension UICalendarView: UICollectionViewDelegateFlowLayout {
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         return configuration.cellConfiguration.lineSpacing
-    }
-}
-
-// MARK: - Calendar View Data Controller Delegate Conformation
-extension UICalendarView: UICalendarViewDataControllerDelegate {
-    func reload(_ sections: IndexSet) {
-        collectionView.reloadSections(sections)
-    }
-    
-    func insert(_ indexPaths: [IndexPath]) {
-//        collectionView.reloadSections()
-    }
-    
-    func remove(_ indexPaths: [IndexPath]) {
-//        collectionView.reloadSections()
     }
 }
 

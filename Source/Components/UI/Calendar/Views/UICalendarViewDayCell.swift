@@ -16,12 +16,8 @@ class UICalendarViewDayCell: UICollectionViewCell {
     // MARK: - Properties
     
     /// Contains necessary information to
-    /// set up the date in the collection view.
-    private var date: UICalendarViewDate?
-    
-    /// Contains necessary information to
-    /// set up the events in the collection view.
-    private var events: [UICalendarViewEvent]?
+    /// set up the cell.
+    private var day: UICalendarViewDay?
     
     /// Contains all the styling for the cell.
     private var configuration: UICalendarViewDayCellConfguration = .default
@@ -55,12 +51,8 @@ extension UICalendarViewDayCell {
     /// Method used for setting the day property.
     ///
     /// - Parameter day: Contains information regarding the specifc cell's day.
-    func set(_ date: UICalendarViewDate) {
-        self.date = date
-    }
-    
-    func set(_ events: [UICalendarViewEvent]) {
-        self.events = events
+    func set(_ day: UICalendarViewDay) {
+        self.day = day
     }
     
     /// Method used for setting the configuration of this cell.
@@ -73,46 +65,51 @@ extension UICalendarViewDayCell {
     /// Method used to reload all inputs on the cell.
     /// Call after setting the day or configuration.
     func reload() {
-        if let date = date {
-            titleLabel.text = date.descriptions.dayValue
-            detailLabel.text = date.descriptions.dayNameShort
+        guard let day = day else {
+            return
         }
         
-        if let events = events, !events.isEmpty {
-            collectionView.reloadData()
-        }
+        titleLabel.text = day.description.dayValue
+        detailLabel.text = day.description.dayNameShort
+        
+        collectionView.reloadData()
     }
 }
 
 // MARK: - Table View Data Source Implementation
 extension UICalendarViewDayCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let events = events else {
-            return 0
-        }
-        
-        return events.count
+        return day?.events.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICalendarViewEventCell = collectionView.dequeueReusableCell(for: indexPath)
+        return collectionView.dequeueReusableCell(for: indexPath) as UICalendarViewEventCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
         
-        guard let events = events else {
-            return cell
+        DispatchQueue.main.async { [weak self] in
+            guard
+                let `self` = self,
+                let day = self.day,
+                let cell = cell as? UICalendarViewEventCell
+            else {
+                return
+            }
+            
+            guard day.events.indices.contains(indexPath.row) else {
+                return
+            }
+            
+            let event = day.events[indexPath.row]
+            
+            cell.set(event)
+            cell.set(self.configuration.eventCellConfiguration)
+            
+            cell.reload()
         }
-        
-        let rowIndex = indexPath.row
-        
-        guard events.indices.contains(rowIndex) else {
-            return cell
-        }
-        
-        let event = events[rowIndex]
-        
-        cell.set(event)
-        cell.set(configuration.eventCellConfiguration)
-        
-        return cell
     }
 }
 
@@ -122,9 +119,7 @@ extension UICalendarViewDayCell: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let fullCollectionWidth = collectionView.bounds.width
-        
-        return CGSize(width: fullCollectionWidth,
+        return CGSize(width: collectionView.bounds.width,
                       height: configuration.minimumHeight)
     }
     

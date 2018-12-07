@@ -15,9 +15,3 @@ class UICalendarViewLayoutController {
         self.heightInPixelsOfOneHour = heightInPixelsOfOneHour
     }
 }
-
-extension UICalendarViewLayoutController: UICalendarViewLayoutDelegate {
-    func heightForCell(_ eventCount: Int) -> CGFloat {
-        return 50
-    }
-}
