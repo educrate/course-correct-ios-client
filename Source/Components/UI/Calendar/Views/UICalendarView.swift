@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UICalendarView: XIBView {
+final class UICalendarView: XIBView {
     
     // MARK: - View Outlets
     
