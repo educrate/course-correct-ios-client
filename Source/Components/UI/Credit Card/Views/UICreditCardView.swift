@@ -8,64 +8,152 @@
 
 import UIKit
 
+/// A view used to represent a single credit card.
 final class UICreditCardView: XIBView {
     
-    // MARK: View Outlets
-    @IBOutlet private weak var contentView: UIView!
+    // NARK: - Properties
+    
+    /// The values associated with the credit card view.
+    private var metadata: UICreditCardViewMetadata = .default
+    
+    /// The properties used to style the credit card view.
+    private var configuration: UICreditCardViewConfiguration = .default
+    
+    // MARK: - View Outlets
+    
+    /// The view used for laying out all the associated card information.
+    /// This is view the implementer sees as the true credit card.
     @IBOutlet private weak var cardView: UIView!
+    
+    /// The image view for displaying the logo of the associated card.
     @IBOutlet private weak var logoImageView: UIImageView!
+    
+    /// The label where the account number information is shown.
     @IBOutlet private weak var numberLabel: UILabel!
+    
+    /// The label where the cvv number information is shown.
     @IBOutlet private weak var cvvLabel: UILabel!
+    
+    /// The label where the expiration date information is shown.
     @IBOutlet private weak var expirationLabel: UILabel!
+    
+    /// The label where the account name information is shown.
     @IBOutlet private weak var nameLabel: UILabel!
     
-    // MARK: Constraint Outlets
+    // MARK: - Constraint Outlets
+    
+    // these constraints must be set up programatically as they are
+    // based on ratio calculations and not static values
+    
+    /// The constraint responsible for binding the top of the card view to the top of the content view.
     @IBOutlet private weak var cardTopConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for binding the right of the card view to the right of the content view.
     @IBOutlet private weak var cardTrailingConstraint: NSLayoutConstraint!
+   
+    /// /// The constraint responsible for binding the bottom of the card view to the bottom of the content view.
     @IBOutlet private weak var cardBottomConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for binding the left of the card view to the left of the content view.
     @IBOutlet private weak var cardLeadingConstraint: NSLayoutConstraint!
+   
+    /// The constraint responsible for anchoring the card to the horizontal center of the content view.
     @IBOutlet private weak var cardCenterXConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for anchoring the card to the vertical center of the content view.
     @IBOutlet private weak var cardCenterYConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for anchoring the logo to the top of the credit card view.
     @IBOutlet private weak var logoTopConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for anchoring the bottom of the number label to the top of the cvv label.
     @IBOutlet private weak var numberBottomConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for anchoring the bottom of the cvv label to the top of the expiration label.
     @IBOutlet private weak var cvvBottomConstraint: NSLayoutConstraint!
+   
+    /// The constraint responsible for anchoring the bottom of the expiration label to the top of the name label.
     @IBOutlet private weak var expirationBottomConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for anchoring the bottom of the name label to the bottom of the credit card view.
     @IBOutlet private weak var nameBottomConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for anchoring the left side of the logo view to the left side of the credit card view.
     @IBOutlet private weak var logoLeadingConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for anchoring the left side of the number label to the left side of the credit card view.
     @IBOutlet private weak var numberLeadingConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for anchoring the left side of the cvv label to the left side of the credit card view.
     @IBOutlet private weak var cvvLeadingConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for anchoring the left side of the expiration label to the left side of the credit card view.
     @IBOutlet private weak var expirationLeadingConstraint: NSLayoutConstraint!
+   
+    /// The constraint responsible for anchoring the left side of the name label to the left side of the credit card view.
     @IBOutlet private weak var nameLeadingConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for sizing the width of the logo view.
     @IBOutlet private weak var logoWidthConstraint: NSLayoutConstraint!
+    
+    /// /// The constraint responsible for sizing the height of the logo view.
     @IBOutlet private weak var logoHeightConstraint: NSLayoutConstraint!
+   
+    /// The constraint responsible for sizing the height of the number label.
     @IBOutlet private weak var numberHeightConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for sizing the height of the cvv label.
     @IBOutlet private weak var cvvHeightConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for sizing the height of the expiration label.
     @IBOutlet private weak var expirationHeightConstraint: NSLayoutConstraint!
+    
+    /// The constraint responsible for sizing the height of the name label.
     @IBOutlet private weak var nameHeightConstraint: NSLayoutConstraint!
 }
 
+// MARK: - View Lifecycle
 extension UICreditCardView {
     override func awakeFromNib() {
         super.awakeFromNib()
-        setUp()
-    }
-}
-
-private extension UICreditCardView {
-    func setUp() {
-        style()
         constrain()
+        reload()
     }
 }
 
-private extension UICreditCardView {
-    func style() {
-        cardView.layer.cornerRadius = 3.0
-        cardView.layer.borderWidth = 1.0
-        cardView.layer.borderColor = UIColor.black.cgColor
+// MARK: - Public Setup Methods
+extension UICreditCardView {
+    
+    /// This method only sets the metadata property on the view.
+    /// To see the result of this, reload must be called on the view.
+    ///
+    /// - Parameter metadata: The new values to be associated with the credit card view.
+    func set(_ metadata: UICreditCardViewMetadata) {
+        
+    }
+    
+    /// This method only sets the configuration of the view.
+    /// To see the result of this, reload must be called on the view.
+    ///
+    /// - Parameter configuration: The new styling properties for the card view.
+    func set(_ configuration: UICreditCardViewConfiguration) {
+        self.configuration = configuration
+    }
+    
+    /// This method reloads the configuration and metadata properties on the card view.
+    func reload() {
+        numberLabel.textColor = configuration.textColor
+        cvvLabel.textColor = configuration.textColor
+        expirationLabel.textColor = configuration.textColor
+        nameLabel.textColor = configuration.textColor
+        cardView.backgroundColor = configuration.backgroundColor
+        cardView.layer.borderColor = configuration.borderColor.cgColor
+        cardView.layer.cornerRadius = configuration.cornerRadius
+        cardView.layer.borderWidth = configuration.borderWidth
     }
 }
 
+// MARK: - Constraint Methods
 private extension UICreditCardView {
     func constrain() {
         constrainContent()

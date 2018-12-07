@@ -12,16 +12,19 @@ struct UICreditCardViewConfiguration {
     let backgroundColor: UIColor
     let textColor: UIColor
     let borderColor: UIColor
+    let cornerRadius: CGFloat
     let borderWidth: CGFloat
     
     init(backgroundColor: UIColor = .white,
          textColor: UIColor = .black,
          borderColor: UIColor = .black,
+         cornerRadius: CGFloat = 3,
          borderWidth: CGFloat = 1) {
         
         self.backgroundColor = backgroundColor
         self.textColor = textColor
         self.borderColor = borderColor
+        self.cornerRadius = cornerRadius
         self.borderWidth = borderWidth
     }
 }
