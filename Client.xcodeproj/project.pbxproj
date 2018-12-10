@@ -604,8 +604,6 @@
 				BF5005AF217EEE9C00D35B69 /* AppInteractor.swift */,
 				BF5005AE217EEE9C00D35B69 /* AppProtocols.swift */,
 				BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */,
-				BF579339216D4485008DBB46 /* Onboarding Coordinator */,
-				BF5004A5217411C300D35B69 /* Main Coordinator */,
 			);
 			path = "App Coordinator";
 			sourceTree = "<group>";
@@ -906,6 +904,22 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		BF70B30A21BE2E7E001E550D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BF579339216D4485008DBB46 /* Onboarding Coordinator */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BF70B30B21BE2E88001E550D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BF5004A5217411C300D35B69 /* Main Coordinator */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		BF70B5CF217074AC00771E5D /* Enter Access Code */ = {
 			isa = PBXGroup;
 			children = (
@@ -1032,6 +1046,8 @@
 			isa = PBXGroup;
 			children = (
 				BF4E718D216D4C1A00100FE1 /* Entry */,
+				BF70B30A21BE2E7E001E550D /* Onboarding */,
+				BF70B30B21BE2E88001E550D /* Main */,
 			);
 			path = Application;
 			sourceTree = "<group>";
