@@ -22,12 +22,14 @@ protocol AddLocationPresenterProtocol: class {}
 // MARK: - Interactor
 
 protocol AddLocationInteractorProtocol: class {
-  var presenter: AddLocationPresenterProtocol? { get set }
+    var presenter: AddLocationPresenterProtocol? { get set }
+    
+    func request(autocomplete search: String)
 }
 
 
 // MARK: - View 
 
 protocol AddLocationViewProtocol: class {
-  var presenter: AddLocationPresenterProtocol? { get set }
+    var presenter: AddLocationPresenterProtocol? { get set }
 }

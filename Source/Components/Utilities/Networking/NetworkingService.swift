@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NetworkingService {
+class NetworkingService<T: NetworkingRequest> {
     
     /// URL session used to make all network requests.
     private let session = URLSession(configuration: .default)
@@ -21,7 +21,7 @@ extension NetworkingService {
     /// - Parameters:
     ///   - request: A request object containing all information necessary for making a network request.
     ///   - completion: Returns a generic result containing either an error or successful response.
-    func request(_ request: NetworkingRequest,
+    func request(_ request: T,
                  completion: @escaping (Result<NetworkingResponse, NetworkingError>) -> Void) {
         
         // make network request utilizing Apple's API

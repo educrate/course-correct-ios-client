@@ -14,13 +14,7 @@ class AddLocationViewController: UIViewController, AddLocationViewProtocol {
     var presenter: AddLocationPresenterProtocol?
     
     // MARK: View Outlets
-    @IBOutlet private weak var locationSelector: UIDropDownView! {
-        didSet {
-            locationSelector.delegate = self
-            locationSelector.set(UIDropDownViewConfiguration(placeholder: "Address"))
-            locationSelector.reload()
-        }
-    }
+    @IBOutlet private weak var locationSelector: UIDropDownView!
     
     // MARK: Deinitialization Verification
     deinit {
@@ -28,9 +22,18 @@ class AddLocationViewController: UIViewController, AddLocationViewProtocol {
     }
 }
 
+extension AddLocationViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        locationSelector.delegate = self
+        locationSelector.set(UIDropDownViewConfiguration(placeholder: "Address"))
+        locationSelector.reload()
+    }
+}
+
 extension AddLocationViewController: UIDropDownViewDelegate {
     func inputChanged(_ sender: UITextField) {
-        
+
     }
     
     func dropDown(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

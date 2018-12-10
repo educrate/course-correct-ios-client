@@ -133,6 +133,9 @@
 		BF55165A215B374D00D0CBB1 /* UICalendarViewDayDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* UICalendarViewDayDescription.swift */; };
 		BF5F6210218FCCCB00E43B75 /* SelectTutorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F620F218FCCCB00E43B75 /* SelectTutorCell.swift */; };
 		BF5F621821916D6F00E43B75 /* TutorProfileReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F621721916D6F00E43B75 /* TutorProfileReviewCell.swift */; };
+		BF70B30D21BE3003001E550D /* AddLocationNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */; };
+		BF70B30F21BE3829001E550D /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30E21BE3829001E550D /* NetworkingHelper.swift */; };
+		BF70B31121BE3EE4001E550D /* AddLocationAutocompleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
 		BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */; };
 		BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D2217074C600771E5D /* EnterAccessCodeViewController.swift */; };
@@ -386,6 +389,9 @@
 		BF551659215B374D00D0CBB1 /* UICalendarViewDayDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDayDescription.swift; sourceTree = "<group>"; };
 		BF5F620F218FCCCB00E43B75 /* SelectTutorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorCell.swift; sourceTree = "<group>"; };
 		BF5F621721916D6F00E43B75 /* TutorProfileReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileReviewCell.swift; sourceTree = "<group>"; };
+		BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationNetworking.swift; sourceTree = "<group>"; };
+		BF70B30E21BE3829001E550D /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
+		BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationAutocompleteResponse.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
 		BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeRouter.swift; sourceTree = "<group>"; };
 		BF70B5D2217074C600771E5D /* EnterAccessCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeViewController.swift; sourceTree = "<group>"; };
@@ -673,6 +679,8 @@
 				BF5004D121741E6900D35B69 /* AddLocationRouter.swift */,
 				BF5004D421741E6900D35B69 /* AddLocationInteractor.swift */,
 				BF5004D321741E6900D35B69 /* AddLocationProtocols.swift */,
+				BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */,
+				BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */,
 			);
 			path = "Add Location";
 			sourceTree = "<group>";
@@ -1140,6 +1148,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD82A7A216D989D00A14868 /* Networking.swift */,
+				BF70B30E21BE3829001E550D /* NetworkingHelper.swift */,
 				BFD82A7E216D989D00A14868 /* NetworkingService.swift */,
 				BFD82A7C216D989D00A14868 /* NetworkingRequest.swift */,
 				BFD82A85216D989E00A14868 /* NetworkingRequestBody.swift */,
@@ -1519,6 +1528,7 @@
 				BF50047721730A3E00D35B69 /* ProfileOverviewError.swift in Sources */,
 				BF5004802173AC2200D35B69 /* ProfileAccountViewController.swift in Sources */,
 				BF4F48F221826A82000D98D1 /* MainPresenter.swift in Sources */,
+				BF70B30D21BE3003001E550D /* AddLocationNetworking.swift in Sources */,
 				BFFFF2F521A50E4100D2BD62 /* UIFieldView.swift in Sources */,
 				BFD82A90216D989E00A14868 /* NetworkingService.swift in Sources */,
 				BF5004EF21741EAF00D35B69 /* TutorProfileViewController.swift in Sources */,
@@ -1527,6 +1537,7 @@
 				BF5005B4217EEE9C00D35B69 /* AppInteractor.swift in Sources */,
 				BF500555217B837600D35B69 /* WalkthroughPresenter.swift in Sources */,
 				BFFFF2F921A50E5A00D2BD62 /* UIFieldViewConfiguration.swift in Sources */,
+				BF70B31121BE3EE4001E550D /* AddLocationAutocompleteResponse.swift in Sources */,
 				BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */,
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
 				BFF6C2922184E1F8003F7D96 /* UINotificationViewConfiguration.swift in Sources */,
@@ -1552,6 +1563,7 @@
 				BF5004B92174127100D35B69 /* EventPresenter.swift in Sources */,
 				BF50053C217A765200D35B69 /* ManageCardPresenter.swift in Sources */,
 				BF500570217B87C900D35B69 /* CreateEventViewController.swift in Sources */,
+				BF70B30F21BE3829001E550D /* NetworkingHelper.swift in Sources */,
 				BFD0295C21509BB2002FB9F5 /* UICalendarViewDelegate.swift in Sources */,
 				BF1723BA219D3D020060B9CD /* UIInlinePickerViewConfiguration.swift in Sources */,
 				BF1723CA21A0BFE20060B9CD /* NetworkingRequestValidation.swift in Sources */,

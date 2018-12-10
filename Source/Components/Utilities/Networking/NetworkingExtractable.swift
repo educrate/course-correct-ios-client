@@ -18,13 +18,13 @@ protocol NetworkingExtractable {
     ///
     /// - Parameter data: The data to be parsed out into its cooresponding model.
     /// - Returns: A result containing either a formed object or an error.
-    static func decode(_ data: Data) -> Result<Self, NetworkingError>
+    static func decode(_ data: Data) -> Result<Self, NetworkingExtractableError>
     
     /// The method used for transforming a network object into data.
     ///
     /// - Parameter extractable: The object to be transformed into data.
     /// - Returns: A result containing either data from the passed in object or an error.
-    static func encode(_ extractable: Self) -> Result<Data, NetworkingError>
+    static func encode(_ extractable: Self) -> Result<Data, NetworkingExtractableError>
 }
 
 // MARK: - Extractable Conformance Of Type Codable
@@ -36,7 +36,7 @@ extension NetworkingExtractable where Self: Codable {
     /// - Returns: A result containing either a formed object or an error.
     static func decode(_ data: Data) -> Result<Self, NetworkingExtractableError> {
         do {
-            let result: Self = try Networking.jsonDecoder.decode(Self.self, from: data)
+            let result: Self = try NetworkingHelper.jsonDecoder.decode(Self.self, from: data)
             return Result(value: result)
         } catch {
             return Result(error: .parsing)
@@ -49,7 +49,7 @@ extension NetworkingExtractable where Self: Codable {
     /// - Returns: A result containing either data from the passed in object or an error.
     static func encode(_ extractable: Self) -> Result<Data, NetworkingExtractableError> {
         do {
-            let result: Data = try Networking.jsonEncoder.encode(extractable)
+            let result: Data = try NetworkingHelper.jsonEncoder.encode(extractable)
             return Result(value: result)
         } catch {
             return Result(error: .parsing)

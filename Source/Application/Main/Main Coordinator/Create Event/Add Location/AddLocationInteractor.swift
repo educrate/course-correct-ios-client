@@ -9,5 +9,19 @@
 import UIKit
 
 class AddLocationInteractor: AddLocationInteractorProtocol {
+    private let networking = Networking<AddLocationNetworking>()
+    
     weak var presenter: AddLocationPresenterProtocol?
+}
+
+extension AddLocationInteractor {
+    func request(autocomplete search: String) {
+        networking.request(.autocomplete("search"), extractable: AddLocationAutocompleteResponse.self) { result in
+            switch result {
+            case .success(let value):
+                
+            case .failure(let error):
+            }
+        }
+    }
 }

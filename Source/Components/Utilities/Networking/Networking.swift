@@ -9,29 +9,11 @@
 import Foundation
 
 // MARK: - Networking Class
-class Networking {
+class Networking<T: NetworkingRequest> {
     
     /// Initialized provider holding reference
     /// to the innerworkings of the service layer.
-    private let service = NetworkingService()
-}
-
-// MARK: - Cached Properties
-extension Networking {
-    
-    /// Default json decoder to be utilized
-    /// for all internally-conformed codables.
-    static let jsonDecoder: JSONDecoder = {
-        let decoder = JSONDecoder()
-        return decoder
-    }()
-    
-    /// Default json encoder to be utilized
-    /// for all internally-conformed codables.
-    static let jsonEncoder: JSONEncoder = {
-        let encoder = JSONEncoder()
-        return encoder
-    }()
+    private let service = NetworkingService<T>()
 }
 
 // MARK: - Internal API
@@ -41,8 +23,10 @@ extension Networking {
     /// any service supported network calls.
     /// - Parameters:
     ///     - target: Enum holding possible network requests.
+    ///     - extractable: The model to parsed and returned in the result.
     ///     - completion: Result returning either a parsed model or an error.
-    func request<E: NetworkingExtractable>(_ target: NetworkingRequest,
+    func request<E: NetworkingExtractable>(_ target: T,
+                                           extractable: E.Type,
                                            completion: @escaping (Result<E, NetworkingError>) -> Void) {
         
         // make request to specified target
