@@ -10,7 +10,7 @@ import UIKit
 
 /// This header view contains the necessary information
 /// to display the month and year description to the user.
-class UICalendarViewMonthHeaderView: UICollectionReusableView {
+final class UICalendarViewMonthHeaderView: UICollectionReusableView {
     
     // MARK: - View Outlets
     @IBOutlet weak var monthLabel: UILabel!

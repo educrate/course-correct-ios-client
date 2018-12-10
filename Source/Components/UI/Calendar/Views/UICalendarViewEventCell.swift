@@ -10,7 +10,7 @@ import UIKit
 
 /// This cell contains the information for a single
 /// event contained inside a day cell.
-class UICalendarViewEventCell: UICollectionViewCell {
+final class UICalendarViewEventCell: UICollectionViewCell {
     
     // MARK: - Properties
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIInlinePickerViewCell: UICollectionViewCell {
+final class UIInlinePickerViewCell: UICollectionViewCell {
     
     // MARK: Views
     @IBOutlet private weak var label: UILabel!

@@ -11,7 +11,7 @@ import UIKit
 /// This cell holds all the data for a single calendar day.
 /// It contains a date label on the left.
 /// It contains a table view in the middle.
-class UICalendarViewDayCell: UICollectionViewCell {
+final class UICalendarViewDayCell: UICollectionViewCell {
     
     // MARK: - Properties
     

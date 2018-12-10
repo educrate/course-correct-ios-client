@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIActionView: XIBView {
+final class UIActionView: XIBView {
     
     // MARK: Static Instance
     private static let main: UIActionView = {
