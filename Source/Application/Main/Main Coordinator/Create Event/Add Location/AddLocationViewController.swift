@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddLocationViewController: UIViewController, AddLocationViewProtocol {
+class AddLocationViewController: UIViewController {
 	
     // MARK: Viper
     var presenter: AddLocationPresenterProtocol?
@@ -22,6 +22,7 @@ class AddLocationViewController: UIViewController, AddLocationViewProtocol {
     }
 }
 
+// MARK: - Controller Lifecycle
 extension AddLocationViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +32,21 @@ extension AddLocationViewController {
     }
 }
 
+// MARK: - Viper View Protocol Conformance
+extension AddLocationViewController: AddLocationViewProtocol {
+    func show(autocomplete results: [Any]) {
+        
+    }
+    
+    func show(error message: String) {
+        
+    }
+}
+
+// MARK: - Drop Down Delegate Conformance
 extension AddLocationViewController: UIDropDownViewDelegate {
     func inputChanged(_ sender: UITextField) {
-
+        presenter?.fetch(autocomplete: sender.text ?? "")
     }
     
     func dropDown(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

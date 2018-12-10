@@ -16,7 +16,10 @@ protocol AddLocationWireframeProtocol: class {}
 
 // MARK: - Presenter
 
-protocol AddLocationPresenterProtocol: class {}
+protocol AddLocationPresenterProtocol: class {
+    func fetch(autocomplete text: String)
+    func autocompleteFetched(for search: String, with result: Result<AddLocationAutocompleteResponse, AddLocationError>)
+}
 
 
 // MARK: - Interactor
@@ -32,4 +35,7 @@ protocol AddLocationInteractorProtocol: class {
 
 protocol AddLocationViewProtocol: class {
     var presenter: AddLocationPresenterProtocol? { get set }
+    
+    func show(autocomplete results: [Any])
+    func show(error message: String)
 }

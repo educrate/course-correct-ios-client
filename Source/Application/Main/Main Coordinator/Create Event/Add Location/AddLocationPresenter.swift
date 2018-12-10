@@ -21,3 +21,18 @@ class AddLocationPresenter: AddLocationPresenterProtocol {
         self.router = router
     }
 }
+
+extension AddLocationPresenter {
+    func fetch(autocomplete text: String) {
+        interactor?.request(autocomplete: text)
+    }
+    
+    func autocompleteFetched(for search: String, with result: Result<AddLocationAutocompleteResponse, AddLocationError>) {
+        switch result {
+        case .success(let response):
+            view?.show(autocomplete: [response])
+        case .failure(let error):
+            view?.show(error: error.message)
+        }
+    }
+}

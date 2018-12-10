@@ -18,8 +18,8 @@ extension AddLocationInteractor {
     func request(autocomplete search: String) {
         networking.request(.autocomplete("search"), extractable: AddLocationAutocompleteResponse.self) { result in
             switch result {
-            case .success(let value):
-                print(value)
+            case .success(let response):
+                print(response)
             case .failure(let error):
                 print(error)
             }

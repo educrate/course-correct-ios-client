@@ -136,6 +136,7 @@
 		BF70B30D21BE3003001E550D /* AddLocationNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */; };
 		BF70B30F21BE3829001E550D /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30E21BE3829001E550D /* NetworkingHelper.swift */; };
 		BF70B31121BE3EE4001E550D /* AddLocationAutocompleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */; };
+		BF70B31321BF0A43001E550D /* AddLocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B31221BF0A43001E550D /* AddLocationError.swift */; };
 		BF70B5D5217074C600771E5D /* EnterAccessCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */; };
 		BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */; };
 		BF70B5D7217074C600771E5D /* EnterAccessCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B5D2217074C600771E5D /* EnterAccessCodeViewController.swift */; };
@@ -392,6 +393,7 @@
 		BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationNetworking.swift; sourceTree = "<group>"; };
 		BF70B30E21BE3829001E550D /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
 		BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationAutocompleteResponse.swift; sourceTree = "<group>"; };
+		BF70B31221BF0A43001E550D /* AddLocationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationError.swift; sourceTree = "<group>"; };
 		BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodePresenter.swift; sourceTree = "<group>"; };
 		BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeRouter.swift; sourceTree = "<group>"; };
 		BF70B5D2217074C600771E5D /* EnterAccessCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeViewController.swift; sourceTree = "<group>"; };
@@ -680,6 +682,7 @@
 				BF5004D421741E6900D35B69 /* AddLocationInteractor.swift */,
 				BF5004D321741E6900D35B69 /* AddLocationProtocols.swift */,
 				BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */,
+				BF70B31221BF0A43001E550D /* AddLocationError.swift */,
 				BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */,
 			);
 			path = "Add Location";
@@ -1509,6 +1512,7 @@
 				BFFFF30A21A6016F00D2BD62 /* UICalendarViewDayCell.swift in Sources */,
 				BF4F48F421826A82000D98D1 /* MainProtocols.swift in Sources */,
 				BF5005BE217EEF2000D35B69 /* SignUpInteractor.swift in Sources */,
+				BF70B31321BF0A43001E550D /* AddLocationError.swift in Sources */,
 				BFFFF2EC21A4BCD300D2BD62 /* UIDropDownViewCell.swift in Sources */,
 				BFD82A8C216D989E00A14868 /* Networking.swift in Sources */,
 				BFD82A95216D989E00A14868 /* NetworkingExtractable.swift in Sources */,
