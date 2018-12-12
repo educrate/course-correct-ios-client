@@ -23,6 +23,12 @@ extension CreateEventRouter {
 }
 
 extension CreateEventRouter {
+    func selectTutor(didSelectTutorWith id: Any) {
+        
+    }
+}
+
+extension CreateEventRouter {
     static func createModule() -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .createEvent)
         let view: CreateEventViewController = storyboard.instantiateViewController()

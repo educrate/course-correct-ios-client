@@ -8,24 +8,20 @@
 
 import Foundation
 
+// MARK: - Intermodule Communicator
+protocol OnboardingDelegate: class {
+    func onboarding(didFinishWith user: String)
+}
 
 // MARK: - Wireframe
-protocol OnboardingWireframeProtocol: WalkthroughRouterDelegate, WelcomeRouterDelegate, CongratulationsRouterDelegate {
+protocol OnboardingWireframeProtocol: WalkthroughDelegate, WelcomeDelegate, CongratulationsDelegate {
     func presentWalkthrough()
     func presentWelcome()
     func presentCongratulations()
 }
 
-
-// MARK: - Coordinator
-protocol OnboardingRouterDelegate: class {
-    func onboarding(didFinishWith user: String)
-}
-
-
 // MARK: - Presenter
 protocol OnboardingPresenterProtocol: class {}
-
 
 // MARK: - Interactor
 protocol OnboardingInteractorProtocol: class {

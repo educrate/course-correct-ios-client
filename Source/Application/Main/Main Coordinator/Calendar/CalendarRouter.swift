@@ -10,7 +10,7 @@ import UIKit
 
 class CalendarRouter: CalendarWireframeProtocol {
     private weak var viewController: UIViewController?
-    private weak var delegate: CalendarRouterDelegate?
+    private weak var delegate: CalendarDelegate?
 }
 
 extension CalendarRouter {
@@ -34,7 +34,7 @@ extension CalendarRouter {
 }
 
 extension CalendarRouter {
-    static func createModule(_ delegate: CalendarRouterDelegate?) -> UIViewController {
+    static func createModule(_ delegate: CalendarDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .calendar)
         let view: CalendarViewController = storyboard.instantiateViewController()
         let interactor = CalendarInteractor()

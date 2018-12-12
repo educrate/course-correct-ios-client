@@ -8,18 +8,15 @@
 
 import Foundation
 
+// MARK: - Intermodule Communicator
+protocol EnterAccessCodeDelegate: class {
+    func enterAccessCode(didEnter accessCode: String)
+}
 
 // MARK: - Wireframe
 protocol EnterAccessCodeWireframeProtocol: class {
     func showNextScreen()
 }
-
-
-// MARK: - Coordinator
-protocol EnterAccessCodeRouterDelegate: class {
-    func enterAccessCode(didEnter accessCode: String)
-}
-
 
 // MARK: - Presenter
 protocol EnterAccessCodePresenterProtocol: class {
@@ -28,14 +25,12 @@ protocol EnterAccessCodePresenterProtocol: class {
     func accessCodeValidated(for code: String, with result: Result<Void, EnterAccessCodeError>)
 }
 
-
 // MARK: - Interactor
 protocol EnterAccessCodeInteractorProtocol: class {
   var presenter: EnterAccessCodePresenterProtocol? { get set }
     
     func validate(_ accessCode: String)
 }
-
 
 // MARK: - View 
 protocol EnterAccessCodeViewProtocol: class {

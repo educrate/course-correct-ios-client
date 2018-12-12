@@ -8,31 +8,26 @@
 
 import Foundation
 
+// MARK: - Intermodule Communicator
+protocol SignUpDelegate: class {
+    func signUp(didSignUp user: String)
+}
 
 // MARK: - Wireframe
-protocol SignUpWireframeProtocol: SelectCollegeRouterDelegate, EnterStudentIdentifierRouterDelegate, EnterAccessCodeRouterDelegate, CreatePasswordRouterDelegate {
+protocol SignUpWireframeProtocol: SelectCollegeDelegate, EnterStudentIdentifierDelegate, EnterAccessCodeDelegate, CreatePasswordDelegate {
     func showSelectCollege()
     func showEnterStudentIdentifier()
     func showEnterAccessCode()
     func showCreatePassword()
 }
 
-
-// MARK: - Coordinator
-protocol SignUpRouterDelegate: class {
-    func signUp(didSignUp user: String)
-}
-
-
 // MARK: - Presenter
 protocol SignUpPresenterProtocol: class {}
-
 
 // MARK: - Interactor
 protocol SignUpInteractorProtocol: class {
   var presenter: SignUpPresenterProtocol?  { get set }
 }
-
 
 // MARK: - View
 protocol SignUpViewProtocol: class {

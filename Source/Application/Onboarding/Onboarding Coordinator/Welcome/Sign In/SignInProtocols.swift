@@ -8,18 +8,15 @@
 
 import Foundation
 
+// MARK: - Intermodule Communicator
+protocol SignInDelegate: class {
+    func signIn(didSignIn user: String)
+}
 
 // MARK: - Wireframe
 protocol SignInWireframeProtocol: class {
     func showNextScreen()
 }
-
-
-// MARK: - Coordinator
-protocol SignInRouterDelegate: class {
-    func signIn(didSignIn user: String)
-}
-
 
 // MARK: - Presenter
 protocol SignInPresenterProtocol: class {
@@ -28,14 +25,12 @@ protocol SignInPresenterProtocol: class {
     func credentialsValidated(_ result: Result<Void, SignInError>)
 }
 
-
 // MARK: - Interactor
 protocol SignInInteractorProtocol: class {
   var presenter: SignInPresenterProtocol? { get set }
     
     func validate(email: String, password: String)
 }
-
 
 // MARK: - View
 protocol SignInViewProtocol: class {

@@ -8,26 +8,18 @@
 
 import Foundation
 
-
 // MARK: - Wireframe
-
 protocol ManageBankWireframeProtocol: class {}
 
-
 // MARK: - Presenter
-
 protocol ManageBankPresenterProtocol: class {}
 
-
 // MARK: - Interactor
-
 protocol ManageBankInteractorProtocol: class {
   var presenter: ManageBankPresenterProtocol?  { get set }
 }
 
-
-// MARK: - View 
-
+// MARK: - View
 protocol ManageBankViewProtocol: class {
   var presenter: ManageBankPresenterProtocol?  { get set }
 }

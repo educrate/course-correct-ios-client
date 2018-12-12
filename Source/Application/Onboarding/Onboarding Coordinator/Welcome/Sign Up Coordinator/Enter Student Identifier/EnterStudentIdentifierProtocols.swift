@@ -8,18 +8,15 @@
 
 import Foundation
 
+// MARK: - Intermodule Communicator
+protocol EnterStudentIdentifierDelegate: class {
+    func enterStudentIdentifier(didEnter studentIdentifier: String)
+}
 
 // MARK: - Wireframe
 protocol EnterStudentIdentifierWireframeProtocol: class {
     func showNextScreen()
 }
-
-
-// MARK: - Coordinator
-protocol EnterStudentIdentifierRouterDelegate: class {
-    func enterStudentIdentifier(didEnter studentIdentifier: String)
-}
-
 
 // MARK: - Presenter
 protocol EnterStudentIdentifierPresenterProtocol: class {
@@ -28,14 +25,12 @@ protocol EnterStudentIdentifierPresenterProtocol: class {
     func studentIdentifierValidated(for identifier: String, with result: Result<Void, EnterStudentIdentifierError>)
 }
 
-
 // MARK: - Interactor
 protocol EnterStudentIdentifierInteractorProtocol: class {
   var presenter: EnterStudentIdentifierPresenterProtocol? { get set }
     
     func validate(studentIdentifier: String)
 }
-
 
 // MARK: - View 
 protocol EnterStudentIdentifierViewProtocol: class {

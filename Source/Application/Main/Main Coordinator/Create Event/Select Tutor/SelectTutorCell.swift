@@ -10,12 +10,13 @@ import UIKit
 
 class SelectTutorCell: UITableViewCell {
     
-    // MARK: View Outlets
+    // MARK: - View Outlets
     @IBOutlet private weak var profileImageView: UIImageView!
     @IBOutlet private weak var tutorNameLabel: UILabel!
     @IBOutlet private weak var detailLabel: UILabel!
 }
 
+// MARK: - Cell Lifecycle
 extension SelectTutorCell {
     override func awakeFromNib() {
         super.awakeFromNib()

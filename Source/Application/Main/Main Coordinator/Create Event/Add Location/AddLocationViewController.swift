@@ -13,12 +13,21 @@ class AddLocationViewController: UIViewController {
     // MARK: Viper
     var presenter: AddLocationPresenterProtocol?
     
-    // MARK: View Outlets
+    // MARK: - View Outlets
     @IBOutlet private weak var locationSelector: UIDropDownView!
+    
+    @IBOutlet private weak var doneButton: UIBarButtonItem!
     
     // MARK: Deinitialization Verification
     deinit {
         print("deinitialized add location screen")
+    }
+}
+
+// MARK: - IBAction Outlets
+extension AddLocationViewController {
+    @IBAction func donePressed(_ sender: UIBarButtonItem) {
+        
     }
 }
 

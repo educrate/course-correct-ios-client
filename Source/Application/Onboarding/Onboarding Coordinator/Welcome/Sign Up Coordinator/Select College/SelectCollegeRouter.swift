@@ -10,7 +10,7 @@ import UIKit
 
 class SelectCollegeRouter: SelectCollegeWireframeProtocol {
     private weak var viewController: UIViewController?
-    private weak var delegate: SelectCollegeRouterDelegate?
+    private weak var delegate: SelectCollegeDelegate?
 }
 
 extension SelectCollegeRouter {
@@ -20,7 +20,7 @@ extension SelectCollegeRouter {
 }
 
 extension SelectCollegeRouter {
-    static func createModule(_ delegate: SelectCollegeRouterDelegate?) -> UIViewController {
+    static func createModule(_ delegate: SelectCollegeDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .selectCollege)
         let view: SelectCollegeViewController = storyboard.instantiateViewController()
         let interactor = SelectCollegeInteractor()

@@ -8,26 +8,19 @@
 
 import Foundation
 
-
 // MARK: - Wireframe
-
 protocol EventWireframeProtocol: class {}
 
 
 // MARK: - Presenter
-
 protocol EventPresenterProtocol: class {}
 
-
 // MARK: - Interactor
-
 protocol EventInteractorProtocol: class {
   var presenter: EventPresenterProtocol? { get set }
 }
 
-
 // MARK: - View 
-
 protocol EventViewProtocol: class {
   var presenter: EventPresenterProtocol? { get set }
 }

@@ -8,30 +8,27 @@
 
 import Foundation
 
+// MARK: - Intermodule Communicator
+protocol SelectTutorDelegate: class {
+    func selectTutor(didSelectTutorWith id: Any)
+}
 
 // MARK: - Wireframe
-
 protocol SelectTutorWireframeProtocol: class {
     func presentTutorProfile()
 }
 
-
 // MARK: - Presenter
-
 protocol SelectTutorPresenterProtocol: class {
     func selectedTutor(at indexPath: IndexPath)
 }
 
-
 // MARK: - Interactor
-
 protocol SelectTutorInteractorProtocol: class {
   var presenter: SelectTutorPresenterProtocol? { get set }
 }
 
-
 // MARK: - View 
-
 protocol SelectTutorViewProtocol: class {
   var presenter: SelectTutorPresenterProtocol? { get set }
 }

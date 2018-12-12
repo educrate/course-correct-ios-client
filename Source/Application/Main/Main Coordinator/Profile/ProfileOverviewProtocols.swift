@@ -8,6 +8,11 @@
 
 import Foundation
 
+// MARK: - Intermodule Communicator
+protocol ProfileOverviewDelegate: class {
+    func profileOverviewRouter(_ profileOverviewRouter: ProfileOverviewRouter, didSignOut user: String)
+}
+
 // MARK: - Wireframe
 protocol ProfileOverviewWireframeProtocol: class {
     func presentAccount()
@@ -15,13 +20,6 @@ protocol ProfileOverviewWireframeProtocol: class {
     func presentSupport()
     func presentLogout()
 }
-
-
-// MARK: Coordinator
-protocol ProfileOverviewRouterDelegate: class {
-    func profileOverviewRouter(_ profileOverviewRouter: ProfileOverviewRouter, didSignOut user: String)
-}
-
 
 // MARK: - Presenter
 protocol ProfileOverviewPresenterProtocol: class {
@@ -36,7 +34,6 @@ protocol ProfileOverviewPresenterProtocol: class {
     func logoutProfileFetched(with result: Result<Void, ProfileOverviewError>)
 }
 
-
 // MARK: - Interactor
 protocol ProfileOverviewInteractorProtocol: class {
     var presenter: ProfileOverviewPresenterProtocol? { get set }
@@ -46,7 +43,6 @@ protocol ProfileOverviewInteractorProtocol: class {
     func fetchSupportInformation()
     func logoutProfile()
 }
-
 
 // MARK: - View
 protocol ProfileOverviewViewProtocol: class {

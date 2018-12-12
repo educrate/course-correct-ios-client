@@ -8,23 +8,19 @@
 
 import Foundation
 
+// MARK: - Intermodule Communicator
+protocol MainDelegate: class {
+    func main(didSignOut user: String)
+}
 
 // MARK: - Wireframe
-protocol MainWireframeProtocol: CalendarRouterDelegate {
+protocol MainWireframeProtocol: CalendarDelegate {
     func presentOnboarding()
     func presentCalendar()
 }
 
-
-// MARK: - Coordinator
-protocol MainRouterDelegate: class {
-    func main(didSignOut user: String)
-}
-
-
 // MARK: - Presenter
 protocol MainPresenterProtocol: class {}
-
 
 // MARK: - Interactor
 protocol MainInteractorProtocol: class {

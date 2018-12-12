@@ -10,7 +10,7 @@ import UIKit
 
 class WelcomeRouter: WelcomeWireframeProtocol {
     private weak var viewController: UIViewController?
-    private weak var delegate: WelcomeRouterDelegate?
+    private weak var delegate: WelcomeDelegate?
     private lazy var signUpCoordinator: SignUpPresenter? = SignUpRouter.createModule(self, with: viewController)
 }
 
@@ -35,7 +35,7 @@ extension WelcomeRouter {
 }
 
 extension WelcomeRouter {
-    static func createModule(_ delegate: WelcomeRouterDelegate?) -> UIViewController {
+    static func createModule(_ delegate: WelcomeDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .welcome)
         let view: WelcomeViewController = storyboard.instantiateViewController()
         let interactor = WelcomeInteractor()

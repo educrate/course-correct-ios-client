@@ -8,26 +8,21 @@
 
 import Foundation
 
+// MARK: - Intermodule Coordinator
+protocol WalkthroughDelegate: class {
+    func walkthrough(didCompleteWith action: String)
+}
 
 // MARK: - Wireframe
 protocol WalkthroughWireframeProtocol: class {}
 
-
-// MARK: - Coordinator
-protocol WalkthroughRouterDelegate: class {
-    func walkthrough(didCompleteWith action: String)
-}
-
-
 // MARK: - Presenter
 protocol WalkthroughPresenterProtocol: class {}
-
 
 // MARK: - Interactor
 protocol WalkthroughInteractorProtocol: class {
   var presenter: WalkthroughPresenterProtocol?  { get set }
 }
-
 
 // MARK: - View
 protocol WalkthroughViewProtocol: class {

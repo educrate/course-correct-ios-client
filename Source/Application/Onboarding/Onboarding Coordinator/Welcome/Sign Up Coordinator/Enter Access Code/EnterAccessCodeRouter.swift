@@ -10,7 +10,7 @@ import UIKit
 
 class EnterAccessCodeRouter: EnterAccessCodeWireframeProtocol {
     private weak var viewController: UIViewController?
-    private weak var delegate: EnterAccessCodeRouterDelegate?
+    private weak var delegate: EnterAccessCodeDelegate?
 }
 
 extension EnterAccessCodeRouter {
@@ -20,7 +20,7 @@ extension EnterAccessCodeRouter {
 }
 
 extension EnterAccessCodeRouter {
-    static func createModule(_ delegate: EnterAccessCodeRouterDelegate?) -> UIViewController {
+    static func createModule(_ delegate: EnterAccessCodeDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .enterAccessCode)
         let view: EnterAccessCodeViewController = storyboard.instantiateViewController()
         let interactor = EnterAccessCodeInteractor()

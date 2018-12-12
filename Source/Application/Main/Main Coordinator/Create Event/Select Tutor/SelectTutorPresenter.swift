@@ -10,12 +10,12 @@ import UIKit
 
 class SelectTutorPresenter: SelectTutorPresenterProtocol {
     
-    // MARK: Viper
+    // MARK: - Viper
     weak private var view: SelectTutorViewProtocol?
     var interactor: SelectTutorInteractorProtocol?
     private let router: SelectTutorWireframeProtocol
 
-    // MARK: Initializer
+    // MARK: - Initializer
     init(interface: SelectTutorViewProtocol,
          interactor: SelectTutorInteractorProtocol?,
          router: SelectTutorWireframeProtocol) {

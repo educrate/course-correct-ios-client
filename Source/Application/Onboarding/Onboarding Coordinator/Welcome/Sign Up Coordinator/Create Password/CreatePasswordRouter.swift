@@ -10,7 +10,7 @@ import UIKit
 
 class CreatePasswordRouter: CreatePasswordWireframeProtocol {
     private weak var viewController: UIViewController?
-    private weak var delegate: CreatePasswordRouterDelegate?
+    private weak var delegate: CreatePasswordDelegate?
 }
 
 extension CreatePasswordRouter {
@@ -20,7 +20,7 @@ extension CreatePasswordRouter {
 }
 
 extension CreatePasswordRouter {
-    static func createModule(_ delegate: CreatePasswordRouterDelegate?) -> UIViewController {
+    static func createModule(_ delegate: CreatePasswordDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .createPassword)
         let view: CreatePasswordViewController = storyboard.instantiateViewController()
         let interactor = CreatePasswordInteractor()

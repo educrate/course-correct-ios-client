@@ -10,7 +10,7 @@ import UIKit
 
 class SignUpRouter: SignUpWireframeProtocol {
     private weak var viewController: UIViewController?
-    private weak var delegate: SignUpRouterDelegate?
+    private weak var delegate: SignUpDelegate?
 }
 
 extension SignUpRouter {
@@ -54,7 +54,7 @@ extension SignUpRouter {
 }
 
 extension SignUpRouter {
-    static func createModule(_ delegate: SignUpRouterDelegate?, with navigationController: UIViewController?) -> SignUpPresenter {
+    static func createModule(_ delegate: SignUpDelegate?, with navigationController: UIViewController?) -> SignUpPresenter {
         let interactor = SignUpInteractor()
         let router = SignUpRouter()
         let presenter = SignUpPresenter(interactor: interactor, router: router)

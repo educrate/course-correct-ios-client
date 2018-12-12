@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileOverviewRouter: ProfileOverviewWireframeProtocol {
     private weak var viewController: UIViewController?
-    private weak var delegate: ProfileOverviewRouterDelegate?
+    private weak var delegate: ProfileOverviewDelegate?
 }
 
 extension ProfileOverviewRouter {
@@ -32,7 +32,7 @@ extension ProfileOverviewRouter {
 }
 
 extension ProfileOverviewRouter {
-    static func createModule(_ delegate: ProfileOverviewRouterDelegate?) -> UIViewController {
+    static func createModule(_ delegate: ProfileOverviewDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .profileOverview)
         let view: ProfileOverviewViewController = storyboard.instantiateViewController()
         let interactor = ProfileOverviewInteractor()

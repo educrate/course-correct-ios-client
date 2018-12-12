@@ -1180,7 +1180,7 @@
 			path = "Select College";
 			sourceTree = "<group>";
 		};
-		BFD82AAD216DA51000A14868 /* Dropdown */ = {
+		BFD82AAD216DA51000A14868 /* Drop Down */ = {
 			isa = PBXGroup;
 			children = (
 				BFFFF2E721A4BC9E00D2BD62 /* UIDropDownView.xib */,
@@ -1190,7 +1190,7 @@
 				BFFFF2EB21A4BCD300D2BD62 /* UIDropDownViewCell.swift */,
 				BFFFF2EF21A4BD0400D2BD62 /* UIDropDownViewConfiguration.swift */,
 			);
-			path = Dropdown;
+			path = "Drop Down";
 			sourceTree = "<group>";
 		};
 		BFD82ABF216DAD9800A14868 /* Interface Builder */ = {
@@ -1219,7 +1219,7 @@
 				BFD0298821509C83002FB9F5 /* Action Sheet */,
 				BFD0294221509B8E002FB9F5 /* Calendar */,
 				BFD0296321509C02002FB9F5 /* Credit Card */,
-				BFD82AAD216DA51000A14868 /* Dropdown */,
+				BFD82AAD216DA51000A14868 /* Drop Down */,
 				BFD0299E21509CEE002FB9F5 /* Inline Picker */,
 			);
 			path = UI;

@@ -8,31 +8,28 @@
 
 import Foundation
 
+// MARK: - Intermodule Communicator
+protocol AddLocationDelegate: class {
+    func didSelect(_ location: Any)
+}
 
 // MARK: - Wireframe
-
 protocol AddLocationWireframeProtocol: class {}
 
-
 // MARK: - Presenter
-
 protocol AddLocationPresenterProtocol: class {
     func fetch(autocomplete text: String)
     func autocompleteFetched(for search: String, with result: Result<AddLocationAutocompleteResponse, AddLocationError>)
 }
 
-
 // MARK: - Interactor
-
 protocol AddLocationInteractorProtocol: class {
     var presenter: AddLocationPresenterProtocol? { get set }
     
     func request(autocomplete search: String)
 }
 
-
 // MARK: - View 
-
 protocol AddLocationViewProtocol: class {
     var presenter: AddLocationPresenterProtocol? { get set }
     

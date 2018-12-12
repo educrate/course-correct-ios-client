@@ -8,19 +8,17 @@
 
 import Foundation
 
+// MARK: - Intermodule Communicator
+protocol CalendarDelegate: class {
+    func calendarRouter(_ calendarRouter: CalendarRouter, didSignOut user: String)
+}
+
 // MARK: - Wireframe
-protocol CalendarWireframeProtocol: ProfileOverviewRouterDelegate {
+protocol CalendarWireframeProtocol: ProfileOverviewDelegate {
     func presentEvent()
     func presentCreateEvent()
     func presentProfile()
 }
-
-
-// MARK: - Coordinator
-protocol CalendarRouterDelegate: class {
-    func calendarRouter(_ calendarRouter: CalendarRouter, didSignOut user: String)
-}
-
 
 // MARK: - Presenter
 protocol CalendarPresenterProtocol: class {

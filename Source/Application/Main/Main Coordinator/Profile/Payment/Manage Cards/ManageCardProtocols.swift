@@ -10,24 +10,17 @@ import Foundation
 
 
 // MARK: - Wireframe
-
 protocol ManageCardWireframeProtocol: class {}
 
-
 // MARK: - Presenter
-
 protocol ManageCardPresenterProtocol: class {}
 
-
 // MARK: - Interactor
-
 protocol ManageCardInteractorProtocol: class {
   var presenter: ManageCardPresenterProtocol?  { get set }
 }
 
-
 // MARK: - View 
-
 protocol ManageCardViewProtocol: class {
   var presenter: ManageCardPresenterProtocol?  { get set }
 }

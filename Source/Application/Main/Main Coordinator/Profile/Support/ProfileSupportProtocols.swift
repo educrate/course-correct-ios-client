@@ -8,26 +8,18 @@
 
 import Foundation
 
-
 // MARK: - Wireframe
-
 protocol ProfileSupportWireframeProtocol: class {}
 
-
 // MARK: - Presenter
-
 protocol ProfileSupportPresenterProtocol: class {}
 
-
 // MARK: - Interactor
-
 protocol ProfileSupportInteractorProtocol: class {
   var presenter: ProfileSupportPresenterProtocol? { get set }
 }
 
-
-// MARK: - View 
-
+// MARK: - View
 protocol ProfileSupportViewProtocol: class {
   var presenter: ProfileSupportPresenterProtocol? { get set }
 }

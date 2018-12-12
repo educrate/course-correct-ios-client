@@ -10,7 +10,7 @@ import UIKit
 
 class SignInRouter: SignInWireframeProtocol {
     private weak var viewController: UIViewController?
-    private weak var delegate: SignInRouterDelegate?
+    private weak var delegate: SignInDelegate?
 }
 
 extension SignInRouter {
@@ -20,7 +20,7 @@ extension SignInRouter {
 }
 
 extension SignInRouter {
-    static func createModule(_ delegate: SignInRouterDelegate?) -> UIViewController {
+    static func createModule(_ delegate: SignInDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .signIn)
         let view: SignInViewController = storyboard.instantiateViewController()
         let interactor = SignInInteractor()

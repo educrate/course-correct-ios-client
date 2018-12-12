@@ -48,7 +48,7 @@ class CreateEventViewController: UITableViewController, CreateEventViewProtocol 
         }
     }
     
-    // MARK: Outlets
+    // MARK: - View Outlets
     @IBOutlet private weak var datePicker: UIDatePicker!
     @IBOutlet private weak var timePicker: UIDatePicker!
 

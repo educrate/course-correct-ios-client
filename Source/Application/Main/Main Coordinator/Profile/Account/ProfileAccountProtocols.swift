@@ -8,26 +8,18 @@
 
 import Foundation
 
-
 // MARK: - Wireframe
-
 protocol ProfileAccountWireframeProtocol: class {}
 
-
 // MARK: - Presenter
-
 protocol ProfileAccountPresenterProtocol: class {}
 
-
 // MARK: - Interactor
-
 protocol ProfileAccountInteractorProtocol: class {
   var presenter: ProfileAccountPresenterProtocol? { get set }
 }
 
-
 // MARK: - View 
-
 protocol ProfileAccountViewProtocol: class {
   var presenter: ProfileAccountPresenterProtocol? { get set }
 }

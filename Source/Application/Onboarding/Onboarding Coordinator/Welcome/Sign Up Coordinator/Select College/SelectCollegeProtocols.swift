@@ -8,18 +8,15 @@
 
 import Foundation
 
+// MARK: - Intermodule Communicator
+protocol SelectCollegeDelegate: class {
+    func selectCollege(didSelect college: String)
+}
 
 // MARK: - Wireframe
 protocol SelectCollegeWireframeProtocol: class {
     func showNextScreen()
 }
-
-
-// MARK: - Coordinator
-protocol SelectCollegeRouterDelegate: class {
-    func selectCollege(didSelect college: String)
-}
-
 
 // MARK: - Presenter
 protocol SelectCollegePresenterProtocol: class {
@@ -33,7 +30,6 @@ protocol SelectCollegePresenterProtocol: class {
     func collegeValidated(for identifier: String, with result: Result<Void, SelectCollegeError>)
 }
 
-
 // MARK: - Interactor
 protocol SelectCollegeInteractorProtocol: class {
     
@@ -44,7 +40,6 @@ protocol SelectCollegeInteractorProtocol: class {
     func fetchColleges(for input: String)
     func validate(college identifier: String)
 }
-
 
 // MARK: - View 
 protocol SelectCollegeViewProtocol: class {

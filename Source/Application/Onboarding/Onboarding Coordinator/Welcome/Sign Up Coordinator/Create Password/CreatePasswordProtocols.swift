@@ -8,18 +8,15 @@
 
 import Foundation
 
+// MARK: - Intermodule Communicator
+protocol CreatePasswordDelegate: class {
+    func createPassword(didCreate password: String)
+}
 
 // MARK: - Wireframe
 protocol CreatePasswordWireframeProtocol: class {
     func showNextScreen()
 }
-
-
-// MARK: - Coordinator
-protocol CreatePasswordRouterDelegate: class {
-    func createPassword(didCreate password: String)
-}
-
 
 // MARK: - Presenter
 protocol CreatePasswordPresenterProtocol: class {
@@ -28,14 +25,12 @@ protocol CreatePasswordPresenterProtocol: class {
     func passwordsValidated(_ result: Result<Void, CreatePasswordError>)
 }
 
-
 // MARK: - Interactor
 protocol CreatePasswordInteractorProtocol: class {
   var presenter: CreatePasswordPresenterProtocol? { get set }
     
     func validate(_ password: String, confirmedPassword: String)
 }
-
 
 // MARK: - View 
 protocol CreatePasswordViewProtocol: class {

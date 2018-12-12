@@ -8,13 +8,11 @@
 
 import Foundation
 
-
 // MARK: - Wireframe
-protocol AppWireframeProtocol: OnboardingRouterDelegate, MainRouterDelegate {
+protocol AppWireframeProtocol: OnboardingDelegate, MainDelegate {
     func presentOnboardingModule()
     func presentMainModule()
 }
-
 
 // MARK: - Presenter
 protocol AppPresenterProtocol: class {
@@ -22,14 +20,12 @@ protocol AppPresenterProtocol: class {
     func start()
 }
 
-
 // MARK: - Interactor
 protocol AppInteractorProtocol: class {
     var presenter: AppPresenterProtocol?  { get set }
     
     func determineLaunchState()
 }
-
 
 // MARK: - View
 protocol AppViewProtocol: class {
