@@ -70,12 +70,12 @@
 		BF5004D821741E6900D35B69 /* AddLocationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004D321741E6900D35B69 /* AddLocationProtocols.swift */; };
 		BF5004D921741E6900D35B69 /* AddLocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004D421741E6900D35B69 /* AddLocationInteractor.swift */; };
 		BF5004DB21741E7700D35B69 /* AddLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004DA21741E7700D35B69 /* AddLocation.storyboard */; };
-		BF5004E121741E9100D35B69 /* SelectTutorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004DC21741E9100D35B69 /* SelectTutorPresenter.swift */; };
-		BF5004E221741E9100D35B69 /* SelectTutorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004DD21741E9100D35B69 /* SelectTutorRouter.swift */; };
-		BF5004E321741E9100D35B69 /* SelectTutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004DE21741E9100D35B69 /* SelectTutorViewController.swift */; };
-		BF5004E421741E9100D35B69 /* SelectTutorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004DF21741E9100D35B69 /* SelectTutorProtocols.swift */; };
-		BF5004E521741E9100D35B69 /* SelectTutorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004E021741E9100D35B69 /* SelectTutorInteractor.swift */; };
-		BF5004E721741EA000D35B69 /* SelectTutor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004E621741EA000D35B69 /* SelectTutor.storyboard */; };
+		BF5004E121741E9100D35B69 /* TutorListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004DC21741E9100D35B69 /* TutorListPresenter.swift */; };
+		BF5004E221741E9100D35B69 /* TutorListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004DD21741E9100D35B69 /* TutorListRouter.swift */; };
+		BF5004E321741E9100D35B69 /* TutorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004DE21741E9100D35B69 /* TutorListViewController.swift */; };
+		BF5004E421741E9100D35B69 /* TutorListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004DF21741E9100D35B69 /* TutorListProtocols.swift */; };
+		BF5004E521741E9100D35B69 /* TutorListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004E021741E9100D35B69 /* TutorListInteractor.swift */; };
+		BF5004E721741EA000D35B69 /* TutorList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5004E621741EA000D35B69 /* TutorList.storyboard */; };
 		BF5004ED21741EAE00D35B69 /* TutorProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004E821741EAE00D35B69 /* TutorProfilePresenter.swift */; };
 		BF5004EE21741EAF00D35B69 /* TutorProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004E921741EAE00D35B69 /* TutorProfileRouter.swift */; };
 		BF5004EF21741EAF00D35B69 /* TutorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5004EA21741EAE00D35B69 /* TutorProfileViewController.swift */; };
@@ -132,7 +132,7 @@
 		BF5005C7217EF4FF00D35B69 /* OnboardingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005C2217EF4FF00D35B69 /* OnboardingProtocols.swift */; };
 		BF5005C8217EF4FF00D35B69 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5005C3217EF4FF00D35B69 /* OnboardingInteractor.swift */; };
 		BF55165A215B374D00D0CBB1 /* UICalendarViewDayDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* UICalendarViewDayDescription.swift */; };
-		BF5F6210218FCCCB00E43B75 /* SelectTutorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F620F218FCCCB00E43B75 /* SelectTutorCell.swift */; };
+		BF5F6210218FCCCB00E43B75 /* TutorListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F620F218FCCCB00E43B75 /* TutorListCell.swift */; };
 		BF5F621821916D6F00E43B75 /* TutorProfileReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F621721916D6F00E43B75 /* TutorProfileReviewCell.swift */; };
 		BF70B30D21BE3003001E550D /* AddLocationNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */; };
 		BF70B30F21BE3829001E550D /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30E21BE3829001E550D /* NetworkingHelper.swift */; };
@@ -328,12 +328,12 @@
 		BF5004D321741E6900D35B69 /* AddLocationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationProtocols.swift; sourceTree = "<group>"; };
 		BF5004D421741E6900D35B69 /* AddLocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationInteractor.swift; sourceTree = "<group>"; };
 		BF5004DA21741E7700D35B69 /* AddLocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddLocation.storyboard; sourceTree = "<group>"; };
-		BF5004DC21741E9100D35B69 /* SelectTutorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorPresenter.swift; sourceTree = "<group>"; };
-		BF5004DD21741E9100D35B69 /* SelectTutorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorRouter.swift; sourceTree = "<group>"; };
-		BF5004DE21741E9100D35B69 /* SelectTutorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorViewController.swift; sourceTree = "<group>"; };
-		BF5004DF21741E9100D35B69 /* SelectTutorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorProtocols.swift; sourceTree = "<group>"; };
-		BF5004E021741E9100D35B69 /* SelectTutorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorInteractor.swift; sourceTree = "<group>"; };
-		BF5004E621741EA000D35B69 /* SelectTutor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectTutor.storyboard; sourceTree = "<group>"; };
+		BF5004DC21741E9100D35B69 /* TutorListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorListPresenter.swift; sourceTree = "<group>"; };
+		BF5004DD21741E9100D35B69 /* TutorListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorListRouter.swift; sourceTree = "<group>"; };
+		BF5004DE21741E9100D35B69 /* TutorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorListViewController.swift; sourceTree = "<group>"; };
+		BF5004DF21741E9100D35B69 /* TutorListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorListProtocols.swift; sourceTree = "<group>"; };
+		BF5004E021741E9100D35B69 /* TutorListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorListInteractor.swift; sourceTree = "<group>"; };
+		BF5004E621741EA000D35B69 /* TutorList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TutorList.storyboard; sourceTree = "<group>"; };
 		BF5004E821741EAE00D35B69 /* TutorProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfilePresenter.swift; sourceTree = "<group>"; };
 		BF5004E921741EAE00D35B69 /* TutorProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileRouter.swift; sourceTree = "<group>"; };
 		BF5004EA21741EAE00D35B69 /* TutorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileViewController.swift; sourceTree = "<group>"; };
@@ -390,7 +390,7 @@
 		BF5005C2217EF4FF00D35B69 /* OnboardingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProtocols.swift; sourceTree = "<group>"; };
 		BF5005C3217EF4FF00D35B69 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
 		BF551659215B374D00D0CBB1 /* UICalendarViewDayDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDayDescription.swift; sourceTree = "<group>"; };
-		BF5F620F218FCCCB00E43B75 /* SelectTutorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTutorCell.swift; sourceTree = "<group>"; };
+		BF5F620F218FCCCB00E43B75 /* TutorListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorListCell.swift; sourceTree = "<group>"; };
 		BF5F621721916D6F00E43B75 /* TutorProfileReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileReviewCell.swift; sourceTree = "<group>"; };
 		BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationNetworking.swift; sourceTree = "<group>"; };
 		BF70B30E21BE3829001E550D /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
@@ -638,7 +638,7 @@
 				BF50056D217B87C900D35B69 /* CreateEventInteractor.swift */,
 				BF50056C217B87C900D35B69 /* CreateEventProtocols.swift */,
 				BF5004CD21741E2900D35B69 /* Add Location */,
-				BF5004CE21741E3200D35B69 /* Select Tutor */,
+				BF5004CE21741E3200D35B69 /* Tutor List */,
 			);
 			path = "Create Event";
 			sourceTree = "<group>";
@@ -698,19 +698,19 @@
 			path = "Add Location";
 			sourceTree = "<group>";
 		};
-		BF5004CE21741E3200D35B69 /* Select Tutor */ = {
+		BF5004CE21741E3200D35B69 /* Tutor List */ = {
 			isa = PBXGroup;
 			children = (
-				BF5004E621741EA000D35B69 /* SelectTutor.storyboard */,
-				BF5004DE21741E9100D35B69 /* SelectTutorViewController.swift */,
-				BF5F620F218FCCCB00E43B75 /* SelectTutorCell.swift */,
-				BF5004DC21741E9100D35B69 /* SelectTutorPresenter.swift */,
-				BF5004DD21741E9100D35B69 /* SelectTutorRouter.swift */,
-				BF5004E021741E9100D35B69 /* SelectTutorInteractor.swift */,
-				BF5004DF21741E9100D35B69 /* SelectTutorProtocols.swift */,
+				BF5004E621741EA000D35B69 /* TutorList.storyboard */,
+				BF5004DE21741E9100D35B69 /* TutorListViewController.swift */,
+				BF5F620F218FCCCB00E43B75 /* TutorListCell.swift */,
+				BF5004DC21741E9100D35B69 /* TutorListPresenter.swift */,
+				BF5004DD21741E9100D35B69 /* TutorListRouter.swift */,
+				BF5004E021741E9100D35B69 /* TutorListInteractor.swift */,
+				BF5004DF21741E9100D35B69 /* TutorListProtocols.swift */,
 				BF5004CF21741E3F00D35B69 /* Tutor Profile */,
 			);
-			path = "Select Tutor";
+			path = "Tutor List";
 			sourceTree = "<group>";
 		};
 		BF5004CF21741E3F00D35B69 /* Tutor Profile */ = {
@@ -1441,7 +1441,7 @@
 				BFCDA5F221725E8500DB31FC /* Welcome.storyboard in Resources */,
 				BF500574217B87FB00D35B69 /* CreateEvent.storyboard in Resources */,
 				BF5004A02173EBB000D35B69 /* ProfileSupport.storyboard in Resources */,
-				BF5004E721741EA000D35B69 /* SelectTutor.storyboard in Resources */,
+				BF5004E721741EA000D35B69 /* TutorList.storyboard in Resources */,
 				BFF53143219CB13F00255CD4 /* UIActionViewCell.xib in Resources */,
 				BF50050D217454D700D35B69 /* SignIn.storyboard in Resources */,
 				BF1723B8219D39A90060B9CD /* UIInlinePickerView.xib in Resources */,
@@ -1508,17 +1508,17 @@
 				BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */,
 				BF14D56F21C1B75800BA4A7A /* UIInlinePickerViewDelegate.swift in Sources */,
 				BF500560217B848F00D35B69 /* CongratulationsPresenter.swift in Sources */,
-				BF5004E121741E9100D35B69 /* SelectTutorPresenter.swift in Sources */,
+				BF5004E121741E9100D35B69 /* TutorListPresenter.swift in Sources */,
 				BF5005BD217EEF2000D35B69 /* SignUpProtocols.swift in Sources */,
 				BF5004902173EB7800D35B69 /* ProfilePaymentViewController.swift in Sources */,
 				BF50046A2172F09700D35B69 /* ProfileOverviewPresenter.swift in Sources */,
-				BF5004E221741E9100D35B69 /* SelectTutorRouter.swift in Sources */,
+				BF5004E221741E9100D35B69 /* TutorListRouter.swift in Sources */,
 				BFD82A92216D989E00A14868 /* NetworkingResponse.swift in Sources */,
 				BF50048F2173EB7800D35B69 /* ProfilePaymentRouter.swift in Sources */,
 				BF5004742172F8F800D35B69 /* UIImageView+Additions.swift in Sources */,
 				BFCDA5FD21725FF700DB31FC /* CreatePasswordInteractor.swift in Sources */,
 				BFD82A97216D989E00A14868 /* NetworkingRequestBody.swift in Sources */,
-				BF5004E521741E9100D35B69 /* SelectTutorInteractor.swift in Sources */,
+				BF5004E521741E9100D35B69 /* TutorListInteractor.swift in Sources */,
 				BFD82AED2170670400A14868 /* EnterStudentIdentifierPresenter.swift in Sources */,
 				BF4F48F321826A82000D98D1 /* MainRouter.swift in Sources */,
 				BFFFF30A21A6016F00D2BD62 /* UICalendarViewDayCell.swift in Sources */,
@@ -1562,7 +1562,7 @@
 				BFD82A89216D989E00A14868 /* NetworkingRequestHTTPMethod.swift in Sources */,
 				BF5004912173EB7800D35B69 /* ProfilePaymentProtocols.swift in Sources */,
 				BFD82AF12170670400A14868 /* EnterStudentIdentifierInteractor.swift in Sources */,
-				BF5F6210218FCCCB00E43B75 /* SelectTutorCell.swift in Sources */,
+				BF5F6210218FCCCB00E43B75 /* TutorListCell.swift in Sources */,
 				BF50046C2172F09700D35B69 /* ProfileOverviewViewController.swift in Sources */,
 				BFD82ADC216E816C00A14868 /* SelectCollegeError.swift in Sources */,
 				BF500561217B848F00D35B69 /* CongratulationsRouter.swift in Sources */,
@@ -1573,7 +1573,7 @@
 				BF500556217B837600D35B69 /* WalkthroughRouter.swift in Sources */,
 				BFCDA5FC21725FF700DB31FC /* CreatePasswordProtocols.swift in Sources */,
 				BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */,
-				BF5004E321741E9100D35B69 /* SelectTutorViewController.swift in Sources */,
+				BF5004E321741E9100D35B69 /* TutorListViewController.swift in Sources */,
 				BFF6C2902184C3A0003F7D96 /* AppUserState.swift in Sources */,
 				BF500571217B87C900D35B69 /* CreateEventProtocols.swift in Sources */,
 				BF5004B92174127100D35B69 /* EventPresenter.swift in Sources */,
@@ -1637,7 +1637,7 @@
 				BFD0298121509C6A002FB9F5 /* CreditCardPrefixContainable.swift in Sources */,
 				BFCDA5FA21725FF700DB31FC /* CreatePasswordRouter.swift in Sources */,
 				BF5004D721741E6900D35B69 /* AddLocationViewController.swift in Sources */,
-				BF5004E421741E9100D35B69 /* SelectTutorProtocols.swift in Sources */,
+				BF5004E421741E9100D35B69 /* TutorListProtocols.swift in Sources */,
 				BF50046E2172F09700D35B69 /* ProfileOverviewInteractor.swift in Sources */,
 				BFF6C2962187E2D0003F7D96 /* ClientReadable.swift in Sources */,
 				BF4F48BF21823C75000D98D1 /* AppViewController.swift in Sources */,

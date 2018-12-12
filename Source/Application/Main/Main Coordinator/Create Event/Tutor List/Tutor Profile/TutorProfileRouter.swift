@@ -10,10 +10,17 @@ import UIKit
 
 class TutorProfileRouter: TutorProfileWireframeProtocol {
     private weak var viewController: UIViewController?
+    private weak var delegate: TutorProfileDelegate?
 }
 
 extension TutorProfileRouter {
-    static func createModule() -> UIViewController {
+    func completed(with tutor: String) {
+        delegate?.didSelect(tutor)
+    }
+}
+
+extension TutorProfileRouter {
+    static func createModule(_ delegate: TutorProfileDelegate?) -> UIViewController {
         let storyboard = UIStoryboard(storyboard: .tutorProfile)
         let view: TutorProfileViewController = storyboard.instantiateViewController()
         let interactor = TutorProfileInteractor()
@@ -23,6 +30,7 @@ extension TutorProfileRouter {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
+        router.delegate = delegate
         
         return view
     }

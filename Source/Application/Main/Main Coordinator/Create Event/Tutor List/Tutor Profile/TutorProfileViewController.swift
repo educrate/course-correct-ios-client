@@ -16,9 +16,10 @@ class TutorProfileViewController: UIViewController, TutorProfileViewProtocol {
     }
 }
 
-// MARK: - Table View Delegate Conformation
-extension TutorProfileViewController: UITableViewDelegate {
-    
+private extension TutorProfileViewController {
+    @IBAction func didPressDone(_ sender: UIBarButtonItem) {
+        presenter?.tutorSelected("Christian Ampe")
+    }
 }
 
 // MARK: - Table View Data Source Conformation
@@ -28,7 +29,6 @@ extension TutorProfileViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: TutorProfileReviewCell = tableView.dequeueReusableCell(for: indexPath)
-        return cell
+        return tableView.dequeueReusableCell(for: indexPath) as TutorProfileReviewCell
     }
 }

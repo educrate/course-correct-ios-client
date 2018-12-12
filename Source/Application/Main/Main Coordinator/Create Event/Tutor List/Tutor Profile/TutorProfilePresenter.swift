@@ -21,3 +21,9 @@ class TutorProfilePresenter: TutorProfilePresenterProtocol {
         self.router = router
     }
 }
+
+extension TutorProfilePresenter {
+    func tutorSelected(_ tutor: String) {
+        router.completed(with: tutor)
+    }
+}

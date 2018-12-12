@@ -42,7 +42,7 @@ extension UIStoryboard {
         // MARK: - Create Event
         case createEvent = "CreateEvent"
         case addLocation = "AddLocation"
-        case selectTutor = "SelectTutor"
+        case tutorList = "TutorList"
         case tutorProfile = "TutorProfile"
         
         // MARK: - Profile

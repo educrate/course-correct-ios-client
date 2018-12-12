@@ -15,14 +15,14 @@ protocol CreateEventDelegate: class {
 
 // MARK: - Wireframe
 protocol CreateEventWireframeProtocol: class {
-    func showAddLocation()
-    func showSelectTutor()
+    func showAddLocation(_ delegate: AddLocationDelegate?)
+    func showSelectTutor(_ delegate: TutorListDelegate?)
 }
 
 // MARK: - Presenter
 protocol CreateEventPresenterProtocol: class {
-    func pressedAddLocation()
-    func pressedSelectTutor()
+    func pressedAddLocation(_ delegate: AddLocationDelegate?)
+    func pressedSelectTutor(_ delegate: TutorListDelegate?)
 }
 
 // MARK: - Interactor
@@ -31,6 +31,6 @@ protocol CreateEventInteractorProtocol: class {
 }
 
 // MARK: - View
-protocol CreateEventViewProtocol: AddLocationDelegate, SelectTutorDelegate {
+protocol CreateEventViewProtocol: AddLocationDelegate, TutorListDelegate {
   var presenter: CreateEventPresenterProtocol?  { get set }
 }

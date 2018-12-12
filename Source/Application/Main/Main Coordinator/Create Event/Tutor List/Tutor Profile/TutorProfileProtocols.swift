@@ -10,14 +10,18 @@ import Foundation
 
 // MARK: Intermodule Communicator
 protocol TutorProfileDelegate: class {
-    func didSelect(_ tutor: Any)
+    func didSelect(_ tutor: String)
 }
 
 // MARK: - Wireframe
-protocol TutorProfileWireframeProtocol: class {}
+protocol TutorProfileWireframeProtocol: class {
+    func completed(with tutor: String)
+}
 
 // MARK: - Presenter
-protocol TutorProfilePresenterProtocol: class {}
+protocol TutorProfilePresenterProtocol: class {
+    func tutorSelected(_ tutor: String)
+}
 
 // MARK: - Interactor
 protocol TutorProfileInteractorProtocol: class {

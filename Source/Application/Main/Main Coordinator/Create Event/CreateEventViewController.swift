@@ -91,9 +91,9 @@ extension CreateEventViewController {
             tableView.beginUpdates()
             tableView.endUpdates()
         case CellType.addLocation.rawValue:
-            presenter?.pressedAddLocation()
+            presenter?.pressedAddLocation(self)
         case CellType.selectTutor.rawValue:
-            presenter?.pressedSelectTutor()
+            presenter?.pressedSelectTutor(self)
         default:
             return
         }
@@ -146,12 +146,14 @@ extension CreateEventViewController: UIInlinePickerViewDelegate {
 
 // MARK: - Intermodule Communication
 extension CreateEventViewController {
-    func didAddLocation(_ location: Any) {
-        locationLabel.text = "Some Location"
+    func didAddLocation(_ location: String) {
+        navigationController?.popToViewController(self, animated: true)
+        locationLabel.text = location
     }
     
-    func didSelectTutor(_ tutor: Any) {
-        tutorLabel.text = "Some Tutor"
+    func didSelectTutor(_ tutor: String) {
+        navigationController?.popToViewController(self, animated: true)
+        tutorLabel.text = tutor
     }
 }
 

@@ -10,16 +10,19 @@ import Foundation
 
 // MARK: - Intermodule Communicator
 protocol AddLocationDelegate: class {
-    func didAddLocation(_ location: Any)
+    func didAddLocation(_ location: String)
 }
 
 // MARK: - Wireframe
-protocol AddLocationWireframeProtocol: class {}
+protocol AddLocationWireframeProtocol: class {
+    func completed(with location: String)
+}
 
 // MARK: - Presenter
 protocol AddLocationPresenterProtocol: class {
     func fetch(autocomplete text: String)
     func autocompleteFetched(for search: String, with result: Result<AddLocationAutocompleteResponse, AddLocationError>)
+    func locationAdded(_ location: String)
 }
 
 // MARK: - Interactor

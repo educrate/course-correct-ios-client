@@ -13,12 +13,12 @@ class CreateEventRouter: CreateEventWireframeProtocol {
 }
 
 extension CreateEventRouter {
-    func showAddLocation() {
-        viewController?.show(AddLocationRouter.createModule(), sender: nil)
+    func showAddLocation(_ delegate: AddLocationDelegate?) {
+        viewController?.show(AddLocationRouter.createModule(delegate), sender: nil)
     }
     
-    func showSelectTutor() {
-        viewController?.show(SelectTutorRouter.createModule(), sender: nil)
+    func showSelectTutor(_ delegate: TutorListDelegate?) {
+        viewController?.show(TutorListRouter.createModule(delegate), sender: nil)
     }
 }
 

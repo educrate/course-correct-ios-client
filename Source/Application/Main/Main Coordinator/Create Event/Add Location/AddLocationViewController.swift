@@ -15,7 +15,6 @@ class AddLocationViewController: UIViewController {
     
     // MARK: - View Outlets
     @IBOutlet private weak var locationSelector: UIDropDownView!
-    
     @IBOutlet private weak var doneButton: UIBarButtonItem!
     
     // MARK: Deinitialization Verification
@@ -27,7 +26,7 @@ class AddLocationViewController: UIViewController {
 // MARK: - IBAction Outlets
 extension AddLocationViewController {
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
-        
+        presenter?.locationAdded(locationSelector.selection)
     }
 }
 

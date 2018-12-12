@@ -1,5 +1,5 @@
 //
-//  SelectTutorCell.swift
+//  TutorListCell.swift
 //  Client
 //
 //  Created by Christian Ampe on 11/4/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SelectTutorCell: UITableViewCell {
+class TutorListCell: UITableViewCell {
     
     // MARK: - View Outlets
     @IBOutlet private weak var profileImageView: UIImageView!
@@ -17,14 +17,14 @@ class SelectTutorCell: UITableViewCell {
 }
 
 // MARK: - Cell Lifecycle
-extension SelectTutorCell {
+extension TutorListCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         style()
     }
 }
 
-private extension SelectTutorCell {
+private extension TutorListCell {
     func style() {
         profileImageView.round()
     }

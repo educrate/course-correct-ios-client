@@ -24,11 +24,11 @@ class CreateEventPresenter: CreateEventPresenterProtocol {
 }
 
 extension CreateEventPresenter {
-    func pressedAddLocation() {
-        router.showAddLocation()
+    func pressedAddLocation(_ delegate: AddLocationDelegate?) {
+        router.showAddLocation(delegate)
     }
     
-    func pressedSelectTutor() {
-        router.showSelectTutor()
+    func pressedSelectTutor(_ delegate: TutorListDelegate?) {
+        router.showSelectTutor(delegate)
     }
 }

@@ -35,4 +35,8 @@ extension AddLocationPresenter {
             view?.show(error: error.message)
         }
     }
+    
+    func locationAdded(_ location: String) {
+        router.completed(with: location)
+    }
 }

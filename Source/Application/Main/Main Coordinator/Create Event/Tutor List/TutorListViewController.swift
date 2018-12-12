@@ -1,5 +1,5 @@
 //
-//  SelectTutorViewController.swift
+//  TutorListViewController.swift
 //  Client
 //
 //  Created by Christian Ampe on 10/14/18.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class SelectTutorViewController: UIViewController, SelectTutorViewProtocol {
+class TutorListViewController: UIViewController, TutorListViewProtocol {
     
-    // MARK: - Viper
-	var presenter: SelectTutorPresenterProtocol?
+    // MARK: - Properties
+	var presenter: TutorListPresenterProtocol?
     
     // MARK: - Views
     @IBOutlet private weak var tableView: UITableView!
@@ -23,19 +23,26 @@ class SelectTutorViewController: UIViewController, SelectTutorViewProtocol {
 }
 
 // MARK: - Table View Delegate Conformation
-extension SelectTutorViewController: UITableViewDelegate {
+extension TutorListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.selectedTutor(at: indexPath)
+        presenter?.showTutorProfile(at: indexPath, self)
+    }
+}
+
+// MARK: - Intermodule Communicator
+extension TutorListViewController {
+    func didSelect(_ tutor: String) {
+        presenter?.didSelectTutor(tutor)
     }
 }
 
 // MARK: - Table View Data Source Conformation
-extension SelectTutorViewController: UITableViewDataSource {
+extension TutorListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(for: indexPath) as SelectTutorCell
+        return tableView.dequeueReusableCell(for: indexPath) as TutorListCell
     }
 }
