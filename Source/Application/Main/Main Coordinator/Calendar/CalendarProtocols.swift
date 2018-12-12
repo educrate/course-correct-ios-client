@@ -37,6 +37,6 @@ protocol CalendarInteractorProtocol: class {
 
 
 // MARK: - View
-protocol CalendarViewProtocol: class {
+protocol CalendarViewProtocol: CreateEventDelegate {
   var presenter: CalendarPresenterProtocol? { get set }
 }

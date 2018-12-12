@@ -22,10 +22,22 @@ class CalendarViewController: UIViewController, CalendarViewProtocol {
     }
 }
 
+// MARK: - Controller Lifecycle
 extension CalendarViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         calendarView.dataSource = self
+    }
+}
+
+// MARK: - IBActions
+private extension CalendarViewController {
+    @IBAction func profileButtonPressed(_ sender: UIButton, forEvent event: UIEvent) {
+        presenter?.showProfile()
+    }
+    
+    @IBAction func addEventPressed(_ sender: UIButton, forEvent event: UIEvent) {
+        presenter?.createEvent()
     }
 }
 
@@ -53,13 +65,8 @@ extension CalendarViewController: UICalendarViewDataSource {
     }
 }
 
-// MARK: - IBActions
-private extension CalendarViewController {
-    @IBAction func profileButtonPressed(_ sender: UIButton, forEvent event: UIEvent) {
-        presenter?.showProfile()
-    }
-
-    @IBAction func addEventPressed(_ sender: UIButton, forEvent event: UIEvent) {
-        presenter?.createEvent()
+extension CalendarViewController {
+    func didCreateEvent(_ event: Any) {
+        
     }
 }
