@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Intermodule Communicator
 protocol AddLocationDelegate: class {
-    func didSelect(_ location: Any)
+    func didAddLocation(_ location: Any)
 }
 
 // MARK: - Wireframe

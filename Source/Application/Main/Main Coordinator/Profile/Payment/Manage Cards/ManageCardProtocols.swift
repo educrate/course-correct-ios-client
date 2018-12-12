@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 // MARK: - Wireframe
 protocol ManageCardWireframeProtocol: class {}
 

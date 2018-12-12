@@ -39,21 +39,17 @@ class CreateEventViewController: UITableViewController, CreateEventViewProtocol 
     var presenter: CreateEventPresenterProtocol?
     
     // MARK: Views
-    @IBOutlet private weak var courseInlinePicker: UIInlinePickerView! {
-        didSet {
-            courseInlinePicker.set(["Physics 7C",
-                                    "Chemistry 1A",
-                                    "Python 101",
-                                    "Bio 93"])
-        }
-    }
+    @IBOutlet private weak var courseInlinePicker: UIInlinePickerView!
     
     // MARK: - View Outlets
     @IBOutlet private weak var datePicker: UIDatePicker!
     @IBOutlet private weak var timePicker: UIDatePicker!
 
+    @IBOutlet private weak var courseLabel: UITextField!
     @IBOutlet private weak var dateLabel: UITextField!
     @IBOutlet private weak var timeLabel: UITextField!
+    @IBOutlet private weak var locationLabel: UITextField!
+    @IBOutlet private weak var tutorLabel: UITextField!
     
     // MARK: Deinitializer Verification
     deinit {
@@ -61,16 +57,20 @@ class CreateEventViewController: UITableViewController, CreateEventViewProtocol 
     }
 }
 
+// MARK: - Controller Lifecycle
 extension CreateEventViewController {
-    @IBAction func datePickerSelectedValue(_ sender: UIDatePicker, forEvent event: UIEvent) {
-        dateLabel.text = CreateEventDateHelper.formattedDate(for: sender.date)
-    }
-    
-    @IBAction func timePickerSelectedValue(_ sender: UIDatePicker, forEvent event: UIEvent) {
-        timeLabel.text = CreateEventDateHelper.formattedDuration(for: sender.countDownDuration)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        courseInlinePicker.delegate = self
+        courseInlinePicker.set(["Physics 7C",
+                                "Chemistry 1A",
+                                "Python 101",
+                                "Bio 93"])
+        courseInlinePicker.reload()
     }
 }
 
+// MARK: - Table View Overrides
 extension CreateEventViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -127,9 +127,31 @@ extension CreateEventViewController {
     }
 }
 
-extension CreateEventViewController: SegueIdentifiable {
-    enum Segue: String {
-        case inlinePicker = "InlinePicker"
+// MARK: - IBAction Outlets
+extension CreateEventViewController {
+    @IBAction func datePickerSelectedValue(_ sender: UIDatePicker, forEvent event: UIEvent) {
+        dateLabel.text = CreateEventDateHelper.formattedDate(for: sender.date)
+    }
+    
+    @IBAction func timePickerSelectedValue(_ sender: UIDatePicker, forEvent event: UIEvent) {
+        timeLabel.text = CreateEventDateHelper.formattedDuration(for: sender.countDownDuration)
+    }
+}
+
+extension CreateEventViewController: UIInlinePickerViewDelegate {
+    func inlinePickerView(_ inlinePickerView: UIInlinePickerView, didSelectItemWith title: String) {
+        courseLabel.text = title
+    }
+}
+
+// MARK: - Intermodule Communication
+extension CreateEventViewController {
+    func didAddLocation(_ location: Any) {
+        locationLabel.text = "Some Location"
+    }
+    
+    func didSelectTutor(_ tutor: Any) {
+        tutorLabel.text = "Some Tutor"
     }
 }
 

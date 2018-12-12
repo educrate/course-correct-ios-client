@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF14D56F21C1B75800BA4A7A /* UIInlinePickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF14D56E21C1B75800BA4A7A /* UIInlinePickerViewDelegate.swift */; };
 		BF1723A8219CD63F0060B9CD /* UICreditCardViewMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723A7219CD63F0060B9CD /* UICreditCardViewMetadata.swift */; };
 		BF1723AC219CD6590060B9CD /* UICreditCardViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723AB219CD6590060B9CD /* UICreditCardViewConfiguration.swift */; };
 		BF1723B6219D399D0060B9CD /* UIInlinePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723B5219D399D0060B9CD /* UIInlinePickerView.swift */; };
@@ -264,6 +265,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF14D56E21C1B75800BA4A7A /* UIInlinePickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInlinePickerViewDelegate.swift; sourceTree = "<group>"; };
 		BF1723A7219CD63F0060B9CD /* UICreditCardViewMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICreditCardViewMetadata.swift; sourceTree = "<group>"; };
 		BF1723AB219CD6590060B9CD /* UICreditCardViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICreditCardViewConfiguration.swift; sourceTree = "<group>"; };
 		BF1723B5219D399D0060B9CD /* UIInlinePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInlinePickerView.swift; sourceTree = "<group>"; };
@@ -534,6 +536,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF14D56B21C1B31C00BA4A7A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */,
+				BF70B31221BF0A43001E550D /* AddLocationError.swift */,
+				BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		BF4E718D216D4C1A00100FE1 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
@@ -681,9 +693,7 @@
 				BF5004D121741E6900D35B69 /* AddLocationRouter.swift */,
 				BF5004D421741E6900D35B69 /* AddLocationInteractor.swift */,
 				BF5004D321741E6900D35B69 /* AddLocationProtocols.swift */,
-				BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */,
-				BF70B31221BF0A43001E550D /* AddLocationError.swift */,
-				BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */,
+				BF14D56B21C1B31C00BA4A7A /* Entities */,
 			);
 			path = "Add Location";
 			sourceTree = "<group>";
@@ -1139,6 +1149,7 @@
 			children = (
 				BF1723B7219D39A90060B9CD /* UIInlinePickerView.xib */,
 				BF1723B5219D399D0060B9CD /* UIInlinePickerView.swift */,
+				BF14D56E21C1B75800BA4A7A /* UIInlinePickerViewDelegate.swift */,
 				BF1723B9219D3D020060B9CD /* UIInlinePickerViewConfiguration.swift */,
 				BF1723BB219DFCA40060B9CD /* UIInlinePickerViewCell.xib */,
 				BF1723BD219DFCBB0060B9CD /* UIInlinePickerViewCell.swift */,
@@ -1495,6 +1506,7 @@
 				BFD82A8E216D989E00A14868 /* NetworkingRequest.swift in Sources */,
 				BF1723C0219E114E0060B9CD /* UIInlinePickerViewCellConfiguration.swift in Sources */,
 				BFD82ACC216E77B600A14868 /* SelectCollegeRouter.swift in Sources */,
+				BF14D56F21C1B75800BA4A7A /* UIInlinePickerViewDelegate.swift in Sources */,
 				BF500560217B848F00D35B69 /* CongratulationsPresenter.swift in Sources */,
 				BF5004E121741E9100D35B69 /* SelectTutorPresenter.swift in Sources */,
 				BF5005BD217EEF2000D35B69 /* SignUpProtocols.swift in Sources */,

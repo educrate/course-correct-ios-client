@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Intermodule Communicator
 protocol SelectTutorDelegate: class {
-    func selectTutor(didSelectTutorWith id: Any)
+    func didSelectTutor(_ tutor: Any)
 }
 
 // MARK: - Wireframe

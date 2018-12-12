@@ -10,13 +10,15 @@ import UIKit
 
 final class UIInlinePickerView: XIBView {
     
-    // MARK: View Outlets
+    // MARK: - View Outlets
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
-    // MARK: Properties
+    // MARK: - Properties
     private var configuration: UIInlinePickerViewConfiguration = .default
     private var options: [String] = []
+    
+    weak var delegate: UIInlinePickerViewDelegate?
 }
 
 extension UIInlinePickerView {
@@ -64,6 +66,16 @@ extension UIInlinePickerView: UICollectionViewDataSource {
         cell.set(configuration.cellConfiguration)
         
         return cell
+    }
+}
+
+extension UIInlinePickerView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard options.indices.contains(indexPath.row) else {
+            return
+        }
+        
+        delegate?.inlinePickerView(self, didSelectItemWith: options[indexPath.row])
     }
 }
 

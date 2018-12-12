@@ -10,11 +10,11 @@ import Foundation
 
 // MARK: - Intermodule Communicator
 protocol CreateEventDelegate: class {
-    func didSelect(_ location: Any)
+    func didCreateEvent(_ event: Any)
 }
 
 // MARK: - Wireframe
-protocol CreateEventWireframeProtocol: SelectTutorDelegate {
+protocol CreateEventWireframeProtocol: class {
     func showAddLocation()
     func showSelectTutor()
 }
@@ -31,6 +31,6 @@ protocol CreateEventInteractorProtocol: class {
 }
 
 // MARK: - View
-protocol CreateEventViewProtocol: class {
+protocol CreateEventViewProtocol: AddLocationDelegate, SelectTutorDelegate {
   var presenter: CreateEventPresenterProtocol?  { get set }
 }
