@@ -9,9 +9,3 @@
 import UIKit
 
 extension UICollectionReusableView: StoryboardIdentifiable {}
-
-extension StoryboardIdentifiable where Self: UICollectionReusableView {
-    static var storyboardIdentifier: String {
-        return String(describing: self)
-    }
-}

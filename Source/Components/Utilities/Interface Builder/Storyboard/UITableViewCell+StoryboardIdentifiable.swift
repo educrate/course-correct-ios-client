@@ -9,9 +9,3 @@
 import UIKit
 
 extension UITableViewCell: StoryboardIdentifiable {}
-
-extension StoryboardIdentifiable where Self: UITableViewCell {
-    static var storyboardIdentifier: String {
-        return String(describing: self)
-    }
-}

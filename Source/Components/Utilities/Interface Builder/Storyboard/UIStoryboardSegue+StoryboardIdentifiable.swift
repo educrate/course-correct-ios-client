@@ -10,12 +10,6 @@ import UIKit
 
 extension UIStoryboardSegue: StoryboardIdentifiable {}
 
-extension StoryboardIdentifiable where Self: UIStoryboardSegue {
-    static var storyboardIdentifier: String {
-        return String(describing: self)
-    }
-}
-
 extension UIStoryboardSegue {
     func viewController<T: UIViewController>() -> T {
         guard let viewController = destination as? T else {

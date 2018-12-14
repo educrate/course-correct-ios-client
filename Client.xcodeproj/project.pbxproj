@@ -217,6 +217,9 @@
 		BFE25EE721C3806B0089488A /* UIStoryboardSegue+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EE621C3806B0089488A /* UIStoryboardSegue+StoryboardIdentifiable.swift */; };
 		BFE25EE921C380C10089488A /* UIStoryboard+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EE821C380C10089488A /* UIStoryboard+StoryboardIdentifiable.swift */; };
 		BFE25EEB21C381840089488A /* SegueIdentifiable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EEA21C381840089488A /* SegueIdentifiable+UIViewController.swift */; };
+		BFE25EED21C385140089488A /* XIBView+XIBIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EEC21C385140089488A /* XIBView+XIBIdentifiable.swift */; };
+		BFE25EEF21C385740089488A /* XIBIdentifiable+Self.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EEE21C385740089488A /* XIBIdentifiable+Self.swift */; };
+		BFE25EF121C385C50089488A /* StoryboardIdentifiable+Self.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EF021C385C50089488A /* StoryboardIdentifiable+Self.swift */; };
 		BFF531262198AABA00255CD4 /* ManageCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF531252198AABA00255CD4 /* ManageCardCell.swift */; };
 		BFF531292199E43D00255CD4 /* UICreditCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF531282199E43D00255CD4 /* UICreditCardView.xib */; };
 		BFF5312B2199E44C00255CD4 /* UICreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5312A2199E44C00255CD4 /* UICreditCardView.swift */; };
@@ -489,6 +492,9 @@
 		BFE25EE621C3806B0089488A /* UIStoryboardSegue+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboardSegue+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
 		BFE25EE821C380C10089488A /* UIStoryboard+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
 		BFE25EEA21C381840089488A /* SegueIdentifiable+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegueIdentifiable+UIViewController.swift"; sourceTree = "<group>"; };
+		BFE25EEC21C385140089488A /* XIBView+XIBIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XIBView+XIBIdentifiable.swift"; sourceTree = "<group>"; };
+		BFE25EEE21C385740089488A /* XIBIdentifiable+Self.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XIBIdentifiable+Self.swift"; sourceTree = "<group>"; };
+		BFE25EF021C385C50089488A /* StoryboardIdentifiable+Self.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardIdentifiable+Self.swift"; sourceTree = "<group>"; };
 		BFF531252198AABA00255CD4 /* ManageCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardCell.swift; sourceTree = "<group>"; };
 		BFF531282199E43D00255CD4 /* UICreditCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICreditCardView.xib; sourceTree = "<group>"; };
 		BFF5312A2199E44C00255CD4 /* UICreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICreditCardView.swift; sourceTree = "<group>"; };
@@ -1302,6 +1308,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */,
+				BFE25EF021C385C50089488A /* StoryboardIdentifiable+Self.swift */,
 				BFE25ED921C37E8B0089488A /* UIViewController+StoryboardIdentifiable.swift */,
 				BFE25EDC21C37EC70089488A /* UITableViewCell+StoryboardIdentifiable.swift */,
 				BFE25EE621C3806B0089488A /* UIStoryboardSegue+StoryboardIdentifiable.swift */,
@@ -1317,7 +1324,9 @@
 			isa = PBXGroup;
 			children = (
 				BFF5312C219A2D7A00255CD4 /* XIBIdentifiable.swift */,
+				BFE25EEE21C385740089488A /* XIBIdentifiable+Self.swift */,
 				BFF53130219B6EFB00255CD4 /* XIBView.swift */,
+				BFE25EEC21C385140089488A /* XIBView+XIBIdentifiable.swift */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -1574,6 +1583,8 @@
 				BF5F621821916D6F00E43B75 /* TutorProfileReviewCell.swift in Sources */,
 				BFF5312B2199E44C00255CD4 /* UICreditCardView.swift in Sources */,
 				BF50047F2173AC2200D35B69 /* ProfileAccountRouter.swift in Sources */,
+				BFE25EED21C385140089488A /* XIBView+XIBIdentifiable.swift in Sources */,
+				BFE25EEF21C385740089488A /* XIBIdentifiable+Self.swift in Sources */,
 				BF50047721730A3E00D35B69 /* ProfileOverviewError.swift in Sources */,
 				BF5004802173AC2200D35B69 /* ProfileAccountViewController.swift in Sources */,
 				BF4F48F221826A82000D98D1 /* MainPresenter.swift in Sources */,
@@ -1698,6 +1709,7 @@
 				BF5004812173AC2200D35B69 /* ProfileAccountProtocols.swift in Sources */,
 				BF500547217A76A200D35B69 /* ManageBankRouter.swift in Sources */,
 				BF5004D621741E6900D35B69 /* AddLocationRouter.swift in Sources */,
+				BFE25EF121C385C50089488A /* StoryboardIdentifiable+Self.swift in Sources */,
 				BFCDA60D2172905800DB31FC /* UINavigationBar+Additions.swift in Sources */,
 				BF5004AC2174122200D35B69 /* CalendarPresenter.swift in Sources */,
 				BFD0298721509C6A002FB9F5 /* CreditCardTypeValidationState.swift in Sources */,

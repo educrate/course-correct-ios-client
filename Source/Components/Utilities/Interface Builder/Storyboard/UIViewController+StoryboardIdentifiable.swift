@@ -9,9 +9,3 @@
 import UIKit
 
 extension UIViewController: StoryboardIdentifiable {}
-
-extension StoryboardIdentifiable where Self: UIViewController {
-    static var storyboardIdentifier: String {
-        return String(describing: self)
-    }
-}
