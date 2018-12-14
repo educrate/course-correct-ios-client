@@ -8,7 +8,8 @@
 
 import Foundation
 
-// MARK: - Protocol Requiring an Identifier
 protocol StoryboardIdentifiable {
+    
+    /// The identifier used to describe an object referenced from interface builder.
     static var storyboardIdentifier: String { get }
 }

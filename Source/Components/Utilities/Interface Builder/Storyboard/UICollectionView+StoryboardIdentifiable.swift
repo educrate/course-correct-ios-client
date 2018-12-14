@@ -8,7 +8,6 @@
 
 import UIKit
 
-// MARK: Collection View Cell Instantiation from Generics
 extension UICollectionView {
     func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.storyboardIdentifier, for: indexPath as IndexPath) as? T else {

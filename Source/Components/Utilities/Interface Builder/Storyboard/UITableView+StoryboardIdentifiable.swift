@@ -1,5 +1,5 @@
 //
-//  StoryboardIdentifiable+UITableViewController.swift
+//  UITableViewController+StoryboardIdentifiable.swift
 //  Client
 //
 //  Created by Ampe on 12/13/18.
@@ -8,7 +8,6 @@
 
 import UIKit
 
-// MARK: Table View Cell Instantiation from Generics
 extension UITableView {
     func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withIdentifier: T.storyboardIdentifier, for: indexPath as IndexPath) as? T else {

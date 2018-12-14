@@ -8,7 +8,6 @@
 
 import UIKit
 
-// MARK: View Controller Instantiation from Generics
 extension UIStoryboard {
     func instantiateViewController<T: UIViewController>() -> T {
         guard let viewController = self.instantiateViewController(withIdentifier: T.storyboardIdentifier) as? T else {

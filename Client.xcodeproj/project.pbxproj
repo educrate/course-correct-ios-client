@@ -209,11 +209,10 @@
 		BFD82AF02170670400A14868 /* EnterStudentIdentifierProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AEB2170670400A14868 /* EnterStudentIdentifierProtocols.swift */; };
 		BFD82AF12170670400A14868 /* EnterStudentIdentifierInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD82AEC2170670400A14868 /* EnterStudentIdentifierInteractor.swift */; };
 		BFD82AF32170671B00A14868 /* EnterStudentIdentifier.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD82AF22170671B00A14868 /* EnterStudentIdentifier.storyboard */; };
-		BFE25EDA21C37E8B0089488A /* StoryboardIdentifiable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25ED921C37E8B0089488A /* StoryboardIdentifiable+UIViewController.swift */; };
-		BFE25EDD21C37EC70089488A /* StoryboardIdentifiable+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EDC21C37EC70089488A /* StoryboardIdentifiable+UITableViewCell.swift */; };
-		BFE25EDF21C37F110089488A /* UITableViewController+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EDE21C37F110089488A /* UITableViewController+StoryboardIdentifiable.swift */; };
-		BFE25EE121C37FA80089488A /* StoryboardIdentifiable+UIStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EE021C37FA80089488A /* StoryboardIdentifiable+UIStoryboardSegue.swift */; };
-		BFE25EE321C37FED0089488A /* StoryboardIdentifiable+UICollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EE221C37FED0089488A /* StoryboardIdentifiable+UICollectionReusableView.swift */; };
+		BFE25EDA21C37E8B0089488A /* UIViewController+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25ED921C37E8B0089488A /* UIViewController+StoryboardIdentifiable.swift */; };
+		BFE25EDD21C37EC70089488A /* UITableViewCell+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EDC21C37EC70089488A /* UITableViewCell+StoryboardIdentifiable.swift */; };
+		BFE25EDF21C37F110089488A /* UITableView+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EDE21C37F110089488A /* UITableView+StoryboardIdentifiable.swift */; };
+		BFE25EE321C37FED0089488A /* UICollectionReusableView+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EE221C37FED0089488A /* UICollectionReusableView+StoryboardIdentifiable.swift */; };
 		BFE25EE521C3800D0089488A /* UICollectionView+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EE421C3800D0089488A /* UICollectionView+StoryboardIdentifiable.swift */; };
 		BFE25EE721C3806B0089488A /* UIStoryboardSegue+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EE621C3806B0089488A /* UIStoryboardSegue+StoryboardIdentifiable.swift */; };
 		BFE25EE921C380C10089488A /* UIStoryboard+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EE821C380C10089488A /* UIStoryboard+StoryboardIdentifiable.swift */; };
@@ -482,11 +481,10 @@
 		BFD82AEB2170670400A14868 /* EnterStudentIdentifierProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterStudentIdentifierProtocols.swift; sourceTree = "<group>"; };
 		BFD82AEC2170670400A14868 /* EnterStudentIdentifierInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterStudentIdentifierInteractor.swift; sourceTree = "<group>"; };
 		BFD82AF22170671B00A14868 /* EnterStudentIdentifier.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnterStudentIdentifier.storyboard; sourceTree = "<group>"; };
-		BFE25ED921C37E8B0089488A /* StoryboardIdentifiable+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardIdentifiable+UIViewController.swift"; sourceTree = "<group>"; };
-		BFE25EDC21C37EC70089488A /* StoryboardIdentifiable+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardIdentifiable+UITableViewCell.swift"; sourceTree = "<group>"; };
-		BFE25EDE21C37F110089488A /* UITableViewController+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
-		BFE25EE021C37FA80089488A /* StoryboardIdentifiable+UIStoryboardSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardIdentifiable+UIStoryboardSegue.swift"; sourceTree = "<group>"; };
-		BFE25EE221C37FED0089488A /* StoryboardIdentifiable+UICollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardIdentifiable+UICollectionReusableView.swift"; sourceTree = "<group>"; };
+		BFE25ED921C37E8B0089488A /* UIViewController+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFE25EDC21C37EC70089488A /* UITableViewCell+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFE25EDE21C37F110089488A /* UITableView+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFE25EE221C37FED0089488A /* UICollectionReusableView+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
 		BFE25EE421C3800D0089488A /* UICollectionView+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
 		BFE25EE621C3806B0089488A /* UIStoryboardSegue+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboardSegue+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
 		BFE25EE821C380C10089488A /* UIStoryboard+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
@@ -1304,13 +1302,12 @@
 			isa = PBXGroup;
 			children = (
 				BFD82AC0216DADE900A14868 /* StoryboardIdentifiable.swift */,
-				BFE25ED921C37E8B0089488A /* StoryboardIdentifiable+UIViewController.swift */,
-				BFE25EDC21C37EC70089488A /* StoryboardIdentifiable+UITableViewCell.swift */,
-				BFE25EE021C37FA80089488A /* StoryboardIdentifiable+UIStoryboardSegue.swift */,
-				BFE25EE221C37FED0089488A /* StoryboardIdentifiable+UICollectionReusableView.swift */,
-				BFE25EE421C3800D0089488A /* UICollectionView+StoryboardIdentifiable.swift */,
-				BFE25EDE21C37F110089488A /* UITableViewController+StoryboardIdentifiable.swift */,
+				BFE25ED921C37E8B0089488A /* UIViewController+StoryboardIdentifiable.swift */,
+				BFE25EDC21C37EC70089488A /* UITableViewCell+StoryboardIdentifiable.swift */,
 				BFE25EE621C3806B0089488A /* UIStoryboardSegue+StoryboardIdentifiable.swift */,
+				BFE25EE221C37FED0089488A /* UICollectionReusableView+StoryboardIdentifiable.swift */,
+				BFE25EE421C3800D0089488A /* UICollectionView+StoryboardIdentifiable.swift */,
+				BFE25EDE21C37F110089488A /* UITableView+StoryboardIdentifiable.swift */,
 				BFE25EE821C380C10089488A /* UIStoryboard+StoryboardIdentifiable.swift */,
 			);
 			path = Storyboard;
@@ -1592,7 +1589,7 @@
 				BF70B31121BE3EE4001E550D /* AddLocationAutocompleteResponse.swift in Sources */,
 				BF70B5D6217074C600771E5D /* EnterAccessCodeRouter.swift in Sources */,
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
-				BFE25EE321C37FED0089488A /* StoryboardIdentifiable+UICollectionReusableView.swift in Sources */,
+				BFE25EE321C37FED0089488A /* UICollectionReusableView+StoryboardIdentifiable.swift in Sources */,
 				BFF6C2922184E1F8003F7D96 /* UINotificationViewConfiguration.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* UICalendarViewDayDescription.swift in Sources */,
 				BF50050B217454C600D35B69 /* SignInInteractor.swift in Sources */,
@@ -1646,11 +1643,10 @@
 				BF5004D821741E6900D35B69 /* AddLocationProtocols.swift in Sources */,
 				BFFFF31421A8D89200D2BD62 /* UICalendarViewEventCellConfiguration.swift in Sources */,
 				BF7B2C5721B0ACFC00E91E38 /* LazyValue.swift in Sources */,
-				BFE25EDD21C37EC70089488A /* StoryboardIdentifiable+UITableViewCell.swift in Sources */,
+				BFE25EDD21C37EC70089488A /* UITableViewCell+StoryboardIdentifiable.swift in Sources */,
 				BF5005C8217EF4FF00D35B69 /* OnboardingInteractor.swift in Sources */,
 				BFE25EE721C3806B0089488A /* UIStoryboardSegue+StoryboardIdentifiable.swift in Sources */,
 				BF5005C5217EF4FF00D35B69 /* OnboardingRouter.swift in Sources */,
-				BFE25EE121C37FA80089488A /* StoryboardIdentifiable+UIStoryboardSegue.swift in Sources */,
 				BFFFF31221A8D84100D2BD62 /* UICalendarViewDayCellConfguration.swift in Sources */,
 				BFF53131219B6EFB00255CD4 /* XIBView.swift in Sources */,
 				BF50046D2172F09700D35B69 /* ProfileOverviewProtocols.swift in Sources */,
@@ -1681,14 +1677,14 @@
 				BF5004D721741E6900D35B69 /* AddLocationViewController.swift in Sources */,
 				BF5004E421741E9100D35B69 /* TutorListProtocols.swift in Sources */,
 				BF50046E2172F09700D35B69 /* ProfileOverviewInteractor.swift in Sources */,
-				BFE25EDA21C37E8B0089488A /* StoryboardIdentifiable+UIViewController.swift in Sources */,
+				BFE25EDA21C37E8B0089488A /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				BFF6C2962187E2D0003F7D96 /* ClientReadable.swift in Sources */,
 				BF4F48BF21823C75000D98D1 /* AppViewController.swift in Sources */,
 				BF500557217B837600D35B69 /* WalkthroughViewController.swift in Sources */,
 				BF5005BB217EEF2000D35B69 /* SignUpRouter.swift in Sources */,
 				BFCDA5EE21725E7200DB31FC /* WelcomeViewController.swift in Sources */,
 				BFF53141219CADA100255CD4 /* UIActionViewConfiguration.swift in Sources */,
-				BFE25EDF21C37F110089488A /* UITableViewController+StoryboardIdentifiable.swift in Sources */,
+				BFE25EDF21C37F110089488A /* UITableView+StoryboardIdentifiable.swift in Sources */,
 				BFCDA5FB21725FF700DB31FC /* CreatePasswordViewController.swift in Sources */,
 				BFD82AD8216E7D3500A14868 /* ResultNoError.swift in Sources */,
 				BFF5312D219A2D7A00255CD4 /* XIBIdentifiable.swift in Sources */,
