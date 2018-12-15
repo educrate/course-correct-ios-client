@@ -220,6 +220,8 @@
 		BFE25EED21C385140089488A /* XIBView+XIBIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EEC21C385140089488A /* XIBView+XIBIdentifiable.swift */; };
 		BFE25EEF21C385740089488A /* XIBIdentifiable+Self.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EEE21C385740089488A /* XIBIdentifiable+Self.swift */; };
 		BFE25EF121C385C50089488A /* StoryboardIdentifiable+Self.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE25EF021C385C50089488A /* StoryboardIdentifiable+Self.swift */; };
+		BFF3971721C4DD7F00B77522 /* UIRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3971621C4DD7F00B77522 /* UIRoundImageView.swift */; };
+		BFF3971921C4DF2800B77522 /* UIClearNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3971821C4DF2800B77522 /* UIClearNavigationController.swift */; };
 		BFF531262198AABA00255CD4 /* ManageCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF531252198AABA00255CD4 /* ManageCardCell.swift */; };
 		BFF531292199E43D00255CD4 /* UICreditCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF531282199E43D00255CD4 /* UICreditCardView.xib */; };
 		BFF5312B2199E44C00255CD4 /* UICreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5312A2199E44C00255CD4 /* UICreditCardView.swift */; };
@@ -495,6 +497,8 @@
 		BFE25EEC21C385140089488A /* XIBView+XIBIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XIBView+XIBIdentifiable.swift"; sourceTree = "<group>"; };
 		BFE25EEE21C385740089488A /* XIBIdentifiable+Self.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XIBIdentifiable+Self.swift"; sourceTree = "<group>"; };
 		BFE25EF021C385C50089488A /* StoryboardIdentifiable+Self.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardIdentifiable+Self.swift"; sourceTree = "<group>"; };
+		BFF3971621C4DD7F00B77522 /* UIRoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundImageView.swift; sourceTree = "<group>"; };
+		BFF3971821C4DF2800B77522 /* UIClearNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIClearNavigationController.swift; sourceTree = "<group>"; };
 		BFF531252198AABA00255CD4 /* ManageCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardCell.swift; sourceTree = "<group>"; };
 		BFF531282199E43D00255CD4 /* UICreditCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICreditCardView.xib; sourceTree = "<group>"; };
 		BFF5312A2199E44C00255CD4 /* UICreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICreditCardView.swift; sourceTree = "<group>"; };
@@ -1239,6 +1243,7 @@
 		BFD82AC2216DB85C00A14868 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				BFF3971521C4DD6000B77522 /* Views */,
 				BFF6C2932187E2A5003F7D96 /* Protocols */,
 				BFCDA6092172902F00DB31FC /* Extensions */,
 			);
@@ -1302,6 +1307,15 @@
 				BFE25EEA21C381840089488A /* SegueIdentifiable+UIViewController.swift */,
 			);
 			path = Segue;
+			sourceTree = "<group>";
+		};
+		BFF3971521C4DD6000B77522 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFF3971621C4DD7F00B77522 /* UIRoundImageView.swift */,
+				BFF3971821C4DF2800B77522 /* UIClearNavigationController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BFF5312E219B6ED800255CD4 /* Storyboard */ = {
@@ -1603,6 +1617,7 @@
 				BFE25EE321C37FED0089488A /* UICollectionReusableView+StoryboardIdentifiable.swift in Sources */,
 				BFF6C2922184E1F8003F7D96 /* UINotificationViewConfiguration.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* UICalendarViewDayDescription.swift in Sources */,
+				BFF3971921C4DF2800B77522 /* UIClearNavigationController.swift in Sources */,
 				BF50050B217454C600D35B69 /* SignInInteractor.swift in Sources */,
 				BFD82A89216D989E00A14868 /* NetworkingRequestHTTPMethod.swift in Sources */,
 				BF5004912173EB7800D35B69 /* ProfilePaymentProtocols.swift in Sources */,
@@ -1616,6 +1631,7 @@
 				BFCDA6172172C3FC00DB31FC /* CreatePasswordError.swift in Sources */,
 				BFD82ACB216E77B600A14868 /* SelectCollegePresenter.swift in Sources */,
 				BF500556217B837600D35B69 /* WalkthroughRouter.swift in Sources */,
+				BFF3971721C4DD7F00B77522 /* UIRoundImageView.swift in Sources */,
 				BFCDA5FC21725FF700DB31FC /* CreatePasswordProtocols.swift in Sources */,
 				BFCDA60B2172903F00DB31FC /* UIImage+Additions.swift in Sources */,
 				BF5004E321741E9100D35B69 /* TutorListViewController.swift in Sources */,

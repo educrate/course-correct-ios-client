@@ -12,22 +12,28 @@ class ProfileAccountViewController: UITableViewController, ProfileAccountViewPro
 	var presenter: ProfileAccountPresenterProtocol?
     
     // MARK: View Outlets
-    @IBOutlet private weak var coursePicker: UIInlinePickerView! {
-        didSet {
-            coursePicker.set(["Physics 7C",
-                              "Chem 1A",
-                              "Java 13B",
-                              "Math 3D",
-                              "Python 101",
-                              "Psychology 12C",
-                              "Biology 93"])
-            
-            coursePicker.set(UIInlinePickerViewConfiguration(allowsMultipleSelection: true))
-        }
-    }
+    @IBOutlet private weak var coursePicker: UIInlinePickerView!
     
     deinit {
         print("deinitialized profile account screen")
+    }
+}
+
+extension ProfileAccountViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        coursePicker.set(UIInlinePickerViewConfiguration(allowsMultipleSelection: true))
+        coursePicker.set(["Physics 7C",
+                          "Chem 1A",
+                          "Java 13B",
+                          "Math 3D",
+                          "Python 101",
+                          "Psychology 12C",
+                          "Biology 93"])
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
 
@@ -52,12 +58,6 @@ extension ProfileAccountViewController {
         default:
             return 0
         }
-    }
-}
-
-extension ProfileAccountViewController: SegueIdentifiable {
-    enum Segue: String {
-        case inlinePicker = "InlinePicker"
     }
 }
 

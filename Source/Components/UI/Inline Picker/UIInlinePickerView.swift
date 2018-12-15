@@ -26,22 +26,19 @@ extension UIInlinePickerView {
         super.awakeFromNib()
         registerCell()
         setUpCollectionViewFlowLayout()
-        configure(configuration)
         layoutIfNeeded()
     }
 }
 
 extension UIInlinePickerView {
-    func reload() {
-        collectionView.reloadData()
-    }
-    
     func set(_ newOptions: [String]) {
         options = newOptions
+        collectionView.reloadData()
     }
     
     func set(_ newConfiguration: UIInlinePickerViewConfiguration) {
         configuration = newConfiguration
+        configure(configuration)
     }
     
     var recommendedHeight: CGFloat {

@@ -66,7 +66,7 @@ extension CreateEventViewController {
                                 "Chemistry 1A",
                                 "Python 101",
                                 "Bio 93"])
-        courseInlinePicker.reload()
+        tableView.reloadData()
     }
 }
 

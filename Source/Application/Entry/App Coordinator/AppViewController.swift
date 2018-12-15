@@ -8,14 +8,13 @@
 
 import UIKit
 
-class AppViewController: UINavigationController, AppViewProtocol {
+class AppViewController: UIClearNavigationController, AppViewProtocol {
     lazy var presenter: AppPresenterProtocol? = AppRouter.createModule(with: self)
 }
 
 extension AppViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.makeTransparent()
         presenter?.start()
     }
 }
