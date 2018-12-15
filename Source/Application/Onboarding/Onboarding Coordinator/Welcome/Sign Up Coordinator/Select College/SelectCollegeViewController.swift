@@ -14,12 +14,7 @@ class SelectCollegeViewController: UIViewController {
     var presenter: SelectCollegePresenterProtocol?
     
     // MARK: Views
-    @IBOutlet weak var collegeSelector: UIDropDownView! {
-        didSet {
-            collegeSelector.delegate = self
-            collegeSelector.set(UIDropDownViewConfiguration(placeholder: "Name of University"))
-        }
-    }
+    @IBOutlet weak var collegeSelector: UIDropDownView!
     
     // MARK: Deinit Verification
     deinit {
@@ -27,16 +22,22 @@ class SelectCollegeViewController: UIViewController {
     }
 }
 
-private extension SelectCollegeViewController {
-    @IBAction func donePressed(_ sender: UIBarButtonItem) {
-        presenter?.selected(college: collegeSelector.selection)
-    }
-}
-
 extension SelectCollegeViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        collegeSelector.delegate = self
+        collegeSelector.set(UIDropDownViewConfiguration(placeholder: "Name of University"))
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         collegeSelector.beginEditing()
+    }
+}
+
+private extension SelectCollegeViewController {
+    @IBAction func donePressed(_ sender: UIBarButtonItem) {
+        presenter?.selected(college: collegeSelector.selection)
     }
 }
 

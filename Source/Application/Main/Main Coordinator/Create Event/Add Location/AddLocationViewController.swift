@@ -36,7 +36,11 @@ extension AddLocationViewController {
         super.viewDidLoad()
         locationSelector.delegate = self
         locationSelector.set(UIDropDownViewConfiguration(placeholder: "Address"))
-        locationSelector.reload()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        locationSelector.beginEditing()
     }
 }
 

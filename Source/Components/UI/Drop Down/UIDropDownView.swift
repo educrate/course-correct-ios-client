@@ -66,6 +66,7 @@ extension UIDropDownView {
     
     func set(_ newConfiguration: UIDropDownViewConfiguration) {
         configuration = newConfiguration
+        configure(configuration)
     }
 }
 
