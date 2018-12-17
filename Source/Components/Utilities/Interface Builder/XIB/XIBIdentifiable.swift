@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// A protocol used for identifying views loaded from xibs.
 protocol XIBIdentifiable {
     
     /// The identifier used to describe an object referenced from interface builder.
