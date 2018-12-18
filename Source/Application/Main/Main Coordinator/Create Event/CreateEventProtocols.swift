@@ -19,6 +19,8 @@ protocol CreateEventWireframeProtocol: class {
     func showSelectTutor(_ delegate: TutorListDelegate?)
     
     func unwind()
+    
+    func completed()
 }
 
 // MARK: - Presenter
@@ -28,6 +30,8 @@ protocol CreateEventPresenterProtocol: class {
     
     func locationAdded()
     func tutorSelected()
+    
+    func eventCreated()
 }
 
 // MARK: - Interactor

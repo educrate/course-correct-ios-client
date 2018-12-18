@@ -264,7 +264,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Create Event" id="ffa-ge-z9K">
                         <barButtonItem key="backBarButtonItem" title=" " id="2By-cs-v0A"/>
-                        <barButtonItem key="rightBarButtonItem" image="tick-vector" id="XdX-Ei-dZ1"/>
+                        <barButtonItem key="rightBarButtonItem" image="tick-vector" id="XdX-Ei-dZ1">
+                            <connections>
+                                <action selector="donePressed:" destination="ECg-uu-IXC" id="zBY-9R-07U"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>

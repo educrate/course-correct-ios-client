@@ -16,8 +16,9 @@ protocol CalendarDelegate: class {
 // MARK: - Wireframe
 protocol CalendarWireframeProtocol: ProfileOverviewDelegate {
     func presentEvent()
-    func presentCreateEvent()
+    func presentCreateEvent(_ delegate: CreateEventDelegate?)
     func presentProfile()
+    func unwind()
 }
 
 // MARK: - Presenter
@@ -25,8 +26,9 @@ protocol CalendarPresenterProtocol: class {
     
     // MARK: Navigation Events
     func showEvent()
-    func createEvent()
+    func showCreateEvent(_ delegate: CreateEventDelegate?)
     func showProfile()
+    func eventCreated()
 }
 
 

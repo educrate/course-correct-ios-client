@@ -39,4 +39,8 @@ extension CreateEventPresenter {
     func tutorSelected() {
         router.unwind()
     }
+    
+    func eventCreated() {
+        router.completed()
+    }
 }

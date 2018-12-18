@@ -37,7 +37,7 @@ private extension CalendarViewController {
     }
     
     @IBAction func addEventPressed(_ sender: UIButton, forEvent event: UIEvent) {
-        presenter?.createEvent()
+        presenter?.showCreateEvent(self)
     }
 }
 
@@ -67,6 +67,6 @@ extension CalendarViewController: UICalendarViewDataSource {
 
 extension CalendarViewController {
     func didCreateEvent(_ event: Any) {
-        
+        presenter?.eventCreated()
     }
 }

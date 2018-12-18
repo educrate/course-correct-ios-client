@@ -34,7 +34,7 @@ class CreateEventDateHelper {
 }
 
 class CreateEventViewController: UITableViewController, CreateEventViewProtocol {
-	
+    
     // MARK: Viper
     var presenter: CreateEventPresenterProtocol?
     
@@ -66,7 +66,6 @@ extension CreateEventViewController {
                                 "Chemistry 1A",
                                 "Python 101",
                                 "Bio 93"])
-        tableView.reloadData()
     }
 }
 
@@ -135,6 +134,10 @@ private extension CreateEventViewController {
     
     @IBAction func timePickerSelectedValue(_ sender: UIDatePicker, forEvent event: UIEvent) {
         timeLabel.text = CreateEventDateHelper.formattedDuration(for: sender.countDownDuration)
+    }
+    
+    @IBAction func donePressed(_ sender: UIBarButtonItem) {
+        presenter?.eventCreated()
     }
 }
 

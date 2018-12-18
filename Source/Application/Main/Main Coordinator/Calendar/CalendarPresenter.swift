@@ -27,11 +27,15 @@ extension CalendarPresenter {
         router.presentEvent()
     }
     
-    func createEvent() {
-        router.presentCreateEvent()
+    func showCreateEvent(_ delegate: CreateEventDelegate?) {
+        router.presentCreateEvent(delegate)
     }
     
     func showProfile() {
         router.presentProfile()
+    }
+    
+    func eventCreated() {
+        router.unwind()
     }
 }

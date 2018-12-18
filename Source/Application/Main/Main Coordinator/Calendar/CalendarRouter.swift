@@ -18,8 +18,8 @@ extension CalendarRouter {
         viewController?.show(EventRouter.createModule(), sender: nil)
     }
     
-    func presentCreateEvent() {
-        viewController?.show(CreateEventRouter.createModule(), sender: nil)
+    func presentCreateEvent(_ delegate: CreateEventDelegate?) {
+        viewController?.show(CreateEventRouter.createModule(delegate), sender: nil)
     }
     
     func presentProfile() {
@@ -30,6 +30,12 @@ extension CalendarRouter {
 extension CalendarRouter {
     func profileOverviewRouter(_ profileOverviewRouter: ProfileOverviewRouter, didSignOut user: String) {
         delegate?.calendarRouter(self, didSignOut: "user signed out")
+    }
+    
+    func unwind() {
+        if let viewController = viewController {
+            viewController.navigationController?.popToViewController(viewController, animated: true)
+        }
     }
 }
 
