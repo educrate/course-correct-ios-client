@@ -20,6 +20,12 @@ extension CreateEventRouter {
     func showSelectTutor(_ delegate: TutorListDelegate?) {
         viewController?.show(TutorListRouter.createModule(delegate), sender: nil)
     }
+    
+    func unwind() {
+        if let viewController = viewController {
+            viewController.navigationController?.popToViewController(viewController, animated: true)
+        }
+    }
 }
 
 extension CreateEventRouter {

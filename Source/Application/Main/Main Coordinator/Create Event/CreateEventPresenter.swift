@@ -31,4 +31,12 @@ extension CreateEventPresenter {
     func pressedSelectTutor(_ delegate: TutorListDelegate?) {
         router.showSelectTutor(delegate)
     }
+    
+    func locationAdded() {
+        router.unwind()
+    }
+    
+    func tutorSelected() {
+        router.unwind()
+    }
 }

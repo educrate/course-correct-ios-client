@@ -128,7 +128,7 @@ extension CreateEventViewController {
 }
 
 // MARK: - IBAction Outlets
-extension CreateEventViewController {
+private extension CreateEventViewController {
     @IBAction func datePickerSelectedValue(_ sender: UIDatePicker, forEvent event: UIEvent) {
         dateLabel.text = CreateEventDateHelper.formattedDate(for: sender.date)
     }
