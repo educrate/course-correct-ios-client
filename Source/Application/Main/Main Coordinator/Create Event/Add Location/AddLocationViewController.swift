@@ -60,8 +60,4 @@ extension AddLocationViewController: UIDropDownViewDelegate {
     func inputChanged(_ sender: UITextField) {
         presenter?.fetch(autocomplete: sender.text ?? "")
     }
-    
-    func dropDown(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
 }

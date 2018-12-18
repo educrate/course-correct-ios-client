@@ -19,7 +19,7 @@ class CongratulationsViewController: UIViewController, CongratulationsViewProtoc
     }
 }
 
-extension CongratulationsViewController {
+private extension CongratulationsViewController {
     @IBAction func donePressed(_ sender: UIBarButtonItem) {
         presenter?.screenHandled()
     }

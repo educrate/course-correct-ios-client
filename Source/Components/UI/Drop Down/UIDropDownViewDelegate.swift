@@ -12,3 +12,13 @@ protocol UIDropDownViewDelegate: class {
     func inputChanged(_ sender: UITextField)
     func dropDown(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 }
+
+extension UIDropDownViewDelegate {
+    func inputChanged(_ sender: UITextField) {
+        // do nothing
+    }
+    
+    func dropDown(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // do nothing
+    }
+}
