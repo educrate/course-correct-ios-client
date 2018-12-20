@@ -9,12 +9,13 @@
 import UIKit
 
 class AppViewController: UIClearNavigationController, AppViewProtocol {
-    lazy var presenter: AppPresenterProtocol? = AppBuilder().create(with: self)
+    var presenter: AppPresenterProtocol?
 }
 
 extension AppViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = AppBuilder().create(with: self)
         presenter?.start()
     }
 }
