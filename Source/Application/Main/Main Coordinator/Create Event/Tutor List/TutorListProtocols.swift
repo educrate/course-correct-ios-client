@@ -16,11 +16,15 @@ protocol TutorListDelegate: class {
 // MARK: - Wireframe
 protocol TutorListWireframeProtocol: class {
     func presentTutorProfile(_ delegate: TutorProfileDelegate?)
-    func completed(with tutor: String)
 }
 
 // MARK: - Presenter
 protocol TutorListPresenterProtocol: class {
+    var router: TutorListWireframeProtocol? { get set }
+    var interactor: TutorListInteractorProtocol? { get set }
+    var view: TutorListViewProtocol? { get set }
+    var delegate: TutorListDelegate? { get set }
+    
     func showTutorProfile(at indexPath: IndexPath, _ delegate: TutorProfileDelegate?)
     func didSelectTutor(_ tutor: String)
 }
