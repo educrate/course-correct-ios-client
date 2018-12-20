@@ -150,6 +150,7 @@
 		BFA88AE321CB037300F16821 /* AddLocationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA88AE221CB037300F16821 /* AddLocationBuilder.swift */; };
 		BFA88AE521CB3E3700F16821 /* CreateEventBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA88AE421CB3E3700F16821 /* CreateEventBuilder.swift */; };
 		BFA88AE721CB416C00F16821 /* TutorListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA88AE621CB416C00F16821 /* TutorListBuilder.swift */; };
+		BFA88AE921CB435F00F16821 /* AppBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA88AE821CB435F00F16821 /* AppBuilder.swift */; };
 		BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */; };
 		BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeaderView.swift */; };
 		BFCDA5EC21725E7200DB31FC /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5E721725E7200DB31FC /* WelcomePresenter.swift */; };
@@ -424,6 +425,7 @@
 		BFA88AE221CB037300F16821 /* AddLocationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationBuilder.swift; sourceTree = "<group>"; };
 		BFA88AE421CB3E3700F16821 /* CreateEventBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventBuilder.swift; sourceTree = "<group>"; };
 		BFA88AE621CB416C00F16821 /* TutorListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorListBuilder.swift; sourceTree = "<group>"; };
+		BFA88AE821CB435F00F16821 /* AppBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilder.swift; sourceTree = "<group>"; };
 		BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataSource.swift; sourceTree = "<group>"; };
 		BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewMonthHeaderView.swift; sourceTree = "<group>"; };
 		BFCDA5E721725E7200DB31FC /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
@@ -654,6 +656,7 @@
 				BF5005AB217EEE9C00D35B69 /* AppPresenter.swift */,
 				BF5005AC217EEE9C00D35B69 /* AppRouter.swift */,
 				BF5005AF217EEE9C00D35B69 /* AppInteractor.swift */,
+				BFA88AE821CB435F00F16821 /* AppBuilder.swift */,
 				BF5005AE217EEE9C00D35B69 /* AppProtocols.swift */,
 				BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */,
 			);
@@ -1690,6 +1693,7 @@
 				BFF53131219B6EFB00255CD4 /* XIBView.swift in Sources */,
 				BF50046D2172F09700D35B69 /* ProfileOverviewProtocols.swift in Sources */,
 				BFF5313D219CAC9100255CD4 /* UIActionViewCell.swift in Sources */,
+				BFA88AE921CB435F00F16821 /* AppBuilder.swift in Sources */,
 				BF500572217B87C900D35B69 /* CreateEventInteractor.swift in Sources */,
 				BF50051A217678C500D35B69 /* SignInError.swift in Sources */,
 				BF500540217A765200D35B69 /* ManageCardInteractor.swift in Sources */,

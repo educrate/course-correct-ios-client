@@ -9,16 +9,9 @@
 import UIKit
 
 class AppPresenter: AppPresenterProtocol {
-    
-    // MARK: Viper
+    var router: AppWireframeProtocol?
     var interactor: AppInteractorProtocol?
-    private let router: AppWireframeProtocol
-
-    init(interactor: AppInteractorProtocol?,
-         router: AppWireframeProtocol) {
-        self.interactor = interactor
-        self.router = router
-    }
+    weak var view: AppViewProtocol?
 }
 
 extension AppPresenter {
@@ -29,7 +22,17 @@ extension AppPresenter {
 
 extension AppPresenter {
     func launchStateDetermined(_ state: AppUserState) {
-        router.presentOnboardingModule()
+        router?.presentOnboarding(self)
+    }
+}
+
+extension AppPresenter {
+    func onboarding(didFinishWith user: String) {
+        router?.presentMain(self)
+    }
+    
+    func main(didSignOut user: String) {
+        router?.presentOnboarding(self)
     }
 }
 
@@ -37,13 +40,13 @@ extension AppPresenter {
     func onboardingPresenter(_ onboardingPresenter: OnboardingPresenter, didFinishWith state: AppUserState) {
         switch state {
         case .authenticated:
-            router.presentMainModule()
+            router?.presentMain(self)
         case .unauthenticated:
-            router.presentOnboardingModule()
+            router?.presentOnboarding(self)
         }
     }
     
     func mainPresenter(_ mainPresenter: MainPresenter, didSignOut user: String) {
-        router.presentOnboardingModule()
+        router?.presentOnboarding(self)
     }
 }

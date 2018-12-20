@@ -9,7 +9,7 @@
 import UIKit
 
 class AppViewController: UIClearNavigationController, AppViewProtocol {
-    lazy var presenter: AppPresenterProtocol? = AppRouter.createModule(with: self)
+    lazy var presenter: AppPresenterProtocol? = AppBuilder().create(with: self)
 }
 
 extension AppViewController {
