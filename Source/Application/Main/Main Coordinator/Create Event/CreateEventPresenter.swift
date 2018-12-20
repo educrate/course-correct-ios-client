@@ -9,38 +9,30 @@
 import UIKit
 
 class CreateEventPresenter: CreateEventPresenterProtocol {
-    weak private var view: CreateEventViewProtocol?
+    var router: CreateEventWireframeProtocol?
     var interactor: CreateEventInteractorProtocol?
-    private let router: CreateEventWireframeProtocol
-
-    init(interface: CreateEventViewProtocol,
-         interactor: CreateEventInteractorProtocol?,
-         router: CreateEventWireframeProtocol) {
-        
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    weak var view: CreateEventViewProtocol?
+    weak var delegate: CreateEventDelegate?
 }
 
 extension CreateEventPresenter {
     func pressedAddLocation(_ delegate: AddLocationDelegate?) {
-        router.showAddLocation(delegate)
+        router?.showAddLocation(delegate)
     }
     
     func pressedSelectTutor(_ delegate: TutorListDelegate?) {
-        router.showSelectTutor(delegate)
+        router?.showSelectTutor(delegate)
     }
     
     func locationAdded() {
-        router.unwind()
+        router?.unwind()
     }
     
     func tutorSelected() {
-        router.unwind()
+        router?.unwind()
     }
     
     func eventCreated() {
-        router.completed()
+        delegate?.didCreateEvent("")
     }
 }

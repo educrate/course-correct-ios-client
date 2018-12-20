@@ -19,7 +19,7 @@ extension CalendarRouter {
     }
     
     func presentCreateEvent(_ delegate: CreateEventDelegate?) {
-        viewController?.show(CreateEventRouter.createModule(delegate), sender: nil)
+        viewController?.show(CreateEventBuilder().create(delegate), sender: nil)
     }
     
     func presentProfile() {

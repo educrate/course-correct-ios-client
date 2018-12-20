@@ -10,7 +10,6 @@ import UIKit
 
 class CreateEventRouter: CreateEventWireframeProtocol {
     weak var viewController: UIViewController?
-    private weak var delegate: CreateEventDelegate?
 }
 
 extension CreateEventRouter {
@@ -26,26 +25,5 @@ extension CreateEventRouter {
         if let viewController = viewController {
             viewController.navigationController?.popToViewController(viewController, animated: true)
         }
-    }
-    
-    func completed() {
-        delegate?.didCreateEvent("")
-    }
-}
-
-extension CreateEventRouter {
-    static func createModule(_ delegate: CreateEventDelegate?) -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .createEvent)
-        let view: CreateEventViewController = storyboard.instantiateViewController()
-        let interactor = CreateEventInteractor()
-        let router = CreateEventRouter()
-        let presenter = CreateEventPresenter(interface: view, interactor: interactor, router: router)
-        
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-        router.delegate = delegate
-        
-        return view
     }
 }

@@ -17,14 +17,16 @@ protocol CreateEventDelegate: class {
 protocol CreateEventWireframeProtocol: class {
     func showAddLocation(_ delegate: AddLocationDelegate?)
     func showSelectTutor(_ delegate: TutorListDelegate?)
-    
     func unwind()
-    
-    func completed()
 }
 
 // MARK: - Presenter
 protocol CreateEventPresenterProtocol: class {
+    var router: CreateEventWireframeProtocol? { get set }
+    var interactor: CreateEventInteractorProtocol? { get set }
+    var view: CreateEventViewProtocol? { get set }
+    var delegate: CreateEventDelegate? { get set }
+    
     func pressedAddLocation(_ delegate: AddLocationDelegate?)
     func pressedSelectTutor(_ delegate: TutorListDelegate?)
     
