@@ -658,7 +658,7 @@
 				BF5005AF217EEE9C00D35B69 /* AppInteractor.swift */,
 				BFA88AE821CB435F00F16821 /* AppBuilder.swift */,
 				BF5005AE217EEE9C00D35B69 /* AppProtocols.swift */,
-				BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */,
+				BFA88AEB21CB4B5C00F16821 /* Entities */,
 			);
 			path = "App Coordinator";
 			sourceTree = "<group>";
@@ -1015,6 +1015,14 @@
 				BF7B2C5621B0ACFC00E91E38 /* LazyValue.swift */,
 			);
 			path = Lazy;
+			sourceTree = "<group>";
+		};
+		BFA88AEB21CB4B5C00F16821 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BFF6C28F2184C3A0003F7D96 /* AppUserState.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		BFCDA5F321725FDB00DB31FC /* Create Password */ = {

@@ -11,8 +11,8 @@ import UIKit
 class AppBuilder {
     func create(with navigationController: UINavigationController?) -> AppPresenter? {
         let interactor = AppInteractor()
-        let router = AppRouter()
         let presenter = AppPresenter()
+        let router = AppRouter()
         
         interactor.presenter = presenter
         router.navigationController = navigationController

@@ -13,8 +13,8 @@ class CreateEventBuilder {
         let storyboard = UIStoryboard(storyboard: .createEvent)
         let view: CreateEventViewController = storyboard.instantiateViewController()
         let interactor = CreateEventInteractor()
-        let router = CreateEventRouter()
         let presenter = CreateEventPresenter()
+        let router = CreateEventRouter()
         
         view.presenter = presenter
         interactor.presenter = presenter
