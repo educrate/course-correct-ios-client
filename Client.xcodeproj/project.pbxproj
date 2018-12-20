@@ -147,6 +147,7 @@
 		BF7B2C5521B0ACCD00E91E38 /* LazyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C5421B0ACCD00E91E38 /* LazyBox.swift */; };
 		BF7B2C5721B0ACFC00E91E38 /* LazyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C5621B0ACFC00E91E38 /* LazyValue.swift */; };
 		BF7B2C5921B0B0DB00E91E38 /* DispatchQueue+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B2C5821B0B0DB00E91E38 /* DispatchQueue+Labels.swift */; };
+		BFA88AE321CB037300F16821 /* AddLocationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA88AE221CB037300F16821 /* AddLocationBuilder.swift */; };
 		BFBE6FD1216495D6007EDE49 /* UICalendarViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */; };
 		BFBE6FDA2164982C007EDE49 /* UICalendarViewMonthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeaderView.swift */; };
 		BFCDA5EC21725E7200DB31FC /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCDA5E721725E7200DB31FC /* WelcomePresenter.swift */; };
@@ -418,6 +419,7 @@
 		BF7B2C5421B0ACCD00E91E38 /* LazyBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBox.swift; sourceTree = "<group>"; };
 		BF7B2C5621B0ACFC00E91E38 /* LazyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyValue.swift; sourceTree = "<group>"; };
 		BF7B2C5821B0B0DB00E91E38 /* DispatchQueue+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Labels.swift"; sourceTree = "<group>"; };
+		BFA88AE221CB037300F16821 /* AddLocationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationBuilder.swift; sourceTree = "<group>"; };
 		BFBE6FD0216495D6007EDE49 /* UICalendarViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDataSource.swift; sourceTree = "<group>"; };
 		BFBE6FD92164982C007EDE49 /* UICalendarViewMonthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewMonthHeaderView.swift; sourceTree = "<group>"; };
 		BFCDA5E721725E7200DB31FC /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
@@ -718,6 +720,7 @@
 				BF5004D021741E6900D35B69 /* AddLocationPresenter.swift */,
 				BF5004D121741E6900D35B69 /* AddLocationRouter.swift */,
 				BF5004D421741E6900D35B69 /* AddLocationInteractor.swift */,
+				BFA88AE221CB037300F16821 /* AddLocationBuilder.swift */,
 				BF5004D321741E6900D35B69 /* AddLocationProtocols.swift */,
 				BF14D56B21C1B31C00BA4A7A /* Entities */,
 			);
@@ -1601,6 +1604,7 @@
 				BFE25EEF21C385740089488A /* XIBIdentifiable+Self.swift in Sources */,
 				BF50047721730A3E00D35B69 /* ProfileOverviewError.swift in Sources */,
 				BF5004802173AC2200D35B69 /* ProfileAccountViewController.swift in Sources */,
+				BFA88AE321CB037300F16821 /* AddLocationBuilder.swift in Sources */,
 				BF4F48F221826A82000D98D1 /* MainPresenter.swift in Sources */,
 				BF70B30D21BE3003001E550D /* AddLocationNetworking.swift in Sources */,
 				BFFFF2F521A50E4100D2BD62 /* UIFieldView.swift in Sources */,

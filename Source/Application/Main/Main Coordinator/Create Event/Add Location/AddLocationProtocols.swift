@@ -15,11 +15,15 @@ protocol AddLocationDelegate: class {
 
 // MARK: - Wireframe
 protocol AddLocationWireframeProtocol: class {
-    func completed(with location: String)
 }
 
 // MARK: - Presenter
 protocol AddLocationPresenterProtocol: class {
+    var router: AddLocationWireframeProtocol? { get set }
+    var interactor: AddLocationInteractorProtocol? { get set }
+    var view: AddLocationViewProtocol? { get set }
+    var delegate: AddLocationDelegate? { get set }
+    
     func fetch(autocomplete text: String)
     func autocompleteFetched(for search: String, with result: Result<AddLocationAutocompleteResponse, AddLocationError>)
     func locationAdded(_ location: String)

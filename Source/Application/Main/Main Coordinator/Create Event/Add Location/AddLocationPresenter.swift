@@ -9,17 +9,10 @@
 import UIKit
 
 class AddLocationPresenter: AddLocationPresenterProtocol {
-    weak private var view: AddLocationViewProtocol?
+    var router: AddLocationWireframeProtocol?
     var interactor: AddLocationInteractorProtocol?
-    private let router: AddLocationWireframeProtocol
-
-    init(interface: AddLocationViewProtocol,
-         interactor: AddLocationInteractorProtocol?,
-         router: AddLocationWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    weak var view: AddLocationViewProtocol?
+    weak var delegate: AddLocationDelegate?
 }
 
 extension AddLocationPresenter {
@@ -37,6 +30,6 @@ extension AddLocationPresenter {
     }
     
     func locationAdded(_ location: String) {
-        router.completed(with: location)
+        delegate?.didAddLocation(location)
     }
 }
