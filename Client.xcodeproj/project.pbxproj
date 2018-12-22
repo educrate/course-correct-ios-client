@@ -19,6 +19,8 @@
 		BF1723C4219FBE340060B9CD /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723C3219FBE340060B9CD /* NetworkingError.swift */; };
 		BF1723C821A0BA120060B9CD /* NetworkingExtractableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723C721A0BA120060B9CD /* NetworkingExtractableError.swift */; };
 		BF1723CA21A0BFE20060B9CD /* NetworkingRequestValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723C921A0BFE10060B9CD /* NetworkingRequestValidation.swift */; };
+		BF1BE7DC21CDAD060015D437 /* OnboardingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1BE7DB21CDAD060015D437 /* OnboardingBuilder.swift */; };
+		BF1BE7DE21CDDE480015D437 /* WalkthroughBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1BE7DD21CDDE480015D437 /* WalkthroughBuilder.swift */; };
 		BF4F48BB21823C2E000D98D1 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4F48BA21823C2E000D98D1 /* App.storyboard */; };
 		BF4F48BF21823C75000D98D1 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48BE21823C75000D98D1 /* AppViewController.swift */; };
 		BF4F48F221826A82000D98D1 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48EE21826A82000D98D1 /* MainPresenter.swift */; };
@@ -294,6 +296,8 @@
 		BF1723C3219FBE340060B9CD /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		BF1723C721A0BA120060B9CD /* NetworkingExtractableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingExtractableError.swift; sourceTree = "<group>"; };
 		BF1723C921A0BFE10060B9CD /* NetworkingRequestValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestValidation.swift; sourceTree = "<group>"; };
+		BF1BE7DB21CDAD060015D437 /* OnboardingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBuilder.swift; sourceTree = "<group>"; };
+		BF1BE7DD21CDDE480015D437 /* WalkthroughBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughBuilder.swift; sourceTree = "<group>"; };
 		BF4F48BA21823C2E000D98D1 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		BF4F48BE21823C75000D98D1 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		BF4F48EE21826A82000D98D1 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -847,6 +851,7 @@
 				BF500550217B837600D35B69 /* WalkthroughPresenter.swift */,
 				BF500551217B837600D35B69 /* WalkthroughRouter.swift */,
 				BF500554217B837600D35B69 /* WalkthroughInteractor.swift */,
+				BF1BE7DD21CDDE480015D437 /* WalkthroughBuilder.swift */,
 				BF500553217B837600D35B69 /* WalkthroughProtocols.swift */,
 			);
 			path = Walkthrough;
@@ -871,6 +876,7 @@
 				BF5005BF217EF4FF00D35B69 /* OnboardingPresenter.swift */,
 				BF5005C0217EF4FF00D35B69 /* OnboardingRouter.swift */,
 				BF5005C3217EF4FF00D35B69 /* OnboardingInteractor.swift */,
+				BF1BE7DB21CDAD060015D437 /* OnboardingBuilder.swift */,
 				BF5005C2217EF4FF00D35B69 /* OnboardingProtocols.swift */,
 				BFF6C28D2184BF60003F7D96 /* OnboardingUserState.swift */,
 				BF50054F217B835700D35B69 /* Walkthrough */,
@@ -1569,6 +1575,7 @@
 				BF5004922173EB7800D35B69 /* ProfilePaymentInteractor.swift in Sources */,
 				BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */,
 				BF1723C821A0BA120060B9CD /* NetworkingExtractableError.swift in Sources */,
+				BF1BE7DE21CDDE480015D437 /* WalkthroughBuilder.swift in Sources */,
 				BFD82AF02170670400A14868 /* EnterStudentIdentifierProtocols.swift in Sources */,
 				BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */,
 				BF1723B6219D399D0060B9CD /* UIInlinePickerView.swift in Sources */,
@@ -1653,6 +1660,7 @@
 				BF50056F217B87C900D35B69 /* CreateEventRouter.swift in Sources */,
 				BFCDA6172172C3FC00DB31FC /* CreatePasswordError.swift in Sources */,
 				BFD82ACB216E77B600A14868 /* SelectCollegePresenter.swift in Sources */,
+				BF1BE7DC21CDAD060015D437 /* OnboardingBuilder.swift in Sources */,
 				BF500556217B837600D35B69 /* WalkthroughRouter.swift in Sources */,
 				BFF3971721C4DD7F00B77522 /* UIRoundImageView.swift in Sources */,
 				BFCDA5FC21725FF700DB31FC /* CreatePasswordProtocols.swift in Sources */,

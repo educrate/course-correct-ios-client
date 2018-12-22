@@ -14,14 +14,17 @@ protocol OnboardingDelegate: class {
 }
 
 // MARK: - Wireframe
-protocol OnboardingWireframeProtocol: WalkthroughDelegate, WelcomeDelegate, CongratulationsDelegate {
-    func presentWalkthrough()
-    func presentWelcome()
-    func presentCongratulations()
+protocol OnboardingWireframeProtocol: class {
+    func presentWalkthrough(_ delegate: WalkthroughDelegate?)
+    func presentWelcome(_ delegate: WelcomeDelegate?)
+    func presentCongratulations(_ delegate: CongratulationsDelegate?)
 }
 
 // MARK: - Presenter
-protocol OnboardingPresenterProtocol: class {}
+protocol OnboardingPresenterProtocol: WalkthroughDelegate, WelcomeDelegate, CongratulationsDelegate {
+    var router: OnboardingWireframeProtocol? { get set }
+    var interactor: OnboardingInteractorProtocol? { get set }
+}
 
 // MARK: - Interactor
 protocol OnboardingInteractorProtocol: class {

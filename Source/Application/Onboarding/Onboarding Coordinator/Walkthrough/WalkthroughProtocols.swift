@@ -17,7 +17,12 @@ protocol WalkthroughDelegate: class {
 protocol WalkthroughWireframeProtocol: class {}
 
 // MARK: - Presenter
-protocol WalkthroughPresenterProtocol: class {}
+protocol WalkthroughPresenterProtocol: class {
+    var router: WalkthroughWireframeProtocol? { get set }
+    var interactor: WalkthroughInteractorProtocol? { get set }
+    var view: WalkthroughViewProtocol? { get set }
+    var delegate: WalkthroughDelegate? { get set }
+}
 
 // MARK: - Interactor
 protocol WalkthroughInteractorProtocol: class {

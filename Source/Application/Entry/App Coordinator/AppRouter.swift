@@ -16,7 +16,7 @@ class AppRouter: AppWireframeProtocol {
 
 extension AppRouter {
     func presentOnboarding(_ delegate: OnboardingDelegate?) {
-        onboardingCoordinator = OnboardingRouter.createModule(delegate, with: navigationController)
+        onboardingCoordinator = OnboardingBuilder().create(delegate, with: navigationController)
         onboardingCoordinator?.start()
     }
     

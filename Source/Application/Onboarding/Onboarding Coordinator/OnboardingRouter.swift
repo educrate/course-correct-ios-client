@@ -9,52 +9,19 @@
 import UIKit
 
 class OnboardingRouter: OnboardingWireframeProtocol {
-    private weak var viewController: UINavigationController?
-    private weak var delegate: OnboardingDelegate?
+    weak var navigationController: UINavigationController?
 }
 
 extension OnboardingRouter {
-    func presentWalkthrough() {
-        viewController?.setViewControllers([WalkthroughRouter.createModule(self)], animated: true)
+    func presentWalkthrough(_ delegate: WalkthroughDelegate?) {
+        navigationController?.setViewControllers([WalkthroughBuilder().create(delegate)], animated: true)
     }
     
-    func presentWelcome() {
-        viewController?.setViewControllers([WelcomeRouter.createModule(self)], animated: true)
+    func presentWelcome(_ delegate: WelcomeDelegate?) {
+        navigationController?.setViewControllers([WelcomeRouter.createModule(delegate)], animated: true)
     }
     
-    func presentCongratulations() {
-        viewController?.setViewControllers([CongratulationsRouter.createModule(self)], animated: true)
-    }
-}
-
-extension OnboardingRouter {
-    func walkthrough(didCompleteWith action: String) {
-        presentWelcome()
-    }
-    
-    func welcome(didSignUp user: String) {
-        presentCongratulations()
-    }
-    
-    func welcome(didSignIn user: String) {
-        delegate?.onboarding(didFinishWith: user)
-    }
-    
-    func congratulations(didDisplayWith state: String) {
-        delegate?.onboarding(didFinishWith: "congratulations completed")
-    }
-}
-
-extension OnboardingRouter {
-    static func createModule(_ delegate: OnboardingDelegate?, with navigationController: UINavigationController?) -> OnboardingPresenter {
-        let interactor = OnboardingInteractor()
-        let router = OnboardingRouter()
-        let presenter = OnboardingPresenter(interactor: interactor, router: router)
-        
-        interactor.presenter = presenter
-        router.delegate = delegate
-        router.viewController = navigationController
-        
-        return presenter
+    func presentCongratulations(_ delegate: CongratulationsDelegate?) {
+        navigationController?.setViewControllers([CongratulationsRouter.createModule(delegate)], animated: true)
     }
 }

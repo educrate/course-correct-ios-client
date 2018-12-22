@@ -9,20 +9,31 @@
 import UIKit
 
 class OnboardingPresenter: OnboardingPresenterProtocol {
-    
-    // MARK: Viper
+    var router: OnboardingWireframeProtocol?
     var interactor: OnboardingInteractorProtocol?
-    private let router: OnboardingWireframeProtocol
-
-    init(interactor: OnboardingInteractorProtocol?,
-         router: OnboardingWireframeProtocol) {
-        self.interactor = interactor
-        self.router = router
-    }
+    weak var delegate: OnboardingDelegate?
 }
 
 extension OnboardingPresenter {
     func start() {
-        router.presentWelcome()
+        router?.presentWelcome(self)
+    }
+}
+
+extension OnboardingPresenter {
+    func walkthrough(didCompleteWith action: String) {
+        router?.presentWelcome(self)
+    }
+    
+    func welcome(didSignUp user: String) {
+        router?.presentCongratulations(self)
+    }
+    
+    func welcome(didSignIn user: String) {
+        delegate?.onboarding(didFinishWith: user)
+    }
+    
+    func congratulations(didDisplayWith state: String) {
+        delegate?.onboarding(didFinishWith: "congratulations completed")
     }
 }
