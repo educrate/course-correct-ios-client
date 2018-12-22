@@ -9,20 +9,31 @@
 import UIKit
 
 class SignUpPresenter: SignUpPresenterProtocol {
-    
-    // MARK: Viper
+    var router: SignUpWireframeProtocol?
     var interactor: SignUpInteractorProtocol?
-    private let router: SignUpWireframeProtocol
-
-    init(interactor: SignUpInteractorProtocol?,
-         router: SignUpWireframeProtocol) {
-        self.interactor = interactor
-        self.router = router
-    }
+    weak var delegate: SignUpDelegate?
 }
 
 extension SignUpPresenter {
     func start() {
-        router.showSelectCollege()
+        router?.showSelectCollege(self)
+    }
+}
+
+extension SignUpPresenter {
+    func selectCollege(didSelect college: String) {
+        router?.showEnterStudentIdentifier(self)
+    }
+    
+    func enterStudentIdentifier(didEnter studentIdentifier: String) {
+        router?.showEnterAccessCode(self)
+    }
+    
+    func enterAccessCode(didEnter accessCode: String) {
+        router?.showCreatePassword(self)
+    }
+    
+    func createPassword(didCreate password: String) {
+        delegate?.signUp(didSignUp: "user")
     }
 }

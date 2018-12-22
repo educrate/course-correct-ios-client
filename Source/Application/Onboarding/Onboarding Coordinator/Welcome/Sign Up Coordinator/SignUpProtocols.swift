@@ -14,22 +14,21 @@ protocol SignUpDelegate: class {
 }
 
 // MARK: - Wireframe
-protocol SignUpWireframeProtocol: SelectCollegeDelegate, EnterStudentIdentifierDelegate, EnterAccessCodeDelegate, CreatePasswordDelegate {
-    func showSelectCollege()
-    func showEnterStudentIdentifier()
-    func showEnterAccessCode()
-    func showCreatePassword()
+protocol SignUpWireframeProtocol: class {
+    func showSelectCollege(_ delegate: SelectCollegeDelegate?)
+    func showEnterStudentIdentifier(_ delegate: EnterStudentIdentifierDelegate?)
+    func showEnterAccessCode(_ delegate: EnterAccessCodeDelegate?)
+    func showCreatePassword(_ delegate: CreatePasswordDelegate?)
 }
 
 // MARK: - Presenter
-protocol SignUpPresenterProtocol: class {}
+protocol SignUpPresenterProtocol: SelectCollegeDelegate, EnterStudentIdentifierDelegate, EnterAccessCodeDelegate, CreatePasswordDelegate {
+    var router: SignUpWireframeProtocol? { get set }
+    var interactor: SignUpInteractorProtocol? { get set }
+    var delegate: SignUpDelegate? { get set }
+}
 
 // MARK: - Interactor
 protocol SignUpInteractorProtocol: class {
-  var presenter: SignUpPresenterProtocol?  { get set }
-}
-
-// MARK: - View
-protocol SignUpViewProtocol: class {
   var presenter: SignUpPresenterProtocol?  { get set }
 }

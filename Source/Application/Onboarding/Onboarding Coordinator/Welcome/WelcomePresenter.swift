@@ -9,33 +9,28 @@
 import UIKit
 
 class WelcomePresenter: WelcomePresenterProtocol {
-    
-    // MARK: Viper
-    weak private var view: WelcomeViewProtocol?
     var interactor: WelcomeInteractorProtocol?
-    private let router: WelcomeWireframeProtocol
+    var router: WelcomeWireframeProtocol?
+    weak var view: WelcomeViewProtocol?
+    weak var delegate: WelcomeDelegate?
+}
 
-    init(interface: WelcomeViewProtocol,
-         interactor: WelcomeInteractorProtocol?,
-         router: WelcomeWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
+extension WelcomePresenter {
+    func signUp(didSignUp user: String) {
+        delegate?.welcome(didSignUp: user)
+    }
+    
+    func signIn(didSignIn user: String) {
+        delegate?.welcome(didSignIn: user)
     }
 }
 
 extension WelcomePresenter {
     func showSignUp() {
-        router.presentSignUp()
+        router?.presentSignUp(self)
     }
     
     func showSignIn() {
-        router.presentSignIn()
-    }
-}
-
-extension WelcomePresenter {
-    func signUpPresenter(_ signUpPresenter: SignUpPresenter, didSignUp user: String) {
-        
+        router?.presentSignIn(self)
     }
 }

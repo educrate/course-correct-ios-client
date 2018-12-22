@@ -21,6 +21,8 @@
 		BF1723CA21A0BFE20060B9CD /* NetworkingRequestValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1723C921A0BFE10060B9CD /* NetworkingRequestValidation.swift */; };
 		BF1BE7DC21CDAD060015D437 /* OnboardingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1BE7DB21CDAD060015D437 /* OnboardingBuilder.swift */; };
 		BF1BE7DE21CDDE480015D437 /* WalkthroughBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1BE7DD21CDDE480015D437 /* WalkthroughBuilder.swift */; };
+		BF1BE7E021CDE2F90015D437 /* WelcomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1BE7DF21CDE2F90015D437 /* WelcomeBuilder.swift */; };
+		BF1BE7E221CDE3660015D437 /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1BE7E121CDE3660015D437 /* SignUpBuilder.swift */; };
 		BF4F48BB21823C2E000D98D1 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4F48BA21823C2E000D98D1 /* App.storyboard */; };
 		BF4F48BF21823C75000D98D1 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48BE21823C75000D98D1 /* AppViewController.swift */; };
 		BF4F48F221826A82000D98D1 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F48EE21826A82000D98D1 /* MainPresenter.swift */; };
@@ -298,6 +300,8 @@
 		BF1723C921A0BFE10060B9CD /* NetworkingRequestValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestValidation.swift; sourceTree = "<group>"; };
 		BF1BE7DB21CDAD060015D437 /* OnboardingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBuilder.swift; sourceTree = "<group>"; };
 		BF1BE7DD21CDDE480015D437 /* WalkthroughBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughBuilder.swift; sourceTree = "<group>"; };
+		BF1BE7DF21CDE2F90015D437 /* WelcomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBuilder.swift; sourceTree = "<group>"; };
+		BF1BE7E121CDE3660015D437 /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
 		BF4F48BA21823C2E000D98D1 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		BF4F48BE21823C75000D98D1 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		BF4F48EE21826A82000D98D1 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -775,6 +779,7 @@
 				BF5005B5217EEF2000D35B69 /* SignUpPresenter.swift */,
 				BF5005B6217EEF2000D35B69 /* SignUpRouter.swift */,
 				BF5005B9217EEF2000D35B69 /* SignUpInteractor.swift */,
+				BF1BE7E121CDE3660015D437 /* SignUpBuilder.swift */,
 				BF5005B8217EEF2000D35B69 /* SignUpProtocols.swift */,
 				BFD82AA0216DA43D00A14868 /* Select College */,
 				BFD82AE7217066CB00A14868 /* Enter Student Identifier */,
@@ -1007,6 +1012,7 @@
 				BFCDA5E721725E7200DB31FC /* WelcomePresenter.swift */,
 				BFCDA5E821725E7200DB31FC /* WelcomeRouter.swift */,
 				BFCDA5EB21725E7200DB31FC /* WelcomeInteractor.swift */,
+				BF1BE7DF21CDE2F90015D437 /* WelcomeBuilder.swift */,
 				BFCDA5EA21725E7200DB31FC /* WelcomeProtocols.swift */,
 				BF5005002174547700D35B69 /* Sign Up Coordinator */,
 				BF50050E2174558A00D35B69 /* Sign In */,
@@ -1593,6 +1599,7 @@
 				BF500560217B848F00D35B69 /* CongratulationsPresenter.swift in Sources */,
 				BF5004E121741E9100D35B69 /* TutorListPresenter.swift in Sources */,
 				BF5005BD217EEF2000D35B69 /* SignUpProtocols.swift in Sources */,
+				BF1BE7E021CDE2F90015D437 /* WelcomeBuilder.swift in Sources */,
 				BF5004902173EB7800D35B69 /* ProfilePaymentViewController.swift in Sources */,
 				BF50046A2172F09700D35B69 /* ProfileOverviewPresenter.swift in Sources */,
 				BF5004E221741E9100D35B69 /* TutorListRouter.swift in Sources */,
@@ -1706,6 +1713,7 @@
 				BFE25EE721C3806B0089488A /* UIStoryboardSegue+StoryboardIdentifiable.swift in Sources */,
 				BF5005C5217EF4FF00D35B69 /* OnboardingRouter.swift in Sources */,
 				BFFFF31221A8D84100D2BD62 /* UICalendarViewDayCellConfguration.swift in Sources */,
+				BF1BE7E221CDE3660015D437 /* SignUpBuilder.swift in Sources */,
 				BFF53131219B6EFB00255CD4 /* XIBView.swift in Sources */,
 				BF50046D2172F09700D35B69 /* ProfileOverviewProtocols.swift in Sources */,
 				BFF5313D219CAC9100255CD4 /* UIActionViewCell.swift in Sources */,

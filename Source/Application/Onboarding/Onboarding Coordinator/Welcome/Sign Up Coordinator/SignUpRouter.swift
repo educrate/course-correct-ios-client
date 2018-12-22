@@ -9,60 +9,23 @@
 import UIKit
 
 class SignUpRouter: SignUpWireframeProtocol {
-    private weak var viewController: UIViewController?
-    private weak var delegate: SignUpDelegate?
+    weak var viewController: UIViewController?
 }
 
 extension SignUpRouter {
-    func showSelectCollege() {
-        viewController?.show(SelectCollegeRouter.createModule(self), sender: nil)
+    func showSelectCollege(_ delegate: SelectCollegeDelegate?) {
+        viewController?.show(SelectCollegeRouter.createModule(delegate), sender: nil)
     }
     
-    func showEnterStudentIdentifier() {
-        viewController?.show(EnterStudentIdentifierRouter.createModule(self), sender: nil)
+    func showEnterStudentIdentifier(_ delegate: EnterStudentIdentifierDelegate?) {
+        viewController?.show(EnterStudentIdentifierRouter.createModule(delegate), sender: nil)
     }
     
-    func showEnterAccessCode() {
-        viewController?.show(EnterAccessCodeRouter.createModule(self), sender: nil)
+    func showEnterAccessCode(_ delegate: EnterAccessCodeDelegate?) {
+        viewController?.show(EnterAccessCodeRouter.createModule(delegate), sender: nil)
     }
     
-    func showCreatePassword() {
-        viewController?.show(CreatePasswordRouter.createModule(self), sender: nil)
-    }
-    
-    func dismissSignUp(_ completion: (() -> Void)?) {
-        viewController?.dismiss(animated: true, completion: completion)
-    }
-}
-
-extension SignUpRouter {
-    func selectCollege(didSelect college: String) {
-        showEnterStudentIdentifier()
-    }
-    
-    func enterStudentIdentifier(didEnter studentIdentifier: String) {
-        showEnterAccessCode()
-    }
-    
-    func enterAccessCode(didEnter accessCode: String) {
-        showCreatePassword()
-    }
-    
-    func createPassword(didCreate password: String) {
-        delegate?.signUp(didSignUp: "new user created with password")
-    }
-}
-
-extension SignUpRouter {
-    static func createModule(_ delegate: SignUpDelegate?, with navigationController: UIViewController?) -> SignUpPresenter {
-        let interactor = SignUpInteractor()
-        let router = SignUpRouter()
-        let presenter = SignUpPresenter(interactor: interactor, router: router)
-        
-        interactor.presenter = presenter
-        router.viewController = navigationController
-        router.delegate = delegate
-        
-        return presenter
+    func showCreatePassword(_ delegate: CreatePasswordDelegate?) {
+        viewController?.show(CreatePasswordRouter.createModule(delegate), sender: nil)
     }
 }

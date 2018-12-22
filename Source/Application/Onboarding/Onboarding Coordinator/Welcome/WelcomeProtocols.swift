@@ -15,13 +15,18 @@ protocol WelcomeDelegate: class {
 }
 
 // MARK: - Wireframe
-protocol WelcomeWireframeProtocol: SignUpDelegate, SignInDelegate {
-    func presentSignUp()
-    func presentSignIn()
+protocol WelcomeWireframeProtocol: class {
+    func presentSignUp(_ delegate: SignUpDelegate?)
+    func presentSignIn(_ delegate: SignInDelegate?)
 }
 
 // MARK: - Presenter
-protocol WelcomePresenterProtocol: class {
+protocol WelcomePresenterProtocol: SignUpDelegate, SignInDelegate {
+    var router: WelcomeWireframeProtocol? { get set }
+    var interactor: WelcomeInteractorProtocol? { get set }
+    var view: WelcomeViewProtocol? { get set }
+    var delegate: WelcomeDelegate? { get set }
+    
     func showSignUp()
     func showSignIn()
 }
