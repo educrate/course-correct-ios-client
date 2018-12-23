@@ -21,7 +21,7 @@ extension AppRouter {
     }
     
     func presentMain(_ delegate: MainDelegate?) {
-        mainCoordinator = MainRouter.createModule(delegate, with: navigationController)
+        mainCoordinator = MainBuilder().create(delegate, with: navigationController)
         mainCoordinator?.start()
     }
 }

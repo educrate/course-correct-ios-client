@@ -9,36 +9,11 @@
 import UIKit
 
 class MainRouter: MainWireframeProtocol {
-    private weak var viewController: UINavigationController?
-    private weak var delegate: MainDelegate?
+    weak var viewController: UINavigationController?
 }
 
 extension MainRouter {
-    func presentOnboarding() {
-        delegate?.main(didSignOut: "user signed out")
-    }
-    
-    func presentCalendar() {
-        viewController?.setViewControllers([CalendarRouter.createModule(self)], animated: true)
-    }
-}
-
-extension MainRouter {
-    func calendarRouter(_ calendarRouter: CalendarRouter, didSignOut user: String) {
-        presentOnboarding()
-    }
-}
-
-extension MainRouter {
-    static func createModule(_ delegate: MainDelegate?, with navigationController: UINavigationController?) -> MainPresenter {
-        let interactor = MainInteractor()
-        let router = MainRouter()
-        let presenter = MainPresenter(interactor: interactor, router: router)
-        
-        interactor.presenter = presenter
-        router.delegate = delegate
-        router.viewController = navigationController
-        
-        return presenter
+    func presentCalendar(_ delegate: CalendarDelegate?) {
+        viewController?.setViewControllers([CalendarRouter.createModule(delegate)], animated: true)
     }
 }

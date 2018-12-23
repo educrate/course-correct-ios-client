@@ -10,17 +10,18 @@ import UIKit
 
 class MainPresenter: MainPresenterProtocol {
     var interactor: MainInteractorProtocol?
-    private let router: MainWireframeProtocol
-    
-    init(interactor: MainInteractorProtocol?,
-        router: MainWireframeProtocol) {
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: MainWireframeProtocol?
+    weak var delegate: MainDelegate?
 }
 
 extension MainPresenter {
     func start() {
-        router.presentCalendar()
+        router?.presentCalendar(self)
+    }
+}
+
+extension MainPresenter {
+    func calendarRouter(_ calendarRouter: CalendarRouter, didSignOut user: String) {
+        delegate?.main(didSignOut: user)
     }
 }

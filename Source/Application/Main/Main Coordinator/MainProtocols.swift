@@ -14,13 +14,16 @@ protocol MainDelegate: class {
 }
 
 // MARK: - Wireframe
-protocol MainWireframeProtocol: CalendarDelegate {
-    func presentOnboarding()
-    func presentCalendar()
+protocol MainWireframeProtocol: class {
+    func presentCalendar(_ delegate: CalendarDelegate?)
 }
 
 // MARK: - Presenter
-protocol MainPresenterProtocol: class {}
+protocol MainPresenterProtocol: CalendarDelegate {
+    var router: MainWireframeProtocol? { get set }
+    var interactor: MainInteractorProtocol? { get set }
+    var delegate: MainDelegate? { get set }
+}
 
 // MARK: - Interactor
 protocol MainInteractorProtocol: class {
