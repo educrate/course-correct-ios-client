@@ -9,29 +9,5 @@
 import UIKit
 
 class EnterAccessCodeRouter: EnterAccessCodeWireframeProtocol {
-    private weak var viewController: UIViewController?
-    private weak var delegate: EnterAccessCodeDelegate?
-}
-
-extension EnterAccessCodeRouter {
-    func showNextScreen() {
-        delegate?.enterAccessCode(didEnter: "access code")
-    }
-}
-
-extension EnterAccessCodeRouter {
-    static func createModule(_ delegate: EnterAccessCodeDelegate?) -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .enterAccessCode)
-        let view: EnterAccessCodeViewController = storyboard.instantiateViewController()
-        let interactor = EnterAccessCodeInteractor()
-        let router = EnterAccessCodeRouter()
-        let presenter = EnterAccessCodePresenter(interface: view, interactor: interactor, router: router)
-        
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-        router.delegate = delegate
-        
-        return view
-    }
+    weak var viewController: UIViewController?
 }

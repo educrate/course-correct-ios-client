@@ -9,19 +9,10 @@
 import UIKit
 
 class EnterAccessCodePresenter: EnterAccessCodePresenterProtocol {
-    
-    // MARK: Viper
-    weak private var view: EnterAccessCodeViewProtocol?
     var interactor: EnterAccessCodeInteractorProtocol?
-    private let router: EnterAccessCodeWireframeProtocol
-
-    init(interface: EnterAccessCodeViewProtocol,
-         interactor: EnterAccessCodeInteractorProtocol?,
-         router: EnterAccessCodeWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: EnterAccessCodeWireframeProtocol?
+    weak var view: EnterAccessCodeViewProtocol?
+    weak var delegate: EnterAccessCodeDelegate?
 }
 
 extension EnterAccessCodePresenter {
@@ -32,7 +23,7 @@ extension EnterAccessCodePresenter {
     func accessCodeValidated(for code: String, with result: Result<Void, EnterAccessCodeError>) {
         switch result {
         case .success:
-            router.showNextScreen()
+            delegate?.enterAccessCode(didEnter: code)
         case .failure(let error):
             view?.show(errorMessage: error.message)
         }

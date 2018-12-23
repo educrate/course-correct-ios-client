@@ -9,19 +9,10 @@
 import UIKit
 
 class CreatePasswordPresenter: CreatePasswordPresenterProtocol {
-    
-    // MARK: Viper
-    weak private var view: CreatePasswordViewProtocol?
     var interactor: CreatePasswordInteractorProtocol?
-    private let router: CreatePasswordWireframeProtocol
-
-    init(interface: CreatePasswordViewProtocol,
-         interactor: CreatePasswordInteractorProtocol?,
-         router: CreatePasswordWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: CreatePasswordWireframeProtocol?
+    weak var view: CreatePasswordViewProtocol?
+    weak var delegate: CreatePasswordDelegate?
 }
 
 extension CreatePasswordPresenter {
@@ -32,7 +23,7 @@ extension CreatePasswordPresenter {
     func passwordsValidated(_ result: Result<Void, CreatePasswordError>) {
         switch result {
         case .success:
-            router.showNextScreen()
+            delegate?.createPassword(didCreate: "password")
         case .failure(let error):
             view?.show(errorMessage: error.message)
         }

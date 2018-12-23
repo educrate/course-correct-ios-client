@@ -140,6 +140,8 @@
 		BF5F621821916D6F00E43B75 /* TutorProfileReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F621721916D6F00E43B75 /* TutorProfileReviewCell.swift */; };
 		BF6EBADA21CF257F00FEE921 /* SelectCollegeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAD921CF257F00FEE921 /* SelectCollegeBuilder.swift */; };
 		BF6EBADC21CF28FB00FEE921 /* EnterStudentIdentifierBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBADB21CF28FB00FEE921 /* EnterStudentIdentifierBuilder.swift */; };
+		BF6EBADE21CF2A7600FEE921 /* EnterAccessCodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBADD21CF2A7600FEE921 /* EnterAccessCodeBuilder.swift */; };
+		BF6EBAE021CF2C3C00FEE921 /* CreatePasswordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBADF21CF2C3C00FEE921 /* CreatePasswordBuilder.swift */; };
 		BF70B30D21BE3003001E550D /* AddLocationNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */; };
 		BF70B30F21BE3829001E550D /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30E21BE3829001E550D /* NetworkingHelper.swift */; };
 		BF70B31121BE3EE4001E550D /* AddLocationAutocompleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */; };
@@ -421,6 +423,8 @@
 		BF5F621721916D6F00E43B75 /* TutorProfileReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileReviewCell.swift; sourceTree = "<group>"; };
 		BF6EBAD921CF257F00FEE921 /* SelectCollegeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeBuilder.swift; sourceTree = "<group>"; };
 		BF6EBADB21CF28FB00FEE921 /* EnterStudentIdentifierBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterStudentIdentifierBuilder.swift; sourceTree = "<group>"; };
+		BF6EBADD21CF2A7600FEE921 /* EnterAccessCodeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeBuilder.swift; sourceTree = "<group>"; };
+		BF6EBADF21CF2C3C00FEE921 /* CreatePasswordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordBuilder.swift; sourceTree = "<group>"; };
 		BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationNetworking.swift; sourceTree = "<group>"; };
 		BF70B30E21BE3829001E550D /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
 		BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationAutocompleteResponse.swift; sourceTree = "<group>"; };
@@ -1002,6 +1006,7 @@
 				BF70B5D0217074C600771E5D /* EnterAccessCodePresenter.swift */,
 				BF70B5D1217074C600771E5D /* EnterAccessCodeRouter.swift */,
 				BF70B5D4217074C600771E5D /* EnterAccessCodeInteractor.swift */,
+				BF6EBADD21CF2A7600FEE921 /* EnterAccessCodeBuilder.swift */,
 				BF70B5D3217074C600771E5D /* EnterAccessCodeProtocols.swift */,
 				BFCDA6132172C1C500DB31FC /* EnterAccessCodeError.swift */,
 			);
@@ -1049,6 +1054,7 @@
 				BFCDA5F421725FF700DB31FC /* CreatePasswordPresenter.swift */,
 				BFCDA5F521725FF700DB31FC /* CreatePasswordRouter.swift */,
 				BFCDA5F821725FF700DB31FC /* CreatePasswordInteractor.swift */,
+				BF6EBADF21CF2C3C00FEE921 /* CreatePasswordBuilder.swift */,
 				BFCDA5F721725FF700DB31FC /* CreatePasswordProtocols.swift */,
 				BFCDA6162172C3FC00DB31FC /* CreatePasswordError.swift */,
 			);
@@ -1247,8 +1253,8 @@
 				BFD82AC6216E77B600A14868 /* SelectCollegePresenter.swift */,
 				BFD82AC7216E77B600A14868 /* SelectCollegeRouter.swift */,
 				BFD82ACA216E77B600A14868 /* SelectCollegeInteractor.swift */,
-				BFD82AC9216E77B600A14868 /* SelectCollegeProtocols.swift */,
 				BF6EBAD921CF257F00FEE921 /* SelectCollegeBuilder.swift */,
+				BFD82AC9216E77B600A14868 /* SelectCollegeProtocols.swift */,
 				BFD82ADB216E816C00A14868 /* SelectCollegeError.swift */,
 			);
 			path = "Select College";
@@ -1331,8 +1337,8 @@
 				BFD82AE82170670400A14868 /* EnterStudentIdentifierPresenter.swift */,
 				BFD82AE92170670400A14868 /* EnterStudentIdentifierRouter.swift */,
 				BFD82AEC2170670400A14868 /* EnterStudentIdentifierInteractor.swift */,
-				BFD82AEB2170670400A14868 /* EnterStudentIdentifierProtocols.swift */,
 				BF6EBADB21CF28FB00FEE921 /* EnterStudentIdentifierBuilder.swift */,
+				BFD82AEB2170670400A14868 /* EnterStudentIdentifierProtocols.swift */,
 				BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */,
 			);
 			path = "Enter Student Identifier";
@@ -1604,6 +1610,7 @@
 				BF14D56F21C1B75800BA4A7A /* UIInlinePickerViewDelegate.swift in Sources */,
 				BF500560217B848F00D35B69 /* CongratulationsPresenter.swift in Sources */,
 				BF5004E121741E9100D35B69 /* TutorListPresenter.swift in Sources */,
+				BF6EBADE21CF2A7600FEE921 /* EnterAccessCodeBuilder.swift in Sources */,
 				BF5005BD217EEF2000D35B69 /* SignUpProtocols.swift in Sources */,
 				BF1BE7E021CDE2F90015D437 /* WelcomeBuilder.swift in Sources */,
 				BF5004902173EB7800D35B69 /* ProfilePaymentViewController.swift in Sources */,
@@ -1767,6 +1774,7 @@
 				BF500548217A76A200D35B69 /* ManageBankViewController.swift in Sources */,
 				BF5005B0217EEE9C00D35B69 /* AppPresenter.swift in Sources */,
 				BF5005B3217EEE9C00D35B69 /* AppProtocols.swift in Sources */,
+				BF6EBAE021CF2C3C00FEE921 /* CreatePasswordBuilder.swift in Sources */,
 				BF500559217B837600D35B69 /* WalkthroughInteractor.swift in Sources */,
 				BF4F48F521826A82000D98D1 /* MainInteractor.swift in Sources */,
 				BF5004AF2174122200D35B69 /* CalendarProtocols.swift in Sources */,

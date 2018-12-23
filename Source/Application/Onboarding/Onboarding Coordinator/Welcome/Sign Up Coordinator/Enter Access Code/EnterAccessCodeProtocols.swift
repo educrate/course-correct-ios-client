@@ -15,13 +15,16 @@ protocol EnterAccessCodeDelegate: class {
 
 // MARK: - Wireframe
 protocol EnterAccessCodeWireframeProtocol: class {
-    func showNextScreen()
 }
 
 // MARK: - Presenter
 protocol EnterAccessCodePresenterProtocol: class {
-    func accessCodeEntered(with value: String)
+    var router: EnterAccessCodeWireframeProtocol? { get set }
+    var interactor: EnterAccessCodeInteractorProtocol? { get set }
+    var view: EnterAccessCodeViewProtocol? { get set }
+    var delegate: EnterAccessCodeDelegate? { get set }
     
+    func accessCodeEntered(with value: String)
     func accessCodeValidated(for code: String, with result: Result<Void, EnterAccessCodeError>)
 }
 

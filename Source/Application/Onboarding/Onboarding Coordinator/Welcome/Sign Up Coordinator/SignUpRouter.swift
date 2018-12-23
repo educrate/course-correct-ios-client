@@ -22,10 +22,10 @@ extension SignUpRouter {
     }
     
     func showEnterAccessCode(_ delegate: EnterAccessCodeDelegate?) {
-        viewController?.show(EnterAccessCodeRouter.createModule(delegate), sender: nil)
+        viewController?.show(EnterAccessCodeBuilder().create(delegate), sender: nil)
     }
     
     func showCreatePassword(_ delegate: CreatePasswordDelegate?) {
-        viewController?.show(CreatePasswordRouter.createModule(delegate), sender: nil)
+        viewController?.show(CreatePasswordBuilder().create(delegate), sender: nil)
     }
 }

@@ -15,13 +15,16 @@ protocol CreatePasswordDelegate: class {
 
 // MARK: - Wireframe
 protocol CreatePasswordWireframeProtocol: class {
-    func showNextScreen()
 }
 
 // MARK: - Presenter
 protocol CreatePasswordPresenterProtocol: class {
-    func entered(password: String, confirmedPassword: String)
+    var router: CreatePasswordWireframeProtocol? { get set }
+    var interactor: CreatePasswordInteractorProtocol? { get set }
+    var view: CreatePasswordViewProtocol? { get set }
+    var delegate: CreatePasswordDelegate? { get set }
     
+    func entered(password: String, confirmedPassword: String)
     func passwordsValidated(_ result: Result<Void, CreatePasswordError>)
 }
 
