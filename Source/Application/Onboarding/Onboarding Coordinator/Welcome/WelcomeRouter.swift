@@ -20,6 +20,6 @@ extension WelcomeRouter {
     }
     
     func presentSignIn(_ delegate: SignInDelegate?) {
-        viewController?.show(SignInRouter.createModule(delegate), sender: nil)
+        viewController?.show(SignInBuilder().create(delegate), sender: nil)
     }
 }

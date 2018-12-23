@@ -142,6 +142,7 @@
 		BF6EBADC21CF28FB00FEE921 /* EnterStudentIdentifierBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBADB21CF28FB00FEE921 /* EnterStudentIdentifierBuilder.swift */; };
 		BF6EBADE21CF2A7600FEE921 /* EnterAccessCodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBADD21CF2A7600FEE921 /* EnterAccessCodeBuilder.swift */; };
 		BF6EBAE021CF2C3C00FEE921 /* CreatePasswordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBADF21CF2C3C00FEE921 /* CreatePasswordBuilder.swift */; };
+		BF6EBAE221CF2DA900FEE921 /* SignInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAE121CF2DA900FEE921 /* SignInBuilder.swift */; };
 		BF70B30D21BE3003001E550D /* AddLocationNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */; };
 		BF70B30F21BE3829001E550D /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30E21BE3829001E550D /* NetworkingHelper.swift */; };
 		BF70B31121BE3EE4001E550D /* AddLocationAutocompleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */; };
@@ -425,6 +426,7 @@
 		BF6EBADB21CF28FB00FEE921 /* EnterStudentIdentifierBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterStudentIdentifierBuilder.swift; sourceTree = "<group>"; };
 		BF6EBADD21CF2A7600FEE921 /* EnterAccessCodeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeBuilder.swift; sourceTree = "<group>"; };
 		BF6EBADF21CF2C3C00FEE921 /* CreatePasswordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordBuilder.swift; sourceTree = "<group>"; };
+		BF6EBAE121CF2DA900FEE921 /* SignInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInBuilder.swift; sourceTree = "<group>"; };
 		BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationNetworking.swift; sourceTree = "<group>"; };
 		BF70B30E21BE3829001E550D /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
 		BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationAutocompleteResponse.swift; sourceTree = "<group>"; };
@@ -805,6 +807,7 @@
 				BF500502217454C600D35B69 /* SignInPresenter.swift */,
 				BF500503217454C600D35B69 /* SignInRouter.swift */,
 				BF500506217454C600D35B69 /* SignInInteractor.swift */,
+				BF6EBAE121CF2DA900FEE921 /* SignInBuilder.swift */,
 				BF500505217454C600D35B69 /* SignInProtocols.swift */,
 				BF500519217678C500D35B69 /* SignInError.swift */,
 			);
@@ -1596,6 +1599,7 @@
 				BF1BE7DE21CDDE480015D437 /* WalkthroughBuilder.swift in Sources */,
 				BFD82AF02170670400A14868 /* EnterStudentIdentifierProtocols.swift in Sources */,
 				BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */,
+				BF6EBAE221CF2DA900FEE921 /* SignInBuilder.swift in Sources */,
 				BF1723B6219D399D0060B9CD /* UIInlinePickerView.swift in Sources */,
 				BF70B5D8217074C600771E5D /* EnterAccessCodeProtocols.swift in Sources */,
 				BF50056E217B87C900D35B69 /* CreateEventPresenter.swift in Sources */,

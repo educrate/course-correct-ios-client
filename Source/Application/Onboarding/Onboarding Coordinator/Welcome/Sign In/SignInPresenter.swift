@@ -9,19 +9,10 @@
 import UIKit
 
 class SignInPresenter: SignInPresenterProtocol {
-    
-    // MARK: Viper
-    weak private var view: SignInViewProtocol?
     var interactor: SignInInteractorProtocol?
-    private let router: SignInWireframeProtocol
-
-    init(interface: SignInViewProtocol,
-         interactor: SignInInteractorProtocol?,
-         router: SignInWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: SignInWireframeProtocol?
+    weak var view: SignInViewProtocol?
+    weak var delegate: SignInDelegate?
 }
 
 extension SignInPresenter {
@@ -32,7 +23,7 @@ extension SignInPresenter {
     func credentialsValidated(_ result: Result<Void, SignInError>) {
         switch result {
         case .success:
-            router.showNextScreen()
+            delegate?.signIn(didSignIn: "user")
         case .failure(let error):
             view?.show(errorMessage: error.message)
         }

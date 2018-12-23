@@ -15,13 +15,16 @@ protocol SignInDelegate: class {
 
 // MARK: - Wireframe
 protocol SignInWireframeProtocol: class {
-    func showNextScreen()
 }
 
 // MARK: - Presenter
 protocol SignInPresenterProtocol: class {
-    func credentialsEntered(email: String, password: String)
+    var router: SignInWireframeProtocol? { get set }
+    var interactor: SignInInteractorProtocol? { get set }
+    var view: SignInViewProtocol? { get set }
+    var delegate: SignInDelegate? { get set }
     
+    func credentialsEntered(email: String, password: String)
     func credentialsValidated(_ result: Result<Void, SignInError>)
 }
 
