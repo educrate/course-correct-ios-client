@@ -9,29 +9,5 @@
 import UIKit
 
 class EnterStudentIdentifierRouter: EnterStudentIdentifierWireframeProtocol {
-    private weak var viewController: UIViewController?
-    private weak var delegate: EnterStudentIdentifierDelegate?
-}
-
-extension EnterStudentIdentifierRouter {
-    func showNextScreen() {
-        delegate?.enterStudentIdentifier(didEnter: "identifier")
-    }
-}
-
-extension EnterStudentIdentifierRouter {
-    static func createModule(_ delegate: EnterStudentIdentifierDelegate?) -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .enterStudentIdentifier)
-        let view: EnterStudentIdentifierViewController = storyboard.instantiateViewController()
-        let interactor = EnterStudentIdentifierInteractor()
-        let router = EnterStudentIdentifierRouter()
-        let presenter = EnterStudentIdentifierPresenter(interface: view, interactor: interactor, router: router)
-        
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-        router.delegate = delegate
-        
-        return view
-    }
+    weak var viewController: UIViewController?
 }

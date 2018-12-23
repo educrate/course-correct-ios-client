@@ -9,19 +9,10 @@
 import UIKit
 
 class SelectCollegePresenter: SelectCollegePresenterProtocol {
-    
-    // MARK: Viper
-    weak private var view: SelectCollegeViewProtocol?
     var interactor: SelectCollegeInteractorProtocol?
-    private let router: SelectCollegeWireframeProtocol
-
-    init(interface: SelectCollegeViewProtocol,
-         interactor: SelectCollegeInteractorProtocol?,
-         router: SelectCollegeWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: SelectCollegeWireframeProtocol?
+    weak var view: SelectCollegeViewProtocol?
+    weak var delegate: SelectCollegeDelegate?
 }
 
 extension SelectCollegePresenter {
@@ -49,7 +40,7 @@ extension SelectCollegePresenter {
     func collegeValidated(for identifier: String, with result: Result<Void, SelectCollegeError>) {
         switch result {
         case .success:
-            router.showNextScreen()
+            delegate?.selectCollege(didSelect: identifier)
         case .failure(let error):
             view?.show(errorMessage: error.message)
         }

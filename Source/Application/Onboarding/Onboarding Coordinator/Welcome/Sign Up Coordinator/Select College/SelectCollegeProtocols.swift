@@ -15,39 +15,33 @@ protocol SelectCollegeDelegate: class {
 
 // MARK: - Wireframe
 protocol SelectCollegeWireframeProtocol: class {
-    func showNextScreen()
 }
 
 // MARK: - Presenter
 protocol SelectCollegePresenterProtocol: class {
+    var router: SelectCollegeWireframeProtocol? { get set }
+    var interactor: SelectCollegeInteractorProtocol? { get set }
+    var view: SelectCollegeViewProtocol? { get set }
+    var delegate: SelectCollegeDelegate? { get set }
     
-    // MARK: From View
     func updateView(for input: String?)
     func selected(college identifier: String)
-    
-    // MARK: To View
     func collegesFetched(for input: String, with result: Result<[String], SelectCollegeError>)
     func collegeValidated(for identifier: String, with result: Result<Void, SelectCollegeError>)
 }
 
 // MARK: - Interactor
 protocol SelectCollegeInteractorProtocol: class {
-    
-    // MARK: Properties
     var presenter: SelectCollegePresenterProtocol? { get set }
     
-    // MARK: Methods
     func fetchColleges(for input: String)
     func validate(college identifier: String)
 }
 
 // MARK: - View 
 protocol SelectCollegeViewProtocol: class {
-    
-    // MARK: Properties
     var presenter: SelectCollegePresenterProtocol? { get set }
     
-    // MARK: Methods
     func show(names: [String])
     func show(errorMessage: String)
 }

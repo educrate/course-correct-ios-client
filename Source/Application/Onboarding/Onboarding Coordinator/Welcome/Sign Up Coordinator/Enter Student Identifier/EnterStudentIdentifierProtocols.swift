@@ -15,13 +15,16 @@ protocol EnterStudentIdentifierDelegate: class {
 
 // MARK: - Wireframe
 protocol EnterStudentIdentifierWireframeProtocol: class {
-    func showNextScreen()
 }
 
 // MARK: - Presenter
 protocol EnterStudentIdentifierPresenterProtocol: class {
-    func studentIdentifierEntered(with value: String)
+    var router: EnterStudentIdentifierWireframeProtocol? { get set }
+    var interactor: EnterStudentIdentifierInteractorProtocol? { get set }
+    var view: EnterStudentIdentifierViewProtocol? { get set }
+    var delegate: EnterStudentIdentifierDelegate? { get set }
     
+    func studentIdentifierEntered(with value: String)
     func studentIdentifierValidated(for identifier: String, with result: Result<Void, EnterStudentIdentifierError>)
 }
 

@@ -138,6 +138,8 @@
 		BF55165A215B374D00D0CBB1 /* UICalendarViewDayDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF551659215B374D00D0CBB1 /* UICalendarViewDayDescription.swift */; };
 		BF5F6210218FCCCB00E43B75 /* TutorListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F620F218FCCCB00E43B75 /* TutorListCell.swift */; };
 		BF5F621821916D6F00E43B75 /* TutorProfileReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F621721916D6F00E43B75 /* TutorProfileReviewCell.swift */; };
+		BF6EBADA21CF257F00FEE921 /* SelectCollegeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAD921CF257F00FEE921 /* SelectCollegeBuilder.swift */; };
+		BF6EBADC21CF28FB00FEE921 /* EnterStudentIdentifierBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBADB21CF28FB00FEE921 /* EnterStudentIdentifierBuilder.swift */; };
 		BF70B30D21BE3003001E550D /* AddLocationNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */; };
 		BF70B30F21BE3829001E550D /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30E21BE3829001E550D /* NetworkingHelper.swift */; };
 		BF70B31121BE3EE4001E550D /* AddLocationAutocompleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */; };
@@ -417,6 +419,8 @@
 		BF551659215B374D00D0CBB1 /* UICalendarViewDayDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICalendarViewDayDescription.swift; sourceTree = "<group>"; };
 		BF5F620F218FCCCB00E43B75 /* TutorListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorListCell.swift; sourceTree = "<group>"; };
 		BF5F621721916D6F00E43B75 /* TutorProfileReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileReviewCell.swift; sourceTree = "<group>"; };
+		BF6EBAD921CF257F00FEE921 /* SelectCollegeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollegeBuilder.swift; sourceTree = "<group>"; };
+		BF6EBADB21CF28FB00FEE921 /* EnterStudentIdentifierBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterStudentIdentifierBuilder.swift; sourceTree = "<group>"; };
 		BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationNetworking.swift; sourceTree = "<group>"; };
 		BF70B30E21BE3829001E550D /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
 		BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationAutocompleteResponse.swift; sourceTree = "<group>"; };
@@ -1244,6 +1248,7 @@
 				BFD82AC7216E77B600A14868 /* SelectCollegeRouter.swift */,
 				BFD82ACA216E77B600A14868 /* SelectCollegeInteractor.swift */,
 				BFD82AC9216E77B600A14868 /* SelectCollegeProtocols.swift */,
+				BF6EBAD921CF257F00FEE921 /* SelectCollegeBuilder.swift */,
 				BFD82ADB216E816C00A14868 /* SelectCollegeError.swift */,
 			);
 			path = "Select College";
@@ -1327,6 +1332,7 @@
 				BFD82AE92170670400A14868 /* EnterStudentIdentifierRouter.swift */,
 				BFD82AEC2170670400A14868 /* EnterStudentIdentifierInteractor.swift */,
 				BFD82AEB2170670400A14868 /* EnterStudentIdentifierProtocols.swift */,
+				BF6EBADB21CF28FB00FEE921 /* EnterStudentIdentifierBuilder.swift */,
 				BFCDA6102172B48C00DB31FC /* EnterStudentIdentifierError.swift */,
 			);
 			path = "Enter Student Identifier";
@@ -1614,6 +1620,7 @@
 				BFFFF30A21A6016F00D2BD62 /* UICalendarViewDayCell.swift in Sources */,
 				BF4F48F421826A82000D98D1 /* MainProtocols.swift in Sources */,
 				BF5005BE217EEF2000D35B69 /* SignUpInteractor.swift in Sources */,
+				BF6EBADA21CF257F00FEE921 /* SelectCollegeBuilder.swift in Sources */,
 				BF70B31321BF0A43001E550D /* AddLocationError.swift in Sources */,
 				BFFFF2EC21A4BCD300D2BD62 /* UIDropDownViewCell.swift in Sources */,
 				BFD82A8C216D989E00A14868 /* Networking.swift in Sources */,
@@ -1644,6 +1651,7 @@
 				BF5004EF21741EAF00D35B69 /* TutorProfileViewController.swift in Sources */,
 				BFD0298321509C6A002FB9F5 /* CreditCardMathematics.swift in Sources */,
 				BF5004AD2174122200D35B69 /* CalendarRouter.swift in Sources */,
+				BF6EBADC21CF28FB00FEE921 /* EnterStudentIdentifierBuilder.swift in Sources */,
 				BF5005B4217EEE9C00D35B69 /* AppInteractor.swift in Sources */,
 				BF500555217B837600D35B69 /* WalkthroughPresenter.swift in Sources */,
 				BFFFF2F921A50E5A00D2BD62 /* UIFieldViewConfiguration.swift in Sources */,

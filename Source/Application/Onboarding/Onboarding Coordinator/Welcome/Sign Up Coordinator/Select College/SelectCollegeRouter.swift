@@ -9,29 +9,5 @@
 import UIKit
 
 class SelectCollegeRouter: SelectCollegeWireframeProtocol {
-    private weak var viewController: UIViewController?
-    private weak var delegate: SelectCollegeDelegate?
-}
-
-extension SelectCollegeRouter {
-    func showNextScreen() {
-        delegate?.selectCollege(didSelect: "college")
-    }
-}
-
-extension SelectCollegeRouter {
-    static func createModule(_ delegate: SelectCollegeDelegate?) -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .selectCollege)
-        let view: SelectCollegeViewController = storyboard.instantiateViewController()
-        let interactor = SelectCollegeInteractor()
-        let router = SelectCollegeRouter()
-        let presenter = SelectCollegePresenter(interface: view, interactor: interactor, router: router)
-        
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-        router.delegate = delegate
-        
-        return view
-    }
+    weak var viewController: UIViewController?
 }

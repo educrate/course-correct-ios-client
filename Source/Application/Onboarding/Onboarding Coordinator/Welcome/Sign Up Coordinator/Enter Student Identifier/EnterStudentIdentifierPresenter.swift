@@ -9,19 +9,10 @@
 import UIKit
 
 class EnterStudentIdentifierPresenter: EnterStudentIdentifierPresenterProtocol {
-    
-    // MARK: Viper
-    weak private var view: EnterStudentIdentifierViewProtocol?
     var interactor: EnterStudentIdentifierInteractorProtocol?
-    private let router: EnterStudentIdentifierWireframeProtocol
-
-    init(interface: EnterStudentIdentifierViewProtocol,
-         interactor: EnterStudentIdentifierInteractorProtocol?,
-         router: EnterStudentIdentifierWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: EnterStudentIdentifierWireframeProtocol?
+    weak var view: EnterStudentIdentifierViewProtocol?
+    weak var delegate: EnterStudentIdentifierDelegate?
 }
 
 extension EnterStudentIdentifierPresenter {
@@ -32,7 +23,7 @@ extension EnterStudentIdentifierPresenter {
     func studentIdentifierValidated(for identifier: String, with result: Result<Void, EnterStudentIdentifierError>) {
         switch result {
         case .success:
-            router.showNextScreen()
+            delegate?.enterStudentIdentifier(didEnter: identifier)
         case .failure(let error):
             view?.show(errorMessage: error.message)
         }

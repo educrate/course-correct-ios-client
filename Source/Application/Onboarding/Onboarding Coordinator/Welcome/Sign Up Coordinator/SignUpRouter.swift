@@ -14,11 +14,11 @@ class SignUpRouter: SignUpWireframeProtocol {
 
 extension SignUpRouter {
     func showSelectCollege(_ delegate: SelectCollegeDelegate?) {
-        viewController?.show(SelectCollegeRouter.createModule(delegate), sender: nil)
+        viewController?.show(SelectCollegeBuilder().create(delegate), sender: nil)
     }
     
     func showEnterStudentIdentifier(_ delegate: EnterStudentIdentifierDelegate?) {
-        viewController?.show(EnterStudentIdentifierRouter.createModule(delegate), sender: nil)
+        viewController?.show(EnterStudentIdentifierBuilder().create(delegate), sender: nil)
     }
     
     func showEnterAccessCode(_ delegate: EnterAccessCodeDelegate?) {
