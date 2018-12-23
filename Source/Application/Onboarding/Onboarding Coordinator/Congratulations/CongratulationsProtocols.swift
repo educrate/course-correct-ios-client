@@ -15,11 +15,15 @@ protocol CongratulationsDelegate: class {
 
 // MARK: - Wireframe
 protocol CongratulationsWireframeProtocol: class {
-    func nextScreen()
 }
 
 // MARK: - Presenter
 protocol CongratulationsPresenterProtocol: class {
+    var router: CongratulationsWireframeProtocol? { get set }
+    var interactor: CongratulationsInteractorProtocol? { get set }
+    var view: CongratulationsViewProtocol? { get set }
+    var delegate: CongratulationsDelegate? { get set }
+    
     func screenHandled()
 }
 

@@ -143,6 +143,7 @@
 		BF6EBADE21CF2A7600FEE921 /* EnterAccessCodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBADD21CF2A7600FEE921 /* EnterAccessCodeBuilder.swift */; };
 		BF6EBAE021CF2C3C00FEE921 /* CreatePasswordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBADF21CF2C3C00FEE921 /* CreatePasswordBuilder.swift */; };
 		BF6EBAE221CF2DA900FEE921 /* SignInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAE121CF2DA900FEE921 /* SignInBuilder.swift */; };
+		BF6EBAE421CF2EB900FEE921 /* CongratulationsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAE321CF2EB900FEE921 /* CongratulationsBuilder.swift */; };
 		BF70B30D21BE3003001E550D /* AddLocationNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */; };
 		BF70B30F21BE3829001E550D /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30E21BE3829001E550D /* NetworkingHelper.swift */; };
 		BF70B31121BE3EE4001E550D /* AddLocationAutocompleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */; };
@@ -427,6 +428,7 @@
 		BF6EBADD21CF2A7600FEE921 /* EnterAccessCodeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAccessCodeBuilder.swift; sourceTree = "<group>"; };
 		BF6EBADF21CF2C3C00FEE921 /* CreatePasswordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordBuilder.swift; sourceTree = "<group>"; };
 		BF6EBAE121CF2DA900FEE921 /* SignInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInBuilder.swift; sourceTree = "<group>"; };
+		BF6EBAE321CF2EB900FEE921 /* CongratulationsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsBuilder.swift; sourceTree = "<group>"; };
 		BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationNetworking.swift; sourceTree = "<group>"; };
 		BF70B30E21BE3829001E550D /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
 		BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationAutocompleteResponse.swift; sourceTree = "<group>"; };
@@ -881,6 +883,7 @@
 				BF50055B217B848F00D35B69 /* CongratulationsPresenter.swift */,
 				BF50055C217B848F00D35B69 /* CongratulationsRouter.swift */,
 				BF50055F217B848F00D35B69 /* CongratulationsInteractor.swift */,
+				BF6EBAE321CF2EB900FEE921 /* CongratulationsBuilder.swift */,
 				BF50055E217B848F00D35B69 /* CongratulationsProtocols.swift */,
 			);
 			path = Congratulations;
@@ -1620,6 +1623,7 @@
 				BF5004902173EB7800D35B69 /* ProfilePaymentViewController.swift in Sources */,
 				BF50046A2172F09700D35B69 /* ProfileOverviewPresenter.swift in Sources */,
 				BF5004E221741E9100D35B69 /* TutorListRouter.swift in Sources */,
+				BF6EBAE421CF2EB900FEE921 /* CongratulationsBuilder.swift in Sources */,
 				BFD82A92216D989E00A14868 /* NetworkingResponse.swift in Sources */,
 				BF50048F2173EB7800D35B69 /* ProfilePaymentRouter.swift in Sources */,
 				BF5004742172F8F800D35B69 /* UIImageView+Additions.swift in Sources */,

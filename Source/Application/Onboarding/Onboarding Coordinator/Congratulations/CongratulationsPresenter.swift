@@ -9,23 +9,14 @@
 import UIKit
 
 class CongratulationsPresenter: CongratulationsPresenterProtocol {
-    
-    // MARK: Viper
-    weak private var view: CongratulationsViewProtocol?
     var interactor: CongratulationsInteractorProtocol?
-    private let router: CongratulationsWireframeProtocol
-
-    init(interface: CongratulationsViewProtocol,
-         interactor: CongratulationsInteractorProtocol?,
-         router: CongratulationsWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: CongratulationsWireframeProtocol?
+    weak var view: CongratulationsViewProtocol?
+    weak var delegate: CongratulationsDelegate?
 }
 
 extension CongratulationsPresenter {
     func screenHandled() {
-        router.nextScreen()
+        delegate?.congratulations(didDisplayWith: "congratulations")
     }
 }

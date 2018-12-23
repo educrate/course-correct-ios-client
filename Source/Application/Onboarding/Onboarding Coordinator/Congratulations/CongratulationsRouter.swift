@@ -9,29 +9,5 @@
 import UIKit
 
 class CongratulationsRouter: CongratulationsWireframeProtocol {
-    private weak var viewController: UIViewController?
-    private weak var delegate: CongratulationsDelegate?
-}
-
-extension CongratulationsRouter {
-    func nextScreen() {
-        delegate?.congratulations(didDisplayWith: "congratulations screen complete")
-    }
-}
-
-extension CongratulationsRouter {
-    static func createModule(_ delegate: CongratulationsDelegate?) -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .congratulations)
-        let view: CongratulationsViewController = storyboard.instantiateViewController()
-        let interactor = CongratulationsInteractor()
-        let router = CongratulationsRouter()
-        let presenter = CongratulationsPresenter(interface: view, interactor: interactor, router: router)
-        
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-        router.delegate = delegate
-        
-        return view
-    }
+    weak var viewController: UIViewController?
 }

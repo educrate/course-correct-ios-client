@@ -22,6 +22,6 @@ extension OnboardingRouter {
     }
     
     func presentCongratulations(_ delegate: CongratulationsDelegate?) {
-        navigationController?.setViewControllers([CongratulationsRouter.createModule(delegate)], animated: true)
+        navigationController?.setViewControllers([CongratulationsBuilder().create(delegate)], animated: true)
     }
 }
