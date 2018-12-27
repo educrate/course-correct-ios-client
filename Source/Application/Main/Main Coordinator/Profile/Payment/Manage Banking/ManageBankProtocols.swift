@@ -12,7 +12,11 @@ import Foundation
 protocol ManageBankWireframeProtocol: class {}
 
 // MARK: - Presenter
-protocol ManageBankPresenterProtocol: class {}
+protocol ManageBankPresenterProtocol: class {
+    var router: ManageBankWireframeProtocol? { get set }
+    var interactor: ManageBankInteractorProtocol? { get set }
+    var view: ManageBankViewProtocol? { get set }
+}
 
 // MARK: - Interactor
 protocol ManageBankInteractorProtocol: class {

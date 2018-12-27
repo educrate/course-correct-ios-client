@@ -9,15 +9,7 @@
 import UIKit
 
 class ManageBankPresenter: ManageBankPresenterProtocol {
-    weak private var view: ManageBankViewProtocol?
     var interactor: ManageBankInteractorProtocol?
-    private let router: ManageBankWireframeProtocol
-
-    init(interface: ManageBankViewProtocol,
-         interactor: ManageBankInteractorProtocol?,
-         router: ManageBankWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: ManageBankWireframeProtocol?
+    weak var view: ManageBankViewProtocol?
 }

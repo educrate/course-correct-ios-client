@@ -18,6 +18,6 @@ extension ProfilePaymentRouter {
     }
     
     func presentAddBank() {
-        viewController?.navigationController?.pushViewController(ManageBankRouter.createModule(), animated: true)
+        viewController?.navigationController?.pushViewController(ManageBankBuilder().create(), animated: true)
     }   
 }
