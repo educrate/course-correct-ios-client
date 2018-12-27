@@ -19,7 +19,7 @@ extension ProfileOverviewRouter {
     }
     
     func presentPayment() {
-        viewController?.show(ProfilePaymentRouter.createModule(), sender: nil)
+        viewController?.show(ProfilePaymentBuilder().create(), sender: nil)
     }
     
     func presentSupport() {
