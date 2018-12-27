@@ -9,21 +9,5 @@
 import UIKit
 
 class ProfileAccountRouter: ProfileAccountWireframeProtocol {
-    private weak var viewController: UIViewController?
-}
-
-extension ProfileAccountRouter {
-    static func createModule() -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .profileAccount)
-        let view: ProfileAccountViewController = storyboard.instantiateViewController()
-        let interactor = ProfileAccountInteractor()
-        let router = ProfileAccountRouter()
-        let presenter = ProfileAccountPresenter(interface: view, interactor: interactor, router: router)
-        
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-        
-        return view
-    }
+    weak var viewController: UIViewController?
 }

@@ -15,7 +15,7 @@ class ProfileOverviewRouter: ProfileOverviewWireframeProtocol {
 
 extension ProfileOverviewRouter {
     func presentAccount() {
-        viewController?.show(ProfileAccountRouter.createModule(), sender: nil)
+        viewController?.show(ProfileAccountBuilder().create(), sender: nil)
     }
     
     func presentPayment() {
