@@ -22,6 +22,7 @@ class CalendarBuilder {
         router.delegate = delegate
         presenter.view = view
         presenter.interactor = interactor
+        presenter.router = router
         presenter.delegate = delegate
         
         return view
