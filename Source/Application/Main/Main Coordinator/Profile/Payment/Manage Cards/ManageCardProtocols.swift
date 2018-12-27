@@ -12,7 +12,11 @@ import Foundation
 protocol ManageCardWireframeProtocol: class {}
 
 // MARK: - Presenter
-protocol ManageCardPresenterProtocol: class {}
+protocol ManageCardPresenterProtocol: class {
+    var router: ManageCardWireframeProtocol? { get set }
+    var interactor: ManageCardInteractorProtocol? { get set }
+    var view: ManageCardViewProtocol? { get set }
+}
 
 // MARK: - Interactor
 protocol ManageCardInteractorProtocol: class {

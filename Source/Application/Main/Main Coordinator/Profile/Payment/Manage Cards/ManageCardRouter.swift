@@ -9,21 +9,5 @@
 import UIKit
 
 class ManageCardRouter: ManageCardWireframeProtocol {
-    private weak var viewController: UIViewController?
-}
-
-extension ManageCardRouter {
-    static func createModule() -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .manageCard)
-        let view: ManageCardViewController = storyboard.instantiateViewController()
-        let interactor = ManageCardInteractor()
-        let router = ManageCardRouter()
-        let presenter = ManageCardPresenter(interface: view, interactor: interactor, router: router)
-        
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-        
-        return view
-    }
+    weak var viewController: UIViewController?
 }

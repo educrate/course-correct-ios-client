@@ -9,15 +9,7 @@
 import UIKit
 
 class ManageCardPresenter: ManageCardPresenterProtocol {
-    weak private var view: ManageCardViewProtocol?
     var interactor: ManageCardInteractorProtocol?
-    private let router: ManageCardWireframeProtocol
-
-    init(interface: ManageCardViewProtocol,
-         interactor: ManageCardInteractorProtocol?,
-         router: ManageCardWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: ManageCardWireframeProtocol?
+    weak var view: ManageCardViewProtocol?
 }

@@ -14,7 +14,7 @@ class ProfilePaymentRouter: ProfilePaymentWireframeProtocol {
 
 extension ProfilePaymentRouter {
     func presentAddCard() {
-        viewController?.navigationController?.pushViewController(ManageCardRouter.createModule(), animated: true)
+        viewController?.navigationController?.pushViewController(ManageCardBuilder().create(), animated: true)
     }
     
     func presentAddBank() {
