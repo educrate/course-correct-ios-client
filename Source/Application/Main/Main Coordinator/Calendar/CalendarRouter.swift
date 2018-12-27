@@ -15,7 +15,7 @@ class CalendarRouter: CalendarWireframeProtocol {
 
 extension CalendarRouter {
     func presentEvent() {
-        viewController?.show(EventRouter.createModule(), sender: nil)
+        viewController?.show(EventBuilder().create(), sender: nil)
     }
     
     func presentCreateEvent(_ delegate: CreateEventDelegate?) {

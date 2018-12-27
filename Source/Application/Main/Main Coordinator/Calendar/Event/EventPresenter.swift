@@ -9,15 +9,7 @@
 import UIKit
 
 class EventPresenter: EventPresenterProtocol {
-    weak private var view: EventViewProtocol?
     var interactor: EventInteractorProtocol?
-    private let router: EventWireframeProtocol
-
-    init(interface: EventViewProtocol,
-         interactor: EventInteractorProtocol?,
-         router: EventWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: EventWireframeProtocol?
+    weak var view: EventViewProtocol?
 }

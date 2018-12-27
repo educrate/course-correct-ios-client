@@ -13,7 +13,11 @@ protocol EventWireframeProtocol: class {}
 
 
 // MARK: - Presenter
-protocol EventPresenterProtocol: class {}
+protocol EventPresenterProtocol: class {
+    var router: EventWireframeProtocol? { get set }
+    var interactor: EventInteractorProtocol? { get set }
+    var view: EventViewProtocol? { get set }
+}
 
 // MARK: - Interactor
 protocol EventInteractorProtocol: class {

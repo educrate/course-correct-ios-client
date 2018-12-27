@@ -9,21 +9,5 @@
 import UIKit
 
 class EventRouter: EventWireframeProtocol {
-    private weak var viewController: UIViewController?
-}
-
-extension EventRouter {
-    static func createModule() -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .event)
-        let view: EventViewController = storyboard.instantiateViewController()
-        let interactor = EventInteractor()
-        let router = EventRouter()
-        let presenter = EventPresenter(interface: view, interactor: interactor, router: router)
-        
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-        
-        return view
-    }
+    weak var viewController: UIViewController?
 }
