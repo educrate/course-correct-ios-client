@@ -14,6 +14,6 @@ class TutorListRouter: TutorListWireframeProtocol {
 
 extension TutorListRouter {
     func presentTutorProfile(_ delegate: TutorProfileDelegate?) {
-        viewController?.show(TutorProfileRouter.createModule(delegate), sender: nil)
+        viewController?.show(TutorProfileBuilder().create(delegate), sender: nil)
     }
 }

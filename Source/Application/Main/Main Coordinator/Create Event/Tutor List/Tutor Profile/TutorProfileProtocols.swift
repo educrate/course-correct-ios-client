@@ -20,6 +20,11 @@ protocol TutorProfileWireframeProtocol: class {
 
 // MARK: - Presenter
 protocol TutorProfilePresenterProtocol: class {
+    var router: TutorProfileWireframeProtocol? { get set }
+    var interactor: TutorProfileInteractorProtocol? { get set }
+    var view: TutorProfileViewProtocol? { get set }
+    var delegate: TutorProfileDelegate? { get set }
+    
     func tutorSelected(_ tutor: String)
 }
 
