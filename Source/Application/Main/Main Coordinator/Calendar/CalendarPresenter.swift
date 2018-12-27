@@ -9,33 +9,26 @@
 import UIKit
 
 class CalendarPresenter: CalendarPresenterProtocol {
-    weak private var view: CalendarViewProtocol?
     var interactor: CalendarInteractorProtocol?
-    private let router: CalendarWireframeProtocol
-
-    init(interface: CalendarViewProtocol,
-         interactor: CalendarInteractorProtocol?,
-         router: CalendarWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: CalendarWireframeProtocol?
+    weak var view: CalendarViewProtocol?
+    weak var delegate: CalendarDelegate?
 }
 
 extension CalendarPresenter {
     func showEvent() {
-        router.presentEvent()
+        router?.presentEvent()
     }
     
     func showCreateEvent(_ delegate: CreateEventDelegate?) {
-        router.presentCreateEvent(delegate)
+        router?.presentCreateEvent(delegate)
     }
     
     func showProfile() {
-        router.presentProfile()
+        router?.presentProfile()
     }
     
     func eventCreated() {
-        router.unwind()
+        router?.unwind()
     }
 }

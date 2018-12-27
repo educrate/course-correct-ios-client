@@ -145,6 +145,7 @@
 		BF6EBAE221CF2DA900FEE921 /* SignInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAE121CF2DA900FEE921 /* SignInBuilder.swift */; };
 		BF6EBAE421CF2EB900FEE921 /* CongratulationsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAE321CF2EB900FEE921 /* CongratulationsBuilder.swift */; };
 		BF6EBAE621CF2F9100FEE921 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAE521CF2F9100FEE921 /* MainBuilder.swift */; };
+		BF6EBAE821D4661900FEE921 /* CalendarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAE721D4661900FEE921 /* CalendarBuilder.swift */; };
 		BF70B30D21BE3003001E550D /* AddLocationNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */; };
 		BF70B30F21BE3829001E550D /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30E21BE3829001E550D /* NetworkingHelper.swift */; };
 		BF70B31121BE3EE4001E550D /* AddLocationAutocompleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */; };
@@ -431,6 +432,7 @@
 		BF6EBAE121CF2DA900FEE921 /* SignInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInBuilder.swift; sourceTree = "<group>"; };
 		BF6EBAE321CF2EB900FEE921 /* CongratulationsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsBuilder.swift; sourceTree = "<group>"; };
 		BF6EBAE521CF2F9100FEE921 /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		BF6EBAE721D4661900FEE921 /* CalendarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarBuilder.swift; sourceTree = "<group>"; };
 		BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationNetworking.swift; sourceTree = "<group>"; };
 		BF70B30E21BE3829001E550D /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
 		BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationAutocompleteResponse.swift; sourceTree = "<group>"; };
@@ -724,6 +726,7 @@
 				BF5004A72174122200D35B69 /* CalendarPresenter.swift */,
 				BF5004A82174122200D35B69 /* CalendarRouter.swift */,
 				BF5004AB2174122200D35B69 /* CalendarInteractor.swift */,
+				BF6EBAE721D4661900FEE921 /* CalendarBuilder.swift */,
 				BF5004AA2174122200D35B69 /* CalendarProtocols.swift */,
 				BF5004B32174124200D35B69 /* Event */,
 			);
@@ -1679,6 +1682,7 @@
 				BF50047E2173AC2200D35B69 /* ProfileAccountPresenter.swift in Sources */,
 				BFE25EE321C37FED0089488A /* UICollectionReusableView+StoryboardIdentifiable.swift in Sources */,
 				BFF6C2922184E1F8003F7D96 /* UINotificationViewConfiguration.swift in Sources */,
+				BF6EBAE821D4661900FEE921 /* CalendarBuilder.swift in Sources */,
 				BFA88AE521CB3E3700F16821 /* CreateEventBuilder.swift in Sources */,
 				BF55165A215B374D00D0CBB1 /* UICalendarViewDayDescription.swift in Sources */,
 				BFF3971921C4DF2800B77522 /* UIClearNavigationController.swift in Sources */,

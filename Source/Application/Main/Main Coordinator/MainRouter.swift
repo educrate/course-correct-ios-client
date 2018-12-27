@@ -14,6 +14,6 @@ class MainRouter: MainWireframeProtocol {
 
 extension MainRouter {
     func presentCalendar(_ delegate: CalendarDelegate?) {
-        viewController?.setViewControllers([CalendarRouter.createModule(delegate)], animated: true)
+        viewController?.setViewControllers([CalendarBuilder().create(delegate)], animated: true)
     }
 }

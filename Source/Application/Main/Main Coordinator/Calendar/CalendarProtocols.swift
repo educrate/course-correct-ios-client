@@ -23,6 +23,10 @@ protocol CalendarWireframeProtocol: ProfileOverviewDelegate {
 
 // MARK: - Presenter
 protocol CalendarPresenterProtocol: class {
+    var router: CalendarWireframeProtocol? { get set }
+    var interactor: CalendarInteractorProtocol? { get set }
+    var view: CalendarViewProtocol? { get set }
+    var delegate: CalendarDelegate? { get set }
     
     // MARK: Navigation Events
     func showEvent()
