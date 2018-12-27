@@ -9,25 +9,17 @@
 import UIKit
 
 class ProfilePaymentPresenter: ProfilePaymentPresenterProtocol {
-    weak private var view: ProfilePaymentViewProtocol?
     var interactor: ProfilePaymentInteractorProtocol?
-    private let router: ProfilePaymentWireframeProtocol
-
-    init(interface: ProfilePaymentViewProtocol,
-         interactor: ProfilePaymentInteractorProtocol?,
-         router: ProfilePaymentWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: ProfilePaymentWireframeProtocol?
+    weak var view: ProfilePaymentViewProtocol?
 }
 
 extension ProfilePaymentPresenter {
     func showAddCard() {
-        router.presentAddCard()
+        router?.presentAddCard()
     }
     
     func showAddBank() {
-        router.presentAddBank()
+        router?.presentAddBank()
     }
 }

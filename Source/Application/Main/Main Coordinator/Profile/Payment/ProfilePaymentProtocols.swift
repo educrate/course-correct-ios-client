@@ -16,6 +16,10 @@ protocol ProfilePaymentWireframeProtocol: class {
 
 // MARK: - Presenter
 protocol ProfilePaymentPresenterProtocol: class {
+    var router: ProfilePaymentWireframeProtocol? { get set }
+    var interactor: ProfilePaymentInteractorProtocol? { get set }
+    var view: ProfilePaymentViewProtocol? { get set }
+    
     func showAddCard()
     func showAddBank()
 }

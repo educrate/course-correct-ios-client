@@ -21,19 +21,3 @@ extension ProfilePaymentRouter {
         viewController?.navigationController?.pushViewController(ManageBankRouter.createModule(), animated: true)
     }   
 }
-
-extension ProfilePaymentRouter {
-    static func createModule() -> UIViewController {
-        let storyboard = UIStoryboard(storyboard: .profilePayment)
-        let view: ProfilePaymentViewController = storyboard.instantiateViewController()
-        let interactor = ProfilePaymentInteractor()
-        let router = ProfilePaymentRouter()
-        let presenter = ProfilePaymentPresenter(interface: view, interactor: interactor, router: router)
-        
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-        
-        return view
-    }
-}
