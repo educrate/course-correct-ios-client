@@ -12,7 +12,11 @@ import Foundation
 protocol ProfileSupportWireframeProtocol: class {}
 
 // MARK: - Presenter
-protocol ProfileSupportPresenterProtocol: class {}
+protocol ProfileSupportPresenterProtocol: class {
+    var router: ProfileSupportWireframeProtocol? { get set }
+    var interactor: ProfileSupportInteractorProtocol? { get set }
+    var view: ProfileSupportViewProtocol? { get set }
+}
 
 // MARK: - Interactor
 protocol ProfileSupportInteractorProtocol: class {

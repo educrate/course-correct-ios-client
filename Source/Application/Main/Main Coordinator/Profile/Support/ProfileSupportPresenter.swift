@@ -9,15 +9,7 @@
 import UIKit
 
 class ProfileSupportPresenter: ProfileSupportPresenterProtocol {
-    weak private var view: ProfileSupportViewProtocol?
     var interactor: ProfileSupportInteractorProtocol?
-    private let router: ProfileSupportWireframeProtocol
-
-    init(interface: ProfileSupportViewProtocol,
-         interactor: ProfileSupportInteractorProtocol?,
-         router: ProfileSupportWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: ProfileSupportWireframeProtocol?
+    weak var view: ProfileSupportViewProtocol?
 }

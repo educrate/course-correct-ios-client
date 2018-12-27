@@ -153,6 +153,7 @@
 		BF6EBAF221D474B600FEE921 /* ProfilePaymentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAF121D474B600FEE921 /* ProfilePaymentBuilder.swift */; };
 		BF6EBAF421D476F500FEE921 /* ManageCardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAF321D476F500FEE921 /* ManageCardBuilder.swift */; };
 		BF6EBAF621D477E300FEE921 /* ManageBankBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAF521D477E300FEE921 /* ManageBankBuilder.swift */; };
+		BF6EBAF821D4790900FEE921 /* ProfileSupportBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6EBAF721D4790900FEE921 /* ProfileSupportBuilder.swift */; };
 		BF70B30D21BE3003001E550D /* AddLocationNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */; };
 		BF70B30F21BE3829001E550D /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B30E21BE3829001E550D /* NetworkingHelper.swift */; };
 		BF70B31121BE3EE4001E550D /* AddLocationAutocompleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */; };
@@ -447,6 +448,7 @@
 		BF6EBAF121D474B600FEE921 /* ProfilePaymentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePaymentBuilder.swift; sourceTree = "<group>"; };
 		BF6EBAF321D476F500FEE921 /* ManageCardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardBuilder.swift; sourceTree = "<group>"; };
 		BF6EBAF521D477E300FEE921 /* ManageBankBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBankBuilder.swift; sourceTree = "<group>"; };
+		BF6EBAF721D4790900FEE921 /* ProfileSupportBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSupportBuilder.swift; sourceTree = "<group>"; };
 		BF70B30C21BE3003001E550D /* AddLocationNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationNetworking.swift; sourceTree = "<group>"; };
 		BF70B30E21BE3829001E550D /* NetworkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
 		BF70B31021BE3EE4001E550D /* AddLocationAutocompleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationAutocompleteResponse.swift; sourceTree = "<group>"; };
@@ -684,6 +686,7 @@
 				BF5004952173EB9B00D35B69 /* ProfileSupportPresenter.swift */,
 				BF5004962173EB9B00D35B69 /* ProfileSupportRouter.swift */,
 				BF5004992173EB9B00D35B69 /* ProfileSupportInteractor.swift */,
+				BF6EBAF721D4790900FEE921 /* ProfileSupportBuilder.swift */,
 				BF5004982173EB9B00D35B69 /* ProfileSupportProtocols.swift */,
 			);
 			path = Support;
@@ -1629,6 +1632,7 @@
 				BFD0290E21509AD4002FB9F5 /* AppDelegate.swift in Sources */,
 				BF1723C821A0BA120060B9CD /* NetworkingExtractableError.swift in Sources */,
 				BF1BE7DE21CDDE480015D437 /* WalkthroughBuilder.swift in Sources */,
+				BF6EBAF821D4790900FEE921 /* ProfileSupportBuilder.swift in Sources */,
 				BFD82AF02170670400A14868 /* EnterStudentIdentifierProtocols.swift in Sources */,
 				BFD82AC1216DADE900A14868 /* StoryboardIdentifiable.swift in Sources */,
 				BF6EBAE221CF2DA900FEE921 /* SignInBuilder.swift in Sources */,

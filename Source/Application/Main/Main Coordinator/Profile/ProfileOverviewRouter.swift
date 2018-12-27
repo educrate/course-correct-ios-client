@@ -23,7 +23,7 @@ extension ProfileOverviewRouter {
     }
     
     func presentSupport() {
-        viewController?.show(ProfileSupportRouter.createModule(), sender: nil)
+        viewController?.show(ProfileSupportBuilder().create(), sender: nil)
     }
     
     func presentLogout() {
