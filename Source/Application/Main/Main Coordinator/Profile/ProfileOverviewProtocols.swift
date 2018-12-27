@@ -23,6 +23,11 @@ protocol ProfileOverviewWireframeProtocol: class {
 
 // MARK: - Presenter
 protocol ProfileOverviewPresenterProtocol: class {
+    var router: ProfileOverviewWireframeProtocol? { get set }
+    var interactor: ProfileOverviewInteractorProtocol? { get set }
+    var view: ProfileOverviewViewProtocol? { get set }
+    var delegate: ProfileOverviewDelegate? { get set }
+    
     func showAccountScreen()
     func showPaymentScreen()
     func showSupportScreen()

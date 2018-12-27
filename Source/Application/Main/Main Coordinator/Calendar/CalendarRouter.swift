@@ -23,7 +23,7 @@ extension CalendarRouter {
     }
     
     func presentProfile() {
-        viewController?.show(ProfileOverviewRouter.createModule(self), sender: nil)
+        viewController?.show(ProfileOverviewBuilder().create(self), sender: nil)
     }
 }
 

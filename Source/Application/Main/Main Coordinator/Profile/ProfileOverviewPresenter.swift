@@ -9,17 +9,10 @@
 import UIKit
 
 class ProfileOverviewPresenter: ProfileOverviewPresenterProtocol {
-    weak private var view: ProfileOverviewViewProtocol?
     var interactor: ProfileOverviewInteractorProtocol?
-    private let router: ProfileOverviewWireframeProtocol
-
-    init(interface: ProfileOverviewViewProtocol,
-         interactor: ProfileOverviewInteractorProtocol?,
-         router: ProfileOverviewWireframeProtocol) {
-        self.view = interface
-        self.interactor = interactor
-        self.router = router
-    }
+    var router: ProfileOverviewWireframeProtocol?
+    weak var view: ProfileOverviewViewProtocol?
+    weak var delegate: ProfileOverviewDelegate?
 }
 
 extension ProfileOverviewPresenter {
@@ -42,7 +35,7 @@ extension ProfileOverviewPresenter {
     func accountInformationFetched(with result: Result<Void, ProfileOverviewError>) {
         switch result {
         case .success:
-            router.presentAccount()
+            router?.presentAccount()
         case .failure(let error):
             view?.show(error: error)
         }
@@ -51,7 +44,7 @@ extension ProfileOverviewPresenter {
     func paymentInformationFetched(with result: Result<Void, ProfileOverviewError>) {
         switch result {
         case .success:
-            router.presentPayment()
+            router?.presentPayment()
         case .failure(let error):
             view?.show(error: error)
         }
@@ -60,7 +53,7 @@ extension ProfileOverviewPresenter {
     func supportInformationFetched(with result: Result<Void, ProfileOverviewError>) {
         switch result {
         case .success:
-            router.presentSupport()
+            router?.presentSupport()
         case .failure(let error):
             view?.show(error: error)
         }
@@ -69,7 +62,7 @@ extension ProfileOverviewPresenter {
     func logoutProfileFetched(with result: Result<Void, ProfileOverviewError>) {
         switch result {
         case .success:
-            router.presentLogout()
+            router?.presentLogout()
         case .failure(let error):
             view?.show(error: error)
         }
