@@ -19,6 +19,12 @@ final class UICalendarViewDayCell: UICollectionViewCell {
     /// set up the cell.
     private var day: UICalendarViewDay?
     
+    /// Location of this cell within the larger UICalendarView.
+    private var dayIndexPath: IndexPath?
+    
+    /// Delegates the UICollectionViewDelegate information up to the UICalendarView.
+    private var delegate: UICalendarViewDayCellDelegate?
+    
     /// Contains all the styling for the cell.
     private var configuration: UICalendarViewDayCellConfguration = .default
     
@@ -50,9 +56,20 @@ extension UICalendarViewDayCell {
     
     /// Method used for setting the day property.
     ///
-    /// - Parameter day: Contains information regarding the specifc cell's day.
-    func set(_ day: UICalendarViewDay) {
+    /// - Parameters:
+    ///   - day: Contains information regarding the specifc cell's day.
+    ///   - dayIndexPath: Location of this cell within the larger UICalendarView.
+    func set(_ day: UICalendarViewDay,
+             _ dayIndexPath: IndexPath) {
         self.day = day
+        self.dayIndexPath = dayIndexPath
+    }
+    
+    /// Method used for setting the delegate property.
+    ///
+    /// - Parameter delegate: Delegates the UICollectionViewDelegate information up to the UICalendarView.
+    func set(_ delegate: UICalendarViewDayCellDelegate) {
+        self.delegate = delegate
     }
     
     /// Method used for setting the configuration of this cell.
@@ -110,6 +127,20 @@ extension UICalendarViewDayCell: UICollectionViewDataSource {
             
             cell.reload()
         }
+    }
+}
+
+// MARK: - Delegate Implementation
+extension UICalendarViewDayCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        
+        guard let dayIndexPath = dayIndexPath else {
+            assertionFailure("internal inconsistency - there should always be an associated dayIndexPath")
+            return
+        }
+        
+        delegate?.calendarViewDayCell(self, didSelectEventAt: indexPath, dayIndexPath)
     }
 }
 

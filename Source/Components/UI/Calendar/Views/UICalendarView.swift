@@ -105,7 +105,8 @@ extension UICalendarView: UICollectionViewDelegate {
             
             let day = dataSource.calendarView(self, dayForItemAt: indexPath)
             
-            cell.set(day)
+            cell.set(self)
+            cell.set(day, indexPath)
             cell.set(self.configuration.cellConfiguration)
             
             cell.reload()
@@ -157,6 +158,15 @@ extension UICalendarView: UICollectionViewDelegateFlowLayout {
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         return configuration.cellConfiguration.lineSpacing
+    }
+}
+
+extension UICalendarView: UICalendarViewDayCellDelegate {
+    func calendarViewDayCell(_ calendarViewDayCell: UICalendarViewDayCell,
+                             didSelectEventAt indexPath: IndexPath,
+                             _ dayIndexPath: IndexPath) {
+        
+        delegate?.calendarView(self, didSelectDayAt: dayIndexPath, indexPath)
     }
 }
 

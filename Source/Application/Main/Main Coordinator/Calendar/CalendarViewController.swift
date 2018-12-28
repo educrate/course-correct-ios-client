@@ -26,6 +26,7 @@ class CalendarViewController: UIViewController, CalendarViewProtocol {
 extension CalendarViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        calendarView.delegate = self
         calendarView.dataSource = self
     }
 }
@@ -62,6 +63,12 @@ extension CalendarViewController: UICalendarViewDataSource {
                                  events: [UICalendarViewEvent(title: "Physics 7C with Dustin Tran",
                                                               time: "12-1:15 PM",
                                                               location: "Langston Library")])
+    }
+}
+
+extension CalendarViewController: UICalendarViewDelegate {
+    func calendarView(_ calendarView: UICalendarView, didSelectDayAt indexPath: IndexPath, _ eventIndexPath: IndexPath) {
+        presenter?.showEvent()
     }
 }
 
