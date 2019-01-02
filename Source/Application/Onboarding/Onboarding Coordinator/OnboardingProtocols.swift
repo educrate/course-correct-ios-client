@@ -24,6 +24,7 @@ protocol OnboardingWireframeProtocol: class {
 protocol OnboardingPresenterProtocol: WalkthroughDelegate, WelcomeDelegate, CongratulationsDelegate {
     var router: OnboardingWireframeProtocol? { get set }
     var interactor: OnboardingInteractorProtocol? { get set }
+    var delegate: OnboardingDelegate? { get set }
 }
 
 // MARK: - Interactor
