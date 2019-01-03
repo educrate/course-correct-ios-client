@@ -42,7 +42,7 @@ extension ProfileAccountViewController {
         
         switch indexPath.row {
         case CellType.courses.rawValue:
-            return coursePicker.recommendedHeight + 24
+            return coursePicker.recommendedHeight + 4 + 14.33 + 4 + 20
         case CellType.name.rawValue:
             return 60
         case CellType.email.rawValue:
@@ -54,7 +54,7 @@ extension ProfileAccountViewController {
         case CellType.classOf.rawValue:
             return 60
         case CellType.profilePicture.rawValue:
-            return 100
+            return 88.33
         default:
             return 0
         }
